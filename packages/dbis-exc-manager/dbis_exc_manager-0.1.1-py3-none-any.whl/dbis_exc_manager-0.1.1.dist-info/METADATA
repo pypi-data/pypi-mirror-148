@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: dbis-exc-manager
+Version: 0.1.1
+Summary: RWTH Aachen Computer Science i5/dbis assets for Lecture Datenbanken und Informationssysteme
+Home-page: https://github.com/rwth-acis/dbis-excercise-manager.git
+Author: Michal Slupczynski
+Author-email: slupczynski@dbis.rwth-aachen.de
+License: Apache
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# DBIS Excercise Manager
+
+This class manages the state of the excercises.
+Example for arguments:
+ÜB 1, Aufgabe 2.3 a), 2 Punkte 
+* exc = 1
+* task = 2
+* subtask = 3a)
+* points = 2
+
+Example usage:
+``` python
+exc = Excercise( 1 )
+task1 = Task( exc, task = 1, subtask = "2 a)", points = 2 )
+```
+
