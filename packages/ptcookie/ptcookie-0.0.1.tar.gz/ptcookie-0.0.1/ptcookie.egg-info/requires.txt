@@ -1,0 +1,2 @@
+ptlibs>=0.0.6
+cloudscraper
