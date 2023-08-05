@@ -1,0 +1,8 @@
+jieba
+ner-kit
+
+[dev]
+check-manifest
+
+[test]
+coverage
