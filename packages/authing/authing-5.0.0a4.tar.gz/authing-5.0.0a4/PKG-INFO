@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: authing
+Version: 5.0.0a4
+Summary: Authing SDK for Python
+Home-page: https://github.com/Authing/authing-py-sdk
+Author: authing
+Author-email: cj@authing.cn
+Maintainer: authing
+Maintainer-email: cj@authing.cn
+License: UNKNOWN
+Keywords: authing sso AaaS IdaaS
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Authing - Python
+
+TODO
+
