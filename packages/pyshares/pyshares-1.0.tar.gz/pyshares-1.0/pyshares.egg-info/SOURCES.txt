@@ -1,0 +1,8 @@
+MANIFEST.in
+README.txt
+setup.py
+pyshares/__init__.py
+pyshares.egg-info/PKG-INFO
+pyshares.egg-info/SOURCES.txt
+pyshares.egg-info/dependency_links.txt
+pyshares.egg-info/top_level.txt
