@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+pytyped/json/__init__.py
+pytyped/json/common.py
+pytyped/json/decoder.py
+pytyped/json/encoder.py
+pytyped/json/py.typed
+pytyped_json.egg-info/PKG-INFO
+pytyped_json.egg-info/SOURCES.txt
+pytyped_json.egg-info/dependency_links.txt
+pytyped_json.egg-info/not-zip-safe
+pytyped_json.egg-info/requires.txt
+pytyped_json.egg-info/top_level.txt
