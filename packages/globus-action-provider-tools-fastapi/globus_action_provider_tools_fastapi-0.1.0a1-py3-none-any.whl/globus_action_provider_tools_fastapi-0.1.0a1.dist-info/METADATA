@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: globus-action-provider-tools-fastapi
+Version: 0.1.0a1
+Summary: 
+Author: Jim Pruyne
+Author-email: pruyne@uchicago.edu
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: arrow (>=1.2.2,<2.0.0)
+Requires-Dist: boto3 (>=1,<2)
+Requires-Dist: boto3-stubs[essential] (>=1,<2)
+Requires-Dist: fastapi (>=0.75,<0.76)
+Requires-Dist: globus-action-provider-tools (>=0.12,<0.13)
