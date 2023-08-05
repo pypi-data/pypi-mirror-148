@@ -1,0 +1,9 @@
+README.md
+setup.py
+pyqvrelite/__init__.py
+pyqvrelite/client.py
+pyqvrelite.egg-info/PKG-INFO
+pyqvrelite.egg-info/SOURCES.txt
+pyqvrelite.egg-info/dependency_links.txt
+pyqvrelite.egg-info/requires.txt
+pyqvrelite.egg-info/top_level.txt
