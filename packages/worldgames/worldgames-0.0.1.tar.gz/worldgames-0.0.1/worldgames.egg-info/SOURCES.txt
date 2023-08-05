@@ -1,0 +1,13 @@
+setup.py
+worldgames/CurrencyRouletteGame.py
+worldgames/GeneralGame.py
+worldgames/GuessGame.py
+worldgames/Live.py
+worldgames/MainGame.py
+worldgames/MemoryGame.py
+worldgames/__init__.py
+worldgames/main.py
+worldgames.egg-info/PKG-INFO
+worldgames.egg-info/SOURCES.txt
+worldgames.egg-info/dependency_links.txt
+worldgames.egg-info/top_level.txt
