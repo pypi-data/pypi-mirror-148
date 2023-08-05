@@ -1,0 +1,627 @@
+E...............S....S....S.....S...............E....S....S.....S...............S....S....S.....S....................SSS........S.....SE........S....S..S.S.E............S..S........S.S..............................SS........S................E..
+======================================================================
+ERROR: Tobias Brox has done some API changes - but this thing should
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 458, in setup
+    self.principal = self.caldav.principal()
+  File "/home/tobias/caldav/caldav/davclient.py", line 356, in principal
+    self._principal = Principal(client=self, *largs, **kwargs)
+  File "/home/tobias/caldav/caldav/objects.py", line 403, in __init__
+    cup = self.get_property(dav.CurrentUserPrincipal())
+  File "/home/tobias/caldav/caldav/objects.py", line 174, in get_property
+    foo = self.get_properties([prop], **passthrough)
+  File "/home/tobias/caldav/caldav/objects.py", line 197, in get_properties
+    response = self._query_properties(props, depth)
+  File "/home/tobias/caldav/caldav/objects.py", line 141, in _query_properties
+    return self._query(root, depth)
+  File "/home/tobias/caldav/caldav/objects.py", line 166, in _query
+    raise error.exception_by_method[query_method](errmsg(ret))
+caldav.lib.error.PropfindError: PropfindError at '500 Internal Server Error
+
+b'{"message":"Internal Server Error"}'', reason 'no reason'
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): caldav.luckydrawcalendar.com:443
+urllib3.connectionpool: DEBUG: https://caldav.luckydrawcalendar.com:443 "PROPFIND /dav.php HTTP/1.1" 500 35
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: Support for sync-collection reports, ref https://github.com/python-caldav/caldav/issues/87.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 458, in setup
+    self.principal = self.caldav.principal()
+  File "/home/tobias/caldav/caldav/davclient.py", line 356, in principal
+    self._principal = Principal(client=self, *largs, **kwargs)
+  File "/home/tobias/caldav/caldav/objects.py", line 403, in __init__
+    cup = self.get_property(dav.CurrentUserPrincipal())
+  File "/home/tobias/caldav/caldav/objects.py", line 174, in get_property
+    foo = self.get_properties([prop], **passthrough)
+  File "/home/tobias/caldav/caldav/objects.py", line 197, in get_properties
+    response = self._query_properties(props, depth)
+  File "/home/tobias/caldav/caldav/objects.py", line 141, in _query_properties
+    return self._query(root, depth)
+  File "/home/tobias/caldav/caldav/objects.py", line 159, in _query
+    ret = getattr(self.client, query_method)(
+  File "/home/tobias/caldav/caldav/davclient.py", line 404, in propfind
+    return self.request(url or self.url, "PROPFIND", props,
+  File "/home/tobias/caldav/caldav/davclient.py", line 533, in request
+    r = self.session.request(
+  File "/usr/lib/python3.10/site-packages/requests/sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.10/site-packages/requests/sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.10/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): cloud.domainedessablons.fr:443
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/ HTTP/1.1" 401 None
+urllib3.connectionpool: DEBUG: Resetting dropped connection: cloud.domainedessablons.fr
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: Makes sure we can add events and delete them
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/tobias/caldav/tests/test_caldav.py", line 1401, in testCreateOverwriteDeleteEvent
+    t1 = c.save_todo(todo)
+  File "/home/tobias/caldav/caldav/objects.py", line 626, in save_todo
+    return Todo(self.client, data=self._use_or_create_ics(ical, objtype='VTODO', **ical_data), parent=self).save(no_overwrite=no_overwrite, no_create=no_create, obj_type='todo')
+  File "/home/tobias/caldav/caldav/objects.py", line 1533, in save
+    self._create(self.data, self.id, path)
+  File "/home/tobias/caldav/caldav/objects.py", line 1422, in _create
+    r = self.client.put(path, data,
+  File "/home/tobias/caldav/caldav/davclient.py", line 478, in put
+    return self.request(url, "PUT", body, headers)
+  File "/home/tobias/caldav/caldav/davclient.py", line 587, in request
+    raise error.AuthorizationError(url=url, reason = reason)
+caldav.lib.error.AuthorizationError: AuthorizationError at 'https://zimbra.redpill-linpro.com/dav/tobias%40redpill-linpro.com/pythoncaldav-test/20070313T123432Z-456553%40example.com.ics', reason 'Forbidden'
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): zimbra.redpill-linpro.com:443
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/ HTTP/1.1" 401 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/ HTTP/1.1" 207 None
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /principals/users/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20events/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vacation/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vakt/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Susinths%20Sithamparanathan%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Birger%20Johan%20Nord%C3%B8lum%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%E2%80%99s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Celine%20Louise%20Dyran%20Smith%E2%80%99s%20Social%20Activities%20NO/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Philip%20Gabrielsen%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Espen%20Hovind%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%231%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Sigurd%20Urdahl%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/Yep/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20events/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vacation/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vakt/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Susinths%20Sithamparanathan%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Birger%20Johan%20Nord%C3%B8lum%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%E2%80%99s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Celine%20Louise%20Dyran%20Smith%E2%80%99s%20Social%20Activities%20NO/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Philip%20Gabrielsen%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Espen%20Hovind%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%231%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Sigurd%20Urdahl%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20events/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vacation/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vakt/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Susinths%20Sithamparanathan%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Birger%20Johan%20Nord%C3%B8lum%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%E2%80%99s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Celine%20Louise%20Dyran%20Smith%E2%80%99s%20Social%20Activities%20NO/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Philip%20Gabrielsen%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Espen%20Hovind%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%231%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Sigurd%20Urdahl%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20events/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vacation/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vakt/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Susinths%20Sithamparanathan%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Birger%20Johan%20Nord%C3%B8lum%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%E2%80%99s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Celine%20Louise%20Dyran%20Smith%E2%80%99s%20Social%20Activities%20NO/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Philip%20Gabrielsen%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Espen%20Hovind%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%231%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Sigurd%20Urdahl%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/pythoncaldav-test/ HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20events/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vacation/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vakt/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Susinths%20Sithamparanathan%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Birger%20Johan%20Nord%C3%B8lum%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%E2%80%99s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Celine%20Louise%20Dyran%20Smith%E2%80%99s%20Social%20Activities%20NO/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Philip%20Gabrielsen%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Espen%20Hovind%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%231%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Sigurd%20Urdahl%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/pythoncaldav-test2/ HTTP/1.1" 204 0
+root: DEBUG: ##############################
+root: DEBUG: ############## test setup done
+root: DEBUG: ##############################
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "MKCALENDAR /dav/tobias%40redpill-linpro.com/pythoncaldav-test/ HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPPATCH /dav/tobias%40redpill-linpro.com/pythoncaldav-test/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "REPORT /dav/tobias%40redpill-linpro.com/pythoncaldav-test/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "REPORT /dav/tobias%40redpill-linpro.com/pythoncaldav-test/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PUT /dav/tobias%40redpill-linpro.com/pythoncaldav-test/20010712T182145Z-123401%40example.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PUT /dav/tobias%40redpill-linpro.com/pythoncaldav-test/20070313T123432Z-456553%40example.com.ics HTTP/1.1" 403 None
+root: DEBUG: ############################
+root: DEBUG: ############## test teardown
+root: DEBUG: ############################
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20events/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vacation/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vakt/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Susinths%20Sithamparanathan%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Birger%20Johan%20Nord%C3%B8lum%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%E2%80%99s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Celine%20Louise%20Dyran%20Smith%E2%80%99s%20Social%20Activities%20NO/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Philip%20Gabrielsen%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Espen%20Hovind%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%231%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Sigurd%20Urdahl%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Yep/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/Yep/ HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20events/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vacation/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vakt/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Susinths%20Sithamparanathan%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Birger%20Johan%20Nord%C3%B8lum%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%E2%80%99s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Celine%20Louise%20Dyran%20Smith%E2%80%99s%20Social%20Activities%20NO/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Philip%20Gabrielsen%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Espen%20Hovind%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%231%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Sigurd%20Urdahl%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20events/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vacation/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vakt/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Susinths%20Sithamparanathan%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Birger%20Johan%20Nord%C3%B8lum%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%E2%80%99s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Celine%20Louise%20Dyran%20Smith%E2%80%99s%20Social%20Activities%20NO/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Philip%20Gabrielsen%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Espen%20Hovind%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%231%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Sigurd%20Urdahl%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20events/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vacation/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vakt/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Susinths%20Sithamparanathan%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Birger%20Johan%20Nord%C3%B8lum%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%E2%80%99s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Celine%20Louise%20Dyran%20Smith%E2%80%99s%20Social%20Activities%20NO/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Philip%20Gabrielsen%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Espen%20Hovind%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%231%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Sigurd%20Urdahl%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/pythoncaldav-test/ HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20events/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vacation/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vakt/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Susinths%20Sithamparanathan%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Birger%20Johan%20Nord%C3%B8lum%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%E2%80%99s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Celine%20Louise%20Dyran%20Smith%E2%80%99s%20Social%20Activities%20NO/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Philip%20Gabrielsen%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Espen%20Hovind%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%231%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Sigurd%20Urdahl%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/pythoncaldav-test2/ HTTP/1.1" 204 0
+root: DEBUG: ############## test teardown done
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: Let's see how the date search method works for todo events
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/tobias/caldav/tests/test_caldav.py", line 1201, in testTodoDatesearch
+    urls_found.remove(t4.url)
+ValueError: list.remove(x): x not in list
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): zimbra.redpill-linpro.com:443
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/ HTTP/1.1" 401 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/ HTTP/1.1" 207 None
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /principals/users/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20events/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vacation/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vakt/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Susinths%20Sithamparanathan%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Birger%20Johan%20Nord%C3%B8lum%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%E2%80%99s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Celine%20Louise%20Dyran%20Smith%E2%80%99s%20Social%20Activities%20NO/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Philip%20Gabrielsen%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Espen%20Hovind%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%231%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Sigurd%20Urdahl%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/Yep/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20events/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vacation/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vakt/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Susinths%20Sithamparanathan%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Birger%20Johan%20Nord%C3%B8lum%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%E2%80%99s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Celine%20Louise%20Dyran%20Smith%E2%80%99s%20Social%20Activities%20NO/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Philip%20Gabrielsen%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Espen%20Hovind%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%231%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Sigurd%20Urdahl%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20events/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vacation/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vakt/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Susinths%20Sithamparanathan%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Birger%20Johan%20Nord%C3%B8lum%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%E2%80%99s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Celine%20Louise%20Dyran%20Smith%E2%80%99s%20Social%20Activities%20NO/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Philip%20Gabrielsen%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Espen%20Hovind%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%231%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Sigurd%20Urdahl%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20events/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vacation/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vakt/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Susinths%20Sithamparanathan%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Birger%20Johan%20Nord%C3%B8lum%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%E2%80%99s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Celine%20Louise%20Dyran%20Smith%E2%80%99s%20Social%20Activities%20NO/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Philip%20Gabrielsen%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Espen%20Hovind%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%231%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Sigurd%20Urdahl%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/pythoncaldav-test/ HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20events/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vacation/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vakt/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Susinths%20Sithamparanathan%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Birger%20Johan%20Nord%C3%B8lum%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%E2%80%99s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Celine%20Louise%20Dyran%20Smith%E2%80%99s%20Social%20Activities%20NO/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Philip%20Gabrielsen%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Espen%20Hovind%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%231%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Sigurd%20Urdahl%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/pythoncaldav-test2/ HTTP/1.1" 204 0
+root: DEBUG: ##############################
+root: DEBUG: ############## test setup done
+root: DEBUG: ##############################
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "MKCALENDAR /dav/tobias%40redpill-linpro.com/pythoncaldav-test/ HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPPATCH /dav/tobias%40redpill-linpro.com/pythoncaldav-test/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PUT /dav/tobias%40redpill-linpro.com/pythoncaldav-test/20070313T123432Z-456553%40example.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PUT /dav/tobias%40redpill-linpro.com/pythoncaldav-test/19970901T130000Z-123404%40host.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PUT /dav/tobias%40redpill-linpro.com/pythoncaldav-test/19970901T130000Z-123405%40host.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PUT /dav/tobias%40redpill-linpro.com/pythoncaldav-test/19970901T130000Z-123406%40host.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PUT /dav/tobias%40redpill-linpro.com/pythoncaldav-test/19920901T130000Z-123407%40host.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PUT /dav/tobias%40redpill-linpro.com/pythoncaldav-test/19920901T130000Z-123408%40host.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "REPORT /dav/tobias%40redpill-linpro.com/pythoncaldav-test/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "REPORT /dav/tobias%40redpill-linpro.com/pythoncaldav-test/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "REPORT /dav/tobias%40redpill-linpro.com/pythoncaldav-test/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "REPORT /dav/tobias%40redpill-linpro.com/pythoncaldav-test/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "REPORT /dav/tobias%40redpill-linpro.com/pythoncaldav-test/ HTTP/1.1" 207 None
+root: DEBUG: ############################
+root: DEBUG: ############## test teardown
+root: DEBUG: ############################
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Yep/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/Yep/ HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20events/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vacation/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vakt/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Susinths%20Sithamparanathan%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Birger%20Johan%20Nord%C3%B8lum%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%E2%80%99s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Celine%20Louise%20Dyran%20Smith%E2%80%99s%20Social%20Activities%20NO/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Philip%20Gabrielsen%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Espen%20Hovind%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%231%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Sigurd%20Urdahl%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20events/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vacation/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vakt/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Susinths%20Sithamparanathan%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Birger%20Johan%20Nord%C3%B8lum%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%E2%80%99s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Celine%20Louise%20Dyran%20Smith%E2%80%99s%20Social%20Activities%20NO/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Philip%20Gabrielsen%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Espen%20Hovind%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%231%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Sigurd%20Urdahl%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20events/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vacation/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vakt/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Susinths%20Sithamparanathan%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Birger%20Johan%20Nord%C3%B8lum%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%E2%80%99s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Celine%20Louise%20Dyran%20Smith%E2%80%99s%20Social%20Activities%20NO/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Philip%20Gabrielsen%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Espen%20Hovind%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%231%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Sigurd%20Urdahl%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/pythoncaldav-test/ HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20events/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vacation/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vakt/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Susinths%20Sithamparanathan%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Birger%20Johan%20Nord%C3%B8lum%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%E2%80%99s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Celine%20Louise%20Dyran%20Smith%E2%80%99s%20Social%20Activities%20NO/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Philip%20Gabrielsen%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Espen%20Hovind%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%231%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Sigurd%20Urdahl%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/pythoncaldav-test2/ HTTP/1.1" 204 0
+root: DEBUG: ############## test teardown done
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: Failure: ModuleNotFoundError (No module named 'tzlocal')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/failure.py", line 39, in runTest
+    raise self.exc_val.with_traceback(self.tb)
+  File "/usr/lib/python3.10/site-packages/nose/loader.py", line 416, in loadTestsFromName
+    module = self.importer.importFromPath(
+  File "/usr/lib/python3.10/site-packages/nose/importer.py", line 47, in importFromPath
+    return self.importFromDir(dir_path, fqname)
+  File "/usr/lib/python3.10/site-packages/nose/importer.py", line 94, in importFromDir
+    mod = load_module(part_fqname, fh, filename, desc)
+  File "/usr/lib/python3.10/imp.py", line 235, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.10/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 719, in _load
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/tobias/caldav/tests/test_cdav.py", line 3, in <module>
+    import tzlocal
+ModuleNotFoundError: No module named 'tzlocal'
+
+Name                             Stmts   Miss  Cover
+----------------------------------------------------
+caldav/__init__.py                   9      0   100%
+caldav/davclient.py                266     16    94%
+caldav/elements/__init__.py          0      0   100%
+caldav/elements/base.py             55      1    98%
+caldav/elements/cdav.py             97      7    93%
+caldav/elements/dav.py              44      0   100%
+caldav/elements/ical.py              6      0   100%
+caldav/lib/__init__.py               0      0   100%
+caldav/lib/error.py                 59      5    92%
+caldav/lib/namespace.py              8      0   100%
+caldav/lib/python_utilities.py      29      5    83%
+caldav/lib/url.py                   86      5    94%
+caldav/lib/vcal.py                  44      0   100%
+caldav/objects.py                  835    106    87%
+----------------------------------------------------
+TOTAL                             1538    145    91%
+----------------------------------------------------------------------
+Ran 244 tests in 3622.596s
+
+FAILED (SKIP=27, errors=5)

@@ -1,0 +1,23 @@
+
+Name                             Stmts   Miss  Cover
+----------------------------------------------------
+caldav/__init__.py                   9      0   100%
+caldav/davclient.py                266     16    94%
+caldav/elements/__init__.py          0      0   100%
+caldav/elements/base.py             55      1    98%
+caldav/elements/cdav.py             97      7    93%
+caldav/elements/dav.py              44      0   100%
+caldav/elements/ical.py              6      0   100%
+caldav/lib/__init__.py               0      0   100%
+caldav/lib/error.py                 59      5    92%
+caldav/lib/namespace.py              8      0   100%
+caldav/lib/python_utilities.py      29      5    83%
+caldav/lib/url.py                   86      5    94%
+caldav/lib/vcal.py                  44      0   100%
+caldav/objects.py                  835    106    87%
+----------------------------------------------------
+TOTAL                             1538    145    91%
+----------------------------------------------------------------------
+Ran 1 test in 9.669s
+
+OK

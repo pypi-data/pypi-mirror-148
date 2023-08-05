@@ -1,0 +1,1963 @@
+S...............S....S....S.....S........E......F....E......F...S....E..........S....S....S.....EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEES...............S....S....S.....S....................SSS........S.....S.........S....S..S.S.E............S..S........S.S..............................SS........S................E..
+======================================================================
+ERROR: Verifies that date search works with a non-recurring event
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/tobias/caldav/tests/test_caldav.py", line 1505, in testDateSearchAndFreeBusy
+    freebusy = c.freebusy_request(datetime(2007, 7, 13, 17, 00, 00),
+  File "/home/tobias/caldav/caldav/objects.py", line 802, in freebusy_request
+    response = self._query(root, 1, 'report')
+  File "/home/tobias/caldav/caldav/objects.py", line 166, in _query
+    raise error.exception_by_method[query_method](errmsg(ret))
+caldav.lib.error.ReportError: ReportError at '500 Internal Server Error
+
+b'Fatal PHP Error'', reason 'no reason'
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): calendar.tobixen.no:80
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/ HTTP/1.1" 401 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/ HTTP/1.1" 207 316
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 357
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/Yep/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/pythoncaldav-test2/ HTTP/1.1" 404 None
+root: DEBUG: ##############################
+root: DEBUG: ############## test setup done
+root: DEBUG: ##############################
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "MKCALENDAR /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPPATCH /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 207 341
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PUT /caldav.php/tobias/pythoncaldav-test/20010712T182145Z-123401%40example.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "REPORT /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 207 614
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PUT /caldav.php/tobias/pythoncaldav-test/20010712T182145Z-123401%40example.com.ics HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "REPORT /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 207 68
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "REPORT /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 207 621
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "REPORT /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 207 621
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "REPORT /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 500 15
+root: DEBUG: ############################
+root: DEBUG: ############## test teardown
+root: DEBUG: ############################
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2852
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 207 279
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/pythoncaldav-test2/ HTTP/1.1" 404 None
+root: DEBUG: ############## test teardown done
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: tests.test_caldav.TestForServer_calendar_tobixen_no80.testProxy
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/tobias/caldav/tests/test_caldav.py", line 610, in testProxy
+    p = c.principal()
+  File "/home/tobias/caldav/caldav/davclient.py", line 356, in principal
+    self._principal = Principal(client=self, *largs, **kwargs)
+  File "/home/tobias/caldav/caldav/objects.py", line 403, in __init__
+    cup = self.get_property(dav.CurrentUserPrincipal())
+  File "/home/tobias/caldav/caldav/objects.py", line 174, in get_property
+    foo = self.get_properties([prop], **passthrough)
+  File "/home/tobias/caldav/caldav/objects.py", line 197, in get_properties
+    response = self._query_properties(props, depth)
+  File "/home/tobias/caldav/caldav/objects.py", line 141, in _query_properties
+    return self._query(root, depth)
+  File "/home/tobias/caldav/caldav/objects.py", line 159, in _query
+    ret = getattr(self.client, query_method)(
+  File "/home/tobias/caldav/caldav/davclient.py", line 404, in propfind
+    return self.request(url or self.url, "PROPFIND", props,
+  File "/home/tobias/caldav/caldav/davclient.py", line 554, in request
+    return self.request(url, method, body, headers)
+  File "/home/tobias/caldav/caldav/davclient.py", line 506, in request
+    proxies = {url.scheme: self.proxy}
+AttributeError: 'str' object has no attribute 'scheme'
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): calendar.tobixen.no:80
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/ HTTP/1.1" 401 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/ HTTP/1.1" 207 316
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 357
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/Yep/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/pythoncaldav-test2/ HTTP/1.1" 404 None
+root: DEBUG: ##############################
+root: DEBUG: ############## test setup done
+root: DEBUG: ##############################
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): 127.0.0.1:8080
+TinyHTTPProxy: INFO: Request from '127.0.0.1'
+TinyHTTPProxy: INFO: connect to calendar.tobixen.no:80
+TinyHTTPProxy: INFO: 127.0.0.1 "PROPFIND http://calendar.tobixen.no:80/caldav.php/ HTTP/1.1" - -
+urllib3.connectionpool: DEBUG: http://127.0.0.1:8080 "PROPFIND http://calendar.tobixen.no:80/caldav.php/ HTTP/1.1" 401 None
+root: DEBUG: ############################
+root: DEBUG: ############## test teardown
+root: DEBUG: ############################
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/Yep/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/pythoncaldav-test2/ HTTP/1.1" 404 None
+root: DEBUG: ############## test teardown done
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: tests.test_caldav.TestForServer_cloud_domainedessablons_fr.testCreateEvent
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/tobias/caldav/tests/test_caldav.py", line 666, in testCreateEvent
+    existing_events = c.events()
+  File "/home/tobias/caldav/caldav/objects.py", line 1036, in events
+    return self.search(root, comp_class=Event)
+  File "/home/tobias/caldav/caldav/objects.py", line 785, in search
+    (response, objects) = self._request_report_build_resultlist(xml, comp_class)
+  File "/home/tobias/caldav/caldav/objects.py", line 752, in _request_report_build_resultlist
+    response = self._query(xml, 1, 'report')
+  File "/home/tobias/caldav/caldav/objects.py", line 159, in _query
+    ret = getattr(self.client, query_method)(
+  File "/home/tobias/caldav/caldav/davclient.py", line 433, in report
+    return self.request(url, "REPORT", query,
+  File "/home/tobias/caldav/caldav/davclient.py", line 520, in request
+    r = self.session.request(
+  File "/usr/lib/python3.10/site-packages/requests/sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.10/site-packages/requests/sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.10/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): cloud.domainedessablons.fr:443
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/ HTTP/1.1" 401 None
+urllib3.connectionpool: DEBUG: Resetting dropped connection: cloud.domainedessablons.fr
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "GET /remote.php/dav/ HTTP/1.1" 401 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/ HTTP/1.1" 207 None
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/principals/users/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Yep/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Yep/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-ee747a68-fed0-4836-9dc6-ccd9cac399ed/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-ee747a68-fed0-4836-9dc6-ccd9cac399ed/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-6d2d1786-f0d8-4c2b-92e1-c8e0ad777b35/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-6d2d1786-f0d8-4c2b-92e1-c8e0ad777b35/ HTTP/1.1" 404 None
+root: DEBUG: ##############################
+root: DEBUG: ############## test setup done
+root: DEBUG: ##############################
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "MKCALENDAR /remote.php/dav/calendars/tobixen/testcalendar-ee747a68-fed0-4836-9dc6-ccd9cac399ed/ HTTP/1.1" 201 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPPATCH /remote.php/dav/calendars/tobixen/testcalendar-ee747a68-fed0-4836-9dc6-ccd9cac399ed/ HTTP/1.1" 207 None
+root: DEBUG: ############################
+root: DEBUG: ############## test teardown
+root: DEBUG: ############################
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (2): cloud.domainedessablons.fr:443
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/testcalendar-ee747a68-fed0-4836-9dc6-ccd9cac399ed/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-ee747a68-fed0-4836-9dc6-ccd9cac399ed/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-ee747a68-fed0-4836-9dc6-ccd9cac399ed/ HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-ee747a68-fed0-4836-9dc6-ccd9cac399ed/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-ee747a68-fed0-4836-9dc6-ccd9cac399ed/ HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-6d2d1786-f0d8-4c2b-92e1-c8e0ad777b35/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-6d2d1786-f0d8-4c2b-92e1-c8e0ad777b35/ HTTP/1.1" 404 None
+root: DEBUG: ############## test teardown done
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: Tobias Brox has done some API changes - but this thing should
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: ref private email, passing a full URL as cal_id works in 0.5.0 but
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: tests.test_caldav.TestForServer_dav_cladmi_eu.testCopyEvent
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: tests.test_caldav.TestForServer_dav_cladmi_eu.testCreateCalendarAndEventFromVobject
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: tests.test_caldav.TestForServer_dav_cladmi_eu.testCreateDeleteCalendar
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: tests.test_caldav.TestForServer_dav_cladmi_eu.testCreateEvent
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: This test demonstrates the support for journals.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: Makes sure we can add events and delete them
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: This test demonstrates the support for task lists.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: Verifies that date search works with a non-recurring event
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: tests.test_caldav.TestForServer_dav_cladmi_eu.testGetCalendar
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: tests.test_caldav.TestForServer_dav_cladmi_eu.testGetCalendarHomeSet
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: tests.test_caldav.TestForServer_dav_cladmi_eu.testGetDefaultCalendar
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: tests.test_caldav.TestForServer_dav_cladmi_eu.testGetSupportedComponents
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: tests.test_caldav.TestForServer_dav_cladmi_eu.testLoadEvent
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: Makes sure we can add events and look them up by URL and ID
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: Support for sync-collection reports, ref https://github.com/python-caldav/caldav/issues/87.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: tests.test_caldav.TestForServer_dav_cladmi_eu.testObjects
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: pass an URL pointing to a calendar or a user to the DAVClient class,
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: tests.test_caldav.TestForServer_dav_cladmi_eu.testPrincipal
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: Test of the propfind methods. (This is sort of redundant, since
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: tests.test_caldav.TestForServer_dav_cladmi_eu.testProxy
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: This is more sanity testing of the server side than testing of the
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: tests.test_caldav.TestForServer_dav_cladmi_eu.testSchedulingInfo
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: tests.test_caldav.TestForServer_dav_cladmi_eu.testSetCalendarProperties
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: Test the check_*_support methods
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: Support for sync-collection reports, ref https://github.com/python-caldav/caldav/issues/87.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: Will check that todo-items can be completed and deleted
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: Let's see how the date search method works for todo events
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: This test will excercise the cal.todos() method,
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: tests.test_caldav.TestForServer_dav_cladmi_eu.testUnicodeEvent
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: tests.test_caldav.TestForServer_dav_cladmi_eu.testUtf8Event
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 381, in setUp
+    try_run(self.inst, ('setup', 'setUp'))
+  File "/usr/lib/python3.10/site-packages/nose/util.py", line 471, in try_run
+    return func()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 463, in setup
+    self._teardown()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 495, in _teardown
+    cal = self.principal.calendar(cal_id=name)
+  File "/home/tobias/caldav/caldav/objects.py", line 422, in calendar
+    return self.calendar_home_set.calendar(name, cal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 445, in calendar_home_set
+    if '@' in calendar_home_set_url and not '://' in calendar_home_set_url:
+TypeError: argument of type 'NoneType' is not iterable
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): dav.cladmi.eu:80
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): dav.cladmi.eu:443
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 354
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 401 426
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+urllib3.connectionpool: DEBUG: http://dav.cladmi.eu:80 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 301 262
+urllib3.connectionpool: DEBUG: https://dav.cladmi.eu:443 "PROPFIND /cal.php/calendars/tbrox/default/ HTTP/1.1" 207 1012
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: Let's see how the date search method works for todo events
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/tobias/caldav/tests/test_caldav.py", line 1201, in testTodoDatesearch
+    urls_found.remove(t4.url)
+ValueError: list.remove(x): x not in list
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): zimbra.redpill-linpro.com:443
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/ HTTP/1.1" 401 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/ HTTP/1.1" 207 None
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /principals/users/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20events/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vacation/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vakt/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Susinths%20Sithamparanathan%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Birger%20Johan%20Nord%C3%B8lum%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%E2%80%99s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Celine%20Louise%20Dyran%20Smith%E2%80%99s%20Social%20Activities%20NO/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Philip%20Gabrielsen%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Espen%20Hovind%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%231%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Sigurd%20Urdahl%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/Yep/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20events/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vacation/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vakt/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Susinths%20Sithamparanathan%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Birger%20Johan%20Nord%C3%B8lum%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%E2%80%99s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Celine%20Louise%20Dyran%20Smith%E2%80%99s%20Social%20Activities%20NO/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Philip%20Gabrielsen%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Espen%20Hovind%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%231%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Sigurd%20Urdahl%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20events/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vacation/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vakt/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Susinths%20Sithamparanathan%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Birger%20Johan%20Nord%C3%B8lum%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%E2%80%99s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Celine%20Louise%20Dyran%20Smith%E2%80%99s%20Social%20Activities%20NO/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Philip%20Gabrielsen%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Espen%20Hovind%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%231%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Sigurd%20Urdahl%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20events/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vacation/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vakt/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Susinths%20Sithamparanathan%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Birger%20Johan%20Nord%C3%B8lum%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%E2%80%99s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Celine%20Louise%20Dyran%20Smith%E2%80%99s%20Social%20Activities%20NO/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Philip%20Gabrielsen%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Espen%20Hovind%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%231%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Sigurd%20Urdahl%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/pythoncaldav-test/ HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20events/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vacation/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vakt/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Susinths%20Sithamparanathan%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Birger%20Johan%20Nord%C3%B8lum%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%E2%80%99s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Celine%20Louise%20Dyran%20Smith%E2%80%99s%20Social%20Activities%20NO/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Philip%20Gabrielsen%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Espen%20Hovind%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%231%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Sigurd%20Urdahl%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/pythoncaldav-test2/ HTTP/1.1" 204 0
+root: DEBUG: ##############################
+root: DEBUG: ############## test setup done
+root: DEBUG: ##############################
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "MKCALENDAR /dav/tobias%40redpill-linpro.com/pythoncaldav-test/ HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPPATCH /dav/tobias%40redpill-linpro.com/pythoncaldav-test/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PUT /dav/tobias%40redpill-linpro.com/pythoncaldav-test/20070313T123432Z-456553%40example.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PUT /dav/tobias%40redpill-linpro.com/pythoncaldav-test/19970901T130000Z-123404%40host.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PUT /dav/tobias%40redpill-linpro.com/pythoncaldav-test/19970901T130000Z-123405%40host.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PUT /dav/tobias%40redpill-linpro.com/pythoncaldav-test/19970901T130000Z-123406%40host.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PUT /dav/tobias%40redpill-linpro.com/pythoncaldav-test/19920901T130000Z-123407%40host.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PUT /dav/tobias%40redpill-linpro.com/pythoncaldav-test/19920901T130000Z-123408%40host.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "REPORT /dav/tobias%40redpill-linpro.com/pythoncaldav-test/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "REPORT /dav/tobias%40redpill-linpro.com/pythoncaldav-test/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "REPORT /dav/tobias%40redpill-linpro.com/pythoncaldav-test/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "REPORT /dav/tobias%40redpill-linpro.com/pythoncaldav-test/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "REPORT /dav/tobias%40redpill-linpro.com/pythoncaldav-test/ HTTP/1.1" 207 None
+root: DEBUG: ############################
+root: DEBUG: ############## test teardown
+root: DEBUG: ############################
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20events/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vacation/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vakt/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Susinths%20Sithamparanathan%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Birger%20Johan%20Nord%C3%B8lum%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%E2%80%99s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Celine%20Louise%20Dyran%20Smith%E2%80%99s%20Social%20Activities%20NO/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Philip%20Gabrielsen%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Espen%20Hovind%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%231%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Yep/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/Yep/ HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20events/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vacation/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vakt/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Susinths%20Sithamparanathan%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Birger%20Johan%20Nord%C3%B8lum%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%E2%80%99s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Celine%20Louise%20Dyran%20Smith%E2%80%99s%20Social%20Activities%20NO/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Philip%20Gabrielsen%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Espen%20Hovind%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%231%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Sigurd%20Urdahl%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20events/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vacation/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vakt/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Susinths%20Sithamparanathan%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Birger%20Johan%20Nord%C3%B8lum%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%E2%80%99s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Celine%20Louise%20Dyran%20Smith%E2%80%99s%20Social%20Activities%20NO/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Philip%20Gabrielsen%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Espen%20Hovind%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%231%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Sigurd%20Urdahl%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20events/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vacation/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vakt/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Susinths%20Sithamparanathan%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Birger%20Johan%20Nord%C3%B8lum%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%E2%80%99s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Celine%20Louise%20Dyran%20Smith%E2%80%99s%20Social%20Activities%20NO/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Philip%20Gabrielsen%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Espen%20Hovind%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%231%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Sigurd%20Urdahl%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/pythoncaldav-test/ HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/testcalendar42/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/P%C3%A5l-Kristian%20Hamre%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/924eeee2-714e-11eb-86e6-74e5f9bfd8c1/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Tasks/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%232%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Ring%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/M%C3%B8terom%20Store%20Magellan%20%27s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20events/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vacation/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20MS%20vakt/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%27s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Susinths%20Sithamparanathan%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Birger%20Johan%20Nord%C3%B8lum%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%E2%80%99s%20Bank%20holidays%2C%20Norway/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Celine%20Louise%20Dyran%20Smith%E2%80%99s%20Social%20Activities%20NO/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Philip%20Gabrielsen%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Espen%20Hovind%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/calendar%20%231%20for%20scheduling%20demo/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "PROPFIND /dav/tobias%40redpill-linpro.com/Sigurd%20Urdahl%E2%80%99s%20Calendar/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://zimbra.redpill-linpro.com:443 "DELETE /dav/tobias%40redpill-linpro.com/pythoncaldav-test2/ HTTP/1.1" 204 0
+root: DEBUG: ############## test teardown done
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: Failure: ModuleNotFoundError (No module named 'tzlocal')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/failure.py", line 39, in runTest
+    raise self.exc_val.with_traceback(self.tb)
+  File "/usr/lib/python3.10/site-packages/nose/loader.py", line 416, in loadTestsFromName
+    module = self.importer.importFromPath(
+  File "/usr/lib/python3.10/site-packages/nose/importer.py", line 47, in importFromPath
+    return self.importFromDir(dir_path, fqname)
+  File "/usr/lib/python3.10/site-packages/nose/importer.py", line 94, in importFromDir
+    mod = load_module(part_fqname, fh, filename, desc)
+  File "/usr/lib/python3.10/imp.py", line 235, in load_module
+    return load_source(name, filename, file)
+  File "/usr/lib/python3.10/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 719, in _load
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/tobias/caldav/tests/test_cdav.py", line 3, in <module>
+    import tzlocal
+ModuleNotFoundError: No module named 'tzlocal'
+
+======================================================================
+FAIL: Support for sync-collection reports, ref https://github.com/python-caldav/caldav/issues/87.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/tobias/caldav/tests/test_caldav.py", line 771, in testObjectBySyncToken
+    assert_equal(len(list(my_changed_objects)), 1)
+AssertionError: 2 != 1
+    '2 != 1' = '%s != %s' % _common_shorten_repr(2, 1)
+    '2 != 1' = self._formatMessage('2 != 1', '2 != 1')
+>>  raise self.failureException('2 != 1')
+    
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): calendar.tobixen.no:80
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/ HTTP/1.1" 401 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/ HTTP/1.1" 207 316
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 357
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/Yep/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/pythoncaldav-test2/ HTTP/1.1" 404 None
+root: DEBUG: ##############################
+root: DEBUG: ############## test setup done
+root: DEBUG: ##############################
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "MKCALENDAR /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPPATCH /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 207 341
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "REPORT /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 207 68
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "REPORT /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 207 68
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "REPORT /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 207 68
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PUT /caldav.php/tobias/pythoncaldav-test/20010712T182145Z-123401%40example.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PUT /caldav.php/tobias/pythoncaldav-test/19970901T130000Z-123403%40example.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PUT /caldav.php/tobias/pythoncaldav-test/20070313T123432Z-456553%40example.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PUT /caldav.php/tobias/pythoncaldav-test/19970901T130000Z-123404%40host.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PUT /caldav.php/tobias/pythoncaldav-test/19970901T130000Z-123405%40host.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "REPORT /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 207 1419
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "REPORT /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 207 120
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PUT /caldav.php/tobias/pythoncaldav-test/20010712T182145Z-123401%40example.com.ics HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "REPORT /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 207 639
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "GET /caldav.php/tobias/pythoncaldav-test/19970901T130000Z-123405%40host.com.ics HTTP/1.1" 200 321
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "GET /caldav.php/tobias/pythoncaldav-test/20010712T182145Z-123401%40example.com.ics HTTP/1.1" 200 248
+root: DEBUG: ############################
+root: DEBUG: ############## test teardown
+root: DEBUG: ############################
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2852
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 207 279
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/pythoncaldav-test2/ HTTP/1.1" 404 None
+root: DEBUG: ############## test teardown done
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+FAIL: Let's see how the date search method works for todo events
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/tobias/caldav/tests/test_caldav.py", line 1176, in testTodoDatesearch
+    assert_equal(len(todos), foo)
+AssertionError: 3 != 5
+    '3 != 5' = '%s != %s' % _common_shorten_repr(3, 5)
+    '3 != 5' = self._formatMessage('3 != 5', '3 != 5')
+>>  raise self.failureException('3 != 5')
+    
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): calendar.tobixen.no:80
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/ HTTP/1.1" 401 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/ HTTP/1.1" 207 316
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 357
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/Yep/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/pythoncaldav-test2/ HTTP/1.1" 404 None
+root: DEBUG: ##############################
+root: DEBUG: ############## test setup done
+root: DEBUG: ##############################
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "MKCALENDAR /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPPATCH /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 207 341
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PUT /caldav.php/tobias/pythoncaldav-test/20070313T123432Z-456553%40example.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PUT /caldav.php/tobias/pythoncaldav-test/19970901T130000Z-123404%40host.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PUT /caldav.php/tobias/pythoncaldav-test/19970901T130000Z-123405%40host.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PUT /caldav.php/tobias/pythoncaldav-test/19970901T130000Z-123406%40host.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PUT /caldav.php/tobias/pythoncaldav-test/19920901T130000Z-123407%40host.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PUT /caldav.php/tobias/pythoncaldav-test/19920901T130000Z-123408%40host.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "REPORT /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 207 3424
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "REPORT /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 207 68
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "REPORT /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 207 68
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "REPORT /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 207 6708
+root: DEBUG: ############################
+root: DEBUG: ############## test teardown
+root: DEBUG: ############################
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2852
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 207 279
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/pythoncaldav-test2/ HTTP/1.1" 404 None
+root: DEBUG: ############## test teardown done
+--------------------- >> end captured logging << ---------------------
+
+Name                             Stmts   Miss  Cover
+----------------------------------------------------
+caldav/__init__.py                   9      0   100%
+caldav/davclient.py                266     16    94%
+caldav/elements/__init__.py          0      0   100%
+caldav/elements/base.py             55      1    98%
+caldav/elements/cdav.py             97      7    93%
+caldav/elements/dav.py              44      0   100%
+caldav/elements/ical.py              6      0   100%
+caldav/lib/__init__.py               0      0   100%
+caldav/lib/error.py                 59      5    92%
+caldav/lib/namespace.py              8      0   100%
+caldav/lib/python_utilities.py      29      5    83%
+caldav/lib/url.py                   86      5    94%
+caldav/lib/vcal.py                  44      0   100%
+caldav/objects.py                  835    106    87%
+----------------------------------------------------
+TOTAL                             1538    145    91%
+----------------------------------------------------------------------
+Ran 308 tests in 2855.504s
+
+FAILED (SKIP=30, errors=37, failures=2)

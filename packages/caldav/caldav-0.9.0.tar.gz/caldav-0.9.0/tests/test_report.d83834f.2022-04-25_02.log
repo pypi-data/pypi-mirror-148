@@ -1,0 +1,745 @@
+S...............S....S....S.....S.....S..S..................F...S......E.E..E...S.E..S.E..S.E...S...............S....S....S.....S....................SSS........S.....S.........S....S..S.S..............S..S........S.S..............................SS........S........................
+======================================================================
+ERROR: Makes sure we can add events and delete them
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/tobias/caldav/tests/test_caldav.py", line 1414, in testCreateOverwriteDeleteEvent
+    e2 = c.save_event(ev1)
+  File "/home/tobias/caldav/caldav/objects.py", line 616, in save_event
+    e.save(no_overwrite=no_overwrite, no_create=no_create, obj_type='event')
+  File "/home/tobias/caldav/caldav/objects.py", line 1533, in save
+    self._create(self.data, self.id, path)
+  File "/home/tobias/caldav/caldav/objects.py", line 1422, in _create
+    r = self.client.put(path, data,
+  File "/home/tobias/caldav/caldav/davclient.py", line 478, in put
+    return self.request(url, "PUT", body, headers)
+  File "/home/tobias/caldav/caldav/davclient.py", line 517, in request
+    r = self.session.request(
+  File "/usr/lib/python3.10/site-packages/requests/sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.10/site-packages/requests/sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.10/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): cloud.domainedessablons.fr:443
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/ HTTP/1.1" 401 None
+urllib3.connectionpool: DEBUG: Resetting dropped connection: cloud.domainedessablons.fr
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "GET /remote.php/dav/ HTTP/1.1" 401 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/ HTTP/1.1" 207 None
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/principals/users/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Yep/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Yep/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-778f9ec0-2010-4c47-9d3b-db537bdbf131/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-778f9ec0-2010-4c47-9d3b-db537bdbf131/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-684b0ad4-42ae-40d9-9154-fde41863bb25/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-684b0ad4-42ae-40d9-9154-fde41863bb25/ HTTP/1.1" 404 None
+root: DEBUG: ##############################
+root: DEBUG: ############## test setup done
+root: DEBUG: ##############################
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "MKCALENDAR /remote.php/dav/calendars/tobixen/testcalendar-778f9ec0-2010-4c47-9d3b-db537bdbf131/ HTTP/1.1" 201 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPPATCH /remote.php/dav/calendars/tobixen/testcalendar-778f9ec0-2010-4c47-9d3b-db537bdbf131/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-778f9ec0-2010-4c47-9d3b-db537bdbf131/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-778f9ec0-2010-4c47-9d3b-db537bdbf131/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PUT /remote.php/dav/calendars/tobixen/testcalendar-778f9ec0-2010-4c47-9d3b-db537bdbf131/20010712T182145Z-123401%40example.com.ics HTTP/1.1" 201 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PUT /remote.php/dav/calendars/tobixen/testcalendar-778f9ec0-2010-4c47-9d3b-db537bdbf131/20070313T123432Z-456553%40example.com.ics HTTP/1.1" 201 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "GET /remote.php/dav/calendars/tobixen/testcalendar-778f9ec0-2010-4c47-9d3b-db537bdbf131/20010712T182145Z-123401%40example.com.ics HTTP/1.1" 200 249
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-778f9ec0-2010-4c47-9d3b-db537bdbf131/ HTTP/1.1" 207 None
+root: DEBUG: ############################
+root: DEBUG: ############## test teardown
+root: DEBUG: ############################
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (2): cloud.domainedessablons.fr:443
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/testcalendar-778f9ec0-2010-4c47-9d3b-db537bdbf131/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-778f9ec0-2010-4c47-9d3b-db537bdbf131/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-778f9ec0-2010-4c47-9d3b-db537bdbf131/20010712T182145Z-123401%40example.com.ics HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-778f9ec0-2010-4c47-9d3b-db537bdbf131/20070313T123432Z-456553%40example.com.ics HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-778f9ec0-2010-4c47-9d3b-db537bdbf131/ HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (3): cloud.domainedessablons.fr:443
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-778f9ec0-2010-4c47-9d3b-db537bdbf131/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-778f9ec0-2010-4c47-9d3b-db537bdbf131/ HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-684b0ad4-42ae-40d9-9154-fde41863bb25/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-684b0ad4-42ae-40d9-9154-fde41863bb25/ HTTP/1.1" 404 None
+root: DEBUG: ############## test teardown done
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: Verifies that date search works with a non-recurring event
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/tobias/caldav/tests/test_caldav.py", line 1462, in testDateSearchAndFreeBusy
+    c = self._fixCalendar()
+  File "/home/tobias/caldav/tests/test_caldav.py", line 523, in _fixCalendar
+    return self.principal.make_calendar(name="Yep", cal_id=self.testcal_id)
+  File "/home/tobias/caldav/caldav/objects.py", line 413, in make_calendar
+    return self.calendar_home_set.make_calendar(
+  File "/home/tobias/caldav/caldav/objects.py", line 339, in make_calendar
+    ).save()
+  File "/home/tobias/caldav/caldav/objects.py", line 651, in save
+    self._create(name=self.name, id=self.id, **self.extra_init_options)
+  File "/home/tobias/caldav/caldav/objects.py", line 554, in _create
+    r = self._query(root=mkcol, query_method='mkcalendar', url=path,
+  File "/home/tobias/caldav/caldav/objects.py", line 159, in _query
+    ret = getattr(self.client, query_method)(
+  File "/home/tobias/caldav/caldav/davclient.py", line 472, in mkcalendar
+    return self.request(url, "MKCALENDAR", body)
+  File "/home/tobias/caldav/caldav/davclient.py", line 517, in request
+    r = self.session.request(
+  File "/usr/lib/python3.10/site-packages/requests/sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.10/site-packages/requests/sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.10/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): cloud.domainedessablons.fr:443
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/ HTTP/1.1" 401 None
+urllib3.connectionpool: DEBUG: Resetting dropped connection: cloud.domainedessablons.fr
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "GET /remote.php/dav/ HTTP/1.1" 401 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/ HTTP/1.1" 207 None
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/principals/users/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Yep/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Yep/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (2): cloud.domainedessablons.fr:443
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-ba23995b-1aa9-4188-bad7-b0f03e59bfdb/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-ba23995b-1aa9-4188-bad7-b0f03e59bfdb/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-fcb9f84b-eccc-4195-97b7-7a44c45c1448/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-fcb9f84b-eccc-4195-97b7-7a44c45c1448/ HTTP/1.1" 404 None
+root: DEBUG: ##############################
+root: DEBUG: ############## test setup done
+root: DEBUG: ##############################
+root: DEBUG: ############################
+root: DEBUG: ############## test teardown
+root: DEBUG: ############################
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (3): cloud.domainedessablons.fr:443
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/testcalendar-ba23995b-1aa9-4188-bad7-b0f03e59bfdb/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-ba23995b-1aa9-4188-bad7-b0f03e59bfdb/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-ba23995b-1aa9-4188-bad7-b0f03e59bfdb/ HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-ba23995b-1aa9-4188-bad7-b0f03e59bfdb/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-ba23995b-1aa9-4188-bad7-b0f03e59bfdb/ HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-fcb9f84b-eccc-4195-97b7-7a44c45c1448/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-fcb9f84b-eccc-4195-97b7-7a44c45c1448/ HTTP/1.1" 404 None
+root: DEBUG: ############## test teardown done
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: tests.test_caldav.TestForServer_cloud_domainedessablons_fr.testGetDefaultCalendar
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/tobias/caldav/tests/test_caldav.py", line 573, in testGetDefaultCalendar
+    assert_not_equal(len(self.principal.calendars()), 0)
+  File "/home/tobias/caldav/caldav/objects.py", line 478, in calendars
+    return self.calendar_home_set.calendars()
+  File "/home/tobias/caldav/caldav/objects.py", line 314, in calendars
+    data = self.children(cdav.Calendar.tag)
+  File "/home/tobias/caldav/caldav/objects.py", line 102, in children
+    response = self._query_properties(props+multiprops, depth)
+  File "/home/tobias/caldav/caldav/objects.py", line 141, in _query_properties
+    return self._query(root, depth)
+  File "/home/tobias/caldav/caldav/objects.py", line 159, in _query
+    ret = getattr(self.client, query_method)(
+  File "/home/tobias/caldav/caldav/davclient.py", line 404, in propfind
+    return self.request(url or self.url, "PROPFIND", props,
+  File "/home/tobias/caldav/caldav/davclient.py", line 517, in request
+    r = self.session.request(
+  File "/usr/lib/python3.10/site-packages/requests/sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.10/site-packages/requests/sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.10/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): cloud.domainedessablons.fr:443
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/ HTTP/1.1" 401 None
+urllib3.connectionpool: DEBUG: Resetting dropped connection: cloud.domainedessablons.fr
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "GET /remote.php/dav/ HTTP/1.1" 401 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/ HTTP/1.1" 207 None
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/principals/users/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Yep/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Yep/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (2): cloud.domainedessablons.fr:443
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-54457eb3-2930-432d-a2ef-f4fd786715e9/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-54457eb3-2930-432d-a2ef-f4fd786715e9/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-f03f2d7f-d2af-4c6c-8de8-fd9941af53e0/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-f03f2d7f-d2af-4c6c-8de8-fd9941af53e0/ HTTP/1.1" 404 None
+root: DEBUG: ##############################
+root: DEBUG: ############## test setup done
+root: DEBUG: ##############################
+root: DEBUG: ############################
+root: DEBUG: ############## test teardown
+root: DEBUG: ############################
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (3): cloud.domainedessablons.fr:443
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Yep/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Yep/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-54457eb3-2930-432d-a2ef-f4fd786715e9/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-54457eb3-2930-432d-a2ef-f4fd786715e9/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-f03f2d7f-d2af-4c6c-8de8-fd9941af53e0/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-f03f2d7f-d2af-4c6c-8de8-fd9941af53e0/ HTTP/1.1" 404 None
+root: DEBUG: ############## test teardown done
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: pass an URL pointing to a calendar or a user to the DAVClient class,
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/tobias/caldav/tests/test_caldav.py", line 1578, in testOffsetURL
+    calendars = principal.calendars()
+  File "/home/tobias/caldav/caldav/objects.py", line 478, in calendars
+    return self.calendar_home_set.calendars()
+  File "/home/tobias/caldav/caldav/objects.py", line 314, in calendars
+    data = self.children(cdav.Calendar.tag)
+  File "/home/tobias/caldav/caldav/objects.py", line 102, in children
+    response = self._query_properties(props+multiprops, depth)
+  File "/home/tobias/caldav/caldav/objects.py", line 141, in _query_properties
+    return self._query(root, depth)
+  File "/home/tobias/caldav/caldav/objects.py", line 159, in _query
+    ret = getattr(self.client, query_method)(
+  File "/home/tobias/caldav/caldav/davclient.py", line 404, in propfind
+    return self.request(url or self.url, "PROPFIND", props,
+  File "/home/tobias/caldav/caldav/davclient.py", line 517, in request
+    r = self.session.request(
+  File "/usr/lib/python3.10/site-packages/requests/sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.10/site-packages/requests/sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.10/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): cloud.domainedessablons.fr:443
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/ HTTP/1.1" 401 None
+urllib3.connectionpool: DEBUG: Resetting dropped connection: cloud.domainedessablons.fr
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "GET /remote.php/dav/ HTTP/1.1" 401 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/ HTTP/1.1" 207 None
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/principals/users/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (2): cloud.domainedessablons.fr:443
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Yep/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Yep/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-0982fb1a-b4a5-4b7d-8b29-a60cc2815656/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (3): cloud.domainedessablons.fr:443
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-d1f76bbc-7273-4935-8720-d2c6eee3b00e/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-d1f76bbc-7273-4935-8720-d2c6eee3b00e/ HTTP/1.1" 404 None
+root: DEBUG: ##############################
+root: DEBUG: ############## test setup done
+root: DEBUG: ##############################
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "MKCALENDAR /remote.php/dav/calendars/tobixen/testcalendar-0982fb1a-b4a5-4b7d-8b29-a60cc2815656/ HTTP/1.1" 201 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPPATCH /remote.php/dav/calendars/tobixen/testcalendar-0982fb1a-b4a5-4b7d-8b29-a60cc2815656/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): cloud.domainedessablons.fr:443
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/principals/users/tobixen/ HTTP/1.1" 401 None
+urllib3.connectionpool: DEBUG: Resetting dropped connection: cloud.domainedessablons.fr
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "GET /remote.php/dav/principals/users/tobixen/ HTTP/1.1" 401 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/principals/users/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/principals/users/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): cloud.domainedessablons.fr:443
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/testcalendar-0982fb1a-b4a5-4b7d-8b29-a60cc2815656/ HTTP/1.1" 401 None
+urllib3.connectionpool: DEBUG: Resetting dropped connection: cloud.domainedessablons.fr
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "GET /remote.php/dav/calendars/tobixen/testcalendar-0982fb1a-b4a5-4b7d-8b29-a60cc2815656/ HTTP/1.1" 401 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/testcalendar-0982fb1a-b4a5-4b7d-8b29-a60cc2815656/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/principals/users/tobixen/ HTTP/1.1" 207 None
+root: DEBUG: ############################
+root: DEBUG: ############## test teardown
+root: DEBUG: ############################
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/testcalendar-0982fb1a-b4a5-4b7d-8b29-a60cc2815656/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-0982fb1a-b4a5-4b7d-8b29-a60cc2815656/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-0982fb1a-b4a5-4b7d-8b29-a60cc2815656/ HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-0982fb1a-b4a5-4b7d-8b29-a60cc2815656/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-0982fb1a-b4a5-4b7d-8b29-a60cc2815656/ HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-d1f76bbc-7273-4935-8720-d2c6eee3b00e/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-d1f76bbc-7273-4935-8720-d2c6eee3b00e/ HTTP/1.1" 404 None
+root: DEBUG: ############## test teardown done
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: tests.test_caldav.TestForServer_cloud_domainedessablons_fr.testSchedulingInfo
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/tobias/caldav/tests/test_caldav.py", line 538, in testSchedulingInfo
+    inbox = self.principal.schedule_inbox()
+  File "/home/tobias/caldav/caldav/objects.py", line 515, in schedule_inbox
+    return ScheduleInbox(principal=self)
+  File "/home/tobias/caldav/caldav/objects.py", line 1130, in __init__
+    raise error.NotFoundError("principal has no %s.  %s" % (str(self.findprop()), error.ERR_FRAGMENT))
+caldav.lib.error.NotFoundError: NotFoundError at 'principal has no <?xml version='1.0' encoding='utf-8'?>
+<C:schedule-inbox-URL xmlns:D="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav"/>
+.  Please raise an issue at https://github.com/python-caldav/caldav/issues or reach out to t-caldav@tobixen.no, include this error and the traceback and tell what server you are using', reason 'no reason'
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): cloud.domainedessablons.fr:443
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/ HTTP/1.1" 401 None
+urllib3.connectionpool: DEBUG: Resetting dropped connection: cloud.domainedessablons.fr
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "GET /remote.php/dav/ HTTP/1.1" 401 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/ HTTP/1.1" 207 None
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/principals/users/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Yep/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Yep/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (2): cloud.domainedessablons.fr:443
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-7fbeb1cb-22b4-4153-aab6-b23122fd1848/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-7fbeb1cb-22b4-4153-aab6-b23122fd1848/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-dc1b534a-5030-425c-9294-5817cb0c611e/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-dc1b534a-5030-425c-9294-5817cb0c611e/ HTTP/1.1" 404 None
+root: DEBUG: ##############################
+root: DEBUG: ############## test setup done
+root: DEBUG: ##############################
+root: ERROR: something bad happened
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3.10/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/usr/lib/python3.10/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.10/http/client.py", line 1374, in getresponse
+    response.begin()
+  File "/usr/lib/python3.10/http/client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.10/http/client.py", line 287, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/requests/adapters.py", line 440, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3.10/site-packages/urllib3/connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3.10/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/usr/lib/python3.10/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3.10/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/usr/lib/python3.10/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.10/http/client.py", line 1374, in getresponse
+    response.begin()
+  File "/usr/lib/python3.10/http/client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.10/http/client.py", line 287, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tobias/caldav/caldav/objects.py", line 1125, in __init__
+    self.url = self.client.url.join(URL(self.get_property(self.findprop())))
+  File "/home/tobias/caldav/caldav/objects.py", line 174, in get_property
+    foo = self.get_properties([prop], **passthrough)
+  File "/home/tobias/caldav/caldav/objects.py", line 197, in get_properties
+    response = self._query_properties(props, depth)
+  File "/home/tobias/caldav/caldav/objects.py", line 141, in _query_properties
+    return self._query(root, depth)
+  File "/home/tobias/caldav/caldav/objects.py", line 159, in _query
+    ret = getattr(self.client, query_method)(
+  File "/home/tobias/caldav/caldav/davclient.py", line 404, in propfind
+    return self.request(url or self.url, "PROPFIND", props,
+  File "/home/tobias/caldav/caldav/davclient.py", line 517, in request
+    r = self.session.request(
+  File "/usr/lib/python3.10/site-packages/requests/sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.10/site-packages/requests/sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.10/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (3): cloud.domainedessablons.fr:443
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "OPTIONS /remote.php/dav/principals/users/tobixen/ HTTP/1.1" 200 0
+root: DEBUG: ############################
+root: DEBUG: ############## test teardown
+root: DEBUG: ############################
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Yep/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Yep/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-7fbeb1cb-22b4-4153-aab6-b23122fd1848/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-7fbeb1cb-22b4-4153-aab6-b23122fd1848/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-dc1b534a-5030-425c-9294-5817cb0c611e/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-dc1b534a-5030-425c-9294-5817cb0c611e/ HTTP/1.1" 404 None
+root: DEBUG: ############## test teardown done
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: Let's see how the date search method works for todo events
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/tobias/caldav/tests/test_caldav.py", line 1137, in testTodoDatesearch
+    todos = c.todos()
+  File "/home/tobias/caldav/caldav/objects.py", line 855, in todos
+    matches2 = self._fetch_todos(filters2)
+  File "/home/tobias/caldav/caldav/objects.py", line 818, in _fetch_todos
+    return self.search(root, comp_class=Todo)
+  File "/home/tobias/caldav/caldav/objects.py", line 785, in search
+    (response, objects) = self._request_report_build_resultlist(xml, comp_class)
+  File "/home/tobias/caldav/caldav/objects.py", line 752, in _request_report_build_resultlist
+    response = self._query(xml, 1, 'report')
+  File "/home/tobias/caldav/caldav/objects.py", line 159, in _query
+    ret = getattr(self.client, query_method)(
+  File "/home/tobias/caldav/caldav/davclient.py", line 433, in report
+    return self.request(url, "REPORT", query,
+  File "/home/tobias/caldav/caldav/davclient.py", line 517, in request
+    r = self.session.request(
+  File "/usr/lib/python3.10/site-packages/requests/sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3.10/site-packages/requests/sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3.10/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (1): cloud.domainedessablons.fr:443
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/ HTTP/1.1" 401 None
+urllib3.connectionpool: DEBUG: Resetting dropped connection: cloud.domainedessablons.fr
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "GET /remote.php/dav/ HTTP/1.1" 401 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/ HTTP/1.1" 207 None
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/principals/users/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Yep/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Yep/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (2): cloud.domainedessablons.fr:443
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-e94300d2-a807-49be-96e7-38f1034fefbc/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-e94300d2-a807-49be-96e7-38f1034fefbc/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-a876aea0-22c3-4a2d-97b5-382d38b05174/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-a876aea0-22c3-4a2d-97b5-382d38b05174/ HTTP/1.1" 404 None
+root: DEBUG: ##############################
+root: DEBUG: ############## test setup done
+root: DEBUG: ##############################
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "MKCALENDAR /remote.php/dav/calendars/tobixen/testcalendar-e94300d2-a807-49be-96e7-38f1034fefbc/ HTTP/1.1" 201 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPPATCH /remote.php/dav/calendars/tobixen/testcalendar-e94300d2-a807-49be-96e7-38f1034fefbc/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PUT /remote.php/dav/calendars/tobixen/testcalendar-e94300d2-a807-49be-96e7-38f1034fefbc/20070313T123432Z-456553%40example.com.ics HTTP/1.1" 201 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PUT /remote.php/dav/calendars/tobixen/testcalendar-e94300d2-a807-49be-96e7-38f1034fefbc/19970901T130000Z-123404%40host.com.ics HTTP/1.1" 201 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PUT /remote.php/dav/calendars/tobixen/testcalendar-e94300d2-a807-49be-96e7-38f1034fefbc/19970901T130000Z-123405%40host.com.ics HTTP/1.1" 201 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PUT /remote.php/dav/calendars/tobixen/testcalendar-e94300d2-a807-49be-96e7-38f1034fefbc/19970901T130000Z-123406%40host.com.ics HTTP/1.1" 201 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PUT /remote.php/dav/calendars/tobixen/testcalendar-e94300d2-a807-49be-96e7-38f1034fefbc/19920901T130000Z-123407%40host.com.ics HTTP/1.1" 201 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PUT /remote.php/dav/calendars/tobixen/testcalendar-e94300d2-a807-49be-96e7-38f1034fefbc/19920901T130000Z-123408%40host.com.ics HTTP/1.1" 201 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-e94300d2-a807-49be-96e7-38f1034fefbc/ HTTP/1.1" 207 None
+root: DEBUG: ############################
+root: DEBUG: ############## test teardown
+root: DEBUG: ############################
+urllib3.connectionpool: DEBUG: Starting new HTTPS connection (3): cloud.domainedessablons.fr:443
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/testcalendar-e94300d2-a807-49be-96e7-38f1034fefbc/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-e94300d2-a807-49be-96e7-38f1034fefbc/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-e94300d2-a807-49be-96e7-38f1034fefbc/19920901T130000Z-123407%40host.com.ics HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-e94300d2-a807-49be-96e7-38f1034fefbc/19920901T130000Z-123408%40host.com.ics HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-e94300d2-a807-49be-96e7-38f1034fefbc/19970901T130000Z-123404%40host.com.ics HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-e94300d2-a807-49be-96e7-38f1034fefbc/19970901T130000Z-123405%40host.com.ics HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-e94300d2-a807-49be-96e7-38f1034fefbc/19970901T130000Z-123406%40host.com.ics HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-e94300d2-a807-49be-96e7-38f1034fefbc/20070313T123432Z-456553%40example.com.ics HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-e94300d2-a807-49be-96e7-38f1034fefbc/ HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-e94300d2-a807-49be-96e7-38f1034fefbc/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-e94300d2-a807-49be-96e7-38f1034fefbc/ HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "PROPFIND /remote.php/dav/calendars/tobixen/personal/ HTTP/1.1" 207 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "REPORT /remote.php/dav/calendars/tobixen/testcalendar-a876aea0-22c3-4a2d-97b5-382d38b05174/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: https://cloud.domainedessablons.fr:443 "DELETE /remote.php/dav/calendars/tobixen/testcalendar-a876aea0-22c3-4a2d-97b5-382d38b05174/ HTTP/1.1" 404 None
+root: DEBUG: ############## test teardown done
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+FAIL: Let's see how the date search method works for todo events
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/site-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/tobias/caldav/tests/test_caldav.py", line 1207, in testTodoDatesearch
+    assert_equal(len(urls_found), 0)
+AssertionError: 1 != 0
+    '1 != 0' = '%s != %s' % _common_shorten_repr(1, 0)
+    '1 != 0' = self._formatMessage('1 != 0', '1 != 0')
+>>  raise self.failureException('1 != 0')
+    
+-------------------- >> begin captured logging << --------------------
+root: DEBUG: ############## test setup
+urllib3.connectionpool: DEBUG: Starting new HTTP connection (1): calendar.tobixen.no:80
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/ HTTP/1.1" 401 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/ HTTP/1.1" 207 316
+root: DEBUG: ## going to tear down old test calendars, in case teardown wasn't properly executed last time tests were run
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 357
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/Yep/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/pythoncaldav-test2/ HTTP/1.1" 404 None
+root: DEBUG: ##############################
+root: DEBUG: ############## test setup done
+root: DEBUG: ##############################
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "MKCALENDAR /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPPATCH /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 207 341
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PUT /caldav.php/tobias/pythoncaldav-test/20070313T123432Z-456553%40example.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PUT /caldav.php/tobias/pythoncaldav-test/19970901T130000Z-123404%40host.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PUT /caldav.php/tobias/pythoncaldav-test/19970901T130000Z-123405%40host.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PUT /caldav.php/tobias/pythoncaldav-test/19970901T130000Z-123406%40host.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PUT /caldav.php/tobias/pythoncaldav-test/19920901T130000Z-123407%40host.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PUT /caldav.php/tobias/pythoncaldav-test/19920901T130000Z-123408%40host.com.ics HTTP/1.1" 201 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "REPORT /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 207 3424
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "REPORT /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 207 68
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "REPORT /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 207 68
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "REPORT /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 207 6708
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "REPORT /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 207 1210
+root: DEBUG: ############################
+root: DEBUG: ############## test teardown
+root: DEBUG: ############################
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2852
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 207 279
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 204 0
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/Yapp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/Y%C3%B8lp/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/pythoncaldav-test/ HTTP/1.1" 404 None
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/ HTTP/1.1" 207 2578
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/calendar/ HTTP/1.1" 207 287
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/d71742a0-81f1-11eb-9639-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/e7e86fac-81f4-11eb-b25f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "PROPFIND /caldav.php/tobias/1ec7b104-81f5-11eb-bc3f-74e5f9bfd8c1/ HTTP/1.1" 207 308
+urllib3.connectionpool: DEBUG: http://calendar.tobixen.no:80 "DELETE /caldav.php/tobias/pythoncaldav-test2/ HTTP/1.1" 404 None
+root: DEBUG: ############## test teardown done
+--------------------- >> end captured logging << ---------------------
+
+Name                             Stmts   Miss  Cover
+----------------------------------------------------
+caldav/__init__.py                   9      0   100%
+caldav/davclient.py                265     16    94%
+caldav/elements/__init__.py          0      0   100%
+caldav/elements/base.py             55      1    98%
+caldav/elements/cdav.py             97      7    93%
+caldav/elements/dav.py              44      0   100%
+caldav/elements/ical.py              6      0   100%
+caldav/lib/__init__.py               0      0   100%
+caldav/lib/error.py                 59      5    92%
+caldav/lib/namespace.py              8      0   100%
+caldav/lib/python_utilities.py      29      5    83%
+caldav/lib/url.py                   86      5    94%
+caldav/lib/vcal.py                  44      0   100%
+caldav/objects.py                  835    101    88%
+----------------------------------------------------
+TOTAL                             1537    140    91%
+----------------------------------------------------------------------
+Ran 281 tests in 3026.931s
+
+FAILED (SKIP=32, errors=6, failures=1)
