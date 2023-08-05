@@ -1,0 +1,5 @@
+aiohttp
+
+[voice]
+aiohttp
+youtube-dl
