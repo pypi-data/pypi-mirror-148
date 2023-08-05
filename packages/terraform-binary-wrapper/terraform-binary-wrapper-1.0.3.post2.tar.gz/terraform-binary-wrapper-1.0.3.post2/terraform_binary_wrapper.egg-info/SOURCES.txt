@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+terraform.py
+lib/terraform
+terraform_binary_wrapper.egg-info/PKG-INFO
+terraform_binary_wrapper.egg-info/SOURCES.txt
+terraform_binary_wrapper.egg-info/dependency_links.txt
+terraform_binary_wrapper.egg-info/entry_points.txt
+terraform_binary_wrapper.egg-info/top_level.txt
