@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pytest-ini
+Version: 0.3
+Summary: Reuse pytest.ini to store env variables
+Home-page: https://github.com/hanzhichao/pytest-ini
+Author: Han Zhichao
+Author-email: superhin@126.com
+License: MIT license
+Keywords: pytest,py.test,pytest-ini,pytest.ini,env
+Platform: UNKNOWN
+Classifier: Framework :: Pytest
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Testing
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.7
+License-File: LICENSE
+
+Reuse pytest.ini to store env variables
+
