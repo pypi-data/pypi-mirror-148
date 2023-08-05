@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: dame_sexo
+Version: 0.0.1
+Summary: Name sex classifier
+Home-page: UNKNOWN
+Author: Luis Vivas
+Author-email: luisvivas@gmail.com
+License: MIT
+Keywords: calculator
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: license.txt
+
+This package allows to determine the gender of a person depending on the fisrt name. It does so abut using a list of 95000 names already classied.
+If the name given appears in the list, it will provid the gender weather it is male or female. If not it will use the Bayesian NLKT model which provides 80.06% accuracy.
+
+Version 0.0.1 works very well with names in Europe and America. It could be wrong with names such as Andrea which are male in Italy but male in the rest of the countries.
+
+Change Log
+==========
+
+0.0.0 (25/apr/2020)
+-------------------
+- First Release
+

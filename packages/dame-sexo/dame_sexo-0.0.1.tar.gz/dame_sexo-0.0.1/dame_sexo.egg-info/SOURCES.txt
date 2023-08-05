@@ -1,0 +1,10 @@
+README.txt
+license.txt
+setup.py
+dame_sexo/__init__.py
+dame_sexo/gender.py
+dame_sexo.egg-info/PKG-INFO
+dame_sexo.egg-info/SOURCES.txt
+dame_sexo.egg-info/dependency_links.txt
+dame_sexo.egg-info/requires.txt
+dame_sexo.egg-info/top_level.txt
