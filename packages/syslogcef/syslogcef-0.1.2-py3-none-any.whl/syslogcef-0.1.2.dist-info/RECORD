@@ -1,0 +1,9 @@
+syslogcef/__init__.py,sha256=jGx1QsCo1tOmGcobeJrpFLdOzp8IMYM7b3J7jckk-RQ,3797
+syslogcef/__version__.py,sha256=23i5g4KsaHjhdkZtIfX7_Z_r8ECzepYWuAvJqeq0EWE,251
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_syslogcef.py,sha256=Gn6F5zaZrnOvL5Md8D9ra-QWhxcSyPRXRrN9goNVjK4,3232
+syslogcef-0.1.2.dist-info/LICENSE,sha256=anyM4gyCHh5nHjibup9sk7qhvXsvfw8c-C30V3RZRdU,1068
+syslogcef-0.1.2.dist-info/METADATA,sha256=ZBeSRWcVF4Gy_u9Zxtc9dg1SykUUAO0fuxv4xjlw9Hk,2031
+syslogcef-0.1.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+syslogcef-0.1.2.dist-info/top_level.txt,sha256=TCswzOdqJzftbG82_mH9Z7hmZptgxKPnKZ1v-VkPEkE,16
+syslogcef-0.1.2.dist-info/RECORD,,
