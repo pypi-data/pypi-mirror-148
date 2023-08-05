@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: FCSAppAccessSDK
+Version: 1.0.2
+Summary: The SDK for accessing FangCloudServices with Application Access Credentials
+Home-page: https://github.com/CPSuperstore/FangCloudServicesAppAccessSDK
+Author: CPSuperstore
+Author-email: cpsuperstoreinc@gmail.com
+License: Apache License 2.0
+Project-URL: Bug Tracker, https://github.com/CPSuperstore/FangCloudServicesAppAccessSDK/issues
+Keywords: FANG,CLOUD,SERVICES,FCS,SDK,USER,MANAGEMENT,OAUTH2,SECURITY
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Security
+Classifier: License :: OSI Approved :: Apple Public Source License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Natural Language :: English
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+# FangCloudServicesAppAccessSDK
+The SDK for accessing FangCloudServices with Application Access Credentials
+
+Support for device code auth is coming soon.
+
+## Installation
+```shell
+pip install FCSAppAccessSDK
+```
+
+## Usage
+Credentials are obtained from the web portal via `Project > Applications`. You must be an admin user in order to access this page.
+
+Do not forget to enable the scopes in the web portal before attempting authentication.
+```python
+from FCSAppAccess import FCSAppAccess
+
+FCSAppAccess(client_id, client_secret, ["notifi:notif:pub", "bsg:command:dequeue"])
+```
+
+Or if you only require a single scope:
+```python
+from FCSAppAccess import FCSAppAccess
+
+FCSAppAccess(client_id, client_secret, "*:*:*")
+```
+
+
