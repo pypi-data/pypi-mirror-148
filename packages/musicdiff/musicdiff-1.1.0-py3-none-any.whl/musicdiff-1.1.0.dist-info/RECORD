@@ -1,0 +1,11 @@
+musicdiff/__init__.py,sha256=YPzHsmWIvHKzKMv8Qp-ZHfcTeduvi_ZSy4AqG39MBuk,6653
+musicdiff/__main__.py,sha256=Eir9_vfsv73uxLS-XA8Qj5BWVMUuNDA5oxTZ-5ZV3Rg,3055
+musicdiff/annotation.py,sha256=YJ9mCjGbutCl3C7vORSICnKMqHNAIt6gqWa-7W26Vg0,23279
+musicdiff/comparison.py,sha256=eaQaCgTQPIqyZkaN9kzBddtreRKSvItIWEuKO-PmHwI,37498
+musicdiff/m21utils.py,sha256=A8qNEkiHwQZbm7YnRKKJKZqUqpQ3qgWhvN0Fxd9agFo,28578
+musicdiff/visualization.py,sha256=TXoJ0chnC9h0hwLcDmPaqFvMLRNmFecB4_2uPSkarzo,50956
+musicdiff-1.1.0.dist-info/LICENSE,sha256=Dnud5EPAfN6ol7cHYF4Vs8lzti4yEBTn7gEscKuXXm4,2299
+musicdiff-1.1.0.dist-info/METADATA,sha256=ikHsEMqk0E5SUXq5ONSG6WmNdNk2ANe-S3lEXmEXTSs,4618
+musicdiff-1.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+musicdiff-1.1.0.dist-info/top_level.txt,sha256=QQwrLHJFR2RO1bZR1u77VQhXxuxrI1jLOsbeiHffbe0,10
+musicdiff-1.1.0.dist-info/RECORD,,
