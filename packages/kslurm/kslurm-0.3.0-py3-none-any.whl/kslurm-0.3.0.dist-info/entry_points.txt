@@ -1,0 +1,6 @@
+[console_scripts]
+kbatch = kslurm.submission.kbatch:kbatch
+kjupyter = kslurm.submission.kjupyter:kjuptyer
+kpy = kslurm.cli.kpy:kpy
+krun = kslurm.submission.krun:krun
+kslurm = kslurm.cli.main:main
