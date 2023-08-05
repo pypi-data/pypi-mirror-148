@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+vkudak_exchange_rates/vkudak_exchange_rates.egg-info/PKG-INFO
+vkudak_exchange_rates/vkudak_exchange_rates.egg-info/SOURCES.txt
+vkudak_exchange_rates/vkudak_exchange_rates.egg-info/dependency_links.txt
+vkudak_exchange_rates/vkudak_exchange_rates.egg-info/requires.txt
+vkudak_exchange_rates/vkudak_exchange_rates.egg-info/top_level.txt
