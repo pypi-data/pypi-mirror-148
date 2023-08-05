@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: gtkspellcheck
+Version: 0.0.0
+Summary: A placeholder for `pygtkspellcheck` which is imported as `gtkspellcheck`.
+Home-page: https://github.com/koehlma/pygtkspellcheck
+License: GPL-3.0-or-later
+Author: Maximilian Köhl
+Author-email: mail@koehlma.de
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Project-URL: Repository, https://github.com/koehlma/pygtkspellcheck.git
+Description-Content-Type: text/markdown
+
+This package exists just to reserve the name `gtkspellcheck`.
+
