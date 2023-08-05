@@ -1,0 +1,6 @@
+docstring-parser
+requests
+strip-hints>=0.1.8
+
+[tests]
+mock
