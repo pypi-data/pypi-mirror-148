@@ -1,0 +1,8 @@
+pysh/__init__.py,sha256=fwL7r5aw6NYgUbWTd2h3RuR2J0_TPso00A1J12y2DBI,43
+pysh/pysh.py,sha256=AMPlgfJ4mfNZerEyS7iYR_yT_GtfwXxFYaImknGy4c8,2539
+pysh/token_transformers.py,sha256=EVL_HTa0rasLJ6KBvNE5dHRhUYy0iK-pyO6e4d1Mtm0,3304
+pysh/util.py,sha256=vBmBY22pTdfTwyUCSFQvR94v1ej2sKx9SeVBrJ_Kxx8,1892
+pysh_stub-1.0.2.dist-info/entry_points.txt,sha256=u2qMH0TxfgQyahXfSVh0QBf9i1JwlApHclWpKUv670I,34
+pysh_stub-1.0.2.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+pysh_stub-1.0.2.dist-info/METADATA,sha256=KlqvQZ7ZqYtUQhtd0RClUiCCpn2h2ovNOPxhNlsXcQU,3708
+pysh_stub-1.0.2.dist-info/RECORD,,
