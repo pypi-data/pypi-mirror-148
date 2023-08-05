@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+pyroscope_beta/__init__.py
+pyroscope_beta.egg-info/PKG-INFO
+pyroscope_beta.egg-info/SOURCES.txt
+pyroscope_beta.egg-info/dependency_links.txt
+pyroscope_beta.egg-info/not-zip-safe
+pyroscope_beta.egg-info/requires.txt
+pyroscope_beta.egg-info/top_level.txt
