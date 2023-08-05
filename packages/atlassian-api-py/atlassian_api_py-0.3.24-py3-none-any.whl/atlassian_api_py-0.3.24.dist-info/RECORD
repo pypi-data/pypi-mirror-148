@@ -1,0 +1,12 @@
+atlassian/__init__.py,sha256=V2j0dckvMKdVQUvG8dUPtP4HCt-SuGNTYfNMrWyL50E,166
+atlassian/_version.py,sha256=F2ZBdChCLhPoqAP-g_D0yBu00UqNvoT8E_TEWCryKm8,132
+atlassian/bitbucket.py,sha256=0g9SGkTEwkLWET1J2FxaDODGOSeOH4QY-sJUArHVwU8,12925
+atlassian/client.py,sha256=MmJSGT2RPOxgK_0CA4_jDmoAK4nLpoytRlJeUmDkEDE,3349
+atlassian/error.py,sha256=6HnhRu1CQLuHjNEj1OmthP8AJqBliwhalHOL76y49Ec,1608
+atlassian/jira.py,sha256=uBVAvVqoVWjwIMCnun8HmNTr7ye-f8XpbI2ebZ0Lxes,11613
+atlassian/logger.py,sha256=L31bRNHMMw4YFZS4_sU5YeK4JGDSj6oRCz7khmL4Sjc,1162
+atlassian_api_py-0.3.24.dist-info/LICENSE,sha256=YuagYNDOVv7t5tzgMszBVyQqgJ2olwxcidRIncjUPLw,1067
+atlassian_api_py-0.3.24.dist-info/METADATA,sha256=xGigoh55QyQNg-FqQQdo-vV3CnVb_y-HBFK7-607dlM,6885
+atlassian_api_py-0.3.24.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+atlassian_api_py-0.3.24.dist-info/top_level.txt,sha256=84-EDv8LNaZx01TCGjBzglwPU1JSRJ7fPSq9uy55Sv0,10
+atlassian_api_py-0.3.24.dist-info/RECORD,,
