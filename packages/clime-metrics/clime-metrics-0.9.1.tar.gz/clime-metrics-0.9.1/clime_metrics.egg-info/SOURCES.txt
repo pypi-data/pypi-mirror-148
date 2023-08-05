@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+clime_metrics/__init__.py
+clime_metrics/main.py
+clime_metrics/version.py
+clime_metrics.egg-info/PKG-INFO
+clime_metrics.egg-info/SOURCES.txt
+clime_metrics.egg-info/dependency_links.txt
+clime_metrics.egg-info/requires.txt
+clime_metrics.egg-info/top_level.txt

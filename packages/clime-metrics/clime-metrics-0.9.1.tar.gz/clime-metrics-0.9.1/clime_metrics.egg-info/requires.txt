@@ -1,0 +1,9 @@
+clime-git-bus-factor
+clime-commits
+clime-productivity
+clime-issues
+clime-issue-density
+clime-issue-spoilage
+clime-gh-repository-searcher
+clime-json-converter
+clime-badges
