@@ -1,0 +1,2 @@
+[console_scripts]
+pipsalabim = pipsalabim.cli:main
