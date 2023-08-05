@@ -1,0 +1,3 @@
+[console_scripts]
+thermal=thermal.cli:main
+
