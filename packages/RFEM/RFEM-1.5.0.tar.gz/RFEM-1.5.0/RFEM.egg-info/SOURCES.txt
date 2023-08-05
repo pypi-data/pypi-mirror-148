@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+Examples/__init__.py
+Examples/main.py
+Examples/window.py
+RFEM.egg-info/PKG-INFO
+RFEM.egg-info/SOURCES.txt
+RFEM.egg-info/dependency_links.txt
+RFEM.egg-info/not-zip-safe
+RFEM.egg-info/requires.txt
+RFEM.egg-info/top_level.txt
