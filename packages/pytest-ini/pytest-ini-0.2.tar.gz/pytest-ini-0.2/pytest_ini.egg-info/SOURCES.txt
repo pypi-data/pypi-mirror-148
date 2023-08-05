@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+pytest_ini/__init__.py
+pytest_ini/plugin.py
+pytest_ini.egg-info/PKG-INFO
+pytest_ini.egg-info/SOURCES.txt
+pytest_ini.egg-info/dependency_links.txt
+pytest_ini.egg-info/entry_points.txt
+pytest_ini.egg-info/requires.txt
+pytest_ini.egg-info/top_level.txt
+pytest_ini.egg-info/zip-safe
