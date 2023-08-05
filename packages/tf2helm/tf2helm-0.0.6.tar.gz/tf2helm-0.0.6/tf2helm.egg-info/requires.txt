@@ -1,0 +1,7 @@
+python-hcl2
+avionix
+requests
+jinja2
+halo
+click
+gitpython
