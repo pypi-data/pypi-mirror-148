@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+pyws2812.egg-info/PKG-INFO
+pyws2812.egg-info/SOURCES.txt
+pyws2812.egg-info/dependency_links.txt
+pyws2812.egg-info/requires.txt
+pyws2812.egg-info/top_level.txt
+ws2812/__init__.py
