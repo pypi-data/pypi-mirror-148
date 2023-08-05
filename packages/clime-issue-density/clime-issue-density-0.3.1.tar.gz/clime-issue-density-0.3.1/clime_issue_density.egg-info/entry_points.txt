@@ -1,0 +1,3 @@
+[console_scripts]
+clime-issue-density-compute = clime_issue_density.main:main
+clime-issue-density-graph = clime_issue_density.graph:main
