@@ -1,0 +1,213 @@
+Metadata-Version: 2.1
+Name: lins-healthchecks
+Version: 1.0.0
+Summary: Pacote que integra containers do docker ao sistema de healthcheck da lins-ferrão
+Home-page: https://bitbucket.org/grupolinsferrao/lins-health-check
+Author: Diego Magalhães
+Author-email: dmlmagal@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Lins Health Checks
+![pyver](https://img.shields.io/badge/python-3.6%2B-blue)
+[![codecov](https://codecov.io/bb/grupolinsferrao/pypck-lins-health-check/branch/master/graph/badge.svg?token=37SJO6KB8C)](https://codecov.io/bb/grupolinsferrao/pypck-lins-health-check)
+
+![pyver](https://img.shields.io/badge/python-3.6%2B-blue)
+[![codecov](https://codecov.io/bb/grupolinsferrao/pypck-lins-health-check/branch/master/graph/badge.svg?token=37SJO6KB8C)](https://codecov.io/bb/grupolinsferrao/pypck-lins-health-check)
+
+Esse pacote tem como propósito, linkar os serviços da lins-ferrão ao sistema de checagem (healthchecks).
+
+### Requirements:
+
+* Python 3.6+
+
+```bash
+$ pip install lins_healthchecks
+```
+
+# Variáveis de ambiente
+
+Variável | Definição | Valor padrão | Requerida
+-- | - | - | -
+LINS_HEALTH_CHECK_URL | Define a url base para consumo do pacote | https://healthchecks.grupolinsferrao.com.br | Não
+HEALTH_CHECKS_REQUEST_TIMEOUT | Define o tempo máximo de espera por uma resposta | 10 (segundos) | Não
+TIMEZONE | Define a timezone exibida nos logs | America/Sao_Paulo | Não
+SHOW_HEALTH_CHECKS_LOGS | Ativa ou desativa a exibição de logs do pacote | True | Não
+HEALTH_CHECKS_API_KEY | Chave necessária para autorizar o acesso aos endpoints | Nenhum (None) | Sim
+
+
+## Como gerar a API KEY
+
+1 - Clique na caixa com o nome do projeto em `My projects`
+
+2 - No menu superior no cabeçalho clique em `SETTINGS`
+
+3 - Na caixa de opções `API Access` clique em `create`
+
+4 - Atribua a chave gerada para a variável de ambiente `HEALTH_CHECKS_API_KEY`
+
+
+## Utilizando o pacote
+
+Existem duas abordagens de uso.
+
+### decorator
+
+Nesta abordagem, a função decorada **deve** possuir o atributo **health_check** ou **kwargs para receber uma instância da classe HealthCheck, possibilitando a comunicação com o sistema.
+
+
+```python
+from lins_healthchecks import api
+
+DADOS_DO_SERVICO = {
+    'name': 'meu servico',
+    'tags': 'foo bar',
+    'timeout': 3600,
+    'grace': 60,
+}
+
+
+@api.link(DADOS_DO_SERVICO)
+def minha_funcao_decorada(health_check):
+    health_check.reportar_inicio()
+    try:
+        foo()
+    except Exception as e:
+        health_check.reportar_falha_por_exception(e)
+    health_check.reportar_sucesso()
+
+```
+
+
+
+### Atribuição
+
+```python
+from lins_healthchecks.utils import cria_ou_busca_health_check
+
+DADOS_DO_SERVICO = {
+    'name': 'meu servico',
+    'tags': 'foo bar',
+    'timeout': 3600,
+    'grace': 60,
+}
+
+
+def minha_funcao():
+    health_check = healthcheck.cria_ou_busca_health_check(DADOS_DO_SERVICO)
+    try:
+        health_check.reportar_inicio()
+        foo()
+    except Exception e :
+        health_check.reportar_falha_por_exception(e)
+    health_check.reportar_sucesso()
+
+```
+
+Caso um erro ocorra por outro comportamento que não uma `exception` então:
+
+```python
+from lins_healthchecks.utils import cria_ou_busca_health_check
+
+DADOS_DO_SERVICO = {
+    'name': 'meu servico',
+    'tags': 'foo bar',
+    'timeout': 3600,
+    'grace': 60,
+}
+
+
+def minha_funcao():
+    health_check = healthcheck.cria_ou_busca_health_check(DADOS_DO_SERVICO)
+    health_check.reportar_inicio()
+    if not foo()
+        health_check.reportar_falha('foo retornou False')
+    else:
+        health_check.reportar_sucesso()
+
+```
+
+Para mais informações dos possíveis parâmetros para criação do HC consulte a documentação [aqui](https://healthchecks.grupolinsferrao.com.br/docs/api/#create-check)
+
+# Alertas
+
+## Tratamento interno para evitar replicações de registros no HC.
+
+Se no json informado para criação do HC no método `cria_ou_busca_healthcheck` não existir a chave `unique`, o método de criação irá adiciona-lo,
+sendo assim:
+
+```python
+{
+    'name': 'meu servico',
+    'tags': 'foo bar',
+    'timeout': 3600,
+    'grace': 60,
+}
+```
+será tratado como:
+
+```python
+{
+    'name': 'meu servico',
+    'tags': 'foo bar',
+    'timeout': 3600,
+    'grace': 60,
+    'unique': ['name'],
+}
+```
+
+Caso exista o `unique` no json mas sem a string `name` então:
+
+```python
+{
+    'name': 'meu servico',
+    'tags': 'foo bar',
+    'timeout': 3600,
+    'grace': 60,
+    'unique': ['tags'],
+}
+```
+
+será tratado como:
+
+```python
+{
+    'name': 'meu servico',
+    'tags': 'foo bar',
+    'timeout': 3600,
+    'grace': 60,
+    'unique': ['tags', 'name'],
+}
+```
+
+A adição do `{'unique': 'name'}` ao json evita que um novo registro seja criado toda vez que um serviço
+for reiniciado.
+
+## A quantidade e a ordem das tags importam
+
+Na criação do health check, caso informem as `tags` na chave `unique` do json a **ordem** e a **quantidade** das tags **importam**, caso sejam reordenadas, adicionadas ou removidas, isso resultará em um **novo** **registro** de check se isso for realmente necessário, lembre-se de remover o registro antigo.
+
+ex:
+
+```python
+from lins_healthchecks import utils
+
+DADOS_DO_SERVICO = {
+    'name': 'meu servico',
+    'tags': 'foo bar',
+    'timeout': 3600,
+    'grace': 60,
+}
+
+response = utils.cria_ou_busca_healthcheck(DADOS_DO_SERVICO)  # criou um registro de HC
+DADOS_DO_SERVICO['tags'] = 'bar foo'
+response = utils.cria_ou_busca_healthcheck(DADOS_DO_SERVICO)  # criou outro registro de HC
+```
+
+
