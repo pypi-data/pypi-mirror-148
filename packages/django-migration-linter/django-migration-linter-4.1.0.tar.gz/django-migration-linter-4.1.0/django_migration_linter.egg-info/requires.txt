@@ -1,0 +1,10 @@
+django>=2.2
+appdirs>=1.4.3
+toml>=0.10.2
+
+[test]
+tox>=3.15.2
+mysqlclient<2,>=1.4.6
+psycopg2-binary<2.9,>=2.8.5
+django_add_default_value>=0.4.0
+coverage>=5.5
