@@ -1,0 +1,9 @@
+cython
+numpy>=1.19.2
+scikit-learn
+mpi4py
+h5py
+matplotlib
+pynbody
+nbodykit
+pynverse
