@@ -1,0 +1,3 @@
+[console_scripts]
+pyquarantine = pyquarantine.cli:main
+pyquarantine-milter = pyquarantine.run:main
