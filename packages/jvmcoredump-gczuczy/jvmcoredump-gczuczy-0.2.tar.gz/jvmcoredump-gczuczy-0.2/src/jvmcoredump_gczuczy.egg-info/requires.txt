@@ -1,0 +1,3 @@
+python-gdb-ctrl
+pexpect
+pyyaml
