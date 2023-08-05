@@ -1,0 +1,11 @@
+telegram_antispam_bot/__init__.py,sha256=qhDAxZyXMDQug5OOfpZX-r8UdnEBTvbThgerhCYOnTI,260
+telegram_antispam_bot/__main__.py,sha256=bvO0G8ijPIOPxwJ4q33oNRT8FFQwUmI3MU19LT6rK20,725
+telegram_antispam_bot/antispam_bot.py,sha256=V5EWWGDbauH6sDH1Q2l84_IpQXAS_nzCcQV6N8u__Kc,16033
+telegram_antispam_bot/challenge.py,sha256=o1eAN4BDPEokj66fws1aV-qIJacFDvKRCWZNvKARrDg,4951
+telegram_antispam_bot/config.py,sha256=GqjbAX8qX2qq4DshYKhSkd-zp77vS3hQDi7jkNlOK6o,3146
+telegram_antispam_bot/config_helpers.py,sha256=hc5geroVoCOvegtqjQerSClBIDA90Hj2CgEheOyxYKI,2408
+egenix_telegram_antispam_bot-0.3.0.dist-info/LICENSE,sha256=ONRhNRaWFkYkrl6RphcCtMPMtKUpwTSN4PmjWSztDqQ,1120
+egenix_telegram_antispam_bot-0.3.0.dist-info/METADATA,sha256=wjlewOt-Bc_dzxoJdix7FYFxTDy9mb40hk6T9tQ_RMY,10331
+egenix_telegram_antispam_bot-0.3.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+egenix_telegram_antispam_bot-0.3.0.dist-info/top_level.txt,sha256=ANYzzA_YKQc-3l1TFb0n0bC_U-3IECEUyqD5KGB9YB8,22
+egenix_telegram_antispam_bot-0.3.0.dist-info/RECORD,,
