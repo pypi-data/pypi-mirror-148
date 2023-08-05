@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: creadoc
+Version: 0.0.9
+Summary: Дизайнер отчетов на основе Stimulsoft Report Js
+Home-page: https://github.com/damirazo/creadoc
+Author: damirazo
+Author-email: me@damirazo.ru
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Text Processing :: General
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Russian
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: Django (>=1.11.12)
+Requires-Dist: m3-core (>=3.0)
+Requires-Dist: m3-legacy (>=2.1.1)
+Requires-Dist: m3-mutex (>=2.0.4)
+Requires-Dist: m3-ui (<3.1,>=2.0.8)
+Requires-Dist: m3-users (>=2.2.4)
+
+UNKNOWN
+
