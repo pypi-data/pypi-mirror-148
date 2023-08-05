@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: pydataxm
+Version: 0.3.0
+Summary: Interface to play with the API XM
+Home-page: https://github.com/EquipoAnaliticaXM/API_XM
+Author: Equipo Analitica XM
+Author-email: analitica@xm.com.co
+License: MIT
+Download-URL: https://raw.githubusercontent.com/EquipoAnaliticaXM/API_XM/master/pydataxm/pydataxm.py
+Description: UNKNOWN
+Keywords: API interpreter,Mercado Energía Mayorista,XM
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
