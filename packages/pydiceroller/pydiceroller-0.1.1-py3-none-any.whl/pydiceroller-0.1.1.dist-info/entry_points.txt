@@ -1,0 +1,2 @@
+[console_scripts]
+pydiceroller = pydiceroller.pydiceroller:pydiceroller
