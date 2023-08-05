@@ -1,0 +1,10 @@
+README
+setup.py
+pyadserver/__init__.py
+pyadserver/isofit.py
+pyadserver/simide.py
+pyadserver/simsep.py
+sga.egg-info/PKG-INFO
+sga.egg-info/SOURCES.txt
+sga.egg-info/dependency_links.txt
+sga.egg-info/top_level.txt
