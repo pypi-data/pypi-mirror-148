@@ -1,0 +1,93 @@
+Metadata-Version: 2.1
+Name: ax_env
+Version: 0.2.4
+Summary: dependency manager for XENONnT package
+Home-page: https://github.com/XENONnT/ax_env
+Author: J. R. Angevaare
+License: UNKNOWN
+Description: # Ax env
+        [![Test package](https://github.com/XENONnT/ax_env/actions/workflows/pytest.yml/badge.svg?branch=master)](https://github.com/XENONnT/ax_env/actions/workflows/pytest.yml) 
+        [![PyPI version shields.io](https://img.shields.io/pypi/v/ax_env.svg)](https://pypi.python.org/pypi/ax_env/) 
+        [![Python Versions](https://img.shields.io/pypi/pyversions/ax_env.svg)](https://pypi.python.org/pypi/ax_env)
+        [![PyPI downloads](https://img.shields.io/pypi/dm/ax_env.svg)](https://pypistats.org/packages/ax_env)
+        
+        
+        j.angevaare@nikhef.nl
+        
+        Managed dependencies for strax, straxen, wfsim and pema
+        
+        ## Managed dependacies tracked by dependabot
+        This repository is a container for trackin the dependencies of the latest versions of the strax, straxen, wfsim and pema - packages. The idea is to maintain the [requirements-tests.txt](./extra_requirements/requirements-tests.txt) file that serves as the shared requirements file of each. To avoid having to maintain several very similar files for each of the packages, we just maintain only this file. The packages all download this file when performing tests to assure that we know tests are always performed on fixed software versions.
+        
+        ## Interacting with dependabot
+        Since this repository's only purpose is to facilitate a requirements file for other testing infrastructures, the testing on this specific repo is set rather flexible. In contrast to the packages mentioned above one can easily let dependabot merge PRs (we don't require an approving review or anything). Hencem one can savely tell dependabot to merge PRs which it will automatically merge as soon as the tests pass. Just add this comment to a PR:
+        ```bash
+        @dependabot squash and merge
+        ```
+        
+        ## Note of causion on testing on dependabot PRs.
+        One side note is that one should keep in mind that dependabot's PRs don't have access to our required secrets. This means that the tests are only _really_ fully run when a PR is merged to master (and has access to the secrets there). This can lead to the unlikely situation that an issue with one dependency is uncovered then. The offending PR should be reverted as soon as possible to prevent tests on the repsective packages to fail too (they usually rely on the code on the master branch of this repository).
+        
+        
+        0.2.2 / 2022-04-18
+        ------------------
+        **Full Changelog**: https://github.com/XENONnT/ax_env/compare/v0.2.1...v0.2.2
+        
+        0.2.2 / 2022-04-18
+        ------------------
+        * Bump nestpy by @JoranAngevaare in https://github.com/XENONnT/ax_env/pull/74
+        
+        **Full Changelog**: https://github.com/XENONnT/ax_env/compare/v0.2.0...v0.2.1
+        
+        0.2.1 / 2022-04-18
+        ------------------
+        * Bump pandas from 1.4.1 to 1.4.2 in /extra_requirements by @dependabot in https://github.com/XENONnT/ax_env/pull/46
+        * WFSIm bump by @JoranAngevaare in https://github.com/XENONnT/ax_env/pull/58
+        * Bump pymongo from 3.12.1 to 3.12.3 in /extra_requirements by @dependabot in https://github.com/XENONnT/ax_env/pull/59
+        * Bump jupyter-client from 7.2.1 to 7.2.2 by @dependabot in https://github.com/XENONnT/ax_env/pull/61
+        * Update requirements.txt by @JoranAngevaare in https://github.com/XENONnT/ax_env/pull/63
+        * Bump numpy from 1.21.4 to 1.21.6 by @dependabot in https://github.com/XENONnT/ax_env/pull/65
+        * Update README.md by @JoranAngevaare in https://github.com/XENONnT/ax_env/pull/67
+        * Bump utilix from 0.6.7 to 0.7.0 by @dependabot in https://github.com/XENONnT/ax_env/pull/73
+        
+        **Full Changelog**: https://github.com/XENONnT/ax_env/compare/v0.1.0...v0.2.0
+        
+        0.1.0
+        ------------------
+        * upload CI by @JoranAngevaare in https://github.com/XENONnT/ax_env/pull/1
+        * Bump zstd from 1.5.0.4 to 1.5.1.0 in /extra_requirements by @dependabot in https://github.com/XENONnT/ax_env/pull/3
+        * Bump dask from 2022.2.1 to 2022.3.0 in /extra_requirements by @dependabot in https://github.com/XENONnT/ax_env/pull/2
+        * Bump jupyter-client from 7.1.2 to 7.2.1 by @dependabot in https://github.com/XENONnT/ax_env/pull/4
+        * Bump panel from 0.12.6 to 0.12.7 in /extra_requirements by @dependabot in https://github.com/XENONnT/ax_env/pull/5
+        * Bump straxen from 1.5.0 to 1.6.0 by @dependabot in https://github.com/XENONnT/ax_env/pull/8
+        * Bump scipy from 1.7.3 to 1.8.0 in /extra_requirements by @dependabot in https://github.com/XENONnT/ax_env/pull/12
+        * add auto approve by @JoranAngevaare in https://github.com/XENONnT/ax_env/pull/19
+        * Bump utilix from 0.6.6 to 0.6.7 in /extra_requirements by @dependabot in https://github.com/XENONnT/ax_env/pull/13
+        * Auto approve by @JoranAngevaare in https://github.com/XENONnT/ax_env/pull/25
+        * Bump sphinx from 4.4.0 to 4.5.0 in /extra_requirements by @dependabot in https://github.com/XENONnT/ax_env/pull/43
+        * Bump hypothesis from 6.39.0 to 6.40.2 by @dependabot in https://github.com/XENONnT/ax_env/pull/38
+        
+        New Contributors
+        * @JoranAngevaare made their first contribution in https://github.com/XENONnT/ax_env/pull/1
+        * @dependabot made their first contribution in https://github.com/XENONnT/ax_env/pull/3
+        
+        **Full Changelog**: https://github.com/XENONnT/ax_env/commits/v0.1.0
+        
+        
+        0.0.0 / 2022-04-01
+        ------------------
+        
+        - First commits
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
