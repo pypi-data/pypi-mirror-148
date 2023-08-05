@@ -1,0 +1,216 @@
+#!python
+
+import sys
+from SuperfacilityAPI import (
+    SuperfacilityAPI,
+    SuperfacilityAccessToken
+)
+
+import click
+from pprint import pprint
+from pathlib import Path
+import json
+
+
+def mypprint(x):
+    if isinstance(x, str):
+        print(x)
+        return
+    else:
+        try:
+            print(json.dumps(x))
+        except Exception as e:
+            print(x)
+
+    return
+
+
+def check_file_and_open(file_path: str = "") -> str:
+    contents = None
+    pth = Path(file_path)
+    if pth.is_file():
+        with open(pth.absolute()) as f:
+            contents = f.read()
+    return contents
+
+
+@click.group()
+@click.option('--clientid', default=None,
+              help='Client ID for your key. Can be used to specify which key to look for in $HOME/.superfacility.')
+@click.pass_context
+def cli(ctx, clientid):
+    # Entrypoint for all the cli subcommands
+    # Basically an __init__ function that sets up the sfapi
+    ctx.ensure_object(dict)
+    access_token = SuperfacilityAccessToken(client_id=clientid)
+    sfapi = SuperfacilityAPI(token=access_token.token)
+
+    ctx.obj['sfapi'] = sfapi
+
+
+@cli.command()
+@click.argument('site', default=None)
+@click.pass_context
+def status(ctx, site):
+    sfapi = ctx.obj['sfapi']
+
+    if site in ['compute', 'computes']:
+        site = 'cori,perlmutter'
+    elif site in ['filesystem', 'filesystems']:
+        site = 'dna,dtns,global_homes,projectb,global_common,community_filesystem'
+    elif site in ['login', 'logins']:
+        site = 'cori,perlmutter,jupyter,dtns'
+
+    if site == 'all':
+        ret = sfapi.status(None)
+    else:
+        ret = [sfapi.status(site) for site in site.split(",")]
+
+    ret = [oj for oj in ret if oj['description'] != 'Retired']
+
+    ret = [{k: oj[k] for k in ['full_name', 'description',
+                               'status', 'updated_at']} for oj in ret]
+
+    mypprint(ret)
+
+
+@cli.command()
+@click.pass_context
+def token(ctx):
+    sfapi = ctx.obj['sfapi']
+    mypprint(sfapi.access_token)
+
+
+@cli.command()
+@click.pass_context
+def systems(ctx):
+    sfapi = ctx.obj['sfapi']
+    mypprint(sfapi.system_names())
+
+
+@cli.command()
+@click.pass_context
+def roles(ctx):
+    sfapi = ctx.obj['sfapi']
+    ret = sfapi.roles()
+    try:
+        ret = [{k: oj[k] for k in ['repo_name', 'id',
+                                   'iris_role', 'description']} for oj in ret]
+        mypprint(ret)
+    except Exception as e:
+        print(ret, file=sys.stderr)
+
+
+@cli.command()
+@click.pass_context
+def projects(ctx):
+    sfapi = ctx.obj['sfapi']
+
+    ret = sfapi.projects()
+    mypprint(ret)
+
+
+@cli.command()
+@click.argument('site', default=None)
+@click.option('--path', default=None, help='Path to slurm submit file at NERSC.')
+@click.option('--local', default=None, help='Path to local file to submit.')
+@click.pass_context
+def sbatch(ctx, site, path, local):
+    sfapi = ctx.obj['sfapi']
+    script = None
+    isPath = False
+
+    if path is not None:
+        isPath = True
+        script = path
+    elif local is not None:
+        script = check_file_and_open(local)
+
+    ret = sfapi.post_job(site=site, script=script, isPath=isPath)
+    try:
+        mypprint(ret['jobid'])
+    except Exception as e:
+        mypprint(e)
+
+
+@cli.command()
+@click.argument('site', default=None)
+@click.option('--path', default=None, help='Path to slurm submit file at NERSC.')
+@click.pass_context
+def ls(ctx, site, path):
+    sfapi = ctx.obj['sfapi']
+
+    ret = sfapi.ls(site=site, remote_path=path)
+    try:
+        mypprint(ret['entries'])
+    except Exception as e:
+        mypprint(e)
+
+
+@cli.command()
+@click.argument('site', default=None)
+@click.option('--path', default=None, help='Path to slurm submit file at NERSC.')
+@click.pass_context
+def cat(ctx, site, path):
+    sfapi = ctx.obj['sfapi']
+
+    ret = sfapi.download(site=site, remote_path=path, save=False)
+
+    try:
+        print(ret['file'])
+    except Exception as e:
+        mypprint(e)
+
+
+@cli.command()
+@click.argument('site', default=None)
+@click.option('--sacct/--no-sacct', default=False)
+@click.option('--user', default=None, help='User to to get queue info for.')
+@click.option('--jobid', default=None, help='Specific jobid to get queue info for.')
+@click.pass_context
+def squeue(ctx, site, sacct, user, jobid):
+    sfapi = ctx.obj['sfapi']
+
+    ret = sfapi.get_job(site=site, sacct=sacct, user=user, jobid=jobid)
+
+    cols = ['jobid',
+            'name',
+            'account',
+            'cpus',
+            'features',
+            'partition',
+            'reason',
+            'start_time',
+            'state',
+            'submit_time',
+            'time',
+            'time_left',
+            'time_limit',
+            ]
+
+    try:
+        if sacct:
+            mypprint(ret['output'])
+        else:
+            ret = [{k: oj[k] for k in cols} for oj in ret['output']]
+            mypprint(ret)
+    except Exception as e:
+        mypprint(f"Error {e}")
+
+
+@cli.command()
+@click.argument('site', default=None)
+@click.option('--jobid', default=None, help='Specific jobid to get queue info for.')
+@click.pass_context
+def scancel(ctx, site, jobid):
+    sfapi = ctx.obj['sfapi']
+
+    ret = sfapi.delete_job(site=site, jobid=jobid)
+    try:
+        pprint(ret)
+    except Exception as e:
+        mypprint(e)
+
+
+if __name__ == '__main__':
+    cli(obj={})
