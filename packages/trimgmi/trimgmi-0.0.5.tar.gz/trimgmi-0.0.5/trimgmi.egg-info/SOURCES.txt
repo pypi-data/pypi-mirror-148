@@ -1,0 +1,12 @@
+README
+setup.cfg
+setup.py
+trimgmi/__init__.py
+trimgmi/command.py
+trimgmi/convert.py
+trimgmi/sample.py
+trimgmi.egg-info/PKG-INFO
+trimgmi.egg-info/SOURCES.txt
+trimgmi.egg-info/dependency_links.txt
+trimgmi.egg-info/entry_points.txt
+trimgmi.egg-info/top_level.txt
