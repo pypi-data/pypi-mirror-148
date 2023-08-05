@@ -1,0 +1,15 @@
+thermal/__init__.py,sha256=oL6Uwe60EQYo9v01tVb79-RK_KAiVEZH1mweDqkDUNA,242
+thermal/resample/__init__.py,sha256=ub5TyjoeLyKxOgWCRroLcOwY_e3xfQ5yai6PA77bv5s,244
+thermal/resample/_interface.py,sha256=2R6o28nYQmSGZAFWHpTH3KMBkfbgxYxgwh052a3ZZ_I,529
+thermal/resample/generic.py,sha256=4-gyzq6tWwSYdlIzBxqGYitwr5Pan5anCIkvphUM2xM,2380
+thermal/resample/gmm.py,sha256=mlI5xSnfxxI_sXl7Pr6ATiHeeWev3_CdR0OSfRnQYkQ,2167
+thermal/resample/hist.py,sha256=pwPvmRm6x6W-8-2eFzgAbnrlP1n1zT-gR4vIzztNU-Q,1528
+thermal/resample/kde.py,sha256=FPGxqbjLWHK1sE4_Wwnkv0VzkOJ_ef3gjUpjyHtEzpc,1881
+thermal/stats/__init__.py,sha256=xvWBYqX17x_0to3PY6bGvaaAksLUX3RZTqGrgGDDKvg,125
+thermal/stats/samples_tests.py,sha256=5Eo4IMDq-EMloKelI3U_v42Afaza4s4pIaM0LBy0zAw,3448
+thermal/thermal.py,sha256=h0hwdogXGFqerm-5ZPeT-irPn91pCcQRjiHThXsRzEk,19
+thermal-0.6.1.dist-info/entry_points.txt,sha256=vJWDzDDXPRwXBxzPcgqbIbe-3BLMsmoA31fgeLWofBw,44
+thermal-0.6.1.dist-info/LICENSE,sha256=Hz3eb-r13kwYV8w2i0-S4JmLf1cW_JbY0Ky4QhEuRxs,1076
+thermal-0.6.1.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+thermal-0.6.1.dist-info/METADATA,sha256=U9w7YXXyjeR5AtOvn0PUk6a_JwERZrihmI5NfHSbl1E,2599
+thermal-0.6.1.dist-info/RECORD,,
