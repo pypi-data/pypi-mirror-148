@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+pydiceroller/args.py
+pydiceroller/pydiceroller.py
+pydiceroller.egg-info/PKG-INFO
+pydiceroller.egg-info/SOURCES.txt
+pydiceroller.egg-info/dependency_links.txt
+pydiceroller.egg-info/entry_points.txt
+pydiceroller.egg-info/not-zip-safe
+pydiceroller.egg-info/top_level.txt
