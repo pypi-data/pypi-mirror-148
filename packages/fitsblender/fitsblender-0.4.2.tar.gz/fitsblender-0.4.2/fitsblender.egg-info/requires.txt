@@ -1,0 +1,13 @@
+astropy>=5.0.4
+numpy
+six
+stsci.tools
+
+[docs]
+sphinx
+numpydoc
+
+[test]
+pytest
+pytest-cov
+codecov
