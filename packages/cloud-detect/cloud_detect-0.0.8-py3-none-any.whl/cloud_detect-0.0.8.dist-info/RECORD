@@ -1,0 +1,14 @@
+cloud_detect/__init__.py,sha256=3o5Y7OzS4sopVLbwQPedo4t1IyX2-mtAn0UuwpBjLHc,3523
+cloud_detect/providers/__init__.py,sha256=3mudenyj6ZeT8t5_mSzDObSBEM8DCVUmcGqK3_kPDQY,445
+cloud_detect/providers/alibaba_provider.py,sha256=RvlFVo4N923ps-YwDQVtVGUWMBvFG49_TgckwzXZZaQ,1627
+cloud_detect/providers/aws_provider.py,sha256=pXwezR-F1CeOlShIPWGoyyM7bkZWZh7ofGFpFLO072o,1777
+cloud_detect/providers/azure_provider.py,sha256=4brZlJBL7NIOk4Y8i3_V96_mO_rGq1pSCeNSBQXNKxc,1642
+cloud_detect/providers/do_provider.py,sha256=4rB2Dat7m8qa6l-WeV2cXxC-pJz4h3PaG7ur4Ay6ugk,1563
+cloud_detect/providers/gcp_provider.py,sha256=Vl58mis-7pbkXS3bIheyIJ_tg3Ubff_r9gIFxAbjK5I,1601
+cloud_detect/providers/oci_provider.py,sha256=pEYWwQ1zqcQzIrwM6D3lvKmuuX9kRoF5Rc6_KPVt2aM,1085
+cloud_detect/providers/provider.py,sha256=fEdu1Izo0w5Hiw8a3o_kjKrcevBZUwRxcsdaH-ml9U0,507
+cloud_detect-0.0.8.dist-info/LICENSE.md,sha256=am9NpuENDpGCg8IFc_Z2dTjUjAKR7vixwxZcpe05A40,1079
+cloud_detect-0.0.8.dist-info/METADATA,sha256=8nDR0q0bbwl4LccGs7bjhw1htrLrR9wg4kK2zQu6JT0,3366
+cloud_detect-0.0.8.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+cloud_detect-0.0.8.dist-info/top_level.txt,sha256=iHdE4Mld9ibEVOoJevrcdhJRrQyNc3keoBhasTV1-cI,13
+cloud_detect-0.0.8.dist-info/RECORD,,
