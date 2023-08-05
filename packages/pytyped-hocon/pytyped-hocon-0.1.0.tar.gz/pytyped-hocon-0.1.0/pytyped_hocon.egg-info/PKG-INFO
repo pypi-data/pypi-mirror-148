@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pytyped-hocon
+Version: 0.1.0
+Summary: Type-Driven Development for Python: Automatic Extraction of HOCON Parsers for Python Types
+Home-page: https://github.com/stasharrofi/pytyped/tree/master/pytyped-hocon
+Author: Shahab Tasharrofi
+Author-email: shahab.tasharrofi@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+UNKNOWN
+
