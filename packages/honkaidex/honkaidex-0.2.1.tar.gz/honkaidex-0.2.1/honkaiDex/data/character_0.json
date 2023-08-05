@@ -1,0 +1,1286 @@
+{
+    "kiana kaslana": {
+        "name": "kiana kaslana",
+        "nickname" : ["tuna"],
+        "battlesuit": [
+            {
+                "name": "White Comet",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/7/75/White_Comet_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220109094457",
+                "type": "MECH",
+                "version": "1.8",
+                "tags": [
+                    "physical",
+                    "burst",
+                    "time mastery",
+                    "stun"
+                ],
+                "rank": "B",
+                "nickname": [
+                    "WC",
+                    "Comet",
+                    "Shit Kiana"
+                ]
+            },
+            {
+                "name": "Valkyrie Ranger",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/8b/Valkyrie_Ranger_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220109094514",
+                "type": "MECH",
+                "version": "1.8",
+                "tags": [
+                    "physical",
+                    "gather",
+                    "bleed"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "VR",
+                    "Ranger"
+                ]
+            },
+            {
+                "name": "Void Drifter",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/7/77/Void_Drifter_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220109094526",
+                "type": "MECH",
+                "version": "3.3",
+                "tags": [
+                    "physical",
+                    "gather",
+                    "bleed"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "VD"
+                ]
+            },
+            {
+                "name": "Divine Prayer",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/0/07/Divine_Prayer_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220109094436",
+                "type": "PSY",
+                "version": "1.8",
+                "tags": [
+                    "physical",
+                    "heal",
+                    "impair",
+                    "burst",
+                    "time mastery"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "DP"
+                ]
+            },
+            {
+                "name": "Knight Moonbeam",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/97/Knight_Moonbeam_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220109094540",
+                "type": "BIO",
+                "version": "1.8",
+                "tags": [
+                    "physical",
+                    "time mastery",
+                    "fast atk"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "KM",
+                    "KMB"
+                ]
+            },
+            {
+                "name": "Herrscher of the Void",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/9a/Herrscher_of_the_Void_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220109094555",
+                "type": "BIO",
+                "version": "2.7",
+                "tags": [
+                    "physical",
+                    "time mastery",
+                    "fast atk",
+                    "aerial"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "HoV",
+                    "God Kiana",
+                    "HV"
+                ]
+            },
+            {
+                "name": "Herrscher of Flamescion",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/d/d1/Herrscher_of_Flamescion_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220109094610",
+                "type": "PSY",
+                "version": "5.0",
+                "tags": [
+                    "fire dmg",
+                    "heal",
+                    "time mastery",
+                    "gather",
+                    "aerial"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "HoF",
+                    "FK",
+                    "HFS",
+                    "HoFs"
+                ]
+            }
+        ]
+    },
+    "raiden mei": {
+        "name": "raiden mei",
+        "battlesuit": [
+            {
+                "name": "Crimson Impulse",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/b/b6/Crimson_Impulse_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220201104106",
+                "type": "BIO",
+                "version": "1.8",
+                "tags": [
+                    "physical",
+                    "burst",
+                    "time mastery",
+                    "bleed"
+                ],
+                "rank": "B",
+                "nickname": [
+                    "CI",
+                    "Shit Mei"
+                ]
+            },
+            {
+                "name": "Valkyrie Bladestrike",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/c/c3/Valkyrie_Bladestrike_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220201110557",
+                "type": "BIO",
+                "version": "1.8",
+                "tags": [
+                    "physical",
+                    "burst",
+                    "time mastery",
+                    "fast atk"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "VB"
+                ]
+            },
+            {
+                "name": "Striker Fulminata",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/81/Striker_Fulminata_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220202101626",
+                "type": "BIO",
+                "version": "3.0",
+                "tags": [],
+                "rank": "A",
+                "nickname": [
+                    "StFu"
+                ]
+            },
+            {
+                "name": "Shadow Dash",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/d/d5/Shadow_Dash_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220201112127",
+                "type": "MECH",
+                "version": "1.8",
+                "tags": [
+                    "physical",
+                    "fast atk"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "DS"
+                ]
+            },
+            {
+                "name": "Danzai Spectramancer",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/5e/Danzai_Spectramancer_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220202101203",
+                "type": "MECH",
+                "version": "4.2",
+                "tags": [
+                    "physical",
+                    "heavy atk"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "DS"
+                ]
+            },
+            {
+                "name": "Lightning Empress",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/7/7b/Lightning_Empress_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220201112530",
+                "type": "PSY",
+                "version": "1.8",
+                "tags": [
+                    "lightning dmg",
+                    "paralyze"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "LE"
+                ]
+            },
+            {
+                "name": "Herrscher of Thunder",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/3f/Herrscher_of_Thunder_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220201113021",
+                "type": "PSY",
+                "version": "4.1",
+                "tags": [
+                    "lightning dmg",
+                    "burst",
+                    "time mastery",
+                    "fast atk",
+                    "paralyze"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "HoT",
+                    "HT"
+                ]
+            }
+        ]
+    },
+    "bronya zaychik": {
+        "name": "bronya zaychik",
+        "battlesuit": [
+            {
+                "name": "Valkyrie Chariot",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/f/f2/Valkyrie_Chariot_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220201073457",
+                "type": "PSY",
+                "version": "1.8",
+                "tags": [
+                    "physical",
+                    "time mastery",
+                    "gather",
+                    "ignite"
+                ],
+                "rank": "B",
+                "nickname": [
+                    "VC",
+                    "Shit Bronya"
+                ]
+            },
+            {
+                "name": "Snowy Sniper",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/7/7d/Snowy_Sniper_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220201074415",
+                "type": "BIO",
+                "version": "1.8",
+                "tags": [
+                    "physical",
+                    "freeze"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "SS"
+                ]
+            },
+            {
+                "name": "Yamabuki Armor",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/af/Yamabuki_Armor_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220201080132",
+                "type": "PSY",
+                "version": "1.8",
+                "tags": [
+                    "physical",
+                    "heal",
+                    "impair",
+                    "burst",
+                    "time mastery"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "YA"
+                ]
+            },
+            {
+                "name": "Drive Kometa",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/1e/Drive_Kometa_%28Avatar%29.png/revision/latest/scale-to-width-down/172?cb=20220127192452",
+                "type": "PSY",
+                "version": "3.1",
+                "tags": [
+                    "physical",
+                    "burst",
+                    "time mastery",
+                    "gather",
+                    "weaken"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "DK"
+                ]
+            },
+            {
+                "name": "Wolf's Dawn",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/84/Wolf%27s_Dawn_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220201082355",
+                "type": "PSY",
+                "version": "2.2.2",
+                "tags": [
+                    "physical",
+                    "time mastery",
+                    "stun",
+                    "weaken"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "WD"
+                ]
+            },
+            {
+                "name": "Dimension Breaker",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/b/b0/Dimension_Breaker_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220201080800",
+                "type": "MECH",
+                "version": "1.8",
+                "tags": [
+                    "physical",
+                    "burst",
+                    "time mastery",
+                    "bleed",
+                    "paralyze"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "DB"
+                ]
+            },
+            {
+                "name": "Black Nucleus",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/35/Black_Nucleus_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220201092609",
+                "type": "BIO",
+                "version": "2.2.2",
+                "tags": [
+                    "physical",
+                    "stun"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "BN"
+                ]
+            },
+            {
+                "name": "Herrscher of Reason",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/d/de/Herrscher_of_Reason_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220201095606",
+                "type": "MECH",
+                "version": "3.3",
+                "tags": [
+                    "ice dmg",
+                    "burst",
+                    "time mastery",
+                    "freeze"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "HoR",
+                    "HR"
+                ]
+            },
+            {
+                "name": "Haxxor Bunny",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/86/Haxxor_Bunny_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220201100023",
+                "type": "PSY",
+                "version": "4.7",
+                "tags": [
+                    "ice dmg",
+                    "time mastery",
+                    "fast atk"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "HB",
+                    "Haxxor",
+                    "Bronie"
+                ]
+            },
+            {
+                "name": "Silverwing - N-EX",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/29/Silverwing_-_N-EX_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220201095947",
+                "type": "BIO",
+                "version": "5.4",
+                "tags": [
+                    "ice dmg",
+                    "time mastery",
+                    "gather",
+                    "fast atk",
+                    "aerial"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "Bronya EX",
+                    "Boobanya",
+                    "SW"
+                ]
+            }
+        ]
+    },
+    "murata himeko": {
+        "name": "murata himeko",
+        "battlesuit": [
+            {
+                "name": "Battle Storm",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/4/44/Battle_Storm_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220203154441",
+                "type": "BIO",
+                "version": "1.8",
+                "tags": [
+                    "physical",
+                    "time mastery",
+                    "stun",
+                    "heavy atk"
+                ],
+                "rank": "B",
+                "nickname": [
+                    "BS",
+                    "Shit Himeko"
+                ]
+            },
+            {
+                "name": "Valkyrie Triumph",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/93/Valkyrie_Triumph_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220203154847",
+                "type": "BIO",
+                "version": "1.8",
+                "tags": [
+                    "physical",
+                    "heal",
+                    "time mastery",
+                    "stun",
+                    "heavy atk"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "VT"
+                ]
+            },
+            {
+                "name": "Scarlet Fusion",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/e/ea/Scarlet_Fusion_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220203155939",
+                "type": "MECH",
+                "version": "1.8",
+                "tags": [
+                    "lightning dmg",
+                    "burst",
+                    "paralyze",
+                    "heavy atk"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "SF"
+                ]
+            },
+            {
+                "name": "Blood Rose",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/f/fc/Blood_Rose_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220203164702",
+                "type": "PSY",
+                "version": "1.8",
+                "tags": [
+                    "fire dmg",
+                    "burst",
+                    "heavy atk",
+                    "ignite"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "BR",
+                    "Blood Himeko"
+                ]
+            },
+            {
+                "name": "Kriegsmesser",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/7/7c/Kriegsmesser_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220203170647",
+                "type": "PSY",
+                "version": "2.7",
+                "tags": [
+                    "ice dmg",
+                    "freeze"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "Krieg",
+                    "Kriegs",
+                    "Ice Himeko"
+                ]
+            },
+            {
+                "name": "Vermilion Knight - Eclipse",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/23/Vermilion_Knight_-_Eclipse_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220203171440",
+                "type": "MECH",
+                "version": "2.8",
+                "tags": [
+                    "fire dmg",
+                    "ignite"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "VK",
+                    "VKE",
+                    "Dead Himeko"
+                ]
+            }
+        ]
+    },
+    "yae sakura": {
+        "name": "yae sakura",
+        "battlesuit": [
+            {
+                "name": "Gyakushinn Miko",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/57/Gyakushinn_Miko_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220202105159",
+                "type": "BIO",
+                "version": "2.0",
+                "tags": [
+                    "physical",
+                    "burst",
+                    "bleed"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "GM",
+                    "Miko"
+                ]
+            },
+            {
+                "name": "Goushinnso Memento",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/0/08/Goushinnso_Memento_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220202111502",
+                "type": "MECH",
+                "version": "2.0",
+                "tags": [
+                    "ice dmg",
+                    "freeze"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "SS"
+                ]
+            },
+            {
+                "name": "Flame Sakitama",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/55/Flame_Sakitama_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220202110421",
+                "type": "BIO",
+                "version": "2.2.3",
+                "tags": [
+                    "fire dmg",
+                    "time mastery",
+                    "ignite"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "FS",
+                    "FIre Sakura"
+                ]
+            },
+            {
+                "name": "Darkbolt Jonin",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/0/0e/Darkbolt_Jonin_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220202111815",
+                "type": "BIO",
+                "version": "3.6",
+                "tags": [
+                    "lightning dmg",
+                    "time mastery",
+                    "paralyze"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "DJ",
+                    "Kasumi",
+                    "Ninja",
+                    "Lighting Sakura"
+                ]
+            }
+        ]
+    },
+    "theresa apocalypse": {
+        "name": "theresa apocalypse",
+        "battlesuit": [
+            {
+                "name": "Valkyrie Pledge",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/8b/Valkyrie_Pledge_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220203183103",
+                "type": "PSY",
+                "version": "2.2.1",
+                "tags": [
+                    "lightning dmg",
+                    "time mastery",
+                    "fast atk",
+                    "paralyze"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "VP",
+                    "Shit Theresa",
+                    "Teri",
+                    "Teri Teri"
+                ]
+            },
+            {
+                "name": "Violet Executer",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/14/Violet_Executer_%28Portrait%29.png/revision/latest/scale-to-width-down/150?cb=20211125130908",
+                "type": "MECH",
+                "version": "2.2.1",
+                "tags": [
+                    "physical",
+                    "burst",
+                    "fast atk",
+                    "bleed",
+                    "heavy atk"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "VE"
+                ]
+            },
+            {
+                "name": "Twilight Paladin",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/c/c1/Twilight_Paladin_%28Portrait%29.png/revision/latest/scale-to-width-down/150?cb=20211125130900",
+                "type": "MECH",
+                "version": "3.4",
+                "tags": [
+                    "physical",
+                    "time mastery",
+                    "fast atk",
+                    "bleed"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "TP"
+                ]
+            },
+            {
+                "name": "Sakuno Rondo",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/c/c9/Sakuno_Rondo_%28Portrait%29.png/revision/latest/scale-to-width-down/150?cb=20211125130849",
+                "type": "PSY",
+                "version": "2.2.1.5",
+                "tags": [
+                    "fire dmg",
+                    "burst",
+                    "fast atk",
+                    "ignite"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "SR",
+                    "Fire Theresa"
+                ]
+            },
+            {
+                "name": "Celestial Hymn",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/c/c0/Celestial_Hymn_%28Portrait%29.png/revision/latest/scale-to-width-down/150?cb=20211126054153",
+                "type": "BIO",
+                "version": "2.2.3",
+                "tags": [
+                    "physical",
+                    "impair",
+                    "gather",
+                    "fast atk"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "CH"
+                ]
+            },
+            {
+                "name": "Luna Kindred",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/f/fa/Luna_Kindred_%28Portrait%29.png/revision/latest/scale-to-width-down/150?cb=20211125130839",
+                "type": "BIO",
+                "version": "2.6",
+                "tags": [
+                    "physical",
+                    "time mastery",
+                    "bleed",
+                    "heavy atk"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "LK"
+                ]
+            },
+            {
+                "name": "Starlit Astrologos",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/b/b5/Starlit_Astrologos_%28Portrait%29.png/revision/latest/scale-to-width-down/150?cb=20211125130855",
+                "type": "BIO",
+                "version": "4.0",
+                "tags": [
+                    "physical",
+                    "heal",
+                    "time mastery",
+                    "stun",
+                    "gather"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "SA",
+                    "Kongming"
+                ]
+            }
+        ]
+    },
+    "fu hua": {
+        "name": "fu hua",
+        "battlesuit": [
+            {
+                "name": "Valkyrie Accipiter",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/3a/Valkyrie_Accipiter_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220210135501",
+                "type": "PSY",
+                "version": "2.2.5",
+                "tags": [
+                    "physical",
+                    "heal",
+                    "time mastery",
+                    "stun"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "VA",
+                    "Shit Fu Hua"
+                ]
+            },
+            {
+                "name": "Hawk of the Fog",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/97/Hawk_of_the_Fog_%28Portrait%29.png/revision/latest/scale-to-width-down/150?cb=20211125130831",
+                "type": "PSY",
+                "version": "3.5",
+                "tags": [
+                    "lightning dmg",
+                    "time mastery",
+                    "paralyze",
+                    "heavy atk"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "HF",
+                    "HotF"
+                ]
+            },
+            {
+                "name": "Phoenix",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/1c/Phoenix_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220210134811",
+                "type": "PSY",
+                "version": "2.2.5",
+                "tags": [
+                    "fire dmg",
+                    "time mastery",
+                    "weaken"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "PX"
+                ]
+            },
+            {
+                "name": "Night Squire",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/2c/Night_Squire_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220210134419",
+                "type": "BIO",
+                "version": "2.3",
+                "tags": [
+                    "physical",
+                    "burst",
+                    "time mastery",
+                    "fast atk",
+                    "bleed"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "NS"
+                ]
+            },
+            {
+                "name": "Shadow Knight",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/f/f7/Shadow_Knight_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220210133618",
+                "type": "MECH",
+                "version": "2.6",
+                "tags": [
+                    "lightning dmg",
+                    "burst",
+                    "time mastery",
+                    "fast atk",
+                    "bleed"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "SK"
+                ]
+            },
+            {
+                "name": "Azure Empyrea",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/3a/Azure_Empyrea_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220210131711",
+                "type": "PSY",
+                "version": "3.7",
+                "tags": [
+                    "fire dmg",
+                    "time mastery",
+                    "gather",
+                    "ignite"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "AE"
+                ]
+            },
+            {
+                "name": "Herrscher of Sentience",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/9a/Herrscher_of_Sentience_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220210132824",
+                "type": "BIO",
+                "version": "4.6",
+                "tags": [
+                    "physical",
+                    "impair",
+                    "burst",
+                    "time mastery",
+                    "gather"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "HoS",
+                    "HS",
+                    "Scammer"
+                ]
+            }
+        ]
+    },
+    "kallen kaslana": {
+        "name": "kallen kaslana",
+        "battlesuit": [
+            {
+                "name": "Ritual Imayoh",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/5f/Ritual_Imayoh_%28Portrait%29.png/revision/latest/scale-to-width-down/150?cb=20211125130847",
+                "type": "MECH",
+                "version": "2.2.8",
+                "tags": [
+                    "physical",
+                    "time mastery",
+                    "stun"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "RI",
+                    "IR"
+                ]
+            },
+            {
+                "name": "Sixth Serenade",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/a5/Sixth_Serenade_%28Portrait%29.png/revision/latest/scale-to-width-down/150?cb=20211125130852",
+                "type": "PSY",
+                "version": "2.3",
+                "tags": [
+                    "ice dmg",
+                    "freeze"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "6S",
+                    "Six"
+                ]
+            },
+            {
+                "name": "S\u00fcndenj\u00e4ger",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/c/c3/S%C3%BCndenj%C3%A4ger_%28Portrait%29.png/revision/latest/scale-to-width-down/150?cb=20211126054234",
+                "type": "MECH",
+                "version": "2.6.5",
+                "tags": [
+                    "physical",
+                    "impair",
+                    "fast atk"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "SJ"
+                ]
+            }
+        ]
+    },
+    "rita rossweisse": {
+        "name": "rita rossweisse",
+        "battlesuit": [
+            {
+                "name": "Umbral Rose",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/ae/Umbral_Rose_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220109092749",
+                "type": "PSY",
+                "version": "2.8",
+                "tags": [
+                    "physical",
+                    "time mastery"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "UR"
+                ]
+            },
+            {
+                "name": "Phantom Iron",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/e/e5/Phantom_Iron_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220109092721",
+                "type": "MECH",
+                "version": "3.0",
+                "tags": [
+                    "lightning dmg",
+                    "paralyze"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "PI"
+                ]
+            },
+            {
+                "name": "Argent Knight - Artemis",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/7/75/Argent_Knight_-_Artemis_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220109092703",
+                "type": "BIO",
+                "version": "3.0",
+                "tags": [
+                    "ice dmg",
+                    "burst",
+                    "freeze"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "AKA",
+                    "AK",
+                    "Ice Rita"
+                ]
+            },
+            {
+                "name": "Fallen Rosemary",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/e/e5/Fallen_Rosemary_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220109092733",
+                "type": "QUA",
+                "version": "4.2",
+                "tags": [
+                    "lightning dmg",
+                    "time mastery",
+                    "gather",
+                    "paralyze"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "FR"
+                ]
+            },
+            {
+                "name": "Spina Astera",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/5a/Spina_Astera_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220224105015",
+                "type": "MECH",
+                "version": "5.5",
+                "tags": [
+                    "fire dmg",
+                    "time mastery",
+                    "gather",
+                    "ignite"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "SpA",
+                    "Fire Rita"
+                ]
+            }
+        ]
+    },
+    "liliya olenyeva": {
+        "name": "liliya olenyeva",
+        "battlesuit": [
+            {
+                "name": "Blueberry Blitz",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/62/Blueberry_Blitz_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220203173740",
+                "type": "MECH",
+                "version": "3.1",
+                "tags": [
+                    "physical",
+                    "freeze"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "BB"
+                ]
+            }
+        ]
+    },
+    "rozaliya olenyeva": {
+        "name": "rozaliya olenyeva",
+        "battlesuit": [
+            {
+                "name": "Molotov Cherry",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/66/Molotov_Cherry_%28Portrait%29.png/revision/latest/scale-to-width-down/150?cb=20211125130841",
+                "type": "PSY",
+                "version": "3.1",
+                "tags": [
+                    "physical",
+                    "time mastery",
+                    "gather"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "MC"
+                ]
+            },
+            {
+                "name": "Fervent Tempo \u0394",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/a0/Fervent_Tempo_%CE%94_%28Portrait%29.png/revision/latest/scale-to-width-down/150?cb=20211126054223",
+                "type": "PSY",
+                "version": "4.3",
+                "tags": [
+                    "physical",
+                    "time mastery",
+                    "gather"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "FT",
+                    "Delta"
+                ]
+            }
+        ]
+    },
+    "seele vollerei": {
+        "name": "seele vollerei",
+        "battlesuit": [
+            {
+                "name": "Swallowtail Phantasm",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/53/Swallowtail_Phantasm_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220203142919",
+                "type": "QUA",
+                "version": "3.2",
+                "tags": [
+                    "physical",
+                    "burst"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "SP"
+                ]
+            },
+            {
+                "name": "Stygian Nymph",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/66/Stygian_Nymph_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220203143527",
+                "type": "QUA",
+                "version": "3.5",
+                "tags": [
+                    "physical",
+                    "time mastery",
+                    "heavy atk"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "SN"
+                ]
+            },
+            {
+                "name": "Starchasm Nyx",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/0/0c/Starchasm_Nyx_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220203144206",
+                "type": "QUA",
+                "version": "4.8",
+                "tags": [
+                    "ice dmg",
+                    "burst",
+                    "time mastery",
+                    "freeze"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "SNyx",
+                    "Nyx",
+                    "Best Girl"
+                ]
+            }
+        ]
+    },
+    "durandal": {
+        "name": "durandal",
+        "battlesuit": [
+            {
+                "name": "Valkyrie Gloria",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/31/Valkyrie_Gloria_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220203115652",
+                "type": "QUA",
+                "version": "3.8",
+                "tags": [
+                    "fire dmg",
+                    "time mastery",
+                    "ignite"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "VG"
+                ]
+            },
+            {
+                "name": "Bright Knight - Excelsis",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/81/Bright_Knight_-_Excelsis_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220203112139",
+                "type": "MECH",
+                "version": "3.9",
+                "tags": [
+                    "physical",
+                    "burst",
+                    "time mastery",
+                    "heavy atk"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "BK",
+                    "BKE"
+                ]
+            },
+            {
+                "name": "Dea Anchora",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/26/Dea_Anchora_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220203111524",
+                "type": "BIO",
+                "version": "4.4",
+                "tags": [
+                    "fire dmg",
+                    "time mastery",
+                    "gather",
+                    "ignite"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "DA"
+                ]
+            },
+            {
+                "name": "Palatinus Equinox",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/f/fa/Palatinus_Equinox_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220222074002",
+                "type": "IMG",
+                "version": "5.5",
+                "tags": [
+                    "physical",
+                    "time mastery"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "PE",
+                    "Juan"
+                ]
+            }
+        ]
+    },
+    "asuka": {
+        "name": "asuka",
+        "battlesuit": [
+            {
+                "name": "Blazing Hope",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/6c/Blazing_Hope_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220109094331",
+                "type": "BIO",
+                "version": "4.5",
+                "tags": [
+                    "physical",
+                    "time mastery"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "BH"
+                ]
+            }
+        ]
+    },
+    "fischl": {
+        "name": "fischl",
+        "battlesuit": [
+            {
+                "name": "Prinzessin der Verurteilung!",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/a7/Prinzessin_der_Verurteilung%21_%28Portrait%29.png/revision/latest/scale-to-width-down/150?cb=20211125125244",
+                "type": "BIO",
+                "version": "4.9",
+                "tags": [
+                    "lightning dmg",
+                    "time mastery",
+                    "fast atk",
+                    "aerial"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "PV",
+                    "Fish",
+                    "Oz"
+                ]
+            }
+        ]
+    },
+    "elysia": {
+        "name": "elysia",
+        "battlesuit": [
+            {
+                "name": "Miss Pink Elf\u266a",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/ac/Miss_Pink_Elf%E2%99%AA_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220210142432",
+                "type": "PSY",
+                "version": "5.1",
+                "tags": [
+                    "physical",
+                    "time mastery",
+                    "fast atk",
+                    "aerial"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "Ely",
+                    "MPE",
+                    "Pink Lady"
+                ]
+            }
+        ]
+    },
+    "mobius": {
+        "name": "mobius",
+        "battlesuit": [
+            {
+                "name": "Infinite Ouroboros",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/a4/Infinite_Ouroboros_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220210152709",
+                "type": "MECH",
+                "version": "5.2",
+                "tags": [
+                    "lightning dmg",
+                    "time mastery",
+                    "aerial"
+                ],
+                "rank": "S",
+                "nickname": [
+                    "IO",
+                    "Snake"
+                ]
+            }
+        ]
+    },
+    "natasha cioara": {
+        "name": "natasha cioara",
+        "battlesuit": [
+            {
+                "name": "Midnight Absinthe",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/89/Midnight_Absinthe_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220210140356",
+                "type": "IMG",
+                "version": "5.2",
+                "tags": [
+                    "fire dmg",
+                    "time mastery"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "Raven",
+                    "MA"
+                ]
+            }
+        ]
+    },
+    "carole pepper": {
+        "name": "carole pepper",
+        "battlesuit": [
+            {
+                "name": "Sweet 'n' Spicy",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/5e/Sweet_%27n%27_Spicy_%28Portrait%29.png/revision/latest/scale-to-width-down/148?cb=20220109094846",
+                "type": "MECH",
+                "version": "5.3",
+                "tags": [
+                    "physical",
+                    "time mastery",
+                    "stun",
+                    "gather",
+                    "aerial"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "SnS"
+                ]
+            }
+        ]
+    },
+    "pardofelis": {
+        "name": "pardofelis",
+        "battlesuit": [
+            {
+                "name": "Reverist Calico",
+                "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/e/e0/Reverist_Calico_%28Avatar%29.png/revision/latest/scale-to-width-down/172?cb=20220407134833",
+                "type": "IMG",
+                "version": "5.6",
+                "tags": [
+                    "ice dmg",
+                    "time mastery",
+                    "freeze"
+                ],
+                "rank": "A",
+                "nickname": [
+                    "RC",
+                    "Cat",
+                    "Neko"
+                ]
+            }
+        ]
+    }
+}
