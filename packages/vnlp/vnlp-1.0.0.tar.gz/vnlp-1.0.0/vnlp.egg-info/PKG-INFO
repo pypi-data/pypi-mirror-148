@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: vnlp
+Version: 1.0.0
+Summary: library for NLP and ML.
+Home-page: https://gitlab.com/vzhong/vnlp
+Author: Victor Zhong
+Author-email: victor@victorzhong.com
+License: Apache 2
+Description: # VNLP
+        
+        [![pipeline status](https://gitlab.com/vzhong/vnlp/badges/master/pipeline.svg)](https://gitlab.com/vzhong/vnlp/commits/master)
+        
+        [![coverage report](https://gitlab.com/vzhong/vnlp/badges/master/coverage.svg)](https://gitlab.com/vzhong/vnlp/commits/master)
+        
+        
+        My machine learning and NLP library.
+        
+        
+        # Docker
+        
+        build test image:
+        
+        ```
+        docker login registry.gitlab.com
+        docker build -t registry.gitlab.com/vzhong/vnlp:test .
+        docker push registry.gitlab.com/vzhong/vnlp
+        ```
+        
+Keywords: text nlp machine-learning
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >3.7
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: test

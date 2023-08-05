@@ -1,0 +1,15 @@
+tqdm
+requests
+numpy
+torch
+revtok
+vocab
+
+[dev]
+check-manifest
+pdoc
+twine
+
+[test]
+coverage
+nose
