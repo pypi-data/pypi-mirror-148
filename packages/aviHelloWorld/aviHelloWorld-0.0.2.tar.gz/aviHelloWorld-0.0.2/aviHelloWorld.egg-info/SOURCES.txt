@@ -1,0 +1,6 @@
+setup.py
+aviHelloWorld.egg-info/PKG-INFO
+aviHelloWorld.egg-info/SOURCES.txt
+aviHelloWorld.egg-info/dependency_links.txt
+aviHelloWorld.egg-info/top_level.txt
+say/__init__.py
