@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: ubai-client
+Version: 1.1.0
+Summary: Universal Binary Archiver Service
+Home-page: UNKNOWN
+Author: OpenAPI Generator community
+Author-email: team@openapitools.org
+License: UNKNOWN
+Keywords: OpenAPI,OpenAPI-Generator,Universal Binary Archiver Service
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: urllib3 (>=1.25.3)
+Requires-Dist: python-dateutil
+Requires-Dist: opentelemetry-api
+Requires-Dist: opentelemetry-instrumentation-urllib3
+
+Universal Binary Archiver Service  # noqa: E501
+
+
