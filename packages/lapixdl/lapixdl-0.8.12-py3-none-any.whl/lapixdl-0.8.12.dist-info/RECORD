@@ -1,0 +1,13 @@
+lapixdl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lapixdl/convert/__init__.py,sha256=XZ8xCIM8bEzYYZxslw5uIZrjMscZNpKUyqD8j2p6ZRA,130
+lapixdl/convert/labelbox.py,sha256=ExK-5uzZv2uFO_zzyCnDNTmnWTSCc22e5ocJ550yTeU,3500
+lapixdl/evaluation/__init__.py,sha256=sPwx81EnaZRabh3m3Yx-TveLg2WXerTyM0Kn4E8GOZI,177
+lapixdl/evaluation/evaluate.py,sha256=d7nnNL4bR3gJU8H8xPBbok7d81A5fiB8Q-xQu4sIlCY,10772
+lapixdl/evaluation/model.py,sha256=PwdUet-jUIfeJJZP0B7D5Oa8Hnqufv56JWC6MUpswiQ,28600
+lapixdl/evaluation/plot.py,sha256=yvNJrFAPwSK7zWjhPxKBdIrvm1XcGidhy_t62TKRV0I,2321
+lapixdl/evaluation/visualize.py,sha256=W-s70-QdO9U4rKP5j3uVvNHCR-iLoM_qlU1W6zliNUs,7668
+lapixdl-0.8.12.dist-info/LICENCE,sha256=i9QJ7C4rtG2pSu11WL4-grnYXiv4Rm9nI-5li1UI8B0,1049
+lapixdl-0.8.12.dist-info/METADATA,sha256=i-oXtCEEi6IVvPG1IyD3wkijl9Lg7VWuhW9WwQA6e4c,4559
+lapixdl-0.8.12.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+lapixdl-0.8.12.dist-info/top_level.txt,sha256=09DzHBcS89VXU04z5dNFP7I4JCMbk2KZwrFRZ3rmDfA,8
+lapixdl-0.8.12.dist-info/RECORD,,
