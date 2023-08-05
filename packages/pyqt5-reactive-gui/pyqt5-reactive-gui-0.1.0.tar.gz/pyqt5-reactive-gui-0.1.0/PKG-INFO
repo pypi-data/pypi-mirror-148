@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pyqt5-reactive-gui
+Version: 0.1.0
+Summary: PyQT5 reactive GUI
+Author: Jonas Frey
+Author-email: jonas.immanuel.frey@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: PyQt5 (==5.14.1)
+Requires-Dist: PyQt5-Qt5 (==5.15.2)
+Requires-Dist: PyQt5-sip (==12.9.1)
+Requires-Dist: jsonpickle (>=2.1.0,<3.0.0)
+Requires-Dist: opencv-python (>=4.5.5,<5.0.0)

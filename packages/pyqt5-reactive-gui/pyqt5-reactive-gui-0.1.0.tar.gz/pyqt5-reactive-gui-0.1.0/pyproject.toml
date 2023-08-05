@@ -1,0 +1,28 @@
+[tool.poetry]
+authors = ["Jonas Frey <jonas.immanuel.frey@gmail.com>"]
+description = "PyQT5 reactive GUI"
+name = "pyqt5-reactive-gui"
+version = "0.1.0"
+
+[tool.poetry.dependencies]
+PyQt5 = "5.14.1"
+PyQt5-Qt5 = "5.15.2"
+PyQt5-sip = "12.9.1"
+jsonpickle = "^2.1.0"
+opencv-python = "^4.5.5"
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+black = "^22.3.0"
+isort = "^5.10.1"
+mypy = "^0.942"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
+
+[tool.black]
+line-length = 99
+
+[tool.isort]
+line_length = 99
