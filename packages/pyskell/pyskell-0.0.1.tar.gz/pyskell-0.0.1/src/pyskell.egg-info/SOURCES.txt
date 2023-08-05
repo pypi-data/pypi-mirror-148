@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/pyskell/__init__.py
+src/pyskell/pyskell.py
+src/pyskell.egg-info/PKG-INFO
+src/pyskell.egg-info/SOURCES.txt
+src/pyskell.egg-info/dependency_links.txt
+src/pyskell.egg-info/top_level.txt
