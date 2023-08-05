@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: bbtkv2
+Version: 0.0.8
+Summary: Code to control the BlackBox ToolKit v2 device for audio-visual timing checks
+Home-page: https://github.com/chrplr/bbtkv2_python
+Author: Christophe Pallier
+Author-email: christophe@pallier.org
+License: UNKNOWN
+Project-URL: Documentation, https://bbtkv2.rtfd.io
+Project-URL: Bug Tracker, https://github.com/chrplr/bbtkv2_python/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+<p align="center">
+
+![](docs/images/bbtkv2.png)
+
+</p>
+
+The [BlackBox ToolKit v2](https://www.blackboxtoolkit.com/bbtkv2.html) is a device that allows psychologists to accurately measure the timing of audio-visual stimuli.
+
+The BBTKv2 communicates via a serial protocol over USB. The _bbtkv2_ python module provided here encapsualtes (some of) the commands described in the _API Guide_. 
+In a nutshell:
+
+    from bbtkv2 import BlackBokToolKit
+
+    bb = BlackBoxToolKit()
+    df = bb.digital_stimulus_capture(30)  # run capture for 30s
+    print(df)  # print a dataframe containing all recorded events
+
+
+# Documentation
+
+Check <https://bbtkv2.readthedocs.io/en/latest/intro.html>
+
+
+# Installation
+
+    pip install bbtkv2
+
+---
+
+Christophe@Pallier.org
+
+
+
+
+
