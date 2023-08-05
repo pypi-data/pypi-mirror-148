@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: mb-scripts
+Version: 0.0.6
+Summary: Machine Learning scripts that will quicken the modelling and data analysis process
+Home-page: UNKNOWN
+Author: Sathya Krishnan Suresh
+Author-email: <satyakrishnan.s@pec.edu>
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: python,mb_scripts,machine learning,data science,data analysis
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
