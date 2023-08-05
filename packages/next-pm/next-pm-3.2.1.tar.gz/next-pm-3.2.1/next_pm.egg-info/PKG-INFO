@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: next-pm
+Version: 3.2.1
+Summary: Next es un administrador de proyectos de C/C++, es diseñado como una solucion a la administracion que requieren este tipo de proyectos.)
+Home-page: https://github.com/reitmas32/Next/tree/v3.2.0.pipy
+Author: Rafael Zamora
+Author-email: rafa.zamora.ram@gmail.com
+License: PSF
+Keywords: C/C++,package,libraries,developer,manager,dependency,tool,c,c++,cpp
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Python Software Foundation License
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Build Tools
+License-File: LICENSE
+
+UNKNOWN
+
