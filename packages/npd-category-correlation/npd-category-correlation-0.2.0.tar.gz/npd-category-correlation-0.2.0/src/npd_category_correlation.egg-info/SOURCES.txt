@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.py
+src/npd_cat_corr/__init__.py
+src/npd_cat_corr/client.py
+src/npd_cat_corr/data_construction.py
+src/npd_cat_corr/main.py
+src/npd_cat_corr/reports.py
+src/npd_category_correlation.egg-info/PKG-INFO
+src/npd_category_correlation.egg-info/SOURCES.txt
+src/npd_category_correlation.egg-info/dependency_links.txt
+src/npd_category_correlation.egg-info/entry_points.txt
+src/npd_category_correlation.egg-info/requires.txt
+src/npd_category_correlation.egg-info/top_level.txt
