@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/UCurriculum-Student/__init__.py
+src/UCurriculum-Student/ucurriculum_student.py
+src/UCurriculum_Student.egg-info/PKG-INFO
+src/UCurriculum_Student.egg-info/SOURCES.txt
+src/UCurriculum_Student.egg-info/dependency_links.txt
+src/UCurriculum_Student.egg-info/top_level.txt
+src/ucurriculum_student.egg-info/PKG-INFO
+src/ucurriculum_student.egg-info/SOURCES.txt
+src/ucurriculum_student.egg-info/dependency_links.txt
+src/ucurriculum_student.egg-info/top_level.txt
