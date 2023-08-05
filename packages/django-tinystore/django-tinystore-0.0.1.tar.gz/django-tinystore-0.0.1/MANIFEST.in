@@ -1,0 +1,7 @@
+include AUTHORS
+include LICENCE
+include README.md
+
+recursive-include tinystore *
+
+global-exclude *.py[co]

@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: django-tinystore
+Version: 0.0.1
+Summary: A tiny, persistent JSON store for Django
+Home-page: https://github.com/joncombe/django-tinystore
+Author: Jon Combe
+Author-email: jon@naremit.com
+License: BSD licence, see LICENCE file
+Description: A tiny, persistent JSON store for Django
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
