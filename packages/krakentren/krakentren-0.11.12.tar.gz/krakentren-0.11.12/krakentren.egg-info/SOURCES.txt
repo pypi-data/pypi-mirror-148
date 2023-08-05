@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.py
+krakentren/__init__.py
+krakentren/krakentren.py
+krakentren/test.py
+krakentren.egg-info/PKG-INFO
+krakentren.egg-info/SOURCES.txt
+krakentren.egg-info/dependency_links.txt
+krakentren.egg-info/requires.txt
+krakentren.egg-info/top_level.txt
