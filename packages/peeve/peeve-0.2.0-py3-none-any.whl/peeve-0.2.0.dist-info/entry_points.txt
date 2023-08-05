@@ -1,0 +1,3 @@
+[console_scripts]
+peeve = peeve:cli
+pv = peeve:cli
