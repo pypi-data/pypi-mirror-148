@@ -1,0 +1,41 @@
+version: "3.3"
+
+services:
+
+  traefik:
+    image: "traefik:v2.6"
+    container_name: "traefik"
+    command:
+      #- "--log.level=DEBUG"
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      # - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+    ports:
+      - "80:80"
+      - "8080:8080"
+    {% if ports %}
+      - "{{ports[0]}}:{{ports[0]}}"
+    {% if ports.length == 2 %}
+      - "{{ports[1]}}:{{ports[1]}}"
+    {% endif %}
+    {% endif %}
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+
+  frontend:
+    image: "bitnami/nginx:latest"
+    volumes:
+      - "{{frontend_app_path}}:/app"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.frontend.rule=Host(`{{domain}}`)"
+      - "traefik.http.routers.frontend.entrypoints=web"
+  {% for app in installed_apps %}
+  {{app.name}}:
+    image: {{app.name}}
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.{{app.name}}.rule=Host(`{{app.name}}.{{domain}}`)"
+      - "traefik.http.routers.{{app.name}}.entrypoints=web"
+  {% endfor %}
