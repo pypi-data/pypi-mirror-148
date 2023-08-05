@@ -1,0 +1,14 @@
+matplotlib
+pandas
+scipy
+sanitize_ml_labels>=1.0.33
+
+[test]
+pytest
+pytest-cov
+coveralls
+validate_version_code
+codacy-coverage
+compress_json
+tensorflow
+get_standard_binary_metrics
