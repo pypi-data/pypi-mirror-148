@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: bitmap-fonts
+Version: 0.1.0
+Summary: Creation of bitmap fonts useful in OpenGL context..
+Home-page: https://www.simuneatomistics.com/
+License: Proprietary
+Keywords: Bitmap fontsYWORDS
+Author: Simune Team
+Author-email: devops@simuneatomistics.com
+Requires-Python: >=3.8,<3.9
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: X11 Applications :: Qt
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: click (>=7.0.0,<9.0.0)
+Requires-Dist: numpy (>=1.22.3,<2.0.0)
+Requires-Dist: pillow (>=9.1.0,<10.0.0)
+Project-URL: Repository, https://gitlab.com/simune/components/bitmap-fonts
+Description-Content-Type: text/markdown
+
+## Bitmap fonts
+Bitmap fonts are useful in generating text messages in OpenGL contexts. This utility allows to 
+convert a TTF font file into a bitmap font.
+
+
+## Description
+create-font-texture script should be self-explanatory.
+
+
+## Installation
+pip install bitmap-fonts
+
+
+## Usage
+
+
+## Authors and acknowledgment
+Peter Koval <koval.peter@gmail.com>
+
+## License
+MIT,
+the font UbuntuMono-Regular.ttf is Ubuntu font license 1.0
+
+## Project status
+Useful
+
+
