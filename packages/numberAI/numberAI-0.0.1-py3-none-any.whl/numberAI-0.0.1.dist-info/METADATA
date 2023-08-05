@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: numberAI
+Version: 0.0.1
+Summary: A simple machine learning libary for generating numbers
+Home-page: UNKNOWN
+Author: Rocko Visser
+Author-email: rockodagamer@gmail.com
+License: MIT
+Keywords: AI,ML,machine learning,generation
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENCE.txt
+Requires-Dist: numpy
+
+Its point is to teach people that you dont need to be a genius to make learning machines.
+And im super happy to see your reactions!
+
