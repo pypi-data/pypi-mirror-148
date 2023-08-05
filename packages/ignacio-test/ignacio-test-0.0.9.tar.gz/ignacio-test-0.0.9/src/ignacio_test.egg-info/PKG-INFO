@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ignacio-test
+Version: 0.0.9
+Summary: Testing dependency confusion
+Home-page: https://github.com/Zegocover
+Author: Congon4tor
+Author-email: ignacio.dominguez@zego.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+
+UNKNOWN
+

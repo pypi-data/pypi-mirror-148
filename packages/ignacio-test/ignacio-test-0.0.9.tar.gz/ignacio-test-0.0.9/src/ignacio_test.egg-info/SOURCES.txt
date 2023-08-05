@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/ignacio_test/__init__.py
+src/ignacio_test/example.py
+src/ignacio_test.egg-info/PKG-INFO
+src/ignacio_test.egg-info/SOURCES.txt
+src/ignacio_test.egg-info/dependency_links.txt
+src/ignacio_test.egg-info/top_level.txt
