@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+src/StarCC/__init__.py
+src/starcc.egg-info/PKG-INFO
+src/starcc.egg-info/SOURCES.txt
+src/starcc.egg-info/dependency_links.txt
+src/starcc.egg-info/not-zip-safe
+src/starcc.egg-info/requires.txt
+src/starcc.egg-info/top_level.txt
