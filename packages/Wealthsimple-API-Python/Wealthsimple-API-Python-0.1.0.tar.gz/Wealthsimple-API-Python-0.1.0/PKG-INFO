@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: Wealthsimple-API-Python
+Version: 0.1.0
+Summary: Python wrapper for the Wealthsimple Trade API
+Home-page: https://github.com/noahwoodin/Wealthsimple-API-Python
+Author: Noah Woodin
+Author-email: noahwoodin1@gmail.com
+License: MIT
+Keywords: wealthsimple,trade,finance,DRIP,dividend,buy,stocks,market,api,wrapper
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Wealthsimple-API-Python
+A Python wrapper for the Wealthsimple Trade API.  
+This wrapper is based off of Sean Sullivan's wrapper here, https://github.com/seansullivan44/Wealthsimple-Trade-Python, with additional features and functionality.  
+Unofficial documentation for the Wealthsimple Trade API can be found here, https://github.com/MarkGalloway/wealthsimple-trade/blob/master/API.md, however, some of the
+documentation is outdated. I found that the easiest way to explore the different API endpoints and expected payloads was by using Chrome DevTools to check requests as
+you interact with the Wealthsimple Trade platform through your browser.
+
+## Features
+
+## Installation
+
+## Getting Started
+
+## Examples
+
+
+
+

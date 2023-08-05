@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+src/Wealthsimple_API_Python.egg-info/PKG-INFO
+src/Wealthsimple_API_Python.egg-info/SOURCES.txt
+src/Wealthsimple_API_Python.egg-info/dependency_links.txt
+src/Wealthsimple_API_Python.egg-info/requires.txt
+src/Wealthsimple_API_Python.egg-info/top_level.txt
+src/wealthsimple/__init__.py
+src/wealthsimple/wealthsimple.py
