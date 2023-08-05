@@ -1,0 +1,11 @@
+aws_sqs_ext_client/__init__.py,sha256=H2-mqIHIOHruBoKe9dznY9SmxVnb1wgBQ375XKsLjPo,1319
+aws_sqs_ext_client/constants.py,sha256=nVET7FYSfpNuiv1Eo59Nd7VRDmzRUe63VGUtkCMmlOM,1570
+aws_sqs_ext_client/extended_messaging.py,sha256=HeRSk1YsPiYfSwmIzwQxHM_CjDGyKCuPKVoRrbknFaM,29913
+aws_sqs_ext_client/session.py,sha256=yCEriAVeI2-lPjvbWLYi5OWbjcThPTsCHsKwWbkLuuU,4995
+aws_sqs_ext_client/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aws_sqs_ext_client/models/payload_s3_pointer.py,sha256=OE7q8CilknhOtjjvq3_R_D4icD3uooz-mDa9jZty4gM,2679
+aws_sqs_ext_client-0.0.5.dist-info/LICENSE,sha256=N2szugJAlKF-CRtNuJGDEcQvMo8SnUqr9wYi39Qgcms,1074
+aws_sqs_ext_client-0.0.5.dist-info/METADATA,sha256=yZQhNFNmr9WXATCLIWGJCrh4i_6kfaMliXbC5tG8wcs,10905
+aws_sqs_ext_client-0.0.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+aws_sqs_ext_client-0.0.5.dist-info/top_level.txt,sha256=f7F9F9jteInWip0OMaFNVXclbPtdf257pWZa67jV3RU,19
+aws_sqs_ext_client-0.0.5.dist-info/RECORD,,
