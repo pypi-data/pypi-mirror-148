@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+rupasportread/__init__.py
+rupasportread/rupasportread.py
+rupasportread.egg-info/PKG-INFO
+rupasportread.egg-info/SOURCES.txt
+rupasportread.egg-info/dependency_links.txt
+rupasportread.egg-info/requires.txt
+rupasportread.egg-info/top_level.txt
