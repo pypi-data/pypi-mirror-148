@@ -1,0 +1,15 @@
+get_music/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+get_music/baidu.py,sha256=OgmpLAgqewsDoK8HRDmgmZ6cwPVf8N8Vph3BaKAy_50,4382
+get_music/download.py,sha256=t9LayYYP3N4IglEFnwrLFVd_LPDowzxa0RQ7mJcH1E0,754
+get_music/get_music.py,sha256=reCbqh9yJ7nNsO4cB15M6rUCH5fUelhLOi2DG-4asBc,7201
+get_music/kugou.py,sha256=BFp8odMHkEwfyksNy5NCjJiOhE0GTDaS6NRhfsAHJKQ,1989
+get_music/kuwo.py,sha256=9T106UDpXUDifFBgwPtL31SHzcOjP6zcMyD1F3zGPXM,1916
+get_music/migu.py,sha256=mfO-gVXLmtU_ykDrQua-HRWAIER_RjC62EFaFRajhMg,2565
+get_music/netease.py,sha256=2Mua-Bu4cbmGD7kdfm91OoOyxxwY0VEQ-AkiTaAE2Qg,952
+get_music/qq.py,sha256=1BQ8JRw9L6mV1Q96n4kBhtwzO7eLaNtYvP-88NSsFnI,2944
+get_music_lizhanqi-0.0.30.dist-info/LICENSE.txt,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+get_music_lizhanqi-0.0.30.dist-info/METADATA,sha256=Y4o2sWxTdKLUD4hvylntjXuCO9JQ_bXikXkCMnERQlc,1221
+get_music_lizhanqi-0.0.30.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+get_music_lizhanqi-0.0.30.dist-info/entry_points.txt,sha256=beGXQQUeyTho2ojx_-M7HGWuMxCRo7SowFrlOCILYEk,55
+get_music_lizhanqi-0.0.30.dist-info/top_level.txt,sha256=RetjRiqk8OMQa-rHFikFeq7dxFvQdpSfc1PXApMlL6g,10
+get_music_lizhanqi-0.0.30.dist-info/RECORD,,
