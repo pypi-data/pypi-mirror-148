@@ -1,0 +1,2 @@
+[console_scripts]
+e621-dl = dl621.core:run
