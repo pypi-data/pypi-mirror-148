@@ -1,0 +1,181 @@
+Metadata-Version: 2.1
+Name: devpi-postgresql
+Version: 3.0.1
+Summary: devpi-postgresql: a PostgreSQL storage backend for devpi-server
+Home-page: https://devpi.net
+Maintainer: Florian Schulze
+Maintainer-email: mail@pyfidelity.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/devpi/devpi/issues
+Project-URL: Changelog, https://github.com/devpi/devpi/blob/main/postgresql/CHANGELOG
+Project-URL: Documentation, https://doc.devpi.net
+Project-URL: Source Code, https://github.com/devpi/devpi
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.7
+Requires-Dist: devpi-server (>=6.2.0)
+Requires-Dist: pg8000 (>=1.17.0)
+
+===============================================================
+devpi-postgresql: a PostgreSQL storage backend for devpi-server
+===============================================================
+
+This plugin adds a PostgreSQL storage backend for `devpi-server`_.
+
+.. _devpi-server: https://pypi.org/project/devpi-server/
+
+
+Installation
+============
+
+``devpi-postgresql`` needs to be installed alongside ``devpi-server``.
+
+You can install it with::
+
+    pip install devpi-postgresql
+
+
+Requirements
+============
+
+At least PostgreSQL 9.5 is required for ``ON CONFLICT`` support.
+
+
+Usage
+=====
+
+When using the PostgreSQL storage, ``devpi-server`` expects an empty database.
+You have to create one like this: ``createdb devpi``
+Depending on your PostgreSQL setup you have to create a user and grant it permissions on the new database like this::
+
+    CREATE ROLE devpi WITH LOGIN;
+    GRANT CREATE, CONNECT ON DATABASE devpi TO devpi;
+
+Upon first initialization of ``devpi-server`` use ``--storage pg8000`` to select the PostgreSQL backend.
+
+By default it'll use the ``devpi`` database on ``localhost`` port ``5432``.
+To change that, use ``storage pg8000:host=example.com,port=5433,database=devpi_prod``.
+The possible settings are: ``database``, ``host``, ``port``, ``unix_sock``, ``user``, ``password``, ``ssl_check_hostname``, ``ssl_ca_certs``, ``ssl_certfile`` and ``ssl_keyfile``.
+
+If any of the "ssl" settings is specified, a secure Postgres connection will be made. Typically, the name of a file containing a certificate authority certificate will need to be specified via ``ssl_ca_certs``. By default, the server's hostname will be checked against the certificate it presents. Optionally disable this behavior with the ``ssl_check_hostname`` setting.  Use ``ssl_certfile`` and ``ssl_keyfile`` to enable certificate-based client authentication.
+
+All user/index files and metadata of ``devpi-server`` are stored in the database.
+A few things and settings are still stored as files in the directory specified by ``--serverdir``.
+
+Plugins like ``devpi-web`` don't or can't use the storage backend.
+They still handle their own storage.
+
+
+Support
+=======
+
+If you find a bug, use the `issue tracker at Github`_.
+
+For general questions use `GitHub Discussions`_ or the `devpi-dev@python.org mailing list`_.
+
+For support contracts and paid help contact ``mail at pyfidelity.com``.
+
+.. _issue tracker at Github: https://github.com/devpi/devpi/issues/
+.. _devpi-dev@python.org mailing list: https://mail.python.org/mailman3/lists/devpi-dev.python.org/
+.. _GitHub Discussions: https://github.com/devpi/devpi/discussions
+
+
+=========
+Changelog
+=========
+
+
+
+.. towncrier release notes start
+
+
+3.0.1 (2022-04-25)
+==================
+
+
+Bug Fixes
+---------
+
+- Fix #884: Error during startup of devpi-server.
+
+
+3.0.0 (2022-03-18)
+==================
+
+
+Deprecations and Removals
+-------------------------
+
+- Require at least devpi-server 6.2.0.
+
+
+Features
+--------
+
+- Support performance and memory optimizations enabled by devpi-server >= 6.2.0.
+
+- Support new storage interface from devpi-server 6.5.0 to keep files out of memory.
+
+- Files are stored in a temporary location and committed to the database in one shorter transaction block. This also reduces the time locks are held on the database.
+
+- Support memory optimizations enabled by devpi-server 6.5.0 to keep cache small.
+
+- Switch to native interface introduced in pg8000 1.17.0.
+
+- Stream files directly through database connection using ``COPY``.
+
+
+Bug Fixes
+---------
+
+- Reduce chances of conflicts by using a postgresql sequence for serials. This can cause serials with no changes due to gaps in the sequence in case of conflicts, but these are harmless.
+
+
+2.0.0 (2020-04-14)
+==================
+
+Deprecations and Removals
+-------------------------
+
+- Python 3.4 isn't supported anymore, Python 3.5 support will be dropped at its EOL in September 2020.
+
+
+Features
+--------
+
+- Upgrade pg8000 to version 1.14.0 or newer and take advantage of its improved SSL interface.
+
+
+1.1.0 (2020-01-31)
+==================
+
+Features
+--------
+
+- fix #738: add ``ssl_cert_reqs``, ``ssl_ca_certs``, ``ssl_certfile`` and ``ssl_keyfile`` settings to the --storage=pg8000 option. Each setting corresponds to the similarly-named key (remove the initial ``ssl_``) in the ``ssl`` parameter passed to pg8000.connect(). ``ssl_cert_reqs`` should be either "cert_optional" or "cert_required" and the other three settings are file names.
+
+
+1.0.0 (2019-04-26)
+==================
+
+Deprecations and Removals
+-------------------------
+
+- Requires at least PostgreSQL 9.5 for ``ON CONFLICT`` support.
+
+- Dropped support for Python 2.x and PyPy2.
+
+
+
