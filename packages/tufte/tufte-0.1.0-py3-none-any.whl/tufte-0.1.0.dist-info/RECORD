@@ -1,0 +1,10 @@
+tufte/bar.py,sha256=KoAlCpRgO4f5xVUs1ht_kCcj7kSjrBAqRnqUygc_xP0,4904
+tufte/base.py,sha256=JVbyWL6ytmgxG_d8Fgx_VkESC3JYD7EQzynVfLIhAA0,2924
+tufte/box.py,sha256=TfbkPZzX7DYs8SKKF9iPwFpOtz122mzXPmKY2LczY38,4192
+tufte/line.py,sha256=hta1QyQFUDmUKxt924iy7EsG_SMnMPwRZpzW37imrrQ,3430
+tufte/scatter.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tufte/tufte.py,sha256=5CS_5C2XZkRjkQbVYPBo_QQFKY46drCDgGbbxziTdZU,9556
+tufte-0.1.0.dist-info/LICENSE.md,sha256=2ylvL381vKOhdO-w6zkrOxe9lLNBhRQpo9_0EbHC_HM,18046
+tufte-0.1.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+tufte-0.1.0.dist-info/METADATA,sha256=YtKhA1XgWn7hQ6wlXsvZLTSRdn0hs81jC2AsXdP3TJY,510
+tufte-0.1.0.dist-info/RECORD,,
