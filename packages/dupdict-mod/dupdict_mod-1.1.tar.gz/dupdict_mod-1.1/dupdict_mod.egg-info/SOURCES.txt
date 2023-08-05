@@ -1,0 +1,6 @@
+dupdict_mod.py
+setup.py
+dupdict_mod.egg-info/PKG-INFO
+dupdict_mod.egg-info/SOURCES.txt
+dupdict_mod.egg-info/dependency_links.txt
+dupdict_mod.egg-info/top_level.txt
