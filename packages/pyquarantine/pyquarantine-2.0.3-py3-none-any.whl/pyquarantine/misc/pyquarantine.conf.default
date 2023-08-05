@@ -1,0 +1,33 @@
+# This is an example /etc/pyquarantine/pyquarantine.conf file.
+# Copy it into place and edit before use.
+#
+# The file is in JSON format but comments are allowed.
+#
+{
+    # Option: socket (optional)
+    # Notes:  The socket used to communicate with the MTA.
+    #
+    #         Examples:
+    #         unix:/path/to/socket             a named pipe
+    #         inet:8899                        listen on ANY interface
+    #         inet:8899@localhost              listen on a specific interface
+    #         inet6:8899                       listen on ANY interface
+    #         inet6:8899@[2001:db8:1234::1]    listen on a specific interface
+    #
+    "socket": "inet:8898@127.0.0.1",
+
+    # Option: local_addrs (optional)
+    # Notes:  A list of local hosts and networks.
+    #
+    #"local_addrs": ["fe80::/64", "::1/128", "127.0.0.0/8", "10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"],
+
+    # Option: loglevel (optional)
+    # Notes:  The default loglevel.
+    #         
+    #"loglevel": "info",
+
+    # Option: rules
+    # Notes:  List of rules.
+    #
+    "rules": []
+}
