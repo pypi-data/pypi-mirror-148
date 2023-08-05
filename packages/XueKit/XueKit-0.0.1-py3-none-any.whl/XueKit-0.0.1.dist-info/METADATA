@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: XueKit
+Version: 0.0.1
+Summary: By Xue Chao.
+Home-page: https://github.com/Hsu3hpa/XueKits
+Author: Xue Chao
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.6.0
+Requires-Dist: torch
+Requires-Dist: transformers
+
+UNKNOWN
+
+
