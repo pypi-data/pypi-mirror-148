@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: soco_search_plugin
+Version: 0.0.1
+Summary: Soco search plugin helper
+Home-page: https://www.soco.ai
+Author: kyusonglee
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Free for non-commercial use
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# SOCO-SEARCH Plugin Helper
+
+
+
