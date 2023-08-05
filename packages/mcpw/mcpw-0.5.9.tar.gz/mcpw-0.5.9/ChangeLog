@@ -1,0 +1,100 @@
+CHANGES
+=======
+
+0.5.9
+-----
+
+* fixed bug in check for compiling to binary
+
+0.5.8
+-----
+
+* added verbose option and recompile is now dependent of canges happend after last compile. added option force-recompile. Updated Readme
+* code cleanup
+
+0.5.6
+-----
+
+* fix to the fix
+
+0.5.5
+-----
+
+* bugfixes for windows
+* formating issues
+
+0.5.4
+-----
+
+* added return\_detector function and readme update
+
+0.5.3
+-----
+
+* reworked parsing of instrument arguments in setup\_tools
+
+0.5.2
+-----
+
+* bugfix in jupyter\_functions
+
+0.5.1
+-----
+
+* mcvariables and variables are now dicts (previously classes) This was necessary due to compatiblity issues between simulations done from comand line and jupyter mcvar.dn is now mcvar['sim']
+
+0.4.0
+-----
+
+* fix of #1, mcplot now feature compleat implemented
+
+0.3.4
+-----
+
+* Readme updates and correcting setup\_tools
+
+0.3.3
+-----
+
+* corrected setup\_tools templates
+
+0.3.1
+-----
+
+* quick fix of naming convention
+
+0.3.0
+-----
+
+* add var\_list support and added JN documentation to readme
+
+0.2.2
+-----
+
+* fixed bug in setup\_tools and added threadlevel mpi support for linux
+
+0.2.1
+-----
+
+* impementation of mcplot and correct resolving of links
+
+0.2.0
+-----
+
+* implementation of jupyter functions working
+
+0.1.7
+-----
+
+* Now Working on linux and windows
+* begining to prepare the script to run on windows
+* deviding setup\_tools functions into creating lines and writing to file
+* rename dev-requirements to requirements-dev and added beta classifire
+
+v0.1.0
+------
+
+* readme update and some minor fixes
+* first working version
+* alpha 0.0.1
+* Initial commit
