@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+source/__init__.py
+source/configs_manager.py
+ufo_configs.egg-info/PKG-INFO
+ufo_configs.egg-info/SOURCES.txt
+ufo_configs.egg-info/dependency_links.txt
+ufo_configs.egg-info/top_level.txt
