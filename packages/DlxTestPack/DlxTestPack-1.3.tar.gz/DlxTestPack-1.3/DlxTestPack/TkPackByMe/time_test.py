@@ -1,0 +1,16 @@
+import time
+
+t1=int(time.time())
+print(t1)
+print(type(t1))
+t_locl = time.localtime(t1)
+print(t_locl)
+print(type(t_locl))
+t_str = time.strftime("%Y-%m-%d, %H:%M:%S",t_locl)
+print(t_str)
+print(type(t_str))
+t_tup = time.strptime(t_str,"%Y-%m-%d, %H:%M:%S")
+print(t_tup)
+t_mktime = time.mktime(t_tup)
+print(t_mktime)
+print(type(t_mktime))
