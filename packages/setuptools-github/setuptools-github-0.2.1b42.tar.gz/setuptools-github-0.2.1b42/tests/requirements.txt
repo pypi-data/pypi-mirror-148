@@ -1,0 +1,12 @@
+click
+flake8
+jinja2
+lxml
+mock
+mypy
+pre-commit
+pyfakefs
+pygit2
+pytest
+pytest-cov
+pytest-html
