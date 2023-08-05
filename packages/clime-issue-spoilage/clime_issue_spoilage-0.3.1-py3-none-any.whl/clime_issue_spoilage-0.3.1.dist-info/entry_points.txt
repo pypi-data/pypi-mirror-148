@@ -1,0 +1,3 @@
+[console_scripts]
+clime-issue-spoilage-compute = clime_issue_spoilage.main:main
+clime-issue-spoilage-graph = clime_issue_spoilage.graph:main
