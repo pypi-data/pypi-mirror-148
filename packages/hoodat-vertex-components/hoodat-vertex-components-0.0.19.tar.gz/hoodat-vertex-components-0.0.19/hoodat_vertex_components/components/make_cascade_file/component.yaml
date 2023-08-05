@@ -1,0 +1,26 @@
+name: Make Cascade File
+description: Filters cascades down to specified rows
+
+inputs:
+  - name: save_to_gcs
+    description: 'Whether to save the file to gcs or not'
+    default: 'False'
+    type: Bool
+  - name: output_filename
+    description: 'The output file name'
+    default: 'cascades.csv'
+    type: String
+  - name: cascade_ids
+    type: String
+    description: "IDs of cascades to include"
+
+implementation:
+  container:
+    image: europe-west1-docker.pkg.dev/hoodat-sandbox/hoodat-sandbox-kfp-components/make_cascade_file
+    command: [
+      python,
+      make_cascade_file.py,
+      --save_to_gcs, {inputValue: save_to_gcs},
+      --output_filename, {inputValue: output_filename},
+      --cascade_ids, {inputValue: cascade_ids}
+    ]
