@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: sirius
+Version: 0.0.32
+Summary: Simulation of Radio Interferometry from Unique Sources
+Home-page: https://github.com/casangi/sirius
+Author: National Radio Astronomy Observatory
+Author-email: casa-feedback@nrao.edu
+Maintainer: Jan-Willem Steeb
+License: GNU General Public License v3.0
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: astropy
+Requires-Dist: casadata
+Requires-Dist: casatasks
+Requires-Dist: cngi-prototype
+Requires-Dist: dask[complete]
+Requires-Dist: dask-ms
+Requires-Dist: numba-scipy
+Requires-Dist: xarray
+Requires-Dist: zarr
+Provides-Extra: complete
+Requires-Dist: bokeh ; extra == 'complete'
+Requires-Dist: graphviz ; extra == 'complete'
+Requires-Dist: matplotlib ; extra == 'complete'
+Requires-Dist: pytest ; extra == 'complete'
+Requires-Dist: pre-commit ; extra == 'complete'
+Provides-Extra: docs
+Requires-Dist: bokeh ; extra == 'docs'
+Requires-Dist: graphviz ; extra == 'docs'
+Requires-Dist: matplotlib ; extra == 'docs'
+Requires-Dist: pytest ; extra == 'docs'
+Requires-Dist: pre-commit ; extra == 'docs'
+Requires-Dist: ipykernel ; extra == 'docs'
+Requires-Dist: ipympl ; extra == 'docs'
+Requires-Dist: ipython ; extra == 'docs'
+Requires-Dist: jupyter-client ; extra == 'docs'
+Requires-Dist: nbsphinx ; extra == 'docs'
+Requires-Dist: recommonmark ; extra == 'docs'
+Requires-Dist: scanpydoc ; extra == 'docs'
+Requires-Dist: sphinx-autoapi ; extra == 'docs'
+Requires-Dist: sphinx-autosummary-accessors ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Requires-Dist: twine ; extra == 'docs'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pre-commit ; extra == 'test'
+Provides-Extra: viz
+Requires-Dist: bokeh ; extra == 'viz'
+Requires-Dist: graphviz ; extra == 'viz'
+Requires-Dist: matplotlib ; extra == 'viz'
+
+UNKNOWN
+
