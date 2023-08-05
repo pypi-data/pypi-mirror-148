@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: wagtail-f-richtext
+Version: 0.1.0
+Summary: A replacement for the Wagtail richtext filter to use with a css framework.
+Home-page: https://github.com/nickmoreton/wagtail-f-richtext
+Author: Nick Moreton
+Author-email: nickmoreton@me.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.0
+Classifier: Framework :: Django :: 3.1
+Classifier: Framework :: Django :: 3.2
+Classifier: Framework :: Wagtail
+Classifier: Framework :: Wagtail :: 2
+Description-Content-Type: text/markdown
+Provides-Extra: testing
+License-File: LICENSE
+
+# Wagtail F Richtext
+
+An alternative for the Wagtail `richtext` filter.
+
+## Setup/Installation
+
+Install the package into your python environment.
+
+```bash
+pip install wagtail-f-richext
+```
+
+## Links
+
+- [Documentation](https://github.com/wagtail/f-richtext/blob/main/README.md)
+- [Changelog](https://github.com/wagtail/f-richtext/blob/main/CHANGELOG.md)
+- [Contributing](https://github.com/wagtail/f-richtext/blob/main/CHANGELOG.md)
+- [Discussions](https://github.com/wagtail/f-richtext/discussions)
+- [Security](https://github.com/wagtail/f-richtext/security)
+
+## Supported versions
+
+- Python ...
+- Django ...
+- Wagtail ...
+
+## Installation
+
+- `pip install f-richtext`
+- ...
+
+
