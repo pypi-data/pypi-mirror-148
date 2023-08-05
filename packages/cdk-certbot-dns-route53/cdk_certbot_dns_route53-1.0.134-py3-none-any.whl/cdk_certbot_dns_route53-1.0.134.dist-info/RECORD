@@ -1,0 +1,9 @@
+cdk_certbot_dns_route53/__init__.py,sha256=fW36aXUXaqds8Brg2lxNsabOu2uqGkYD6MDHdNmL1OA,16930
+cdk_certbot_dns_route53/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+cdk_certbot_dns_route53/_jsii/__init__.py,sha256=G_-_f9pwAM4QEi8Q1HItxKsDLaNBBVzKm5WC0UVdYdg,625
+cdk_certbot_dns_route53/_jsii/cdk-certbot-dns-route53@1.0.134.jsii.tgz,sha256=xFOk3n-InRDY5rEyIpe1RY_mSF7ygu5Wu-w2r7WWrfg,22971
+cdk_certbot_dns_route53-1.0.134.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+cdk_certbot_dns_route53-1.0.134.dist-info/METADATA,sha256=F7yYi_UakuoZvGtHxWDNrpOS9-Xmlv67-TJehj58_3w,4267
+cdk_certbot_dns_route53-1.0.134.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+cdk_certbot_dns_route53-1.0.134.dist-info/top_level.txt,sha256=U0JpwTks6iAPiwrk3HlaARaUjb0hsV_Ei2dmET_TfCY,24
+cdk_certbot_dns_route53-1.0.134.dist-info/RECORD,,
