@@ -1,0 +1,11 @@
+cvmfs_server_scraper-0.0.1.data/scripts/cvmfs_server_scraper_exporter.py,sha256=egzBe--tgmqAVVaD7Rjkx8Ydedssk3YBaFKd22izUP8,4410
+cvmfsscraper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cvmfsscraper/main.py,sha256=cDRw-kJBJWAI4T0SbdjLwoIHQF0xa0rJTSIdvYM4UqY,779
+cvmfsscraper/repository.py,sha256=reSpQh-YNpppKWU-BhlyaLwmazmi3u3CKXROvX2_T0M,3023
+cvmfsscraper/server.py,sha256=uzZepkJukL6mdOrtokjdv4MvOe8aCR95YzkxAlNZVNo,3231
+cvmfsscraper/tools.py,sha256=tK-ApZ4GvqfUPXcwzbgxkB7E0YdPRu8FnYJOC9hHq1w,474
+cvmfs_server_scraper-0.0.1.dist-info/LICENSE,sha256=-cN1ob5KQfe3AwHdg8kcuJ5BVnR4hZt37vN1pS14JQU,18091
+cvmfs_server_scraper-0.0.1.dist-info/METADATA,sha256=4_DgQCbg3bCqcok5C290TB8yjovVA4jTUS0QI_HZCIE,4441
+cvmfs_server_scraper-0.0.1.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+cvmfs_server_scraper-0.0.1.dist-info/top_level.txt,sha256=fsMN7U-KBxi1-GNijJ49czki9VKHD3BxQayw5RiS9ao,13
+cvmfs_server_scraper-0.0.1.dist-info/RECORD,,
