@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: ccp4ED
+Version: 1.0.8
+Summary: Electron diffraction utilities
+Home-page: https://pypi.org/project/ccp4ED
+Author: Tarik Ronan Drevon
+Author-email: ronandrevon@gmail.com
+License: UNKNOWN
+Project-URL: Documentation, https://debloch.readthedocs.io/en/latest/
+Project-URL: Source, https://github.com/ccp4/electron-diffraction
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License 
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
