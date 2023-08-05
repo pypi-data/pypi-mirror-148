@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+monedadigitag/__init__.py
+monedadigitag.egg-info/PKG-INFO
+monedadigitag.egg-info/SOURCES.txt
+monedadigitag.egg-info/dependency_links.txt
+monedadigitag.egg-info/not-zip-safe
+monedadigitag.egg-info/top_level.txt
