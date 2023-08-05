@@ -1,0 +1,9 @@
+README.txt
+setup.py
+finvizscrapper/__init__.py
+finvizscrapper/finviz_screener.py
+finvizscrapper.egg-info/PKG-INFO
+finvizscrapper.egg-info/SOURCES.txt
+finvizscrapper.egg-info/dependency_links.txt
+finvizscrapper.egg-info/requires.txt
+finvizscrapper.egg-info/top_level.txt
