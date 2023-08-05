@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: bytestory
+Version: 0.1.0
+Summary: Unpacking from bytes and packing into bytes, with an object interface.
+Home-page: https://github.com/no1xsyzy/bytestory
+License: MIT
+Author: Xu Siyuan
+Author-email: inqb@protonmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Education
+Project-URL: Repository, https://github.com/no1xsyzy/bytestory
+Description-Content-Type: text/markdown
+
+# ByteStory
+
+Unpacking from bytes and packing into bytes, with an object interface.
+
+## Install
+
+```commandline
+pip install bytestory
+```
+
+## Usage
+
+Unpacking from bytes
+
+```python
+import bytestory
+
+class OneByte(bytestory.ByteStory):
+    a = bytestory.Char
+
+one_byte = OneByte(b'\x11')
+
+assert one_byte.a == 0x11
+```
+
+Packing into bytes
+
+```python
+import bytestory
+
+class OneByte(bytestory.ByteStory):
+    a = bytestory.Char
+
+one_byte = OneByte(a=0x11)
+
+assert one_byte.pack() == b'\x11'
+```
+
+More examples at [tests/test_bytestory.py](tests/test_bytestory.py).
+
