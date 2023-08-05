@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+gym_stopping/__init__.py
+gym_stopping.egg-info/PKG-INFO
+gym_stopping.egg-info/SOURCES.txt
+gym_stopping.egg-info/dependency_links.txt
+gym_stopping.egg-info/requires.txt
+gym_stopping.egg-info/top_level.txt
+gym_stopping/envs/__init__.py
+gym_stopping/envs/stopping_env.py
