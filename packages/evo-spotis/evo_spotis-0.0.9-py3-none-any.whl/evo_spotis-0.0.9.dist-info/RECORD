@@ -1,0 +1,15 @@
+evo_spotis/__init__.py,sha256=FEEx_QOQBZrjj6_eY6nPX2LiNO7tSxZih8dL-BuGvlA,179
+evo_spotis/additions.py,sha256=YEqz1sTho8b0TGpg4k8KhjvMc7UTy-elEcsDMQM7oxA,2224
+evo_spotis/correlations.py,sha256=1lrYVKBJH1mNAlshuwPoJDJbnXyo-GpKZb88LmNkcdM,2051
+evo_spotis/normalizations.py,sha256=c9GDcScG6JHKg14TKJrwm8aCQPytsTu1B_d7u9jn2Ro,4404
+evo_spotis/weighting_methods.py,sha256=HvskuZRB-sJ18BAsyWh7Oq1lcE6hqubPQX6zboQX3oo,1275
+evo_spotis/mcda_methods/__init__.py,sha256=Zk1WfUGHOQasaW_O6LkYS6uQky8-QGpzsTN31_np_no,53
+evo_spotis/mcda_methods/mcda_method.py,sha256=ELgM1LMP0QHLiarTYs9sgOpd-AdmAHdZwB8DsGjlt6A,1356
+evo_spotis/mcda_methods/spotis.py,sha256=mOHudvtCHFgklZbEW6KpFba8uwmubpP8VyCKPysbbz8,2075
+evo_spotis/stochastic_algorithms/__init__.py,sha256=QPwbtf2cSDR_aFZFUxUtuxUCIVZe3-LHiC3qeYMe21I,28
+evo_spotis/stochastic_algorithms/de.py,sha256=fIY2vNhefgfkx3exjHELbnPLtFWrTsezpeXarvWF24k,7638
+evo_spotis-0.0.9.dist-info/LICENSE,sha256=fq7EMbMcdJRrWXkvNEPMprQjbG1rLBCOJaGeXAUoGOE,1092
+evo_spotis-0.0.9.dist-info/METADATA,sha256=yNknx2HWnIDj-ISZulvHYreG1fnDtfGwQxXvIHRCJ-o,2812
+evo_spotis-0.0.9.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+evo_spotis-0.0.9.dist-info/top_level.txt,sha256=6cfAKRa-8K_kf-co-2aqKk6iVXMZ8muRdE-rh-pCjYM,11
+evo_spotis-0.0.9.dist-info/RECORD,,
