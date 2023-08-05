@@ -1,0 +1,16 @@
+[package]
+name = "ngram_reader"
+version = "0.1.2"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "ngram_reader"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.16.3", features = ["extension-module"] }
+rayon = "1.5"
+regex = "1.5"
+handlebars = "4.2.2"
+serde_json = "1.0.79"
