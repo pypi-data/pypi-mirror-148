@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/papflix_kpaparid.egg-info/PKG-INFO
+src/papflix_kpaparid.egg-info/SOURCES.txt
+src/papflix_kpaparid.egg-info/dependency_links.txt
+src/papflix_kpaparid.egg-info/top_level.txt
