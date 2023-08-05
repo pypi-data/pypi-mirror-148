@@ -1,0 +1,5 @@
+numpy
+folium
+geopandas
+gpxpy
+pillow

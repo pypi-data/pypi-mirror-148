@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+setup.py
+tourmapper/__init__.py
+tourmapper/tourmapper.py
+tourmapper.egg-info/PKG-INFO
+tourmapper.egg-info/SOURCES.txt
+tourmapper.egg-info/dependency_links.txt
+tourmapper.egg-info/requires.txt
+tourmapper.egg-info/top_level.txt
+tourmapper/map_helpers/__init__.py
+tourmapper/map_helpers/load_image_b64.js
+tourmapper/map_helpers/popup_handler.js

@@ -1,0 +1,1 @@
+recursive-include tourmapper/map_helpers *.js
