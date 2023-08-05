@@ -1,0 +1,7 @@
+inmanta_plugins/graph/__init__.py,sha256=xO6QzIEMcpqgvG5VxCzJxqFYqDG_iR8ndO7R2CSnzjU,23534
+inmanta_plugins/graph/setup.cfg,sha256=g08SKpMcHbW6NDp9Hp2Ng88cqDjj9a-BZs2CRB90HIU,295
+inmanta_plugins/graph/model/_init.cf,sha256=9_Qk2eZF6V5u8kzCz7lJxKIzPN-wxMW6BCelEksLefU,955
+inmanta_module_graph-0.8.7.dist-info/METADATA,sha256=pfJYq5F1oM9N1HiRQ5l1XNx1d29uDblwXb9A9iNsZgI,162
+inmanta_module_graph-0.8.7.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+inmanta_module_graph-0.8.7.dist-info/top_level.txt,sha256=rb9c6eWQS8KFuSa3ktEcXpk-oSsCL9ZCVAgv7S0Eg_w,16
+inmanta_module_graph-0.8.7.dist-info/RECORD,,
