@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+src/thysecser/__init__.py
+src/thysecser.egg-info/PKG-INFO
+src/thysecser.egg-info/SOURCES.txt
+src/thysecser.egg-info/dependency_links.txt
+src/thysecser.egg-info/requires.txt
+src/thysecser.egg-info/top_level.txt
