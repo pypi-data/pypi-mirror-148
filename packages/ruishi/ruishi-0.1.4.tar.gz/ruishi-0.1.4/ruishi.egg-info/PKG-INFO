@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: ruishi
+Version: 0.1.4
+Summary: 睿视接口的封装
+Home-page: https://github.com/911061873/ruishi
+Author: Peng1013
+Author-email: qinpeng@peng1013.cn
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.10.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# ruishi
+
+睿视门禁的接口封装
+
+## 使用方法
+
+```python
+from ruishi import Ruishi
+
+# 创建用户实例
+user = Ruishi('username', 'password')
+# 获取房间列表
+room_list = user.get_room_list()
+# 获取设备列表
+device_list = user.get_device_list([room.nodeUuid for room in room_list])
+# 开门请求
+user.open_door()
+```
+
