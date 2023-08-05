@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+ERDiagram/ER.py
+ERDiagram/NodeType.py
+ERDiagram/__init__.py
+dbis_er_diagram.egg-info/PKG-INFO
+dbis_er_diagram.egg-info/SOURCES.txt
+dbis_er_diagram.egg-info/dependency_links.txt
+dbis_er_diagram.egg-info/requires.txt
+dbis_er_diagram.egg-info/top_level.txt
