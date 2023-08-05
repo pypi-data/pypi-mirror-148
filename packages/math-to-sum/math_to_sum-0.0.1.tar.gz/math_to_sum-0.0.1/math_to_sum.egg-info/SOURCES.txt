@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+math_to_sum/__init__.py
+math_to_sum.egg-info/PKG-INFO
+math_to_sum.egg-info/SOURCES.txt
+math_to_sum.egg-info/dependency_links.txt
+math_to_sum.egg-info/top_level.txt
