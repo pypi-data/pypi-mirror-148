@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+pytyped.egg-info/PKG-INFO
+pytyped.egg-info/SOURCES.txt
+pytyped.egg-info/dependency_links.txt
+pytyped.egg-info/not-zip-safe
+pytyped.egg-info/requires.txt
+pytyped.egg-info/top_level.txt
