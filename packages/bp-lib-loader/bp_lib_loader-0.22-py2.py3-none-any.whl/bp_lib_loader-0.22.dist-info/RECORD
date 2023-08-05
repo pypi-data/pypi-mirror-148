@@ -1,0 +1,8 @@
+libloader/__init__.py,sha256=hiC0lGI9QcxtWV3BSkDSsMB-yt9eIbsDOUU-M0KOwhA,48
+libloader/com.py,sha256=fVZhiDDaELCYk2cXMxAcNvrIq1aZd-CtUalsr1BAPCw,548
+libloader/libloader.py,sha256=DQPzYDfLwqgbUg58BG9Llbx23d80xL03ErVlfVHvwtE,1681
+bp_lib_loader-0.22.dist-info/LICENSE,sha256=xodLWMPbCln9V5NfwRW47aGJUjNJXIe1hsEUL7tZGcI,1077
+bp_lib_loader-0.22.dist-info/METADATA,sha256=Gb_PEQafVmq_2g4J2b-LU9yiJlBCN5WoraFBiy1YVXA,836
+bp_lib_loader-0.22.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+bp_lib_loader-0.22.dist-info/top_level.txt,sha256=uHVxFPttUDJ2COm4f6BvxKFkAUjjEOMLuM2f5vtHI6g,10
+bp_lib_loader-0.22.dist-info/RECORD,,

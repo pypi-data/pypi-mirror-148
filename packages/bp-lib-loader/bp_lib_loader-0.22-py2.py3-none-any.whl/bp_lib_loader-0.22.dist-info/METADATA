@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: bp-lib-loader
+Version: 0.22
+Summary: Quickly and easily load shared libraries from various platforms. Also includes a libloader.com module for loading com modules on Windows.
+Home-page: https://github.com/blindpandas/bp-libloader
+Author: Blind Pandas Team (original: Christopher Toth<q@q-continuum.net>)
+Author-email: info@blindpandas.com
+License: MIT
+Keywords: lib dll so
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: pywin32 (==303) ; sys_platform == "win32"
+
+UNKNOWN
+
