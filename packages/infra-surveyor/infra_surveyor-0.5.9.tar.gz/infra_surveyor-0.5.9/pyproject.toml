@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "infra_surveyor"
+description = "An Autodocumenting tool for Cloud Infrastructure"
+keywords = ["AWS", "Cloud", "Documentation", "Architecture"]
+readme = "README.md"
+license = { file = "LICENSE" }
+dependencies = [
+    "click",
+    "awscrt",
+    "boto3[crt]",
+    "graphviz",
+]
+dynamic = ["version"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent"
+]
+
+
+[project.optional-dependencies]
+dev = ["moto[all]", "docker", "coverage[toml]", "pytest-cov", "black", "python-semantic-release"]
+release = ["flit"]
+docs = ["mkdocs==1.3.0", "mkdocs-redirects==1.0.1", "jinja2==3.0.3"]
+
+[project.urls]
+Source="https://github.com/DavidWylie/InfraSurveyor"
+Documentation="https://infrasurveyor.readthedocs.io/en/latest/"
+
+[project.scripts]
+surveyor="infra_surveyor.commands:cli"
+
+[tool.coverage.run]
+include = ["src/infra_surveyor/*", "src/infra_surveyor_aws_icons/*"]
+omit = ["tests/*"]
+
+[tool.coverage.html]
+directory = "out/report/coverage_html"
+
+[tool.coverage.xml]
+output = "out/report/coverage.xml"
+
+[tool.pytest.ini_options]
+pythonpath = "src/"
+
+[tool.black]
+line-length = 88
+target-version = ['py36', 'py37', 'py38']
+include = '\.pyi?$'
+
+[tool.semantic_release]
+branch = "main"
+version_variable = "src/infra_surveyor/_version.py:__version__"
+tag_commit = true
+commit_version_number = true
+commit_subject = ":bookmark: Release {version}"
+commit_parser = "semantic_release.history.emoji_parser"
+upload_to_repository = false
+upload_to_release = false
