@@ -1,0 +1,12 @@
+#
+# PySceneDetect Requirements for Windows Build (Python 3.7+)
+#
+# These are pinned to the versions required for the Windows build to work
+# using pyinstaller.
+appdirs
+av==9.1.0
+click
+numpy
+opencv-python-headless==4.5.1.48
+pytest
+tqdm

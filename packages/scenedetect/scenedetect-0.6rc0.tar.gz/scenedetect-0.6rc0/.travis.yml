@@ -1,0 +1,64 @@
+language: python
+
+matrix:
+  include:
+    - os: linux
+      dist: xenial
+      language: python
+      python: "3.6"
+    - os: linux
+      dist: xenial
+      language: python
+      python: "3.7"
+    - os: linux
+      dist: xenial
+      language: python
+      python: "3.8"
+
+    - os: linux
+      dist: bionic
+      language: python
+      python: "3.8"
+    - os: linux
+      dist: focal
+      language: python
+      python: "3.9"
+
+    - os: linux
+      dist: focal
+      language: python
+      python: "3.8"
+    - os: linux
+      dist: focal
+      language: python
+      python: "3.9"
+
+#
+# TODO: Fix Windows builds, they fail because `av` is missing some DLL files.
+#
+#    - name: "Python 3.7.9 on Windows"
+#      os: windows
+#      language: shell
+#      before_install:
+#        - choco install python --version 3.7.9
+#        - python -m pip install --upgrade pip
+#        - pip3 install --upgrade pytest
+#      env: PATH=/c/Python37:/c/Python37/Scripts:$PATH
+#    - name: "Python 3.9.8 on Windows"
+#      os: windows
+#      language: shell
+#      before_install:
+#        - choco install python --version 3.9.8
+#        - python -m pip install --upgrade pip
+#        - pip3 install --upgrade pytest
+#      env: PATH=/c/Python39:/c/Python39/Scripts:$PATH
+#
+
+install:
+  - "python -m pip install --upgrade pip"
+  - "python -m pip install -r requirements_headless.txt"
+  - "git fetch --depth=1 https://github.com/Breakthrough/PySceneDetect.git refs/heads/resources:refs/remotes/origin/resources"
+  - "git checkout refs/remotes/origin/resources -- tests/resources/"
+
+script:
+  - python -m pytest tests/
