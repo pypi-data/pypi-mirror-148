@@ -1,0 +1,17 @@
+{
+  "IAMKafkaCluster": {
+    "RO": {
+      "Effect": "Allow",
+      "Action": [
+        "msk:Describe*"
+      ],
+      "Resource": [
+        "${ARN}"
+      ]
+    }
+  },
+  "MSKKafkaTopic": {
+  },
+  "MSKKafkaGroup": {
+  }
+}
