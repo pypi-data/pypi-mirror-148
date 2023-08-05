@@ -1,0 +1,10 @@
+numpy
+jupyter
+pandas
+python-dotenv
+google-api-python-client
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+boto3
+pytz
