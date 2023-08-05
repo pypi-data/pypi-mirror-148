@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+minipyer/__init__.py
+minipyer.egg-info/PKG-INFO
+minipyer.egg-info/SOURCES.txt
+minipyer.egg-info/dependency_links.txt
+minipyer.egg-info/top_level.txt
+minipyer/lib/__init__.py
+minipyer/lib/css_minipyer.py
+minipyer/lib/minipyer.py
