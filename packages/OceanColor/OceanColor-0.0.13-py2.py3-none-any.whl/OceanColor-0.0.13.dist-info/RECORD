@@ -1,0 +1,17 @@
+OceanColor/OceanColor.py,sha256=YYu5vzvOknUAdtrjUU9flqtzKa_c3kEx4He6d8yefpE,157
+OceanColor/__init__.py,sha256=O3AABuwIACWxn-aLmoLe-kRNkOY4u8hfyTk555HxCDQ,901
+OceanColor/catalog.py,sha256=s7ZwC5lo-UTdwX2pE0lnlakxr-9QKkGKG0MtC0qESDI,3721
+OceanColor/cli.py,sha256=t2FQ4P_qAtLaKQqGVOQXqJ7bvZMBXtMwuncN_bzCb_U,1621
+OceanColor/cmr.py,sha256=wfWTb0FIWCWgyX7xGhV2yof69ve4wYDFPhv4gIFpgM8,9270
+OceanColor/gsfc.py,sha256=KZ-SqLcCEw8nbx85fwiGDeFVJoyvB6A1xgLO36_1i4w,6369
+OceanColor/inrange.py,sha256=wa65ZfX7M-WNiX-b0KLCwhbjvSfqIzc0qbpazBdM7a0,18584
+OceanColor/storage.py,sha256=GMp6ONi3LNPATHllLpCE6lK2NKed47C5_INTKjtsURE,15259
+OceanColor/utils.py,sha256=9P7WYONXRVmgVwPi9qhNoVqtVG5cfmnKGmo9s2DchTY,3079
+OceanColor/version.py,sha256=GRHJKTbNM0CnSGm6V-7y4CGWnpuyYD2ducbID5G8gLk,144
+OceanColor-0.0.13.dist-info/AUTHORS.rst,sha256=DBhwUirMyvSEPIgB29E7YkG0vBVtneip7L2gE9mCG_w,682
+OceanColor-0.0.13.dist-info/LICENSE,sha256=mHvUn8JLYhBzGSB3JfVarv33aPyC2Hy60HhRpww5Sc4,1516
+OceanColor-0.0.13.dist-info/METADATA,sha256=GOkprlXBV_YG47CfPWW3rnzwG7LJ9Qr-Rw7ETSDGpzs,5971
+OceanColor-0.0.13.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+OceanColor-0.0.13.dist-info/entry_points.txt,sha256=Mxc7wNX-osIMtNyyXvMdvknUlAyKBOimmFQP-6u1ogA,51
+OceanColor-0.0.13.dist-info/top_level.txt,sha256=f9pPcWbzFkqqnK3byNG0XEoPhWg3Iz98T3rGwif6O4k,11
+OceanColor-0.0.13.dist-info/RECORD,,
