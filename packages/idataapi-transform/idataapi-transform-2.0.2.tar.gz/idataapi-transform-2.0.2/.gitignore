@@ -1,0 +1,7 @@
+logs/*
+test*
+.DS_Store
+.idea/*
+config.ini
+*.pyc
+venv/*
