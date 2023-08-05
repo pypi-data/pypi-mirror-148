@@ -1,0 +1,10 @@
+README.md
+setup.py
+docxreviews2txt/__init__.py
+docxreviews2txt/docxreviews2txt.py
+docxreviews2txt.egg-info/PKG-INFO
+docxreviews2txt.egg-info/SOURCES.txt
+docxreviews2txt.egg-info/dependency_links.txt
+docxreviews2txt.egg-info/requires.txt
+docxreviews2txt.egg-info/top_level.txt
+scripts/docxreviews2txt
