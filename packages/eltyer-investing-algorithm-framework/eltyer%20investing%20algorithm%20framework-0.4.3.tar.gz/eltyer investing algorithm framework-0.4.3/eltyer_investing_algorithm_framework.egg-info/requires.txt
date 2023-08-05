@@ -1,0 +1,2 @@
+investing-algorithm-framework>=0.18.5
+eltyer>=0.2.3
