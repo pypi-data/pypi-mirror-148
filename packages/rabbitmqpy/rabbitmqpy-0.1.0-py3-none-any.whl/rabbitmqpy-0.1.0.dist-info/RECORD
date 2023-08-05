@@ -1,0 +1,10 @@
+rabbitmqpy/__init__.py,sha256=CBOeNPx9C0OQH3uZ8TElX2y0bLAeHeqhakJr7SK6EQw,160
+rabbitmqpy/log_publish.py,sha256=oOunrqxq8IMZv_-NDJhV5uOLj07NvYUEcgIiviCLLa8,1708
+rabbitmqpy/log_subscribe.py,sha256=SOa1m5QpGDtCcyK8S_RfjSu6etDssGYLB28Biif9Ek4,5090
+rabbitmqpy/publish.py,sha256=LRhPEJlgM8Q-8lZhmxySU1ndxsnQ195Ya7W1_rq9pIg,2587
+rabbitmqpy/subscribe.py,sha256=GtPEXt_g19hrNqOA4jNDg9C_GJkgOkXeuI-OBCRMBvY,3879
+rabbitmqpy-0.1.0.dist-info/LICENSE,sha256=iZQiFM8jtIIN4mgALuadoroIUPbMgjYrx8NngJvwUmA,1064
+rabbitmqpy-0.1.0.dist-info/METADATA,sha256=mSVHTns9snKBpUOpsxSXB3oxWIG9n048hHXjz5j_R6k,435
+rabbitmqpy-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+rabbitmqpy-0.1.0.dist-info/top_level.txt,sha256=eJWHzoTO6j_Ir_rIhNhDi4eSM89t258sW7glbNq6UN8,11
+rabbitmqpy-0.1.0.dist-info/RECORD,,
