@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "plotlab"
+version = "0.1.1"
+description = "Stacked plots for Python"
+authors = ["Ibis Prevedello <ibiscp@gmail.com>",
+"Rodrigo Nader <rodrigosilvanader@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+homepage = "https://github.com/logspace-ai/plotlab"
+repository = "https://github.com/logspace-ai/plotlab"
+include = [
+    "LICENSE",
+]
+[tool.poetry.dependencies]
+python = ">=3.8,<3.11"
+plotly = "^5.7.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+pylint = "*"
+pre-commit = "*"
+flake8 = "*"
+black = "*"
+isort = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
