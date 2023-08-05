@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: cylearn
+Version: 0.1.3
+Summary: A collection of tools for machine learning.
+Home-page: https://github.com/ADNRs/cylearn
+Author: Chung-Yi Chen (ADNRs)
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# cylearn
+
+cylearn contains a collection of tools for machine learning. The 'cy' prefix is just the abbreviation of my given name.
+
+## Installation
+
+You can install cylearn through PyPI:
+
+```
+$ pip install cylearn
+```
+
+Or just copy the files you need to your project, but don't forget the LICENSE.
+
+### Dependencies
+
++ [multiprocess](https://github.com/uqfoundation/multiprocess) (optional)
+
+## Submodules
+
+There are only one submodule so far.
+
++ Data
+  + Dataset
+  + Loader
+
+
