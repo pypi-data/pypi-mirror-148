@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: effect-form-validators
+Version: 0.1.1
+Summary: Classes for EFFECT trial modelform validation
+Home-page: https://github.com/effect-trial/effect-form-validators
+Author: Erik van Widenfelt
+Author-email: ew2789@gmail.com
+Maintainer: Erik van Widenfelt
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Framework :: Django
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.2
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: BSD License
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+
+|pypi| |actions| |codecov| |downloads|
+
+
+effect-form-validators
+----------------------
+
+Form validator classes for EFFECT model forms
+
+.. |pypi| image:: https://img.shields.io/pypi/v/effect-form-validators.svg
+    :target: https://pypi.python.org/pypi/effect-form-validators
+
+.. |actions| image:: https://github.com/effect-trial/effect-form-validators/workflows/build/badge.svg?branch=develop
+  :target: https://github.com/effect-trial/effect-form-validators/actions?query=workflow:build
+
+.. |codecov| image:: https://codecov.io/gh/effect-trial/effect-form-validators/branch/develop/graph/badge.svg
+  :target: https://codecov.io/gh/effect-trial/effect-form-validators
+
+.. |downloads| image:: https://pepy.tech/badge/effect-form-validators
+   :target: https://pepy.tech/project/effect-form-validators
+
+Changes
+=======
+
+unreleased
+----------
+- vitals
+
+0.1.0
+-----
+- initial import of form validator classes from effect-edc
+- chest xray
+
+
