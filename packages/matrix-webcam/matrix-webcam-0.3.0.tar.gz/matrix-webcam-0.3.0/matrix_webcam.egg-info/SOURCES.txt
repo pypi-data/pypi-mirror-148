@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+matrix_webcam/__init__.py
+matrix_webcam/__main__.py
+matrix_webcam.egg-info/PKG-INFO
+matrix_webcam.egg-info/SOURCES.txt
+matrix_webcam.egg-info/dependency_links.txt
+matrix_webcam.egg-info/entry_points.txt
+matrix_webcam.egg-info/requires.txt
+matrix_webcam.egg-info/top_level.txt
