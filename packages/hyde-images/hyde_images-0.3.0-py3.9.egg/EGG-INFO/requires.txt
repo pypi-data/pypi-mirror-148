@@ -1,0 +1,8 @@
+numpy>=1.13.0
+torch>=1.8.0
+PyWavelets>=1.1.1
+
+[testing]
+setuptools
+pytest
+pytest-cov
