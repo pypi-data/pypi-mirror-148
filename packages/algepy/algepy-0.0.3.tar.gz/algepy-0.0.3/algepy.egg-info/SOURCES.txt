@@ -1,0 +1,12 @@
+README.md
+setup.py
+algepy/__init__.py
+algepy/plane.py
+algepy/plot.py
+algepy/point.py
+algepy/vector.py
+algepy.egg-info/PKG-INFO
+algepy.egg-info/SOURCES.txt
+algepy.egg-info/dependency_links.txt
+algepy.egg-info/requires.txt
+algepy.egg-info/top_level.txt
