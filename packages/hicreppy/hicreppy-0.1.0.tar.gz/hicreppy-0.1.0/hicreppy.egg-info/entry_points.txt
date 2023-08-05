@@ -1,0 +1,3 @@
+[console_scripts]
+hicreppy = hicreppy.cli:cli
+
