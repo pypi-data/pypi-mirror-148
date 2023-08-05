@@ -1,0 +1,7 @@
+README.md
+setup.py
+nake.egg-info/PKG-INFO
+nake.egg-info/SOURCES.txt
+nake.egg-info/dependency_links.txt
+nake.egg-info/entry_points.txt
+nake.egg-info/top_level.txt
