@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+hac_intro2cs_tests.egg-info/PKG-INFO
+hac_intro2cs_tests.egg-info/SOURCES.txt
+hac_intro2cs_tests.egg-info/dependency_links.txt
+hac_intro2cs_tests.egg-info/entry_points.txt
+hac_intro2cs_tests.egg-info/top_level.txt
+inferno_tests/__init__.py
+inferno_tests/tests.py
+test_ex/__init__.py
+test_ex/__main__.py
