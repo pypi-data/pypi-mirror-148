@@ -1,0 +1,4 @@
+include builtin_palettes/*.palette
+include palettes/.empty
+include examples/*
+include tests/*
