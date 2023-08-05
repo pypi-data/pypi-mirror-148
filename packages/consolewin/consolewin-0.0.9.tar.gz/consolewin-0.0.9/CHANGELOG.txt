@@ -1,0 +1,16 @@
+Change Log
+
+0.0.8 (22/12/2021)
+
+-----------------
+
+- Added more functions... execute help() for more information.
+
+- Fixed importing bug worldwide
+
+
+0.0.9 (25/4/2022)
+
+-----------------
+
+- changed importing name to fix issues with another lib called cw

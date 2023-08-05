@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+setup.py
+consolewin/__init__.py
+consolewin.egg-info/PKG-INFO
+consolewin.egg-info/SOURCES.txt
+consolewin.egg-info/dependency_links.txt
+consolewin.egg-info/requires.txt
+consolewin.egg-info/top_level.txt

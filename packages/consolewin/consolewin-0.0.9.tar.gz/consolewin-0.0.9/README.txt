@@ -1,0 +1,1 @@
+This is a python library that lets you control command prompt or console using simple keywords instead of importing alot of stuff and making your code messy and unreadable.

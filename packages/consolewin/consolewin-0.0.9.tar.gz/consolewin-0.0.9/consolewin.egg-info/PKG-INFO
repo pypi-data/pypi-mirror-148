@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: consolewin
+Version: 0.0.9
+Summary: A simple package for begginers!
+Home-page: UNKNOWN
+Author: Adam Yasser
+Author-email: adam.y.h.20o1@gmail.com
+License: MIT
+Keywords: Console
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE.txt
+
+This is a python library that lets you control command prompt or console using simple keywords instead of importing alot of stuff and making your code messy and unreadable.
+
+Change Log
+
+0.0.8 (22/12/2021)
+
+-----------------
+
+- Added more functions... execute help() for more information.
+
+- Fixed importing bug worldwide
+
+
+0.0.9 (25/4/2022)
+
+-----------------
+
+- changed importing name to fix issues with another lib called cw
+
