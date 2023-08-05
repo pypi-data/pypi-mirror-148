@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: zhihu_crawler
+Version: 0.0.1
+Summary: 知乎关键词搜索、热榜、用户信息、回答、专栏文章、评论等信息的抓取程序
+Home-page: https://github.com/su17873288456/zhihu_crawler
+Author: szm
+Author-email: s17873288456@gmail.com
+License: MIT
+Keywords: zhihu zhihu_crawler zhihu_scraper crawler scraper
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+
+zhihu_crawler
+=============
+
+本程序支持关键词搜索、热榜、用户信息、回答、专栏文章、评论等信息的抓取
+
+项目目录
+-------
+- __init__.py 为程序的对外统一入口
+- constants.py 常量
+- exceptions.py 自定义异常
+- extractors.py 数据清洗
+- page_iterators.py 简单的页面处理
+- zhihu_scraper.py 页面请求、cookie设置
+- zhihu_types.py 类型提示、检查。项目自定义类型
+- 注意事项: 项目内有部分异步操作，在模块引用之前需要使用猴子补丁; 同时该项目没有对ip限制、登录做针对性处理
+
+
+安装
+----
+.. code:: bash
+    pip install zhihu_crawler
+
+
+使用
+----
+.. code:: python
+
+    if __name__ == '__main__':
+
+        # 设置代理; 如采集量较大，建议每次请求都切换代理
+        set_proxy({'http': 'http://127.0.0.1:8125', 'https': 'http://127.0.0.1:8125'})
+
+        # 设置cookie
+        set_cookie({'d_c0': 'AIBfvRMxmhSPTk1AffR--QLwm-gDM5V5scE=|1646725014'})
+
+        # 搜索采集使用案例:
+        for info in search_crawl(key_word='天空', count=10):
+            print(info)
+
+        # 可传入data_type 指定搜索类型
+        for info in search_crawl(key_word='天空', count=10, data_type='answer'):
+            print(info)
+
+        # 用户信息回答列表使用案例(采集该用户信息及50条回答信息,每条回答包含50条评论):
+        for info in user_crawler('wo-men-de-tai-kong',
+                                 answer_count=50,
+                                 comment_count=50
+                                 ):
+            print(info)
+
+        # 用户信息提问列表使用案例(采集该用户信息及10条问题信息,每条问题包含10条回答，每条回答包含50条评论):
+        for info in user_crawler('wo-men-de-tai-kong',
+                                 question_count=10,
+                                 drill_down_count=10,
+                                 comment_count=50):
+            print(info)
+
+        # 热点问题采集使用案例
+        # 采集 前10个问题, 每个问题采集10条回答
+        for info in hot_questions_crawl(question_count=10, drill_down_count=10):
+            print(info)
+
+        # 可传入period 指定热榜性质。如小时榜、日榜、周榜、月榜
+        # 传入domains 采集指定主题的问题
+        for info in hot_questions_crawl(question_count=10, period='day', domains=['1001', 1003]):
+            print(info)
+

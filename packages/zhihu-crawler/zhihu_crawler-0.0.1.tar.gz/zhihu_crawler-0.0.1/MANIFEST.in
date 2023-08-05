@@ -1,0 +1,4 @@
+include LICENSE
+recursive-include zhihu_crawler/common *
+recursive-include zhihu_crawler/zhihu_crawler *
+recursive-include zhihu_crawler/utils *
