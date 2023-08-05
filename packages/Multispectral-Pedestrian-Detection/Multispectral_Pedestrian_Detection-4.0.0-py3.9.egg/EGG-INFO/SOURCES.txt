@@ -1,0 +1,6 @@
+setup.py
+Multispectral_Pedestrian_Detection.egg-info/PKG-INFO
+Multispectral_Pedestrian_Detection.egg-info/SOURCES.txt
+Multispectral_Pedestrian_Detection.egg-info/dependency_links.txt
+Multispectral_Pedestrian_Detection.egg-info/requires.txt
+Multispectral_Pedestrian_Detection.egg-info/top_level.txt
