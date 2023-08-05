@@ -1,0 +1,10 @@
+trimgmi/__init__.py,sha256=RALaPgAGBE_JrPrjDXYRoJDM0p_ofNB5Oqkv7eWrfLA,6397
+trimgmi/command.py,sha256=Cr40AcCqeuxDToQvXhbdRh95zKNXWGOrpqHtMP-S3s8,780
+trimgmi/convert.py,sha256=4hFwTC_vQq5XTXI_J1Q9ENHDkBweUJ8h5sBRPqj-Dkg,592
+trimgmi/sample.py,sha256=TQaw3BmozxrdxTochkWJYC7yJZ_LKs4pj_vaDVX7Fao,3805
+trimgmi-0.0.5.dist-info/COPYING,sha256=tqi_Y64slbCqJW7ndGgNe9GPIfRX2nVGb3YQs7FqzE4,34670
+trimgmi-0.0.5.dist-info/METADATA,sha256=aI643Ou7Jhuputc5O_E6UPysoVD3NG9fS_oYq7Xb_-M,2826
+trimgmi-0.0.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+trimgmi-0.0.5.dist-info/entry_points.txt,sha256=JFGA7W3stcsUJC-sfQpBXImphc5o1nLsoEpFnkYAEMk,84
+trimgmi-0.0.5.dist-info/top_level.txt,sha256=HsRBrIbAL5V8AhSy8LERrrIS-Z1Rl-OR0EbZ-zGrhNs,8
+trimgmi-0.0.5.dist-info/RECORD,,
