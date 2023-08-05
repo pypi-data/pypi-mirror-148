@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: beautifulspoon
+Version: 0.0.1
+Summary: 
+Home-page: https://github.com/gzttech/beautifulspoon
+License: MIT
+Author: Gongziting Tech Ltd.
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: beautifulsoup4 (>=4.10,<5.0)
