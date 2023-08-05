@@ -1,0 +1,15 @@
+pyPreservica/__init__.py,sha256=URqP2cz5TZiAEwcUI5nip1qI42SB-6Ui9h9BGyj91ZQ,887
+pyPreservica/adminAPI.py,sha256=fpvG5AWns0atDbmIqvEzh_yNgyaGYRKsA96anIsdBHM,32837
+pyPreservica/common.py,sha256=wMu_bYnktqAKzqOYxa70hzi01umpQ3SBC8DwTd69pNc,31569
+pyPreservica/contentAPI.py,sha256=uiKYhLRFPFXQyIDs87OHPmNX8CuxPiM1dkkzyVQwFPk,16084
+pyPreservica/entityAPI.py,sha256=5sutFjK2nc6L5j0MPL_zSTkeThTNnxV5Wm0ys4aV8fc,101453
+pyPreservica/opex.py,sha256=ccra1S4ojUXS3PlbU8WfxajOkJrwG4OykBnNrYP_jus,4875
+pyPreservica/parAPI.py,sha256=WdfDYKbrJFqDrRtRUu-f7sSh1R4t-3fcLsUO2APheks,10522
+pyPreservica/retentionAPI.py,sha256=kuvtKy0mIUpwq4ZMDA1VdGm_PdaohAqdqIgOlvBIcUo,23299
+pyPreservica/uploadAPI.py,sha256=rmgNYoGkzZRgXNLieS-DRLIguyvYZ3XByVaVRjNMj3I,89791
+pyPreservica/workflowAPI.py,sha256=sqLGsp1MypBsRJC0EVl5Hg14DiRXMYjDoSYA8OZknvY,17717
+pyPreservica-1.4.0.dist-info/LICENSE.txt,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+pyPreservica-1.4.0.dist-info/METADATA,sha256=yjBrZmLzP0c0PXzmvgAsYNqI30KoLTwAR4ZD163LSag,2705
+pyPreservica-1.4.0.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+pyPreservica-1.4.0.dist-info/top_level.txt,sha256=iIBh6NAznYQHOV8mv_y_kGKSDITek9rANyFDwJsbU-c,13
+pyPreservica-1.4.0.dist-info/RECORD,,
