@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/nowpay/__init__.py
+src/nowpay/ipn.py
+src/nowpay.egg-info/PKG-INFO
+src/nowpay.egg-info/SOURCES.txt
+src/nowpay.egg-info/dependency_links.txt
+src/nowpay.egg-info/top_level.txt
