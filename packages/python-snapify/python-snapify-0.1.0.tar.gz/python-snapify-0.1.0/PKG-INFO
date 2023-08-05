@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: python-snapify
+Version: 0.1.0
+Summary: Reversible package converter -- convert to and from snap packages
+Home-page: https://github.com/jmelahman/python-snapify
+Author: Jamison Lahman
+Author-email: jamison@lahman.dev
+License: MIT
+Download-URL: https://github.com/jmelahman/python-snapify/archive/refs/tags/v0.1.0.tar.gz
+Keywords: arch linux,pacman,snap,snapd,snapify
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Topic :: System :: Software Distribution
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+/home/jamison/code/python-snapify/README.md
+
