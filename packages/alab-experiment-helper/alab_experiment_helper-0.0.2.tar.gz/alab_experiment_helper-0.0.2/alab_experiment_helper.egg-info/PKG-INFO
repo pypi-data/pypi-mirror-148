@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: alab-experiment-helper
+Version: 0.0.2
+Summary: Helper package for generate input files for alab_management software
+Home-page: https://github.com/idocx/alab_experiment_helper
+Author: Alab Project Team
+Author-email: yuxingfei@berkeley.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+
+UNKNOWN
+
