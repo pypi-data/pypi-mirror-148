@@ -1,0 +1,7 @@
+PyExifTool
+lxml
+opencv-python
+opencv-python-headless
+tqdm
+numpy
+matplotlib
