@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/threadsnake/__init__.py
+src/threadsnake/middlewares.py
+src/threadsnake/pypress_classes.py
+src/threadsnake.egg-info/PKG-INFO
+src/threadsnake.egg-info/SOURCES.txt
+src/threadsnake.egg-info/dependency_links.txt
+src/threadsnake.egg-info/top_level.txt
+src/threadsnake/myhttp/__init__.py
+src/threadsnake/myhttp/http_classes.py
+src/threadsnake/myhttp/response_codes.txt
