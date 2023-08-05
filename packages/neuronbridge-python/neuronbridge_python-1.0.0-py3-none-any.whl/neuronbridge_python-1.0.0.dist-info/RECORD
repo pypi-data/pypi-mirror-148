@@ -1,0 +1,10 @@
+neuronbridge/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+neuronbridge/client.py,sha256=ejghjH4hd59xvcN8a_63DvqgEm5L_AGuuTUgoqygRyU,5670
+neuronbridge/generate_schemas.py,sha256=kH-AmOOqJsqXNKe6x44iX8KAKl0k0s6LhvRPv8nu0Rk,554
+neuronbridge/model.py,sha256=EgCZ_jfy0eA0zS0LItKR-juvN44cWEuRhiSYGGbGkMo,8532
+neuronbridge/utils.py,sha256=Le_snV6kb8Ccis-6C46E97FAEGMTidU8BBDFqpSwIWY,836
+neuronbridge_python-1.0.0.dist-info/LICENSE,sha256=ITEgs2uh2BxuA12lhY2jdXng7ABJgApbWW5IvzWXI4E,1539
+neuronbridge_python-1.0.0.dist-info/METADATA,sha256=PC00DYdQLZjYmpOa7B_r0_W1BvsoMF4gcTS502o8WUc,1791
+neuronbridge_python-1.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+neuronbridge_python-1.0.0.dist-info/top_level.txt,sha256=dJ4WrnMMxK0vN4syROm_KTZmT6D5crYUrPaeySBXQnE,13
+neuronbridge_python-1.0.0.dist-info/RECORD,,
