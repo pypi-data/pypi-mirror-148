@@ -1,0 +1,17 @@
+README.md
+setup.py
+quantsc/__init__.py
+quantsc/config.py
+quantsc/util.py
+quantsc.egg-info/PKG-INFO
+quantsc.egg-info/SOURCES.txt
+quantsc.egg-info/dependency_links.txt
+quantsc.egg-info/requires.txt
+quantsc.egg-info/top_level.txt
+quantsc/core/__init__.py
+quantsc/core/stock.py
+quantsc/core/timeseries.py
+quantsc/data/__init__.py
+quantsc/data/data.py
+quantsc/data/__random/__init__.py
+quantsc/data/__random/rand.py

@@ -1,0 +1,10 @@
+setuptools
+pandas
+numpy
+yfinance
+statsmodels==0.13.2
+scipy
+matplotlib
+plotly
+python-dateutil
+yahoo_fin
