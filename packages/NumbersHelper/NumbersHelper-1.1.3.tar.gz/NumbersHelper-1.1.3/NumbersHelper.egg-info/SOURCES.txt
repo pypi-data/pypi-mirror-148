@@ -1,0 +1,8 @@
+README.md
+setup.py
+NumbersHelper/__init__.py
+NumbersHelper.egg-info/PKG-INFO
+NumbersHelper.egg-info/SOURCES.txt
+NumbersHelper.egg-info/dependency_links.txt
+NumbersHelper.egg-info/requires.txt
+NumbersHelper.egg-info/top_level.txt
