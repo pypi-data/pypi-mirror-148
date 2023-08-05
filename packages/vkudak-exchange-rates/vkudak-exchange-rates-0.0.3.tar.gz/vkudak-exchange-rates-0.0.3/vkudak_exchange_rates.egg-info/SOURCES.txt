@@ -1,0 +1,9 @@
+README.md
+setup.py
+exchenge_rates/__init__.py
+exchenge_rates/exchange_rates.py
+vkudak_exchange_rates.egg-info/PKG-INFO
+vkudak_exchange_rates.egg-info/SOURCES.txt
+vkudak_exchange_rates.egg-info/dependency_links.txt
+vkudak_exchange_rates.egg-info/requires.txt
+vkudak_exchange_rates.egg-info/top_level.txt
