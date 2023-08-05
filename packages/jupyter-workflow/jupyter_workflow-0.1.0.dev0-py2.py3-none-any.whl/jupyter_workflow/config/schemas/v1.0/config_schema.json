@@ -1,0 +1,427 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "config_schema.json",
+  "type": "object",
+  "definitions": {
+    "deployment": {
+      "$id": "#/definitions/deployment",
+      "type": "object",
+      "definitions": {
+        "docker": {
+          "$id": "#/definitions/deployment/definitions/docker",
+          "type": "object",
+          "$ref": "docker.json"
+        },
+        "docker-compose": {
+          "$id": "#/definitions/deployment/definitions/docker-compose",
+          "type": "object",
+          "$ref": "docker-compose.json"
+        },
+        "helm3": {
+          "$id": "#/definitions/deployment/definitions/helm3",
+          "type": "object",
+          "$ref": "helm3.json"
+        },
+        "pbs": {
+          "$id": "#/definitions/deployment/definitions/pbs",
+          "type": "object",
+          "$ref": "queue_manager.json"
+        },
+        "occam": {
+          "$id": "#/definitions/deployment/definitions/occam",
+          "type": "object",
+          "$ref": "occam.json"
+        },
+        "singularity": {
+          "$id": "#/definitions/deployment/definitions/singularity",
+          "type": "object",
+          "$ref": "singularity.json"
+        },
+        "slurm": {
+          "$id": "#/definitions/deployment/definitions/slurm",
+          "type": "object",
+          "$ref": "queue_manager.json"
+        },
+        "ssh": {
+          "$id": "#/definitions/deployment/definitions/ssh",
+          "type": "object",
+          "$ref": "ssh.json"
+        }
+      },
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "docker",
+            "docker-compose",
+            "helm",
+            "helm3",
+            "pbs",
+            "occam",
+            "singularity",
+            "slurm",
+            "ssh"
+          ]
+        },
+        "external": {
+          "type": "boolean",
+          "description": "If set, StreamFlow does not manage the lifecycle of the execution environment. This means that all required services must be up and running when the workflow starts",
+          "default": false
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "docker"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "config": {
+                "$id": "#/definitions/deployment/properties/config",
+                "type": "object",
+                "$ref": "#/definitions/deployment/definitions/docker"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "docker-compose"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "config": {
+                "$id": "#/definitions/deployment/properties/config",
+                "type": "object",
+                "$ref": "#/definitions/deployment/definitions/docker-compose"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "pattern": "helm(3)?"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "config": {
+                "$id": "#/definitions/deployment/properties/config",
+                "type": "object",
+                "$ref": "#/definitions/deployment/definitions/helm3"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "occam"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "config": {
+                "$id": "#/definitions/deployment/properties/config",
+                "type": "object",
+                "$ref": "#/definitions/deployment/definitions/occam"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "slurm"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "config": {
+                "$id": "#/definitions/deployment/properties/config",
+                "type": "object",
+                "$ref": "#/definitions/deployment/definitions/slurm"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "ssh"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "config": {
+                "$id": "#/definitions/deployment/properties/config",
+                "type": "object",
+                "$ref": "#/definitions/deployment/definitions/ssh"
+              }
+            }
+          }
+        }
+      ],
+      "required": [
+        "type",
+        "config"
+      ]
+    },
+    "scatter": {
+      "$id": "#/definitions/scatter",
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "$ref": "#/definitions/scatter"
+              }
+            ]
+          }
+        },
+        "method": {
+          "type": "string",
+          "description": "In case of multiple scatter variables, how they must be combined",
+          "enum": [
+            "cartesian",
+            "dotproduct"
+          ],
+          "default": "cartesian"
+        }
+      }
+    },
+    "serializer": {
+      "$id": "#/definitions/serializer",
+      "type": "object",
+      "properties": {
+        "predump": {
+          "type": "string"
+        },
+        "postload": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "name",
+            "file"
+          ],
+          "default": "name"
+        }
+      }
+    },
+    "step": {
+      "$id": "#/definitions/step",
+      "type": "object",
+      "properties": {
+        "background": {
+          "type": "boolean",
+          "default": false,
+          "description": "A cell without output ports can run in background when the noteboook is in interactive mode. Note that this has no effect in workflow mode"
+        },
+        "in": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "serializer": {
+                    "oneOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "object",
+                        "$ref": "#/definitions/serializer"
+                      }
+                    ]
+                  },
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "control",
+                      "env",
+                      "name",
+                      "file"
+                    ],
+                    "default": "name"
+                  },
+                  "value": {},
+                  "valueFrom": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          },
+          "uniqueItems": true
+        },
+        "autoin": {
+          "type": "boolean",
+          "default": true
+        },
+        "out": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "serializer": {
+                    "oneOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "object",
+                        "$ref": "#/definitions/serializer"
+                      }
+                    ]
+                  },
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "control",
+                      "name",
+                      "file"
+                    ],
+                    "default": "name"
+                  },
+                  "value": {},
+                  "valueFrom": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            ]
+          },
+          "uniqueItems": true
+        },
+        "scatter": {
+          "type": "object",
+          "$ref": "#/definitions/scatter"
+        },
+        "workdir": {
+          "type": "string",
+          "description": "Path to the working directory",
+          "default": "${TMPDIR}/streamflow"
+        }
+      },
+      "additionalProperties": false
+    },
+    "target": {
+      "$id": "#/definitions/target",
+      "type": "object",
+      "properties": {
+        "deployment": {
+          "$id": "#/properties/deployment",
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "object",
+              "$ref": "#/definitions/deployment"
+            }
+          ]
+        },
+        "locations": {
+          "type": "integer",
+          "default": 1
+        },
+        "service": {
+          "type": "string"
+        },
+        "workdir": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "deployment"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "properties": {
+    "interpreter": {
+      "$id": "#/properties/interpreter",
+      "type": "string",
+      "default": "ipython"
+    },
+    "deployments": {
+      "$id": "#/properties/deployments",
+      "type": "object",
+      "patternProperties": {
+        "^[a-z][a-zA-Z0-9._-]*$": {
+          "$ref": "#/definitions/deployment"
+        }
+      },
+      "additionalProperties": false
+    },
+    "serializers": {
+      "$id": "#/properties/serializers",
+      "type": "object",
+      "patternProperties": {
+        "^[a-z][a-zA-Z0-9._-]*$": {
+          "$ref": "#/definitions/serializer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "step": {
+      "$id": "#/properties/step",
+      "type": "object",
+      "$ref": "#/definitions/step"
+    },
+    "target": {
+      "$id": "#/properties/target",
+      "type": "object",
+      "$ref": "#/definitions/target"
+    },
+    "version": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "version"
+  ],
+  "additionalProperties": false
+}
