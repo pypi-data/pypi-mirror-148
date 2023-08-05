@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: dx
+Version: 1.0.1
+Summary: Python wrapper for Data Explorer
+Author: Dave Shoup
+Author-email: dave.shoup@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: ipython (>=8.2.0,<9.0.0)
+Requires-Dist: pandas (>=1.3.5,<2.0.0)
+Project-URL: GitHub Repo, https://github.com/noteable-io/dx
