@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.py
+monedadigitalg/__init__.py
+monedadigitalg.egg-info/PKG-INFO
+monedadigitalg.egg-info/SOURCES.txt
+monedadigitalg.egg-info/dependency_links.txt
+monedadigitalg.egg-info/not-zip-safe
+monedadigitalg.egg-info/top_level.txt
