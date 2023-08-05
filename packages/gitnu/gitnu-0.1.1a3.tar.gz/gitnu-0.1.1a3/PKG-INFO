@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: gitnu
+Version: 0.1.1a3
+Summary: Enumerate git status
+Author: Khang
+Author-email: brew4k@gmail.com
+License: UNKNOWN
+Project-URL: Source, https://github.com/nguyenvukhang/gitnu
+Keywords: git,cli,python3
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# gitnu
+
+gitnu is a git wrapper that adds numbers to actionable items in git status.
+gitnu aims to make git file operations faster by only requiring the user to
+type the file index rather than the entire relative filepath.
+
+
