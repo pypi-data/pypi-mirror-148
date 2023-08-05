@@ -1,0 +1,15 @@
+wikibaseintegrator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wikibaseintegrator/wbi_backoff.py,sha256=93RE1GuNBgwj-MuSqncIOq-s4teM-QSJHu8ITx2mcBk,1217
+wikibaseintegrator/wbi_config.py,sha256=nGMX51bMVgxV3XFdDlz8RRe3t5jDxxbp_BdU1KNeFy4,1623
+wikibaseintegrator/wbi_core.py,sha256=G0dpTM27eWrBi0-2ikiM4Z9g-6PIi6ei8DoQkjzOus4,45119
+wikibaseintegrator/wbi_datatype.py,sha256=R1hQUgga21v1ExMVuGWyPYb7kUuuA3lmI84IIgaDxkg,65423
+wikibaseintegrator/wbi_exceptions.py,sha256=XdmkmV9u1MzVoYLoqOnMOaxRMyWgm0tThbtIPOHLbcA,2681
+wikibaseintegrator/wbi_fastrun.py,sha256=Tzm4v9hyZ3CvvUhVgY-LATvt8xBlWcVdv_9tMx7ffdw,27631
+wikibaseintegrator/wbi_functions.py,sha256=bM1nDwzscUH-KFZWhaC7mUIAq-nWhcTnh6zJnRu9i9s,17785
+wikibaseintegrator/wbi_jsonparser.py,sha256=GOOoEXDsi0epq0LULLScDex5cffw_8A6L-f-5mv3lnU,3219
+wikibaseintegrator/wbi_login.py,sha256=HRdUqB_pxhNcMiD9fibkxU-VjGlqBkf2zyRtLw9JfbU,10734
+wikibaseintegrator-0.11.2.dist-info/LICENSE.txt,sha256=yeQ8IP0YDHjkn-FKo7ikikSl3-GjFxfUT33Pe5CaVTM,1099
+wikibaseintegrator-0.11.2.dist-info/METADATA,sha256=UpvC_6R5UFC1CQO4f27ws5GUy_IYHIABZDzqMhXQ7LM,21556
+wikibaseintegrator-0.11.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+wikibaseintegrator-0.11.2.dist-info/top_level.txt,sha256=fTTyRnDtYC9nm3LjqCo37QfkSyno2UWLwMLZW-dRJGQ,19
+wikibaseintegrator-0.11.2.dist-info/RECORD,,
