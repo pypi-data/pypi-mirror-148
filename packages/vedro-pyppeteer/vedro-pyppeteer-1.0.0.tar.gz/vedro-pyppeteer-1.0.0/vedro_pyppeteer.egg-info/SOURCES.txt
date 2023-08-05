@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+vedro_pyppeteer/__init__.py
+vedro_pyppeteer/_browser_context.py
+vedro_pyppeteer/_screenshot_path.py
+vedro_pyppeteer/_vedro_pyppeteer.py
+vedro_pyppeteer/py.typed
+vedro_pyppeteer.egg-info/PKG-INFO
+vedro_pyppeteer.egg-info/SOURCES.txt
+vedro_pyppeteer.egg-info/dependency_links.txt
+vedro_pyppeteer.egg-info/requires.txt
+vedro_pyppeteer.egg-info/top_level.txt
