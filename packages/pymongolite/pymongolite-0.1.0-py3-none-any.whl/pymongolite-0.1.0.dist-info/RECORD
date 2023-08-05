@@ -1,0 +1,16 @@
+pymongolite/__init__.py,sha256=bZyybprCqeAunM62Jkyd553jkH2zYRqDDao5mjjW37A,59
+pymongolite/backend/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pymongolite/backend/consts.py,sha256=GFSYYR7d552fpQa2pvxxOdDawkDrQ4wIwgieYoFFejk,30
+pymongolite/backend/document.py,sha256=TATc8dZkSqehtoAQHwecIjhUZMiuVLtstsQxdWunvfU,292
+pymongolite/backend/exceptions.py,sha256=2xvrGEHaCvMthqHE-sLWh-l2orUWm7wccSlwRYukIoo,1267
+pymongolite/backend/session.py,sha256=KX3_6aGXIs3o5AAJxwPmN_Isy1SVXz_8Fq-GCJeRGCk,6327
+pymongolite/backend/storage_engine.py,sha256=gWxiymlDUI4sU8eavDfPKVH6L2or56Xaw0Fftf3remI,6542
+pymongolite/backend/utils.py,sha256=uXf2G-sv7hSjbe-XolsjTO2LfV4ZgTTJTuH2uSfIF4k,5269
+pymongolite/client.py,sha256=KwrRkof6hoV2skQqGEs6qjqDhsQ0BQN2MEDObi9KIT0,1876
+pymongolite/collection.py,sha256=g31tsCsQFpmeME6VfZgpgCvH-s_3c6oM-0iyBeTPEtM,7029
+pymongolite/command.py,sha256=HjjLBxjB31CJCZzIMyHhoYMmukLLjejG_rIRVfIVsuw,528
+pymongolite/database.py,sha256=YaQCt-dyRPIj1YuJkT2Qnx642fi9ZnvqLM3U1mikyOo,7535
+pymongolite/exceptions.py,sha256=9AwZgP1Ye89SRDPmej_K_Oiz7FZcnRxJntVIVMtq_HY,384
+pymongolite-0.1.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+pymongolite-0.1.0.dist-info/METADATA,sha256=bePQk651yIBmc8Odu6-jepN66c6-1H4JbYFs71ECCSY,340
+pymongolite-0.1.0.dist-info/RECORD,,
