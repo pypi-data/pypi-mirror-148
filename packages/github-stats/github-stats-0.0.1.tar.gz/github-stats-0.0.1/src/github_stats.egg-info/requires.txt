@@ -1,0 +1,4 @@
+click
+pandas
+PyGithub
+rich
