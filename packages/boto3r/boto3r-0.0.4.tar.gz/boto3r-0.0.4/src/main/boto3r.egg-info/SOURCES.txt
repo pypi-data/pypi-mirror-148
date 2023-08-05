@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/main/boto3r/__init__.py
+src/main/boto3r/s3.py
+src/main/boto3r.egg-info/PKG-INFO
+src/main/boto3r.egg-info/SOURCES.txt
+src/main/boto3r.egg-info/dependency_links.txt
+src/main/boto3r.egg-info/requires.txt
+src/main/boto3r.egg-info/top_level.txt
