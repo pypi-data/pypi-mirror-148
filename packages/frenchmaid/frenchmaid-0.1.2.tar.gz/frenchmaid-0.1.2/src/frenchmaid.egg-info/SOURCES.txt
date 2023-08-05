@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/frenchmaid/__init__.py
+src/frenchmaid/__main__.py
+src/frenchmaid/cli.py
+src/frenchmaid/delcache.py
+src/frenchmaid.egg-info/PKG-INFO
+src/frenchmaid.egg-info/SOURCES.txt
+src/frenchmaid.egg-info/dependency_links.txt
+src/frenchmaid.egg-info/entry_points.txt
+src/frenchmaid.egg-info/requires.txt
+src/frenchmaid.egg-info/top_level.txt

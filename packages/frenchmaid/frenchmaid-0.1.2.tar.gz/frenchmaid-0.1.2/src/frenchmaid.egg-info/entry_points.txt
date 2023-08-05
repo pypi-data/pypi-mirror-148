@@ -1,0 +1,2 @@
+[console_scripts]
+frenchmaid = frenchmaid.__main__:main
