@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: keycloak-basic
+Version: 1.0.0
+Summary: Keycloak Authenticator
+Home-page: https://github.com/iTecAI/Keycloak-Basic
+Author: Dax Harris
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Keycloak-Basic
+
+All the libraries I found for Keycloak are outdated and not _nearly_ generic enough, so here's a new one.
+
+
