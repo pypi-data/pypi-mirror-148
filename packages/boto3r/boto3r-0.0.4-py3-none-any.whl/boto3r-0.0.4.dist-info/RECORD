@@ -1,0 +1,7 @@
+boto3r/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3r/s3.py,sha256=VoOS7xUuoukpxujWhDc4vQb1U32mLwmcq7SOPpx_h1I,2086
+boto3r-0.0.4.dist-info/LICENSE,sha256=CAkYF8tKd0yAA2BKSh0WPwCmKKVR2jqyUeDgQAKSbOk,1174
+boto3r-0.0.4.dist-info/METADATA,sha256=QqfSkHd5W234MemK1x5i4Hfj6eIX0GgPDk_3ibl3258,1515
+boto3r-0.0.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+boto3r-0.0.4.dist-info/top_level.txt,sha256=2WVpm2yZUiNLLlCdDHCSH3y5N8O6ZmpAuEnHwc5Eozg,7
+boto3r-0.0.4.dist-info/RECORD,,
