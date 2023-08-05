@@ -1,0 +1,89 @@
+Metadata-Version: 2.1
+Name: ptsearchsploit
+Version: 0.0.1
+Summary: ptsearchsploit
+Home-page: https://www.penterep.com/
+Author: Penterep
+Author-email: info@penterep.com
+License: GPLv3+
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Environment :: Console
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+![penterepTools](https://www.penterep.com/external/penterepToolsLogo.png)
+
+# PTSEARCHSPLOIT
+> searchsploit wrapper
+
+ptsearchsploit is a wrapper for [searchsploit](https://github.com/offensive-security/exploitdb) tool.
+
+## Installation
+
+```
+pip install ptsearchsploit
+```
+
+### Add to PATH
+
+If you cannot invoke the script in your terminal, its probably because its not in your PATH. Fix it by running commands below.
+
+### Add to path for BASH
+```bash
+echo "export PATH=\"`python3 -m site --user-base`/bin:\$PATH\"" >> ~/.bashrc
+source ~/.bashrc
+```
+
+### Add to path for ZSH
+```bash
+echo "export PATH=\"`python3 -m site --user-base`/bin:\$PATH\"" >> ~/.zshhrc
+source ~/.zshhrc
+```
+
+## Usage examples
+```
+ptsearchsploit -s 'Apache 2.14.18'
+ptsearchsploit -s wordpress
+```
+
+## Options
+```
+-s  --search   <string>  String to search for
+-p  --path     <path>    Set path to searchsploit (default: '/usr/bin/searchsploit')
+-j  --json               Output in JSON format
+-v  --version            Show script version and exit
+-h  --help               Show this help message and exit
+```
+
+## Dependencies
+   - [searchsploit](https://github.com/offensive-security/exploitdb)
+   - ptlibs
+
+## Version History
+```
+- 0.0.1
+    - Initial release
+```
+
+## Licence
+
+Copyright (c) 2020 HACKER Consulting s.r.o.
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program. If not, see https://www.gnu.org/licenses/.
+
+
+## Warning
+
+You are only allowed to run the tool against the websites which
+you have been given permission to pentest. We do not accept any
+responsibility for any damage/harm that this application causes to your
+computer, or your network. Penterep is not responsible for any illegal
+or malicious use of this code. Be Ethical!
+

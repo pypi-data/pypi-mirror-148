@@ -1,0 +1,2 @@
+[console_scripts]
+ptsearchsploit = ptsearchsploit.ptsearchsploit:main
