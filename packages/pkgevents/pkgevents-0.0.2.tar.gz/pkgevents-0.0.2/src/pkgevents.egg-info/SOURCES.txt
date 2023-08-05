@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+src/pkgevents/__init__.py
+src/pkgevents/cc.py
+src/pkgevents/eor.py
+src/pkgevents.egg-info/PKG-INFO
+src/pkgevents.egg-info/SOURCES.txt
+src/pkgevents.egg-info/dependency_links.txt
+src/pkgevents.egg-info/top_level.txt
