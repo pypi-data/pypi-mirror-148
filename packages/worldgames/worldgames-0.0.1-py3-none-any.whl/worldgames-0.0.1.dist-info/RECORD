@@ -1,0 +1,12 @@
+worldgames/CurrencyRouletteGame.py,sha256=7Jm65DOx2VCtJeayq16VtX_0Jg_tLMaWfevPeOFo1zM,1151
+worldgames/GeneralGame.py,sha256=PXJ3z3eq6FvU00mOrav1ZeCJLC4ihyPuh9nwpmWf-mc,1051
+worldgames/GuessGame.py,sha256=dZ_-IuOgVDR99hMNVbzxq5_2SFQd1q8xULCuNgYI4E8,1321
+worldgames/Live.py,sha256=MLR_p0XRV3_QSMakr6W4_7xTnxUy8Vr9b32HmOTsASg,1090
+worldgames/MainGame.py,sha256=--HCPL87t027Ttlz0bRLipHRgq55f852H34wT5sHaKI,43
+worldgames/MemoryGame.py,sha256=8WdJA7J-Yl1Sk886s8fd5joqjBMRSINtAEmEcAhoD28,1244
+worldgames/__init__.py,sha256=QhRwSEUcYIVMSnwZp1wuZ5zud74qJ9zOcO8p42IT5Io,29
+worldgames/main.py,sha256=3IhjJuaS2nFXNj9TwdS2PzYyNa5auOVfRg7uWml6Xnk,1517
+worldgames-0.0.1.dist-info/METADATA,sha256=Pa2WpQnhHOlNZWxKs-sU4ajC2k3fuHY2NJFlANFLN7A,141
+worldgames-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+worldgames-0.0.1.dist-info/top_level.txt,sha256=6AkZQOSFMTRykk3BgkXajRwBa5WAPqGNu33gu6oLcfE,11
+worldgames-0.0.1.dist-info/RECORD,,
