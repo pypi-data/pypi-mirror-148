@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: leoneed
+Version: 0.0.1
+Summary: A Simple Trial on Tensor-Graph-based Network...
+Home-page: https://github.com/sandyzikun/leoneed.git
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy (>=1.14.3)
+Requires-Dist: matplotlib (>=2.2.2)
+
+# leoneed
+
+A Simple Trial on Tensor-Graph-based Network...
+
+
