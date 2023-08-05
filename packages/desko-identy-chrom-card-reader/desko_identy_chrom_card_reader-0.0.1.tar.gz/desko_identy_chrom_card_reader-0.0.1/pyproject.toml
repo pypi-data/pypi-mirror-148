@@ -1,0 +1,3 @@
+[build-system]
+requires = ["setuptools>=42", "pywinusb==0.4.2"]
+build-backend = "setuptools.build_meta"

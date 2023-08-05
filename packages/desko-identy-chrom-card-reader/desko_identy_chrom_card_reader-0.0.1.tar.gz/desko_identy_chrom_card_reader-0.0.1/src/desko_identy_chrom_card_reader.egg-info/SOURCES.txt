@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/desko_identy_chrom_card_reader.egg-info/PKG-INFO
+src/desko_identy_chrom_card_reader.egg-info/SOURCES.txt
+src/desko_identy_chrom_card_reader.egg-info/dependency_links.txt
+src/desko_identy_chrom_card_reader.egg-info/top_level.txt
+src/idcardreader_package/__init__.py
+src/idcardreader_package/idcardreader.py
