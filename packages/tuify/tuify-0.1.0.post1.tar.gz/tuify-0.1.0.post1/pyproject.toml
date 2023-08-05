@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "tuify"
+version = "0.1.0.post1"
+description = "Transforming Python CLIs into TUIs"
+readme = "README.md"
+authors = ["alwinw <16846521+alwinw@users.noreply.github.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+rich = "^12.0.0"
+#rich = {git = "git@github.com:willmcgugan/rich", rev = "link-id"}
+typing-extensions = { version = "^3.10.0", python = "<3.8" }
+
+[tool.poetry.dev-dependencies]
+black = "^22.3.0"
+mypy = "^0.910"
+pytest = "^6.2.3"
+pytest-cov = "^2.12.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py37', 'py38']
+
+[tool.isort]
+line_length = 88
+profile = "black"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = [
+  "-ra -q",
+  "-v",
+  "--showlocals",
+  "--strict-markers",
+  "--strict-config",
+] # --cov-report xml --cov=tuify
+testpaths = ["tests"]
+
+[flake8]
+max-line-length = 88
+max-doc-length = 88
+max-complexity = 10
+doctests = true
+exclude = ['.git', '__pycache__', '.venv']
