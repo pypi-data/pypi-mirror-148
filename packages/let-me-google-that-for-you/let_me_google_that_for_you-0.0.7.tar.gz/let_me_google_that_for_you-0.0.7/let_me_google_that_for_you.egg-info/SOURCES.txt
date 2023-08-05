@@ -1,0 +1,7 @@
+README.txt
+setup.py
+let_me_google_that_for_you/__init__.py
+let_me_google_that_for_you.egg-info/PKG-INFO
+let_me_google_that_for_you.egg-info/SOURCES.txt
+let_me_google_that_for_you.egg-info/dependency_links.txt
+let_me_google_that_for_you.egg-info/top_level.txt

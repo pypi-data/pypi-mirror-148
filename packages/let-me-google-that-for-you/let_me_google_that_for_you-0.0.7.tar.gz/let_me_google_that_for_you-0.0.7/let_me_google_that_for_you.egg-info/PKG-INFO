@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: let-me-google-that-for-you
+Version: 0.0.7
+Summary: A simple Python module to let you google that for you.
+Home-page: UNKNOWN
+Author: Me
+Author-email: opkoskos450@gmail.com
+License: MIT
+Keywords: let_me_google_that
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+
+UNKNOWN
+
