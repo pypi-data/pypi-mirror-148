@@ -1,0 +1,10 @@
+images_to_pdf/__init__.py,sha256=n6fOY7P_Z2Ira7kQZDw6ETPva23X7C7VASAJb8oTm6c,130
+images_to_pdf/cli.py,sha256=NgwLHX8sbjZK_wF9pKb3aWDRC_aRcGebFYrMTKrah64,1265
+images_to_pdf/images_to_pdf.py,sha256=SI68w3kErvoN1wz2SI3XG35UNuGVDj8EUKCYAB7P0Os,348
+images_to_pdf-0.1.0.dist-info/AUTHORS.rst,sha256=AVyHGTXnY80S8F_y5zq7ri1xOeKvUeuLNodhKbYi8nY,155
+images_to_pdf-0.1.0.dist-info/LICENSE,sha256=pEJ1VMjhgQ5C5mwVL0qVYh3T9JUz4lxr3FVb8qVtZQE,1070
+images_to_pdf-0.1.0.dist-info/METADATA,sha256=TdttZww1P0HZjrRHBMY6zvBM5yCttsgF-5oLbhAw0HE,1587
+images_to_pdf-0.1.0.dist-info/WHEEL,sha256=8zNYZbwQSXoB9IfXOjPfeNwvAsALAjffgk27FqvCWbo,110
+images_to_pdf-0.1.0.dist-info/entry_points.txt,sha256=tlnK_iOWfh3K67i318OyNqKezVSLziy8TkiVC5cSxtA,52
+images_to_pdf-0.1.0.dist-info/top_level.txt,sha256=xQqqTCLxmDc4MoCfR0pvurPbcLVSfgl-i5DMwtBeJmM,14
+images_to_pdf-0.1.0.dist-info/RECORD,,

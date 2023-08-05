@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: images-to-pdf
+Version: 0.1.0
+Summary: Convert all passed images into a single pdf file
+Home-page: https://github.com/lucas8107/images-to-pdf
+Author: Lucas Paula
+Author-email: luolcami@gmail.com
+License: MIT license
+Keywords: images_to_pdf
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Requires-Dist: Click (>=7.0)
+Requires-Dist: Pillow (==9.1.0)
+
+=============
+Images to PDF
+=============
+
+
+.. image:: https://img.shields.io/pypi/v/images_to_pdf.svg
+        :target: https://pypi.python.org/pypi/images_to_pdf
+
+
+
+
+Convert all passed images into a single pdf file
+
+
+* Free software: MIT license
+
+Instalation
+-----------
+
+.. code-block:: shell
+
+        pip install images-to-pdf
+
+
+Usage
+--------
+
+.. code-block:: shell
+
+        img2pdf <img1> <img2> ... -n out.pdf
+
+or
+
+.. code-block:: shell
+
+        img2pdf <img1> <img2>
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+=======
+History
+=======
+
+0.1.0 (2022-04-24)
+------------------
+
+* First release on PyPI.
+
+

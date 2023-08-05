@@ -1,0 +1,3 @@
+[console_scripts]
+img2pdf = images_to_pdf.cli:main
+
