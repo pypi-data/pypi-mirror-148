@@ -1,0 +1,8 @@
+setup.py
+test_updating/__init__.py
+test_updating/test_updating.py
+test_updating.egg-info/PKG-INFO
+test_updating.egg-info/SOURCES.txt
+test_updating.egg-info/dependency_links.txt
+test_updating.egg-info/requires.txt
+test_updating.egg-info/top_level.txt
