@@ -1,0 +1,11 @@
+src/__init__.py,sha256=arjP8wKIp1om72zOggVBmPZHcg5vp5Wh61dpJ7_1Bzk,273
+src/converter.py,sha256=fRm60sryu6sSa-FAFVaK3qBF7mcaQHfakSc8-sRfvek,7286
+src/downloader.py,sha256=l7q81FqAh-IivCosBy4vzG6-iSSQ6qvZfRz7aaXimBU,2669
+svhnl/__init__.py,sha256=arjP8wKIp1om72zOggVBmPZHcg5vp5Wh61dpJ7_1Bzk,273
+svhnl/converter.py,sha256=-Uc5MCTO6WWQb5ui96iuxsRa5FeczHKNYqSHwpoXGnA,10830
+svhnl/downloader.py,sha256=_skAcP7f5pbpPL4ucciNTvRFAuurU9zDp3uZ1ZciSDE,4704
+svhnl-0.0.4.dist-info/LICENSE,sha256=AxCDDh6S3RJ-bIvZfVsyaYAT5gQDaEu7QlirlLjnP7I,1085
+svhnl-0.0.4.dist-info/METADATA,sha256=XnAPnJKRHGDKMXkGQ2yCy_yFTlBO9zNY3cSAaO4B2h8,3163
+svhnl-0.0.4.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+svhnl-0.0.4.dist-info/top_level.txt,sha256=tAZRs2qOvOkCacHFrvwsT-AsZGGSgKLCx3T-qAyovBY,6
+svhnl-0.0.4.dist-info/RECORD,,
