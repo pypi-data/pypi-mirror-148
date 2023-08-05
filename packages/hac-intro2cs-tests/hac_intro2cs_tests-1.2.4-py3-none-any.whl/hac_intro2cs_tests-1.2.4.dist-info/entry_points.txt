@@ -1,0 +1,2 @@
+[console_scripts]
+test_ex = inferno_tests:test_ex
