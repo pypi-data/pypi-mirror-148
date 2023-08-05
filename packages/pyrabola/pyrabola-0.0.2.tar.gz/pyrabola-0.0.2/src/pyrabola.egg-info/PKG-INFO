@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pyrabola
+Version: 0.0.2
+Summary: Simulate laser propagation through a system of planar and focussing mirrors
+Home-page: https://github.com/unpairedbracket/pyrabola
+Author: Ben Spiers
+Author-email: info@benspiers.co.uk
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/unpairedbracket/pyrabola/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Pyrabola
+
+Pyrabola simulates the propagation of laser light through a system composed of planar mirrors, a parabolic mirror and a focal spot camera. It aims to balance speed with accuracy by clever use of approximations to the exact propagation solutions, which for example enable us to model the full evolution of an aberrated laser pulse through a tight focus, without placing particularly stringent constraints on resolution.
+
+This code is a work in progress.
+
+
