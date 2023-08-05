@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/mypackage/__init__.py
+src/mypackage/main.py
+src/simplereader.egg-info/PKG-INFO
+src/simplereader.egg-info/SOURCES.txt
+src/simplereader.egg-info/dependency_links.txt
+src/simplereader.egg-info/top_level.txt

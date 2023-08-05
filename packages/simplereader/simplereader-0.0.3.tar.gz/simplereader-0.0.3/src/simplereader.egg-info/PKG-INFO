@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: simplereader
+Version: 0.0.3
+Summary: Reads data and manipulates data from CSV easily, also includes statistics functions
+Home-page: https://github.com/haddad-github
+Author: GigaHanma
+Author-email: author@example.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/haddad-github
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+UNKNOWN
+
