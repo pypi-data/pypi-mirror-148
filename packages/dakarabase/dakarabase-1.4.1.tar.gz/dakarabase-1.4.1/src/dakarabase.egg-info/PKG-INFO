@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: dakarabase
+Version: 1.4.1
+Summary: Collecion of helper modules for the Dakara Project
+Home-page: https://github.com/DakaraProject/dakara-base
+Author: Flore <flore.love@gmail.com>, Neraste <neraste.herr10@gmail.com>
+License: MIT
+Project-URL: Bug tracker, https://github.com/DakaraProject/dakara-base/issues
+Description: # Dakara Base
+        
+        <!-- Badges are displayed for the develop branch -->
+        [![Appveyor Build status](https://ci.appveyor.com/api/projects/status/50fay6bhsgxispcw/branch/develop?svg=true)](https://ci.appveyor.com/project/neraste/dakara-base/branch/develop)
+        [![Codecov coverage analysis](https://codecov.io/gh/DakaraProject/dakara-base/branch/develop/graph/badge.svg)](https://codecov.io/gh/DakaraProject/dakara-base)
+        [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+        [![PyPI version](https://badge.fury.io/py/dakarabase.svg)](https://pypi.python.org/pypi/dakarabase/)
+        [![PyPI Python versions](https://img.shields.io/pypi/pyversions/dakarabase.svg)](https://pypi.python.org/pypi/dakarabase/)
+        
+        This project is a collection of tools and helper modules for the Dakara Project.
+        
+        ## Modules available
+        
+        * `config`: a helper that manages config and loggers;
+        * `directory`: a helper to manage application directories;
+        * `exceptions`: a base class for exceptions and exception handlers;
+        * `http_client`: an HTTP client dedicated to be used with an API;
+        * `progress_bar`: a collection of progress bars;
+        * `safe_workers`: a library to facilitate the manipulation of threads;
+        * `utils`: other various helpers;
+        * `websocket_client`: a Websocket client.
+        
+        ## Install
+        
+        Install the package with:
+        
+        ```sh
+        pip install dakarabase
+        ```
+        
+        If you have downloaded the repo, you can install the package directly with:
+        
+        ```sh
+        pip install .
+        ```
+        
+        ## Development
+        
+        Please read the [developers documentation](CONTRIBUTING.md).
+        
+        MIT License
+        
+        Copyright (c) 2022 Dakara Project
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Description-Content-Type: text/markdown
+Provides-Extra: tests
