@@ -1,0 +1,2 @@
+[console_scripts]
+yasca-cli = yasca.main:run_cli
