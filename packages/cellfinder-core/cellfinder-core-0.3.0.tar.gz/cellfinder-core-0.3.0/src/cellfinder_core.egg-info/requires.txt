@@ -1,0 +1,25 @@
+dask[array]
+fancylog>=0.0.7
+imlib>=0.0.26
+natsort
+numpy
+scikit-image
+scikit-learn
+tifffile
+tqdm
+
+[:platform_system != "Darwin" or platform_machine != "arm64"]
+tensorflow>=2.5.0
+
+[:platform_system == "Darwin" and platform_machine == "arm64"]
+tensorflow-macos>=2.5.0
+
+[dev]
+black
+pytest-cov
+pytest
+gitpython
+coverage>=5.0.3
+bump2version
+pre-commit
+flake8
