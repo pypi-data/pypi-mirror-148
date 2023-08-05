@@ -1,0 +1,15 @@
+pyvips
+
+[dev]
+black
+flake8
+flake8-bugbear
+flake8-logging-format
+flake8-quotes
+mypy
+tox
+
+[test]
+pillow
+pytest
+pytest-cov
