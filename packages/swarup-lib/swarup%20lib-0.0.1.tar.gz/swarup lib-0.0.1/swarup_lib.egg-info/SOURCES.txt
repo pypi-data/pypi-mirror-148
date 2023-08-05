@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+swarup lib/__init__.py
+swarup lib/functions.py
+swarup_lib.egg-info/PKG-INFO
+swarup_lib.egg-info/SOURCES.txt
+swarup_lib.egg-info/dependency_links.txt
+swarup_lib.egg-info/requires.txt
+swarup_lib.egg-info/top_level.txt

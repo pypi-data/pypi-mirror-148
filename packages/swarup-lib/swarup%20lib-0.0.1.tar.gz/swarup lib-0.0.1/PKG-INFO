@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: swarup lib
+Version: 0.0.1
+Summary: Testing installation of Package
+Home-page: https://github.com/Curovearth/swaphelp
+Author: Swarup tripathy
+Author-email: swarup.tripathy4810@gmail.com
+License: MIT
+Download-URL: https://github.com/Curovearth/swaphelp/archive/refs/tags/0.0.1.tar.gz
+Keywords: pypi,tutorial
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Documentation
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+The following is just a rough implementation.
+
