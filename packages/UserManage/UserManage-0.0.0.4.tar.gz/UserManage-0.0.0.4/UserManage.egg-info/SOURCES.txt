@@ -1,0 +1,9 @@
+setup.py
+UserManage.egg-info/PKG-INFO
+UserManage.egg-info/SOURCES.txt
+UserManage.egg-info/dependency_links.txt
+UserManage.egg-info/entry_points.txt
+UserManage.egg-info/requires.txt
+UserManage.egg-info/top_level.txt
+pkg/__init__.py
+pkg/hello.py

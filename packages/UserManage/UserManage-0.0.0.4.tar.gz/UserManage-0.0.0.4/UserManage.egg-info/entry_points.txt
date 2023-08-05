@@ -1,0 +1,2 @@
+[console_scripts]
+UserManage = pkg.hello:cmd
