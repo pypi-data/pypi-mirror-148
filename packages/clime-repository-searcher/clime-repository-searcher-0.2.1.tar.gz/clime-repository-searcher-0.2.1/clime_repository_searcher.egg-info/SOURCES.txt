@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+clime_repository_searcher/__init__.py
+clime_repository_searcher/args.py
+clime_repository_searcher/main.py
+clime_repository_searcher/version.py
+clime_repository_searcher.egg-info/PKG-INFO
+clime_repository_searcher.egg-info/SOURCES.txt
+clime_repository_searcher.egg-info/dependency_links.txt
+clime_repository_searcher.egg-info/entry_points.txt
+clime_repository_searcher.egg-info/requires.txt
+clime_repository_searcher.egg-info/top_level.txt

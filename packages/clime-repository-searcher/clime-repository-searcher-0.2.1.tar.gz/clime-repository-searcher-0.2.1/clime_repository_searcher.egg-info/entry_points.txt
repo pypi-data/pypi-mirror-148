@@ -1,0 +1,2 @@
+[console_scripts]
+clime-gh-repository-searcher = clime_repository_searcher.main:main
