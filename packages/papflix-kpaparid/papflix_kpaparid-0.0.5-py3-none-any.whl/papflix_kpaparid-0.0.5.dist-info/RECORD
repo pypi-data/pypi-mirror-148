@@ -1,0 +1,11 @@
+papflix/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+papflix/main.py,sha256=UgIexs7Z6qiRyVCJvR3mzQY8q0wU-i4WB-ub-o8QZDg,11540
+papflix/model/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+papflix/model/cast.py,sha256=lwxLDtU4oMW7ocqWslw8ohnwld9hGKDHwO3zI1Yfolw,689
+papflix/model/custom_models.py,sha256=BGwv2NY8UML8tnX3Gjgooqx6TNCKL6aeQoyXoaRhU_k,4340
+papflix/model/movie.py,sha256=Rmn52WN-N9TovhNFPMyOx7cRKkxVJvlKHtNrs-QiljY,23734
+papflix_kpaparid-0.0.5.dist-info/LICENSE,sha256=4VOgTvytLaVG43I5DtKyvoKhrtHI3Bs9kPRAcAcOIZE,1086
+papflix_kpaparid-0.0.5.dist-info/METADATA,sha256=N4mW6YV8dmCmn9ZoYjX2362ANgN3JJ-8HyczApUC1K4,531
+papflix_kpaparid-0.0.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+papflix_kpaparid-0.0.5.dist-info/top_level.txt,sha256=LQZA_6h71DgPP8wdKOAsEEpYQ2pHU8ef5Q_vm-AcHfI,8
+papflix_kpaparid-0.0.5.dist-info/RECORD,,
