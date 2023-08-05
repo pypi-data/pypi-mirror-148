@@ -1,0 +1,4 @@
+requests<3,>=2
+pyffish>=0.0.70
+gdown
+beautilulsoup4
