@@ -1,0 +1,11 @@
+CHANGELOG.txt
+MANIFEST.in
+README.txt
+__init__.py
+license.txt
+setup.py
+geometrydashapi.egg-info/PKG-INFO
+geometrydashapi.egg-info/SOURCES.txt
+geometrydashapi.egg-info/dependency_links.txt
+geometrydashapi.egg-info/requires.txt
+geometrydashapi.egg-info/top_level.txt

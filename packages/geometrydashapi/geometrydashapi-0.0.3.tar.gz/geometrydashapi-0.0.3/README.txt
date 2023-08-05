@@ -1,0 +1,1 @@
+A Geometry Dash API, to programm with Geometry Dash on Python.
