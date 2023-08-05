@@ -1,0 +1,10 @@
+numpy
+scipy
+numba
+torch>=1.7.0
+dask
+dask-jobqueue
+dask-kubernetes
+matplotlib
+gputil
+imageio
