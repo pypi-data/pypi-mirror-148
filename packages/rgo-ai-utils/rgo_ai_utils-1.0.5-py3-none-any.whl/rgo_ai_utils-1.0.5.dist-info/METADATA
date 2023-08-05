@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: rgo-ai-utils
+Version: 1.0.5
+Summary: Utils that are shared between rgo ai repos
+Home-page: https://bitbucket.org/rgo-tech/semanticseg/src/master/
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: PyExifTool
+Requires-Dist: lxml
+Requires-Dist: opencv-python
+Requires-Dist: opencv-python-headless
+Requires-Dist: tqdm
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+
+tools to share among rgo ai repos
+
+
