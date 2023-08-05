@@ -1,0 +1,3 @@
+[console_scripts]
+molecule_generation = molecule_generation.cli.cli:main
+
