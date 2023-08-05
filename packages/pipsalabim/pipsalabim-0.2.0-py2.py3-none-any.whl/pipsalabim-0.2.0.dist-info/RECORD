@@ -1,0 +1,16 @@
+pipsalabim/__init__.py,sha256=wsPln-1tNp-G30vxmhB8N2P-Kh7Bfr6t3EJGa24MDhE,2138
+pipsalabim/cli.py,sha256=38B3VG5w5N__JHnwlIB2GjqcvyfousvsJ1lePZ7WEcM,3493
+pipsalabim/api/__init__.py,sha256=fOogfPV1yUv6OJier1axjZ_wjNuRXcoiS3dumr4pK0I,931
+pipsalabim/api/report.py,sha256=FZebfaBpJDYIy-N7FG2VOJ_yAlb7LCeunIO6NmqKTZg,11306
+pipsalabim/api/update.py,sha256=HP17nOyxbgj7qJv4KBWq1xBKb_KYitiISSCpkSE3YmE,3584
+pipsalabim/core/__init__.py,sha256=kBbSeQbp3P5slg12SwQjc9-gGVqVz9rmFXwH4xOEE1g,1012
+pipsalabim/core/imports.py,sha256=pA3lmqpRNCDjPwztz0rg71139hvCQELjE11zyWSyxbA,5628
+pipsalabim/core/logger.py,sha256=hepm7S7CCoegThSsMF-4QE4IbHH5Jpe8D49JQY2eGdE,4585
+pipsalabim/core/utils.py,sha256=rBMZVgYEupPPrFq4wUUevgsiTKRKZylaCWCyrVQdWGY,7508
+pipsalabim-0.2.0.dist-info/AUTHORS.rst,sha256=-8efadmO6jRT0mxQ4vGTR6NymMYT9Jy7IKhNq2ePJwo,447
+pipsalabim-0.2.0.dist-info/LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+pipsalabim-0.2.0.dist-info/METADATA,sha256=OcnhqfsnBVUOPGOovhE1HQmloThq71B5m2Bl17YmilQ,45315
+pipsalabim-0.2.0.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+pipsalabim-0.2.0.dist-info/entry_points.txt,sha256=pSsfNv14rLIitLpJSTKK_L35JEy9qsQX6U1XyLvB6vc,51
+pipsalabim-0.2.0.dist-info/top_level.txt,sha256=odL0FEyhlZs5b-Hs9yiohx5jKFXZyY5-dOwQ1znaM4w,11
+pipsalabim-0.2.0.dist-info/RECORD,,
