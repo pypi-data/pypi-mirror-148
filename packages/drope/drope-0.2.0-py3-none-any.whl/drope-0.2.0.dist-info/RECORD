@@ -1,0 +1,13 @@
+drope/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+drope/__main__.py,sha256=wEalgdHD97XVEr_Xe0h7uXaQOcxY240ofn5E4QNrhDk,33
+drope/cmdline.py,sha256=TAAXlK8NSH6Bi5WptfmJK0C78uZ_TkIodf7UakS-88I,1421
+drope/server.py,sha256=ODnMpPnmrb_1ey-_vfz4_IkIEg29sgw3b7SFBehjAO0,2550
+drope/static/index.html,sha256=qWq22dVll7DdOMxxdTIKB6OI6YYsDnF6XUKMhgdS13E,1155
+drope/static/script.js,sha256=3ac1JaVzBqevXotnCid4xv5VUsYQilzWblj01kRiYAw,3959
+drope/static/style.css,sha256=cP8A8Tr_wc53ZJ_p3GTsXZJortqxFHlcblHeDiajgok,1948
+drope-0.2.0.dist-info/LICENSE,sha256=MFMKu87JSnJNczO46JZR3N-6WIe4dCtrWwmwBU2AJWE,1060
+drope-0.2.0.dist-info/METADATA,sha256=1m1xolZYUAp9eOZP0C_TaKrEwyQhXzC4BxipCGAaiC8,1557
+drope-0.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+drope-0.2.0.dist-info/entry_points.txt,sha256=doSOqXF8whPov9lhCIPRfbn-bLvm17DV0VsSn9ngPhA,45
+drope-0.2.0.dist-info/top_level.txt,sha256=LwWGb0z5QzWIn7vR3Ke4KyKZ7umAO3_-BQd9t_u4YeU,6
+drope-0.2.0.dist-info/RECORD,,
