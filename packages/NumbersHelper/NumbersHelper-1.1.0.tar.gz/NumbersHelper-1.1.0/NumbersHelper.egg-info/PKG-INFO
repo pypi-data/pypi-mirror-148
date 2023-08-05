@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: NumbersHelper
+Version: 1.1.0
+Summary: Helper functions for working
+Home-page: https://github.com/Numbers-Technologies
+Author-email: blcklptn@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+## Numbers Helper Package
+
+
+```bash
+pip3 install NumbersHelper
+```
+
+### Functions:
+
+* Logger
+
+```python
+from NumbersHelper import Logger as lg
+
+lg(message="Hello World!", _type="info", _save=True, path="log.txt")
+```
+
