@@ -1,0 +1,10 @@
+npd_cat_corr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+npd_cat_corr/client.py,sha256=k5odJd5NRivD5T4JK_1lSPHgiQ3CgTiykVD3ogwwBME,9253
+npd_cat_corr/data_construction.py,sha256=9Sbv02Z3cy87V3y1eOUXCR7JX5JVncialfVtCDRAbVk,6895
+npd_cat_corr/main.py,sha256=9BjBN5SmkAOZd8FepzciU-luH2krywFKb_VU3hCaw3Q,1763
+npd_cat_corr/reports.py,sha256=ypgqD_Eoc3xCWYIt_XX22kDXkDoDv3O7V91ryhmJ4VU,18028
+npd_category_correlation-0.2.0.dist-info/METADATA,sha256=GOxVfvHvHS5RF0lCxf-NIHMm5mkqJxLiaog45VHGsYA,1459
+npd_category_correlation-0.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+npd_category_correlation-0.2.0.dist-info/entry_points.txt,sha256=HCPxc4OTcEdyCNmtnejIEmFVJUzmZ1jaW8zc4cQQlX4,67
+npd_category_correlation-0.2.0.dist-info/top_level.txt,sha256=_psPpixY8GojjpoGsfHlkcFJN_EXUkL-ctpVxnf2fzM,13
+npd_category_correlation-0.2.0.dist-info/RECORD,,
