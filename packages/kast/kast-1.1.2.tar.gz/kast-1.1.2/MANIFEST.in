@@ -1,0 +1,4 @@
+include README.md
+include LICENSE.txt
+include generate_requirements.py
+recursive-include pkg/kast/assets *

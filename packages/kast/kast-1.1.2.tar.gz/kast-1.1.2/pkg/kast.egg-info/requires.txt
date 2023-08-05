@@ -1,0 +1,18 @@
+tendo==0.2.15
+psutil==5.9.0
+av==9.2.0
+pysubs2==1.4.2
+pycaption==2.0.8
+bottle==0.12.19
+zeroconf==0.30.0
+pychromecast==11.0.0
+dataclasses-json==0.5.7
+setproctitle==1.2.3
+pyqt5==5.15.6
+
+[:os_name == "nt"]
+winrt==1.0.21033.1
+
+[:os_name == "posix"]
+typing_extensions==3.10.0
+mpris_server==0.3.4
