@@ -1,0 +1,95 @@
+Metadata-Version: 2.1
+Name: beautiful-console
+Version: 0.3
+Summary: A package for print beautiful logs in console
+Home-page: https://github.com/pourya90091/beautiful-console
+Author: pourya90091
+Author-email: pourya90091@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/pourya90091/beautiful-console/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Beautiful Console
+
+## installation :
+
+install :
+```bash
+pip install beautiful-console
+```
+
+import :
+```python
+from beautiful_console.beautiful_console import *
+```
+## List of Functions :
+- to_color()
+- to_highlight()
+- to_style()
+
+## defined colors : 
+>black, red, green, yellow, blue, magenta, cyan, white
+
+
+## defined highlight colors : 
+>black, red, green, yellow, blue, magenta, cyan, white
+
+
+## defined styles :
+>**bold**, _italic_, underline, underline_bold, overline, ~~strikethrough~~
+
+<br><br>
+
+## to_color()
+Returns colored text.
+
+```python
+# only text-parameter and color-parameter must be filled (degree-parameter have default value).
+
+print(to_color(
+    "text",
+    "color", # color of text
+    "degree" # intensity of text color <0 or 1>
+))
+```
+---
+## to_highlight()
+Returns highlighted text.
+
+```python
+# only text-parameter must be filled (others have default value).
+
+print(to_highlight(
+    "text",
+    "highlight_color", # color of background
+    "text_color", # color of text
+    "highlight_color_degree", # intensity of background color <0 or 1>
+    "text_color_degree" # intensity of text color <0 or 1>
+))
+```
+---
+## to_style()
+Returns styled text.
+
+```python
+# only text-parameter and style-parameter must be filled (others have default value).
+
+print(to_style(
+    "text",
+    "style", # style of text
+    "color", # color of text
+    "degree" # intensity of text color <0 or 1>
+))
+```
+---
+# Tips :
+>**Tip** : some things may not work on some consoles.
+---
+send your feedbacks to : pourya90091@gmail.com
+
