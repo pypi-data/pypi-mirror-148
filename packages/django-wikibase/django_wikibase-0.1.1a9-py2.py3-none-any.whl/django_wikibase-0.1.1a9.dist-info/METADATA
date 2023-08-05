@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: django-wikibase
+Version: 0.1.1a9
+Summary: Wikibase backend for Django web framework
+Home-page: https://gitlab.com/mast_pandan/mediawiki
+Author: Ivan Usalko
+Author-email: iusalko@eu.spb.ru
+License: BSD
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Database
+Classifier: Topic :: Internet :: WWW/HTTP
+
+Django-wikibase adapter
+=======================
+
+Yours settings.py sample:
+
+.. code:: python
+
+   DATABASES = {
+       'default': {
+           'ENGINE': 'wikibase',
+           'BOT_USERNAME': getenv('BOT_USERNAME', 'SYSDBA'),    # Any user registerd as bot in mediawiki (with correct rights)
+           'BOT_PASSWORD': getenv('BOT_PASSWORD', 'MasterKey'), # Bot password in mediawiki
+           'URL': getenv('WIKIBASE_URL', 'http://localhost'),
+           'OPTIONS': {
+               'charset': 'utf-8',
+               'instance_of_property_id': 1, # Change if instance of in local wikibase has another property identifier. For example: instance of has P2333 identity => 'instance_of_property_id': 2333
+               'subclass_of_property_id': 2, # Change if instance of in local wikibase has another property identifier. For example: subclass of has P2777 identity => 'subclass_of_property_id': 2777 
+               'wdqs_sparql_endpoint': getenv('SPARQL_ENDPOINT', 'http://localhost/sparql'),
+               'django_namespace': 'my-cool-application-namespace'
+           }
+       }
+   }
+
+
+
