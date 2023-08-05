@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: pyroscope_beta
+Version: 0.2.0
+Summary: Pyroscope Python integration
+Home-page: https://proscope.io
+Maintainer: Abid Omar
+Maintainer-email: contact@pyroscope.io
+License: Apache 2.0
+Project-URL: Documentation, https://proscope.io
+Project-URL: Bug Tracker, https://proscope.io
+Project-URL: Discussions, https://proscope.io
+Project-URL: Changelog, https://proscope.io
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Debuggers
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Pyroscope for Python
+====================
+
+build
+
+```
+python -m build
+```
+
+upload
+
+```
+twine upload dist/*
+```
+
+
