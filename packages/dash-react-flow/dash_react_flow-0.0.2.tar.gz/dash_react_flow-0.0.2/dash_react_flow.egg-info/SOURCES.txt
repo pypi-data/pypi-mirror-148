@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+package.json
+setup.py
+dash_react_flow/DashReactFlow.py
+dash_react_flow/DashReactFlowDagre.py
+dash_react_flow/__init__.py
+dash_react_flow/_imports_.py
+dash_react_flow/dash_react_flow.min.js
+dash_react_flow/dash_react_flow.min.js.map
+dash_react_flow/metadata.json
+dash_react_flow/package-info.json
+dash_react_flow.egg-info/PKG-INFO
+dash_react_flow.egg-info/SOURCES.txt
+dash_react_flow.egg-info/dependency_links.txt
+dash_react_flow.egg-info/top_level.txt
