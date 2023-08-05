@@ -1,0 +1,3 @@
+[console_scripts]
+utsc.scripts=utsc.scripts.__main__:cli
+
