@@ -1,0 +1,13 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+python module functions
+    interface
+        subroutine erf(a,n) ! in .\erf.f
+            real*8 dimension(n),intent(in,out,copy) :: a
+            integer, intent(hide),depend(a) :: n=len(a)
+        end subroutine erf
+    end interface
+end python module functions
+
+! This file was auto-generated with f2py (version:1.21.4).
+! See http://cens.ioc.ee/projects/f2py2e/
