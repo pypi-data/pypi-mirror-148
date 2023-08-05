@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+MakeSens/MakeSens.py
+MakeSens/__init__.py
+MakeSens/__main__.py
+MakeSensAPI_Python.egg-info/PKG-INFO
+MakeSensAPI_Python.egg-info/SOURCES.txt
+MakeSensAPI_Python.egg-info/dependency_links.txt
+MakeSensAPI_Python.egg-info/entry_points.txt
+MakeSensAPI_Python.egg-info/requires.txt
+MakeSensAPI_Python.egg-info/top_level.txt
