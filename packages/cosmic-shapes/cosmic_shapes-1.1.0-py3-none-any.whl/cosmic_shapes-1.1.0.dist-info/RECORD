@@ -1,0 +1,9 @@
+cosmic_shapes/cython_helpers.pxd,sha256=VoeXikRnLLkjZL4MbJc58VIpQNG0tB2KcnL6uzG9YC4,581
+cosmic_shapes/get_hdf5.py,sha256=oY4gcBXSiobzxqQ449NvMIQb-5F3gDcWWNCbftYd2Ak,23842
+cosmic_shapes/python_helpers.py,sha256=xNxV_Kwz9ivVCcZA__iIFXYvzYgOd3LA-RGW0RSJk3s,13964
+cosmic_shapes/setup.py,sha256=Vc2vcBSffSLNFJc0Bia5raKMKDH-UlAyFnNmnmBpQb0,2182
+cosmic_shapes/shape_analysis.py,sha256=fvJFRPCJ8BwEjKfpYQKkqLjE9Dr_c4jFIQgC3G65ekw,36408
+cosmic_shapes-1.1.0.dist-info/METADATA,sha256=vgDh6S1meqbv-yYL3ZZDGuGKjQr9pqIoDWzzz79ragQ,1601
+cosmic_shapes-1.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+cosmic_shapes-1.1.0.dist-info/top_level.txt,sha256=BYq00SmGsMa3caVkPQ1L63YgO_oH4YwEVhMe24HEVH0,14
+cosmic_shapes-1.1.0.dist-info/RECORD,,
