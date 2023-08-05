@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: python-movie
+Version: 0.0.1
+Summary: python for wps
+Home-page: https://gitee.com/CoderWanFeng/python-office
+Author: 程序员晚枫
+Author-email: 1957875073@qq.com
+License: MIT
+Keywords: pip,python-movie
+Platform: any
+Requires-Python: >=3.6
+Requires-Dist: pandas
+Requires-Dist: xlrd
+Requires-Dist: xlwt
+Requires-Dist: xlutils
+Requires-Dist: xlwings
+Requires-Dist: openpyxl
+Requires-Dist: lxml (>=2.3.2)
+Requires-Dist: python-docx
+Requires-Dist: python-pptx
+Requires-Dist: PyPDF2
+Requires-Dist: scrapy
+Requires-Dist: django
+Requires-Dist: flask
+Requires-Dist: matplotlib
+Requires-Dist: easyocr
+
+项目使用说明：https://mp.weixin.qq.com/s/n9AN6Z-60Rws_qJ-6XITXg
+
