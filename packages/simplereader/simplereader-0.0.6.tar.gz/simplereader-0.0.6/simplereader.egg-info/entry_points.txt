@@ -1,0 +1,3 @@
+[console_scripts]
+simplereader = simplereader.cli:main
+
