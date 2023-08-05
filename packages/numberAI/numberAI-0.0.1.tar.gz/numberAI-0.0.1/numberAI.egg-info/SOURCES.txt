@@ -1,0 +1,15 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+model/__init__.py
+model/data.json
+model/load.py
+model/main.py
+model/model.py
+numberAI.egg-info/PKG-INFO
+numberAI.egg-info/SOURCES.txt
+numberAI.egg-info/dependency_links.txt
+numberAI.egg-info/requires.txt
+numberAI.egg-info/top_level.txt
