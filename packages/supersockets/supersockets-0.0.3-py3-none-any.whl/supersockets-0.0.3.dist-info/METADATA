@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: supersockets
+Version: 0.0.3
+Summary: Easy to use implementation of the built in 'socket' library
+Home-page: https://github.com/JustScott/SuperSockets
+Author: JustScott
+Author-email: <justscottmail@protonmail.com>
+License: MIT
+Project-URL: Bug Reports, https://github.com/JustScott/SuperSockets/issues
+Keywords: python,networking,sockets
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: System :: Networking
+Description-Content-Type: text/markdown
+Requires-Dist: listcrypt
+Requires-Dist: rapidrsa
+
+# SuperSockets
+Easy to use implementation of python3's built in 'socket' library
+
+
