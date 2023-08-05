@@ -1,0 +1,17 @@
+bme/__init__.py,sha256=DdBDLLH4gMnUZnt77xh5aHy8l61X2TSlzvHtD0wq8is,106
+bme/auto.py,sha256=JDawxPbbUN3cy98X6-uoBZbqckBX_38izY1Rc4YThfQ,978
+bme/common.py,sha256=JW8cq44tfa2WoG9k9tTpYKds4iwgfbysZ_X1xayuOxo,478
+bme/exceptions.py,sha256=UxlMTwPlyci-cHW7sCHQRN-iGmb5CTv7EFTtVM1kOb4,204
+bme/measurement.py,sha256=6ba-LHk22-WxusE_FU1WZvyJbgLqxQ1U3JNtgsuh_Xw,1018
+bme/bme280/__init__.py,sha256=aZuaTRikz910n5uwyMKZWFJTzyEpMjd03kJFrq3aUNA,97
+bme/bme280/bme280.py,sha256=SNNjm2mBx6nbikYai7fZSJvUlSqZwOREvx7Ld8nfNp0,3032
+bme/bme280/calibration.py,sha256=9WSkCeR9ksDWOBxYGfzLAmL_iKJiIA-SCsqAFPFNiuU,1864
+bme/bmp280/__init__.py,sha256=Jw08E18vg2fE-n63PLGQuescwzFZbf_WwmHt3xp-olM,97
+bme/bmp280/bmp280.py,sha256=eIjUvASvoBubVP3zqCMkCH9fqR8XcDVCSh0fkakUvHU,6671
+bme/bmp280/calibration.py,sha256=N2trhjqVq7FlCq6cu5mTieV_fTRUm1xWp7Wi7LnVSMA,2337
+bme_driver-0.1.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+bme_driver-0.1.1.dist-info/METADATA,sha256=lC13Ysac4KxZ5P9GDxp-fLERXHjnD-4aMqlEnjgbExQ,1519
+bme_driver-0.1.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+bme_driver-0.1.1.dist-info/top_level.txt,sha256=B4gWZcbawTNOeWqRk57RxLdwNq5mXub2mgs-6x4zFW8,4
+bme_driver-0.1.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+bme_driver-0.1.1.dist-info/RECORD,,
