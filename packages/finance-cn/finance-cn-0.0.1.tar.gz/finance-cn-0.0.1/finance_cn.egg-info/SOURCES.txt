@@ -1,0 +1,9 @@
+README.md
+setup.py
+finance_cn.egg-info/PKG-INFO
+finance_cn.egg-info/SOURCES.txt
+finance_cn.egg-info/dependency_links.txt
+finance_cn.egg-info/requires.txt
+finance_cn.egg-info/top_level.txt
+python-wps/__init__.py
+python-wps/hello-world.py
