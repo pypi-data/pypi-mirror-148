@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: electrasmart
+Version: 0.7
+Summary: API client for Electra Smart air conditioner
+Home-page: https://github.com/yonatanp/electrasmart
+Author: Yonatan Perry
+Author-email: yonatan.perry@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Home Automation
+Requires-Python: >=3.5.0
+License-File: LICENSE.md
+
+API client for Electra Smart air conditioner
+
