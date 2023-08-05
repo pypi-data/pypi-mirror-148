@@ -1,0 +1,9 @@
+README.md
+setup.py
+src/convergence/__init__.py
+src/convergence_api.egg-info/PKG-INFO
+src/convergence_api.egg-info/SOURCES.txt
+src/convergence_api.egg-info/dependency_links.txt
+src/convergence_api.egg-info/not-zip-safe
+src/convergence_api.egg-info/requires.txt
+src/convergence_api.egg-info/top_level.txt
