@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: dx
+Version: 1.0.2
+Summary: Python wrapper for Data Explorer
+Home-page: https://app.noteable.io/
+License: BSD
+Keywords: data,exploration,visualization
+Author: Dave Shoup
+Author-email: dave.shoup@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: ipython (>=8.2.0,<9.0.0)
+Requires-Dist: pandas (>=1.3.5,<2.0.0)
+Project-URL: Repository, https://github.com/noteable-io/dx
+Description-Content-Type: text/markdown
+
+# dx
+
+A Pythonic Data Explorer.
+
+## Install
+
+For Python 3.8+:
+```
+pip install dx>=1.0.0
+```
+
+## Usage
+
+The `dx` library allows for enabling/disabling DEX media type visualization with `dx.enable()` and `dx.display(data)` by setting a custom `IPython` formatter.
+
+```python
+import dx
+
+dx.enable()
+```
+
+### Example
+
+```python
+import pandas as pd
+
+# load randomized number/bool/string data
+df = pd.read_csv('examples/sample_data.csv')
+dx.display(df)
+```
+
+Pass `index=True` to visualize the `.index` values of a dataframe as well as the column/row values:
+```python
+dx.display(df, index=True)
+```
+
+If you only wish to display a certain number of rows from the dataframe, use
+a context and specify the max rows (if set to None, all rows are used):
+
+```python
+# To use the first 13 rows for visualization with dx
+with pd.option_context('display.max_rows', 13):
+  dx.display(df)
+```
+
+## Develop
+
+```
+git clone https://github.com/noteable-io/dx
+cd ./dx
+pip install -e .
+```
+
+
+
+## Code of Conduct
+
+We follow the noteable.io code of conduct.
+
+## LICENSE
+
+See [LICENSE.md](LICENSE.md).
