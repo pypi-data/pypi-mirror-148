@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: TDY-PKG-saquibquddus
+Version: 1.1.1
+Summary: its an implimentation of TF-2 , Detectron and yolov5
+Home-page: https://github.com/saquibquddus/TDY_PKG
+Author: saquibquddus
+Author-email: sakibquddus@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/saquibquddus/TDY_PKG/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+## Package for TF2 , Detectron and Yolo Inferencing.
+
