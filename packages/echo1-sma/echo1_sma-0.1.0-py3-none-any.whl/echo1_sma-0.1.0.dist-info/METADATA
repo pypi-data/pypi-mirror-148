@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: echo1-sma
+Version: 0.1.0
+Summary: Streaming moving average in python.
+Home-page: https://github.com/e1-io/echo1-geopix
+License: MIT
+Author: Michael Mohamed
+Author-email: michael.mohamed@echo1.io
+Requires-Python: >=3.6.2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Project-URL: Repository, https://github.com/e1-io/echo1-geopix
+Description-Content-Type: text/markdown
+
+# echo1-sma
+Streaming moving average in python.
+
+## Installation
+```sh
+pip install echo1-sma
+```
+
+## Getting Started
+```python
+from echo1_sma.echo1_sma import StreamingMovingAverage
+```
