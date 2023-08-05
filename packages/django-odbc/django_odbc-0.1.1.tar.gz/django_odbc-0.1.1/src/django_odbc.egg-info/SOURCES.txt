@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+setup.cfg
+src/django_odbc.egg-info/PKG-INFO
+src/django_odbc.egg-info/SOURCES.txt
+src/django_odbc.egg-info/dependency_links.txt
+src/django_odbc.egg-info/top_level.txt
