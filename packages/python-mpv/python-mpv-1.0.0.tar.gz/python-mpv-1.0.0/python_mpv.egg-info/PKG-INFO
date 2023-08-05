@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: python-mpv
+Version: 1.0.0
+Summary: A python interface to the mpv media player
+Home-page: https://github.com/jaseg/python-mpv
+Author: jaseg
+Author-email: github@jaseg.net
+License: GPLv3+
+Description: UNKNOWN
+Keywords: mpv,library,video,audio,player,display,multimedia
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: X11 Applications
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Multimedia :: Sound/Audio :: Players
+Classifier: Topic :: Multimedia :: Video :: Display
+Requires-Python: >=3.7
+Provides-Extra: screenshot_raw
