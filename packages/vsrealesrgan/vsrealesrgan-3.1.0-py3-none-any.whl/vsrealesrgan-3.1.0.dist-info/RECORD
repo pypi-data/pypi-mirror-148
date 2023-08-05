@@ -1,0 +1,11 @@
+vsrealesrgan/RealESRGAN_x2plus.onnx,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vsrealesrgan/RealESRGAN_x4plus.onnx,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vsrealesrgan/RealESRGAN_x4plus_anime_6B.onnx,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vsrealesrgan/__init__.py,sha256=JnrFJX8jPAdcn8qDiUD3ATAdeZyCc685CRM4Z69DImM,10589
+vsrealesrgan/__main__.py,sha256=xQ8xpRhu5wXBiCnNLpwR_FG3NojpOPafAfdvHz1v_JM,1017
+vsrealesrgan/realesr-animevideov3.onnx,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vsrealesrgan-3.1.0.dist-info/LICENSE,sha256=YiWD6o4JK9vt8R_wcAQu_KfkdfbWU2_qZZjASwK8BY8,1543
+vsrealesrgan-3.1.0.dist-info/METADATA,sha256=_EAe_ScevGm9q-a4vjax2HXzYLl8EBwALC7nH2P1ppw,1569
+vsrealesrgan-3.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+vsrealesrgan-3.1.0.dist-info/top_level.txt,sha256=XLzSoF9arfEAhCSGoqzTDfsJy6KvU2ZeJvueaGjacGw,13
+vsrealesrgan-3.1.0.dist-info/RECORD,,
