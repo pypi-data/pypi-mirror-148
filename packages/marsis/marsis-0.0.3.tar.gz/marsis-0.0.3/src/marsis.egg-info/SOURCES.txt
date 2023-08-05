@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+bin/marsis_processor.py
+src/marsis/__init__.py
+src/marsis/campbell.py
+src/marsis/edr.py
+src/marsis/fetch.py
+src/marsis/output.py
+src/marsis/parsetab.py
+src/marsis/segy.py
+src/marsis/util.py
+src/marsis.egg-info/PKG-INFO
+src/marsis.egg-info/SOURCES.txt
+src/marsis.egg-info/dependency_links.txt
+src/marsis.egg-info/top_level.txt
