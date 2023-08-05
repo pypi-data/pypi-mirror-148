@@ -1,0 +1,15 @@
+{
+  "title": "GraphScope Jupyterlab Context Menu",
+  "description": "Context Menu settings.",
+  "jupyter.lab.menus": {
+    "context": [
+      {
+        "command": "gs-jupyterlab/sidebar-item-context-menu:open",
+        "selector": ".jp-gsSidebar-sectionItem",
+        "rank": 0
+      }
+    ]
+  },
+  "additionalProperties": false,
+  "type": "object"
+}
