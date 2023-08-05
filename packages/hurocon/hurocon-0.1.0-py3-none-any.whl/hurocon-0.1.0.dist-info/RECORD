@@ -1,0 +1,9 @@
+hurocon/__init__.py,sha256=PVA8Lykvsc5b1_x4CTRNabPsbGJp0lzshA_JjLWGrbc,73
+hurocon/cli.py,sha256=jGdNDVbf5wN2wXT7u3aC6keQcvnB7QFND7Xrj2g5bUU,4469
+hurocon/core.py,sha256=b0dYlT_IFgIvKRPSifJQ12zvOyPMv1765Q16znyQfWc,2447
+hurocon/meta.py,sha256=vJhKQkSqAHmbt2tcWtCWDT3HQ_aCN5Xm0QwdOruiUoA,197
+hurocon-0.1.0.dist-info/entry_points.txt,sha256=-vg42mAiTjvsiCT4lZ5es_dDS93Rp3xyW4Osflh_3yM,43
+hurocon-0.1.0.dist-info/LICENSE,sha256=8ndQIOpN65n7Z9B6bB1F78XlC1KtsLf6Ocif5mKvQcU,11342
+hurocon-0.1.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+hurocon-0.1.0.dist-info/METADATA,sha256=78EtU7wsl5JbYhM7fiPLJrXSf59WkLgWwhBlHMEm8lA,3704
+hurocon-0.1.0.dist-info/RECORD,,
