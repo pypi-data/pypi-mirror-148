@@ -1,0 +1,3 @@
+[console_scripts]
+nake = nake_src.main:main
+
