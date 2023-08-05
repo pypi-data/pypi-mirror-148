@@ -1,0 +1,5 @@
+suds
+requests
+suds_requests
+xmltodict
+setuptools==58.0.0
