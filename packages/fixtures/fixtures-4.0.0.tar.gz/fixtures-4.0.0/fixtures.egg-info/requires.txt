@@ -1,0 +1,12 @@
+pbr>=5.7.0
+testtools>=2.5.0
+
+[docs]
+docutils
+
+[streams]
+testtools
+
+[test]
+mock
+testtools
