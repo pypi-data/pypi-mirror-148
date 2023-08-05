@@ -1,0 +1,14 @@
+numpy
+psutil
+torch
+torchvision
+tinyfk
+tqdm
+matplotlib
+albumentations
+opencv-python
+pybullet
+moviepy
+
+[:python_version < "3.7"]
+imageio==2.15.0
