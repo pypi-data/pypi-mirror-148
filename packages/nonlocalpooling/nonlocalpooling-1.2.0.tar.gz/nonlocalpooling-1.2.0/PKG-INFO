@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: nonlocalpooling
+Version: 1.2.0
+Summary: Global-Wise Pooling Layers for PyTorch
+Home-page: https://github.com/Dootmaan/NonLocalPooling
+Author: Hongyi Wang
+Author-email: whongyi@zju.edu.cn
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/Dootmaan/NonLocalPooling/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Non-Local Pooling
+
+## Update 1.2.0
+
+- Now you can determine the output channel just like all the other learnable pooling methods (former version force out_channel=in_channel). However, if you specify out_channel, MaxPool would not work then since they cannot be added together. Leave out_channel to None to make the module works like before.
+
+---
+
+To use NonLocalPooling for your PyTorch project:
+
+## Step 1
+```
+pip install nonlocalpooling
+```
+
+## Step 2
+```
+from nonlocalpooling.pool import NonLocalPool2d, NonLocalPool3d
+```
+
+---
+
+Non-Local Pooling can be used to substitue your original PyTorch pooling methods.
+
+
