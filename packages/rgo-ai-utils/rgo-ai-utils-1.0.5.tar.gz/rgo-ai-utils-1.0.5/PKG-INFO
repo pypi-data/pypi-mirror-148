@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: rgo-ai-utils
+Version: 1.0.5
+Summary: Utils that are shared between rgo ai repos
+Home-page: https://bitbucket.org/rgo-tech/semanticseg/src/master/
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+tools to share among rgo ai repos
+
+
