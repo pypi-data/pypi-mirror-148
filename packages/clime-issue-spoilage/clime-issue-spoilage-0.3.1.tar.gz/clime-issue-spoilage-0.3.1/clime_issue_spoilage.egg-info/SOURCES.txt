@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+clime_issue_spoilage/__init__.py
+clime_issue_spoilage/args.py
+clime_issue_spoilage/graph.py
+clime_issue_spoilage/main.py
+clime_issue_spoilage/version.py
+clime_issue_spoilage.egg-info/PKG-INFO
+clime_issue_spoilage.egg-info/SOURCES.txt
+clime_issue_spoilage.egg-info/dependency_links.txt
+clime_issue_spoilage.egg-info/entry_points.txt
+clime_issue_spoilage.egg-info/requires.txt
+clime_issue_spoilage.egg-info/top_level.txt
