@@ -1,0 +1,12 @@
+pycomando/__init__.py,sha256=IXD4pe-DG5n-yOF32pvvJJQ0znEb15Aq3cpQ0TQiNHc,182
+pycomando/comando.py,sha256=TqqBLsSJ0zk511hFCo8zUN2nMYnXtBOVUairKzzG_Zc,9389
+pycomando/pycomando.py,sha256=c-446ya6fX8Hu0j1Ev1ONqmHBCLrrqtRY7SF0k5SYro,16495
+pycomando-0.1.3.data/data/share/pycomando/LICENSE,sha256=Qv2ilebwoUtMJnRsZwRy729xS5JZQzLauJ0tQzkAkTA,1088
+pycomando-0.1.3.data/data/share/pycomando/README.md,sha256=XhtXovhV1iz64ibXmWxP8ZChyjhpxSsF9iYbXzVYqS4,2586
+pycomando-0.1.3.data/data/share/pycomando/examples/ejemplo1.py,sha256=aBOSDjVigMLkh3qpCfAvc0CntIiT6MOn1ouBSvYsIOU,601
+pycomando-0.1.3.dist-info/LICENSE,sha256=Qv2ilebwoUtMJnRsZwRy729xS5JZQzLauJ0tQzkAkTA,1088
+pycomando-0.1.3.dist-info/METADATA,sha256=ADRWaf45RrCQKmST_-RnkzJaxA6ebZijEJKx5C8oe_k,3164
+pycomando-0.1.3.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+pycomando-0.1.3.dist-info/entry_points.txt,sha256=zVnEURiQ54kTtCQ_V2baWRzlvStOLguwdz6g4ya6_Ec,55
+pycomando-0.1.3.dist-info/top_level.txt,sha256=EbV0LOq8vQJHugtk1stgGrnMrR9KocQPuHxKHB1XD9Q,10
+pycomando-0.1.3.dist-info/RECORD,,
