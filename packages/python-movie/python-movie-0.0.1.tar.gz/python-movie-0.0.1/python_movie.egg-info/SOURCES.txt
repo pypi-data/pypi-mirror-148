@@ -1,0 +1,9 @@
+README.md
+setup.py
+python-wps/__init__.py
+python-wps/hello-world.py
+python_movie.egg-info/PKG-INFO
+python_movie.egg-info/SOURCES.txt
+python_movie.egg-info/dependency_links.txt
+python_movie.egg-info/requires.txt
+python_movie.egg-info/top_level.txt
