@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/papflix/__init__.py
+src/papflix/cast.py
+src/papflix/custom_models.py
+src/papflix/main.py
+src/papflix/movie.py
+src/papflix_kpaparid.egg-info/PKG-INFO
+src/papflix_kpaparid.egg-info/SOURCES.txt
+src/papflix_kpaparid.egg-info/dependency_links.txt
+src/papflix_kpaparid.egg-info/top_level.txt
