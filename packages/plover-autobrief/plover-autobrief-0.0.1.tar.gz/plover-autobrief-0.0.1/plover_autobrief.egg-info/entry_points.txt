@@ -1,0 +1,9 @@
+[plover.gui.qt.tool]
+autobrief = plover_autobrief.autobrief_suggestions:AutobriefSuggestions
+
+[plover.macro]
+ab_commit = plover_autobrief.autobrief_macros:commit_brief
+ab_define = plover_autobrief.autobrief_macros:define_brief
+ab_next_page = plover_autobrief.autobrief_macros:next_page
+ab_prev_page = plover_autobrief.autobrief_macros:prev_page
+
