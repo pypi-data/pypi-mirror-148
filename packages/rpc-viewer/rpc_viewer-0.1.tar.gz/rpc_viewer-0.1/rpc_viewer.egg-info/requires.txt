@@ -1,0 +1,5 @@
+setuptools
+wheel
+numpy
+matplotlib
+rpc_reader
