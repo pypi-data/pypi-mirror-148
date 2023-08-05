@@ -1,0 +1,16 @@
+farmer_pytorch/__init__.py,sha256=_oyStaQ8o-5_tAAbz1Ux6UpxW6J525BW_1kyi0CtoQM,301
+farmer_pytorch/get_annotation.py,sha256=mTkgpeDjGWiiAuKqdqhPmkMonBJkW_PTsI0pTPoSxAM,953
+farmer_pytorch/get_dataset.py,sha256=mzdSOrc2RZOC_4uIS-Wfbx3XuwgzOadZHx5QHtt8i90,1118
+farmer_pytorch/get_optimization.py,sha256=dYpRzch-Z2qYjXlEvAdzTgHzB_qZPIr2kXuK3tUOUjA,4792
+farmer_pytorch/logger/__init__.py,sha256=UCymptizxupUmSNv0SvXW4ztmIktz0nRoBIogqSM8Sc,47
+farmer_pytorch/logger/base.py,sha256=xSxp6FjZsB5lTVkYDzKiE6RTlVxmqkq0PPoV17CakRI,1439
+farmer_pytorch/logger/progress_bar.py,sha256=SDvSDBjyk-gc5jb65bXJIzm2vnjrzZ6eUn1KVJUGA20,941
+farmer_pytorch/metrics/__init__.py,sha256=UJcDRyMyY1_A5QXyxwjl8cAn8PAiz6Z6p9iT9WCluiw,62
+farmer_pytorch/metrics/seg_metrics.py,sha256=3v6F86NUUd1qj_gzM6ZY1HzyfKdxPov7vKi3TyqGNCs,1806
+farmer_pytorch/readers/__init__.py,sha256=oslMoHEw9-UBHWkEUHu7DhBZiT1ZgGqgv2w0oMbSilg,154
+farmer_pytorch/readers/cross_val.py,sha256=54zMD-LR_z1VQ4cuK3gVGgUTF_bZD5IfdhEurhkO6D8,3152
+farmer_pytorch/readers/read_annotation.py,sha256=Lg1MrGISACt0l-gi_krqhYHcZKd3FNGwIDdO3y-FeI0,2517
+farmer_pytorch/utils.py,sha256=XUhwNmiIsO6c0LiAaSAu97p7Hu4mtcpLqu8Zq-qtwSg,371
+farmer_pytorch-0.3.0.dist-info/WHEEL,sha256=DRf8A_Psd1SF2kVqTQOOFU1Xzl3-A2qljAxBMTOusUs,83
+farmer_pytorch-0.3.0.dist-info/METADATA,sha256=89dBPBR_WfMToW3wmK5oELQ-XCNf2TjtKjqusG-MHuY,890
+farmer_pytorch-0.3.0.dist-info/RECORD,,

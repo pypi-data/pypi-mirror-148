@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: farmer-pytorch
+Version: 0.3.0
+Summary: deep learning tools: easy to run, easy to customize
+Home-page: https://github.com/aiorhiroki/farmer.pytorch
+License: MIT
+Author: aiorhiroki
+Author-email: 1234defgsigeru@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Pillow (>=9.1.0,<10.0.0)
+Requires-Dist: matplotlib (>=3.5.1,<4.0.0)
+Requires-Dist: numpy (>=1.22.3,<2.0.0)
+Requires-Dist: torch (>=1.11.0,<2.0.0)
+Project-URL: Repository, https://github.com/aiorhiroki/farmer.pytorch
+Description-Content-Type: text/markdown
+
+# Pytorch segmentation
+
+## installation
+```
+pip install farmer-pytorch
+```
+
+
+## Quick start
+[quick start](https://github.com/aiorhiroki/fmp_dvc)
