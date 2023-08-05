@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: honkaidex
+Version: 0.2.5
+Summary: Honkai Impact 3 Database
+Home-page: https://github.com/HiganHana/HonkaiDex
+Author: celtica, kiyandere
+Author-email: celticaxp@gmail.com, kiyanhalcyon0707@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# HonkaiDex
+
