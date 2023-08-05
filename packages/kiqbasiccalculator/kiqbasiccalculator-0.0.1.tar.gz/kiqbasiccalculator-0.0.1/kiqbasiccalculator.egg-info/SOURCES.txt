@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+kiqbasiccalculator/__init__.py
+kiqbasiccalculator.egg-info/PKG-INFO
+kiqbasiccalculator.egg-info/SOURCES.txt
+kiqbasiccalculator.egg-info/dependency_links.txt
+kiqbasiccalculator.egg-info/top_level.txt
