@@ -1,0 +1,2 @@
+[console_scripts]
+apicuron_client = apicuron_client.cli:main
