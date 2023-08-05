@@ -1,0 +1,8 @@
+include README.md
+include LICENSE.md
+recursive-include drf-vue/static *.js *.css *.png *.ico *.eot *.svg *.ttf *.woff *.woff2
+recursive-include drf-vue/templates *.html schema.js
+recursive-include drf-vue/locale *.mo
+global-exclude __pycache__
+global-exclude *.py[co]
+
