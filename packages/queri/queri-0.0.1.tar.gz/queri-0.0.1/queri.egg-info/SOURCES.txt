@@ -1,0 +1,5 @@
+setup.py
+queri.egg-info/PKG-INFO
+queri.egg-info/SOURCES.txt
+queri.egg-info/dependency_links.txt
+queri.egg-info/top_level.txt
