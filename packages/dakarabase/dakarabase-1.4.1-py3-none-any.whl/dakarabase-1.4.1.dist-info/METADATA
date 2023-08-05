@@ -1,0 +1,103 @@
+Metadata-Version: 2.1
+Name: dakarabase
+Version: 1.4.1
+Summary: Collecion of helper modules for the Dakara Project
+Home-page: https://github.com/DakaraProject/dakara-base
+Author: Flore <flore.love@gmail.com>, Neraste <neraste.herr10@gmail.com>
+License: MIT
+Project-URL: Bug tracker, https://github.com/DakaraProject/dakara-base/issues
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Description-Content-Type: text/markdown
+Requires-Dist: appdirs (<1.5.0,>=1.4.4)
+Requires-Dist: coloredlogs (<15.1.0,>=15.0.1)
+Requires-Dist: environs (<9.6.0,>=9.5.0)
+Requires-Dist: furl (<2.2.0,>=2.1.3)
+Requires-Dist: path (<16.5.0,>=16.4.0)
+Requires-Dist: progressbar2 (<4.1.0,>=4.0.0)
+Requires-Dist: PyYAML (<6.1,>=6.0)
+Requires-Dist: requests (<2.28.0,>=2.27.1)
+Requires-Dist: websocket-client (<1.4.0,>=1.3.1)
+Requires-Dist: importlib-resources (<5.7.0,>=5.6.0) ; python_version < "3.7"
+Provides-Extra: tests
+Requires-Dist: black (<22.4.0,>=22.3.0) ; extra == 'tests'
+Requires-Dist: codecov (<2.2.0,>=2.1.12) ; extra == 'tests'
+Requires-Dist: flake8 (<4.1.0,>=4.0.1) ; extra == 'tests'
+Requires-Dist: isort (<5.11.0,>=5.10.1) ; extra == 'tests'
+Requires-Dist: pdoc (<10.1.0,>=10.0.4) ; extra == 'tests'
+Requires-Dist: pre-commit (<2.18.0,>=2.17.0) ; extra == 'tests'
+Requires-Dist: pytest-cov (<3.1.0,>=3.0.0) ; extra == 'tests'
+Requires-Dist: pytest (<7.2.0,>=7.1.1) ; extra == 'tests'
+
+# Dakara Base
+
+<!-- Badges are displayed for the develop branch -->
+[![Appveyor Build status](https://ci.appveyor.com/api/projects/status/50fay6bhsgxispcw/branch/develop?svg=true)](https://ci.appveyor.com/project/neraste/dakara-base/branch/develop)
+[![Codecov coverage analysis](https://codecov.io/gh/DakaraProject/dakara-base/branch/develop/graph/badge.svg)](https://codecov.io/gh/DakaraProject/dakara-base)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+[![PyPI version](https://badge.fury.io/py/dakarabase.svg)](https://pypi.python.org/pypi/dakarabase/)
+[![PyPI Python versions](https://img.shields.io/pypi/pyversions/dakarabase.svg)](https://pypi.python.org/pypi/dakarabase/)
+
+This project is a collection of tools and helper modules for the Dakara Project.
+
+## Modules available
+
+* `config`: a helper that manages config and loggers;
+* `directory`: a helper to manage application directories;
+* `exceptions`: a base class for exceptions and exception handlers;
+* `http_client`: an HTTP client dedicated to be used with an API;
+* `progress_bar`: a collection of progress bars;
+* `safe_workers`: a library to facilitate the manipulation of threads;
+* `utils`: other various helpers;
+* `websocket_client`: a Websocket client.
+
+## Install
+
+Install the package with:
+
+```sh
+pip install dakarabase
+```
+
+If you have downloaded the repo, you can install the package directly with:
+
+```sh
+pip install .
+```
+
+## Development
+
+Please read the [developers documentation](CONTRIBUTING.md).
+
+MIT License
+
+Copyright (c) 2022 Dakara Project
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
