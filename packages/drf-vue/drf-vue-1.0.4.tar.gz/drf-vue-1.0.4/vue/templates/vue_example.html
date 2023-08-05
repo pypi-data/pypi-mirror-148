@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> vue示例 </title>
+    <link rel="stylesheet" href="{% static 'highlights/zenburn.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'pace.css' %}">
+    <link rel="stylesheet" href="{% static 'doc.css' %}">
+
+
+</head>
+<body>
+
+<div class="row">
+    <div class="col-md" role="main">
+        <div class="mycontent">
+            <div class="container bs-docs-container">
+                <div>
+                    {{ content | safe }}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+
+
+</html>
+<script src="{% static 'jquery.js' %}"></script>
+
+<script>
+    $('.toc').remove();
+    $('.row').prepend(`<div class="col-md-3" role="complementary"  >
+       {{ toc |safe }} </div>`);
+
+    // el是一个使用jq创建的jq节点对象
+    // 添加到尾部
+</script>
+
+<style>
+    .myclock {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100px;
+        height: 50px;
+    }
+    .box {
+        position: fixed;
+        right: 50px;
+        bottom:50px;
+        z-index: 99999;
+    }
+    .h11 {
+        margin-right: unset;
+    }
+
+    .toc {
+        padding-top: 10px;
+        position: fixed;
+        left: 0;
+        height: 100vh;
+        width: 20vw;
+        overflow: scroll;
+        overflow-x: hidden;
+        white-space: nowrap;
+        word-break: break-all;
+        word-wrap: break-word
+    }
+
+    .toc ul {
+        margin-left: -20px;
+    }
+
+    .mycontent {
+        width: 100%;
+    }
+
+    .col-md-9 {
+        width: 80vw;
+        margin-left: 20vw;
+        position: fixed;
+        right: 0;
+        overflow: scroll;
+        overflow-x: hidden;
+        height: 100vh;
+    }
+
+    .bs-docs-header {
+        width: 100%;
+    }
+
+    .bs-docs-container, .mytitle {
+        width: 100%;
+    }
+
+    .row {
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+</style>
+
+<style type="text/css">
+	.box{padding-top:100px;}
+	.box .taiji{margin:0 auto;}
+	/*只有最外面容器使用了宽高px设置，	内部均为百分比设置，只需改变容器大小，太极图就可以自动缩放*/
+	.taiji{position: relative; width: 100px; height: 100px; border-radius: 50%; background-color: #fff;border:solid 1px #ccc;    animation: spin 6s linear infinite;/*动画设置*/}
+	.tj_1{position: absolute; top: 0px; width: 50%; height: 100%;}
+	.tj_big1{left: 0px; border-radius:100% 0 0 100% /50% 0 0 50%; background: #000;}
+	.tj_big2{right: 0px; border-radius:0 100% 100% 0 / 0 50% 50% 0; background: #fff;}
+	.tj_2{position: absolute; width: 50%; height: 50%; left: 25%; border-radius: 50%;}
+	.tj_s1{bottom: 0px; background: #fff;}
+	.tj_s2{top: 0px; background: #000;}
+	.tj_ss{position: absolute; width: 25%; height: 25%; left: 37.5%;border-radius: 50%;}
+	.tj_w{top:37.5%;background: #000;}
+	.tj_b{top:37.5%;background: #fff;}
+	/*动画方法*/
+	@keyframes spin {
+		0% {transform:rotate(0deg);}
+		100% {transform:rotate(360deg);}
+	}
+	</style>
