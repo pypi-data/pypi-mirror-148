@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: kslurm
+Version: 0.3.1
+Summary: Helper scripts and wrappers for running commands on SLURM compute clusters.
+Home-page: https://github.com/pvandyken/kslurm
+Author: Peter Van Dyken
+Author-email: pvandyk2@uwo.ca
+License: MIT
+Keywords: slurm,compute cluster
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Python: <3.11,>=3.9
+Provides-Extra: dev
+Provides-Extra: test
+License-File: LICENSE
+
+README.md
+
