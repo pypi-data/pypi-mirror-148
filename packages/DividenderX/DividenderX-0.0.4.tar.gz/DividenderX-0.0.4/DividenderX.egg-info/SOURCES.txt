@@ -1,0 +1,6 @@
+setup.py
+Dividender/Dividender.py
+DividenderX.egg-info/PKG-INFO
+DividenderX.egg-info/SOURCES.txt
+DividenderX.egg-info/dependency_links.txt
+DividenderX.egg-info/top_level.txt
