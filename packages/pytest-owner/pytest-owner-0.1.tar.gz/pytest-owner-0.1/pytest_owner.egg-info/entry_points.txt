@@ -1,0 +1,2 @@
+[pytest11]
+pytest-owner = pytest_owner.plugin
