@@ -1,0 +1,11 @@
+LICENSE
+README.rst
+setup.py
+pennylane_qrack/__init__.py
+pennylane_qrack/qrack_device.py
+pennylane_qrack.egg-info/PKG-INFO
+pennylane_qrack.egg-info/SOURCES.txt
+pennylane_qrack.egg-info/dependency_links.txt
+pennylane_qrack.egg-info/entry_points.txt
+pennylane_qrack.egg-info/requires.txt
+pennylane_qrack.egg-info/top_level.txt
