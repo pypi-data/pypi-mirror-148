@@ -1,0 +1,16 @@
+StockSpider/DATA_USE.py,sha256=wqaWlXNck62f-UhSJJ5dIvqrs_iwb42im_o3Omckkm4,122386
+StockSpider/HolderSpider.py,sha256=fQZQWvCe7l3Tv_NWZntCKyywX-oUuPwoK4kN0QHHC5I,8309
+StockSpider/MarketOverviewSpider.py,sha256=fTAnYTUV4sHc79xfHod6zTSGO_qQKEvFEF4Ztfwg5Cw,2062
+StockSpider/NameCodeInterpreter.py,sha256=MyhVWV7dL9HVkI25t-VmHurO1FwgPidI4IOBu8LzE0U,2795
+StockSpider/StockSpider.py,sha256=fwLFoicKM6gr4uTNt5vxDQN4K3Zy8ZwNd8w0SsIiPcI,3981
+StockSpider/__init__.py,sha256=q9WzLfDLbIJdwNkKoZC53dPIyZHcbDhp_8-ZiSwRUzg,177
+StockSpider/__version__.py,sha256=MobQVtrO9Ze27biO6l6QreTAONnDTqbALI54Q1gpCI8,352
+StockSpider/core.py,sha256=wrhdg8uT8Bf8D5NiKoylJdLGld5ZnioL3scVjoCRr4Q,12953
+StockSpider/core2.py,sha256=hz7mvRTJeNhpM93coyzPYgHvazKi_ldT3ESQ9vCKvao,2783
+StockSpider/newsSpider.py,sha256=CWGKKsg0nTqPOkuSoeC6eepMcG9F9cUiq5Oww2tlUqg,6247
+StockSpider/smSpider.py,sha256=8D0OoViSJE6Ct1skIFRYnXR7hD-TWEjicXw90yFNhdg,3320
+CStockSpider-0.2.16.dist-info/LICENSE,sha256=5mGKT-8JivLkYytFwVxN4KGDFE_yBq8WU3VdjGwRQ7k,1060
+CStockSpider-0.2.16.dist-info/METADATA,sha256=ocHYcBQ0ETLcYlBqiQa_wMOnk8AOPi6bttNUHrxh1IE,1445
+CStockSpider-0.2.16.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+CStockSpider-0.2.16.dist-info/top_level.txt,sha256=Dd91bkHpDNc-UjY1AVtwLKgP5SnRmWR9tFoKS1r7LCs,12
+CStockSpider-0.2.16.dist-info/RECORD,,
