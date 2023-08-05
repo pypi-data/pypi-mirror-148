@@ -1,0 +1,14 @@
+pymondis/__init__.py,sha256=48AiQdGFrJpNNdv--NhsX8H7nofSpbvFNOryLkVcpJY,1141
+pymondis/_client.py,sha256=UY2HZMmH0pGq4ZbQ8kuQbeMYmKMFTG_V_1iNZ4ehgIQ,2654
+pymondis/_enums.py,sha256=cD8So2KRIl7q4iEK9ElSZvqWgny0lhLe1AB6kJv56Wk,2244
+pymondis/_exceptions.py,sha256=J9gdBDGQtRn8SGIjEZ1_A4OEkBY6gzdYH8P-mF-nJdA,1378
+pymondis/_http.py,sha256=yqJK38aP3t28o2nTyrK8uRTag6Fe_aZanYZiu6ffbg0,8156
+pymondis/_models.py,sha256=FiJuPoP87ZZ-S9s2DklzOuaPWcqyZQGy6oJx0ZQYocE,40780
+pymondis/_util.py,sha256=2jQ0ffzCF3uJkrvQmKKSC6u24Np8pbI6nnVw8qL1hiw,3492
+pymondis/metadata.py,sha256=Inq4S94lTIhHCbGRzFynDtuYBCSrZQM7lNHXA80vfko,325
+pymondis/shell.py,sha256=E5Cn3XAlBRLtvztFobDc2mJU9gVayudNc_1HJuvMVNw,1212
+pymondis-1.0.0b3.post1.dist-info/LICENSE,sha256=8drxdWjCoPdHQanr9xBKPeAk1ae2XgLL4qQ-1d3m_DM,1090
+pymondis-1.0.0b3.post1.dist-info/METADATA,sha256=VuJYE73eNjmFMhRaZjRsIRBXwDJV1XZwLxyBIWJAgwQ,2860
+pymondis-1.0.0b3.post1.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+pymondis-1.0.0b3.post1.dist-info/top_level.txt,sha256=Za-nXp7Rer-Xg6ks7ue7zaw8NYNPSFLUesJB_zT8XZM,9
+pymondis-1.0.0b3.post1.dist-info/RECORD,,
