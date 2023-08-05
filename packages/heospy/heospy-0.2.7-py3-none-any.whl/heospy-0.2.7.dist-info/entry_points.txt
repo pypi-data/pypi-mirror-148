@@ -1,0 +1,2 @@
+[console_scripts]
+heos_player = heospy:main
