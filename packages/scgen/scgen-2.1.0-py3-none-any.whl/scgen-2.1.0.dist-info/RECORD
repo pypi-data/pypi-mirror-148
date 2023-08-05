@@ -1,0 +1,9 @@
+scgen/__init__.py,sha256=EhHuvjkzxvlvkP7gcsaoM4A1ETi3lPm8eFoT608A61g,1019
+scgen/_base_components.py,sha256=JYIrWx0g9bblNuBzrgqCfuOdt696vnXlrCTckLJRlKY,2260
+scgen/_scgen.py,sha256=w2t6fItG6iSCEgNbeQ27JD_tWUbQetttiFDZx0pL3Uo,29724
+scgen/_scgenvae.py,sha256=cBX0QLD2UkI8ZiVfZ7rVIUV1uxy07yRBi2YXZGcDUzY,4770
+scgen/_utils.py,sha256=n0gjo2HfXkeoHz9HWci7eMpaLWNISkyGoC8SfCUXJ4I,3003
+scgen-2.1.0.dist-info/LICENSE,sha256=ljOS4DjXvqEo5VzGfdaRwgRZPbNScGBmfwyC8PChvmQ,32422
+scgen-2.1.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+scgen-2.1.0.dist-info/METADATA,sha256=fdYmLISaUOO0vGdJtlXdFkyD476C7TM7p1VgZxcBJAg,5266
+scgen-2.1.0.dist-info/RECORD,,
