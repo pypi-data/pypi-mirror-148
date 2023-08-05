@@ -1,0 +1,17 @@
+larq_compute_engine-0.7.0.data/purelib/larq_compute_engine/__init__.py,sha256=uyQ9YNqUKTgsZfTvEugDoAN7VEWAorJGyEtSblO_4go,515
+larq_compute_engine-0.7.0.data/purelib/larq_compute_engine/mlir/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+larq_compute_engine-0.7.0.data/purelib/larq_compute_engine/mlir/_tf_tfl_flatbuffer.pyd,sha256=XC4Fc4R7_EUWYxWpTc95K1nDmXo1GX403myNzNhRLX4,131081728
+larq_compute_engine-0.7.0.data/purelib/larq_compute_engine/mlir/python/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+larq_compute_engine-0.7.0.data/purelib/larq_compute_engine/mlir/python/converter.py,sha256=SCTJrgHSeklD8uCBy_dqxgy9elAb9biqW1qnSS4aWEA,11442
+larq_compute_engine-0.7.0.data/purelib/larq_compute_engine/mlir/python/tflite_schema.py,sha256=nYFLuPmdf38F60NiCydP8yTUQSA_U3k47qPyqa3UOks,408507
+larq_compute_engine-0.7.0.data/purelib/larq_compute_engine/mlir/python/util.py,sha256=7WbSPjxBecSpubn17-CHyyeCz0cYJHKjboT_LBFWYrA,15081
+larq_compute_engine-0.7.0.data/purelib/larq_compute_engine/tflite/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+larq_compute_engine-0.7.0.data/purelib/larq_compute_engine/tflite/python/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+larq_compute_engine-0.7.0.data/purelib/larq_compute_engine/tflite/python/interpreter.py,sha256=X7ObfH3E7SaxutfXoRdHb1HtQ2I6RqaLPJgfVIPNFhQ,2285
+larq_compute_engine-0.7.0.data/purelib/larq_compute_engine/tflite/python/interpreter_base.py,sha256=uL4a2LfCkNsEhh_1gP7e7P2HDeZjNO8BzGTRPonDBZo,3247
+larq_compute_engine-0.7.0.data/purelib/larq_compute_engine/tflite/python/interpreter_wrapper_lite.pyd,sha256=g1gOcXlQDVWgTtPxdvG6Li_ANchkOddMAEfWr5Angtk,2285568
+larq_compute_engine-0.7.0.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+larq_compute_engine-0.7.0.dist-info/METADATA,sha256=ZsXH1S_xkR3xJKfFwMayx0gTpGw1jo0msKMi2gRjxLw,10048
+larq_compute_engine-0.7.0.dist-info/WHEEL,sha256=fVcVlLzi8CGi_Ul8vjMdn8gER25dn5GBg9E6k9z41-Y,100
+larq_compute_engine-0.7.0.dist-info/top_level.txt,sha256=InE06LtZpTtDpzQ5h7FWAiWN87wtJ0dpGq_FzjLVLyU,20
+larq_compute_engine-0.7.0.dist-info/RECORD,,
