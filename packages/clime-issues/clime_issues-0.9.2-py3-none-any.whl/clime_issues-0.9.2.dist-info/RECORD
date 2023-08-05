@@ -1,0 +1,13 @@
+clime_issues/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clime_issues/args.py,sha256=wg-c-pWuD8ePxf63TZxJfbjJnEhqgDanxBukzBIwdXw,6248
+clime_issues/bugzilla.py,sha256=ggFfkr3_LuAk001fI4rJQvryhe3ruUWNXQjMGd1E4xg,977
+clime_issues/github.py,sha256=EIthrRJH2WpUc09GmyZ3RqcFxJ-pV4k3d6jH6XraWtE,3463
+clime_issues/gitlab.py,sha256=hrjvE2D0l5pYxWSLpRBZqg2Z05UPSZaQGlNdkv2mjF4,3045
+clime_issues/graph.py,sha256=iTlHMbEayzVAp4pgy07LaFICFJuCecXP2AeAP3vFGOg,1704
+clime_issues/version.py,sha256=X3xnpkpNTulKLnj1gjFkAeQ6eQihXJ_V7afZDB4nbeE,62
+clime_issues-0.9.2.dist-info/LICENSE,sha256=HfZeEdCZOlB4t1x4L1Li1jIBF7H2ks5zdfsNVw_ieoM,1539
+clime_issues-0.9.2.dist-info/METADATA,sha256=32zUOX626mVy7rR-BT4ziP8RWl9oDiwQWXzE2AiGek8,6516
+clime_issues-0.9.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+clime_issues-0.9.2.dist-info/entry_points.txt,sha256=ryuEmCy4vDl9CTPDqitOX5aw7KHRJLut_Sl0OL_n1UY,194
+clime_issues-0.9.2.dist-info/top_level.txt,sha256=XqcsoM-JgNPoRb2YKJBOsihoAljvSM_bupNhEsFXxSo,13
+clime_issues-0.9.2.dist-info/RECORD,,
