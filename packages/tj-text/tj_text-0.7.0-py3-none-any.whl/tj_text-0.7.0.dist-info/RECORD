@@ -1,0 +1,11 @@
+tj_text/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tj_text/typograph/__init__.py,sha256=XD7IrwoSiEDB_aY6g3q7YaTlazj-GlB1alflZu9qX94,466
+tj_text/typograph/chars.py,sha256=BumEuZSQBhsz2qKAoHC1GENnoVJ31CCNye8oWF0tsqE,666
+tj_text/typograph/constants.py,sha256=MV6-9Rs9yh1esAuv7BTogC4p-bvzZG3EplCo6ituNjE,996
+tj_text/typograph/core.py,sha256=8QWT58uwQQhl58_67C3qiP2lAMlIgde4FCvPS4iUF4I,991
+tj_text/typograph/mixins.py,sha256=2oWj2CJZ4h5IbpaMvWgA82MFY7vw2fsROf6eVQHMrcM,16146
+tj_text/typograph/processors.py,sha256=JavMTnWf_StePA2uV99RgvzgYrv_Kbhi_72kudPqWvU,8811
+tj_text/typograph/utils.py,sha256=67luDwT7kV_b9ojxOkFm24m8lNFRsjS0n0RmNh-n_X4,3647
+tj_text-0.7.0.dist-info/WHEEL,sha256=4TfKIB_xu-04bc2iKz6_zFt-gEFEEDU_31HGhqzOCE8,81
+tj_text-0.7.0.dist-info/METADATA,sha256=N-FFyYcBKf9VfvahGrEI03LuYPto5YSphjS88qLVcko,1162
+tj_text-0.7.0.dist-info/RECORD,,
