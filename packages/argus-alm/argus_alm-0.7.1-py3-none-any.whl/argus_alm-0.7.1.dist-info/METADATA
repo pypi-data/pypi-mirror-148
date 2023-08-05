@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: argus-alm
+Version: 0.7.1
+Summary: Argus
+License: Apache
+Author: Alexey Kartashov
+Author-email: alexey.kartashov@scylladb.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: PyYAML (==5.4.1)
+Requires-Dist: pydantic (==1.8.2)
+Requires-Dist: scylla-driver (==3.24.8)
