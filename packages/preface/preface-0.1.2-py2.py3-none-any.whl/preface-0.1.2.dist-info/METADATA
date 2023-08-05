@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: preface
+Version: 0.1.2
+Summary: Some helper functions and classes that I want in nearly every project.
+Author-email: Samuel Stevens <samuel.robert.stevens@gmail.com>
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Project-URL: Home, https://github.com/samuelstevens/preface
+
+# Python Preface
+
+There are some basic utility functions that I'd like to be global in Python, and some utility types.
+Stuff like getting any element from a set, flattening a list, etc.
+
+These functions should be appropriately named but also not conflict with other names in the global space.
+
+The name is a joke based on Haskell's prelude.
+
