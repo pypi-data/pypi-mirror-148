@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "farmer-pytorch"
+version = "0.3.0"
+license = "MIT"
+repository = "https://github.com/aiorhiroki/farmer.pytorch"
+homepage = "https://github.com/aiorhiroki/farmer.pytorch"
+description = "deep learning tools: easy to run, easy to customize"
+authors = ["aiorhiroki <1234defgsigeru@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.8,<4.0"
+numpy = "^1.22.3"
+Pillow = "^9.1.0"
+torch = "^1.11.0"
+matplotlib = "^3.5.1"
+
+
+[tool.poetry.dev-dependencies]
+flake8 = "^3.9.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
