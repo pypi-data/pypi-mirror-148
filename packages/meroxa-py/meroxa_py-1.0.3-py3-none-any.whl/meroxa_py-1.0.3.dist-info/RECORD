@@ -1,0 +1,15 @@
+meroxa/__init__.py,sha256=O2e8iRdf7vYebyig1j3BOR_NvZ-ssE1sLm05rAGkVwI,1196
+meroxa/client.py,sha256=nN-3ceRClhYhxxui9pC_RdyWV31m-5hqNyiVGmXdpYQ,1368
+meroxa/connectors.py,sha256=Y1bbUJ8lIeByDbjApfH3dPw-mekEBUcwHiY8GeTGKy8,3943
+meroxa/constants.py,sha256=njbhC98e6IxL1uFY1U6ZnZApFbynI1p47qvwVjnPCRk,120
+meroxa/functions.py,sha256=D1wPA8Hat3nipOiVRBLKOW2XaIaRO0oJphmmmmdMh5M,2791
+meroxa/pipelines.py,sha256=tjelFlLL3etSb-_JJJirEVGQOhatAOb_kydcm9vy3Wk,3531
+meroxa/resources.py,sha256=39QMfCavFUU7QEYCheIWDR1PBRq5TLwCRVyMElcKGqA,5017
+meroxa/types.py,sha256=j-57s9joR0QlyrhyVcv3acLRU6NvbQUiiCasglIXrUI,1043
+meroxa/users.py,sha256=ht9wp3I5QaXYA--RI0BlNIeWbirGyrufhIR-jfQvNRU,954
+meroxa/utils.py,sha256=_4BVpJA6mU1-vVJU0IsfV-gvY8iUmRApW9U-bWPiWtY,1252
+meroxa_py-1.0.3.dist-info/LICENSE.md,sha256=v6L0fYZ9uXp1EFEXMYXeuacenRUaH2B4U1XFCLzfZ2Q,1068
+meroxa_py-1.0.3.dist-info/METADATA,sha256=9dzzvw5jRyNw_Hz5r3t5Kz-70MvlwRHo33-1iu_M_A0,1152
+meroxa_py-1.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+meroxa_py-1.0.3.dist-info/top_level.txt,sha256=GZoIu6KJO6Nlvf5Piz0OwR0kRg3L2UffYE_Ed5oU2u4,7
+meroxa_py-1.0.3.dist-info/RECORD,,
