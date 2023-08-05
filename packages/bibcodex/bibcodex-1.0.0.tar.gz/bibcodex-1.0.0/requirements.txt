@@ -1,0 +1,17 @@
+# API access
+
+requests
+biopython # Entrez (PUBMED)
+pandas
+bs4
+lxml
+
+# pip install git+git://github.com/titipata/pubmed_parser.git
+unidecode
+
+# Caching
+
+diskcache
+brotlicffi
+
+# CLI logging
