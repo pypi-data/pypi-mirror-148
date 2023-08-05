@@ -1,0 +1,7 @@
+paramiko
+pyvisa
+pywinauto
+goto-statement
+goto-label
+pyqt6
+pywin32
