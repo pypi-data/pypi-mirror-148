@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: rhealpix-sf
+Version: 0.4.1
+Summary: This library contains functions for evaluating Simple Feature relations between DGGS Cells and sets of these.
+Author: david-habgood
+Author-email: david.habgood@surroundaustralia.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: rhealpix-geo (>=0.3.0,<0.4.0)
