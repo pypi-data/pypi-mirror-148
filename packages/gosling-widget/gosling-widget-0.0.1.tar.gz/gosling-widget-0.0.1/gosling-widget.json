@@ -1,0 +1,5 @@
+{
+  "load_extensions": {
+    "gosling-widget/extension": true
+  }
+}
