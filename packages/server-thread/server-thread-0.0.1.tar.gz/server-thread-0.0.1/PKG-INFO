@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: server-thread
+Version: 0.0.1
+Summary: Launch a WSGIApplication in a background thread with werkzeug.
+Home-page: https://github.com/banesullivan/server-thread
+Author: Bane Sullivan
+Author-email: banesullivan@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Server Thread
+
+Launch a WSGIApplication in a background thread with werkzeug.
+
+
