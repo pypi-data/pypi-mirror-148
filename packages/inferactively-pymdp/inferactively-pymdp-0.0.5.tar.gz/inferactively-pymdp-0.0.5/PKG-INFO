@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: inferactively-pymdp
+Version: 0.0.5
+Summary: A Python package for solving Markov Decision Processes with Active Inference
+Home-page: https://github.com/infer-actively/pymdp
+Author: infer-actively
+Author-email: conor.heins@gmail.com
+License: MIT
+Keywords: artificial intelligence,active inference,free energy principleinformation theory,decision-making,MDP,Markov Decision Process,Bayesian inference,variational inference,reinforcement learning
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >3.7
+License-File: LICENSE
+
+UNKNOWN
+
