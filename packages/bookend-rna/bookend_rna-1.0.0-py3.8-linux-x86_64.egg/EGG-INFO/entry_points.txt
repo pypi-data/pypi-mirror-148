@@ -1,0 +1,3 @@
+[console_scripts]
+bookend = bookend.__main__:main
+
