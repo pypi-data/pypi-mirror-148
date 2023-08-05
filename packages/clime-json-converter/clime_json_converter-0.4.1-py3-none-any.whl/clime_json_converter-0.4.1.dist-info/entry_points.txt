@@ -1,0 +1,2 @@
+[console_scripts]
+clime-json-converter = clime_json_converter.main:main
