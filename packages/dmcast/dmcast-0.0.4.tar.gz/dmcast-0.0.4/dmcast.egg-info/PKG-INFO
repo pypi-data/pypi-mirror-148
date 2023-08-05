@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: dmcast
+Version: 0.0.4
+Summary: simple chromecast utility
+Home-page: https://github.com/xlfe/dmcast
+License: EPL
+Keywords: python,chromecast,internet-of-things,chromecast-audio,cast
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Eclipse Public License 2.0 (EPL-2.0)
+Classifier: Programming Language :: Python :: 3.9
+License-File: LICENSE
+
+UNKNOWN
+
