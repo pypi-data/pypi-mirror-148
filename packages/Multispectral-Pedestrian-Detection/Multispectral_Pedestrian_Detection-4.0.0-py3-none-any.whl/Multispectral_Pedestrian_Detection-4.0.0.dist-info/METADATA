@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: Multispectral-Pedestrian-Detection
+Version: 4.0.0
+Summary: Repo contatining code for testing MPD using CFT based method on your input video
+Author: Sravan A Dinesh
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: matplotlib (>=3.2.2)
+Requires-Dist: numpy (>=1.18.5)
+Requires-Dist: opencv-python (>=4.1.2)
+Requires-Dist: Pillow
+Requires-Dist: PyYAML (>=5.3.1)
+Requires-Dist: scipy (>=1.4.1)
+Requires-Dist: torch (==1.10.1)
+Requires-Dist: torchvision (==0.11.2)
+Requires-Dist: tqdm (>=4.41.0)
+Requires-Dist: tensorboard (>=2.4.1)
+Requires-Dist: seaborn (>=0.11.0)
+Requires-Dist: pandas
+Requires-Dist: thop
+Requires-Dist: pycocotools (>=2.0)
+
+UNKNOWN
+
