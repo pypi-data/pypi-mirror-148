@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: jupyterlab_friendly_traceback
+Version: 0.1.0
+Summary: Add a boutton to activate/deactivate friendly traceback
+Home-page: https://forge.extranet.logilab.fr/open-source/jupyterlab-friendly-traceback
+Author: Logilab
+Author-email: ogiorgis@logilab.fr
+License: BSD-3-Clause
+Keywords: Jupyter,JupyterLab,JupyterLab3
+Platform: Linux
+Platform: Mac OS X
+Platform: Windows
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Framework :: Jupyter
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# A JupyterLab extension for friendly traceback
+
+This extension adds a toggle on/off button to Jupyter Lab, that activates/deactivate friendly traceback
+
+To install the extension, execute
+```shell
+pip install .
+```
+
+
