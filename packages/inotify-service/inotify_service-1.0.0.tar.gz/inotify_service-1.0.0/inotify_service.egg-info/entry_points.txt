@@ -1,0 +1,3 @@
+[console_scripts]
+inotify-service-start = inotify_service:run
+
