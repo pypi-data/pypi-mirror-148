@@ -1,0 +1,9 @@
+site_name: Infra Surveyor
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - yaml
+    - rust
+    - python
+    - bash
