@@ -1,0 +1,2 @@
+[console_scripts]
+pypicontents = pypicontents.cli:main
