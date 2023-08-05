@@ -1,0 +1,8 @@
+README.md
+setup.py
+RequestsHelper/__init__.py
+RequestsHelper.egg-info/PKG-INFO
+RequestsHelper.egg-info/SOURCES.txt
+RequestsHelper.egg-info/dependency_links.txt
+RequestsHelper.egg-info/requires.txt
+RequestsHelper.egg-info/top_level.txt
