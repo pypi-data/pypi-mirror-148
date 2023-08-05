@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: lc-data-libs
+Version: 0.1.13
+Summary: Usefull library for lc operations
+Home-page: https://bitbucket.org/luckycart/lc-data
+Author: lc-data
+Author-email: data@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: google-cloud-logging (~=3.0.0)
+Requires-Dist: google-cloud-dataproc (~=4.0.0)
+Requires-Dist: google-cloud-pubsub (~=2.11.0)
+
+This is a library for helpfull functions to use with CFs
+
