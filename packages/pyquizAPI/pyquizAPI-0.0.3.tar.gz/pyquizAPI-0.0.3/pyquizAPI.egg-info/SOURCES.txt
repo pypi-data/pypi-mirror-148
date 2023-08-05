@@ -1,0 +1,9 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+pyquizAPI.egg-info/PKG-INFO
+pyquizAPI.egg-info/SOURCES.txt
+pyquizAPI.egg-info/dependency_links.txt
+pyquizAPI.egg-info/requires.txt
+pyquizAPI.egg-info/top_level.txt
