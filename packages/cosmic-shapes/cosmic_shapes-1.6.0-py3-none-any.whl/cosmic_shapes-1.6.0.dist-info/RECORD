@@ -1,0 +1,17 @@
+cosmic_shapes/__init__.py,sha256=E35EnOUV-Z_Wu3O5cifc-ZPYvMIDFBKSVNJqzdnSzgo,150
+cosmic_shapes/cosmic_shapes.pyx,sha256=MZLkFFBHqwWjK4PB9M9YRcnlV7A-V0lU-uaDssx7u9Q,119744
+cosmic_shapes/cython_helpers.pxd,sha256=VoeXikRnLLkjZL4MbJc58VIpQNG0tB2KcnL6uzG9YC4,581
+cosmic_shapes/cython_helpers.pyx,sha256=z1X-YIsugwA3FWcn2Evl3FkyU_gUJGpWj7FrIrNsShw,6559
+cosmic_shapes/gen_csh_gx_cat.pyx,sha256=uUo0omVS3rfw8-7MG-JYvvR70lzp0udA5JNt3v4U46c,10389
+cosmic_shapes/get_hdf5.py,sha256=oY4gcBXSiobzxqQ449NvMIQb-5F3gDcWWNCbftYd2Ak,23842
+cosmic_shapes/python_helpers.py,sha256=xNxV_Kwz9ivVCcZA__iIFXYvzYgOd3LA-RGW0RSJk3s,13964
+cosmic_shapes/setup.py,sha256=Vc2vcBSffSLNFJc0Bia5raKMKDH-UlAyFnNmnmBpQb0,2182
+cosmic_shapes/shape_analysis.py,sha256=fvJFRPCJ8BwEjKfpYQKkqLjE9Dr_c4jFIQgC3G65ekw,36408
+cosmic_shapes/for_docs/cosmic_shapes.pyx,sha256=tXiHW73b5Tx0HSO5B2lNVAAK3et39lYkhJDBMz2Vsro,42577
+cosmic_shapes/for_docs/cython_helpers.pxd,sha256=sqEyJ51vtZuGNSbMePVyX_oh6112MJCJpOFA9bwEnhQ,587
+cosmic_shapes/for_docs/cython_helpers.pyx,sha256=tSC8quWF8LqtEpyJ6Diik5zpg5ilP7S4kPQIFAoxJ84,6207
+cosmic_shapes/for_docs/gen_csh_gx_cat.pyx,sha256=Jxq0wB9z99uj6Km7x3ZKLmTMGe4VdG4LEsOgfopTwUM,10215
+cosmic_shapes-1.6.0.dist-info/METADATA,sha256=Ws1qp7sMP2xMoqEgkGg-BzbmjkRjOJty0Ywr_mTHg3M,1601
+cosmic_shapes-1.6.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+cosmic_shapes-1.6.0.dist-info/top_level.txt,sha256=BYq00SmGsMa3caVkPQ1L63YgO_oH4YwEVhMe24HEVH0,14
+cosmic_shapes-1.6.0.dist-info/RECORD,,
