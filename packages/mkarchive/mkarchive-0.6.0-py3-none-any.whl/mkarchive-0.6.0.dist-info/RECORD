@@ -1,0 +1,14 @@
+archiver/__init__.py,sha256=5PRikWDzRZaonuVjvIl0XeFuWzVD3ib4M0TqO3u_9LQ,18
+archiver/mkarchive.py,sha256=PfjB1am9e9ndJvnVTpX3VScP5CPmkB54R1ZE-T5HclE,6852
+archiver/selfextract0.c,sha256=9aFLP88rjnrKAXHMBzBDEIXPxG4m6QuCDLtDpUO7D8M,10584
+archiver/setup.sh,sha256=3yGezv14GzfEg7mEjn_1pSnZQWzHkmPQ-02lKA23pCU,405
+installer/__init__.py,sha256=TWXKiez8xAaucBD4vrY_UVA57kGwii9ELjA9rj7m7Ls,41
+installer/smartsetup.py,sha256=M2cZdtENTKk6qsqOuOX6Q9doIcQOL7KkLZpTYJ9LVZ4,5340
+mkarchive-0.6.0.data/data/archiver/selfextract0.c,sha256=9aFLP88rjnrKAXHMBzBDEIXPxG4m6QuCDLtDpUO7D8M,10584
+mkarchive-0.6.0.data/data/archiver/setup.sh,sha256=3yGezv14GzfEg7mEjn_1pSnZQWzHkmPQ-02lKA23pCU,405
+mkarchive-0.6.0.dist-info/LICENSE,sha256=508K8x7Sl6sMQN6ISajWUSG_1LO5qdqxztQ-1lNdccQ,1070
+mkarchive-0.6.0.dist-info/METADATA,sha256=pNQyPQPmzSfFipopng1g6Lf9NBi8QfTrygZgoEB_luY,9018
+mkarchive-0.6.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+mkarchive-0.6.0.dist-info/entry_points.txt,sha256=yub9f56Elft2x7xN0vD1dTCRt3c8Wx948rt0XuXAZsk,93
+mkarchive-0.6.0.dist-info/top_level.txt,sha256=kYitpXmHp7s9_s3C8ZiI94eeWk8BlkXuHq60huKKDr4,19
+mkarchive-0.6.0.dist-info/RECORD,,
