@@ -1,0 +1,15 @@
+platform_utils/__init__.py,sha256=MlVmqVzq3RhJSr-IzgmkLyGLOgcCWHWIieZPHo382FQ,38
+platform_utils/blackhole.py,sha256=k_XWqcB-KJvIHEC6HzenJzwfMLAttM87HhgLqu3OfdE,492
+platform_utils/clipboard.py,sha256=dnTem-ICFPKibnKV4VzU5RAzodLHRgMdUJnH2ag8rV4,1829
+platform_utils/idle.py,sha256=DZcyTww9q8VtTU-xVYNuDq5-uEAjqbDh6-urmccD1Y0,1258
+platform_utils/paths.py,sha256=GHfYqttqLcQuLY8rQ9P7gklm9JxauILk0QkTMNPj60c,4122
+platform_utils/process.py,sha256=JE-fqA5JSAZvEuXv_A5xMP9BG-xiwkwfM-9TF1WySbQ,671
+platform_utils/shell_integration/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+platform_utils/shell_integration/windows.py,sha256=xz8qEFeq3kKFq1M7HMFgAoccl2-r8OITZb8gaz9MocM,602
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_paths.py,sha256=zWHI1GndKy7LkjLMsFMcWEeA4TbKXk8UahPqqIwUFos,218
+bp_platform_utils-0.41.dist-info/LICENSE,sha256=xodLWMPbCln9V5NfwRW47aGJUjNJXIe1hsEUL7tZGcI,1077
+bp_platform_utils-0.41.dist-info/METADATA,sha256=zFEC-9UaRdqy-khPM_ssb5Y9XqKXUmKYz-Do7w8e74w,870
+bp_platform_utils-0.41.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+bp_platform_utils-0.41.dist-info/top_level.txt,sha256=A__Gsrfo7-9sX52EByQnNe4Ns-y3INCkBsnOtMIUr6w,21
+bp_platform_utils-0.41.dist-info/RECORD,,

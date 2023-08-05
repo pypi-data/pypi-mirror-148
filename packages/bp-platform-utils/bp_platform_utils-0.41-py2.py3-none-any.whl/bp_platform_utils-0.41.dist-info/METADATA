@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: bp-platform-utils
+Version: 0.41
+Summary: Cross-platform utilities for accomplishing some tasks that the stdlib is not equipped to provide.
+Home-page: https://github.com/blindpandas/bp-platform_utils
+Author: Blind Pandas Team (original: Christopher Toth<q@q-continuum.net>)
+Author-email: info@blindpandas.com
+License: MIT
+Keywords: os path system
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: pywin32 (==303) ; sys_platform == "win32"
+Requires-Dist: bp-winpaths (==0.2) ; sys_platform == "win32"
+
+UNKNOWN
+
