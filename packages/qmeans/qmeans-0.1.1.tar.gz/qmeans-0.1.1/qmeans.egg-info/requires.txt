@@ -1,0 +1,12 @@
+wheel
+twine
+setuptools
+numpy
+pandas
+qiskit
+sklearn
+pytest
+hypothesis
+sphinx
+sphinx-rtd-theme
+sphinxcontrib-napoleon
