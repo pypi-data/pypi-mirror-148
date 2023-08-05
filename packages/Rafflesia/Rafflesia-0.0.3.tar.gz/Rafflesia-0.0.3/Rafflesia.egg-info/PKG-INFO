@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: Rafflesia
+Version: 0.0.3
+Summary: Rafflesia Framework
+Home-page: https://github.com/QU4R7Z/Rafflesia
+Author: QU4R7Z
+Author-email: shio7113@gmail.com
+License: UNKNOWN
+Description: # Rafflesia
+        Rafflesia Framework
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
