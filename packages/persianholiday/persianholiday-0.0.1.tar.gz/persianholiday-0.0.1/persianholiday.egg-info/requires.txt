@@ -1,0 +1,5 @@
+requests
+pandas
+jdatetime
+convert-numbers
+beautifulsoup4

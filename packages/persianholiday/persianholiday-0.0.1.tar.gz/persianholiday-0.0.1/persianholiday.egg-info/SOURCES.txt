@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+persianholiday/__init__.py
+persianholiday/core.py
+persianholiday/utils.py
+persianholiday.egg-info/PKG-INFO
+persianholiday.egg-info/SOURCES.txt
+persianholiday.egg-info/dependency_links.txt
+persianholiday.egg-info/requires.txt
+persianholiday.egg-info/top_level.txt
