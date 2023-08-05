@@ -1,0 +1,11 @@
+setup.py
+manufacturing/__init__.py
+manufacturing/analysis.py
+manufacturing/data_import.py
+manufacturing/report.py
+manufacturing/util.py
+manufacturing/visual.py
+manufacturing.egg-info/PKG-INFO
+manufacturing.egg-info/SOURCES.txt
+manufacturing.egg-info/dependency_links.txt
+manufacturing.egg-info/top_level.txt
