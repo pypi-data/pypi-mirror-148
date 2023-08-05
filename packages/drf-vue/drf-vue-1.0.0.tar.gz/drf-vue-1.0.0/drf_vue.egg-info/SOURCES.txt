@@ -1,0 +1,11 @@
+LICENSE.md
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+drf_vue.egg-info/PKG-INFO
+drf_vue.egg-info/SOURCES.txt
+drf_vue.egg-info/dependency_links.txt
+drf_vue.egg-info/not-zip-safe
+drf_vue.egg-info/requires.txt
+drf_vue.egg-info/top_level.txt
