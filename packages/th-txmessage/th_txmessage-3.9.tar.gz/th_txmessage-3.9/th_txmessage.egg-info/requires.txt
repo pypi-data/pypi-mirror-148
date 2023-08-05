@@ -1,0 +1,5 @@
+apscheduler
+qcloud-cmq-sdk-py3
+pywin32
+wmi
+requests
