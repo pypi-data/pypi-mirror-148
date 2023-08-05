@@ -1,0 +1,17 @@
+PQMusic/OpenSans.ttf,sha256=b3kUK-sCt9DhColtgwXWrsEJjyJTtxhi6xeQe0ca5tc,529672
+PQMusic/__init__.py,sha256=EufWxbZDBDFrUqcxSqv6OSI6eJzVm4kzoTCnguFrH88,5044
+PQMusic/icon.svg,sha256=KwYVaOfKvhX-PdQpJBsQkOeqM_ZSykh1iOpeNWNXpa4,5790
+PQMusic/images.qrc,sha256=5AMUgQ0E1sq_xWJJ_a2Jj0ha6jrQZzGIiXmObTPZY4k,869
+PQMusic/images_rc.py,sha256=9wvO4FPIOa6rYcT8nllFatnRUzuiyU3hYfoAShw-2Zk,257643
+PQMusic/no_cover.svg,sha256=eUL1upycq6Uj9nGYvllSKdr9BE5lGu5CTxZQ5Y2o-xE,11295
+PQMusic/player.py,sha256=9mhm3Bh1bX3oWfXyoh-7bZZKVXEbyV0cluU6-YG7gLo,7555
+PQMusic/style.qss,sha256=Czqn3A2MtmINAIGL3UFMH4KA9N9LNA8AauJ7qmd9CUk,11128
+PQMusic/utils.py,sha256=8fm93WMHY98IhrJ_cSbWOhT41yS_MunXKuFobgksMDc,847
+PQMusic/ui/Ui_gui.py,sha256=G8s3qsijVERW57twE6x--evOSeqNOw1KFR6nxgeb36s,11217
+PQMusic/ui/images_rc.py,sha256=9wvO4FPIOa6rYcT8nllFatnRUzuiyU3hYfoAShw-2Zk,257643
+pqmusic-0.1.0.data/scripts/pqmusic,sha256=WN2HOPiJ3z4aAuiVBo44Ri2aabbBboxeKVuL31CKTAU,39
+pqmusic-0.1.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pqmusic-0.1.0.dist-info/METADATA,sha256=nuRW_eegGojf6RDYM9u7vh5_W5KIsYD9jtKZjoDlVY8,3368
+pqmusic-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pqmusic-0.1.0.dist-info/top_level.txt,sha256=epf5IRCR2pLCk5uK4MvTYVQiODvAJIQIaU23BwKlBDI,8
+pqmusic-0.1.0.dist-info/RECORD,,
