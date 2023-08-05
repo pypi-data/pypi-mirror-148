@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+./addlogo/__init__.py
+./addlogo/addlogo.py
+addlogo.egg-info/PKG-INFO
+addlogo.egg-info/SOURCES.txt
+addlogo.egg-info/dependency_links.txt
+addlogo.egg-info/top_level.txt

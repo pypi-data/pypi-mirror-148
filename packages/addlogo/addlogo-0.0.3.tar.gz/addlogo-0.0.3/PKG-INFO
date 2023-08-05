@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: addlogo
+Version: 0.0.3
+Summary: Add logo.
+Home-page: https://github.com/ternaus/add_logo
+Author: Vladimir Iglovikov
+Author-email: iglovikov@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Add logo to the image
+
+![](https://habrastorage.org/webt/t4/yz/2l/t4yz2luttp2ehpyju-wnao0vhac.jpeg)
+
+Logo is added to the bottom right of the image.
+
+## Install
+```
+pip install -U add_logo
+```
+
+## Use
+
+```
+image_with_logo = add_logo(image, logo, factor)
+```
+
+where `image` and `logo` are numpy arrays and `factor` is the target `logo_height` / `image_height`.
+
+
