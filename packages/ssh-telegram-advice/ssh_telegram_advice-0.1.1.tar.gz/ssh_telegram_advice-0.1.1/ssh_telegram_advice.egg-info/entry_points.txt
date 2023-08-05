@@ -1,0 +1,2 @@
+[console_scripts]
+ssh_telegram_advice = ssh_telegram_advice.core:main
