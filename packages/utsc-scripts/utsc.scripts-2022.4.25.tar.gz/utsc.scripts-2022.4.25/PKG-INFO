@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: utsc.scripts
+Version: 2022.4.25
+Summary: a collection of scripts and one-off tools
+License: MIT
+Author: Alex Tremblay
+Author-email: alex.tremblay@utoronto.ca
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: prompt-toolkit (>=3.0.19)
+Requires-Dist: pydantic (>=1.9.0)
+Requires-Dist: pyquery (>=1.4.0)
+Requires-Dist: requests (>=2.20.0)
+Requires-Dist: rich (>=10.7.0)
+Requires-Dist: utsc.core
