@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: dupdict-mod
+Version: 1.1.1
+Summary: Pure Python dictionary wrapper that allows duplicates
+Home-page: http://stromberg.dnsalias.org/~strombrg/dupdict_mod/
+Author: Daniel Richard Stromberg
+Author-email: strombrg@gmail.com
+License: Apache v2
+Description: 
+        A Pure Python dictionary wrapper that allows duplicate keys is provided.
+        
+        It passes pylint, passes pep8, is thoroughly unit tested, and runs on CPython 3.3 - 3.10,
+        Pypy3 3.9 7.3.9.
+        
+        It can wrap a python dict(), https://pypi.org/project/treap/ or https://pypi.org/project/red-black-tree-mod/ - among other
+        things.
+        
+Keywords: dictionary duplicate keys
+Platform: Cross platform
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
