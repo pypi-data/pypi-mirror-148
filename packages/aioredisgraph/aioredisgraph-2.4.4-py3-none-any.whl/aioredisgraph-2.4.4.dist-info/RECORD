@@ -1,0 +1,13 @@
+aioredisgraph/__init__.py,sha256=7PlY4_u9iljfexOSOOftE_8RFBcr4RovOGncCalQxqw,136
+aioredisgraph/edge.py,sha256=uOd8LyItYtslQgTcOQekx-eF3xU9EGAhXYkizk4eBgg,2292
+aioredisgraph/exceptions.py,sha256=jjppzyuVMeDpCywzReaAnJwiyIBmxFccD7-6i__7C54,108
+aioredisgraph/execution_plan.py,sha256=TNCgRfcUsnONWHorsBAh-1vnPpNbDQ3rD6P8-24GdQc,6383
+aioredisgraph/graph.py,sha256=lF6byeyFRthPi3-y5iC3LwfDpeI2U56nljhVEHTk49M,10140
+aioredisgraph/node.py,sha256=9nm7fvHbidwcG9wvEdUa1_n_RwW7TWm7mLf8-UOr1Os,2108
+aioredisgraph/path.py,sha256=Fb3dDmKxJBvhNtKnUESO5CzozEQnHuTYjOKHqsZ4pMs,1926
+aioredisgraph/query_result.py,sha256=QkkrLLSiBHC1yL94pHolvIheHj3EXiV6lb0NatB6848,10845
+aioredisgraph/util.py,sha256=wythAVTGowzagurZ5Dcf-86QXQEAo75W980z3Qr4AVo,1518
+aioredisgraph-2.4.4.dist-info/LICENSE,sha256=mrBlaIIpsoYBOgr4LJBwUN-dzTIMyHXII8oFIK1ioio,1505
+aioredisgraph-2.4.4.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+aioredisgraph-2.4.4.dist-info/METADATA,sha256=-sbzSc5G-XLN5Ar7nWPcJbawUqQ8EVr1_IDxZfkSUo8,4796
+aioredisgraph-2.4.4.dist-info/RECORD,,
