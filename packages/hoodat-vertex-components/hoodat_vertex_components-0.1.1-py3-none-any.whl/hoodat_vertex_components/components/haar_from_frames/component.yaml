@@ -1,0 +1,70 @@
+name: Haar from frames func
+inputs:
+- {name: cascade_file_path, type: String}
+- {name: frames_dir, type: String}
+- {name: output_dir, type: String}
+implementation:
+  container:
+    image: europe-west1-docker.pkg.dev/hoodat-sandbox/hoodat-sandbox-kfp-components/haar_from_frames
+    command:
+    - sh
+    - -ec
+    - |
+      program_path=$(mktemp)
+      printf "%s" "$0" > "$program_path"
+      python3 -u "$program_path" "$@"
+    - "def haar_from_frames_func(\n    cascade_file_path, frames_dir, output_dir,\n\
+      ):\n    #######################################\n    # Imports\n    #######################################\n\
+      \    import cv2\n    import pandas as pd\n    #######################################\n\
+      \    # Config\n    #######################################\n    #######################################\n\
+      \    # Functions\n    #######################################\n    # Load cascade\
+      \ file\n    def load_cascades(cascade_file_path):\n        haar_frames_dir =\
+      \ \"/usr/local/share/opencv4/haarcascades/\"\n        cascades_df = pd.read_csv(cascade_file_path)\n\
+      \        cascades = []\n        for index, row in cascades_df.iterrows():\n\
+      \            cascade = {\n                \"id\": index,\n                \"\
+      name\": row[\"name\"],\n                \"haar\": cv2.CascadeClassifier(f\"\
+      {haar_frames_dir}/{row['file']}\")\n            }\n            cascades.append(cascade)\n\
+      \        print(\"Cascades:\")\n        print(cascades)\n        return cascades\n\
+      \    #\_Parse frame with single haar cascade\n    def haar_from_frame(frame_path,\
+      \ frame_number, output_dir, cascades):\n        if not os.path.isdir(output_dir):\n\
+      \            os.makedirs(output_dir)\n        if not os.getcwd() == output_dir:\n\
+      \            os.chdir(output_dir)\n        try:\n            # Read in the image\n\
+      \            img = cv2.imread(frame_path)\n            # Convert the colour\
+      \ image to grayscale\n            gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)\n\
+      \            # Detect things in the image\n            for i in range(len(cascades)):\n\
+      \                cascade = cascades[i]\n                matches = cascade[\"\
+      haar\"].detectMultiScale(gray, 1.3, 5)\n                num_found = len(matches)\n\
+      \                if (num_found > 0):\n                    print(\"Frame %s Cascade\
+      \ %s found: %s\" % (frame_number, cascade[\"name\"], num_found))\n         \
+      \           for (x, y, w, h) in matches:\n                        crop_img =\
+      \ img[y: (y + h), x: (x + w)]\n                        # NOTE: its img[y: y\
+      \ + h, x: x + w] and *not* img[x: x + w, y: y + h]\n                       \
+      \ save_name = \"f{0}c{1}x{2}y{3}w{4}h{5}.jpg\".format(frame_number, cascade[\"\
+      id\"], x, y, w, h)\n                        # save_path = \"{0}/\".format(output_dir,\
+      \ )\n                        cv2.imwrite(save_name, crop_img)\n        except\
+      \ Exception as e:\n            print(\"Uh oh error on frame {0}\".format(frame_number))\n\
+      \            print(e)\n            raise\n    #\_Run haar_from_frame on directory\
+      \ of frames\n    def haar_from_frames(frames_dir, output_dir, cascades):\n \
+      \       frames_unsorted = os.listdir(frames_dir)\n        frames_order = [int(x.replace(\"\
+      f\", \"\").replace(\".jpg\", \"\")) for x in frames_unsorted]\n        frame_list\
+      \ = [{\"number\": number, \"path\": \"{0}/{1}\".format(frames_dir, name)} for\
+      \ (number, name) in sorted(zip(frames_order, frames_unsorted))]\n        print(\"\
+      Number of frames in input_dir: {0}\".format(frame_list))\n        for frame\
+      \ in frame_list:\n            haar_from_frame(frame_path=frame[\"path\"], frame_number=frame[\"\
+      number\"], output_dir=output_dir, cascades=cascades)\n    #######################################\n\
+      \    # Main Process\n    #######################################\n    cascades\
+      \ = load_cascades(cascade_file_path=cascade_file_path)\n    haar_from_frames(frames_dir=frames_dir,\
+      \ output_dir=output_dir, cascades=cascades)\n\nimport argparse\n_parser = argparse.ArgumentParser(prog='Haar\
+      \ from frames func', description='')\n_parser.add_argument(\"--cascade-file-path\"\
+      , dest=\"cascade_file_path\", type=str, required=True, default=argparse.SUPPRESS)\n\
+      _parser.add_argument(\"--frames-dir\", dest=\"frames_dir\", type=str, required=True,\
+      \ default=argparse.SUPPRESS)\n_parser.add_argument(\"--output-dir\", dest=\"\
+      output_dir\", type=str, required=True, default=argparse.SUPPRESS)\n_parsed_args\
+      \ = vars(_parser.parse_args())\n\n_outputs = haar_from_frames_func(**_parsed_args)\n"
+    args:
+    - --cascade-file-path
+    - {inputValue: cascade_file_path}
+    - --frames-dir
+    - {inputValue: frames_dir}
+    - --output-dir
+    - {inputValue: output_dir}
