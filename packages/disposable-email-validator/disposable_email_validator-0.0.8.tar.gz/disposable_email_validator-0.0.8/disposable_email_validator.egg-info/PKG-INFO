@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: disposable-email-validator
+Version: 0.0.8
+Summary: Python library for disposable email validation
+Home-page: https://github.com/2dlab/disposable-email-validator
+Author: Gusarov Vladislav
+Author-email: tech@2dlab.ru
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# disposable-email-validator
+
+### installation
+
+```
+pip install disposable-email-validator
+```
+
+
+### usage
+
+```python
+from disposable_email_validator import is_disposable_email
+
+is_disposable_email("some_email@inpwa.com") # True
+is_disposable_email("some_email@gmail.com") # False
+```
+
+
+### uploading new fake emails
+
+```text
+1) update file /disposable_email_validator/disposable_emails (pickle file)
+2) increase version of the package in setup.py
+3) upload updated package to pypi
+4) change version of the package in backend repo
+```
+
