@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.cfg
+generated/ebbs/__init__.py
+generated/ebbs/__main__.py
+generated/ebbs/ebbs.py
+generated/ebbs.egg-info/PKG-INFO
+generated/ebbs.egg-info/SOURCES.txt
+generated/ebbs.egg-info/dependency_links.txt
+generated/ebbs.egg-info/entry_points.txt
+generated/ebbs.egg-info/requires.txt
+generated/ebbs.egg-info/top_level.txt
