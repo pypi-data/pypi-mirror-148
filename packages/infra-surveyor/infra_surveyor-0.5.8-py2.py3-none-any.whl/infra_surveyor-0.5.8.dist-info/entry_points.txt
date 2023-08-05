@@ -1,0 +1,3 @@
+[console_scripts]
+surveyor=infra_surveyor.commands:cli
+
