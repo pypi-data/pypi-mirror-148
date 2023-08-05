@@ -1,0 +1,7 @@
+discord.py
+aiohttp
+
+[voice]
+discord.py
+aiohttp
+youtube-dl
