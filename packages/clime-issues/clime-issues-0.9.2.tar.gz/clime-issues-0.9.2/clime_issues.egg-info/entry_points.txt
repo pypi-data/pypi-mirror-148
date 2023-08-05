@@ -1,0 +1,5 @@
+[console_scripts]
+clime-bz-issues = clime_issues.bugzilla:main
+clime-gh-issues = clime_issues.github:main
+clime-gl-issues = clime_issues.gitlab:main
+clime-issues-graph = clime_issues.graph:main
