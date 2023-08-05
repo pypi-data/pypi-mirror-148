@@ -1,0 +1,4 @@
+scapy
+aiohttp
+python-socketio
+python-engineio

@@ -1,0 +1,4 @@
+[console_scripts]
+iro = iro.Iro:main
+toori = toori.Toori:main
+
