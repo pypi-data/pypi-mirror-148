@@ -1,0 +1,3 @@
+[console_scripts]
+matrix-webcam = matrix_webcam.__main__:main
+

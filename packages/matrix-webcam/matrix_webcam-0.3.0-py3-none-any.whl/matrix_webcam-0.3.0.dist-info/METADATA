@@ -1,0 +1,84 @@
+Metadata-Version: 2.1
+Name: matrix-webcam
+Version: 0.3.0
+Summary: Displays your webcam video feed in the console.
+Home-page: https://github.com/joschuck/matrix-webcam
+Author: Johannes Schuck
+Author-email: jojoschuck@gmail.com
+License: MIT License        
+        Copyright (c) 2022 Johannes Schuck        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.        
+Keywords: matrix webcam opencv
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy (~=1.20)
+Requires-Dist: opencv-contrib-python (~=4.5)
+Requires-Dist: mediapipe (~=0.8)
+Requires-Dist: windows-curses (~=2.3) ; platform_system == "Windows"
+Provides-Extra: dev
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: black (~=22.3.0) ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+
+# matrix-webcam
+
+[![License MIT](https://img.shields.io/github/license/joschuck/matrix-webcam.svg)](https://github.com/joschuck/matrix-webcam/blob/main/LICENSE)
+[![issues](https://img.shields.io/github/issues/joschuck/matrix-webcam.svg)](https://github.com/joschuck/matrix-webcam/issues)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
+
+This package displays your webcam video feed in the console.
+
+Take your next video conference from within the matrix!
+
+![matrix-webcam demo](https://raw.githubusercontent.com/joschuck/matrix-webcam/main/doc/matrix-webcam02.gif)
+
+## Running it
+
+Make sure you have Python and pip installed. Installation using pip:
+
+    $ python -m pip install matrix-webcam
+    $ matrix-webcam
+
+Installing and running it from source:
+
+    $ git clone https://github.com/joschuck/matrix-webcam.git
+    $ cd matrix-webcam
+    $ python -m pip install .
+    $ matrix-webcam
+
+
+## Can I change the size or resolution
+
+Yes! Just add the desired width and height in characters to the command, i.e.
+
+    $ python main.py 120 30
+
+## Can I use this for Teams/Zoom/Skype etc.? 
+
+Yes! You can for example use [OBS Studio](https://obsproject.com/) together with the [Virtual webcam plugin](https://github.com/Fenrirthviti/obs-virtual-cam/releases).
+Then all you need to do is select the virtual webcam in Teams/Zoom/Skype.
+
+## License
+This project is licensed under the MIT License (see the `LICENSE` file for details).
+
+
