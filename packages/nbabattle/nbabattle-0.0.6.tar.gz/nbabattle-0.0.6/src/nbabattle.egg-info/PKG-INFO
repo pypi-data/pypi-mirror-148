@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: nbabattle
+Version: 0.0.6
+Summary: A lightweight python library to generate two nba team battle image.
+Home-page: https://github.com/cobenash/nba-battle-picture-generator
+Author: victor yang
+Author-email: victor.yang@hellosanta.com.tw
+License: MIT
+Project-URL: Bug Tracker, https://github.com/cobenash/nba-battle-picture-generator/issues
+Description: ![](src/nbabattle/demo/demo.png)
+        # Generate NBA battle Picture Generator
+        A lightweight python library to generate two nba team battle image.
+        
+        
+        ## Installation
+        ```shell
+        $ pip install nbabattle
+        ```
+        
+        ## Usage
+        ```python
+        from nbabattle import NbaBattle
+        
+        Photo = NbaBattle('GSW', 'DET')
+        battle = Photo.create_battle_image()
+        # Show an image
+        battle.show()
+        # Save to the folder
+        battle.save("generate/gsw-det.png")
+        ```
+        
+        ### Notice
+        Please use the team's abbreviation as the input.
+        
+Keywords: pypi,nbabattle,nba_battle
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Documentation
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
