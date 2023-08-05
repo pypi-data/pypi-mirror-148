@@ -1,0 +1,7 @@
+README.md
+setup.py
+Ecarx_APITest_2.egg-info/PKG-INFO
+Ecarx_APITest_2.egg-info/SOURCES.txt
+Ecarx_APITest_2.egg-info/dependency_links.txt
+Ecarx_APITest_2.egg-info/requires.txt
+Ecarx_APITest_2.egg-info/top_level.txt
