@@ -1,0 +1,9 @@
+README.md
+setup.py
+python-wps/__init__.py
+python-wps/hello-world.py
+python_MOUTAI.egg-info/PKG-INFO
+python_MOUTAI.egg-info/SOURCES.txt
+python_MOUTAI.egg-info/dependency_links.txt
+python_MOUTAI.egg-info/requires.txt
+python_MOUTAI.egg-info/top_level.txt
