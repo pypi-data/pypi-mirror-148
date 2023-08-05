@@ -1,0 +1,3 @@
+[console_scripts]
+clime-git-bus-factor-compute = clime_bus_factor.main:main
+clime-git-bus-factor-graph = clime_bus_factor.graph:main
