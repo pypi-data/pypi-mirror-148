@@ -1,0 +1,6 @@
+numpy
+scipy
+altair
+IPython
+gbm_autosplit
+sklearn_cv_pandas>=0.0.9
