@@ -1,0 +1,12 @@
+microfpga/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+microfpga/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+microfpga/_tests/test_controller.py,sha256=ORSEIc02SQTofkn2h0Y8DgRjQWueH-RwQol1i42e5a8,345
+microfpga/_tests/test_regint.py,sha256=LJpMebtzf7FeOnzXaVF_sy9E82ELFmzFqpCsqmqB8xY,3034
+microfpga/_tests/test_signals.py,sha256=VZYEkahK2HxAqtY8OA63GRHEv7AFhLs24dogGIfK5us,3668
+microfpga/controller.py,sha256=XIWrdShvSB6MN2cBQ4eoV1qfmYMmUcM-4GqJYxBC3Qw,22401
+microfpga/regint.py,sha256=BSSsUcMiY_C5qvyXBeOwmd5aRyQ4xy-WH0pfIIktwBY,5849
+microfpga/signals.py,sha256=K5kPCPoRmXee3rr2mbmmLQ6D3ow_y0YnMdCB97bPwf4,25932
+microfpga-3.1.0.dist-info/LICENSE.txt,sha256=WTpgN20kjLcHzX2-l57R87KYZ8R-nZDZJ1gHhls3tC0,1544
+microfpga-3.1.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+microfpga-3.1.0.dist-info/METADATA,sha256=ENrVP5YL3WdBSRJr7O_730L6DNUoLPYYqjvi1LPuWyE,2755
+microfpga-3.1.0.dist-info/RECORD,,
