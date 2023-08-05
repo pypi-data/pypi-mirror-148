@@ -1,0 +1,16 @@
+.gitignore
+LISENCE.txt
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+src/lighter_torch/__init__.py
+src/lighter_torch/package_info.py
+src/lighter_torch/scheduler_callbacks.py
+src/lighter_torch/trainer.py
+src/lighter_torch/utils.py
+src/lighter_torch.egg-info/PKG-INFO
+src/lighter_torch.egg-info/SOURCES.txt
+src/lighter_torch.egg-info/dependency_links.txt
+src/lighter_torch.egg-info/requires.txt
+src/lighter_torch.egg-info/top_level.txt

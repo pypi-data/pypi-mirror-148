@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: lighter-torch
+Version: 0.0.1
+Summary: A minimalistic alternative to PyTorch Lightning (no batteries included)
+Home-page: UNKNOWN
+Author: Vladimir Starostin
+Author-email: vladimir.starostin@uni-tuebingen.de
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# _lighter_torch_
+
+## A minimalistic alternative to PyTorch Lightning
+
+Reduces boilerplate code for ML with PyTorch. Main focus on unlimited data generation for the training.
+
+Under development.
+
