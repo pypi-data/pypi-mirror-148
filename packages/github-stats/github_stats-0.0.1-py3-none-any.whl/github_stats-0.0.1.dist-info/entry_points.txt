@@ -1,0 +1,2 @@
+[console_scripts]
+gitstats = github_stats.app:main
