@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+ruishi.egg-info/PKG-INFO
+ruishi.egg-info/SOURCES.txt
+ruishi.egg-info/dependency_links.txt
+ruishi.egg-info/requires.txt
+ruishi.egg-info/top_level.txt
