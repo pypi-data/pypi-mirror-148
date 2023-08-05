@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pyphoto
+Version: 0.0.1
+Summary: My first Python package
+Home-page: UNKNOWN
+Author: Makoto Hashimoto
+Author-email: <mhashimot@email.com>
+License: UNKNOWN
+Keywords: arpes
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+
+My first Python package with a slightly longer description
+

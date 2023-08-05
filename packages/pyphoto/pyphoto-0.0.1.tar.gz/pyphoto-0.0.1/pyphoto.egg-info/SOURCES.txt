@@ -1,0 +1,5 @@
+setup.py
+pyphoto.egg-info/PKG-INFO
+pyphoto.egg-info/SOURCES.txt
+pyphoto.egg-info/dependency_links.txt
+pyphoto.egg-info/top_level.txt
