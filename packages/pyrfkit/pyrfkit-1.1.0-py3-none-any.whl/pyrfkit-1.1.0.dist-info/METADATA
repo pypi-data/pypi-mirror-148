@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pyrfkit
+Version: 1.1.0
+Summary: Python RF Kit built on scikit-rf.
+Home-page: https://bitbucket.org/samteccmd/pyrfkit
+Author: Adam Page
+Author-email: adam.page@samtec.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: h5py
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-rf (>=0.22.0,<0.23.0)
+Requires-Dist: scipy
+Project-URL: Repository, https://bitbucket.org/samteccmd/pyrfkit
