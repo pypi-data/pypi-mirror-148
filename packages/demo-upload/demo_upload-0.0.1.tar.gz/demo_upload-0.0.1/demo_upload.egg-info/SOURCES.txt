@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+demo_upload/__init__.py
+demo_upload/sample.py
+demo_upload.egg-info/PKG-INFO
+demo_upload.egg-info/SOURCES.txt
+demo_upload.egg-info/dependency_links.txt
+demo_upload.egg-info/top_level.txt
