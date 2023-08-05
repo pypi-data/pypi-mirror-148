@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: alfort
+Version: 0.1.1
+Summary: 
+License: MIT
+Author: Masahiro Wada
+Author-email: argon.argon.argon@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: brython (>=3.10.5,<4.0.0)
+Requires-Dist: conventional-commit (>=0.4.2,<0.5.0)
