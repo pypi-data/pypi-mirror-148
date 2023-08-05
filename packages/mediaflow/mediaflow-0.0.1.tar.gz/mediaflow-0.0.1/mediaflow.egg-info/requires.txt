@@ -1,0 +1,5 @@
+numpy>=1.16
+jinja2
+requests
+python-magic
+graphviz==0.16
