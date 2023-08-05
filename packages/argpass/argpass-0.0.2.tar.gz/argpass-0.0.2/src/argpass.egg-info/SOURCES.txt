@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.cfg
+src/argpass/__init__.py
+src/argpass/argpass.py
+src/argpass/py.typed
+src/argpass.egg-info/PKG-INFO
+src/argpass.egg-info/SOURCES.txt
+src/argpass.egg-info/dependency_links.txt
+src/argpass.egg-info/not-zip-safe
+src/argpass.egg-info/requires.txt
+src/argpass.egg-info/top_level.txt
