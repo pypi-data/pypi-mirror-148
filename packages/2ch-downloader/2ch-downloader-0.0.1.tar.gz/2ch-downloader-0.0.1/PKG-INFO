@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: 2ch-downloader
+Version: 0.0.1
+Summary: Download all images of 2ch.hk thread
+Home-page: https://github.com/Layerex/2ch-downloader
+Author: Layerex
+Author-email: layerex@dismail.de
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 6 - Mature
+Classifier: Environment :: Web Environment
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# 2ch-downloader
+
+Download all images of 2ch.hk thread
+
+## Installation
+
+``` sh
+pip install 2ch-downloader
+```
+
+## Usage
+
+```
+usage: 2ch-downloader [-h] [-d DIRECTORY] [--max-directory-name-length LENGTH] URL
+
+positional arguments:
+  URL                   Thread url
+
+options:
+  -h, --help            show this help message and exit
+  -d DIRECTORY, --directory DIRECTORY
+                        Download directory
+  --max-directory-name-length LENGTH
+                        Max thread directory name length, 128 by default
+```
+
+
+

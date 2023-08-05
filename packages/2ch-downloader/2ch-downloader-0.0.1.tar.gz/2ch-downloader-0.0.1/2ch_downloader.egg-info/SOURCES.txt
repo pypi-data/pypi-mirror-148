@@ -1,0 +1,10 @@
+LICENSE
+README.md
+_2ch_downloader.py
+setup.py
+2ch_downloader.egg-info/PKG-INFO
+2ch_downloader.egg-info/SOURCES.txt
+2ch_downloader.egg-info/dependency_links.txt
+2ch_downloader.egg-info/entry_points.txt
+2ch_downloader.egg-info/requires.txt
+2ch_downloader.egg-info/top_level.txt

@@ -1,0 +1,3 @@
+[console_scripts]
+2ch-downloader = _2ch_downloader:main
+
