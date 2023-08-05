@@ -1,0 +1,88 @@
+Metadata-Version: 2.1
+Name: fw-gear-ants-dbm-cross-sectional
+Version: 0.1.0
+Summary: 
+Home-page: https://gitlab.com/flywheel-io/flywheel-apps/genentech/grp-43-ants-dbm-cross-sectional
+License: MIT
+Keywords: Flywheel,Gears
+Author: Flywheel
+Author-email: support@flywheel.io
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering
+Requires-Dist: flywheel-gear-toolkit (>=0.5,<0.6)
+Requires-Dist: flywheel-sdk (>=15.8.0,<15.9.0)
+Requires-Dist: fw-utils (>=2.0.6,<3.0.0)
+Requires-Dist: importlib (>=1.0.4,<2.0.0)
+Requires-Dist: importlib-metadata (>=4.10.0,<5.0.0)
+Requires-Dist: nipype (>=1.7.0,<2.0.0)
+Project-URL: Repository, https://gitlab.com/flywheel-io/flywheel-apps/genentech/grp-43-ants-dbm-cross-sectional
+Description-Content-Type: text/markdown
+
+# GRP-43 ANTs DBM Cross Sectional
+A Flywheel gear wrapping ANTs antsCorticalThickness.sh script.
+Within the antsCorticalThickness.sh pipeline, it performs bias correction using the N4 algorithm, segmentation using ANTs Atropos algorithm and cortical thickness calculation using these segmentations as input.     
+
+
+## Usage
+
+This gear should be run on Session level.
+
+### Inputs
+* __anatomical_image__: Structural *intensity* image, typically T1 that will be used as anatomical image in `antsCorticalThickness`
+* __registered_predefined_template__ (zip archive file): (Optional) A zip archive that contains brain segmentation template, brain extraction probability mask, extraction registration mask, T1 registration template and brain segmentation priors.
+    _This file should be a zip archive that contains the following hierarchy:_
+    ```
+    <working_dir_name>
+    └── <template_folder_name>
+        ├── Priors2
+        │   ├── <nifti-file-name>
+        │   ├── <nifti-file-name>
+        │   ├── <nifti-file-name>
+        │   ├── <nifti-file-name>
+        │   ├── <nifti-file-name>
+        │   └── <nifti-file-name>
+        ├── brain_extraction_probability_mask
+        │   └── <nifti-file-name>
+        ├── brain_segmentation_template
+        │   └── <nifti-file-name>
+        ├── extraction_registration_mask
+        │   └── <nifti-file-name>
+        └── t1_registration_template
+            └── <nifti-file-name>
+    ```
+As shown above, each directory should be labeled with one of the following names:
+- Priors2
+- brain_extraction_probability_mask
+- brain_segmentation_template
+- extraction_registration_mask
+- t1_registration_template
+
+Within each directory, it should contain only *ONE* template/mask image, except for the `Priors2` directory. 
+
+_**Note**_: If registered predefined template is not provided, the gear will use the default atlases template which can be configured in the gear config (Default: OASIS-30_Atropos_template). 
+
+
+### Configuration
+* __debug__ (boolean, default: False): Include debug statements in output.
+* __dimension__ (int, default: 3): 2 or 3 (for 2- or 3-dimensional image)
+* __denoise_anatomical_images__ (int, default: 1): Denoise anatomical images.
+* __max_iterations__ (str, default: "100x100x70x20"): ANTS registration max iterations
+* __prior_segmentation_weight__ (float, default: 0.25): Atropos spatial prior *probability* weight for the segmentation 
+* __segmentation_iterations__ (int, default: 3): N4 -> Atropos -> N4 iterations during segmentation 
+* __use_floatingpoint_precision__ (float, default: 0): Use single float precision in registrations 
+* __b_spline_smoothing__ (boolean, default: True): Use B-spline SyN for registrations and B-spline exponential mapping in DiReCT
+* __atropos_iteration__ (int, default: 5): Number of iterations within Atropos 
+* __atlases_template__ (string, default: OASIS-30_Atropos_template): If registered predefined template are not provided as an input, the gear will use this as the default predefined template.
+* __args__: (string, default: None) Additional arguments
+
+
+## Contributing
+
+For more information about how to get started contributing to that gear, 
+checkout [CONTRIBUTING.md](CONTRIBUTING.md).
+
