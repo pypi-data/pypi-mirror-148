@@ -1,0 +1,9 @@
+LICENSE
+README.md
+assertwt.py
+setup.py
+AssertWT.egg-info/PKG-INFO
+AssertWT.egg-info/SOURCES.txt
+AssertWT.egg-info/dependency_links.txt
+AssertWT.egg-info/top_level.txt
+AssertWT.egg-info/zip-safe
