@@ -1,0 +1,15 @@
+office/__init__.py,sha256=TVRJdmc3GAfKwJWv7qmHNjUbnEKFMrfJPbc9iwcX15c,58
+office/email.py,sha256=kIFUSxrl4CYy5QSUCOxX5Iwstgmb1zBH9xU8Dimm3bw,275
+office/excel.py,sha256=T_VmJu5mvCR7EPb3lOJSp5yQYjY2apZrO4XRBrY7dzU,279
+office/file.py,sha256=9wBevrTkRDKXrWtrHa23g7bpDtAHknqqV1Ppgy5QLkw,277
+office/image.py,sha256=Z-t7T85U1NcVP-WtDrT6-hJptzslQJsvD3UTfLR_yOc,574
+office/ocr.py,sha256=hrB4Qu9C2ok84FqcIflNlZPmW-km71nnML2tfCRwiD4,271
+office/pdf.py,sha256=Qa92a0dXUFH0ASpGWR3B-2ab-9xAnKQeCnfZ1-jAfns,2454
+office/ppt.py,sha256=NBlSXqoKFjY3x6fFsNmdeTGlJ3FSpRmLD7lvboelF3E,271
+office/web.py,sha256=-C0_x0CzflcTaj4L4veqbPg0anmGjKfyPtxkciVgYC8,289
+office/word.py,sha256=rmBCXmwjc8CA7iH5zabtCpAMLXTqsW0YTIdWO2YfPWo,1290
+python_office-0.0.8.dist-info/LICENSE,sha256=GQ6XaGbsxl2OlUBlk1jLBtkHC8U1p6Bw9E1P1XqYAlU,1093
+python_office-0.0.8.dist-info/METADATA,sha256=Zb4E1JrHRJD7wMUjYcSRdNpnUG9-hq8ktlovm5MXqt0,7421
+python_office-0.0.8.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+python_office-0.0.8.dist-info/top_level.txt,sha256=nTa059r7gKHLanI3f7H-IqBe8tTVR2riPR4TfuUvV7k,7
+python_office-0.0.8.dist-info/RECORD,,
