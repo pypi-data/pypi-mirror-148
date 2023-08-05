@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+cvmfs_server_scraper.egg-info/PKG-INFO
+cvmfs_server_scraper.egg-info/SOURCES.txt
+cvmfs_server_scraper.egg-info/dependency_links.txt
+cvmfs_server_scraper.egg-info/requires.txt
+cvmfs_server_scraper.egg-info/top_level.txt
+cvmfsscraper/__init__.py
+cvmfsscraper/main.py
+cvmfsscraper/repository.py
+cvmfsscraper/server.py
+cvmfsscraper/tools.py
+scripts/cvmfs_server_scraper_exporter.py
