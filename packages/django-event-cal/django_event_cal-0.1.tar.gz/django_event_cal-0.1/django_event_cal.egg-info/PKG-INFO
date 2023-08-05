@@ -1,0 +1,24 @@
+Metadata-Version: 1.2
+Name: django-event-cal
+Version: 0.1
+Summary: A Django app to integrate event calendar.
+Home-page: https://github.com/Lakshan1/django_event_cal
+Author: Lakshan
+Author-email: lak4837@gmail.com
+License: BSD-3-Clause
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.1
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.8
