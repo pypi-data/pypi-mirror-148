@@ -1,0 +1,6 @@
+colored
+tk
+alive-progress
+pycryptodomex
+wxPython
+requests
