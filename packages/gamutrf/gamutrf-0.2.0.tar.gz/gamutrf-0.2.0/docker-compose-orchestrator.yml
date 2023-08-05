@@ -1,0 +1,61 @@
+version: "3.3"
+networks:
+  gamutrf:
+services:
+  gamutrf:
+    restart: always
+    image: iqtlabs/gamutrf:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      sigfinder:
+        condition: service_started
+    networks:
+      - gamutrf
+    ports:
+      - '9001:9000'
+    cap_add:
+      - SYS_NICE
+      - SYS_RAWIO
+    devices:
+      - /dev/bus/usb:/dev/bus/usb
+    command:
+      - --logaddr=sigfinder
+      - --igain=30
+      - '--freq-start=${FREQ_START}'
+      - '--freq-end=${FREQ_END}'
+    healthcheck:
+      test: [CMD, "/root/scanhc.sh", "9000"]
+      interval: 10s
+      timeout: 10s
+      retries: 3
+  sigfinder:
+    restart: always
+    image: iqtlabs/gamutrf-sigfinder:latest
+    build:
+      context: .
+      dockerfile: Dockerfile.sigfinder
+    networks:
+      - gamutrf
+    ports:
+      - '9002:9000'
+    volumes:
+      - '${VOL_PREFIX}:/logs'
+    command:
+      - --logaddr=sigfinder
+      - --log=/logs/scan.csv
+      - --recorder=http://rfworkerpi.finf:8000/
+      - '--freq-start=${FREQ_START}'
+      - '--freq-end=${FREQ_END}'
+  watchtower:
+    image: containrrr/watchtower:latest
+    restart: always
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    environment:
+      - "WATCHTOWER_POLL_INTERVAL=3600"
+      - "WATCHTOWER_CLEANUP=true"
+      - "WATCHTOWER_INCLUDE_RESTARTING=true"
+      - "WATCHTOWER_INCLUDE_STOPPED=true"
+      - "WATCHTOWER_REVIVE_STOPPED=true"
