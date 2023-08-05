@@ -1,0 +1,2 @@
+[console_scripts]
+next = next.next:main
