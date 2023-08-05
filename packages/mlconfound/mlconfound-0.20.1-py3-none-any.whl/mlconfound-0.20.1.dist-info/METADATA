@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: mlconfound
+Version: 0.20.1
+Summary: Tools for analyzing and quantifying effects of counfounder variables on machine learning model predictions.
+Home-page: https://mlconfound.readthedocs.io
+License: GPL-3.0-or-later
+Keywords: machine learning,predictive modelling,confounding bias,conditional independence,confounder test
+Author: Tamas Spisak
+Author-email: tamas.spisak@uni-due.de
+Requires-Python: >=3.7,<3.10
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Dist: dot2tex (>=2.11.3)
+Requires-Dist: graphviz (>=0.17)
+Requires-Dist: joblib (>=1.0.1)
+Requires-Dist: numpy (>=1.21.1)
+Requires-Dist: pandas (>=1.3.1)
+Requires-Dist: pygam (==0.8.0)
+Requires-Dist: scipy (>=1.7.1)
+Requires-Dist: seaborn (>=0.11.1)
+Requires-Dist: statsmodels (>=0.12.2)
+Requires-Dist: tqdm (>=4.62.0)
+Project-URL: Documentation, https://mlconfound.readthedocs.io
+Project-URL: Repository, https://github.com/pni-lab/mlconfound
+Description-Content-Type: text/markdown
+
+# mlconfound
+[![GitHub license](https://img.shields.io/github/license/pni-lab/mlconfound.svg)](https://github.com/pni-lab/mlconfound/blob/master/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/pni-lab/mlconfound.svg)](https://github.com/pni-lab/mlconfound/releases/)
+![GitHub CI](https://github.com/pni-lab/mlconfound/actions/workflows/ci.yml/badge.svg)
+[![Documentation Status](https://readthedocs.org/projects/mlconfound/badge/?version=latest)](https://mlconfound.readthedocs.io/en/latest/?badge=latest)
+[![arXiv](https://img.shields.io/badge/arXiv-2111.00814-<COLOR>.svg)](https://arxiv.org/abs/2111.00814)
+[![GitHub issues](https://img.shields.io/github/issues/pni-lab/mlconfound.svg)](https://GitHub.com/pni-lab/mlconfound/issues/)
+[![GitHub issues-closed](https://img.shields.io/github/issues-closed/pni-lab/mlconfound.svg)](https://GitHub.com/pni-lab/mlconfound/issues?q=is%3Aissue+is%3Aclosed)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/pni-lab/mlconfound/master?labpath=notebooks%2Fquickstart.ipynb)
+
+Tools for analyzing and quantifying effects of counfounder variables on machine learning model predictions.
+## Install
+````
+pip install mlconfound
+````
+
+## Usage
+
+````
+# y   : prediction target
+# yhat: prediction
+# c   : confounder
+
+from mlconfound.stats import partial_confound_test
+
+partial_confound_test(y, yhat, c)
+````
+
+Run the quickstart notebook in Binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/pni-lab/mlconfound/master?labpath=notebooks%2Fquickstart.ipynb)
+
+Read the docs for more details.
+
+## Documentation [![Documentation Status](https://readthedocs.org/projects/mlconfound/badge/?version=latest)](https://mlconfound.readthedocs.io/en/latest/?badge=latest)
+https://mlconfound.readthedocs.io
+
+## Citation
+T. Spisak, Statistical quantification of confounding bias in predictive modelling, preprint on [arXiv:2111.00814](http://arxiv-export-lb.library.cornell.edu/abs/2111.00814), 2021.
+
