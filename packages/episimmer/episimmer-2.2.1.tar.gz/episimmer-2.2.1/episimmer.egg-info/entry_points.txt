@@ -1,0 +1,3 @@
+[console_scripts]
+episimmer = episimmer.main:main
+
