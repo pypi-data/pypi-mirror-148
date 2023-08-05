@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/bipf/__init__.py
+src/bipf.egg-info/PKG-INFO
+src/bipf.egg-info/SOURCES.txt
+src/bipf.egg-info/dependency_links.txt
+src/bipf.egg-info/top_level.txt
