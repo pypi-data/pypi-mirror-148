@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "usgs-riverdata"
+version = "0.1.2"
+description = "Pulls data from the USGS Water Data service"
+authors = ["William French <wdfrench13@gmail.com>"]
+license = "Creative Commons Attribution Sharealike 3.0 Unported"
+readme = "README.md"
+homepage = "https://github.com/wdfrench13/usgs-waterdata"
+repository = "https://github.com/wdfrench13/usgs-waterdata"
+keywords = ["USGS", "waterdata", "river"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
