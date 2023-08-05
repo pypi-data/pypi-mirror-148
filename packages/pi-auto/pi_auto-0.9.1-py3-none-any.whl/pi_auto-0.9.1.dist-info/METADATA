@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pi-auto
+Version: 0.9.1
+Summary: Low cost Raspberry Pi auto device that uses OBD and gps data and sends it to fleet-track.org
+Home-page: https://github.com/LukeKeam/pi-auto
+Author: Luke Keam
+Author-email: luke_keam@techgeek.biz
+License: GPL-3.0 License
+Platform: UNKNOWN
+License-File: LICENSE
+
+UNKNOWN
+
