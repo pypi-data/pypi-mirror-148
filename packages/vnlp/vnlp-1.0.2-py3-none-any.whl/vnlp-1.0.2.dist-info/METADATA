@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: vnlp
+Version: 1.0.2
+Summary: library for NLP and ML.
+Home-page: https://gitlab.com/vzhong/vnlp
+Author: Victor Zhong
+Author-email: victor@victorzhong.com
+License: Apache 2
+Keywords: text nlp machine-learning
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >3.7
+Description-Content-Type: text/markdown
+Requires-Dist: tqdm
+Requires-Dist: requests
+Requires-Dist: numpy
+Requires-Dist: torch
+Requires-Dist: revtok
+Requires-Dist: vocab
+Provides-Extra: dev
+Requires-Dist: check-manifest ; extra == 'dev'
+Requires-Dist: pdoc ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+Requires-Dist: nose ; extra == 'test'
+
+# VNLP
+
+[![pipeline status](https://gitlab.com/vzhong/vnlp/badges/master/pipeline.svg)](https://gitlab.com/vzhong/vnlp/commits/master)
+
+[![coverage report](https://gitlab.com/vzhong/vnlp/badges/master/coverage.svg)](https://gitlab.com/vzhong/vnlp/commits/master)
+
+
+My machine learning and NLP library.
+
+
+# Docker
+
+build test image:
+
+```
+docker login registry.gitlab.com
+docker build -t registry.gitlab.com/vzhong/vnlp:test .
+docker push registry.gitlab.com/vzhong/vnlp
+```
+
+
