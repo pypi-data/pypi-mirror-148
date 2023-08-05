@@ -1,0 +1,4 @@
+jsonschema
+jsonpointer
+json-merge-patch
+validators
