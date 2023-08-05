@@ -1,0 +1,6 @@
+README.md
+setup.py
+mexc.egg-info/PKG-INFO
+mexc.egg-info/SOURCES.txt
+mexc.egg-info/dependency_links.txt
+mexc.egg-info/top_level.txt
