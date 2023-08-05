@@ -1,0 +1,2 @@
+[console_scripts]
+pyvsb = pyvsb.main:main
