@@ -1,0 +1,14 @@
+marsis/__init__.py,sha256=UoiG0QMiNr6AW_M-C_GpLI16HPM_7cMZH7wxwKMDFPk,116
+marsis/campbell.py,sha256=3wy9NB61kk5sjXnTAHTneNSX2YO6TCPhdEL7uuHRCU8,10908
+marsis/edr.py,sha256=iQIR0u587gMSSQGyeasKF4fGHyj4I4sKPLTEZZIkEAQ,13670
+marsis/fetch.py,sha256=qaoFhjPy1SAIHM8-YFZdhtAP3Ko8z4jgBzEpLhBcbeE,3771
+marsis/output.py,sha256=1BdRteVqABUc3XLIhr4esGgBLb8Gmh92q9HHpL1VvGo,12294
+marsis/parsetab.py,sha256=gMqZ-LJvEOjesa7jZzEmQox6qujuV9hNTtW3399Kytw,12945
+marsis/segy.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+marsis/util.py,sha256=UPVYS0rgaGtoXHusHIrhaHwYF640cBwkj4wfh08aQDA,1872
+marsis-0.0.3.data/scripts/marsis_processor.py,sha256=ORJBA7FvXQxr9dxnVbWzjA2D-zaY_bXWuDBksXxMVXY,2345
+marsis-0.0.3.dist-info/LICENSE,sha256=uyuGZATr892uJibGlHjNo0trACDOLhoW4UeHvHgJ9ZA,1079
+marsis-0.0.3.dist-info/METADATA,sha256=zrXVaKpcUz3VTh-Ij4KySnBW1mIPKms11DRZlLS-xdQ,2249
+marsis-0.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+marsis-0.0.3.dist-info/top_level.txt,sha256=otZSorthuKSsyHFf1prryjHIjo-fBvRmjhTSQ9ME-bU,7
+marsis-0.0.3.dist-info/RECORD,,
