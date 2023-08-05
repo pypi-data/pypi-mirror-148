@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: djangodollar
+Version: 0.2.0
+Summary: A simple package for working with dollar amounts in Django.
+License: MIT
+Author: Ethan Corey
+Author-email: ethanscorey@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: Django (>=4.0.4,<5.0.0)
