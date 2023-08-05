@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+UCurriculum-Student/__init__.py
+UCurriculum-Student/main.py
+ucurriculum_student.egg-info/PKG-INFO
+ucurriculum_student.egg-info/SOURCES.txt
+ucurriculum_student.egg-info/dependency_links.txt
+ucurriculum_student.egg-info/requires.txt
+ucurriculum_student.egg-info/top_level.txt
