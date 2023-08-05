@@ -1,0 +1,12 @@
+wyngman/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wyngman/aws_arg_parser.py,sha256=kKxOMkvljas2qjEm2GfDu3fD-hqAx6lURZIeGcD_v04,3472
+wyngman/cognito.py,sha256=ZkoRKwc_L8P-Q2pQw3E-VQWtpdxZ-vwa8QPXhhWLWzg,8724
+wyngman/constants.py,sha256=uTTStSaCdShmsO5v1L9M_yeQW-wDxGajOpNFRdUyJi0,235
+wyngman/main.py,sha256=757e3QeBVVxElExM8pRvAJXaqxmwBkIy_vEDuI33Ea0,2216
+wyngman/utils.py,sha256=2I7--Vl3aI1Sv5PkjFdqZHXzeliw8rvsaV7okeWfwfU,1922
+wyngman-0.0.4.dist-info/LICENSE,sha256=8P4N0XwLDUvdwOepjBJPpv_hfKIOhe-wd9pRmOcrvho,1069
+wyngman-0.0.4.dist-info/METADATA,sha256=C5_FS7j7_sQ8SNVl01eswjZDH-ldvZbbKQkdqEoDgH4,3232
+wyngman-0.0.4.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+wyngman-0.0.4.dist-info/entry_points.txt,sha256=ErhFdOjLHgIJNRwjaSX8RDhCYJ7teChenZSB0BqLelY,46
+wyngman-0.0.4.dist-info/top_level.txt,sha256=9xpi87dTGfi5wpSy6R602yO8rcTR80m16GKhifCzdvQ,8
+wyngman-0.0.4.dist-info/RECORD,,
