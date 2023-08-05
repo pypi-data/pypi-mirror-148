@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+taskstack/__init__.py
+taskstack/__version__.py
+taskstack/core.py
+taskstack.egg-info/PKG-INFO
+taskstack.egg-info/SOURCES.txt
+taskstack.egg-info/dependency_links.txt
+taskstack.egg-info/requires.txt
+taskstack.egg-info/top_level.txt
