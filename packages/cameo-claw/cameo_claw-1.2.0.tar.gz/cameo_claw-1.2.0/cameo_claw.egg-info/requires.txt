@@ -1,0 +1,12 @@
+requests
+polars
+tqdm
+fastapi
+uvicorn
+pandas
+filelock
+glob2
+jinja2
+pyarrow
+httpx
+asyncio
