@@ -1,0 +1,11 @@
+osc_sdk/__init__.py,sha256=UK_kjdWQonWVVTHjgU_60TtZOa83LjZs0OXlVUG26JU,87
+osc_sdk/sdk.py,sha256=nBuG-4Yi2PeYEAJidqv62-TGa5CxOt4jo4NTAjfVq84,24489
+osc_sdk/test_auth.py,sha256=LSH0UDSgKIk_WLn5jKBDc6AeAnBD5M3TrcyatzLC-h8,736
+osc_sdk/test_errors.py,sha256=G7ygHQrsGrOKyOIsnhRKlQwdPFyxxTsLYY6phfUujjo,830
+osc_sdk/test_noauth.py,sha256=po1XgmQHmdOMD8J4dzGGXWhEwKjJehpopWku7WKXVko,2893
+osc_sdk-1.8.0.dist-info/LICENSE,sha256=eAtKefmWuj4G96ORsmNbY1PqGZj2sx5SkgiNYL5LocU,1512
+osc_sdk-1.8.0.dist-info/METADATA,sha256=7jh7Ibw9OkjF1PAEgLfxolE5XyLLmuzCKuU7a0ZdyaE,6189
+osc_sdk-1.8.0.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+osc_sdk-1.8.0.dist-info/entry_points.txt,sha256=qltCPhoyql6nGxsXTxz0O4dY_WLsUuSLOYIsLnBsjy4,46
+osc_sdk-1.8.0.dist-info/top_level.txt,sha256=RwM_tK-r_MrqTXLOzNhiA3bVfa6K6Ke_zS-2Maqqa5w,8
+osc_sdk-1.8.0.dist-info/RECORD,,
