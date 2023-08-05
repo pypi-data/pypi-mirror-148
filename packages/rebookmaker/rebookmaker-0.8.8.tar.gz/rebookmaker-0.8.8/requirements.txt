@@ -1,0 +1,9 @@
+bs4
+coverage
+jinja2>=3.0.1
+lxml
+markupsafe
+pytest
+pytest-cov
+requests
+twine
