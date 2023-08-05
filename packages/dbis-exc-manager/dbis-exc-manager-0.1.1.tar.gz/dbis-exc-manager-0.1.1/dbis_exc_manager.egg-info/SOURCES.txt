@@ -1,0 +1,8 @@
+LICENSE
+setup.py
+dbis_exc_manager.egg-info/PKG-INFO
+dbis_exc_manager.egg-info/SOURCES.txt
+dbis_exc_manager.egg-info/dependency_links.txt
+dbis_exc_manager.egg-info/top_level.txt
+excmanager/Task.py
+excmanager/__init__.py
