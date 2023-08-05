@@ -1,0 +1,9 @@
+scm_config/__init__.py,sha256=NpH1T3HnUXwkcrKS-aJf0agmmMCwviENkzi7WHKlETc,472
+scm_config/cli.py,sha256=S_CK2JjNJU2W81v59z7w3_lVrKycmINKOiznzPan1Ks,14013
+scm_config/default_config.py,sha256=Qjusk0fg2UoslF2fJYUZbZo2T04TqtNMpd8477jIrdM,8752
+scm_config/defaults.py,sha256=fsQYldgO29YKQpVOdraWtekqjlQdD4eJeosR0E9uwDQ,2685
+scm_config/main.py,sha256=MNVBsCM49XJFibznof1NpjYdbEXbhjJWMYBc2l0FLMc,180
+scm_config-1.0.0.dist-info/entry_points.txt,sha256=sbLkNx7X-zi9m97w-XnDA4gNKiSXMGSjxqpWJwBpdOk,48
+scm_config-1.0.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+scm_config-1.0.0.dist-info/METADATA,sha256=xBkIZTGACs2aOfRYNpmhz5SeKlUpQvmO8fmU82mospQ,22185
+scm_config-1.0.0.dist-info/RECORD,,
