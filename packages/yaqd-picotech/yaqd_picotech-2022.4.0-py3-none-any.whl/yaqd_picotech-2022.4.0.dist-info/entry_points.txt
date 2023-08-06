@@ -1,0 +1,3 @@
+[console_scripts]
+yaqd-picotech-adc-triggered=yaqd_picotech._picotech_adc_triggered:PicotechAdcTriggered.main
+

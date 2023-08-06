@@ -1,0 +1,140 @@
+# refer to:
+# https://traits.yaq.fyi/
+# https://toml.io
+# https://avro.apache.org/docs/current/spec.html#schema_complex
+
+protocol = "picotech-adc-triggered"
+doc = "Triggered Picotech Oscilloscope"
+traits = ["is-daemon", "is-sensor", "has-measure-trigger", "has-mapping"]
+hardware = ["picotech:ps2000"]
+
+[links]
+source = "https://gitlab.com/yaq/yaqd-picotech"
+bugtracker = "https://gitlab.com/yaq/yaqd-picotech/-/issues"
+windows_c_libraries = "https://www.picotech.com/downloads"
+linux_c_libraries = "https://www.picotech.com/downloads/linux"
+
+[installation]
+PyPI = "https://pypi.org/project/yaqd-picotech"
+
+# todo: implement these types
+[[types]]
+type = "enum"
+name = "processing_method"
+symbols = ["average", "sum", "min", "max"]
+
+[[types]]
+type = "enum"
+name = "adc_range"
+symbols = ["_20_mV", "_50_mV", "_100_mV", "_200_mV", "_500_mV", "_1_V", "_2_V", "_5_V", "_10_V", "_20_V"]
+
+[[types]]
+type = "enum"
+name = "adc_coupling"
+symbols = ["DC", "AC"]
+
+[[types]]
+type = "record"
+name = "channel"
+fields = [
+	# {"name"="label", "type"=["null", "string"], "default"="__null__"},
+    {"name"="enabled", "type"="boolean", "default"=false},
+    {"name"="coupling", "type"="adc_coupling", "default"="DC"},
+	{"name"="range", "type"="adc_range", "default"="5 V"},
+	{"name"="invert", "type"="boolean", "default"=false},
+]
+
+[config]
+
+[config.make]
+default = "picotech"
+
+[config.model]
+default = "ps2000"
+
+[config.timebase]
+type = "int"
+default = 5
+doc = "Time step between measurements is `10 ns * 2^(time_base)`."
+
+[config.max_samples]
+type = "int"
+default = 200
+doc = "Number of samples per trigger (per channel)."
+
+[config.oversample]
+type = "int"
+default = 16
+doc = """\
+Average on board to increase vertical resolution. \
+Int between 1 and 256. \
+Reduces output readings per trigger and increases time_interval in proportion.\
+"""
+
+[config.shots_processing_path]
+type = "string"
+doc = """\
+Path to a .py module that processes raw scope traces into output channels. \
+Example module is included in examples directory (`processing_module.py`). \
+Path can be absolute or relative to the config file. \
+"""
+
+[config.channels]
+type = "map"
+values = "channel"
+
+[config.channels.A]
+
+[config.channels.B]
+
+[config.trigger_channel]
+type = "string"
+doc = "trigger channel id (A, B, C, or D)"
+
+[config.trigger_self]
+type = "boolean"
+default = false
+doc = """\
+Sets whether (True) or not (False) ADC is triggered by its own AWG. \
+AWG generates 0-1 V square wave at 1 kHz. Connect AWG to trigger.physical_channel.\
+"""
+
+[config.trigger_threshold]
+type = "int"
+default = 500000
+doc = "Voltage value (in uV) that triggers sampling."
+
+[config.trigger_rising]
+type = "boolean"
+default = true
+doc = "Trigger on rising (true) or falling (false) edge"
+
+[config.trigger_delay]
+type = "int"
+default = -15
+doc = """\
+Delay, as a percentage of sampled data points, between \
+trigger and start block (delay in [-100, 100]). \
+0 means trigger event is first data point, -50 means trigger \
+event is in the middle of block.\
+"""
+
+[state]
+
+[state.nshots]
+type = "int"
+default = 50
+
+[messages]
+
+[messages.get_measured_samples]
+response = "ndarray"
+doc = "Get full raw channel data. Returns array of shape (channel, sample, shot)."
+
+[messages.get_nshots]
+doc = "Get the currently planned number of shots."
+response = "int"
+
+[messages.set_nshots]
+doc = "Set the number of shots to acquire."
+request = [{"name"="nshots", "type"="int"}]
