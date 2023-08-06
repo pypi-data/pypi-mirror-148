@@ -1,0 +1,15 @@
+pycomponents/__init__.py,sha256=Hc5BQFtCOf4PQclg_H3X3NirTGLjTlxrSiNgWz-o_LE,139
+pycomponents/bom.py,sha256=1YWxdOiRbJSqWSxa5uNDFFDv5PFRlim8rITbwcZGugg,1607
+pycomponents/cli.py,sha256=2RqS6mntacWXllmYxlYU16xi4zOmIls692tPN6dbTj0,1792
+pycomponents/components.py,sha256=rVHS1iQw1rpOBpYqYvQe4wPX8e6yY6cHUhGN8wQjqzE,2238
+pycomponents/constants.py,sha256=umxOmofFr28ZBCYP-i76NQ6suaLVXdN9n3YEN1Qn2ds,198
+pycomponents/output.py,sha256=JadWyaboMfP_J8u0SKf2KJzwmTI_C9H98YKDaPxk_Bs,315
+pycomponents/processes.py,sha256=LmkD9mrCHrklhXGpiXPwlmiT_syvntrC_voxN7d2x-w,732
+pycomponents/service.py,sha256=xxJMOEbk-u7qTUm2O0xW3lNF8P0g2qD8wLGrXZW9vcQ,2072
+pycomponents/site_packages.py,sha256=WILkC8ROc9Ax0fn3N-zAgiGkhf102CEUMeAP9tYURRc,1849
+pycomponents/utils.py,sha256=ywYSGbFWAZV86P7hD8M0FgVAb58IvLZRUxew_ifHn20,565
+py_sbom_components-0.1.2.dist-info/entry_points.txt,sha256=4er2abUNdvk0GXu3_d1FxoCmKyDHyuM9tQ1SpiMPee4,53
+py_sbom_components-0.1.2.dist-info/LICENSE,sha256=XxUtj8GUxkunktWKB8DhvjEJLGsYFQEKeZBMDiwe4e0,1070
+py_sbom_components-0.1.2.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+py_sbom_components-0.1.2.dist-info/METADATA,sha256=UMOGiU1wbpSK0elku2xsr1UT0M5GblzdHaqVAmHulok,3146
+py_sbom_components-0.1.2.dist-info/RECORD,,
