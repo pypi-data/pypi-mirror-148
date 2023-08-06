@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "prophet-nogpl"
+version = "1.0.2"
+description = ""
+authors = ["Du Shiqiao <lucidfrontier.45@gmail.com>"]
+packages = [
+    { include = "prophet/*.py", from = "python" },
+    { include = "prophet/tests", from = "python", format = "sdist" },
+]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/lucidfrontier45/prophet-nogpl"
+classifiers = [
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<4"
+tqdm = "^4.63.0"
+python-dateutil = "^2.8.2"
+holidays = "^0.13"
+convertdate = "^2.4.0"
+LunarCalendar = "^0.0.9"
+pandas = "^1.4.1"
+matplotlib = "^3.5.1"
+cmdstanpy = "^1.0.1"
+requests = "^2.27.1"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^4.0.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
