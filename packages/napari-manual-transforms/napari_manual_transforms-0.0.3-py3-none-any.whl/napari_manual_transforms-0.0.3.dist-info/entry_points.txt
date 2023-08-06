@@ -1,0 +1,2 @@
+[napari.manifest]
+napari-manual-transforms = napari_manual_transforms:napari.yaml

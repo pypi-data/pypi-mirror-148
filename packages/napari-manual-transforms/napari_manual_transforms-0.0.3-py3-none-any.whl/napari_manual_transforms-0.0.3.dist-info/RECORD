@@ -1,0 +1,12 @@
+napari_manual_transforms/__init__.py,sha256=rNKBqMJiIuEQ7KX3JG_w8MYsGZvNXTEzY2t3f82yO98,268
+napari_manual_transforms/_model.py,sha256=PcWLG31ONTHpqfV3aQMPW8O6pHZp3QB6NMrFnF_VyYo,6661
+napari_manual_transforms/_tform_widget.py,sha256=mb9xtEgpkQykNliR3FmergbyUHGUuTWpLPLYyzNYBSA,6898
+napari_manual_transforms/_util.py,sha256=9VDA5dFUSbSatldmM1Uz9AlkdiFG_ythl6BM1tfwZtc,1903
+napari_manual_transforms/_widget.py,sha256=4fndOB5OSsZV-9goAvn9bXa6yrILpHSFQMU06csp30Y,6173
+napari_manual_transforms/napari.yaml,sha256=JDQNv2mos_8Q_JvmrExXJA11Ub590NFNwqr_J84YylM,347
+napari_manual_transforms-0.0.3.dist-info/LICENSE,sha256=qRlYOEv0Mi7qpc7VZoWVCxFZf0Kmb1cEyfhtO-uRglg,1497
+napari_manual_transforms-0.0.3.dist-info/METADATA,sha256=w9vH3QhAM7miZWFY9kbiZr8QdRk2hmncW_lk4mF-mmQ,4597
+napari_manual_transforms-0.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+napari_manual_transforms-0.0.3.dist-info/entry_points.txt,sha256=I98v_BggwNQBwvm9_P7f8nB7bsKACQj39mh75eydik4,82
+napari_manual_transforms-0.0.3.dist-info/top_level.txt,sha256=DOrvTDqJlyPqyG8EUq6PUb-gtGO_DLKqmE0qwheb--I,25
+napari_manual_transforms-0.0.3.dist-info/RECORD,,
