@@ -1,0 +1,7 @@
+src/pytest_kexi/__init__.py,sha256=ol6pN-s0LLiBSPZz8L0Adaaf0a93CzgIkqUec4qivKM,141
+src/pytest_kexi/helper.py,sha256=HjEUKE7slCqP0aqy6HTNmfpV_GG4pgjLJBHZfez5DbE,169
+src/pytest_kexi/plugin.py,sha256=54UROyJ3fgWlzcY-EXWG-r2h8mFR-mIvr0nzIQ2FJo4,51
+pytest_kexi-0.10.1.dist-info/entry_points.txt,sha256=x0UxDBvIQfFUPfyfrDbtFxxEAh6TafNki3gXsmStZGg,43
+pytest_kexi-0.10.1.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+pytest_kexi-0.10.1.dist-info/METADATA,sha256=V8gh_JRN8BmkALZ3NGf18P1Uhm29Lrrf6HAdD69d6q0,294
+pytest_kexi-0.10.1.dist-info/RECORD,,
