@@ -1,0 +1,3 @@
+[console_scripts]
+easynlp = easynlp.cli:main
+
