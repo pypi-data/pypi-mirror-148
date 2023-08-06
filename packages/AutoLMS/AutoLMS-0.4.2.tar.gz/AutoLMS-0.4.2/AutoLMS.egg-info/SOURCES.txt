@@ -1,0 +1,14 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+AutoLMS.egg-info/PKG-INFO
+AutoLMS.egg-info/SOURCES.txt
+AutoLMS.egg-info/dependency_links.txt
+AutoLMS.egg-info/entry_points.txt
+AutoLMS.egg-info/requires.txt
+AutoLMS.egg-info/top_level.txt
+autolms/__init__.py
+autolms/config.py
+autolms/core.py
+autolms/main.py
