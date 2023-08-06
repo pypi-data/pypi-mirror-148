@@ -1,0 +1,10 @@
+opentelemetry-api
+opentelemetry-sdk
+sqlalchemy
+flask
+requests
+six
+opentelemetry-instrumentation-sqlalchemy
+opentelemetry-instrumentation-flask
+opentelemetry-instrumentation-requests
+sentry_sdk
