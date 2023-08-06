@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: dgread
+Version: 1.0
+Summary: Read dg/dgz files in python
+Author: David Sheinberg
+Author-email: David_Sheinberg@brown.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+
+UNKNOWN
+
