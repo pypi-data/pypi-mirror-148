@@ -1,0 +1,2 @@
+websockets==10.2
+persuader-technology-automata-core>=0.1.1
