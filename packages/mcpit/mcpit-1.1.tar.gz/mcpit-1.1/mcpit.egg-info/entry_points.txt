@@ -1,0 +1,4 @@
+[console_scripts]
+mcpit = mcpit.__main__:main
+pepack = mcpit.__main__:main
+

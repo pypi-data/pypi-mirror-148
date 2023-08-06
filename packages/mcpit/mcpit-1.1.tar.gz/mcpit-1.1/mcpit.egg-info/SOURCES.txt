@@ -1,0 +1,11 @@
+README.md
+setup.py
+mcpit.egg-info/PKG-INFO
+mcpit.egg-info/SOURCES.txt
+mcpit.egg-info/dependency_links.txt
+mcpit.egg-info/entry_points.txt
+mcpit.egg-info/requires.txt
+mcpit.egg-info/top_level.txt
+src/__init__.py
+src/__main__.py
+src/weaving.py
