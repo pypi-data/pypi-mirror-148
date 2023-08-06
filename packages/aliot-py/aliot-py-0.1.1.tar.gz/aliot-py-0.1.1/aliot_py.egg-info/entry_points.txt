@@ -1,0 +1,3 @@
+[console_scripts]
+aliot = aliot.core._cli.aliot_cli:main
+
