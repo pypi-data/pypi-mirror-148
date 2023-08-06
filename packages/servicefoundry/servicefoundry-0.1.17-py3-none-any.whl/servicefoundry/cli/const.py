@@ -1,0 +1,3 @@
+TEMP_FOLDER = ".servicefoundry_templates"
+ENABLE_CLUSTER_COMMANDS = False
+ENABLE_AUTHORIZE_COMMANDS = True
