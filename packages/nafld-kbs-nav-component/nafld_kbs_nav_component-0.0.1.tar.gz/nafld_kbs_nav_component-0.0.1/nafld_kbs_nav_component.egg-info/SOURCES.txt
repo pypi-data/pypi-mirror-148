@@ -1,0 +1,11 @@
+MANIFEST.in
+setup.py
+nafld-kbs-nav/__init__.py
+nafld-kbs-nav/frontend/dist/favicon.ico
+nafld-kbs-nav/frontend/dist/index.html
+nafld-kbs-nav/frontend/dist/assets/index.12afc7ee.js
+nafld_kbs_nav_component.egg-info/PKG-INFO
+nafld_kbs_nav_component.egg-info/SOURCES.txt
+nafld_kbs_nav_component.egg-info/dependency_links.txt
+nafld_kbs_nav_component.egg-info/requires.txt
+nafld_kbs_nav_component.egg-info/top_level.txt
