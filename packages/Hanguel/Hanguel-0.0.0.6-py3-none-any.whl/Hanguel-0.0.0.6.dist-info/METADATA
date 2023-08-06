@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: Hanguel
+Version: 0.0.0.6
+Summary: Python Hanguel preprocess package for TTS(Text To Speech) STT | TTB(Text To Braille) BTT |
+Home-page: https://github.com/indiaprince/Hanguel
+Author: indiaprince
+Author-email: hyeonsuhan@gmail.com
+License: MIT
+Keywords: Python Project For Hanguel Decomposition & Construction
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+Korean Language Preprocessing methods
+===========================================================
+
+한글 자음 모음을 분리, 결합을 지원하고 기본적인 초성, 중성, 종성에 대한 const 값들을 포함하고 있습니다.
+
+## INSTALLATION
+```
+pip install Hanguel
+```
+
+
