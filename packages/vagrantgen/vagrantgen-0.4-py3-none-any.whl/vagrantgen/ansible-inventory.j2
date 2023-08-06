@@ -1,0 +1,8 @@
+# Vagrantfile generator
+# Adrian Ramos
+# https://github.com/aramcap/vagrantgen
+
+{% for host in hosts %}
+[{{ host['Host'] }}]
+{{ host['HostName'] }} ansible_port={{ host['Port'] }} ansible_user=vagrant ansible_ssh_pass=vagrant ansible_sudo_pass=vagrant ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+{% endfor %}

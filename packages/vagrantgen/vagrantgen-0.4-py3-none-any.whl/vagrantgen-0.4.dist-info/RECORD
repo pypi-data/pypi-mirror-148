@@ -1,0 +1,10 @@
+vagrantgen/Vagrantfile.j2,sha256=zRrARuhPNf2kSTOYBcC1Nu3hRR_lS_r_Gh3aiFdrzwY,4276
+vagrantgen/__init__.py,sha256=9b03ZaYwzpu8ocxan-LcCFfXxqx3_O63Il9gqZ9Wlco,4864
+vagrantgen/ansible-inventory.j2,sha256=dhLFgXm8phXaNHCKv9tJlfGvABCIMM66uYkECTBwxPA,318
+vagrantgen/vagrant-template.yaml,sha256=73lCfdI23op2Kcc1FUypzShpE1lmhrG19JBqJfSmKiY,2024
+vagrantgen-0.4.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+vagrantgen-0.4.dist-info/METADATA,sha256=qFoVW2E1vB-wnE_E06czhpB9iNIOmUvE0Nm5fFosZCk,4260
+vagrantgen-0.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+vagrantgen-0.4.dist-info/entry_points.txt,sha256=SzzhfKqoTSKYhAo2U75MGTZWZYbqiFklaIpwmGT7fhg,51
+vagrantgen-0.4.dist-info/top_level.txt,sha256=r3WmOxvLAQ_BmGe2o2pptW_IY6MBjjxnqEZnPNKFMrs,11
+vagrantgen-0.4.dist-info/RECORD,,
