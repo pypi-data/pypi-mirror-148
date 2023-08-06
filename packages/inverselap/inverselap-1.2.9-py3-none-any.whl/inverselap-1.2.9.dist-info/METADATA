@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: inverselap
+Version: 1.2.9
+Summary: Provides a variety of numerical inversion methods for the inverse Laplace transform
+Home-page: UNKNOWN
+Author: renger
+Author-email: UNKNOWN
+License: UNKNOWN
+Requires-Dist: mpmath (>=1.2.1)
+Requires-Dist: numpy (>=1.19.3)
+Requires-Dist: scipy (>=1.5.4)
+
+qwe
+
+
