@@ -1,0 +1,14 @@
+graphblas_algorithms/__init__.py,sha256=1jxJ4O0J84B53MWI6CZUNEnk1ejKsEXPEigSUTy7YVc,202
+graphblas_algorithms/_utils.py,sha256=jv3gqWuXDytVtokb_OoLikjGR_BCdVTxXq3c5DuTDw8,1677
+graphblas_algorithms/_version.py,sha256=ZVHI0--NypRKa9hy6aAXtgDqrI97F1dvCemdASWPi0w,500
+graphblas_algorithms/cluster.py,sha256=WTYr7Ty7PXa3FTWcLYnj9j7UxG7IfTIcezhOA7D8Yic,6950
+graphblas_algorithms/conftest.py,sha256=m8aGbuIabUcvhWsnOxe0ESOgG3PfFsJnQzBBNu49OOs,40
+graphblas_algorithms/link_analysis.py,sha256=A8OdkZK84d-oP-1eYw7bsArCWPymoqkmbrmy4HfgfXc,4461
+graphblas_algorithms/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+graphblas_algorithms/tests/test_cluster.py,sha256=oLZKYfHcnwyzkkiEsgmDxAr1AkJXJz8jdlildLjpRjI,3296
+graphblas_algorithms/tests/test_pagerank.py,sha256=SXUBvnQgWWJmwvHjltJHS6Pjo-hl_6PeMjz3ECCKdwc,487
+graphblas_algorithms-2022.4.1.dist-info/LICENSE,sha256=4NKdMx8z8LjF9lw1gtfGZ19iPCbKuqsWGhpFASe4XWg,11343
+graphblas_algorithms-2022.4.1.dist-info/METADATA,sha256=irNJqWHAVagUBPe165pb8qPkGD_yhfDbJf0OXnvvdHY,3083
+graphblas_algorithms-2022.4.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+graphblas_algorithms-2022.4.1.dist-info/top_level.txt,sha256=Mc4bhlNDPrgJEWHQdR8qtP-onlSRfz2o6zJ4r4tUt8k,21
+graphblas_algorithms-2022.4.1.dist-info/RECORD,,
