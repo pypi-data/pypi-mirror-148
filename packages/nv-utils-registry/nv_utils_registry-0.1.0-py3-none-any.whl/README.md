@@ -1,0 +1,209 @@
+# nv-utils-registry
+This is a generic mapping container that implements some registration logic.
+
+All the logic lies behind 
+
+
+## Installation
+To install this package, run:
+
+    pip install nv_utils_registry
+
+As part of `nv.utils` namespace package, the `registry` module will be available 
+as one of the library `collections`:
+
+    import nv.utils.collections.registry as registry
+
+
+## Usage
+
+The registry is a simple container 
+that can be used to store and retrieve objects by a unique identifier class as key.
+
+As a regular Python dictionary,
+only hashable objects can be used as registry keys.
+
+If the key class implements an `iter_defaults` method
+that returns an iterable of default keys in a hierarchical order
+(i.e. from the most specific to the most general),
+the registry will return the value associated with the first default key that matches an existing key.
+
+The registry accepts a default value that will be returned if no key 
+(including any alternative keys provided by `iter_defaults`) is found.
+However, if no default is provided,
+the registry will raise a `KeyError` in the absence of a valid key.
+
+
+### Dictionary with a default
+
+Let's start with the simplest and silly version of it: 
+one that does nothing but implementing a dictionary with strings as keys and
+a default value:
+
+    from nv.utils.collections.registry import BaseContentRegistry
+
+    class SillyRegistry(BaseRegistry):
+        registry_key_constructor = str
+
+If you use this registry, you can store and retrieve objects by strings:
+
+    registry = SillyRegistry(default='oops')
+
+    # You may use it as a regular dictionary
+    registry['foo'] = 'bar'
+    registry['foo']
+    # 'bar'
+
+    registry['whatever']
+    # 'oops'
+
+    # Or use its specialized methods
+    registry.get_content('foo')
+    # 'bar'
+
+    registry.get_content('whatever', default='use this instead')
+    # 'use this instead'
+
+    registry.register_content('whatever', 'you got it!')
+    registry.get_content('whatever')
+    # 'you got it!'
+
+So far, nothing really exciting.
+
+
+### Using the default hierarchy
+
+Let's move to a more useful version of this collection.
+Let's assume that you want to store and retrieve classes by a hierarchy of keys.
+
+    from dataclasses import dataclass
+
+    # Let's set frozen=true and order=True to have a hasahble dataclass
+    @dataclass(frozen=True, order=True)
+    class AnimalKey(BaseContentRegistry):
+        category: str
+        subcategory: str
+
+        def iter_defaults(self):
+            # This will teach how to find alternative default keys for this key,
+            # in this case, by adding a '*' progressively
+            cls = self.__class__
+            yield cls(self.category, "*")
+            yield cls("*", "*")
+
+Notice that we have implemented `iter_defaults` method, which will yield
+a sequence of keys that will teach the dictionary how to look for a sequence of defaults
+from the more specific to the more generic.
+
+    # Let's create our custom registry
+    class AnimalRegistry(BaseRegistry):
+        registry_key_constructor = AnimalKey
+
+    registry = AnimalRegistry()
+
+    class GenericAnimal:
+        pass
+
+    # Now let's register some animal classes using a convenient decorator
+    @registry.register('mammal', 'canine')
+    class Canine:
+        pass
+
+    @registry.register('mammal', 'feline')
+    class Feline:
+        pass
+
+    # You can use the register_content method as well
+    class Ape:
+        pass
+    
+    registry.register_content('mammal', 'ape', Ape)
+
+    # Now let's add a default for the category 'mammal'
+    @registry.register('mammal', '*')
+    class GenericMammal:
+        pass
+
+    registry.register_content('reptile', 'turtle', Turtle)
+
+    # Now let's add a default for all categories
+    @registry.register('*', '*')
+    class GenericAnimal:
+        pass
+
+    # Now let's retrieve the classes
+    cat_cls = registry.get_content('mammal', 'feline')         # Feline
+    dog_cls = registry.get_content('mammal', 'canine')         # Canine
+    hamster_cls = registry.get_content('mammal', 'rodent')     # GenericMammal
+    sea_turtle_cls = registry.get_content(category='reptile', subcategory='turtle')     # Turtle
+    chameleon_cls = registry.get_content('reptile', 'lizard')  # GenericAnimal
+    
+    # The decorator, get_content and register_content will recreate the key object
+    # by building it from its args or kwargs,
+    # but if you have the key object you can use the dictionary directly
+
+    canine_key = AnimalKey('mammal', 'canine')
+    wolf_cls = registry[canine_key]
+
+    fox_cls = registry.get_content_by_key(canine_key, default=None)
+
+
+### Customizing the behavior of our registry
+
+The `BaseRegistry` class provides a way to customize its behavior while dealing with
+duplicate registrations (or changes to any of the existing values).
+
+    class AnimalRegistry(BaseRegistry, change_behavior=BaseRegistry.ChangeBehavior.RAISE):
+        registry_key_constructor = AnimalKey
+
+    registry = AnimalRegistry()
+
+    # Let's register some animal classes using a convenient decorator
+    @registry.register('mammal', 'canine')
+    class Canine:
+        pass
+
+    # This shall raise a TypeError
+    @registry.register('mammal', 'canine')
+    class AnotherCanine:
+        pass
+
+    # This shall also raise a TypeError
+    del registry[AnimalKey('mammal', 'canine')]
+
+    # However, this will not raise an error, as we are registering
+    # the same content under the same key again.
+    registry.register_content(Canine, 'mammal', 'canine')
+
+This behavior can be customized by setting the `change_behavior` attribute to `WARN`
+if you want to be warned when you try to register under a key that is already registered,
+or to `IGNORE` if you want to ignore duplicate registrations (default).
+
+The comparison is made via `==` operator of the key objects. 
+If you want to customize the comparison, you can override the `__eq__` method.
+
+
+### Using other mappings under the hood
+
+If you need an alternative mapping to store the content, no problem. 
+You can provide your custom mapping at the `__init__` method,
+and that mapping will serve as the underlying storage.
+
+Please notice that if you change the underlying mapping directly,
+the registry will not be aware of the changes!
+
+    from collections import OrderedDict
+
+    custom_mapping = OrderedDict()
+
+    class AnimalRegistry(BaseRegistry):
+        registry_key_constructor = AnimalKey
+
+    # Registry instance will use the custom mapping
+    registry = AnimalRegistry(custom_mapping)
+
+
+### Bugs, suggestions, findings, etc.
+
+Please submit any bug reports, suggestions, patches, etc. to
+this github repo.
