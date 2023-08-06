@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: maskering
+Version: 0.0.1
+Summary: maskering av tekster
+Author: pbencze
+Author-email: paul@idelab.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: pytest (>=7.1.2,<8.0.0)
