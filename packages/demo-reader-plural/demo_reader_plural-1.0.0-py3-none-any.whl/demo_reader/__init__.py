@@ -1,0 +1,1 @@
+print("Executing __init__.py inside demo_reader_plural")
