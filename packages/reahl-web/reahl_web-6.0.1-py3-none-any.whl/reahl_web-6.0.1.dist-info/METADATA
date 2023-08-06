@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: reahl-web
+Version: 6.0.1
+Summary: The core Reahl web framework
+Home-page: http://www.reahl.org
+Maintainer: Iwan Vosloo
+Maintainer-email: iwan@reahl.org
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+License-File: COPYING
+Requires-Dist: reahl-component (<6.1,>=6.0)
+Requires-Dist: reahl-mailutil (<6.1,>=6.0)
+Requires-Dist: ply (<3.11.999,>=3.8)
+Requires-Dist: rjsmin (<1.2.999,>=1.2.0)
+Requires-Dist: rcssmin (<1.1.999,>=1.1.0)
+Requires-Dist: beautifulsoup4 (<4.10.999,>=4.6)
+Requires-Dist: WebOb (<1.8.999,>=1.8)
+Requires-Dist: Babel (<2.9.999,>=2.1)
+Requires-Dist: setuptools (>=51.0.0)
+Requires-Dist: lxml (<4.7.999,>=4.2)
+
+Reahl is a web application framework that allows a Python programmer to work in terms of useful abstractions - using a single programming language.
+
+This package contains the core of the Reahl framework.
+
+See http://www.reahl.org/docs/5.2/tutorial/gettingstarted-install.d.html for installation instructions. 
+
