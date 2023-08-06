@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: weatherchart
+Version: 0.1.1
+Summary: Generate chart image based on 7 day forecast form a given location
+Home-page: https://github.com/pubs12/weatherchart
+License: MIT
+Author: pub12
+Author-email: pubudu79@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+
+# weatherchart
+Get a weather chart image
+
