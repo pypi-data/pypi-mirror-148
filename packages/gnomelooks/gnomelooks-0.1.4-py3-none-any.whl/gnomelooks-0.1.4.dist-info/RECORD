@@ -1,0 +1,11 @@
+getlooks/__init__.py,sha256=XEqb2aiIn8fzGE68Mph4ck1FtQqsR_am0wRWvrYPffQ,22
+getlooks/cli.py,sha256=fNyxFeMziYrAFcNJf7E76F6XpPkmb3dxyOXgKJ4t8yo,2422
+getlooks/core.py,sha256=IR_iw7ATOTmTsP_PwkLDqEh-pa2axn8H5ehRZhd6OoQ,7666
+getlooks/looks.py,sha256=SsGX9A3CawZ_Koa8pV5wrQl0gnf5Bycij0k0H9Bzk7w,7096
+getlooks/looks_path.py,sha256=wKy2TnLuaUbfAM9tRl_q-b8wOmjAcLelzDtEfe1PxhA,1323
+getlooks/requirements.txt,sha256=udgEeVcPpDI4HK4vIRemOoN58P7IDgqt0sh-diILvJU,43
+getlooks/utils.py,sha256=vH93XlUnSbsQvy_ZleyboN6OB77tqTWcvPJE1lDGAPI,7569
+gnomelooks-0.1.4.dist-info/entry_points.txt,sha256=CHNtRMPfrez34Z5e8teJqIvdfLLaLBtAmv9MEwC84R0,47
+gnomelooks-0.1.4.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+gnomelooks-0.1.4.dist-info/METADATA,sha256=tNogUUnkdPu-j18be2HmKt5Kmb_gEUr5n48mnqk46s0,1923
+gnomelooks-0.1.4.dist-info/RECORD,,
