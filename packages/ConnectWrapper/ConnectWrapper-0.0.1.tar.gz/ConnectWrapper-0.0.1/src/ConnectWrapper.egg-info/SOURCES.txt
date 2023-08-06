@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/ConnectWrapper/__init__.py
+src/ConnectWrapper.egg-info/PKG-INFO
+src/ConnectWrapper.egg-info/SOURCES.txt
+src/ConnectWrapper.egg-info/dependency_links.txt
+src/ConnectWrapper.egg-info/top_level.txt
+src/ConnectWrapper/Mobile/__init__.py
+src/ConnectWrapper/Mobile/auth.py
+src/ConnectWrapper/Mobile/grades.py
+src/ConnectWrapper/Mobile/notices.py
