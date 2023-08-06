@@ -1,0 +1,9 @@
+[intentbox.postag]
+ovos-postag-plugin-dummy=ovos_plugin_manager.templates.postag:PosTagger
+
+[intentbox.segmentation]
+ovos-segmentation-plugin-quebrafrases=ovos_plugin_manager.templates.segmentation:Segmenter
+
+[intentbox.tokenization]
+ovos-tokenization-plugin-quebrafrases=ovos_plugin_manager.templates.tokenization:Tokenizer
+
