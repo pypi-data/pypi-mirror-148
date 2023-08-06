@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: pythonbible
+Version: 0.7
+Summary: pythonbible includes features for parsing texts for scripture references,
+Home-page: https://docs.python.bible
+Author: Nathan Patton
+Author-email: npatton@gmail.com
