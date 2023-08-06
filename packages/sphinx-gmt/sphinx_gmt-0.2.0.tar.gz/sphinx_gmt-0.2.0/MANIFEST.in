@@ -1,0 +1,12 @@
+prune .github*
+prune doc*
+exclude .gitignore
+exclude AUTHORSHIP.md
+exclude CODE_OF_CONDUCT.md
+exclude CONTRIBUTING.md
+exclude Makefile
+exclude environment.yml
+exclude package.json
+exclude requirements.txt
+exclude setup.cfg
+exclude vercel.json
