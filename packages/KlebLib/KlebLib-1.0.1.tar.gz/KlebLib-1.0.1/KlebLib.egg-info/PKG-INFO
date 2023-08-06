@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: KlebLib
+Version: 1.0.1
+Summary: A collection of classes and functions that no-one will ever need.
+Home-page: https://github.com/Spartan2909/KlebLib/
+Author: Caleb Robson
+Author-email: robson.caleb.299@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.8, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# KlebLib
+
+KlebLib is a Python library consisting of a wide variety of classes and functions, all of questionable usefulness.
+
+KlebLib currently includes:
+* Fractions
+* Polynomials
+* Rounding
+* Base Conversion
+* Universal Addition
+
+## Documentation 
+Comprehensive (ish) documentation for KlebLib can be found here: https://github.com/Spartan2909/KlebLib/wiki
+
+## Acknowledgements
+ * Kai Kerlaff, for his work on baseconversion and universaladdition
+
+
