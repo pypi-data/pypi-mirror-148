@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+src/pytest_kexi/__init__.py
+src/pytest_kexi.egg-info/PKG-INFO
+src/pytest_kexi.egg-info/SOURCES.txt
+src/pytest_kexi.egg-info/dependency_links.txt
+src/pytest_kexi.egg-info/entry_points.txt
+src/pytest_kexi.egg-info/top_level.txt
