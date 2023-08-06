@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: XDC3PYTHON
+Version: 1.0.0
+Summary: XDC PYTHON SDK with support for smart contracts, XRC20 & XRC721
+Home-page: UNKNOWN
+Author: XDC Foundation
+Author-email:  XFLW@xinfin.org
+License: MIT
+Platform: UNKNOWN
+License-File: LICENCE.txt
+
+**XDC3PYTHON**
+
+XDC3PYTHON SDK with support for smart contracts, XDC20 & XRC721. 
+
+
+ **Usage**
+
+**pip install XDC3PYTHON**
+
+**Environment Variable**
+
+` Create a .env file in the root directory of the Python project to put the wallet and endpoint information in like so: NETWORK_URL = "https://rpc.apothem.network" `
+
+**Example for XRC20.**
+
+`
+from XDC3PYTHON import XRC20
+
+if __name__=="__main__":
+
+    token = input('Enter token address: ')
+    a = XRC20.name(token)
+    print(a)`
+
+This example returns name of the specified address.
+
+**Example for XRC721.**
+
+`
+from XDC3PYTHON import XRC721
+
+if __name__=="__main__":
+
+    token = input('Enter token address: ')
+    a = XRC721.symbol(token)
+    print(a)`
+
+This example returns symbol of the specified address.
+
+**Transports**
+
+HTTP transport
+
+**Author**
+[XDCFoundation](https://github.com/XDCFoundation/XDC_Python_SDK_V1)
+
+
+
+1.0.0
+------------------
+
+- First Release
+
+
