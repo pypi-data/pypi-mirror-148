@@ -1,0 +1,8 @@
+include README.md
+include bin/electiveGroupCvParser.py
+
+recursive-include electiveGroupCvParser *
+
+exclude electiveGroupCvParser/traindata.json
+exclude electiveGroupCvParser/custom_train.py
+exclude electiveGroupCvParser/custom_test.py
