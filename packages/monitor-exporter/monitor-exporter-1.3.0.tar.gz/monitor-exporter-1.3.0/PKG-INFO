@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: monitor-exporter
+Version: 1.3.0
+Summary: A Prometheus exporter for OP5 Monitor
+Home-page: https://github.com/opsdis/monitor-exporter
+Author: thenodon
+Author-email: anders@opsdis.com
+License: GPLv3
+Platform: UNKNOWN
+Requires-Python: >=3.6
+License-File: LICENSE
+License-File: COPYING
+
+UNKNOWN
+
