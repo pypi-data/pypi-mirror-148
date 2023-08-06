@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+bng_latlon/__init__.py
+bng_latlon/bng_to_latlon.py
+bng_latlon/latlon_to_bng.py
+bng_latlon.egg-info/PKG-INFO
+bng_latlon.egg-info/SOURCES.txt
+bng_latlon.egg-info/dependency_links.txt
+bng_latlon.egg-info/top_level.txt
