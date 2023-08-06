@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "blind_files"
+version = "0.2.6"
+description = "Relabel files in order to work on them blind"
+authors = ["Pokey Rule <755842+pokey@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.scripts]
+blind-files = "blind_files.cli:main"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+pyahocorasick = "^1.4.4"
+click = "^8.1.2"
+
+
+[tool.poetry.dev-dependencies]
+black = "^22.3.0"
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
