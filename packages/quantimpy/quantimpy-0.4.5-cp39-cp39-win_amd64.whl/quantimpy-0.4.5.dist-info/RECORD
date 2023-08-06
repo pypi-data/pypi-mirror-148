@@ -1,0 +1,9 @@
+quantimpy/__init__.py,sha256=TLya92-RknihuFhPxdl1d4UM_O8BhdRW3mBrFQBoRec,924
+quantimpy/minkowski.cp39-win_amd64.pyd,sha256=ZzQ-KWd4zXwwQ_aVIUCJvLA4zgCaXk12ROzFrxcFqHI,169472
+quantimpy/morphology.py,sha256=9sfSDfm_kvgcckfymXlhlebtjFB-LpWksvnuOK07m9U,33784
+quantimpy/segmentation.cp39-win_amd64.pyd,sha256=Jdhiem7rH974q-mTWCtX3Q9GdFbUB5gXw-3UbO2A8rM,506368
+quantimpy-0.4.5.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+quantimpy-0.4.5.dist-info/METADATA,sha256=wopE7jlXXjgkX-8Ft4Z9vGyQl9az5FxRF75GXuWe_IE,1787
+quantimpy-0.4.5.dist-info/WHEEL,sha256=fVcVlLzi8CGi_Ul8vjMdn8gER25dn5GBg9E6k9z41-Y,100
+quantimpy-0.4.5.dist-info/top_level.txt,sha256=VybmR9jmeSrBqpC4NNcj5iVzuSPCaEA1IyWNDm8Y4lA,10
+quantimpy-0.4.5.dist-info/RECORD,,
