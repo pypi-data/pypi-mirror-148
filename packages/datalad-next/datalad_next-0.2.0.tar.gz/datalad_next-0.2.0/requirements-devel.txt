@@ -1,0 +1,11 @@
+# requirements for a development environment
+nose
+coverage
+sphinx
+sphinx_rtd_theme
+# for webdav testing
+cheroot
+wsgidav
+webdavclient3
+# to get the docs built properly by RTD
+-e .
