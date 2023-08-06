@@ -1,0 +1,11 @@
+# @package _global_
+defaults:
+  - /base/supervised/baseline/cifar_resnet
+  - /base/supervised/data/cifar100
+  - _self_
+run:
+  seed: 42
+  devices: 1
+  batch_size_per_device: 512
+  num_epochs: 800
+  id: cifar100

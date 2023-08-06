@@ -1,0 +1,13 @@
+# @package _global_
+defaults:
+  - /base/supervised/baseline/resnet50d
+  - /base/supervised/data/imagewoof
+  - /base/entropy_minimization/model
+  - /base/entropy_minimization/data/imagenet
+  - _self_
+run:
+  seed: 42
+  devices: 2
+  batch_size_per_device: 16
+  num_epochs: 100
+  id: imagewoof_entmin

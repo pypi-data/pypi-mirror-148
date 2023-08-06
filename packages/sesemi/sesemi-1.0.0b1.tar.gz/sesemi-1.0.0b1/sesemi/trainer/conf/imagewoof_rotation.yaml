@@ -1,0 +1,13 @@
+# @package _global_
+defaults:
+  - /base/supervised/baseline/resnet50d
+  - /base/supervised/data/imagewoof
+  - /base/rotation_prediction/model
+  - /base/rotation_prediction/data/imagenet
+  - _self_
+run:
+  seed: 42
+  devices: 2
+  batch_size_per_device: 16
+  num_epochs: 80
+  id: imagewoof_rotation

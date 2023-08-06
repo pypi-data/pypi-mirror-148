@@ -1,0 +1,26 @@
+# @package _global_
+learner:
+  hparams:
+    model:
+      regularization_loss_heads:
+        jigsaw_prediction:
+          head:
+            _target_: sesemi.models.loss_heads.JigsawPredictionLossHead
+            data: unsupervised
+            backbone: supervised_backbone
+          scheduler:
+            _target_: sesemi.schedulers.weight.SigmoidRampupScheduler
+            weight: 1.0
+            stop_rampup: 0
+          scale_factor: 1.0
+        entropy_minimization:
+          head:
+            _target_: sesemi.models.loss_heads.EntropyMinimizationLossHead
+            data: unsupervised
+            backbone: supervised_backbone
+            head: supervised_head
+          scheduler:
+            _target_: sesemi.schedulers.weight.SigmoidRampupScheduler
+            weight: 1.0
+            stop_rampup: 0
+          scale_factor: 1.0

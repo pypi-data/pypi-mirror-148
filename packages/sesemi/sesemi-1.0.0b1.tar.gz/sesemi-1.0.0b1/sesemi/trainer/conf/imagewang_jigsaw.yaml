@@ -1,0 +1,13 @@
+# @package _global_
+defaults:
+  - /base/supervised/baseline/resnet50d
+  - /base/supervised/data/imagewang
+  - /base/jigsaw_prediction/model
+  - /base/jigsaw_prediction/data/imagewang
+  - _self_
+run:
+  seed: 42
+  devices: 2
+  batch_size_per_device: 8
+  num_epochs: 100
+  id: imagewang_jigpred
