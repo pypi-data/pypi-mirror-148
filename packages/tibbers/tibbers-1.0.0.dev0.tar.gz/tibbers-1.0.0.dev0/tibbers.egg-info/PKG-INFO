@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: tibbers
+Version: 1.0.0.dev0
+Summary: Inter-model Fusion for Fast Model Optimization.
+Home-page: https://github.com/Tonyhao96
+Author: Qinghao Hu
+Author-email: qinghao.hu@ntu.edu.sg
+License: Apache-2.0
+Keywords: AutoML,NAS
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+
+UNKNOWN
+
