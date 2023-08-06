@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: ruishi
+Version: 0.1.8
+Summary: 睿视接口的封装
+Home-page: https://github.com/911061873/ruishi
+Author: Peng1013
+Author-email: qinpeng@peng1013.cn
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/911061873/ruishi/issues
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.10.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# ruishi
+
+睿视门禁API的封装
+
+## 使用方法
+
+```python
+from ruishi import Ruishi
+from ruishi.models import UserCreate
+
+user = Ruishi(UserCreate(username='yourusername', password='yourpassword'))
+rooms = user.get_room_list()
+print([room.dict() for room in rooms])
+doors = user.get_device_list([room.nodeUuid.hex for room in rooms])
+print(print([door.dict() for door in doors]))
+print(user.open_door('dooruuid'))
+```
+
