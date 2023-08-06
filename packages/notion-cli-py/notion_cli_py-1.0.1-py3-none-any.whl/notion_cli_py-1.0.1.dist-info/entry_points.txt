@@ -1,0 +1,3 @@
+[console_scripts]
+notion-cli=notion_cli_py.cli:main
+
