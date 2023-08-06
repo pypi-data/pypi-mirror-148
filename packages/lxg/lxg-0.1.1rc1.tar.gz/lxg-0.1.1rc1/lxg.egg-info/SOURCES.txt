@@ -1,0 +1,13 @@
+LICENSE
+README.rst
+setup.py
+lxg/__init__.py
+lxg/loggable.py
+lxg/version.py
+lxg.egg-info/PKG-INFO
+lxg.egg-info/SOURCES.txt
+lxg.egg-info/dependency_links.txt
+lxg.egg-info/not-zip-safe
+lxg.egg-info/top_level.txt
+tests/__init__.py
+tests/loggable_test.py

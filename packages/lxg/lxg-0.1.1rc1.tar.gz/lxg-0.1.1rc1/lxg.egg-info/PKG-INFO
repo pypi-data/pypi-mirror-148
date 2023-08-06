@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: lxg
+Version: 0.1.1rc1
+Summary: Simple interface for quick append logger functionality to the class
+Home-page: https://github.com/usalko/lxg
+Author: Vanya Usalko
+Author-email: iusalko@eu.spb.ru
+License: BSD
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development
+License-File: LICENSE
+
+
+========================================================
+Interface for quick access to the logging functionality
+========================================================
+
+The sample:
+
+.. code:: python
+
+    from lxg import Loggable
+
+    MyClass:
+
+        def method1(self):
+            ...
+
+    MyClassToo(MyClass, Loggable):
+
+        def method1(self):
+            self.debug(f'Do method1')
+            super().method1()
+
+
+
