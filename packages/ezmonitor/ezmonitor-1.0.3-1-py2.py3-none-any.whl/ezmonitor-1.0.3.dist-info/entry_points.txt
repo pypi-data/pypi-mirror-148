@@ -1,0 +1,3 @@
+[console_scripts]
+ezmntor = ezmonitor.main:main
+
