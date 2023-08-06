@@ -1,0 +1,10 @@
+__init__.py,sha256=uz62Qz5f4QWEYbbX_aheRymdAhqAqbXrTxtbjDfCXqU,71
+exceptions.py,sha256=Y102RF4-8vWMJAYa0Inwv6lNlEygd9eRVtRvy8z49D8,163
+language.py,sha256=BfoHSbLPA8yG4CKxAlubaU7dGU_FiV-WMu61PcKZh44,441
+localiztion.py,sha256=kdOWLzEFR-lHaNckHytNyXwqqHzGfbGrVOm_sD4Xi1I,2539
+singleton.py,sha256=2JhMLykH1r52ZYbjee-jY3HW7PpIXVflhtJIQJPAhu4,298
+internationalization.py-0.0.1.dist-info/LICENSE,sha256=altJ0kRW0sLr6UrSwfet2L1DHstOUdgIC44LfjxF4Rk,1067
+internationalization.py-0.0.1.dist-info/METADATA,sha256=LTrG8N41tKuUF1Xb0NQFeiPsdl9mIUXp49JW_0tW2nY,2052
+internationalization.py-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+internationalization.py-0.0.1.dist-info/top_level.txt,sha256=AOkjb4RzIJB7dM0CcTZA2MBNyP9qgfpbPqW-jk90XFg,51
+internationalization.py-0.0.1.dist-info/RECORD,,
