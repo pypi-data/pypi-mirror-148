@@ -1,0 +1,6 @@
+README.md
+setup.py
+persiansyllablecount.egg-info/PKG-INFO
+persiansyllablecount.egg-info/SOURCES.txt
+persiansyllablecount.egg-info/dependency_links.txt
+persiansyllablecount.egg-info/top_level.txt
