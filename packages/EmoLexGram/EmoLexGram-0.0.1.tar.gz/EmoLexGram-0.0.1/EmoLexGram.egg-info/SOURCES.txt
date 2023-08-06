@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+EmoLexGram/EmoLexGram.py
+EmoLexGram/__init__.py
+EmoLexGram.egg-info/PKG-INFO
+EmoLexGram.egg-info/SOURCES.txt
+EmoLexGram.egg-info/dependency_links.txt
+EmoLexGram.egg-info/requires.txt
+EmoLexGram.egg-info/top_level.txt
