@@ -1,0 +1,14 @@
+cython
+pyopencl
+numpy
+h5py
+mako
+matplotlib
+ipyparallel
+pyfftw
+pyqt5<5.13
+numexpr
+sympy>=1.6.2
+nbsphinx
+inputimeout
+scipy
