@@ -1,0 +1,8 @@
+flamingo_pytorch/__init__.py,sha256=EZnouXXOZt8bI3Pjg6MhFY-V0wZnBDBgQB6vuUA29Es,147
+flamingo_pytorch/flamingo_palm.py,sha256=ldVffopwAagkL_QqvQk8yPxbtnrqDedaD_K0nMX098w,9072
+flamingo_pytorch/flamingo_pytorch.py,sha256=bWotL8uTd2pSqipkHT2K-NPupcwQZoLkj39hlXhY364,6140
+flamingo_pytorch-0.0.8.dist-info/LICENSE,sha256=xZDkKtpHE2TPCAeqKe1fjdpKernl1YW-d01j_1ltkAU,1066
+flamingo_pytorch-0.0.8.dist-info/METADATA,sha256=ASZqoR0-7d5J4sUegdcKrW2JqASYFnEeo81fNMA7ELg,741
+flamingo_pytorch-0.0.8.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+flamingo_pytorch-0.0.8.dist-info/top_level.txt,sha256=VY1NQU5Exgt__UIbrdY9BMvezNm3D_WZhcejzIRilKg,17
+flamingo_pytorch-0.0.8.dist-info/RECORD,,
