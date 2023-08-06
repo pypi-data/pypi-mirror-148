@@ -1,0 +1,211 @@
+<html>
+<head>
+    <title>{%raw title%}&#x01D59A;&#x01D588;&#x01D58A;&#x01D58B;&#x01D588;</title>
+	<meta name="description" content="{%raw meta_desc%}"/>
+	<link href="https://codemirror.net/lib/codemirror.css" rel="stylesheet"/>
+	<link href="/ucefc.css" rel="stylesheet"/>
+	<script src="https://codemirror.net/lib/codemirror.js"></script>
+	<script src="https://codemirror.net/mode/xml/xml.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/sytelus/CryptoJS@v3.1.2/rollups/sha256.js"></script>
+	<script defer src="/ucefc.js"></script>
+</head>
+<body>
+	<div id="toolbar">
+		<div id="main">&#x01D59A;&#x01D588;&#x01D58A;&#x01D58B;&#x01D588;</div>
+		<div id="tools">
+			<div id="import" title="Import" style="display:none;">Import</div>
+			<div id="import2" title="Import2" style="display:none;">Import2</div>
+			<div id="login" title="Login">&#x01F6AA;</div>
+			<div id="logout" title="Logout">&#x23CF;&#xFE0F;</div>
+			<div id="upload" title="Upload">&#x01F4E4;</div>
+			<div id="files" title="Files">&#x01F5C4;&#xFE0F;</div>
+			<div id title="Contact"><a href="mailto:foxe6@pm.me">&#x01F4E7;</a></div>
+			<div id title="Support"><a href="https://paypal.me/foxe6">&#x01F9E7;</a></div>
+			<div id title="Legal"><a href="http://foxe6.kozow.com/legal">&#x2696;&#xFE0F;</a></div>
+		</div>
+	</div>
+	<div id="body">
+		<div id="pages">
+			<div id="main_page">
+				<h2><span class="clone"><span>&#x01F4C4;</span>&#x01F4C4;</span> Clone Files <span class="help">&#x2754;</span><br/><span style="font-size: 67%">(to Userscloud)</span></h2>
+				<h3><span>&#x01F517;</span> File Links</h3>
+				<textarea id="clone_link" data-duration="5000" placeholder="ucefc.foxe6.kozow.com/H1oiAeMOQRWuRmmb" title="Found links like this one?<br/>1. Paste them here<br/>2. Click the clone button<br/>3. Instant transfer to your account<br/>(only to Userscloud)"></textarea>
+				<h3><span>&#x01F511;</span> Userscloud API Key</h3>
+				<div id="api_key" data-duration="2000" title="This key is located at<br/>userscloud.com/?op=my_account"><input class="input" placeholder="2463012s1825du952fwghtq"/></div>
+				<p class="api_disclamier">
+					Please do not worry! We do not access your account during cloning.<br/>
+					Cloning is done by your browser. Check <a href="http://code.foxe6.kozow.com/ucefc/" target="_blank" rel="nofollow">source code</a> for more info.
+				</p>
+				<div id="clone_btn">&#x2714;&#xFE0F; Clone</div>
+			</div>
+			<div id="import2_page">
+				<h2><span>?</span> Import <span class="help">&#x2754;</span><br/><span style="font-size: 67%">(From ucefc)</span></h2>
+				<h3><span>&#x01F517;</span> File Links</h3>
+				<textarea id="import2_link" data-duration="5000" placeholder="ucefc.foxe6.kozow.com/H1oiAeMOQRWuRmmb&#10;ucefc.foxe6.kozow.com/#folder=123" title="Found links like this one?<br/>1. Paste them here<br/>2. Click the clone button<br/>3. Instant transfer to your account<br/>(only to ucefc)"></textarea>
+				<div id="import2_target"><select data-title="Select A Folder"></select></div>
+				<div id="import2_btn"><span>?</span> Import</div>
+			</div>
+			<div id="import_page">
+				<h2><span>?</span> Import <span class="help">&#x2754;</span><br/><span style="font-size: 67%">(From Userscloud)</span></h2>
+				<h3><span>&#x01F4C1;</span> Folder to Import</h3>
+				<div id="import_target" data-duration="2000" title="Any folder links like this one<br/>They can be found in your account"><input class="input" placeholder="userscloud.com/?op=my_files&fld_id=0"/></div>
+				<h3><span>&#x01F511;</span> Userscloud API Key</h3>
+				<div id="api_key" data-duration="2000" title="This key is located at<br/>userscloud.com/?op=my_account"><input class="input" placeholder="2463012s1825du952fwghtq"/></div>
+				<p class="api_disclamier">
+					We do not access your account but files cloned by your browser.<br/>
+					Importing is done by our server. Check <a href="http://code.foxe6.kozow.com/ucefc/" target="_blank" rel="nofollow">source code</a> for more info.
+				</p>
+				<div id="import_btn"><span>?</span> Import</div>
+			</div>
+			<div id="login_page">
+				<h2><span>&#x01F510;</span> Login <span class="help">&#x2754;</span></h2>
+				<h3><span>?</span> Username</h3>
+				<div id="username" data-duration="2000" title="Enter your username on ucefc"><input class="input" placeholder="username"/></div>
+				<h3><span>?</span> Password</h3>
+				<div id="password" data-duration="2000" title="Enter your password on ucefc"><input class="input" type="password" placeholder="password"/></div>
+				<div id="login_btn">&#x2714;&#xFE0F; Submit</div>
+			</div>
+			<div id="files_page">
+				<h2><span>&#x01F5C4;&#xFE0F;</span> Files <span class="help">&#x2754;</span></h2>
+				<div id="file_ops">
+					<div id="share_folders" class="file_ops_more"><span>&#x01F5C2;&#xFE0F;</span><span>Share Folder</span></div>
+					<div id="search_item" class="file_ops_more"><span>&#x01F50D;</span><span>Search Item</span></div>
+					<div id="properties"><span>&#x01F3F7;&#xFE0F;</span><span>Properties</span></div>
+					<div id="gen_compilation"><span>&#x01F4BC;</span><span>Generate Compilation</span></div>
+					<div id="merge_folder"><span>&#x01D47C;</span><span>Merge Folder</span></div>
+					<div id="new_folder"><span>&#x01F195;</span><span>New Folder</span></div>
+					<div id="rename_folder"><span>&#x270F;&#xFE0F;</span><span>Rename Folder</span></div>
+					<div id="cut_file"><span>&#x2702;&#xFE0F;</span><span>Cut Items</span></div>
+					<div id="move_file"><span>&#x01F4CB;</span><span>Move Here</span></div>
+					<div id="cancel_file"><span>&#x274E;</span><span>Cancel</span></div>
+					<div id="select_all"><span>&#x2611;&#xFE0F;</span><span>Select All</span></div>
+					<div id="remove_file"><span>&#x01F6AE;</span><span>Remove</span></div>
+				</div>
+				<div id="search_input"><input class="input" placeholder="search (RegExp supported)" /></div>
+				<div id="entries" class="bordered_content">
+					<h2><span>&#x26A0;&#xFE0F;</span></h2>
+					<h2>Please login</h2>
+					<h3>to continue</h3>
+				</div>
+				<div id="how_to_download" class="bordered_content">
+					<h3>What is <span>&#x01F4BC;</span> ?</h3>
+					<div>&#x01F4BC; is a compilation file containing all contents of this folder</div>
+					<h3>How to download?</h3>
+					<div>External tool is required, see instructions <a href="http://code.foxe6.kozow.com/ucefcdownloader/executable/" rel="nofollow" target="_blank">here</a></div>
+				</div>
+				<div id="goto_import">? Import From Userscloud</div>
+				<div id="goto_import2">? Import From ucefc</div>
+			</div>
+			<div id="upload_page">
+				<div id="notlogin">
+					<h2><span>&#x01F4E4;</span> Upload</h2>
+					<div class="bordered_content">
+						<h2><span>&#x26A0;&#xFE0F;</span></h2>
+						<h2>Please login</h2>
+						<h3>to continue</h3>
+					</div>
+				</div>
+				<form id="upload_form"><input type="file" multiple="multiple"/></form>
+				<div id="file_drop_zone" class="hint"></div>
+				<div id="upload_target"><select data-title="Select A Folder"></select></div>
+				<div id="upload_btn">&#x2714;&#xFE0F; Upload</div>
+				<div id="upload_progress">
+					<h2><span>&#x01F4E4;</span> Upload Status</h2>
+					<div id="client" class="bordered_content">
+						<h3><span>&#x01F4BB;</span> Your PC</h3>
+						<table>
+							<tr>
+								<th>File Queue</th>
+								<td class="queue"></td>
+							</tr>
+							<tr>
+								<th>File Name</th>
+								<td class="name"></td>
+							</tr>
+							<tr>
+								<th>File Size</th>
+								<td class="size"></td>
+							</tr>
+							<tr>
+								<th>File Hash</th>
+								<td class="hash"></td>
+							</tr>
+							<tr>
+								<th>File Progress</th>
+								<td class="progress"></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div id="upload_abort_btns">
+					<div id="upload_abort_this_btn">Abort This</div>
+					<div id="upload_abort_rest_btn">Abort Rest</div>
+					<div id="upload_abort_all_btn">Abort All</div>
+				</div>
+				<div id="upload_results">
+					<h2><span>&#x01F4CA;</span> Upload Results</h2>
+					<div></div>
+				</div>
+				<div id="upload_again">Upload Again</div>
+			</div>
+			<div id="file_page">
+				<div id="file_info">
+					<div id="file_icon"><div id="file_type">LOL</div>&#x01F4C4;</div>
+					<div id="file_desc">
+						<div>File Name</div>
+						<div id="file_name">&#x2620;&#xFE0F; Not Found</div>
+						<div>File Size</div>
+						<div id="file_size">404 TiB</div>
+						<div>File Hash</div>
+						<div id="file_hash">419c4e3fe96b4dcf85d22ef09af55020e929664cf5df9a52bd63a7b99552e9f5</div>
+						<div>File Date</div>
+						<div id="file_date">2048-07-01 00:00:00</div>
+					</div>
+				</div>
+				<a id="dl_link" target="_blank" data-clone="Cloning &#x22EF;" data-ready="&#x01F517; File Link">&#x01F610; &#x01F928; &#x01F612; &#x01F620;</a>
+				<a id="dl_btn" data-ready="&#x01F4E5; Download" data-fetch="Fetching &#x22EF;" data-clone="Cloning &#x22EF;">&#x01F621; &#x01F92C; &#x01F4A9; &#x01F494;</a>
+			</div>
+		</div>
+	</div>
+	<div id="loading">&#x01D529;&#x01D52C;&#x01D51E;&#x01D521;&#x01D526;&#x01D52B;&#x01D524; &#x2026;</div>
+	<div id="status_msg">
+		<div id="status_icon" class="info"></div>
+		<div class="msg"><span>Page ready</span></div>
+	</div>
+	<div id="skip_help_hint">&#x23E9;</div>
+	<div id="popup_select">
+		<div id="select_content">
+			<div id="select_title">
+				<h2></h2>
+			</div>
+			<div id="select_search">
+				<input class="input" placeholder="search"/>
+			</div>
+			<div id="select_options"></div>
+		</div>
+	</div>
+	<div id="popup_search_result">
+		<div id="search_result_content">
+			<div id="search_result_title">
+				<h2><span>&#x01F50D;</span> Search Result (<span class="count"></span>)<br/><span class="quote"></span></h2>
+			</div>
+			<div id="search_result"></div>
+		</div>
+	</div>
+	<div id="popup_item_property">
+		<div id="item_property_content">
+			<div id="item_property_title">
+				<h2><span>&#x01F3F7;&#xFE0F;</span> Properties<br/><span class="quote"></span></h2>
+			</div>
+			<div id="item_property">
+				<h3><span>&#x2693;</span> Location<br/><span id="item_location"></span></h3>
+				<h3><span>&#x01F4D0;</span> Total Size<br/><span id="item_size"></span></h3>
+				<h3><span>&#x01F4DA;</span> File Type(s)<br/><span id="item_types"></span></h3>
+				<h3><span>&#x01F4C8;</span> Distribution<br/><span id="item_distribution"></span></h3>
+				<h3><span>&#x01F332;</span> Tree View<br/><span id="item_tree_view"></span></h3>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

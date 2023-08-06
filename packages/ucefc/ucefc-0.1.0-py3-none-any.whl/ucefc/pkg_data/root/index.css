@@ -1,0 +1,46 @@
+.dn{
+    display: none;
+}
+body{
+    margin: 0;
+    padding: 1em;
+}
+h1,
+h2{
+    text-align: center;
+}
+h2{
+    display: none;
+}
+table{
+    border-collapse: collapse;
+    display: none;
+    margin: 0 auto;
+}
+table th,
+table td{
+    border: 1px solid black;
+    padding: 3px;
+    font-family: "Arial", "Microsoft JhengHei", sans-serif;
+}
+table td[rowspan]{
+    max-width: 250px;
+}
+table tr:not(:first-child) td:nth-last-child(2){
+    font-family: monospace;
+    white-space: nowrap;
+}
+table tr:not(:first-child) td:nth-last-child(3){
+    width: 120px;
+    text-align: right;
+    white-space: nowrap;
+}
+body.show h1{
+    display: none;
+}
+body.show h2{
+    display: block;
+}
+body.show table{
+    display: table;
+}

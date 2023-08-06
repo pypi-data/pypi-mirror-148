@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api
+Disallow: /api/*
+
+Sitemap: http://ucefc.foxe6.kozow.com/sitemap.xml
