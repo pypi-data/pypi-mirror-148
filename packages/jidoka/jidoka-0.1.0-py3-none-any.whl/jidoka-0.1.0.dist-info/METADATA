@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: jidoka
+Version: 0.1.0
+Summary: Autonomous tools.
+Home-page: https://github.com/kuwv/jidoka
+Author: Jesse P. Johnson
+Author-email: jpj6652@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
