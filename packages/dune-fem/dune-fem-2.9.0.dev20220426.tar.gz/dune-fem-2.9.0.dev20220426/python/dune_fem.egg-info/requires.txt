@@ -1,0 +1,10 @@
+dune-alugrid<=2.9.0.dev20220426
+dune-alugrid<=2.9.0.dev20220426
+dune-grid<=2.9.0.dev20220426
+dune-istl<=2.9.0.dev20220426
+dune-istl<=2.9.0.dev20220426
+dune-localfunctions<=2.9.0.dev20220426
+dune-localfunctions<=2.9.0.dev20220426
+fenics-ufl==2019.1.0
+matplotlib
+scipy
