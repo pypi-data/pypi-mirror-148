@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pysimpleig
+Version: 1.0.6
+Summary: A library to help simplifying the usage instagram
+Home-page: https://github.com/novitae/PySimpleIG
+Author: novitae
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: requests
+
+UNKNOWN
+
