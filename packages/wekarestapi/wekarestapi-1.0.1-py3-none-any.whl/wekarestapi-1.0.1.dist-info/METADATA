@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: wekarestapi
+Version: 1.0.1
+Summary: @weka-api
+Home-page: UNKNOWN
+Author-email: vince@weka.io
+License: UNKNOWN
+Keywords: Swagger,@weka-api
+Platform: UNKNOWN
+Requires-Dist: urllib3 (>=1.15)
+Requires-Dist: six (>=1.10)
+Requires-Dist: certifi
+Requires-Dist: python-dateutil
+
+    &lt;div&gt;The Weka system supports a RESTful API. This is useful when automating the interaction with the Weka system and when integrating it into your workflows or monitoring systems. The API is accessible at port 14000, via the /api/v2 URL, you can explore it via /api/v2/docs when accessing from the cluster (e.g. https://weka01:14000/api/v2/docs).&lt;div style&#x3D;\&quot;margin-top: 15px;\&quot;&gt;Note: Weka uses 64bit numbers. Please take special care when interacting with the API with different program languages (In JS for example you can use \&quot;json-bigint\&quot;)&lt;/div&gt;&lt;/div&gt;  # noqa: E501
+    
+
