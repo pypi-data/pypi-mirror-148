@@ -1,0 +1,11 @@
+calligraphy_scripting/__init__.py,sha256=t7M2Z1FUBAZ5RQLBPdozn1ZCwFvY6V-jKAQ-1Y0af60,55
+calligraphy_scripting/cli.py,sha256=vJ5Nb2NtTDvLfoYt_4cRtGepR0woNjvxh6w2a9aRDrQ,7256
+calligraphy_scripting/data/header.py,sha256=QCMLEBAaO3qO8BZ8yNUMFE7WWtXJezSPB-uf9iydWS4,7596
+calligraphy_scripting/parser.py,sha256=XcA_V6LcXJqckS9VF596JbXDV123VxhGOSo0QQ6mhMg,11159
+calligraphy_scripting/runner.py,sha256=FD382fQ0wJaaWHOCAEq_cgh79SKDL5PLq1GIZcWIG1g,1296
+calligraphy_scripting/transpiler.py,sha256=zejvq4_YwoKslddHpf0uwmsjRZTBBraB8B0glO73YkI,4318
+calligraphy_scripting-1.1.0.dist-info/entry_points.txt,sha256=mqxRYjt0cy_WWX4JNBq4BVnqc8SG7L-nm2_WYpvgYEI,61
+calligraphy_scripting-1.1.0.dist-info/LICENSE,sha256=WBm5J221EkLJcmyoNos7M7blAFqbyNBpIHlKHqSOIOs,1068
+calligraphy_scripting-1.1.0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+calligraphy_scripting-1.1.0.dist-info/METADATA,sha256=0FJqyT2uMJiLWSDWBsMIRokf4t_Hf0UPJJgWJliYGJY,2878
+calligraphy_scripting-1.1.0.dist-info/RECORD,,
