@@ -1,0 +1,94 @@
+.\" SPDX-License-Identifier: CC0-1.0
+.\"
+.\" Man page for Hydrilla builder.
+.\"
+.\" Copyright (C) 2022 Wojtek Kosior <koszko@koszko.org>
+.\"
+.\" Available under the terms of Creative Commons Zero v1.0 Universal.
+
+.TH HYDRILLA-BUILDER 1 2022-04-22 "Hydrilla 1.0" "Hydrilla Manual"
+
+.SH NAME
+hydrilla-builder \- Generate packages to be served by Hydrilla
+
+.SH SYNOPSIS
+.B "hydrilla\-builder \-\-help"
+.br
+.B "hydrilla\-builder [\-s \fISOURCE\/\fP] [\-i\ \fIINDEX_PATH\/\fP]"
+.B "\-d \fIDESTINATION\/\fP"
+.br
+(See the OPTIONS section for alternate option syntax with long option
+names.)
+
+.SH DESCRIPTION
+.I hydrilla-builder
+is a tool which takes a Hydrilla source package and generates files of a
+built package, suitable for serving by the Hydrilla server.
+
+As of Hydrilla version 1.0
+.I hydrilla-builder
+does not yet perform nor trigger actions like compilation, minification or
+bundling of source code files. Its main function is to automate the process
+of computing SHA256 cryptographic sums of package files and including them
+in JSON definitions.
+
+In addition,
+.B hydrilla\-builder
+can generate an SPDX report from source package if the
+\*(lqreuse_generate_spdx_report\*(rq property is set to true in index.json.
+
+.SH OPTIONS
+.TP
+.B \-\^\-help
+Output a usage message and exit.
+
+.TP
+.BI \-s " SOURCE" "\fR,\fP \-\^\-srcdir=" SOURCE
+Use
+.I SOURCE
+as source package directory to build from.
+If not specified, current directory is used.
+
+.TP
+.BI \-i " INDEX_PATH" "\fR,\fP \-\^\-index\-json=" INDEX_PATH
+Process the JSON file under
+.I INDEX_PATH
+instead of index.json inside source directory.
+.I INDEX_PATH
+may be either absolute or relative.
+In the latter case it is resolved with respect to the source directory.
+
+File provided as
+.I INDEX_PATH
+will also be included in the generated source archive as
+\*(lqindex.json\*(rq, substituting any file with such name that could be
+present in the source directory.
+
+.TP
+.BI \-d " DESTINATION" "\fR,\fP \-\^\-dstdir=" DESTINATION
+Write generated files under
+.IR DESTINATION .
+Files are written in such way that
+.I DESTINATION
+is valid for being passed to Hydrilla to serve packages from.
+
+.TP
+.B \-\^\-version
+Show version information for this instance of
+.I hydrilla-builder
+on the standard output and exit successfully.
+
+.SH "EXIT STATUS"
+The exit status is 0 if build was performed successfully or if the
+.B \-\^\-help
+option was passed. It is a number different from 0 in all other cases.
+
+.SH "SEE ALSO"
+.SS "Manual Pages"
+.BR hydrilla (1).
+
+.SS "Full Documentation"
+.UR https://hydrillabugs.koszko.org/projects/hydrilla/wiki
+Online documentation
+.UE
+is available on Hydrilla issue tracker.
