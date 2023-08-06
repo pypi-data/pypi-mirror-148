@@ -1,0 +1,9 @@
+README.md
+setup.py
+SciProgPackage/ScientificProgramming.py
+SciProgPackage/__init__.py
+SciProgPackage.egg-info/PKG-INFO
+SciProgPackage.egg-info/SOURCES.txt
+SciProgPackage.egg-info/dependency_links.txt
+SciProgPackage.egg-info/requires.txt
+SciProgPackage.egg-info/top_level.txt
