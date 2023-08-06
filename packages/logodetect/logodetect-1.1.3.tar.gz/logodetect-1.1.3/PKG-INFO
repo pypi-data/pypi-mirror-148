@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: logodetect
+Version: 1.1.3
+Summary: One-shot logo detection for videos and images.
+Home-page: https://github.com/Heldenkombinat/logodetect
+Author: Jorge Davila Chacon
+Author-email: jorge@heldenkombinat.com
+License: GNU AGPLv3
+Download-URL: https://github.com/Heldenkombinat/logodetect/tarball/1.1.0
+Description: One-shot logo detection for videos and images.
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Console
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Provides-Extra: tests
+Provides-Extra: dev
