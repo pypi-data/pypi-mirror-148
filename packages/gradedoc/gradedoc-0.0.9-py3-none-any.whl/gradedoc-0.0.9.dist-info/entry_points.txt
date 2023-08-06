@@ -1,0 +1,3 @@
+[console_scripts]
+gradedoc=gradedoc.cli:main
+

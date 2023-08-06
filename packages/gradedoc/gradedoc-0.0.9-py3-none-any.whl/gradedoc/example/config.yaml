@@ -1,0 +1,62 @@
+# Supply the directory of reports that you are grading. Make sure it is a single-quoted string (e.g. '<my path>' and not "<my path>") so that the backslashes are properly handled.
+docx_dir: 'C:Users\YOUR_USERNAME\Desktop\submissions'
+
+headers:
+  abstract: 10
+  introduction and theory: 20
+  procedures: 20
+  results and discussion: 40
+  conclusion: 10
+
+codes:
+  # General
+
+  G1: |-
+    This is an example of multi-line feedback. The "|" above allows us to type on multiple lines. The "-" after the block will make sure any extra newlines after our block of feedback are not propagated.
+
+    We can even do multiple paragraphs.
+
+  G2: This is an example of single-line feedback.
+
+  G3: We can keep defining lab-specific common codes in this manner.
+
+  G4: |- # 4 points
+    Another use of multi-line feedback is giving yourself room to write down how many points such an error is usually worth. Note that this tool does not currently support encoding the number of points to take off. The comment after the "#" above is just a reminder to you.
+
+  G5: |- # 0 points
+    Sometimes you want to remind yourself that this is a formatting error that you don't usually take points off for.
+
+  # Abstract (This is just a comment. It allows you to visually delineate codes.)
+
+  A1: |- # 4 points
+    Maybe you want to specify the "A" prefix for common errors in the Abstract section of the report.
+
+  A2: Another issue that you wish to identify in the abstract.
+
+  # Introduction and Theory
+
+  I1: |- # 4 points
+    Maybe you want to specify the "I" prefix for common errors in the Introduction and Theory section.
+
+  # Procedures
+
+  P1: |- # 4 points
+    Maybe you want to specify the "P" prefix for common errors in the Procedures section.
+
+  # Results and Discussion
+
+  R1: |- # 4 points
+    Maybe you want to specify the "R" prefix for common errors in the Results and Discussion of the report.
+
+  R2: |-
+    You won't get very rich formatting with plaintext, but you can still have bulleted lists.
+    - Here is one bullet
+    - And another
+    - And another
+
+    We should be able to give enough feedback even without rich formatting.
+
+  # Conclusion
+
+  C1: |- # 4 points
+    Maybe you want to specify the "C" prefix for common errors in the Conclusion of the report.
