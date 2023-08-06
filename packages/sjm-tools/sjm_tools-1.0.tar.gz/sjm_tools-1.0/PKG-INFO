@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: sjm_tools
+Version: 1.0
+Summary: A wraper for SJM
+Home-page: https://github.com/sysuliujh/Bioinfo-toolkit/tree/master/sjm_tools
+Author: Jianheng Liu
+Author-email: jhfoxliu@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=2
+License-File: LICENSE
+
+UNKNOWN
+
