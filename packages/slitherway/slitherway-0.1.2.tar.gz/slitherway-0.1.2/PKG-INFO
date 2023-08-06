@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: slitherway
+Version: 0.1.2
+Summary: Python wrapper for the Flyway CLI
+Home-page: https://github.com/unredundant/slitherway
+License: MIT
+Keywords: migrations,flyway
+Author: Ryan Brink
+Author-email: rbweb@pm.me
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: pydantic (>=1.9.0,<2.0.0)
+Project-URL: Repository, https://github.com/unredundant/slitherway
+Description-Content-Type: text/markdown
+
+# Slitherway
+
+Slitherway is a lightweight python wrapper around the [Flyway](https://flywaydb.org/) CLI.  
+It allows you to run migrations directly from your python applications and tests
+
+In order to use, you must have the Flyway CLI installed on your machine!
