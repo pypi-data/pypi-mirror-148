@@ -1,0 +1,3 @@
+include tox.ini
+include trivver.scd
+recursive-include unit_tests *.py *.sh
