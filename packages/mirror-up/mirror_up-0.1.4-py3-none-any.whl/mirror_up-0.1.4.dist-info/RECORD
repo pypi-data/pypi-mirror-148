@@ -1,0 +1,9 @@
+mirror_up/__init__.py,sha256=4jvZqMLJhPzDHB60px7QWM6bDyfpabKWPtSaAbBtxYQ,217
+mirror_up/__main__.py,sha256=1cgC4TbWenjo6oeuVNRRENmOzeUh7oFO5ijwhcnxuCI,248
+mirror_up/_utils.py,sha256=t1z-OmLVldXFfxkExhrDzkm88M_cVIUyZgkEpiV3l5E,1494
+mirror_up/mirror_ace.py,sha256=Xy9kcmZFv7a3bm0tVhjZxvLmtIxiPd0fcP9QpgDGfOQ,9250
+mirror_up/mirror_ace_cli.py,sha256=_EXBKh7GewW9sCwHUCH_zDSCJXtFbGamD3PgStRx7Uk,4004
+mirror_up-0.1.4.dist-info/LICENSE,sha256=-O7iHpI556brmVE8V7HVE59ZNQr_UHJTWP7cAQ8WIWY,1090
+mirror_up-0.1.4.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+mirror_up-0.1.4.dist-info/METADATA,sha256=QKgJPwKsSWhM9WYnslLacRAVB_XG-vOaJC8WK8-duGY,2220
+mirror_up-0.1.4.dist-info/RECORD,,
