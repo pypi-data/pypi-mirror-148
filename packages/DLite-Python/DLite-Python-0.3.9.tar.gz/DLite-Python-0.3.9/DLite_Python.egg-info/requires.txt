@@ -1,0 +1,6 @@
+numpy
+fortran-language-server
+PyYAML
+psycopg2-binary
+pandas
+pymongo
