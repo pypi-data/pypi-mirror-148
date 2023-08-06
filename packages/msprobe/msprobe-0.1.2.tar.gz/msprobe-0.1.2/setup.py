@@ -1,0 +1,43 @@
+# -*- coding: utf-8 -*-
+from setuptools import setup
+
+packages = \
+['msprobe',
+ 'msprobe.lib',
+ 'msprobe.lib.adfs',
+ 'msprobe.lib.exch',
+ 'msprobe.lib.rdp',
+ 'msprobe.lib.skype']
+
+package_data = \
+{'': ['*']}
+
+install_requires = \
+['bs4>=0.0.1,<0.0.2',
+ 'click>=8.1.2,<9.0.0',
+ 'lxml>=4.8.0,<5.0.0',
+ 'requests>=2.27.1,<3.0.0',
+ 'rich>=12.2.0,<13.0.0']
+
+entry_points = \
+{'console_scripts': ['msprobe = msprobe.msprobe:cli']}
+
+setup_kwargs = {
+    'name': 'msprobe',
+    'version': '0.1.2',
+    'description': 'Finding all things on-prem MS!',
+    'long_description': None,
+    'author': 'puzzlepeaches',
+    'author_email': None,
+    'maintainer': None,
+    'maintainer_email': None,
+    'url': None,
+    'packages': packages,
+    'package_data': package_data,
+    'install_requires': install_requires,
+    'entry_points': entry_points,
+    'python_requires': '>=3.9,<4.0',
+}
+
+
+setup(**setup_kwargs)
