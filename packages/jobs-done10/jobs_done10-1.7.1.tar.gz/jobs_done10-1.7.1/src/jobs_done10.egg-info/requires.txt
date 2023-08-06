@@ -1,0 +1,13 @@
+click
+flask
+gunicorn
+mailer
+pre-commit
+pygments
+pytest
+pytest-mock
+pytest-regressions
+python-dotenv
+python-jenkins
+pyyaml
+requests-mock
