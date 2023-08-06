@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+pyiocare/__init__.py
+pyiocare/coway_client.py
+pyiocare/exceptions.py
+pyiocare/purifier_model.py
+pyiocare.egg-info/PKG-INFO
+pyiocare.egg-info/SOURCES.txt
+pyiocare.egg-info/dependency_links.txt
+pyiocare.egg-info/requires.txt
+pyiocare.egg-info/top_level.txt
