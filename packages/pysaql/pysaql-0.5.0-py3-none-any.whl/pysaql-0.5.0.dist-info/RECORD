@@ -1,0 +1,14 @@
+pysaql/__init__.py,sha256=brv500Ysa1yQYVwsTYcgWUU05dM5QOCWJTv463nJnIQ,55
+pysaql/aggregation.py,sha256=9oShgpk7trAzYI8ZE9IbPdq86L0DNKeM5B5fD6z5PaM,4475
+pysaql/date_.py,sha256=RHTdmMz4muoKNq2DhzQ2OK0mV3vIjfDiBkcPNZWKjOE,7710
+pysaql/enums.py,sha256=UyPw81M2x-I5BE-GHF_KksClVNepmKSebP2gbls7N0I,1260
+pysaql/expression.py,sha256=wxd3YZYcllkEox6zLTgp635kAtx-dLLSAINywJXjNDI,959
+pysaql/function.py,sha256=nLTq7YMmJUzBvTOF5MRQmOleQwoFHeEWd2sRfAYAYTo,3658
+pysaql/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pysaql/scalar.py,sha256=08HCKepm45ybOxgV1Fq8-o5Qb2O4PAIcUDCk091DEuk,7519
+pysaql/stream.py,sha256=AB4aP-h_SSYHSX0_GnkdNHDHWpEhROEvIaaMgrHauJc,12994
+pysaql/util.py,sha256=pmVo98rcER_3vOHJVZ3JAx6Q8KEg7qZXdrb0YWglVgI,1357
+pysaql-0.5.0.dist-info/LICENSE.md,sha256=GV5ehmHZMxTN5oKXdqo6AZh2hbCnjXz8SM7JZIORrTo,1463
+pysaql-0.5.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+pysaql-0.5.0.dist-info/METADATA,sha256=mXF4m0in3wwO_HzVaHq9ZXP7lyFclITSZ4jTibV4UO0,1353
+pysaql-0.5.0.dist-info/RECORD,,
