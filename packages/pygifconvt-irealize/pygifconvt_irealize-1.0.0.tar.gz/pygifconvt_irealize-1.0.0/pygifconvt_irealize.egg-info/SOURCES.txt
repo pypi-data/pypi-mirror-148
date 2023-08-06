@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+pygifconvt_irealize/__init__.py
+pygifconvt_irealize/converter.py
+pygifconvt_irealize.egg-info/PKG-INFO
+pygifconvt_irealize.egg-info/SOURCES.txt
+pygifconvt_irealize.egg-info/dependency_links.txt
+pygifconvt_irealize.egg-info/not-zip-safe
+pygifconvt_irealize.egg-info/requires.txt
+pygifconvt_irealize.egg-info/top_level.txt
