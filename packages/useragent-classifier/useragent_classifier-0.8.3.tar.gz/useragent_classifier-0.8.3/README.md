@@ -1,0 +1,64 @@
+# Useragent_classifier
+
+## Installation 
+
+```
+pip install useragent_classifier
+```
+
+## Basic Usage
+
+### Text
+```
+useragent_classifier -f /tmp/mylist_of_User_agent.csv
+```
+
+Where mylist_of_User_agent.csv file is in the following format, one user agent by row, with no header
+|                                                                          |
+|--------------------------------------------------------------------------|
+| Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko     |
+| Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0 |
+| Opera/6.11 (Linux 2.4.18-bf2.4 i686; U)  [en]                            |
+
+It will produce a two files:
+- a file with cluster number attributed to each User agent
+- a file usefull to explain cluster with the most important word or set of word in this cluster
+
+### Graphical analysis of cluster    
+
+```
+useragent_classifier -f /tmp/mylist_of_User_agent.csv --graphical-explanation
+```
+
+Launch a graphical analysis of cluster on local host on port 8050
+
+![Alt text](ressources/example_dashboard.png?raw=true "Screenshot dashboard")
+
+### Usage in python program
+```
+df = pd.DataFrame([
+    "Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en) AppleWebKit/522.11.1 (KHTML, like Gecko) Safari/419.3"
+    "Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en) AppleWebKit/521.32.1 (KHTML, like Gecko) Safari/521.32.1"
+    "Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en) AppleWebKit (KHTML, like Gecko)"
+    "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; es-es) AppleWebKit/531.22.7 (KHTML, like Gecko)"
+    "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_6; en-us) AppleWebKit/528.16 (KHTML, like Gecko)"
+    "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_5; it-it) AppleWebKit/525.18 (KHTML, like Gecko)"
+])
+df.columns = ["ua"] # a column 'ua' is mandatory for the usage in python script
+
+# 2 or 3 clusters, clusters explanation based on a maximum of 10 words or group of words
+classifier = UserAgentClassifier(n_clusters=[2, 3], n_top_words=10) 
+cluster = classifier.get_cluster(df)
+
+feature_importances = classifier._features_importances
+
+```
+
+
+## More advanced Usage
+
+To display the help
+```
+useragent_classifier --help
+```
+
