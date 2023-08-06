@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: jonasstrube-sudokumanager
+Version: 0.1.1
+Summary: A package for solving sudokus
+Home-page: https://github.com/jonasstrube/sudokumanager
+Author: Jonas Strube
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Sudoku Manager
+
+A package for solving sudokus
+
