@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: bingen
+Version: 0.1.2
+Summary: German to Ukrainian words translator
+Home-page: https://github.com/adyachok/bingen
+Author: Andras Gyacsok
+Author-email: atti.dyachok@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: build (==0.7.0)
+Requires-Dist: certifi (==2021.10.8)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: charset-normalizer (==2.0.12)
+Requires-Dist: dataclasses-json (==0.5.7)
+Requires-Dist: googletrans (==3.1.0a0)
+Requires-Dist: h11 (==0.9.0)
+Requires-Dist: h2 (==3.2.0)
+Requires-Dist: hpack (==3.0.0)
+Requires-Dist: hstspreload (==2021.12.1)
+Requires-Dist: httpcore (==0.9.1)
+Requires-Dist: httpx
+Requires-Dist: hyperframe (==5.2.0)
+Requires-Dist: idna (==3.3)
+Requires-Dist: marshmallow (==3.15.0)
+Requires-Dist: marshmallow-enum (==1.5.1)
+Requires-Dist: mypy-extensions (==0.4.3)
+Requires-Dist: packaging (==21.3)
+Requires-Dist: pep517 (==0.12.0)
+Requires-Dist: pyparsing (==3.0.8)
+Requires-Dist: rfc3986 (==1.5.0)
+Requires-Dist: sniffio (==1.2.0)
+Requires-Dist: tomli (==2.0.1)
+Requires-Dist: typing-inspect (==0.7.1)
+Requires-Dist: typing-extensions (==4.2.0)
+Requires-Dist: urllib3 (==1.26.9)
+
+## Bingen
+
+### Description 
+This package is German words to Ukrainian translator.
+
+### Usage
+
+```python
+from bingen.translator import translate
+
+tokens = ['Liebe']
+sk_dict, not_translated_counter = translate(tokens)
+print(f'Not translated: {not_translated_counter}')
+print(sk_dict.to_dict())
+```
+
