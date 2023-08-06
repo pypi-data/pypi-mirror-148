@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+datasette_gzip/__init__.py
+datasette_gzip.egg-info/PKG-INFO
+datasette_gzip.egg-info/SOURCES.txt
+datasette_gzip.egg-info/dependency_links.txt
+datasette_gzip.egg-info/entry_points.txt
+datasette_gzip.egg-info/requires.txt
+datasette_gzip.egg-info/top_level.txt

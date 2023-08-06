@@ -1,0 +1,6 @@
+datasette
+asgi-gzip
+
+[test]
+pytest
+pytest-asyncio
