@@ -1,0 +1,15 @@
+volumentations/__init__.py,sha256=4SfsoPYomkNPHEtddoKCyg6u7ilp1T0rIHzLNo3h_80,3220
+volumentations/__version__.py,sha256=kwEyWwKLIIqYSnkf5eXgPtRgw9Bz51riSupwtvDpJMA,23
+volumentations/random_utils.py,sha256=c69BJrBU6YSV4zjVVFkvIab8V3-5SU71d3_EFzglKzA,4333
+volumentations/augmentations/__init__.py,sha256=up-wPMeMZR6ti3xK2F3ZjGtrK-fKKCwXyBozne0As5s,3172
+volumentations/augmentations/functional.py,sha256=0T4Ycdr1FcW3zEWZS-mFWoYpwoZl51oTKcdARj4XmfM,29019
+volumentations/augmentations/functionals.py,sha256=6_PDc53uzLd9e0zLUvdZ8FwV229WX3KMWDRxjp6I1t4,13229
+volumentations/augmentations/transforms.py,sha256=WyFKijgCNyu9qnT1WSvvLIHCBL3NcFXtergfiYM6e2c,49216
+volumentations/core/__init__.py,sha256=Elu8gPSaA846YoTIAwtUy-GbbHofzZHSJAfOhHcVypU,3062
+volumentations/core/composition.py,sha256=a2Pi2NmztUnEqx9x6D_RVRs0ZEyP7VSHM9UVep-RGZ4,3923
+volumentations/core/transforms_interface.py,sha256=wFihQcYCG8Un7pRe4e0WMH-B53rDZcUNbkRqPYylM0I,6904
+volumentations_3D-1.0.4.dist-info/LICENSE,sha256=pXMHiWArtHenSO2WvnaMYpDmtf2ubYA94DyyHnTjWsU,1085
+volumentations_3D-1.0.4.dist-info/METADATA,sha256=6qfI31p9An0bF27DfvRas--UnRwXPrcZtTlRuapjZA4,481
+volumentations_3D-1.0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+volumentations_3D-1.0.4.dist-info/top_level.txt,sha256=B-ihdcYk2dj3SBwvppGNzBPcZ2dGKXoakvZZ1CzK9nw,64
+volumentations_3D-1.0.4.dist-info/RECORD,,
