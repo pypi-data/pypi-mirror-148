@@ -1,0 +1,3 @@
+[console_scripts]
+ldpy = ldpy.__main__:main
+
