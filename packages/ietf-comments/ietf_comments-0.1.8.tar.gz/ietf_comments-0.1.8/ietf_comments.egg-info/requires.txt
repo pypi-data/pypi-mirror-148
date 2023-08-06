@@ -1,0 +1,8 @@
+commonmark
+pygithub
+colorama
+requests
+
+[dev]
+mypy
+black
