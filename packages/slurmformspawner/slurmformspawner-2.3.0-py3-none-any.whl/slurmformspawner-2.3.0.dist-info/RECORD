@@ -1,0 +1,13 @@
+slurmformspawner/__init__.py,sha256=Y_ua5mwLkPHGwU20ZVYtlr1zbERt8ndkPlP11HNl3HQ,38
+slurmformspawner/form.py,sha256=eizdfZuAXyH_EZvIyeBnmAU0Yu3By2fcUOfo8r7xt5M,11699
+slurmformspawner/slurm.py,sha256=W-4NYMEHa-buDnKm2nGMZLKpF6jq8B9xx-kdmlJJg9Q,3886
+slurmformspawner/spawner.py,sha256=x1jJkmqthaV90cKwLvDwj__SsEEN7L8PAm4IeWCU12k,3766
+slurmformspawner/traitlets.py,sha256=XV-UVTsRSwfHbhmi2BOpmRuf4zHmFFYRg1wTRW7VnyM,1467
+slurmformspawner-2.3.0.data/data/share/slurmformspawner/templates/error.html,sha256=Ap1AepcoL0RjfRv5C0ZX9wE_Ah59BIi6PrQUC_DN9z8,11446
+slurmformspawner-2.3.0.data/data/share/slurmformspawner/templates/form.html,sha256=GUYXPOFhD2OubVLsIT71iwB-VETuNascYzVDOkASPcw,1382
+slurmformspawner-2.3.0.data/data/share/slurmformspawner/templates/submit.sh,sha256=e2kIO-D8bTf5q57CAslPw7VL_nL6PZvQmPkBl8iZLkw,1045
+slurmformspawner-2.3.0.dist-info/LICENSE,sha256=VDsxWQM6OSLjX6jeLQT-aICVe1NA1ei-9S4dNHW_9Qw,1078
+slurmformspawner-2.3.0.dist-info/METADATA,sha256=jbWzz9rboa6eGph7lEUP-cnSh5DDDFs--Jotilna6Tw,817
+slurmformspawner-2.3.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+slurmformspawner-2.3.0.dist-info/top_level.txt,sha256=aub7tuZns-znVyg453e0z32EpEHV-HSIzZFRhk64Q24,17
+slurmformspawner-2.3.0.dist-info/RECORD,,
