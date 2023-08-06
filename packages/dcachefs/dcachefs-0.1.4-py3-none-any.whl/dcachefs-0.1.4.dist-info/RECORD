@@ -1,0 +1,10 @@
+dcachefs/__init__.py,sha256=RA5rGeX1HmZokqGZrZr0tPTM_eRC7S2wzRcpVpz7pds,381
+dcachefs/__version__.py,sha256=aBEbDvx4LMg8A1TJJR6dEHu8rQODVin528hLS_EDvuA,22
+dcachefs/dcachefs.py,sha256=zsIhbmoWKz4QIDjsmpMESJGUZNJXkrhvSvcMuewvTjo,17695
+dcachefs/register_implementation.py,sha256=6cz72A7TmMNMNRDdPa-7AqOr7W4kUdGPUPTeFUm5GJo,478
+dcachefs-0.1.4.dist-info/LICENSE,sha256=OPzV6bHGPCXFylyiCR3GYAK-EP8seLDbcbgO87DYM1o,11359
+dcachefs-0.1.4.dist-info/METADATA,sha256=dN99EWj0m4oCUUuQ6eK6SMYNzPLNjBxFj3noGwr1Z2Y,4339
+dcachefs-0.1.4.dist-info/NOTICE,sha256=YAIhrp7Wio6NDKyKIB5TJ14A8AerZpyfccMfNZnRO0I,83
+dcachefs-0.1.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+dcachefs-0.1.4.dist-info/top_level.txt,sha256=srbAe773fMg84uiyQI5C0_1Gd5ukTDUaqOq3aeF3c6w,9
+dcachefs-0.1.4.dist-info/RECORD,,
