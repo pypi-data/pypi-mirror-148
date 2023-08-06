@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+/Users/spereira/github/zscaler_api_talkers/__init__.py
+/Users/spereira/github/zscaler_api_talkers/setup.py
+Zscaler_API_Talkers.egg-info/PKG-INFO
+Zscaler_API_Talkers.egg-info/SOURCES.txt
+Zscaler_API_Talkers.egg-info/dependency_links.txt
+Zscaler_API_Talkers.egg-info/requires.txt
+Zscaler_API_Talkers.egg-info/top_level.txt
