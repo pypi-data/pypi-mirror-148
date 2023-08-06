@@ -1,0 +1,2 @@
+[datasette]
+total_page_time = datasette_total_page_time
