@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: db-kirosake
+Version: 0.0.1
+Summary: A small example package
+Home-page: https://github.com/t1rxdqq/db-kirosake-source
+Author: t1rxdqq
+Author-email: danilmerkulov63@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/t1rxdqq/db-kirosake-source/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Example Package
+
+This is a simple example package. You can use
+[Info](https://github.com/t1rxdqq/db-kirosake-source/README.md)
+to write your content.
+
