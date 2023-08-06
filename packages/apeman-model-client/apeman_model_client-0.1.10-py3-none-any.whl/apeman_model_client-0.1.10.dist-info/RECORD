@@ -1,0 +1,15 @@
+apeman/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+apeman/model/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+apeman/model/modelInstanceTaskStatus_pb2.py,sha256=2VCVu07i5xWCgRJ9wvzQir5L-v7KK8qO-uDfbF5RdPI,1682
+apeman/model/modelInstanceTaskStatus_pb2_grpc.py,sha256=1oboBPFxaTEXt9Aw7EAj8gXHDCNMhZD2VXqocC9l_gk,159
+apeman/model/openapi/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+apeman/model/openapi/apemanOpenApi.py,sha256=oKSM1jjmVafCzOi7T4WhR3Ls3fEW4r-KpZbbJrnJILs,1708
+apeman/model/openapi/apemanOpenApi_pb2.py,sha256=-tSqITmmmnzNkzzHJHExbtlBYlQ2-hOWAcGYLLdRhew,3610
+apeman/model/openapi/apemanOpenApi_pb2_grpc.py,sha256=Vp6ghDIERRwP657LsOj-ux5TBVDOq-aM8L3g8J_OI8c,4461
+apeman/model/openapi/model_instance_task_status.py,sha256=sbeS9VPBRTYp4R78vKyoVZX7UTl40TzyGCxm4lTk8Hc,191
+apeman/model/openapi/mockserver/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+apeman/model/openapi/mockserver/apeman_model_server.py,sha256=T_McOvNdhvN7uTg2mSUpFCWbiuMIx1qTONv4gPIdq_s,1315
+apeman_model_client-0.1.10.dist-info/METADATA,sha256=nEYKVPhnp2Ppy_fJ_uTWRFXZh_V3mjtyWEI_RBoae0c,1214
+apeman_model_client-0.1.10.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+apeman_model_client-0.1.10.dist-info/top_level.txt,sha256=qkq-T1MIzLtHIMBU7TRO77CelHGi-gzctcpOI6WM1Y8,7
+apeman_model_client-0.1.10.dist-info/RECORD,,
