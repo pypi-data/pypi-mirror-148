@@ -1,0 +1,10 @@
+cached_interpolate-0.1.0.dist-info/RECORD,,
+cached_interpolate-0.1.0.dist-info/LICENSE,sha256=WDhRw4oqZQDmVhrZxeQoWP9m2SmzsZNZbCj83weG6jM,1068
+cached_interpolate-0.1.0.dist-info/METADATA,sha256=D0iSzzs2yxkzl84zH7PYp3WAEp8ytK-xy28G_SvM9Y0,8752
+cached_interpolate-0.1.0.dist-info/top_level.txt,sha256=D04QINUklA_yzM_AgKFVSsRlgYmszgCWelFmZvhsKeE,19
+cached_interpolate-0.1.0.dist-info/WHEEL,sha256=bNo8z0PVtQTBbDGrChMiv5oJrHcjNPuihN_pxw9QNoY,185
+cached_interpolate/__init__.py,sha256=5OdNrLw01zar3nYlHOzIJtgDc02f_yW6X-M9HkM4-14,44
+cached_interpolate/build.pyx,sha256=-VKBDpSSG--SpgKe1K7u8BrZWb8SaWKz-RnoYg2cgY4,1277
+cached_interpolate/interpolate.py,sha256=fyM5SFvLwbvVK1VPKUXCMq3Ot3RpNRD8G-RZLdFVfFU,7570
+cached_interpolate/.version,sha256=ie53gWmwN6vaD3KCF8tEyzWv3SLgGkim24LNN-c3V3s,14
+cached_interpolate/build.cpython-39-x86_64-linux-gnu.so,sha256=NLMyvAHxd6k8QRUcMXIO4r8g447RA2OPomuD42R558g,910552
