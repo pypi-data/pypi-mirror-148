@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/djangorestframework_pagination/__init__.py
+src/djangorestframework_pagination/pagination.py
+src/djangorestframework_pagination.egg-info/PKG-INFO
+src/djangorestframework_pagination.egg-info/SOURCES.txt
+src/djangorestframework_pagination.egg-info/dependency_links.txt
+src/djangorestframework_pagination.egg-info/top_level.txt
