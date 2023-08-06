@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: pywhoami
+Version: 1.0.3
+Summary: A Simple HTTP Request Analysis Server
+Home-page: https://github.com/sirfuzzalot/pywhoami
+Author: Tom Saunders
+License: GNU-GPLv3
+Project-URL: Tracker, https://github.com/sirfuzzalot/pywhoami/issues
+Project-URL: Documentation, https://github.com/sirfuzzalot/pywhoami
+Project-URL: Source, https://github.com/sirfuzzalot/pywhoami
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: AsyncIO
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+UNKNOWN
+
