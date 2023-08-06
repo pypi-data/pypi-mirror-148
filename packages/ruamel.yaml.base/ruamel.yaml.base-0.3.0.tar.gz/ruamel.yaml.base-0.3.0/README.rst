@@ -1,0 +1,76 @@
+
+****************
+ruamel.yaml.base
+****************
+
+.. image:: https://sourceforge.net/p/ruamel-yaml-base/code/ci/default/tree/_doc/_static/license.svg?format=raw
+   :target: https://opensource.org/licenses/MIT
+
+.. image:: https://sourceforge.net/p/ruamel-yaml-base/code/ci/default/tree/_doc/_static/pypi.svg?format=raw
+   :target: https://pypi.org/project/ruamel-yaml-base/
+
+.. image:: https://sourceforge.net/p/oitnb/code/ci/default/tree/_doc/_static/oitnb.svg?format=raw
+   :target: https://pypi.org/project/oitnb/
+
+.. image:: https://sourceforge.net/p/ryd/code/ci/default/tree/_doc/_static/ryd.svg?format=raw
+   :target: https://pypi.org/project/ryd/
+
+
+YAMLBase class with saving, delayed loading and optional version support
+
+
+The YAMLBase class is initiated with a ``pathlib.Path`` or string based
+filename of a document containing a single YAML file. This file needs
+to exists unless the ``create_ok`` parameter is supplied, in which case
+an instance of the argument to that parameter is created (typically a
+``list`` or ``dict`` like object) as the root of the data structure. If
+the argument is ``True`` an empty ``ruamel.yaml.CommentedMap()`` instance
+is created as the root.
+
+Access to the root object is made via the ``.data`` attribute, if an
+existing file was specified, it is read in on the first access to ``.data``.
+
+.. code:: python
+
+  from ruamel.yaml.base import YAMLBase
+
+  file_name = '/data0/talks/meta.yaml'
+
+  base = YAMLBase(file_name, create_ok=True)
+  base.data['PyCon 2006'] = dict(location='Dallas, TX, USA', title='Extending the life of CVS with Python')
+  base.data['EuroPython 2016'] = dict(location='Bilbao, Spain', title='Beyond scraping')
+  base.changed = True
+  base.save()
+  print(open(file_name).read())
+
+
+Which prints::
+
+  PyCon 2006:
+    location: Dallas, TX, USA
+    title: Extending the life of CVS with Python
+  EuroPython 2016:
+    location: Bilbao, Spain
+    title: Beyond scraping
+
+
+The document is normally loaded using ``ruamel.yaml``'s default round-trip mode. If
+the initial access to an existing document is done via ``.fast_data``, the loading
+is done via the faster C loader (which is not fully YAML 1.2) compatible. In
+that case you should not save the resulting file.
+
+The ``save`` will not actually dump out the YAML document file, unless
+``.changed`` has been set to ``True``. Saving to file sets ``.changed``
+back to ``False``. Using the ``force=True`` will write to file independent of ``changed``.
+You can also add an extra ``out`` argument, e.g. instead
+of the last two lines in the example above, you could do::
+
+  import sys
+  base.save(out=sys.stdout)  # not changing `.changed`
+  base.save()
+
+internal progress
++++++++++++++++++
+
+The initialisation has an optional ``verbose`` argument which can be set to a positive
+integer to get some information on what is going on internally.
