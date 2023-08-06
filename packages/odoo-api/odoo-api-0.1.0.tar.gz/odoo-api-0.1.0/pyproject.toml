@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "odoo-api"
+version = "0.1.0"
+description = "Api wrapper for Odoo 14."
+authors = ["Jean-Paul Weijers <jpweijers@users.noreply.github.com>"]
+packages = [
+  {include = "src/*"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+simplejson = "^3.17.6"
+aiohttp = "^3.8.1"
+requests = "^2.27.1"
+
+[tool.poetry.dev-dependencies]
+black = "^22.3.0"
+isort = "^5.10.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
