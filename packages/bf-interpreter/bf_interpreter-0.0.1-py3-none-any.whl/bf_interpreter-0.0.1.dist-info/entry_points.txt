@@ -1,0 +1,3 @@
+[console_scripts]
+bf=bf_interpreter.main:main
+
