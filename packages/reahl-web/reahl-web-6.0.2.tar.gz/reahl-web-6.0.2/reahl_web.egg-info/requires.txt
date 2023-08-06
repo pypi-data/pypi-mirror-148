@@ -1,0 +1,10 @@
+reahl-component<6.1,>=6.0
+reahl-mailutil<6.1,>=6.0
+ply<3.11.999,>=3.8
+rjsmin<1.2.999,>=1.2.0
+rcssmin<1.1.999,>=1.1.0
+beautifulsoup4<4.10.999,>=4.6
+WebOb<1.8.999,>=1.8
+Babel<2.9.999,>=2.1
+setuptools>=51.0.0
+lxml<4.7.999,>=4.2
