@@ -1,0 +1,2 @@
+[datasette]
+gzip = datasette_gzip
