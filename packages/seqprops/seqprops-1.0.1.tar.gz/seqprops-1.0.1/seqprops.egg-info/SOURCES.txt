@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+seqprops/__init__.py
+seqprops/seqprops.py
+seqprops.egg-info/PKG-INFO
+seqprops.egg-info/SOURCES.txt
+seqprops.egg-info/dependency_links.txt
+seqprops.egg-info/requires.txt
+seqprops.egg-info/top_level.txt
+seqprops/data/__init__.py
+seqprops/data/aadata.csv
