@@ -1,0 +1,4 @@
+pandas>=1.3.5
+pyreadr>=0.4.4
+requests>=2.26.0
+wget<4.0,>=3.2
