@@ -1,0 +1,8 @@
+bert-extractive-summarizer>=0.9.0
+bert-score>=0.3.11
+clean-text>=0.5.0
+datasets>=2.1.0
+nltk>=3.5
+torch>=1.11.0
+transformers>=4.18.0
+typer>=0.4.0
