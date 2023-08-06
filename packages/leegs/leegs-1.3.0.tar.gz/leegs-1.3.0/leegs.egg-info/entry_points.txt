@@ -1,0 +1,2 @@
+[console_scripts]
+leegs = leegs.__main__:main
