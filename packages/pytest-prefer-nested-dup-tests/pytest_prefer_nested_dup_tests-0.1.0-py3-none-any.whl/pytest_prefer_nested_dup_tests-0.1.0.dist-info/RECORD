@@ -1,0 +1,9 @@
+CHANGELOG.rst,sha256=TbrCeXRyX11Pjq1UnsaG0Dh8wfegGKF0q7ClWvYJz54,251
+pytest_prefer_nested_dup_tests/__impl.py,sha256=oxIEaFGz6LQFLJqGG10GzbfINai71x26WMmy-oJzrus,3606
+pytest_prefer_nested_dup_tests/__init__.py,sha256=fIv1If_CJcx-p1iRq-EiUFTbh43s8NdhCvv0oyKUjYY,771
+pytest_prefer_nested_dup_tests/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_prefer_nested_dup_tests-0.1.0.dist-info/entry_points.txt,sha256=UboLtVPjDRmrkU8nwM9VxsxE2NFwO-EE3ncxjs1DdFI,67
+pytest_prefer_nested_dup_tests-0.1.0.dist-info/LICENSE,sha256=SyMS4XW4ymb1wIf0sn7EOeNMxJp_pQ2Tx9oEg5T5BEQ,1083
+pytest_prefer_nested_dup_tests-0.1.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+pytest_prefer_nested_dup_tests-0.1.0.dist-info/METADATA,sha256=qkNrGfcihWUfk7oPT-vzySxWy8V1UmW-dpTUq4rMnTU,5620
+pytest_prefer_nested_dup_tests-0.1.0.dist-info/RECORD,,
