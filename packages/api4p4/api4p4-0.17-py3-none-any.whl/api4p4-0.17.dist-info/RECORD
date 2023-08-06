@@ -1,0 +1,14 @@
+api4p4/__init__.py,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+api4p4/decorator.py,sha256=JHQOK0lKr8mnXo9q6HpkHTGGiJFujJoTxc_rDI___MI,223
+api4p4/p4.py,sha256=SW03hva0btU3KVrLnfYOkJRosu_NKnABTnw6q2a4UCw,9647
+api4p4/p4_client.py,sha256=GqMz2QisTIHMd4zgKF92pNfJ3wOA0ALelBusP6vYQcw,9124
+api4p4/type_utils.py,sha256=GZpT7FPTk4nEzCqev9jjjU8pajFDxQZKpM4x7EG4uwA,60
+p4/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+p4/decorator.py,sha256=JHQOK0lKr8mnXo9q6HpkHTGGiJFujJoTxc_rDI___MI,223
+p4/p4_client.py,sha256=GqMz2QisTIHMd4zgKF92pNfJ3wOA0ALelBusP6vYQcw,9124
+p4/type_utils.py,sha256=GZpT7FPTk4nEzCqev9jjjU8pajFDxQZKpM4x7EG4uwA,60
+api4p4-0.17.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+api4p4-0.17.dist-info/METADATA,sha256=Pn6gzE8Dy3mXO6SGDaIx8r43yyP3_KGh18acNBN3bYg,450
+api4p4-0.17.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+api4p4-0.17.dist-info/top_level.txt,sha256=p17naZ6eTUVAjcTislSEy2jjedtDjjeOU6RncH_MQ_o,7
+api4p4-0.17.dist-info/RECORD,,
