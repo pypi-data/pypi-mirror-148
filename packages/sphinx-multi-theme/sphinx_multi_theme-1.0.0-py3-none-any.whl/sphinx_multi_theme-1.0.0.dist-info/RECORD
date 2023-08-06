@@ -1,0 +1,11 @@
+sphinx_multi_theme/__init__.py,sha256=qTpc6r4x0JwlNhv5JlkcjHWD8W4uhkaLjW0Y6GYWCR0,102
+sphinx_multi_theme/directives.py,sha256=Bhu_-LnKfN7vmmJmZ1wuKsZbqOQZAD5LGF6NqS1-tDQ,2677
+sphinx_multi_theme/multi_theme.py,sha256=GhEuiN3ReNXuVD173DKhr7bLG9RyNali5YOU2kPQM2M,7070
+sphinx_multi_theme/nodes.py,sha256=khzjdeJcUECraPHkxhPzDcEWp4Shdk_S0-LDDMTjA1Y,1601
+sphinx_multi_theme/theme.py,sha256=zHfvyh40I0uDDkPIgVKoyX0ZPfz5OpZhNJkrFhcUWKc,4294
+sphinx_multi_theme/utils.py,sha256=M9JbF0G_VsrWvFpWlcLg2_grnHma8ktBzpsLxHWYGBw,5220
+sphinx_multi_theme-1.0.0.dist-info/LICENSE,sha256=2E_bGGKu67u5DesZ_klVwKPnOc0VR3BfQAuisBAgzac,1318
+sphinx_multi_theme-1.0.0.dist-info/COPYING,sha256=2E_bGGKu67u5DesZ_klVwKPnOc0VR3BfQAuisBAgzac,1318
+sphinx_multi_theme-1.0.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+sphinx_multi_theme-1.0.0.dist-info/METADATA,sha256=lhs3CC84SGXkYstM2JwWtW4pIdW5AASeGx_PX4wV0II,3292
+sphinx_multi_theme-1.0.0.dist-info/RECORD,,
