@@ -1,0 +1,14 @@
+leegs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+leegs/__main__.py,sha256=DRiWowqZgibmqiNrbm9pSwJvDBk0s0KOgtyz14zTfIU,6171
+leegs/company_scraper.py,sha256=w09L5MSkqCQfPDAGifmSoFkvj3vkaFTtUrpUQ9v7ths,4035
+leegs/data_storage.py,sha256=XNBy4c1kCpKxz0j4a9Tah1rFp3y6H7E3-QfdjosvDBs,1524
+leegs/download_profile_pics.py,sha256=_TwBSNVU270dHYu7VfoNtEinrbcB0u14OSzH78fLSj8,1582
+leegs/employee_scraper.py,sha256=jahrZidLS9zRxXEliQIXfQaAEk7AqQBAkNUM1Qhhjx0,6842
+leegs/gender_detection.py,sha256=M2IguHCwMhJxSEoHcNehbvPHc3M8s4I5M5z4e_3AVoE,1210
+leegs/helper_funcs.py,sha256=FOLFdISNFRCVGDDaLoAGhwMq9cXgkWkp7fJDhW5U_Ec,3594
+leegs/settings.py,sha256=NB5oGgnPTs_zf83PBXYNGrfxEsD177xcFZLZnisIH1w,587
+leegs-1.2.0.dist-info/METADATA,sha256=04SbFd5KzNIlS2dHReruvI1LJrgHW4bpRqADFlG9W-o,2845
+leegs-1.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+leegs-1.2.0.dist-info/entry_points.txt,sha256=M2KR7qJEbu4XirG8B0ExKh69_Lw-7I-tS4DzsXeIw_Q,46
+leegs-1.2.0.dist-info/top_level.txt,sha256=3d_uvRfz5agWL1xX4yZDTXNXRdBjwYLPjniKM7zYlqo,6
+leegs-1.2.0.dist-info/RECORD,,
