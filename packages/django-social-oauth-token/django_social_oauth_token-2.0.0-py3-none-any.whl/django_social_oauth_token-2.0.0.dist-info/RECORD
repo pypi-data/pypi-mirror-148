@@ -1,0 +1,11 @@
+LICENSE,sha256=vqToAzGOUzegQ8pd5sXD4s9ceMkIGN7wLkGwdMbP9dI,1070
+README.md,sha256=IoVZX7pgd5VVbCn-Tq5U8v5fBDNh3R3z070rZLMIGIs,2792
+social_oauth_token/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+social_oauth_token/apps.py,sha256=-7a84qFnEztdpWoYoUee3dgOiauAz1sziEao98YMlI0,109
+social_oauth_token/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+social_oauth_token/urls.py,sha256=ArezyCivOjVaOgzBi97IxZtqRHwGzlOeWhb2stcINlM,278
+social_oauth_token/views.py,sha256=3KO-U9iirJU3q4VYi_u_gNKqQqtlrkota6MTQE9cTms,2674
+django_social_oauth_token-2.0.0.dist-info/LICENSE,sha256=vqToAzGOUzegQ8pd5sXD4s9ceMkIGN7wLkGwdMbP9dI,1070
+django_social_oauth_token-2.0.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+django_social_oauth_token-2.0.0.dist-info/METADATA,sha256=VNVRB5aH0wnWtecmTWI0l1v8WqQRqLzNaZodQlTV9zk,4183
+django_social_oauth_token-2.0.0.dist-info/RECORD,,
