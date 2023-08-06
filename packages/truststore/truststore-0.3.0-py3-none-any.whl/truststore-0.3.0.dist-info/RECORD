@@ -1,0 +1,10 @@
+truststore/__init__.py,sha256=81L1LwBvgL2K4eDNAeQ-QU4WIem9z_dyPyL-0Jg30T8,268
+truststore/_api.py,sha256=wjrFUBRpCZMh_q1jL1H5mqmq7Qq3j5ZJ-_FCKL6koEM,3595
+truststore/_macos.py,sha256=Qeq6xRYV6AwDNYd-M1UbuKq97g1_Tice_GdFUnKITKU,13323
+truststore/_openssl.py,sha256=ncM-0Q_YBBYYUsuoxgqSrhbzxwVtWvklQaAoLAb2Cus,2308
+truststore/_windows.py,sha256=PV3v0ry2r3fB97peV9fIAfuoQVG7efYFCY5S7dQAd5Y,14410
+truststore/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+truststore-0.3.0.dist-info/LICENSE,sha256=M757fo-k_Rmxdg4ajtimaL2rhSyRtpLdQUJLy3Jan8o,1086
+truststore-0.3.0.dist-info/WHEEL,sha256=4TfKIB_xu-04bc2iKz6_zFt-gEFEEDU_31HGhqzOCE8,81
+truststore-0.3.0.dist-info/METADATA,sha256=m7h-yDqdyAUyHymO45OboiB6j97NzgyOYwLO_yuXOEs,1880
+truststore-0.3.0.dist-info/RECORD,,
