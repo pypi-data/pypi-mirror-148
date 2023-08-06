@@ -1,0 +1,15 @@
+rvrbase/__about__.py,sha256=IIoW3WcJXMF4Tp-koFpI8lDW209vPKInJpUVWmX9zgU,56
+rvrbase/__init__.py,sha256=k9fP2riIMLBh0Dv-xwVmfCMe6e6ywKK6hL35Mo8aDQQ,118
+rvrbase/constants.py,sha256=mjuLRw4PFw0TuYGSlbvkEaShWOdpGVDhamse88Q_uNU,438
+rvrbase/rvrbase.py,sha256=UxKJlLrOxkrJnAdrZpUEXhPV9DJzXxnt1vzr_fEzCZg,3196
+rvrbase/api/__init__.py,sha256=t7hw-Zvm4VtMqbNuIgBcZi93E7gWYoCz_hTaplY80dM,112
+rvrbase/api/azure_logger_api.py,sha256=R7qu1Cqs0cy_N_oCdVb_62Z29w5M1IXst9GimEaltBY,2504
+rvrbase/api/notification_api.py,sha256=RCKva4bnio6W4ti_uvSNwYsBCnl7xYorUYssZwWBO9I,227
+rvrbase/api/rvrconfig.py,sha256=XnyhoqhOpO24xslYk-MawwHNRa0rP29mUXtlgOXitMI,1038
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_delegate.py,sha256=GJU6zNI5lIWRosYJpbdYkTMuNk4CP9SKGXr4zL8N5d4,2826
+rvr_base-1.0.0.dist-info/LICENSE,sha256=s_NUk0VVX9ln2_QSWlC24DDkt15cvufAM1axrCcXobk,1068
+rvr_base-1.0.0.dist-info/METADATA,sha256=0p3ZCtCf126ysAO3jSOulORLfIph6M7eDMJiVK7zaFo,2543
+rvr_base-1.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+rvr_base-1.0.0.dist-info/top_level.txt,sha256=0x4gYzwiB29eDEvQNmdSVE5JYA1QuuJ6Pge4_BrZdso,13
+rvr_base-1.0.0.dist-info/RECORD,,
