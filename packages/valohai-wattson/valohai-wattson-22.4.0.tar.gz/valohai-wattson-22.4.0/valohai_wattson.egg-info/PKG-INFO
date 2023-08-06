@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: valohai-wattson
+Version: 22.4.0
+Summary: Carbon emissions calculator
+Home-page: https://github.com/valohai/wattson
+Author: Valohai
+Author-email: info@valohai.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Provides-Extra: dev
+License-File: LICENSE
+
+# Valohai Wattson 🔌⚡
+
+This project uses the [EC2 Carbon Emissions Dataset by Teads Engineering](https://docs.google.com/spreadsheets/d/1DqYgQnEDLQVQm5acMAhLgHLD8xXCG9BIrk-_Nv6jF3k/).
+
+
