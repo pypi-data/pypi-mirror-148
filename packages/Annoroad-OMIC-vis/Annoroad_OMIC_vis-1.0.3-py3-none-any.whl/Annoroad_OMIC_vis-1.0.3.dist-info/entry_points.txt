@@ -1,0 +1,3 @@
+[console_scripts]
+Annoroad_vis = Annoroad_vis.main:main
+
