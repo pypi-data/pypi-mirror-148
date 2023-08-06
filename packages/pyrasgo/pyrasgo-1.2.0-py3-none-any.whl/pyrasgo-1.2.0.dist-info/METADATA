@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: pyrasgo
+Version: 1.2.0
+Summary: Alpha version of the Rasgo Python interface.
+Home-page: https://www.rasgoml.com/
+Author: Patrick Dougherty
+Author-email: patrick@rasgoml.com
+License: GNU Affero General Public License v3 or later (AGPLv3+)
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: more-itertools
+Requires-Dist: pandas
+Requires-Dist: pydantic
+Requires-Dist: pyyaml
+Requires-Dist: requests
+Requires-Dist: snowflake-connector-python (>=2.7.1)
+Requires-Dist: snowflake-connector-python[pandas]
+Requires-Dist: idna (>=3.3)
+Requires-Dist: pyarrow (>=5.0.0)
+Provides-Extra: df
+Requires-Dist: shap ; extra == 'df'
+Requires-Dist: catboost ; extra == 'df'
+Provides-Extra: snowflake
+Requires-Dist: snowflake-connector-python (>=2.7.1) ; extra == 'snowflake'
+Requires-Dist: snowflake-connector-python[pandas] ; extra == 'snowflake'
+Requires-Dist: idna (>=3.3) ; extra == 'snowflake'
+Requires-Dist: pyarrow (>=5.0.0) ; extra == 'snowflake'
+
+pyRasgo is a python SDK to interact with the Rasgo API. Rasgo accelerates feature engineering for Data Scientists.
+
+Visit us at https://www.rasgoml.com/ to turn your data into Features in minutes!
+
+Documentation is available at:
+https://docs.rasgoml.com/rasgo-docs/pyrasgo/
+
+
+Package Dependencies
+-------------------------------------------------------------------------------
+- idna>=3.3
+- more-itertools
+- pandas
+- pyarrow>=5.0.0
+- pydantic
+- pyyaml
+- requests
+- snowflake-connector-python>=2.7.0
+
+
+Major Version Releases
+-------------------------------------------------------------------------------
+v1.2.0 (Apr 26, 2022)
+    - Add `rasgo.create.accelerator_from_yml()` to support creating accelerators from offline yml definitions
+
+
+See [Changelog](https://github.com/rasgointelligence/RasgoSDKPython/blob/master/pyrasgo/CHANGELOG.md) for full minor version release notes
+
+
+
+
+
+<i>Built for Data Scientists, by Data Scientists</i>
+
+
