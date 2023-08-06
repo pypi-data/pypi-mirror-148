@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: tree-explorer
+Version: 0.0.1
+Summary: Python package to explore Decision tree based model structure
+Home-page: UNKNOWN
+Author: Alessandro Gussoni
+Author-email: alessandro.gussoni@hotmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: joblib (==1.1.0)
+Requires-Dist: numpy (==1.22.3)
+Requires-Dist: pandas (==1.4.1)
+Requires-Dist: python-dateutil (==2.8.2)
+Requires-Dist: pytz (==2022.1)
+Requires-Dist: scikit-learn (==1.0.2)
+Requires-Dist: scipy (==1.8.0)
+Requires-Dist: six (==1.16.0)
+Requires-Dist: threadpoolctl (==3.1.0)
+
+UNKNOWN
+
