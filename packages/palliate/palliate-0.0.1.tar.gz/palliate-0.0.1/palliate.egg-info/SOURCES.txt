@@ -1,0 +1,5 @@
+setup.py
+palliate.egg-info/PKG-INFO
+palliate.egg-info/SOURCES.txt
+palliate.egg-info/dependency_links.txt
+palliate.egg-info/top_level.txt

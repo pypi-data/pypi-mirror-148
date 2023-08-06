@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: palliate
+Version: 0.0.1
+Summary: palliate library
+Home-page: https://github.com/palliate/palliate-python
+Author: Tsche
+Author-email: contact@palliate.io
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/palliate/palliate-python/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 1 - Planning
+
+Library to control a palliate instance
+
