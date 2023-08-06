@@ -1,0 +1,14 @@
+remarkable_mouse/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+remarkable_mouse/codes.py,sha256=gshXy7ndezrUcgvlPM0R23q5Oz28n8-PQ3CjYI4BJo8,24658
+remarkable_mouse/common.py,sha256=Ar_2jkIj3XhKJ1-yuO6NTfCmS2FxAe6xEsR7oi1ovOM,4040
+remarkable_mouse/evdev.py,sha256=jIyuA6vc6UaCeTrvYJOwcBoxqab8eRNhpAMJL1SmqIA,4655
+remarkable_mouse/generate_codes.py,sha256=9F4JwKXw8TWdVmw5XuztT6mjy92NkPpBY0lafqDsQ8k,545
+remarkable_mouse/pynput.py,sha256=zgT5duSnKHyvz5x1kMxFUmQyURWdXJ-JnLuV4UkEDqQ,2460
+remarkable_mouse/remarkable_mouse.py,sha256=6OU-aV2wLz4ttGBI25gEuSKHhBHjF3HN60G4rCdBlRw,5939
+remarkable_mouse/version.py,sha256=Fu5bcN9FTqfedqgM0OFBr9TILLLLdMD2DddZXXz9onU,22
+remarkable_mouse-7.0.2.dist-info/LICENSE,sha256=QcmC9hWrZBOHJPwyHr2zgWJ3DUbAogmFvc4LMMJuR4Y,35130
+remarkable_mouse-7.0.2.dist-info/METADATA,sha256=trvvyOQJGKWfIZnb-KHW3joLK__zr17OiWamRHTQD0Q,2856
+remarkable_mouse-7.0.2.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+remarkable_mouse-7.0.2.dist-info/entry_points.txt,sha256=Q3E8rvU9ftF9AySZZWHuhnx3kWhAGX-CAawhwBoOk-I,126
+remarkable_mouse-7.0.2.dist-info/top_level.txt,sha256=rxMDoGjeXCQs4Yzawv0o4ys2W0rz9h1GVn1HLD9CzkU,17
+remarkable_mouse-7.0.2.dist-info/RECORD,,
