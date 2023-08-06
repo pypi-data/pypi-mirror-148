@@ -1,0 +1,93 @@
+Metadata-Version: 2.1
+Name: drd
+Version: 0.1.0
+Summary: Make downloading digital rocks great again
+Home-page: https://github.com/lukasmosser/digital_rocks_data
+Author: The Digital Rocks Data Authors
+Author-email: lukas.mosser@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Development Status :: 4 - Beta
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: docs
+Provides-Extra: test
+Provides-Extra: dev
+License-File: LICENSE
+
+# Digital Rocks Data
+### Make downloading and using Digital Rock Data great again!  
+[![Run tests](https://github.com/lukasmosser/digital_rocks_data/actions/workflows/build.yaml/badge.svg)](https://github.com/lukasmosser/digital_rocks_data/actions/workflows/build.yaml)[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/lukasmosser/digital_rocks_data/issues)[![Documentation Status](https://readthedocs.org/projects/ansicolortags/badge/?version=latest)](https://lukasmosser.github.io/digital_rocks_data/index.html)
+
+## Quick Start
+### Installation from Github using pip
+```bash
+pip install git+https://github.com/lukasmosser/digital_rocks_data.git
+```
+### Loading an Image Dataset
+```python
+from drd.datasets.eleven_sandstones import load_eleven_sandstones
+
+# xarray DataArray with image data
+img = load_eleven_sandstones("Berea", "Berea_2d25um_grayscale.raw") 
+
+# Plot average over z dimension
+img.mean(dim='z').plot()
+```
+
+## About
+
+Digital Rock Images are three-dimensional datasets of rocks and other porous media.  
+These are typically acquired using three-dimensional imaging techniques such as [Micro-Computer Tomography (MicroCT)](https://en.wikipedia.org/wiki/X-ray_microtomography).  
+
+They represent a rich dataset that form a basis for characterization of physical processes involving porous media.  
+
+## Purpose of the `drd` library
+
+Digital Rock Images are scattered throughout the web on various hosting sites such as the [Digital Rocks Portal](https://www.digitalrocksportal.org/), [Zenodo](https://www.zenodo.org), or university specific sites.
+This library aims to make downloading these datasets easy through a python interface so they can be used in automated image processing workflows, 
+reproducible research, or data science and machine learning worfklows.  
+
+Furthermore, these images are associated with metadata about their spatial dimensions which should be considered when loading these image datasets.  
+The library therefore requires these metadata to be available and creates an [xarray](https://docs.xarray.dev/en/stable/) DataArray which can keep spatial scale information when loading an image dataset.  
+
+Each dataset is linked in this library i.e. no hosting is done by the library itself.  
+
+## Available Datasets
+
+[Digital Rocks Portal](https://www.digitalrocksportal.org/):
+- [Eleven Sandstones Dataset](https://www.digitalrocksportal.org/projects/317)
+    - Berea
+    - Bandera Brown
+    - Bandera Gray
+    - Bentheimer
+    - Berea Sister Gray
+    - Berea Upper Gray
+    - Buff Berea
+    - Castle Gate
+    - Kirby
+    - Leopard
+    - Parker
+
+[Imperial College London](https://www.imperial.ac.uk/earth-science/research/research-groups/pore-scale-modelling/micro-ct-images-and-networks/):
+- MicroCT Images of Sandstones and Carbonates 2015
+- [MicroCT Images of Sandstones and Carbonates 2009](https://figshare.com/projects/micro-CT_Images_-_2009/2275)
+
+## Contributing
+
+Authors are encouraged to contribute their own datasets using the correct metadata.  
+See `drd/datasets/eleven_sandstones.py` for an example implementation.  
+Please add corresponding tests and an example to your pull request.  
+
+## Creation
+
+This package was created during the Transform 22 software sprint.
+
