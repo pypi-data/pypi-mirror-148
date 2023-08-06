@@ -1,0 +1,109 @@
+# Metis Flask SQLAlchemy log collector
+
+This library collects http requests and sql queries in Flask & SQLalchemy 
+application and stores them in a local log file.
+
+The log can be analyzed using a [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=Metis.dba-ai-vscode)
+
+This library uses [OpenTelemetry](https://pypi.org/project/opentelemetry-sdk/) to instrument both Flask and SQLAlchemy.
+
+Tested on python 3.8.9, Flask 2.1.1, SQLAlchemy 1.4.33
+
+
+## How to use the log collector in your application
+
+```bash
+pip install sqlalchemycollector
+```
+
+```python
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemycollector import collect_logs
+from sqlalchemycollector.PlanCollectType import PlanCollectType
+
+# existing app initialization
+app = Flask()
+db = SQLAlchemy(app)
+
+# optionally, you can pass a log file name, or we will use our default file name 'metis-log-collector.json
+optional_log_file_name = 'my-metis-logs.log'
+
+# optionally you can pass a plan collect type, or we will use our default collect type which is NONE
+# the Execution Plan is the explanation how the DB Query Optimizer runs the query, focusing on what indexes to use.
+# It helps us to understand the bottleneck and predict how the query will perform in the production environment.
+optional_plan_collect_type = PlanCollectType.NONE
+# class PlanCollectType(Enum):
+#     NONE = 0
+#     ESTIMATED = 1
+
+
+# add the following line to start collect logs for metis
+collect_logs(app, db.get_engine(), optional_log_file_name, plan_collection_option=optional_plan_collect_type)
+```
+
+### Example of a log entry (might be changed in the future) 
+```json
+{
+  "logs":
+  [
+    {
+      "_uuid": "434c20fa-c498-11ec-865e-b276246b1dc9",
+      "query": "SELECT booking.book.title AS booking_book_title \nFROM booking.book",
+      "dbEngine": "postgresql",
+      "date": "2022-04-25T13:04:38.477914",
+      "plan":
+      [
+        {
+          "Plan":
+          {
+            "Node Type": "Seq Scan",
+            "Parallel Aware": false,
+            "Async Capable": false,
+            "Relation Name": "book",
+            "Schema": "booking",
+            "Alias": "book",
+            "Startup Cost": 0.0,
+            "Total Cost": 1.17,
+            "Plan Rows": 17,
+            "Plan Width": 14,
+            "Output":
+            [
+              "title"
+            ],
+            "Shared Hit Blocks": 0,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0
+          },
+          "Planning":
+          {
+            "Shared Hit Blocks": 0,
+            "Shared Read Blocks": 0,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0
+          },
+          "Planning Time": 0.022
+        }
+      ]
+    }
+  ],
+  "framework": "Flask",
+  "path": "/",
+  "operationType": "GET",
+  "requestDuration": 93.163,
+  "requestStatus": 200
+}
+```
