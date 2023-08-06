@@ -1,0 +1,17 @@
+.gitignore
+README.rst
+setup.py
+.github/workflows/build.yml
+.github/workflows/python-publish.yml
+bitbucket_code_insight_reporter/__init__.py
+bitbucket_code_insight_reporter/bitbucket.py
+bitbucket_code_insight_reporter/generate.py
+bitbucket_code_insight_reporter/report.py
+bitbucket_code_insight_reporter.egg-info/PKG-INFO
+bitbucket_code_insight_reporter.egg-info/SOURCES.txt
+bitbucket_code_insight_reporter.egg-info/dependency_links.txt
+bitbucket_code_insight_reporter.egg-info/entry_points.txt
+bitbucket_code_insight_reporter.egg-info/requires.txt
+bitbucket_code_insight_reporter.egg-info/top_level.txt
+bitbucket_code_insight_reporter.egg-info/zip-safe
+tests/test_generator.py
