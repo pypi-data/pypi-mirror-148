@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: colorlog-jawide
+Version: 0.0.1
+Summary: Enable the default logging to output with color
+Home-page: https://github.com/jawide/colorlog
+Author: jawide
+Author-email: jawide@qq.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/jawide/colorlog/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# colorlog
+
+## example
+
+```python
+from colorlog import logging
+
+logging.basicConfig(level=logging.DEBUG)
+
+logging.debug("jawide")
+logging.info("jawide")
+logging.warning("jawide")
+logging.error("jawide")
+logging.critical("jawide")
+```
+
+## setup
+
+```bash
+pip install colorlog-jawide
+```
+
+## custom
+
+```python
+from colorlog import init, Config, LogLevel, Color, Fore, Back, Style
+import logging
+
+init(logging, Config({
+    LogLevel.DEBUG    : Color(Fore.GREEN, Style.BRIGHT),
+    LogLevel.CRITICAL : Color(Fore.YELLOW, Back.RED, Style.NORMAL)
+}))
+
+logging.basicConfig(level=logging.DEBUG)
+
+logging.debug("jawide")
+logging.info("jawide")
+logging.warning("jawide")
+logging.error("jawide")
+logging.critical("jawide")
+```
+
+## build
+
+```bash
+rm -r ./build ./dist
+python setup.py sdist bdist_wheel
+```
+
+## test upload
+
+```bash
+python -m twine upload --repository testpypi dist/*
+```
+
+## test pip
+
+```bash
+python -m pip install --index-url https://test.pypi.org/simple/ --no-deps colorlog-jawide
+```
+
+## upload
+
+```bash
+python -m twine upload dist/*
+```
+
