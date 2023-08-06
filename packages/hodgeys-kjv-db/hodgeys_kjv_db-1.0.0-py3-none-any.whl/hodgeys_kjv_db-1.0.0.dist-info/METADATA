@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: hodgeys-kjv-db
+Version: 1.0.0
+Summary: The King James Bible as a Python module
+Home-page: https://github.com/HodgeyHodge/hodgeys_kjv_db
+Author: Christopher Hodge
+Author-email: christopher@hodgey.co.uk
+License: MIT
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Hodgeys KJV DB
+
+A SQLite database of the King James Bible, as compiled by me from [Project Gutenberg](https://www.gutenberg.org/files/10/10-h/10-h.htm); and an accompanying wrapper module.
+
+
+
+### Installation
+
+```
+
+pip install hodgeys-kjv-db
+
+```
+
+
+
+### Usage
+
+
+
+```Python
+
+# Import...
+
+from hodgeys_kjv_db import KJV
+
+
+
+# ...instantiate...
+
+kjv = KJV()
+
+
+
+# ...and drill down.
+
+books = kjv.fetch_books()
+
+for book in books:
+
+    print(book)
+
+
+
+chapters = kjv.fetch_chapters(1, 1)
+
+for k, v in chapters.items():
+
+    print(k, v)
+
+
+
+verse = kjv.fetch_passage(1, 1, 1, 1)
+
+print(verse)
+
+```
+
