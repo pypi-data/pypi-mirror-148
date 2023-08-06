@@ -1,0 +1,10 @@
+name: napari-manual-transforms
+display_name: Manual Transforms
+contributions:
+  commands:
+    - id: napari-manual-transforms.make_rotation_helper
+      python_name: napari_manual_transforms:RotationWidget
+      title: Make Rotation Helper
+  widgets:
+    - command: napari-manual-transforms.make_rotation_helper
+      display_name: Rotation Helper
