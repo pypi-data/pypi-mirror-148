@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: ultimate-trimmer
+Version: 1.0.1
+Summary: To trim a specified section in CSV files
+Home-page: https://github.com/iikyara/UltimateTrimmer
+Author: iikyara
+Author-email: baaninreo@gmail.com
+License: "MIT"
+Description: # ULTIMATE TRIMMER
+        
+        CSV ファイルで指定した部分をトリミングするスクリプトです。
+        
+        # 使い方
+        
+        - 以下のコマンドを実行してください
+        
+        ```
+        $ ultrim csvfile1.csv csvfile2.csv ...
+        ```
+        
+        - 実行後、trim フォルダに切り抜き動画が保存されます。
+        
+        # CSV ファイルのフォーマット
+        
+        |         video          |         |                |           |                                    |
+        | :--------------------: | :-----: | :------------: | :-------: | :--------------------------------: |
+        | {ここに動画ファイル名} |         |                |           |                                    |
+        |                        |         |                |           |                                    |
+        |          開始          |  終了   |    タイトル    |   属性    |                感想                |
+        |          0:12          |  0:30   |    よくばり    | free miss | よくできましたとしか言いようがない |
+        |        1:02:05         | 1:02:20 | どこまでも走る |    run    |           すげえ良い感じ           |
+        
+        # オプション
+        
+        ## `--save`：保存ディレクトリを変更
+        
+        - `--save`オプションでクリップを保存するディレクトリを指定出来ます。
+          - 例：`savedir/`に保存
+        
+        ```
+        $ ultrim csvfile.csv --save savedir/
+        ```
+        
+        ## `--expand`：クリップの領域を拡張
+        
+        - `--expand`オプションでクリップの秒数を前後に拡張できます。
+          - 例：前を 5 秒，後ろを 3 秒拡張する場合
+        
+        ```
+        $ ultrim csvfile.csv --expand 5 3
+        ```
+        
+        - この例では，0:10-1:59 のクリップは 0:05-2:02 に拡張されて切り抜かれます。
+        
+        ## `--altnum`：タイトルを代用する際のオプション
+        
+        - タイトルが空欄の場合に感想の先頭の文字をタイトルとします。
+        - その時の先頭文字数をこのオプションで指定します。
+          - 例：先頭文字数を 5 文字とする場合
+        
+        ```
+        $ ultrim csvfile.csv --altnum 5
+        ```
+        
+        - この例では，タイトルが「」で，感想が「よくできましたとしか言いようがない」の場合，タイトルは「よくできま」になります。
+        
+        ## 動作環境
+        
+        Windows ＋ python 環境での動作を想定しています。
+        
+Keywords: ultimatetrimmer,ultimate_trimmer
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
