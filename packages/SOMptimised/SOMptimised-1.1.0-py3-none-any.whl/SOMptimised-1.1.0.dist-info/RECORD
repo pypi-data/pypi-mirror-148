@@ -1,0 +1,14 @@
+SOMptimised/README.md,sha256=8T-Pe4916IYFXwO_4d63PLKmkN4VSrmrAEmo-lcQCB4,3313
+SOMptimised/__init__.py,sha256=YScX3_OrraBYFZQLXPQnnH65FVUIw1TxNi1YB_6T_SI,1903
+SOMptimised/learning_rate.py,sha256=niser-9Q6dFotKTZakjUFtco4PFffpc7fWrSu70YD40,10864
+SOMptimised/metric.py,sha256=a6w26leuz15sQLwE9e-4wJoMpDraXWUVCMnn-jrQAAA,12053
+SOMptimised/neighbourhood.py,sha256=NBt4A6sCM6CuT8YtogXphblXpNAeG8mPbrecXSMBsvs,8759
+SOMptimised/som.py,sha256=GvJIeQ3eRYTYk9pPJWAGUNBio0_8SvhrG5tL1M76cnU,34834
+SOMptimised/examples/iris_dataset/iris_dataset.csv,sha256=YTxTcZ2PtP2oBHmmxZX4TD7WagpozLEmLMcSih7SIKE,4626
+SOMptimised/examples/iris_dataset/predict_sepal_width.py,sha256=Tl1CQBxAZzlno_DRsmG7J0h96ZzrjCgYtX7k0pw6d7U,2755
+SOMptimised/examples/iris_dataset/som_iris.py,sha256=YtiAqslir1dN-BcF3GWbtyCkCM1tLhgQxDMFIJXwaX4,3815
+SOMptimised-1.1.0.dist-info/LICENSE,sha256=ksm85NAg0dOb47AAEu43busBkBEg_8d2QaWmlx0_058,1073
+SOMptimised-1.1.0.dist-info/METADATA,sha256=GQSR6J5K-PNoHqL_expb19rYOlbw9z4DROL6s-8ss8g,4130
+SOMptimised-1.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+SOMptimised-1.1.0.dist-info/top_level.txt,sha256=G-DifOnH7JJ2I_xdJPiV1qu2DooS_nn2EMpiosmKUi4,12
+SOMptimised-1.1.0.dist-info/RECORD,,
