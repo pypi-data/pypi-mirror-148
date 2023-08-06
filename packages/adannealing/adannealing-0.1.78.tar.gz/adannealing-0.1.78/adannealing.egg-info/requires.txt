@@ -1,0 +1,5 @@
+plotly
+numpy
+pandas
+more_itertools
+matplotlib
