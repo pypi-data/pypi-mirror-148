@@ -1,0 +1,3 @@
+ruamel.yaml
+python-gitlab<=1.15.0,>=1.15.0
+requests<=2.27.1,>=2.27.1
