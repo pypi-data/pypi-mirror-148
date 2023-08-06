@@ -1,0 +1,16 @@
+pandas
+numpy
+tqdm
+scikit-learn
+seaborn
+xgboost
+gwpy
+emd
+dill
+mmh3
+temporis
+pyarrow
+fastparquet
+sphinxcontrib.bibtex
+gdown
+uncertainties
