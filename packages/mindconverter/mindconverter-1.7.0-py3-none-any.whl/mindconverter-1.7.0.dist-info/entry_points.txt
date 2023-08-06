@@ -1,0 +1,3 @@
+[console_scripts]
+mindconverter = mindconverter.cli:cli_entry
+

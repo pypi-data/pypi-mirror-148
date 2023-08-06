@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: mindconverter
+Version: 1.7.0
+Summary: mindconverter platform: linux, cpu: x86_64, git version: [sha1]:bec7dff, [branch]: (HEAD, origin/r1.7, r1.7)
+Home-page: https://www.mindspore.cn
+Author: The MindSpore Authors
+Author-email: contact@mindspore.cn
+License: Apache 2.0
+Download-URL: https://gitee.com/mindspore/mindinsight/tags
+Project-URL: Sources, https://gitee.com/mindspore/mindinsight
+Project-URL: Issue Tracker, https://gitee.com/mindspore/mindinsight/issues
+Keywords: mindconverter
+Platform: linux
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: google-pasta (>=0.1.8)
+Requires-Dist: numpy (>=1.17.0)
+Requires-Dist: protobuf (>=3.13.0)
+Requires-Dist: yapf (>=0.30.0)
+Requires-Dist: networkx (==2.5)
+
+﻿# MindConverter tutorial
+
+[查看中文](./README_CN.md)
+
+Reference to [official tutorial](https://www.mindspore.cn/mindinsight/docs/en/master/migrate_3rd_scripts_mindconverter.html).
+
