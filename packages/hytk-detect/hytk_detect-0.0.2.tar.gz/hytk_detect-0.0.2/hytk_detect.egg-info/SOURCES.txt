@@ -1,0 +1,11 @@
+MANIFEST.in
+setup.cfg
+setup.py
+test.py
+hytk_detect.egg-info/PKG-INFO
+hytk_detect.egg-info/SOURCES.txt
+hytk_detect.egg-info/dependency_links.txt
+hytk_detect.egg-info/requires.txt
+hytk_detect.egg-info/top_level.txt
+hytk_model/__init__.py
+hytk_model/hytk_detect.py
