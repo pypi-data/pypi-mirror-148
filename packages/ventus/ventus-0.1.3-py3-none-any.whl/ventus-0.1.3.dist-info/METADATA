@@ -1,0 +1,101 @@
+Metadata-Version: 2.1
+Name: ventus
+Version: 0.1.3
+Summary: A google dorking library and cli.
+Home-page: https://github.com/aaronlyy/ventus
+Author: aaronlyy (Aaron Levi)
+Author-email: <aaronlevican@gmail.com>
+License: UNKNOWN
+Keywords: dorking,google,scraping,google dorking,hacking,cracking
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: click
+
+# ventus: A Google Dorking library and Command-Line Interface
+
+## Installation
+
+Install ventus with pip
+
+```pip install ventus```
+
+## Usage
+
+### Example 1: Search a string
+
+```py
+from ventus import search
+
+results = search("test")
+
+for r in results:
+    print(r)
+```
+
+### Example 2: Search a raw dork query
+```py
+from ventus import search
+
+results = search("site:wikipedia.com mercedes")
+
+for r in results:
+    print(r)
+
+for r in results:
+    print(r)
+```
+
+### Example 3: Build and Search a Query using the Query builder
+```py
+from ventus import search, Query
+
+q = Query()
+q.site("finance.yahoo.com")
+q.intitle("AMD")
+
+print(q) # site:finance.yahoo.com intitle:AMD
+
+# search query
+results = search(q)
+
+for r in results:
+    print(r)
+```
+
+### Example 4: Add a Keyword Group to a Query
+
+```py
+from ventus import seach, Query, Filter
+
+q = Query()
+q.site("finance.yahoo.com")
+q.intitle(["BMW", "Mercedes"], group_seperator=Filter.AND)
+
+print(q) # site:finance.yahoo.com intitle:(BMW & Mercedes)
+```
+
+## ToDo
+
+- Add support for proxy lists
+- Add a command-line interface wrapper
+- Add option to choose number of links to return
+- Write more predefined queries
+- Add DuckDuckGo & Yahoo support
+- Add more Examples and Documentation
+
+### About
+
+Made with â™¥ by [aaronlyy](https://github.com/aaronlyy)
+
+
