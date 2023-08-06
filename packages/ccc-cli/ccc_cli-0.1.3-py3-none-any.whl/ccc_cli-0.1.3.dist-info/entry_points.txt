@@ -1,0 +1,3 @@
+[console_scripts]
+cccls=ccc_cli.ccc6_print_task_runs:main
+
