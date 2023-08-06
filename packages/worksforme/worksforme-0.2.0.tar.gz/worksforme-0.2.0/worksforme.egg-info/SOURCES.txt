@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+worksforme/__init__.py
+worksforme/main.py
+worksforme/version.py
+worksforme.egg-info/PKG-INFO
+worksforme.egg-info/SOURCES.txt
+worksforme.egg-info/dependency_links.txt
+worksforme.egg-info/entry_points.txt
+worksforme.egg-info/requires.txt
+worksforme.egg-info/top_level.txt
+worksforme/templates/base.html
+worksforme/templates/script.js
+worksforme/templates/style.css
