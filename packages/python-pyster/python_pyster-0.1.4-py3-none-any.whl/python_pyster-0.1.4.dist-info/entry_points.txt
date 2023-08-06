@@ -1,0 +1,2 @@
+[console_scripts]
+pysterminal = pyster.pysterminal:main
