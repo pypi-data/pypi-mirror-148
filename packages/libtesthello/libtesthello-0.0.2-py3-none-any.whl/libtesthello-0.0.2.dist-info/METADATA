@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: libtesthello
+Version: 0.0.2
+Summary: Biblioteca que diz Hello
+Home-page: https://github.com/faustoroger/dio-desafio-github-primeiro-repositorio/tree/develop/Python/Desafios/03-Desafios.Descomplicando.a.Cria%C3%A7%C3%A3o.de.Pacotes/libtesthello
+Author: fr
+Author-email: testsayhellofr@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: colorama (==0.4.4)
+Requires-Dist: termcolor (==1.1.0)
+
+# libtesthello
+
+Description. The package libtesthello is used to:
+- Say Hello
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install libtesthello
+
+```bash
+pip install libtesthello
+```
+
+## Author
+
+Fausto Roger
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
