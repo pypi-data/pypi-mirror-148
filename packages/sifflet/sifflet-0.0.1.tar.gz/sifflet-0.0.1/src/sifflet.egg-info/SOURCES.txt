@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/sifflet.egg-info/PKG-INFO
+src/sifflet.egg-info/SOURCES.txt
+src/sifflet.egg-info/dependency_links.txt
+src/sifflet.egg-info/top_level.txt
