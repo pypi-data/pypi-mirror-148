@@ -1,0 +1,16 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+pyweblight/__init__.py
+pyweblight/configs.py
+pyweblight/main.py
+pyweblight/static.py
+pyweblight/webserver_start.py
+pyweblight/webserver_stop.py
+pyweblight.egg-info/PKG-INFO
+pyweblight.egg-info/SOURCES.txt
+pyweblight.egg-info/dependency_links.txt
+pyweblight.egg-info/entry_points.txt
+pyweblight.egg-info/requires.txt
+pyweblight.egg-info/top_level.txt
