@@ -1,0 +1,10 @@
+README.md
+setup.py
+pygments-style-kit/__init__.py
+pygments-style-kit/kitdark.py
+pygments_style_kit.egg-info/PKG-INFO
+pygments_style_kit.egg-info/SOURCES.txt
+pygments_style_kit.egg-info/dependency_links.txt
+pygments_style_kit.egg-info/entry_points.txt
+pygments_style_kit.egg-info/requires.txt
+pygments_style_kit.egg-info/top_level.txt
