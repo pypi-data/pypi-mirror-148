@@ -1,0 +1,14 @@
+dotest/__init__.py,sha256=Yszf4z2O6W1FDk7TH2MXGSw5y8Rf0HVFM0RtC5hGD74,116
+dotest/debug.py,sha256=jfbZ26VC-3Tej43AEqKWNDgr7ksWWWbR4bMIWaOqkCE,625
+dotest/dotest.py,sha256=ddoUGqrKiwrd1xIxTpIjT62ojFBqfSpWkZD5d7kFwdk,4175
+dotest/generate.py,sha256=UfxUHL637AYI1884r5k9hn303tkcKWG9Xk_uF70MVdg,4406
+dotest/logger.py,sha256=hwXLdWYEEeGIUOY1WTNT2ZrDaN1GUC1UllWSY3tkIbk,2189
+dotest/main.py,sha256=-2K3-7sayCTx2KAOppWpN3q60xcVvdLE0LJdW7c2uog,1773
+dotest/plugin.py,sha256=n1V-DRZV5wEHY_YQtWwXoICTyNcXWF8XdCyeDRvNj_w,1677
+dotest/report.py,sha256=45DdUdbjn6S3AZ0PByQfVvUxsqf0fRNAT_q8_3m8qbY,1569
+dotest/tools.py,sha256=2JF65kMn_dVcIbqmQj-_yj3XNdSASDMobxES5YDBUxE,643
+dotest-0.1.1.dist-info/entry_points.txt,sha256=iVgLxtne3TmlfRcLT8o53vYMlg2yUFFM06Pg6rwFr-U,84
+dotest-0.1.1.dist-info/LICENSE,sha256=f6Xpm8bITHOi244XXbI-f-w3hSe_3hZKdy2cIcJMT1U,1063
+dotest-0.1.1.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+dotest-0.1.1.dist-info/METADATA,sha256=DfbAJ046tqjigkHevToJMJtvYeFB_YByqESUGlU5uik,1148
+dotest-0.1.1.dist-info/RECORD,,

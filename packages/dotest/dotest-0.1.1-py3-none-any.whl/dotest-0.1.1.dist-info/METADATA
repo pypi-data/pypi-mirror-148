@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: dotest
+Version: 0.1.1
+Summary: A system testing framework based on pytest
+Author: pyrunner
+Author-email: pyrunner@qq.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: junitparser (>=2,<3)
+Requires-Dist: pytest (>=7,<8)
+Description-Content-Type: text/markdown
+
+# VTEST
+**[dotest] 是一个基于pytest拓展的测试框架，完全兼容pytest功能，并增加更多易用性功能。**
+
+## 主要功能
+* 支持指定测试case执行顺序： 顺序执行、并发执行、乱序执行
+* 支持测试case参数化设置
+* 支持测试case结果报告实时查看
+
+## 一键安装
+```
+pip install dotest
+```
+
+## 简易样例
+* 执行顺序
+![group](docs/img/dotest_1.jpg)
+testset 描述文件参考[testset.yaml]
+执行命令
+    ```
+    cd docs/example
+    dotest --testset testset/testset.yaml -v
+    ```
+
+[testset.yaml]: docs/example/testset/testset.yaml
+[dotest]: https://github.com/dester/dotest "dotest github 链接"
