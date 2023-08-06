@@ -1,0 +1,9 @@
+README.md
+setup.py
+ReprDynamics.egg-info/PKG-INFO
+ReprDynamics.egg-info/SOURCES.txt
+ReprDynamics.egg-info/dependency_links.txt
+ReprDynamics.egg-info/entry_points.txt
+ReprDynamics.egg-info/not-zip-safe
+ReprDynamics.egg-info/requires.txt
+ReprDynamics.egg-info/top_level.txt
