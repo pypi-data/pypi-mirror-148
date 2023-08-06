@@ -1,0 +1,9 @@
+requests
+lxml
+beautifulsoup4
+pytest
+pytest-cov
+python-dateutil
+fpdf2
+PyPDF2
+colorama
