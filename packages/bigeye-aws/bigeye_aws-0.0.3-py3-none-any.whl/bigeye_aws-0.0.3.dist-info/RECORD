@@ -1,0 +1,11 @@
+bigeye_aws/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bigeye_aws/__version__.py,sha256=3tleU7pLVEjVKSjaBZM4iy0flVDyHw60j3RjBdIJyQ4,23
+bigeye_aws/functions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bigeye_aws/functions/athena.py,sha256=AruXvuI8GQB_rLMaUg_MLIRqvHxIFgxxvoPnyr24K8E,4347
+bigeye_aws/functions/aws.py,sha256=AlubHd3FWgK0q2SqzF3xmHAlq2488M9wt7oJuWXo32k,3412
+bigeye_aws/functions/s3.py,sha256=RAIiaa4hFwlIA6l2xWokyJ5z3O281TceGqmPDbDF4JQ,1227
+bigeye_aws-0.0.3.dist-info/METADATA,sha256=cXQ8z7S_LeBaJZCJU7bxbd31ZzjWDEVklaBkuDnIw6U,504
+bigeye_aws-0.0.3.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+bigeye_aws-0.0.3.dist-info/entry_points.txt,sha256=wCmabCqpEhlKIkAqt-sMoWKB7dOO9wkg8uqqasILiNA,117
+bigeye_aws-0.0.3.dist-info/top_level.txt,sha256=Mz1swPkmtQ4ttApbC2RVbs3m2EsFDvilh6gVe_6O8CY,11
+bigeye_aws-0.0.3.dist-info/RECORD,,
