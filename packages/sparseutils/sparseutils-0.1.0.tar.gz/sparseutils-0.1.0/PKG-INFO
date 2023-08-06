@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: sparseutils
+Version: 0.1.0
+Summary: Utilities for interacting with sparse files
+Author: Richard Ipsum
+Author-email: richardipsum@vx21.xyz
+License: UNKNOWN
+Keywords: sparse
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+License-File: COPYING
+
+sparseutils
+-----------
+
+A collection of utilities for interacting with sparse files.
+
+Installation
+------------
+
+You can install sparseutils with pip,
+
+    % sudo pip3 install sparseutils
+
+alternatively you can clone the [source](https://git.sr.ht/~richardipsum/sparseutils)
+and then run pip from within the git repo:
+
+    % sudo pip3 install .
+
+you can also run the tests from within the git repo using tox:
+
+    % tox
+
+Contributing
+------------
+
+Please feel welcome to submit patches and bug reports via email
+to my public-inbox ~richardipsum/public-inbox@lists.sr.ht
+alternatively patches may be submitted in private using the address
+found in the git log.
+
+See https://git-send-email.io/ for details on contributing
+via email with git.
+
+The archive of my public-inbox can be found at
+https://lists.sr.ht/~richardipsum/public-inbox.
+
+

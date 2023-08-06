@@ -1,0 +1,11 @@
+COPYING
+README.md
+setup.py
+sparseutils/mksparse.py
+sparseutils/sparsemap.py
+sparseutils.egg-info/PKG-INFO
+sparseutils.egg-info/SOURCES.txt
+sparseutils.egg-info/dependency_links.txt
+sparseutils.egg-info/entry_points.txt
+sparseutils.egg-info/not-zip-safe
+sparseutils.egg-info/top_level.txt
