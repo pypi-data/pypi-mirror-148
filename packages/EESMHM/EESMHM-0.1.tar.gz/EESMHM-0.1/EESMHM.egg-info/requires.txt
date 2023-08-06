@@ -1,0 +1,8 @@
+scipy
+numpy
+halo
+inquirer
+pandas
+matplotlib
+intercaat
+pyhull
