@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: mmpm
+Version: 2.14
+Summary: MMPM, the MagicMirror Package Manager CLI simplifies the installation, removal, and general maintenance of MagicMirror packages
+Home-page: https://github.com/Bee-Mar/mmpm
+Download-URL: https://github.com/Bee-Mar/mmpm/archive/2.14.tar.gz
+Author: Brandon Marlowe
+Author-email: bpmarlowe-software@protonmail.com
+License: MIT
+Keywords: MagicMirror magicmirror
+Platform: UNKNOWN
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: argcomplete (>=2.0.0)
+Requires-Dist: argparse (>=1.4)
+Requires-Dist: beautifulsoup4 (>=4.11.1)
+Requires-Dist: colorama (>=0.4.3)
+Requires-Dist: flask (==2.1.0)
+Requires-Dist: Flask-Cors (>=3.0.8)
+Requires-Dist: gunicorn (>=20.1.0)
+Requires-Dist: webssh (>=1.5.1)
+Requires-Dist: flask-socketio (>=5.0.1)
+Requires-Dist: eventlet (==0.30.1)
+Requires-Dist: python-socketio[client] (>=5.0.4)
+Requires-Dist: requests (==2.23.0)
+Requires-Dist: pygments (>=2.12.0)
+Requires-Dist: jinja2 (>=3.0.0)
+
+UNKNOWN
+
