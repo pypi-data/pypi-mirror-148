@@ -1,0 +1,8 @@
+README.md
+setup.py
+queuepy/__init__.py
+queuepy/__main__.py
+queuepy.egg-info/PKG-INFO
+queuepy.egg-info/SOURCES.txt
+queuepy.egg-info/dependency_links.txt
+queuepy.egg-info/top_level.txt
