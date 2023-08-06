@@ -1,0 +1,103 @@
+# Python RSS-Feed-Parser
+RSS-Feed-Parser is the lightweight free command line tool for parsing rss feeds
+
+- version 3.0.0
+- created by Elyorbek Hamroyev
+
+## Requirements
+* Requires Python 3.5 >=
+* Requires Pip
+
+## Installation
+You can easily install cmd tool to your computer by typing this command
+```sh
+pip install rss-reader-elly==3.0.0
+```
+
+## Usage
+**Note:** This cmd tool is only parsing rss feed from https://realpython.com/atom.xml
+```shell
+usage: rss_reader [--help] [--version] [--json] [--verbose] [--limit LIMIT]
+                    [--dates DATE] [--to-pdf PATH] [--to-html PATH]
+                     source
+
+Pure Python command-line RSS reader.
+
+positional arguments:
+  source         RSS URL
+
+optional arguments:
+  -h, --help          show this help message and exit
+  --version           Print version info
+  --json              Print result as JSON in stdout
+  --verbose           Outputs verbose status messages
+  --limit LIMIT       Limit news topics if this parameter provided
+  --dates DATES       Filters rss feed with specified date
+  --to-pdf PATH       Saves rss feed into specified folder in pdf
+  --to-html PATH      Saves rss feed into specified folder in html
+```
+**Example**
+```sh
+rss_reader https://realpython.com/atom.xml --limit 3
+```
+Will give you output something like this:
+```sh
+Title : Python Virtual Environments: A Primer 
+
+ Link : https://realpython.com/python-virtual-environments-a-primer/
+
+ Date : 2022-04-13T14:00:00+00:00
+
+ Summary : In this tutorial, you'll learn how to use a Python virtual environment to manage your Python projects. You'll also dive deep into the structure of virtu
+al environments built using the venv module, as well as the reasoning behind using virtual environments.
+
+-----------------
+Title : Exploring Keywords in Python
+
+ Link : https://realpython.com/courses/exploring-keywords-in-python/
+
+ Date : 2022-04-12T14:00:00+00:00
+
+ Summary : Python keywords make up the fundamental building blocks of any Python program. In this video course, you'll learn the basic syntax and usage for each of
+ Python's thirty-five keywords so you can write more efficient and readable code.
+
+-----------------
+Title : Python News: What's New From March 2022?
+
+ Link : https://realpython.com/python-news-march-2022/
+
+ Date : 2022-04-11T14:00:00+00:00
+
+ Summary : In March 2022, Python 3.11.0a6 was released, PEPs got a new website, PEP 594 about removing dead batteries from the standard library was accepted, and E
+uroPython 2022 issued its CFP and started ticket sales. In this article, you'll get more details on all this cool Python news.
+
+-----------------
+```
+>And you can check all other optional flags(json,version,help,limit,verbose,dates,to-pdf,to-html) by yourself
+## Implementation Document
+**This part of README will be filled after mentors code approval**
+## License
+MIT
+MIT License
+
+Copyright (c) 2022 Elyorbek Hamroyev
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
