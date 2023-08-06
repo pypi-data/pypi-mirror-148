@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: boardx
+Version: 0.1.4
+Summary: Dive into Board.
+Author-email: xinetzone <735613050@qq.com>
+Maintainer-email: xinetzone <735613050@qq.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Dist: sphinx>=4.5
+Requires-Dist: invoke
+Requires-Dist: xyzstyle
+Requires-Dist: sphinx-book-theme>=0.1.6 ; extra == "doc"
+Requires-Dist: ablog ; extra == "doc"
+Requires-Dist: myst-nb ; extra == "doc"
+Requires-Dist: sphinx-thebe ; extra == "doc"
+Requires-Dist: sphinx-copybutton ; extra == "doc"
+Requires-Dist: sphinx-comments ; extra == "doc"
+Requires-Dist: plotly ; extra == "doc"
+Requires-Dist: pandas ; extra == "doc"
+Requires-Dist: matplotlib ; extra == "doc"
+Requires-Dist: sphinxcontrib-mermaid ; extra == "doc"
+Requires-Dist: sphinx-panels ; extra == "doc"
+Requires-Dist: sphinx-inline-tabs ; extra == "doc"
+Requires-Dist: sphinx-automodapi ; extra == "doc"
+Project-URL: Home, https://github.com/xinetzone/d2b
+Provides-Extra: doc
+
+[![PyPI](https://img.shields.io/pypi/v/boardx.svg)](https://pypi.org/project/boardx/) [![GitHub issues](https://img.shields.io/github/issues/xinetzone/d2b)](https://github.com/xinetzone/d2b/issues) [![GitHub forks](https://img.shields.io/github/forks/xinetzone/d2b)](https://github.com/xinetzone/d2b/network) [![GitHub stars](https://img.shields.io/github/stars/xinetzone/d2b)](https://github.com/xinetzone/d2b/stargazers) [![GitHub license](https://img.shields.io/github/license/xinetzone/d2b)](https://github.com/xinetzone/d2b/blob/main/LICENSE) ![repo size](https://img.shields.io/github/repo-size/xinetzone/d2b.svg) [![contributors](https://img.shields.io/github/contributors/xinetzone/d2b.svg)](https://github.com/xinetzone/d2b/graphs/contributors) [![watcher](https://img.shields.io/github/watchers/xinetzone/d2b.svg)](https://github.com/xinetzone/d2b/watchers) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/xinetzone/d2b/main) [![Downloads](https://pepy.tech/badge/boardx/week)](https://pepy.tech/project/boardx) [![Downloads](https://pepy.tech/badge/boardx)](https://pepy.tech/project/boardx) [![Documentation Status](https://readthedocs.org/projects/boardx/badge/?version=latest)](https://boardx.readthedocs.io/zh/latest/?badge=latest)
+
+Discover and create anything interesting!
+
+## PyPI
+
+Provide PyPI support:
+
+```sh
+pip install boardx
+```
+
+For documentation see [d2b](https://xinetzone.github.io/d2b).
+
