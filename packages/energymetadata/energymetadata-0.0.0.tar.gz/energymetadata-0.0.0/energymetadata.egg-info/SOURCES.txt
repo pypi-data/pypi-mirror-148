@@ -1,0 +1,7 @@
+setup.py
+energymetadata/__init__.py
+energymetadata/energymetadata.py
+energymetadata.egg-info/PKG-INFO
+energymetadata.egg-info/SOURCES.txt
+energymetadata.egg-info/dependency_links.txt
+energymetadata.egg-info/top_level.txt
