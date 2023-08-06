@@ -1,0 +1,10 @@
+longscurvefitting/__init__.py,sha256=TlRHDpngcb-mUjEnNONoQKyIAekgdXHkuVq93E-KwRc,483
+longscurvefitting/_helpers.py,sha256=LKlU830wLRHiE3eQA060sqc7oMdtg9D6r5f4WADOTnU,3440
+longscurvefitting/longscurvefitting.py,sha256=Kv4vbuq7JQ5MID5j7osqz7OkrXBAd220yvwyvfMfCtg,13477
+longscurvefitting/models.py,sha256=epGs_Th0guA8VNeZfg1ncQ_D_bNPEx0-cWVB1pLnEzY,4842
+longscurvefitting/scipycurvefitm.py,sha256=nTdKkQ6wHEqNsw7mEmGONrLOg8hXNK_daImASUemXC0,4751
+adaptive_curvefitting-0.1.5.dist-info/LICENSE,sha256=3dODWmeXtuQIZvB9MxbFTAEIEFJDplMUQMNaaPS39kU,1091
+adaptive_curvefitting-0.1.5.dist-info/METADATA,sha256=V_8Fn8Ss4dIxPAkb-gpyEjkb-1ZypC2B0rYU4Aekgvw,6784
+adaptive_curvefitting-0.1.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+adaptive_curvefitting-0.1.5.dist-info/top_level.txt,sha256=EkBkbOLwmc3DlreZBkveR4xDsAncwDlizRyHYJFj8Ls,18
+adaptive_curvefitting-0.1.5.dist-info/RECORD,,
