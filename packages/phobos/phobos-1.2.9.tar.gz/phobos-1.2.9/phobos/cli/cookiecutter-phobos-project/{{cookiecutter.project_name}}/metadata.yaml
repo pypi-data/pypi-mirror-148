@@ -1,0 +1,80 @@
+project:
+    name: EuroSAT
+    description: Training a chip classifier that classifies Sentinel-2 images in to one of 10 classes.
+    tags: 
+    - example
+    platform: arche
+    dataset:
+        yaml: "s3://arche-datasets/EuroSAT/metadata.yaml"
+        transforms:
+            train:
+                - phobos.transforms.ToFloatChannelWise: null
+                - phobos.transforms.Normalize: null
+                - albumentations.VerticalFlip:
+                    p: 0.5
+                - albumentations.HorizontalFlip:
+                    p: 0.5
+            val:
+                - phobos.transforms.ToFloatChannelWise: null
+                - phobos.transforms.Normalize: null
+    input:
+        rgb:
+            sensor: Sentinel-2
+            dates: 
+                - D1
+            bands:
+                - B02
+                - B03
+                - B04
+            patch_size: 64
+    output:
+        label:
+            logits: true
+            type: label
+            metrics:
+                torchmetrics.Precision:
+                    average: macro 
+                torchmetrics.Recall:
+                    average: macro
+            loss:
+                torch.nn.CrossEntropyLoss: null
+            question: LandUseLandCoverClass
+            num_classes: 10
+    model:
+        phobos.classification.resnet18:
+            pretrained_weights: imagenet1k
+    run:
+        mode: epoch
+        num_gpus: 1
+        max_iters: 20
+        verbose: true
+        distributed: false
+        batch_size: 128
+        num_workers: 4
+        optimizer: 
+            torch.optim.SGD:
+                lr: 0.1
+        scheduler:
+            torch.optim.lr_scheduler.StepLR:
+                gamma: 0.1
+                step_size: 30
+        checkpoint_path: ./checkpoints
+        tensorboard: true
+deployment:
+    url: https://arche.granular.ai
+    name: ${project.name}
+    distributed: ${project.run.distributed}
+    run: 
+        kind: #defaults to job for single node training and pytorchjob for distributed training
+        replicas: #to be populated for distributed training
+            master: 1
+            worker: 1
+        connections:
+        - artifacts-store
+        - dataset
+        nodepool: m60-pool
+        container:
+            image: gcr.io/granular-ai/phobos:latest
+            resources:
+                limits: ${project.run.num_gpus}
+                requests: ${project.run.num_gpus}
