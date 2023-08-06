@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: promoted
+Version: 0.0.1
+Summary: A package of reinforcement learning.
+Home-page: https://github.com/Li-Ming-Fan/promoted
+Author: Ming-Fan Li
+Author-email: li_m_f@163.com
+Maintainer: Ming-Fan Li
+Maintainer-email: li_m_f@163.com
+License: UNKNOWN
+Platform: any
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Promoted
+
+A package of reinforcement learning.
+
+
+
