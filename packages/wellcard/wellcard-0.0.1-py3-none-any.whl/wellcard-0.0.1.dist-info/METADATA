@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: wellcard
+Version: 0.0.1
+Summary: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: requests
+Requires-Dist: importlib-metadata ; python_version < "3.8"
+
+UNKNOWN
+
