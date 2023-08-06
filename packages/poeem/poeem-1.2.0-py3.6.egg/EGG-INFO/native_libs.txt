@@ -1,0 +1,7 @@
+poeem/ops/bin/clustering_op.so
+poeem/ops/bin/clustering_raw_op.so
+poeem/ops/bin/combinatorial_op.so
+poeem/ops/bin/pqknn_dataset_op.so
+poeem/ops/bin/rec_dataset_op.so
+poeem/ops/bin/search_op.so
+poeem/ops/bin/tokenizer_op.so
