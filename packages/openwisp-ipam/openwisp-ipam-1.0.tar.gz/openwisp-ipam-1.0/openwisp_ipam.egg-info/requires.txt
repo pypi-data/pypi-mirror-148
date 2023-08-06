@@ -1,0 +1,5 @@
+openwisp-users~=1.0.0
+openwisp-utils[rest]~=1.0.1
+django<4.1.0,>=3.0.0
+openpyxl~=3.0.9
+django-reversion~=4.0.1
