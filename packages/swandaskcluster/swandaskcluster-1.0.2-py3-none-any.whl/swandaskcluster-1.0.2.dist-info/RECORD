@@ -1,0 +1,10 @@
+swandaskcluster/__init__.py,sha256=aygIDlIeLxwmpBg3eI62Ailo0bgnY7f_pS4GdsCpn8U,75
+swandaskcluster/_version.py,sha256=L8W5pyxnDQCkyd3a8tdgA9LdCl1LJ0XsW3tq7QE4QWk,103
+swandaskcluster/cluster.py,sha256=yHOqVRXkCCMfioNU9xmKmJ5QuHm6YFO37rlBb9dSmU0,3022
+swandaskcluster/config.py,sha256=hkLnU8Bvtbaq7gfaA6il6jONrPXVtSF_2xt5oooYKkw,258
+swandaskcluster/utils.py,sha256=rrpJTSRUhQhwXL18VO7Zw5wCL9HxCPa8RCKB2KHHOt0,1841
+swandaskcluster-1.0.2.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+swandaskcluster-1.0.2.dist-info/METADATA,sha256=61k5Y7NPEzHcRRYR7CvDj3now_BotEw33fdRNeAua7g,1110
+swandaskcluster-1.0.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+swandaskcluster-1.0.2.dist-info/top_level.txt,sha256=kEnZkK1qCJ2Qb49JflghG9sb3XdRGiT7cQvYc2ZwfFU,16
+swandaskcluster-1.0.2.dist-info/RECORD,,
