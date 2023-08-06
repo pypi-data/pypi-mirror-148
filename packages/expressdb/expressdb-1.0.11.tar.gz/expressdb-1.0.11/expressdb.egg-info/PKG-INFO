@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: expressdb
+Version: 1.0.11
+Summary: A python module for database.
+Home-page: https://github.com/nguyenanhkhai/expressdb
+Author: Nguyen Anh Khai
+Author-email: anhkhainguyen9@gmail.com
+License: MIT
+Description: See guide in https://github.com/nguyenanhkhai/expressdb/blob/master/README.md.
+Platform: UNKNOWN
