@@ -1,0 +1,4 @@
+pandas
+pytest
+gitpython
+pycap>=2.0.0
