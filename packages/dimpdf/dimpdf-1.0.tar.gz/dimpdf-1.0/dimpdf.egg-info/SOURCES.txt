@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+dimpdf/__init__.py
+dimpdf/pdf2image.py
+dimpdf/pdf2text.py
+dimpdf.egg-info/PKG-INFO
+dimpdf.egg-info/SOURCES.txt
+dimpdf.egg-info/dependency_links.txt
+dimpdf.egg-info/top_level.txt
