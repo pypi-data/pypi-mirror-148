@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}{{ dashboard.title }}{% endblock %}
+
+{% block extra_head %}
+{{ super() }}
+<link href="{{ urls.static_plugins('datasette_dashboards', 'dashboards.css') }}" rel="stylesheet"/>
+<style>
+  @media (min-width: 800px) {
+    .dashboard-grid {
+      {% if dashboard.layout %}
+      grid-template-areas: {% for row in dashboard.layout %}"{% for col in row %}{{ col }} {% endfor %}" {% endfor %};
+      {% else %}
+      grid-template-columns: repeat(2, 1fr);
+      {% endif %}
+    }
+
+    {% if dashboard.layout %}
+    {% for chart_slug, chart in dashboard.charts.items() %}
+    #card-{{ chart_slug }} {
+      grid-area: {{ chart_slug }};
+    }
+    {% endfor %}
+    {% endif %}
+  }
+</style>
+{% endblock %}
+
+{% block nav %}
+    <p class="crumbs">
+        <a href="{{ urls.instance() }}">home</a> /
+        <a href="{{ urls.path('-/dashboards') }}">dashboards</a>
+    </p>
+    {{ super() }}
+{% endblock %}
+
+{% block body_class %}index{% endblock %}
+
+{% block content %}
+    <div class="dashboard-header">
+      <div class="page-header" style="border-color: black">
+        <h1>{{ dashboard.title }}</h1>
+      </div>
+      <p>{{ dashboard.description }}</p>
+    </div>
+
+    {% if dashboard.filters %}
+    <details class="dashboard-filters">
+      <summary>Filters</summary>
+
+      <form method="GET">
+        {% for key, dfilter in dashboard.filters.items() %}
+        {% set dfilter_type = dfilter.type if dfilter.type in ['text', 'date', 'number'] else 'text' %}
+        <p>
+          <label for="{{ key }}">{{ dfilter.name }}</label>
+          <input id="{{ key }}" name="{{ key }}" type="{{ dfilter_type }}"{% if dfilter.min is defined %} min="{{ dfilter.min }}"{% endif %}{% if dfilter.max is defined %} max="{{ dfilter.max }}"{% endif %}{% if dfilter.step is defined %} step="{{ dfilter.step }}"{% endif %} value="{% if key in query_parameters.keys() %}{{ query_parameters[key] }}{% else %}{{ dfilter.default }}{% endif %}">
+        </p>
+        {% endfor %}
+        <input type="submit" value="Apply">
+      </form>
+    </details>
+    {% endif %}
+
+    <div class="dashboard-grid">
+      {% for chart_slug, chart in dashboard.charts.items() %}
+      <div id="card-{{ chart_slug }}" class="dashboard-card">
+        {% if chart.library != 'markdown' %}
+        <div class="dashboard-card-title">
+          <p><a href="{{ urls.path('-/dashboards') }}/{{ slug }}/{{ chart_slug }}{% if query_string|length > 0 %}?{{ query_string|safe }}{% endif %}">{{ chart.title }}</a></p>
+        </div>
+        {% endif %}
+
+        <div id="chart-{{ chart_slug }}" class="dashboard-card-chart">
+          {% if chart.library == 'markdown' %}
+          {{ render_markdown(chart.display) }}
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <script src="{{ urls.static_plugins('datasette_dashboards', 'dashboards.js') }}"></script>
+    <script type="text/javascript">
+      {% for chart_slug, chart in dashboard.charts.items() %}
+      {% if chart.library == 'vega' %}
+      renderVegaChart('#chart-{{ chart_slug }}', JSON.parse('{{ chart|tojson }}'), '{{ query_string|safe }}')
+      {% elif chart.library == 'metric' %}
+      renderMetricChart('#chart-{{ chart_slug }}', JSON.parse('{{ chart|tojson }}'), '{{ query_string|safe }}')
+      {% endif %}
+      {% endfor %}
+    </script>
+{% endblock %}
