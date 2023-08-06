@@ -1,0 +1,34 @@
+Metadata-Version: 1.1
+Name: Todoska
+Version: 0.1.1
+Summary: A Basic Todo Tracker in Cli
+Home-page: https://abbhishek.me
+Author: Abhishek Kushwaha
+Author-email: josh@edublocks.org
+License: MIT
+Description: Todoska is a simple Cli Todo-Tracker.
+        
+        
+        
+        Features :
+        
+        - You can add new task 
+        
+        - You can update a task
+        
+        - You can delete a Task 
+        
+        Change Log
+        ==========
+        
+        0.1.01 (30/04/2022)
+        -------------------
+        - First Release
+        - Initial Implementation
+Keywords: Python,cli,Todo,Todotracker,todo-tracker
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
