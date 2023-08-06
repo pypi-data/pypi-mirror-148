@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+mckomcko/__init__.py
+mckomcko/func.py
+mckomcko.egg-info/PKG-INFO
+mckomcko.egg-info/SOURCES.txt
+mckomcko.egg-info/dependency_links.txt
+mckomcko.egg-info/not-zip-safe
+mckomcko.egg-info/top_level.txt
