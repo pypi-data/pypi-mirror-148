@@ -1,0 +1,10 @@
+Hanguel/__init__.py,sha256=zAF9o5xrQe_e8M9mP6U_hn_mgwWnFdltwa5bvxh6BUA,21
+Hanguel/alphabets.py,sha256=qoAuZK09pdGcmsMb3xbyawohXZ-eng8Crh2Amu3p4zQ,3186
+Hanguel/compose.py,sha256=Sd9JmHena_8KxLZ-R69yhFfUARQ7MUQPlmG603wHeJ0,4997
+Hanguel/decompose.py,sha256=JOsB-YLsPIEyTXlZymp55mEnydiv7Br9UeWbHHDAv4Y,1610
+Hanguel/utils.py,sha256=yeq-ryVB13CvNzlXzfuOILT_aJps_9a_T1ptcQqLmMo,1146
+Hanguel-0.0.0.1.dist-info/LICENSE.txt,sha256=N-CbJtN83ZWJ26G90eRxI7MwsgrJ2FKr62RrYjrgDBc,1063
+Hanguel-0.0.0.1.dist-info/METADATA,sha256=dI9QkH_-k8L8KUn7R1Hd4c4Hq8gqAcFutr2tJeKlpyo,855
+Hanguel-0.0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+Hanguel-0.0.0.1.dist-info/top_level.txt,sha256=xBsPLQfMGGndENqU-VI3VkjZ6qBgwJtZ7temG6K7fK8,8
+Hanguel-0.0.0.1.dist-info/RECORD,,
