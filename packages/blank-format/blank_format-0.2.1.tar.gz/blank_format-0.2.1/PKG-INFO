@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: blank-format
+Version: 0.2.1
+Summary: The ultimate code formatter
+Home-page: https://github.com/d3rp/blank
+License: MIT
+Keywords: automation,formatter
+Author: Joni Turunen
+Author-email: rojun.itu@gmail.com
+Requires-Python: >=3.5
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development
+Project-URL: Repository, https://github.com/d3rp/blank
