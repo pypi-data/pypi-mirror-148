@@ -1,0 +1,13 @@
+xeus_python_shell/__init__.py,sha256=KsrBjdTcqgOtaqu0JS7DXbpQ9gdvJCVrQAOrjx2O70U,57
+xeus_python_shell/compiler.py,sha256=xP_wJDam7bcREN1MhFtK2EEWdQn0dH2E3Zihfhok2s8,587
+xeus_python_shell/debugger.py,sha256=IgbQ4rLbY9ODl4Z3UgtC9TbNk4m72O2x3bWi7Mp0yoE,3915
+xeus_python_shell/display.py,sha256=Be_NJWsjtqy0-KoziS1AeIlZtwDjlrQQZ5imwgh2dkk,1359
+xeus_python_shell/shell.py,sha256=9FxuV5NDSwtYOl_Sic4UoEUkVcvMniFh5d7SnnsWU8E,2610
+xeus_python_shell_lite/__init__.py,sha256=gKPaRQ8HmKwIdmrK_Xy9MyuG-tHKUTVLvrDnYVWgUj8,94
+xeus_python_shell_lite/mocks.py,sha256=Vort80sNuxSfJqsrzBlKGV6NmBifgmv_FXfFeWf5nGY,1367
+xeus_python_shell_lite/shell.py,sha256=Xxt7kxWETtayQHSlx9eA-fwLhAZzsPLhnLGArB0Wvao,980
+xeus_python_shell-0.3.0.dist-info/LICENSE,sha256=0v3wEzQ66mvZr7Zjb4wZWJMoy4ucJgmoBTeVrwoIPDc,1518
+xeus_python_shell-0.3.0.dist-info/METADATA,sha256=kD0StL-MxicRUlbP9lJ0lZ_8PqNkRVN4BHwpNotUdXI,955
+xeus_python_shell-0.3.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+xeus_python_shell-0.3.0.dist-info/top_level.txt,sha256=3RAHTOAGRoR4u2EFMJAD6TPsg2GJR6W7MYwMfQ4N-vM,41
+xeus_python_shell-0.3.0.dist-info/RECORD,,
