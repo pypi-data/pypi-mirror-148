@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: sqlalchemy-dm
+Version: 8.1.2.98
+Summary: SQLAlchemy dialect for DM
+Home-page: UNKNOWN
+Author: panxiang
+Author-email: 
+License: UNKNOWN
+Keywords: DM SQLAlchemy
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: dmPython
+Requires-Dist: sqlalchemy
+
+UNKNOWN
+
