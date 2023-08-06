@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: x21145059CppCA
+Version: 0.1.2
+Summary: Library to calculate cost using discount
+Home-page: https://github.com/x21145059-Shilpi/x21145059CppCA
+Author: x21145059
+Author-email: x21145059@student.ncirl.ie
+License: MIT
+Download-URL: https://github.com/x21145059-Shilpi/x21145059CppCA/archive/refs/tags/v_01.2.tar.gz
+Description: UNKNOWN
+Keywords: DISCOUNT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
