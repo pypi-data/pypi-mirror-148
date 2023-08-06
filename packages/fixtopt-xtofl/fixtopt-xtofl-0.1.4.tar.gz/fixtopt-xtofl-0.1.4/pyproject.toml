@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "fixtopt-xtofl"
+# version is determined by poetry-dynamic-versioning
+# cf. https://pypi.org/project/poetry-dynamic-versioning/
+version = "0.1.4" # use poetry-dynamic-versioning"
+description = "Pytest extension for adding test options"
+authors = ["xtofl <xtofl@fixtopt.com>"]
+license = "MIT"
+packages = [
+    { include = "fixtopt", from = "src" }
+]
+classifiers = [
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Testing",
+    "Operating System :: OS Independent",
+]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pytest = ">=6.2.4, <8"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry-dynamic-versioning]
+enable = false
+dirty = true
+style = "pep440"
+
+[build-system]
+requires = ["poetry-core>=1.0.2", "poetry-dynamic-versioning"]
+build-backend = "poetry.core.masonry.api"
