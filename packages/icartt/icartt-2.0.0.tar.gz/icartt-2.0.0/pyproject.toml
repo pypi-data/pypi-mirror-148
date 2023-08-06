@@ -1,0 +1,53 @@
+[tool.poetry]
+name = "icartt"
+version = "2.0.0"
+description = "ICARTT format reader and writer"
+license = "GPL-3.0-or-later"
+authors = ["Christoph Knote <christoph.knote@med.uni-augsburg.de>", "Florian Obersteiner <florian.obersteiner@kit.edu>"]
+readme = "README.md"
+homepage = "https://mbees.med.uni-augsburg.de/"
+repository = "https://mbees.med.uni-augsburg.de/gitlab/mbees/icartt_pypackage"
+documentation = "https://mbees.med.uni-augsburg.de/docs/icartt/2.0.0/"
+keywords = [ "atmosphere", "file format", "ames", "nasa" ]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: Science/Research",
+    "Operating System :: POSIX",
+    "Topic :: Education",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Utilities",
+]
+packages = [
+    { include = "icartt", from = "src" },
+]
+
+
+[tool.poetry.urls]
+"Bug Tracker" = "http://mbees.med.uni-augsburg.de/gitlab/mbees/icartt_pypackage/issues"
+
+
+[tool.poetry.dependencies]
+python = ">= 3.7, < 4"
+numpy  = ">= 1.19"
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+coverage = ">= 6.3.2"
+sphinx = ">= 4.4"
+sphinx-rtd-theme = ">= 1.0"
+enum-tools = ">=0.9"
+sphinx-toolbox = ">= 2.16.0"
+black = "^22.3.0"
+
+
+[tool.black]
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
