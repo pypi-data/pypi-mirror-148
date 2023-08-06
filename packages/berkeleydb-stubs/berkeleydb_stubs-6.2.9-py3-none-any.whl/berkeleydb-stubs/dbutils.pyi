@@ -1,0 +1,3 @@
+from . import db as db
+
+def DeadlockWrap(function, *_args, **_kwargs): ...

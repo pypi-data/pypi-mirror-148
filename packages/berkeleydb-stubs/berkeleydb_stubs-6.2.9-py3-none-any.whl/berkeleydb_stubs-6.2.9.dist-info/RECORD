@@ -1,0 +1,11 @@
+berkeleydb-stubs/__init__.pyi,sha256=_-_irogMPWrwEEiVRcLHkiSwOe-mAGNWGcwSZxLD5r8,1675
+berkeleydb-stubs/_berkeleydb.pyi,sha256=oXI6oSLj_uvzJbNi_PL_aurbaUxfmPEJR4m1qbrMQec,21475
+berkeleydb-stubs/db.pyi,sha256=OyUTIBFhpQhU7oZlJF7q1Bu21ZLZTL8vd3ocLXUh4-g,27
+berkeleydb-stubs/dbobj.pyi,sha256=pHn2gbgwfxqiOpkUXtpSQLxsxSArgMtPwvCOXwxReHI,4826
+berkeleydb-stubs/dbrecio.pyi,sha256=R_M3gukVdJtcAlbMjuX5tMT_giA3Y5vQtQ9-icyDx7A,554
+berkeleydb-stubs/dbshelve.pyi,sha256=JDhI4ahY5RevVYPPlPRczaRUWtfadYGjdYzRLy6bHZ4,2393
+berkeleydb-stubs/dbutils.pyi,sha256=TjRTSjtV3J5Kd2ihan62qHtxZNwFPVu5V9UAmBEKG80,75
+berkeleydb_stubs-6.2.9.dist-info/METADATA,sha256=cJMAaXyU1ATPJMr1Aprq_P0XMveBojw3CL34LVXQ1Jw,1105
+berkeleydb_stubs-6.2.9.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+berkeleydb_stubs-6.2.9.dist-info/top_level.txt,sha256=vZmGO2uOkGsQLcZApvOXM-M2Bct0tOcvTP3SyOdI6wI,17
+berkeleydb_stubs-6.2.9.dist-info/RECORD,,
