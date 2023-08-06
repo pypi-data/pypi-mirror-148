@@ -1,0 +1,13 @@
+optimum/habana/__init__.py,sha256=Ifx0cAWQV3-Zb6gOY2vnzqNHdZ4GBARR8kO4fu1PPy4,917
+optimum/habana/gaudi_configuration.py,sha256=EkK2QgRTdO4oKjn1V_2Ju_Ukyc20h3XYg5jE8zZ8Plc,2428
+optimum/habana/trainer.py,sha256=oQm9_v0wN-l4GIvzG0KfiaQcGhyo009oROUhaS21470,59448
+optimum/habana/trainer_utils.py,sha256=Rw5-4V-OkTYFaAc7QDFmjHClaMuIr4XjW_gO6ZkeHRs,1791
+optimum/habana/training_args.py,sha256=fQKNSs7FO0FvcciuTfBtk8ACHGGqpRSKljP-OpSQUUo,8029
+optimum/habana/version.py,sha256=cKTSP5xRFPInUs3QrREMQXiNGvSRAOnfxpvcx8beQQY,639
+optimum/habana/distributed/__init__.py,sha256=SDv-rwITbOZrNSUYq-3Xd--x5t-eVX0qIMzxBPErBNc,50
+optimum/habana/distributed/distributed_runner.py,sha256=ctG8N0e5ohMsWjdZ4j-NrkSp0Bp8xi7A9VY_oc9t0m0,9803
+optimum_habana-1.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+optimum_habana-1.0.1.dist-info/METADATA,sha256=fpdmrsuRQ1CtROTw0ZNOfMm8OuGeNdHHyIj12iEdxA8,8650
+optimum_habana-1.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+optimum_habana-1.0.1.dist-info/top_level.txt,sha256=rc1rV-uPZnV1Ek7hCwh56pvMCKcip65JbHRRWs8Yqu8,8
+optimum_habana-1.0.1.dist-info/RECORD,,
