@@ -1,0 +1,9 @@
+xlrd
+future
+kaggle
+argcomplete
+tqdm
+requests
+pandas
+h5py
+Pillow
