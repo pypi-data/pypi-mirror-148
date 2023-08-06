@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+src/ezenv/ezenv.py
+src/ezenv/python_ezenv.egg-info/PKG-INFO
+src/ezenv/python_ezenv.egg-info/SOURCES.txt
+src/ezenv/python_ezenv.egg-info/dependency_links.txt
+src/ezenv/python_ezenv.egg-info/top_level.txt
