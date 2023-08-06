@@ -1,0 +1,2 @@
+[console_scripts]
+pigit = pigit.entry:main
