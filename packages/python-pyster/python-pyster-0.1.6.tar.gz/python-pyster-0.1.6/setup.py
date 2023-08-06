@@ -1,0 +1,18 @@
+from setuptools import setup
+setup(
+    name = 'python-pyster',
+    version = '0.1.6',
+    license = 'MIT',
+    description = 'Python unit testing made easy with pyster!',
+    author = 'Wrench56',
+    author_email = 'dmarkreg@gmail.com',
+    url = 'https://github.com/Wrench56/pyster',
+    install_requires = ['rich'],
+    long_description = 'Please find more information on my Github page!',
+    entry_points={
+         "console_scripts": [
+            "pysterminal=python_pyster.pysterminal:main"
+        ]
+    },
+    packages=['errors']
+)
