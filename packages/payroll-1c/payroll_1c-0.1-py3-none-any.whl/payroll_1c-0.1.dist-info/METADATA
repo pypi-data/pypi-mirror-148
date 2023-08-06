@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: payroll-1c
+Version: 0.1
+Summary: Parse 1C Payrolls XML file
+Home-page: https://github.com/odoo-ru/payroll-1c
+License: MIT
+Author: Dmitry Voronin
+Author-email: dimka665@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Project-URL: Repository, https://github.com/odoo-ru/payroll-1c
