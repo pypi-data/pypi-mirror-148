@@ -1,0 +1,13 @@
+from typing import Any
+
+class ColorSpace:
+    name: str
+    labels: Any
+    is_origin_well_defined: bool
+    k0: Any
+    def to_xyz100(self, _) -> None: ...
+    def from_xyz100(self, _) -> None: ...
+    @property
+    def lightness_label(self): ...
+    @property
+    def hue_labels(self): ...
