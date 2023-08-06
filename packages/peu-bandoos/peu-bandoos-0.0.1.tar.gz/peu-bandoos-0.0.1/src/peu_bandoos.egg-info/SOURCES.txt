@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/peu/__init__.py
+src/peu/core.py
+src/peu_bandoos.egg-info/PKG-INFO
+src/peu_bandoos.egg-info/SOURCES.txt
+src/peu_bandoos.egg-info/dependency_links.txt
+src/peu_bandoos.egg-info/top_level.txt
