@@ -1,0 +1,14 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+requirements.txt
+setup.py
+Todo-Tracker/Database.py
+Todo-Tracker/models.py
+Todo-Tracker/todoska.py
+Todo-Tracker/Todoska.egg-info/PKG-INFO
+Todo-Tracker/Todoska.egg-info/SOURCES.txt
+Todo-Tracker/Todoska.egg-info/dependency_links.txt
+Todo-Tracker/Todoska.egg-info/requires.txt
+Todo-Tracker/Todoska.egg-info/top_level.txt
