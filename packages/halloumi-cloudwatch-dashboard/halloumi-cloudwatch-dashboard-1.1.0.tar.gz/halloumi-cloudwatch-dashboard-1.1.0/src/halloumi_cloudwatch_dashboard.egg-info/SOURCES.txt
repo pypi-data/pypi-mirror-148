@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/halloumi_cloudwatch_dashboard/__init__.py
+src/halloumi_cloudwatch_dashboard/py.typed
+src/halloumi_cloudwatch_dashboard.egg-info/PKG-INFO
+src/halloumi_cloudwatch_dashboard.egg-info/SOURCES.txt
+src/halloumi_cloudwatch_dashboard.egg-info/dependency_links.txt
+src/halloumi_cloudwatch_dashboard.egg-info/requires.txt
+src/halloumi_cloudwatch_dashboard.egg-info/top_level.txt
+src/halloumi_cloudwatch_dashboard/_jsii/__init__.py
+src/halloumi_cloudwatch_dashboard/_jsii/halloumi-cloudwatch-dashboard@1.1.0.jsii.tgz
