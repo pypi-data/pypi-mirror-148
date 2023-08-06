@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: qiskit-toqm
+Version: 0.0.3
+Summary: Qiskit transpiler passes for the TOQM algorithm
+Author: Qiskit Development Team
+Author-email: hello@qiskit.org
+License: Apache 2.0
+Project-URL: Bug Tracker, https://github.com/kevinhartman/qiskit-toqm/issues
+Project-URL: Documentation, https://github.com/kevinhartman/qiskit-toqm
+Project-URL: Source Code, https://github.com/kevinhartman/qiskit-toqm
+Keywords: qiskit sdk quantum
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.7
+Provides-Extra: test
+License-File: LICENSE
+License-File: LICENSE_pybind11
+
+UNKNOWN
+
