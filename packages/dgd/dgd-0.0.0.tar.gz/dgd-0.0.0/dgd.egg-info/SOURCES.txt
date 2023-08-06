@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+dgd/__init__.py
+dgd/_download.py
+dgd/config.py
+dgd/inference.py
+dgd/py.typed
+dgd/video.py
+dgd.egg-info/PKG-INFO
+dgd.egg-info/SOURCES.txt
+dgd.egg-info/dependency_links.txt
+dgd.egg-info/requires.txt
+dgd.egg-info/top_level.txt
