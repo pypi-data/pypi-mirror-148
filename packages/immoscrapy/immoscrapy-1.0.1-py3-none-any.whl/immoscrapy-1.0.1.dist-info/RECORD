@@ -1,0 +1,10 @@
+immoscrapy/__init__.py,sha256=Jv9qyphl-fGFdzTNd1gmO038msHtra6pCaefcj5d3KY,95
+immoscrapy/cli.py,sha256=WCwMm7Afk4sJDK-g8KEgMhQ62jBpvEz8HaWWQrI_hbE,5237
+immoscrapy/immoscrapy.py,sha256=aNwoHvp6JLDkoORWHBiNYh93dXva_a4PNrlpGPRYazs,8899
+immoscrapy/version.py,sha256=-t-nMGJYYbp1LWPEDArAqnZvEBibCvYBBEexBtR3isE,22
+immoscrapy-1.0.1.dist-info/LICENSE,sha256=aZZ77TH7_iBb0mgGhYzQ9vlO2Mu2ItQ8ravP5tlQ6CU,1072
+immoscrapy-1.0.1.dist-info/METADATA,sha256=VvUMetwfein-9Ttu57_5ftGxeKfjzaRXLgGPBz_KZ-E,2647
+immoscrapy-1.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+immoscrapy-1.0.1.dist-info/entry_points.txt,sha256=EgyeJQaDyBhHOEVwK6qWWlGAUh5rvnKwYKo2ogjxhns,52
+immoscrapy-1.0.1.dist-info/top_level.txt,sha256=lUtdHN3BwIiNb3NsrFGeaV6RVATCrdV0hu-GdFBGFbc,11
+immoscrapy-1.0.1.dist-info/RECORD,,
