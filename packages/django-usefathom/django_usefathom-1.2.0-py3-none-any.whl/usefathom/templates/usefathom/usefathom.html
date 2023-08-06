@@ -1,0 +1,14 @@
+{% if FATHOM_SITE_ID %}
+<!-- Fathom - beautiful, simple website analytics -->
+<script src="{{ FATHOM_SCRIPT_URL }}" site="{{ FATHOM_SITE_ID }}" defer></script>
+{% if fathom_goals %}
+<script type="text/javascript">
+window.addEventListener('load', (event) => {
+  {% for entry in fathom_goals %}
+  fathom.trackGoal("{{entry.goal}}", {{ entry.value }});
+  {% endfor %}
+});
+</script>
+{% endif %}
+<!-- / Fathom -->
+{% endif %}
