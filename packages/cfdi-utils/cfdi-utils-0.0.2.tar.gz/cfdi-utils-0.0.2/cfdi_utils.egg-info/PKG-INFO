@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: cfdi-utils
+Version: 0.0.2
+Summary: Utilities to work with CFDI
+Home-page: 
+Author: Arturo Castillo
+Author-email: arturguay@gmail.com
+License: MIT
+Keywords: cfdi
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+License-File: LICENSE.txt
+
+CFDI UTILS
+----------
+
+This is an utility to help you to generate and work with CFDI's.
+
+Change Log
+==========
+
+0.0.1 (16/04/2020)
+------------------
+- First Release
+
+0.0.2 (27/04/2020)
+------------------
+- Created CFDI class
+- Added SelloDigital class to sign a CFDI
+
