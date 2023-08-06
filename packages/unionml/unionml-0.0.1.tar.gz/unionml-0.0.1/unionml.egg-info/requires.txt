@@ -1,0 +1,11 @@
+docker
+fastapi
+flytekit>=0.32.6
+gitpython
+joblib
+numpy
+pandas
+pydantic
+sklearn
+typer
+uvicorn
