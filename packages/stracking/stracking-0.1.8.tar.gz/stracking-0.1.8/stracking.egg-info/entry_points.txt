@@ -1,0 +1,5 @@
+[console_scripts]
+sdogdetector = stracking.cli.detector_dog:main
+sdohdetector = stracking.cli.detector_doh:main
+slogdetector = stracking.cli.detector_log:main
+ssplinker = stracking.cli.linker_shortest_path:main
