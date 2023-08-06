@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+./dpav/__init__.py
+./dpav/temp.py
+dpav.egg-info/PKG-INFO
+dpav.egg-info/SOURCES.txt
+dpav.egg-info/dependency_links.txt
+dpav.egg-info/top_level.txt
