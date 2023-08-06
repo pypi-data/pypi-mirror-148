@@ -1,0 +1,14 @@
+purplship/mappers/dhl_poland/__init__.py,sha256=NW0u_T7Sa0SXrbU8e-3UqhH9_okmdmi6wzdhj7CeZzE,590
+purplship/mappers/dhl_poland/mapper.py,sha256=DSygxmX-yM9YsNF7KJJ5wyivn3Ypz48qzcnU_w58auw,1681
+purplship/mappers/dhl_poland/proxy.py,sha256=N1W8Rj0gm8fT-G0p7vJM5itV8zD2RGuTOlD_9JaJ8EY,1456
+purplship/mappers/dhl_poland/settings.py,sha256=Bnkybl1YGNklr-737oM31PWDLEKqp8qcB2LXrtG3Njk,835
+purplship/providers/dhl_poland/__init__.py,sha256=kFag6mq4oju8FklEQavvHocYRsg91r53f3z2_bJopxk,230
+purplship/providers/dhl_poland/error.py,sha256=WD6UOIULdUOv_2tEkDvEd-ofrlx1nkCgcu4-NFtFyxI,630
+purplship/providers/dhl_poland/shipment/__init__.py,sha256=QX96FsHyzEFm1OAAXcLAy6kskFa1whcbd4JbbVhtwng,242
+purplship/providers/dhl_poland/shipment/cancel.py,sha256=31F80mibnO20Gra46T3d0ljP3ecfwmvQnt059YPZAf8,1502
+purplship/providers/dhl_poland/shipment/create.py,sha256=wrA6q8NU7ritZtDKRIfL3HtgSzXXtwVsXHFEry_a02M,12787
+purplship/providers/dhl_poland/units.py,sha256=SQ40-MrkUOpHFHHzt7CUWzJn-048OSvdhHGsi3aAptY,3288
+purplship/providers/dhl_poland/utils.py,sha256=DvQNInBKolqJOIDuZZ5WRrneVtRc5OHjWtKD72vnUmc,1686
+purplship.dhl_poland-2022.2.3.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+purplship.dhl_poland-2022.2.3.dist-info/METADATA,sha256=7yfUfDDU7G4c_7aaSAaXVOCm8YepJs69eCXMEanmlTE,1415
+purplship.dhl_poland-2022.2.3.dist-info/RECORD,,
