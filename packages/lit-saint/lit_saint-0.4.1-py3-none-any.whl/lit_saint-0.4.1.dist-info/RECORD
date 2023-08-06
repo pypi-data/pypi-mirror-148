@@ -1,0 +1,14 @@
+lit_saint/__init__.py,sha256=9lglmt_AyQ1SuDwNM5FFdQbkGK-Qs-RrftnviXhdA9k,131
+lit_saint/augmentations.py,sha256=Ad3iyuO5nRuE7N6fHzoYlbAlTW6pXeU6SrOrtpE1tz8,1497
+lit_saint/config.py,sha256=kXmI3Um99W26MgS9MzjHkwz3lM_luKcV_jXWZv87l18,4640
+lit_saint/datamodule.py,sha256=oVWeaPRk7tqpIkB4rLeIi5VWfdQcQFj5LOIdSgay5QY,8111
+lit_saint/dataset.py,sha256=ri-q2cD7bxxjChBCRqW6kqUw1h0HT98cQtj3yWrM00E,3378
+lit_saint/model.py,sha256=iYL8IvvqQvh07LMNNXF3I0kkeBV4-uEmTR3tUiuRtAE,21905
+lit_saint/modules.py,sha256=9lPUoj5GvK2oMX0Q-WFD76HS9cClsjOFEwNsf_afPD4,9101
+lit_saint/trainer.py,sha256=nhhHI6MqTe-KKe7NOvWU-otWxtjJaMHUbHY4CXSnSzg,5031
+lit_saint/version.py,sha256=qBs4HqYsPn6yUHWEuCN4rGUC05gABbl800d8LBd8h9w,22
+lit_saint-0.4.1.dist-info/LICENSE,sha256=5KvvrY8BdE3BZmdYBWoQ4aceQq95M1uZxCGHlfTUJbQ,1069
+lit_saint-0.4.1.dist-info/METADATA,sha256=9bADI51rEU2LQXo6ol9tGSciv9P5twVJ7xUEPFcWDsk,977
+lit_saint-0.4.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+lit_saint-0.4.1.dist-info/top_level.txt,sha256=kpBqnRcnZyb8LJxVbzW4bPROM81-B7dpR6mDv3ToosY,10
+lit_saint-0.4.1.dist-info/RECORD,,
