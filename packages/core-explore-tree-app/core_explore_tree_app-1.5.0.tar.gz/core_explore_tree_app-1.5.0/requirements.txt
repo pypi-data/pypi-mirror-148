@@ -1,0 +1,4 @@
+Django
+django-mongoengine
+djangorestframework
+enum34==1.1.6

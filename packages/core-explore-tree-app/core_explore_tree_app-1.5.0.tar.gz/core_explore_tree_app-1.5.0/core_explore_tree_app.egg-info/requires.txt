@@ -1,0 +1,6 @@
+Django
+django-mongoengine
+djangorestframework
+enum34==1.1.6
+core-main-app==1.19.0
+core-website-app==1.19.0
