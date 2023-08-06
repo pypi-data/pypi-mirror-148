@@ -1,0 +1,32 @@
+h1{
+    color: white;
+background-color: black;
+}
+
+
+
+
+.group_list_item_:hover {
+    background-color:lightblue !important;
+}
+
+body{
+    height:auto !important;
+}
+
+#content{
+    padding-bottom: 200px;
+}
+
+.group_action_button{
+    display:none;
+}
+
+.span_group_actions{
+    transition: 2s;
+}
+
+#singles_header{
+    display:none;
+}
+
