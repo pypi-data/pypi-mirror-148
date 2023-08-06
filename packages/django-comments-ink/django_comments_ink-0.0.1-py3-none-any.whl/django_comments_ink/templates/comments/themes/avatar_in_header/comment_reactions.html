@@ -1,0 +1,16 @@
+{% load comments_ink %}
+
+{% with creactions=comment.get_reactions %}
+  {% if creactions.counter > 0 %}
+    <div class="active-reactions">
+      {% for reaction in creactions.list %}
+        {% if reaction.counter > 0 %}
+          <div class="reaction" data-reaction="{{ reaction.value }}">
+            <span class="smaller">{{ reaction.counter }}</span><span class="emoji">&{{ reaction.icon }};</span>
+            <div class="reaction_tooltip">{{ reaction.authors|join:", " }} reacted with {{ reaction.label }}</div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
