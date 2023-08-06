@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: framulent
+Version: 0.0.1
+Summary: Cromulent Dataframe Computing
+Home-page: https://github.com/miiohio/framulent
+Author: William Harvey
+Author-email: drwjharvey@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: duckdb (>=0.3.4)
+Requires-Dist: mypy (>=0.942)
+Requires-Dist: typing-extensions (>=4.2.0)
+
+# Framulent: Cromulent Dataframe Computing
+
+Statically typed, high performance, pure DuckDB SQL dataframe computing in Python.
+
+Stay tuned for more!
+
+

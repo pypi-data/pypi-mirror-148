@@ -1,0 +1,10 @@
+framulent/VERSION,sha256=5mNQReHSR47EynEtjA4d_O-Lt7Wx6OO7Vg03_jmannI,6
+framulent/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+framulent/engine.py,sha256=LffQuOZSk21aQUhn_YdkAjtlxgu8qZNAIJn_HxVkYFw,2475
+framulent/mypy_plugin.py,sha256=2hIXFQV2KOr2I_RgqNzTE16EE6F8B_SQhpyuiMnNfB0,6344
+framulent/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+framulent-0.0.1.dist-info/LICENSE,sha256=aZPT-FJfyAwlCIqT3Wh9IgSYk-Cw6RopvY0JYpCpgd8,1085
+framulent-0.0.1.dist-info/METADATA,sha256=_xAZzlRbfJr2HZ8vD2Ggi_9k7wpFM-91pMQBaUvH23M,552
+framulent-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+framulent-0.0.1.dist-info/top_level.txt,sha256=wvOaO2POn5GbjXLo-850gN423Th-PjMz3YtCr-2-a_Q,10
+framulent-0.0.1.dist-info/RECORD,,
