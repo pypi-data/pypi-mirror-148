@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+currencyApi/__init__.py
+currency_api_py.egg-info/PKG-INFO
+currency_api_py.egg-info/SOURCES.txt
+currency_api_py.egg-info/dependency_links.txt
+currency_api_py.egg-info/top_level.txt
