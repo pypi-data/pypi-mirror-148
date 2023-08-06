@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+libtesthello/__init__.py
+libtesthello/hello.py
+libtesthello.egg-info/PKG-INFO
+libtesthello.egg-info/SOURCES.txt
+libtesthello.egg-info/dependency_links.txt
+libtesthello.egg-info/requires.txt
+libtesthello.egg-info/top_level.txt
