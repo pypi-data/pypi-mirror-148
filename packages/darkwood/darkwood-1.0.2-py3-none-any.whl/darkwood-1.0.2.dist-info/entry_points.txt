@@ -1,0 +1,3 @@
+[console_scripts]
+darkwood-data = darkwood.__main__:main
+
