@@ -1,0 +1,3 @@
+python-xmp-toolkit
+resource
+psutil
