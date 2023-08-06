@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: xyston
+Version: 0.0.2
+Summary: Artificial intelligence toolkit
+Home-page: https://github.com/thkrz/xyston
+Author: Thomas Kreuzer
+Author-email: thomas.kreuzer@rwth-aachen.de
+License: UNKNOWN
+Keywords: pytorch,machine learning
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Fortran
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: torch
+
+# Xyston
+
+*Xyston* is a toolbox for [pytorch](https://github.com/pytorch/pytorch) with 4-D-convolution and complex neural networks.
+
+## Installing Xyston and Supported Versions
+
+Xyston is available on PyPI:
+
+```console
+$ pip install xyston
+```
+
+## Dependencies
+
+Xyston depends on
+* [fstpack](https://github.com/thkrz/fstpack),
+* [pytorch](https://github.com/pytorch/pytorch),
+* and [numpy](https://github.com/numpy/numpy)
+
+
