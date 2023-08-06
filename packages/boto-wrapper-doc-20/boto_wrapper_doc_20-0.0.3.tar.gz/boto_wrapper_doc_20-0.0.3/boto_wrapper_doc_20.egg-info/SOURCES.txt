@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+boto_wrapper_doc_20.egg-info/PKG-INFO
+boto_wrapper_doc_20.egg-info/SOURCES.txt
+boto_wrapper_doc_20.egg-info/dependency_links.txt
+boto_wrapper_doc_20.egg-info/requires.txt
+boto_wrapper_doc_20.egg-info/top_level.txt
+boto_wrapper_doc_pkg/__init__.py
+boto_wrapper_doc_pkg/boto_wrapper_doc.py
+boto_wrapper_doc_pkg/getenv.py
