@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: small-py-mess-server
+Version: 0.5.1
+Summary: mess_server
+Author: Tankred
+Author-email: brother.tankred@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: PyQt5
+Requires-Dist: sqlalchemy
+Requires-Dist: pycryptodome
+Requires-Dist: pycryptodomex
+
+UNKNOWN
+
