@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: drawwithplt
+Version: 0.1
+Summary: More EASY to Draw SCI figure with PIL
+Home-page: https://github.com/liftes/PythonDraw
+Author: liftes
+Author-email: 21121598@bjtu.edu.cn
+Maintainer: liftes
+Maintainer-email: 21121598@bjtu.edu.cn
+License: BSD License
+Platform: all
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: numpy
+
+UNKNOWN
+
