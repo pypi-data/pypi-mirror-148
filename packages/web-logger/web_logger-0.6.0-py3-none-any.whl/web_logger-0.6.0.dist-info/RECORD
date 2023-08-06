@@ -1,0 +1,12 @@
+web_logger/__init__.py,sha256=PzgPgp4JNIlCe-Eicm249Jh1n50KKi-t7_qXIr8yY58,381
+web_logger/browser.py,sha256=RWFxp2cG6OT6r_bCO9Fft8KOH1ZZUyENzXpxQIGoz0I,1575
+web_logger/http_server.py,sha256=7x2nyZmmKJ91GsfpPM10zzuFMW7ffMqTeEWi9fVwNOk,1192
+web_logger/logger.py,sha256=hwentP64Z5a68cojzlxzLQEguf5eO4xwoHhinuKNSEE,4082
+web_logger/loggerException.py,sha256=kg7j5GloCd19Yu_Vf6Yxsj7kYF8PIcSN9F5RNX8efJA,76
+web_logger/stoppableThread.py,sha256=MwR3Gkecqam4N7A9beT7oz8ehVq37AJwdUHohwd1Eu0,593
+web_logger/ws_server.py,sha256=q1vGx4RrlFyCuVkz_dEzsR2BzXFNcV7msxhoPht5gs0,3387
+web_logger-0.6.0.dist-info/LICENSE,sha256=wkIICW2a5YUasPhlBcmS5B25uiCZObz4XlGSvxRwRbk,1305
+web_logger-0.6.0.dist-info/METADATA,sha256=nXEHpntw0MM7VtvYXn5NRsuFhUoFN5gkVDULeKvlqIk,3345
+web_logger-0.6.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+web_logger-0.6.0.dist-info/top_level.txt,sha256=YcOXU9KYed-rjxhtar-G1Q5-ZLLvb0R-fVdbYNepZ1w,11
+web_logger-0.6.0.dist-info/RECORD,,
