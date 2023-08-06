@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: interfacedoc
+Version: 0.0.1
+Summary: Interface documentation installer
+Home-page: https://github.com/rizki4106/interface-installer
+Author: rizki maulana
+Author-email: rizkimaulana348@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+Requires-Dist: Flask (==2.1.1)
+Requires-Dist: Jinja2 (==3.1.1)
+Requires-Dist: Markdown (==3.3.6)
+Requires-Dist: MarkupSafe (==2.1.1)
+Requires-Dist: Werkzeug (==2.1.1)
+Requires-Dist: beautifulsoup4 (==4.11.1)
+Requires-Dist: click (==8.1.2)
+Requires-Dist: importlib-metadata (==4.11.3)
+Requires-Dist: itsdangerous (==2.1.2)
+Requires-Dist: soupsieve (==2.3.2.post1)
+Requires-Dist: zipp (==3.8.0)
+
+UNKNOWN
+
+

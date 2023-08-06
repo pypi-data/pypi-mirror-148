@@ -1,0 +1,3 @@
+[console_scripts]
+interfacedoc = interfacedoc.run:start
+
