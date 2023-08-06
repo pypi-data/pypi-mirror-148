@@ -1,0 +1,51 @@
+mdtraj:
+    text: |
+        import mdtraj as md
+
+        """
+        Print version string
+        """
+        print(md.version.full_version)
+        # end
+    comment: '#'
+    multiline_comment: '"""'
+    language: python
+    stop:
+        - "# end"
+MDAnalysis:
+    text: |
+        import MDAnalysis
+        import numpy as np
+
+        """
+        Print version string
+        """
+        print(MDAnalysis.__version__)
+        # end
+
+    comment: '#'
+    multiline_comment: '"""'
+    language: python
+    stop:
+        - "# end"
+
+mdtraj-insert:
+    text: |
+        import mdtraj as md
+        import numpy as np
+
+    comment: '#'
+    multiline_comment: '"""'
+    language: python
+    stop:
+        - "def"
+MDAnalysis-insert:
+    text: |
+        import MDAnalysis
+        import numpy as np
+
+    comment: '#'
+    multiline_comment: '"""'
+    language: python
+    stop:
+        - "def"
