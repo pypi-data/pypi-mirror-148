@@ -1,0 +1,4 @@
+napari
+napari-plugin-engine>=0.1.4
+numpy
+stracking>=0.1.8
