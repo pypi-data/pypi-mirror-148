@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: smartonnx
+Version: 0.1.5
+Summary: Tool to convert a ONNX model to Cairo smart contract.
+License: MIT
+Keywords: packaging,dependency,poetry
+Author: Fran Algaba
+Author-email: f.algaba.work@gmail.com
+Requires-Python: >=3.7.11,<3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: Jinja2 (>=3.1.1,<4.0.0)
+Requires-Dist: click (==8.0.4)
+Requires-Dist: cogapp (>=3.3.0,<4.0.0)
+Requires-Dist: cookiecutter (>=1.7.3,<2.0.0)
+Requires-Dist: onnx (>=1.11.0,<2.0.0)
+Requires-Dist: protobuf (>=3.20.1,<4.0.0)
+Requires-Dist: requests (>=2.27.1,<3.0.0)
+Requires-Dist: rich (>=12.0.1,<13.0.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0)
+Requires-Dist: typer (>=0.4.1,<0.5.0)
+Description-Content-Type: text/markdown
+
+# smartonnx
+
+Tool to convert a ONNX model to Cairo smart contract
+
