@@ -1,0 +1,28 @@
+<project type="egg">
+  <namespaces>
+    <package name="reahl"/>
+  </namespaces>
+  
+  <deps purpose="test">
+    <thirdpartyegg name="pytest" minversion="3.0"/>
+    <egg name="reahl-tofu"/>
+    <egg name="reahl-dev"/>
+    <egg name="reahl-stubble"/>
+  </deps>
+
+  <version number="6.0">
+      <deps purpose="run">
+        <egg name="reahl-component" versionlocked="True"/>
+        <thirdpartyegg name="docutils" minversion="0.14" maxversion="0.18.999"/>
+        <thirdpartyegg name="Pygments" minversion="2.1.0" maxversion="2.11.999"/>
+      </deps>
+  </version>
+
+  <distpackage type="wheel">
+    <packageindex repository="pypi"/>
+  </distpackage>
+  <distpackage type="sdist">
+    <packageindex repository="pypi"/>
+  </distpackage>
+  
+</project>
