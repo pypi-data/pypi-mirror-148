@@ -1,0 +1,16 @@
+ultimate_trimmer/__init__.py,sha256=FWReU1fq6yZXJwJkf_kE8_k1yZ5I5ydbq9AQhNc337M,71
+ultimate_trimmer/comment.py,sha256=ZlphnN1FSXe2uuXNzmSz6lmGFdo6hdKB6tHwI2_zZEk,2593
+ultimate_trimmer/core.py,sha256=2m_KP2N-olMyz4XDtEjpvCxYlRCbgWJlC0tQf93kioY,8900
+ultimate_trimmer/logger.py,sha256=u6U7RzKKJd-QRzk7Zs8aLPGJrmVUyRGEbDM-qt2kvqE,221
+ultimate_trimmer/option.py,sha256=asePSpzg5SM8MPyy46kN0D1RvlAc9E5xlUl7_3hFh_U,1331
+ultimate_trimmer/trim_info.py,sha256=OmjKHvl9R2z-eqpkeOT1uP55Tn0w-9SLUJ4RCYh3yC4,1825
+ultimate_trimmer/utils.py,sha256=z7wzgH-2hAnjp0xzIqiaWn7Jyn5db4EkGaL3AxQNFTU,1023
+ultimate_trimmer/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ultimate_trimmer/commands/getComment.py,sha256=oOdMHmDd830dCE2Na4tigxmhqRumhI9ltnYYlovgV4o,906
+ultimate_trimmer/commands/trim.py,sha256=kYfOoK5RdhV8MHA0eybGlrEFiur3pYaYsPa8tbv9M98,1365
+ultimate_trimmer-1.1.0.dist-info/LICENSE,sha256=QuvJ5ZzDuGxisTjNF0-CdjpZ3QfEj7iLKE3CziWFk64,1064
+ultimate_trimmer-1.1.0.dist-info/METADATA,sha256=M_T5UCEmkwPJghZ5SCHp8TyijkRJCYvXwkgzKgOzpLM,4337
+ultimate_trimmer-1.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+ultimate_trimmer-1.1.0.dist-info/entry_points.txt,sha256=OiWUztkcu9Iq0opy7qA0Y3hN9fn5L9xzYfzjUxuTJS8,119
+ultimate_trimmer-1.1.0.dist-info/top_level.txt,sha256=W46rSVKpzJHP4e_UcVHvXr573QNHGG6UJn8gMCWevRA,17
+ultimate_trimmer-1.1.0.dist-info/RECORD,,

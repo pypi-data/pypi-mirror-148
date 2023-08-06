@@ -1,0 +1,4 @@
+[console_scripts]
+ultcom = ultimate_trimmer.commands.getComment:ultcom
+ultrim = ultimate_trimmer.commands.trim:ultrim
+
