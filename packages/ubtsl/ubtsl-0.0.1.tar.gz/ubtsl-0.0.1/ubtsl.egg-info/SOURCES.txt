@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+ubtsl/__init__.py
+ubtsl/__main__.py
+ubtsl.egg-info/PKG-INFO
+ubtsl.egg-info/SOURCES.txt
+ubtsl.egg-info/dependency_links.txt
+ubtsl.egg-info/requires.txt
+ubtsl.egg-info/top_level.txt
