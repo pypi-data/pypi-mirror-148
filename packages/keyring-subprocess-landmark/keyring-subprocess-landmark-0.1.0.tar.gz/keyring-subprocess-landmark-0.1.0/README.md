@@ -1,0 +1,1 @@
+Intended to be installed indirectly by installing `keyring-subprocess[landmark]`
