@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/seqmatcher/__init__.py
+src/seqmatcher.egg-info/PKG-INFO
+src/seqmatcher.egg-info/SOURCES.txt
+src/seqmatcher.egg-info/dependency_links.txt
+src/seqmatcher.egg-info/requires.txt
+src/seqmatcher.egg-info/top_level.txt
