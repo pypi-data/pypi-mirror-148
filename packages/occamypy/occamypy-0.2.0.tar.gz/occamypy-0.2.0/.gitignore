@@ -1,0 +1,13 @@
+.idea
+*.pyc
+/occamypy.egg-info
+/build
+/dist
+.DS_Store
+.ipynb_checkpoints/
+dask-worker-space
+/devel
+publishing.md
+tutorials/devito
+pykonal-0.2.3b3
+**__pycache__
