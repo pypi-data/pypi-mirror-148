@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: pyrtkgps
+Version: 0.0.10
+Summary: Manage Real-Time Kinematic GPS (RTK-GPS) with Python
+Home-page: https://github.com/alkeldi/pyrtkgps
+Author: alkeldi
+Author-email: ali.alkeldi@gmail.com
+License: License
+Project-URL: Bug Tracker, https://github.com/alkeldi/pyrtkgps/issues
+Project-URL: Documentation, https://github.com/alkeldi/pyrtkgps/wiki
+Project-URL: Source Code, https://github.com/alkeldi/pyrtkgps
+Keywords: RTK RTK-GPS ublox u-blox GPS-RTK GLONASS GNSS GPS UBX RTCM NMEA
+Platform: Any
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: GIS
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+PyRTKGPS is a library for managing and configuring GPS and other
+GNSS chips. The main focus of this library is to provide support
+for Real-Time Kinematic (RTK) positioning. Currently, GPS modules 
+made by u-blox are supported.
+
