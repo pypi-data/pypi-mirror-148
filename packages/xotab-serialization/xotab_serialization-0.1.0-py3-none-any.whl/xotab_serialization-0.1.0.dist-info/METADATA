@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: xotab-serialization
+Version: 0.1.0
+Summary: Serialization library
+Home-page: https://github.com/XoTaBuCh/ISP
+Author: XoT@B
+Author-email: tanzanit2003@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+Serialization library by XoT@B on Python 3.9
+==============
+
+#Installation:
+```
+pip install xotab_serialization
+```
+
+
+
