@@ -1,0 +1,12 @@
+covidTTI/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+covidTTI/analysis.py,sha256=ztFFhscFZEv0ul1faGxcvADsIHoxg8lqYUXNmetfkes,1727
+covidTTI/cases.py,sha256=WkAyk8NRn8QvLb2siaVJu153f_2s4KLqej66OJT1wWY,2519
+covidTTI/contacts.py,sha256=hyytyG20ChYlphFa3modKSw8Sahv3UH_v1_ZktRcq3Q,8704
+covidTTI/model.py,sha256=yqfxDLApbPPyoX5995nG1c-gd1gbNN7w-4BIeDsC8Kk,1963
+covidTTI/outputs.py,sha256=hw6HNtEQuupaPP0eyiUdZlcPoM1u-hiM_uY-wtc-qxw,638
+covidTTI/sim.py,sha256=QOFVYAvPrfkmxOxsKxZGi7SXujQX2i2fdLhpByiAMmg,207
+covidTTI/utils.py,sha256=edwBDL8hbtKu3CTNuk7hz8vAIRKBRtzWEcUBT4d2H2w,1652
+covidTTI-0.1.5.dist-info/METADATA,sha256=CIkjjUQRhMfNqYCyOux6GBGk0Al3pEFT9GYvfGScgQA,311
+covidTTI-0.1.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+covidTTI-0.1.5.dist-info/top_level.txt,sha256=7DPII5Sk7oSo8WajQqr0VZIpOagu8VVxxgNTZtIwSIE,9
+covidTTI-0.1.5.dist-info/RECORD,,
