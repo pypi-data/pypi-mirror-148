@@ -1,0 +1,5 @@
+cython>=0.29
+numpy>=1.21
+cython>=0.29
+numpy>=1.21
+scipy>=1.7
