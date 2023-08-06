@@ -1,0 +1,13 @@
+dalle2_pytorch/__init__.py,sha256=Gk2DJ0-C6037xO0aCyJRUZs2lF8g77HZiwnduWvFLRY,174
+dalle2_pytorch/cli.py,sha256=yoQ9Jam9aJ4eFgRhyRFrL_6b56CySPMl1nzYsMx0HfA,1771
+dalle2_pytorch/dalle2_pytorch.py,sha256=JqhHzmm7gXb9pbaJNaagkb0ZudykekXxYvMO8MJTHKI,54725
+dalle2_pytorch/tokenizer.py,sha256=u0Nt_AU5PCRp6eR0xUubOWNR0KIS_PZ2wbIPVq40Hg4,6539
+dalle2_pytorch/train.py,sha256=J9TdBlnsue9TpaXgCtqSwH1G7o85NMPSNppa4j6qbIU,1830
+dalle2_pytorch/vqgan_vae.py,sha256=b2ZpPFIiGBFZlp6puFyZ_6CrqbrDy7gdRt3GBLXU4eM,21792
+dalle2_pytorch/data/bpe_simple_vocab_16e6.txt,sha256=Z2A8_aLgMq13tfiAivN3idWQ22ZLJt-HBdK_izxVP8g,3194984
+dalle2_pytorch-0.0.60.dist-info/LICENSE,sha256=xZDkKtpHE2TPCAeqKe1fjdpKernl1YW-d01j_1ltkAU,1066
+dalle2_pytorch-0.0.60.dist-info/METADATA,sha256=tm34NgWBAqbhS6225PwJGjFO_5VEimLvNIl6BthsuOg,888
+dalle2_pytorch-0.0.60.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+dalle2_pytorch-0.0.60.dist-info/entry_points.txt,sha256=1hl_fd8_pKiyjKtHSa1AHK2HTobsyllwkgZ59HCzoVo,92
+dalle2_pytorch-0.0.60.dist-info/top_level.txt,sha256=t8m2KvBNiZltfCZ1cPhW0Rv6Y6ASK9-hWIO6YKrVM2E,15
+dalle2_pytorch-0.0.60.dist-info/RECORD,,
