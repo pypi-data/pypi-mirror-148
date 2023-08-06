@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: aich
+Version: 0.0.4
+Summary: Encrypt & Decrypt Words, Phrases & Letters.
+Home-page: https://github.com/arijitaich/AICH-Encryption
+Author: Arijit Aich
+Author-email: a2.arijitaich@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# AICH-Encryption
+ Encrypt Words Found In A Dictionary. Helpful In Tokenizing Blockchain Wallet Passwords.
+
+
+# Installation
+sudo pip install aich
+
+# Usage
+from a2 import aich
+
+search_word = input('Enter your encryption phrase:')
+
+encrypted = aich.aichin(search_word)
+
+print (encrypted)
+
+search_word = input('Enter your decryption phrase:')
+
+encrypted = aich.aichout(search_word)
+
+print (encrypted)
+
+# Encryption Example
+{Inputs: this is freedom , Outputs: 0x6322a.0x3057e.0x23cef.}
+
+# Decryption Example
+{Inputs: 0x6322a.0x3057e.0x23cef , Outputs: this is freedom}
+
+
+
+
