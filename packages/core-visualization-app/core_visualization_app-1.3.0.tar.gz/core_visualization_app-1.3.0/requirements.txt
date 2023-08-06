@@ -1,0 +1,7 @@
+Django
+django-mongoengine
+django-simple-menu
+mock==2.0.0
+mongoengine
+bokeh==1.0.4
+pandas==0.24.2
