@@ -1,0 +1,2 @@
+[console_scripts]
+norm-eng-cli = english_text_normalization_cli.cli:run_prod

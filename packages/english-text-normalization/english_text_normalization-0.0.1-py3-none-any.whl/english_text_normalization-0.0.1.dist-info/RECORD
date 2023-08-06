@@ -1,0 +1,12 @@
+english_text_normalization/__init__.py,sha256=RKjv4_mLm5aYA579z-9IW1wy5M7F644B_EZnHAYUuxI,2276
+english_text_normalization/normalization_pipeline.py,sha256=Mi3J-tcwZHkRqyNy5klRW7sHGP3_AoMpkwSMQUqx9Tk,4391
+english_text_normalization/sentence_extraction.py,sha256=3s42ONA6cfwcIKQBhGLRZZ7e0s2ez9wv1sB2WQrrEuA,1358
+english_text_normalization_cli/cli.py,sha256=O3QbHjd1QrmaMJ0iO6CujA3A8LLfPyawD4cjRdI_lhc,2771
+english_text_normalization_cli/operations_listing.py,sha256=JAdzbIutcssVVy-Qo9q6-CzUoY1cRwRop0S7wwr2nbM,902
+english_text_normalization_cli/text_normalization.py,sha256=Wtj1vbrfD4Dn8Vtj49JHTzeItLvxfWApSVvz8WUrNCg,4515
+english_text_normalization-0.0.1.dist-info/LICENSE,sha256=LZAeH9fhWUy_TlGoSVY2X8gusakAUDYEDWmmYiSyn2I,1073
+english_text_normalization-0.0.1.dist-info/METADATA,sha256=vFD7MNtCq3SDLBr-FQyCjLJINFJXDGddbmC93iT-BsA,2918
+english_text_normalization-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+english_text_normalization-0.0.1.dist-info/entry_points.txt,sha256=spv5Ki1QWW1H4zQFUy5E-Pcepc3kCT_UTHWlKZBjvKY,77
+english_text_normalization-0.0.1.dist-info/top_level.txt,sha256=7-lzdIHByJayKPXnqmXRy1-QRCDG9tjY20R6TTu9C4M,58
+english_text_normalization-0.0.1.dist-info/RECORD,,
