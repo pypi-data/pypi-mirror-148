@@ -1,0 +1,98 @@
+Metadata-Version: 2.1
+Name: virtualcity
+Version: 0.0.5
+Summary: Python API to communicate with the VirtualCity environment
+Home-page: https://github.com/ShuangLI59/virtualcity-python-api
+Author: Shuang Li, Kabir Swain
+Author-email: lishuang@mit.edu, kswain98@icloud.com
+License: UNKNOWN
+Project-URL: Documentation, https://virtualcity.readthedocs.io/en/latest/
+Project-URL: Bug Tracker, https://github.com/ShuangLI59/virtualcity-python-api
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: gym
+Requires-Dist: ray
+Requires-Dist: tensorboardX
+Requires-Dist: wandb
+Requires-Dist: stable-baselines3
+Requires-Dist: python-socketio
+
+[![docs](https://img.shields.io/badge/docs-brightgreen)](https://virtualcity.readthedocs.io/en/latest/)
+[![docs](https://img.shields.io/pypi/v/1)](https://pypi.org/project/virtualcity/)
+
+
+# VirtualCity
+VirtualCity is a powerful platform to simulate social activities. Agents can interact with the environment through low-level commands (turn left, go forward) or high-level instructions (drive to the park). The interactive environment is based in a densely populated photorealistic city with its own crowd and traffic system.
+
+VirtualCity is built on the Unreal Engine. We provide the Python interface allowing users to change/add environments and control agents easily. Furthermore, the API also provides additional capabilities for training reinforcement learning and computer vision models. We also provide the code required to compile the project in the Unreal Engine 5 editor. The code is designed to be modular, making it easy for you to quickly add new features and capabilities for your research project.
+
+
+## Installation
+
+**Note:** VirtualCity only supports Nvidia GPUs (Ampere, Turing, Volta, Pascal), and it is recommended to use CPU architectures with high single core performance.
+
+
+### Install using pip
+Install the VirtualCity package:
+```
+pip install virtualcity
+```
+
+
+Please read the [documentation](https://virtualcity.readthedocs.io/en/latest/) for more details and alternatives (from source, using docker).
+
+
+## Example
+
+Here is a quick example of how to train and run PPO on a VirtualCity environment:
+```python
+import gym
+import virtualcity
+from stable_baselines3 import PPO
+
+env = gym.make("VirtualCity")
+
+model = PPO("MlpPolicy", env, verbose=1)
+model.learn(total_timesteps=10000)
+
+obs = env.reset()
+for i in range(1000):
+    action, _states = model.predict(obs, deterministic=True)
+    obs, reward, done, info = env.step(action)
+    env.render()
+    if done:
+      obs = env.reset()
+
+env.close()
+```
+
+Or you can train a model on the VirtualCity environment if [the policy is registered in StableBaselines3](https://stable-baselines3.readthedocs.io/en/master/guide/custom_policy.html):
+
+```python
+import gym
+import virtualcity
+from stable_baselines3 import PPO
+
+model = PPO('MlpPolicy', 'VirtualCity').learn(10000)
+```
+
+Please read the [documentation](https://virtualcity.readthedocs.io/en/latest/) for more examples.
+
+
+## Citing the Project
+
+To cite this repository in publications:
+
+```bibtex
+@article{virtualcity,
+  author  = {Shuang Li and Kabir Swain},
+  title   = {VirtualCity},
+  year    = {2022}
+}
+```
+
