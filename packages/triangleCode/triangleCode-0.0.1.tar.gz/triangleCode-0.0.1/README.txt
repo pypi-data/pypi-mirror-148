@@ -1,0 +1,1 @@
+this package to find out the of triangle, there are two input from user and will give area of triangle.

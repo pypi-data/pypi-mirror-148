@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: triangleCode
+Version: 0.0.1
+Summary: a very basic addition function
+Home-page: https://github.com/saurabhpl/sampleCode
+Author: Saurabh Pratap Singh
+License: MIT
+Platform: UNKNOWN
+License-File: LICENSE.txt
+
+this package to find out the of triangle, there are two input from user and will give area of triangle.
+
+Change Log
+===========
+
+0.0.1 (26/04/2022)
+------------------
+
+- First Release
+
+

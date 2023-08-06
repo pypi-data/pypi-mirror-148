@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+setup.py
+triangleArea/__init__.py
+triangleArea/area.py
+triangleCode.egg-info/PKG-INFO
+triangleCode.egg-info/SOURCES.txt
+triangleCode.egg-info/dependency_links.txt
+triangleCode.egg-info/top_level.txt
