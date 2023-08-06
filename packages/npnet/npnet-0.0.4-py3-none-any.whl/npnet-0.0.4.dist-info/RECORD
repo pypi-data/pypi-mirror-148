@@ -1,0 +1,16 @@
+npnet/__init__.py,sha256=QNjVjs3zk0yO1iZZj2gGLEgKnupd089nrFlTDAIVxDs,328
+npnet/activations.py,sha256=vOrwYzoTzAEQbDMC7p_1d1fTQyOo-8nMTV3MOSJI5cY,2009
+npnet/dataloader.py,sha256=rpDZMaPeiNbtLfJ3OTf7GtVRPw1LGzJfMSBdSK3u9Y4,731
+npnet/initializers.py,sha256=j9DjYbfJ9DVnQHLThQnOC98yc_KraJD9Rb5YCZX4nvU,1382
+npnet/layers.py,sha256=KXb2Ha0Ai7AHSuysxllmpkdzIS7zRpqpDJvqy9oL4h4,16324
+npnet/losses.py,sha256=CaItDHqs3bEN70xFSZ94XODCuT6y2Sg7SYCWVm-Saz8,4616
+npnet/metrics.py,sha256=Hj0iCl41vjOGzmBfFVFTe5CE8tosbfq0lTxoDTtKlXs,2331
+npnet/module.py,sha256=3xZP25PxfJfFnSI3N1oayM1xRUvc7fzq2MMsDehAp4U,2223
+npnet/optimizers.py,sha256=JH_HZkTYSijJAzFTDzdp7hJ-znLT-FJaee_R4YH0shA,4147
+npnet/saver.py,sha256=SkCk92F8aDUULUC2YiaG4sVSZY8RpPGru17bA4C5nkw,684
+npnet/variable.py,sha256=wwJkpVu9P1slS7gd3oQ3iXWZy-jWV8rhPSVvL47EJE8,551
+npnet-0.0.4.dist-info/LICENSE,sha256=6awV1o8397d4hT5WSs7Sip8ndUr9qe3GOLWIXDT7bGE,1071
+npnet-0.0.4.dist-info/METADATA,sha256=nVhaHUtJzF3AR_vG7bSBWDrfVhpz2bcFjlcVaIqIMTo,2520
+npnet-0.0.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+npnet-0.0.4.dist-info/top_level.txt,sha256=s3jStHxHoYs9wjx0DBUpVpUUv1zlkcEDuoiQ9zIC2bk,6
+npnet-0.0.4.dist-info/RECORD,,
