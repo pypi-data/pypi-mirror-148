@@ -1,0 +1,11 @@
+Avalara/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+Avalara/SDK/__init__.py,sha256=AWWG8KLBS3e4kvjzkspWWA0LIbQuia1XcDm5cCSMCeA,1592
+Avalara/SDK/api_client.py,sha256=3YF0JnUr6V-T0_I4-RMnD_2tSgl3h0RBzfAVCuLVqk4,38211
+Avalara/SDK/configuration.py,sha256=kYxZ2c_b6TF3jYSMT6WXpfuhgdJ7gR8eNQ-6cqjYuAM,16977
+Avalara/SDK/exceptions.py,sha256=TpiPoJBIZOijkfH_f6dCNqg_PljaA_aaSFHcky_ZKA4,5936
+Avalara/SDK/model_utils.py,sha256=N8yxbWzZj2Q7C_rlmnNSgBNC4elqjWU_nWVNklbeXgY,82757
+Avalara/SDK/rest.py,sha256=UZgCfpPiyDnUkaD7urLVGwfpLhQYW6eW0frTEsyFkfk,15058
+Avalara.SDK-2.4.29.dist-info/METADATA,sha256=cQ-yA_o2B7suU4GOSRtYNJb9V5GaGLexruQNLolYwWU,534
+Avalara.SDK-2.4.29.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+Avalara.SDK-2.4.29.dist-info/top_level.txt,sha256=Xobcyg8NOtU2VuXUtSTZH7XhPHRgafzi2Q2EH7uymcw,8
+Avalara.SDK-2.4.29.dist-info/RECORD,,
