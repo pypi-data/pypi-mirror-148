@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+requestsmiddleware/__init__.py
+requestsmiddleware/middleware.py
+scrapy_requests_downloader.egg-info/PKG-INFO
+scrapy_requests_downloader.egg-info/SOURCES.txt
+scrapy_requests_downloader.egg-info/dependency_links.txt
+scrapy_requests_downloader.egg-info/not-zip-safe
+scrapy_requests_downloader.egg-info/requires.txt
+scrapy_requests_downloader.egg-info/top_level.txt
