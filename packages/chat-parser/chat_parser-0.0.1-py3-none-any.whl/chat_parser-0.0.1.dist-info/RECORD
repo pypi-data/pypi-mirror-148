@@ -1,0 +1,13 @@
+chat_parser/__init__.py,sha256=opnASMT7p0M6AqbX4NDdWBHUEHW8Vu7enPQSIPq0B5Y,28
+chat_parser/data_extractor.py,sha256=7qdZQ5muNxlb5oCNkgJHD8bzFHQ2WuUWAQoMzcVsz-Q,10445
+chat_parser/fileparser.py,sha256=16XPAbdLl_O8W1eOnpyN74qUyKY-jpNhcYy7t3w0hQg,2579
+chat_parser/utils.py,sha256=5pb0wLx_ymQS0bJnrplVmU2lX_abuMoAcklNi8TH6gE,2593
+chat_parser/telegram/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chat_parser/telegram/parser.py,sha256=glhTdo2Tg_ee3Nqh8gtlLlpyw8dna5gaawtEbmak0JI,1315
+chat_parser/whatsapp/__init__.py,sha256=0ATRuTFcx76hvNMZOEZ85QtdxK9T_w_R8uNuYZM7fYU,27
+chat_parser/whatsapp/parser.py,sha256=AXzqtmLd6hVzZ0_LsAs-40CcntXc8Vk_iefSz6xNOrA,2565
+chat_parser-0.0.1.dist-info/LICENSE.txt,sha256=Rvnl0Wg71Ml0TJu9OJ5FPdEw9tJocyTah31fR98fQYk,1060
+chat_parser-0.0.1.dist-info/METADATA,sha256=2hnQp50QmHAqvV5HgV7adScorz1tNoptrJnr5rIO82k,290
+chat_parser-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+chat_parser-0.0.1.dist-info/top_level.txt,sha256=4MzLNsWu0KcLG7qvIl-Uyi9-6e5R9YJNNCHJ5sMwSnI,12
+chat_parser-0.0.1.dist-info/RECORD,,
