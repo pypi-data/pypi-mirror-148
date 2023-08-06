@@ -1,0 +1,10 @@
+pseudoprimes/__init__.py,sha256=AB7Ki295weosCkCj9_DS6J6DmCnYSdchiZXIxVpufX4,173
+pseudoprimes/lucas.py,sha256=kIvmWhXVhNuIIFLqYYk35VSwIF14nK5imbiaov8qvkk,4501
+pseudoprimes/miller_rabin.py,sha256=XdgNQHya3gHtpcapn3-nHczRTSdr25SCbcGmyufgE38,2329
+pseudoprimes/pseudoprimes.py,sha256=1WAzy1AQNFyiQanuT5DIULYxwDfrYgTsXI4DbyWdlC4,3425
+pseudoprimes/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pseudoprimes-2022.4.29.dist-info/LICENSE,sha256=e39Hi1f-LybWQCR62yf4jiDaQu2PyhO8yUKZlv_iARs,1050
+pseudoprimes-2022.4.29.dist-info/METADATA,sha256=ZCIYjlct-ux_H9jp8sfa6fQI-jBXVZT_23Onl6UbQOo,1961
+pseudoprimes-2022.4.29.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pseudoprimes-2022.4.29.dist-info/top_level.txt,sha256=p2BX015mzBeF9v5MKNhgx7111_YlZoCC58YmQYkwEVo,13
+pseudoprimes-2022.4.29.dist-info/RECORD,,
