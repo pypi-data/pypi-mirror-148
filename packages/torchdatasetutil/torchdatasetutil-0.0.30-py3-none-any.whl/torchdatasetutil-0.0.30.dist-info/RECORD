@@ -1,0 +1,15 @@
+tests/__init__.py,sha256=i2fh5-qxm971BeiTVaoS_qcE_MjKytCDrR6CHzUKqlA,110
+tests/test_cocostore.py,sha256=IKqkFkNvrMHq6TBAZjvmRVbd5nJQgqIWBjjskQvp2kY,4511
+tests/test_imstore.py,sha256=o-76W-v_2qq4Pl9Xod5oN-L94PIdpgbOcn0ExNuLBMA,3272
+torchdatasetutil/__init__.py,sha256=i2fh5-qxm971BeiTVaoS_qcE_MjKytCDrR6CHzUKqlA,110
+torchdatasetutil/__main__.py,sha256=NL9J87Gj5hgL80T5UUrCfDgaxpUik_AuwUZGLFngvSc,7595
+torchdatasetutil/cocostore.py,sha256=LQGGvDjWWy5fmlwZAHhyElPh71NqQrdr-qtNqlkdsHE,16498
+torchdatasetutil/getcoco.py,sha256=kftF2QNGC5KnMwgYF5JF5P5LFFBk_n0xTuLJZgErTpc,2107
+torchdatasetutil/getsintel.py,sha256=kAWZFCvoXWFawo-WkPsTspRRy40OunrB0IWJl2wqNJc,1800
+torchdatasetutil/imstore.py,sha256=lfTP67SOCNElbFkriW2ULgMbvyAHPlcqxa3Q7f6tSiY,10351
+torchdatasetutil/version.py,sha256=rEhjM0TopzEK2uQoBAMQWF3Myqf0QR1GzPEA__zpduc,633
+torchdatasetutil-0.0.30.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+torchdatasetutil-0.0.30.dist-info/METADATA,sha256=oCibgolSRDnSD-RpF2Dnl0O9svO0maMZdIAInr7RfvA,3082
+torchdatasetutil-0.0.30.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+torchdatasetutil-0.0.30.dist-info/top_level.txt,sha256=4nTW7PzsvTHbciijf_2mpkQErcx_58PRcQZAsyO3KKw,23
+torchdatasetutil-0.0.30.dist-info/RECORD,,
