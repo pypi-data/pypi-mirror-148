@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: ocelli
+Version: 0.1.0
+Summary: Single-cell developmental landscapes from multimodal data
+Home-page: https://github.com/TabakaLab/ocelli
+Download-URL: https://github.com/TabakaLab/ocelli
+Author: Piotr Rutkowski
+Author-email: prutkowski@ichf.edu.pl
+License: MIT
+Keywords: single cell,developmental process,multimodal,multiomics
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Python: >=3.7
+License-File: LICENSE
+
+UNKNOWN
+
