@@ -1,0 +1,14 @@
+dataset_builder/__init__.py,sha256=clN3TnyYyt5T_wUJLVBmutS2kYLLBET4JFB2QXnRm2Q,21
+dataset_builder/__main__.py,sha256=HYghG52vUpd9Z749OkpzG1VlLXyC29_GF1SPOiGZ0OY,100
+dataset_builder/ezg.py,sha256=YhxV_TTKIeoSpvLrs328J9wj8EcCLeIw76CP4ntlK7A,6337
+dataset_builder/radolan.py,sha256=m9_LNzwR4iQbVTm_aa9MliACwfgfHw8Yamy4Bs51IYs,5171
+dataset_builder/run.py,sha256=PcoT2Jz4Z8f8n4vOX3R_qxR48bMEW9G0nN3AZsgGHsM,7031
+dataset_builder/reducers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dataset_builder/reducers/radolan.py,sha256=WHijaPD2t-D4d5qdcdrA7KtkEusTt3bgzxe40vI4apM,1479
+dataset_builder/reducers/station.py,sha256=VjcbszVx17Pv0Q0lPPPBKHoy2EW_ZPSGnwuUG6HJarE,1987
+dataset_builder-0.2.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+dataset_builder-0.2.0.dist-info/METADATA,sha256=ZU-W--odOcyAlz26QoCQoXd5e3qkOPZ4s4sPqBhgKyw,768
+dataset_builder-0.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+dataset_builder-0.2.0.dist-info/entry_points.txt,sha256=SEleBUIceVOMqvlbEsXxBJ87JBZIQGXAwWzMR-69wro,56
+dataset_builder-0.2.0.dist-info/top_level.txt,sha256=NWaAPlUpMdQ2_Pbp3JO98usOoe3Tj-LIJPjQ1udp4Ko,16
+dataset_builder-0.2.0.dist-info/RECORD,,
