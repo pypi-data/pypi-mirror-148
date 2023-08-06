@@ -1,0 +1,16 @@
+pandas
+numpy
+seaborn
+ConfigSpace
+anchor-exp
+scikit-learn
+smac
+
+[dev]
+pytest>=4.6
+pytest-cov
+pytest-xdist
+pytest-timeout
+isort
+black
+flake8
