@@ -1,0 +1,16 @@
+MANIFEST.in
+setup.py
+tesseractpy/COPYING
+tesseractpy/Tesseract.dll
+tesseractpy/__init__.py
+tesseractpy/__init__.pyi
+tesseractpy/loader.py
+tesseractpy/loader.pyi
+tesseractpy.egg-info/PKG-INFO
+tesseractpy.egg-info/SOURCES.txt
+tesseractpy.egg-info/dependency_links.txt
+tesseractpy.egg-info/top_level.txt
+tesseractpy/x64/leptonica-1.80.0.dll
+tesseractpy/x64/tesseract41.dll
+tesseractpy/x86/leptonica-1.80.0.dll
+tesseractpy/x86/tesseract41.dll

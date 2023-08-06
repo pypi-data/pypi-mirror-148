@@ -1,0 +1,6 @@
+include tesseractpy/x64/*.dll
+include tesseractpy/x86/*.dll
+include tesseractpy/*.dll
+include tesseractpy/*.pyi
+include tesseractpy/*.py
+include tesseractpy/COPYING
