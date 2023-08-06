@@ -1,0 +1,10 @@
+botocove/__init__.py,sha256=tYRro82k7jFVhHEDnlZShiFaQb6fYf7PT-a-1JEbt9c,179
+botocove/cove_decorator.py,sha256=P0knstD33itK-aAzMQj_kUKuqPWuK82XQ9xnV6BGmVc,2760
+botocove/cove_host_account.py,sha256=r6JtToxd6LVeU4g4duFZk1dFJN-VhfxMiFW_bkdb0nQ,9103
+botocove/cove_runner.py,sha256=hJBLgAPpBNQ22OCQ-4mcrrG_Ru0H9vdmEYAomZQpJNo,3148
+botocove/cove_session.py,sha256=qfiMRuTQOY5PGDNI6SVHrONyHCzVi5o0TTOjmn7-2u4,4277
+botocove/cove_types.py,sha256=ET9nZp4E56cCV_nz4Ok3iQFQBiOgyJu12DLN36XzEtQ,875
+botocove-1.6.1.dist-info/LICENSE,sha256=OKbK3K7SFCBCiYyz1xlL5HrN5g9EKalFewqARmU8aWE,7329
+botocove-1.6.1.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+botocove-1.6.1.dist-info/METADATA,sha256=-XFZavI0TyWZ5oRQQ5KjK1opatoJoZFzjCVmxs2MMZw,11283
+botocove-1.6.1.dist-info/RECORD,,
