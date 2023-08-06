@@ -1,0 +1,435 @@
+-   <a href="#csv-reconcile" id="toc-csv-reconcile">CSV Reconcile</a>
+    -   <a href="#quick-start" id="toc-quick-start">Quick start</a>
+    -   <a href="#poetry" id="toc-poetry">Poetry</a>
+        -   <a href="#prerequesites" id="toc-prerequesites">Prerequesites</a>
+        -   <a href="#running" id="toc-running">Running</a>
+        -   <a href="#building" id="toc-building">Building</a>
+    -   <a href="#description" id="toc-description">Description</a>
+    -   <a href="#usage" id="toc-usage">Usage</a>
+        -   <a href="#initialization" id="toc-initialization">Initialization</a>
+        -   <a href="#running-the-service" id="toc-running-the-service">Running the
+            service</a>
+        -   <a href="#deprecated" id="toc-deprecated">Deprecated</a>
+    -   <a href="#common-configuration" id="toc-common-configuration">Common
+        configuration</a>
+    -   <a href="#built-in-preview-service"
+        id="toc-built-in-preview-service">Built-in preview service</a>
+    -   <a href="#scoring-plugins" id="toc-scoring-plugins">Scoring plugins</a>
+        -   <a href="#implementing" id="toc-implementing">Implementing</a>
+        -   <a href="#installing" id="toc-installing">Installing</a>
+        -   <a href="#using" id="toc-using">Using</a>
+        -   <a href="#known-plugins" id="toc-known-plugins">Known plugins</a>
+    -   <a href="#testing" id="toc-testing">Testing</a>
+        -   <a href="#tests-layout" id="toc-tests-layout">Tests layout</a>
+        -   <a href="#running-tests" id="toc-running-tests">Running tests</a>
+    -   <a href="#future-enhancements" id="toc-future-enhancements">Future
+        enhancements</a>
+
+# CSV Reconcile
+
+A [reconciliation service](https://github.com/reconciliation-api/specs)
+for [OpenRefine](https://openrefine.org/) based on a CSV file similar to
+[reconcile-csv](http://okfnlabs.org/reconcile-csv/). This one is written
+in Python and has some more configurability.
+
+## Quick start
+
+-   Clone this repository
+
+-   Run the service
+
+        $ python -m venv venv                                             # create virtualenv
+        $ venv/bin/pip install csv-reconcile                              # install package
+        $ source venv/bin/activate                                        # activate virtual environment
+        (venv) $ csv-reconcile init sample/reps.tsv item itemLabel        # initialize the service
+        (venv) $ csv-reconcile serve                                      # run the service
+        (venv) $ deactivate                                               # remove virtual environment
+
+The service is run at <http://127.0.0.1:5000/reconcile>. You can point
+at a different host:port by adding
+[SERVER\_NAME](https://flask.palletsprojects.com/en/0.12.x/config/) to
+the sample.cfg. Since this is running from a virtualenv, you can simply
+delete the whole lot to clean up.
+
+If you have a C compiler installed you may prefer to install the sdist
+`dist/csv-reconcile-0.1.0.tar.gz` which will build a
+[Cython](https://cython.readthedocs.io/en/latest/) version of the
+computationally intensive fuzzy match routine for speed. With `pip` add
+the option `--no-binary csv-reconcile`.
+
+## Poetry
+
+### Prerequesites
+
+You'll need to have both [poetry](https://python-poetry.org/docs/) and
+[poethepoet](https://pypi.org/project/poethepoet/0.0.3/) installed. For
+publishing to [PyPI](https://pypi.org/) [pandoc](https://pandoc.org/) is
+required.
+
+### Running
+
+This is packaged with [poetry](https://python-poetry.org/docs/), so you
+can use those commands if you have it installed.
+
+    $ poe install
+    $ poetry run csv-reconcile init sample/reps.tsv item itemLabel
+    $ poetry run csv-reconcile serve
+
+### Building
+
+Because this package uses a `README.org` file and `pip` requires a
+`README.md`, there are extra build steps beyond what `poetry` supplies.
+These are managed using
+[poethepoet](https://pypi.org/project/poethepoet/0.0.3/). Thus building
+is done as follows:
+
+    $ poe build
+
+If you want to build a platform agnostic wheel, you'll have to comment
+out the `build =
+    "build.py"` line from `pyproject.toml` until `poetry` supports
+[selecting build
+platform](https://github.com/python-poetry/poetry/issues/3594).
+
+## Description
+
+This reconciliation service uses [Dice coefficient
+scoring](https://en.wikipedia.org/wiki/S%C3%B8rensen%E2%80%93Dice_coefficient)
+to reconcile values against a given column in a
+[CSV](https://en.wikipedia.org/wiki/Comma-separated_values) file. The
+CSV file must contain a column containing distinct values to reconcile
+to. We'll call this the *id column*. We'll call the column being
+reconciled against the *name column*.
+
+For performance reasons, the *name column* is preprocessed to normalized
+values which are stored in an
+[sqlite](https://www.sqlite.org/index.html) database. This database must
+be initialized at least once by running the init sub-command. Once
+initialized this need not be run for subsequent runs.
+
+Note that the service supplies all its data with a dummy *type* so there
+is no reason to reconcile against any particular *type*.
+
+In addition to reconciling against the *name column*, the service also
+functions as a [data extension
+service](https://reconciliation-api.github.io/specs/latest/#data-extension-service),
+which offers any of the other columns of the CSV file.
+
+Note that Dice coefficient scoring is agnostic to word ordering.
+
+## Usage
+
+Basic usage involves two steps:
+
+-   initialization
+-   running the service
+
+Initialization primes the database with the data processed from the CSV
+file with the `init` subcommand. There are several options for running
+the service as described below.
+
+### Initialization
+
+Basic usage of the `init` sub-command requires passing the name of the
+CSV file, the *id column* and the *name column*.
+
+    (venv) $ csv-reconcile --help
+    Usage: csv-reconcile [OPTIONS] COMMAND [ARGS]...
+
+    Options:
+      --help  Show this message and exit.
+
+    Commands:
+      init
+      run
+      serve
+    (venv) $ csv-reconcile init --help
+    Usage: csv-reconcile init [OPTIONS] CSVFILE IDCOL NAMECOL
+
+    Options:
+      --config TEXT  config file
+      --scorer TEXT  scoring plugin to use
+      --help         Show this message and exit.
+    (venv) $ poetry run csv-reconcile serve --help
+    Usage: csv-reconcile serve [OPTIONS]
+
+    Options:
+      --help         Show this message and exit.
+    (venv) $
+
+The `--config` option is used to point to a configuration file. The file
+is a [Flask
+configuration](https://flask.palletsprojects.com/en/1.1.x/config/) and
+hence is Python code though most configuration is simply setting
+variables to constant values.
+
+### Running the service
+
+The simplest way to run the service is to use Flask's built-in web
+server with the `serve` subcommand which takes no arguments. However, as
+mentioned in the [Flask
+documentation](https://flask.palletsprojects.com/en/2.0.x/deploying/),
+this server is not suitable for production purposes.
+
+For a more hardened service, you can use one of the other deployment
+options mentioned in that documentation. For example, gunicorn can be
+run as follows:
+
+    (venv) $ gunicorn -w 4 'csv_reconcile:create_app()'
+    1-11-16 17:40:20 +0900] [84625] [INFO] Starting gunicorn 20.1.0
+    1-11-16 17:40:20 +0900] [84625] [INFO] Listening at: http://127.0.0.1:8000 (84625)
+    1-11-16 17:40:20 +0900] [84625] [INFO] Using worker: sync
+    1-11-16 17:40:20 +0900] [84626] [INFO] Booting worker with pid: 84626
+    1-11-16 17:40:20 +0900] [84627] [INFO] Booting worker with pid: 84627
+    1-11-16 17:40:20 +0900] [84628] [INFO] Booting worker with pid: 84628
+    1-11-16 17:40:20 +0900] [84629] [INFO] Booting worker with pid: 84629
+    ...
+
+One thing to watch out for is that the default manifest points the
+extension service to port 5000, the default port for the Flask built-in
+web server. If you want to use the extension service when deploying to a
+different port, you'll want to be sure to override that part of the
+manifest in your config file. You'll need something like the following:
+
+    MANIFEST = {
+        "extend": {
+            "propose_properties": {
+                "service_url": "http://localhost:8000",
+                "service_path": "/properties"
+            }
+        }
+    }
+
+Note also that the configuration is saved during the `init` step. If you
+change the config, you'll need to re-run that step. You may also need to
+delete and re-add the service in OpenRefine.
+
+### Deprecated
+
+The `run` subcommand mimics the old behavior which combined the
+initialization step with the running of the service. This may be removed
+in a future release.
+
+## Common configuration
+
+-   `SERVER_NAME` - The host and port the service is bound to. e.g.
+    `SERVER_NAME=localhost:5555`. ( Default localhost:5000 )
+-   `CSVKWARGS` - Arguments to pass to
+    [csv.reader](https://docs.python.org/3/library/csv.html). e.g.
+    `CSVKWARGS={'delimiter': ',', 'quotechar': '"'}` for comma delimited
+    files using `"` as quote character.
+-   `CSVENCODING` - Encoding of the CSV file. e.g.
+    `CSVENCODING="utf-8-sig"` is the encoding used for data downloaded
+    from
+    [GNIS](https://www.usgs.gov/core-science-systems/ngp/board-on-geographic-names/download-gnis-data).
+-   `SCOREOPTIONS` - Options passed to scoring plugin during
+    normalization. e.g.
+    `SCOREOPTIONS={'stopwords':['lake','reservoir']}`
+-   `LIMIT` - The maximum number of reonciliation candidates returned
+    per entry. ( Default 10 ) e.g. `LIMIT=10`
+-   `THRESHOLD` - The minimum score for returned reconciliation
+    candidates. ( Default 30.0 ) e.g. `THRESHOLD=80.5`
+-   `DATABASE` - The name of the generated sqlite database containing
+    pre-processed values. (Default `csvreconcile.db`) e.g.
+    `DATABASE='lakes.db'` You may want to change the name of the
+    database if you regularly switch between databases being used.
+-   `MANIFEST` - Overrides for the service manifest. e.g.
+    `MANIFEST={"name": "My service"}` sets the name of the service to
+    "My service".
+
+This last is most interesting. If your data is coming from
+[Wikidata](https://www.wikidata.org) and your *id column* contains [Q
+values](https://www.wikidata.org/wiki/Help:Items), then a manifest like
+the following will allow your links to be clickable inside OpenRefine.
+
+    MANIFEST = {
+      "identifierSpace": "http://www.wikidata.org/entity/",
+      "schemaSpace": "http://www.wikidata.org/prop/direct/",
+      "view": {"url":"https://www.wikidata.org/wiki/{{id}}"},
+      "name": "My reconciliation service"
+    }
+
+If your CSV is made up of data taken from another [reconciliation
+service](https://reconciliation-api.github.io/testbench/), you may
+similiarly copy parts of their manifest to make use of their features,
+such as the [preview
+service](https://reconciliation-api.github.io/specs/latest/#preview-service).
+See the reconciliation spec for details.
+
+## Built-in preview service
+
+There is a preview service built into the tool. (Thanks
+[b2m](https://github.com/b2m)!) You can turn it on by adding the
+following to your manifest:
+
+    "preview": {
+       "url": "http://localhost:5000/preview/{{id}}",
+       "width": 400,
+       "height": 300
+    }
+
+Note that if you reconcile against a service with a preview service
+enabled, a link to the service becomes part of the project. Thus if you
+bring the service down, your project will have hover over pop-ups to an
+unavailable service. One way around this is to copy the `recon.match.id`
+to a new column which can be re-reconciled to the column by id if you
+bring the service back up again whether or not you have preview service
+enabled. (Perhaps OpenRefine could be smarter about enabling this
+pop-ups only when the service is active.)
+
+## Scoring plugins
+
+As mentioned above the default scoring method is to use [Dice
+coefficient
+scoring](https://en.wikipedia.org/wiki/S%C3%B8rensen%E2%80%93Dice_coefficient),
+but this method can be overridden by implementing a
+`cvs_reconcile.scorers` plugin.
+
+### Implementing
+
+A plugin module may override any of the methods in the
+`csv_reconcile.scorers` module by simply implementing a method of the
+same name with the decorator `@cvs_reconcile.scorer.register`.
+
+See `csv_reconcile_dice` for how Dice coefficient scoring is
+implemented.
+
+The basic hooks are as follows:
+
+-   `normalizedWord(word, **scoreOptions)` preprocesses values to be
+    reconciled to produce a tuple used in fuzzy match scoring. The value
+    of `SCOREOPTIONS` in the configuration will be passed in to allow
+    configuration of this preprocessing. This hook is required.
+-   `normalizedRow(word, row, **scoreOptions)` preprocesses values to be
+    reconciled against to produce a tuple used in fuzzy match scoring.
+    Note that both the reconciled column and the entire row is available
+    for calculating the normalized value and that the column reconciled
+    against is required even when not used. The value of `SCOREOPTIONS`
+    in the configuration will be passed in to allow configuration of
+    this preprocessing. This defaults to calling
+    normalizeWord(word,\*\*scoreOptions).
+-   `getNormalizedFields()` returns a tuple of names for the columns
+    produced by `normalizeWord()`. The length of the return value from
+    both functions must match. This defaults to calling
+    normalizeWord(word,\*\*scoreOptions). This hook is required.
+-   `processScoreOptions(options)` is passed the value of `SCOREOPTIONS`
+    to allow it to be adjusted prior to being used. This can be used for
+    adding defaults and/or validating the configuration. This hook is
+    optional
+-   `scoreMatch(left, right, **scoreOptions)` gets passed two tuples as
+    returned by `normalizedWord()`. The `left` value is the value being
+    reconciled and the `right` value is the value being reconciled
+    against. The value of `SCOREOPTIONS` in the configuration will be
+    passed in to allow configuration of this preprocessing. Returning a
+    score of `None` will not add tested value as a candidate. This hook
+    is required.
+-   `valid(normalizedFields)` is passed the normalized tuple prior to
+    being scored to make sure it's appropriate for the calculation. This
+    hook is optional.
+-   `features(word, row, **scoreOptions)` calculates
+    [features](https://reconciliation-api.github.io/specs/latest/#reconciliation-query-responses)
+    using the query string and the normalized row. By default
+    calculating features is disabled. Implementions of this hook are
+    automatically enabled. This hook is optional.
+
+### Installing
+
+Hooks are automatically discovered as long as they provide a
+`csv_reconcile.scorers` [setuptools entry
+point](https://setuptools.readthedocs.io/en/latest/userguide/entry_point.html).
+Poetry supplies a
+[plugins](https://python-poetry.org/docs/pyproject/#plugins)
+configuration which wraps the setuptools funtionality.
+
+The default Dice coefficent scoring is supplied via the following
+snippet from `pyproject.toml` file.
+
+    [tool.poetry.plugins."csv_reconcile.scorers"]
+    "dice" = "csv_reconcile_dice"
+
+Here `dice` becomes the name of the scoring option and
+`csv_reconcile_dice` is the package implementing the plugin.
+
+### Using
+
+If there is only one scoring plugin available, that plugin is used. If
+there are more than one available, you will be prompted to pass the
+`--scorer` option to select among the scoring options.
+
+### Known plugins
+
+See [wiki](https://github.com/gitonthescene/csv-reconcile/wiki) for list
+of known plugins.
+
+## Testing
+
+Though I long for the old days when a unit test was a unit test, these
+days things are a bit more complicated with various versions of `Python`
+and installation of plugins to manage. Now we have to wrestle with
+[virtual environments](https://docs.python.org/3/tutorial/venv.html).
+`poetry` handles the virtual environment for developing, but testing
+involves covering more options.
+
+### Tests layout
+
+The tests directory structure is the following:
+
+    tests
+        main
+        plugins
+            geo
+
+Tests for the main package are found under `main` and don't require
+installing any other packages whereas tests under `plugins` require the
+installation of the given plugin.
+
+### Running tests
+
+1.  Basic tests
+
+    These tests are written with
+    [pytest](https://docs.pytest.org/en/6.2.x/contents.html) and can be
+    running through `poetry` as follows:
+
+        $ poetry run pytest
+
+    To avoid the complications that come from installing plugins, there
+    is a `poe` script for running only the tests under main which can be
+    invoked as follows:
+
+        $ poe test
+
+    For steady state developing this is probably the command you'll use
+    most often.
+
+2.  Build matrices
+
+    The GitHub Actions for this project currently use a [build
+    matrix](https://docs.github.com/en/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix)
+    across a couple of architectures and several versions of `Python`,
+    but a similar effect can be achieved using
+    [nox](https://nox.thea.codes/en/stable/tutorial.html).
+
+    `nox` manages the creation of various virtual environments in what
+    they call "sessions", from which various commands can be run. This
+    project's `noxfile.py` manages the installation of the
+    `csv-reconcile-geo` plugin for the plugin tests as well as running
+    across several versions of `Python`. See the `nox` documentation for
+    detail.
+
+    Some versions of this command you're likely to run are as follows:
+
+        $ nox      # Run all the tests building virtual environemnts from scratch
+        $ nox -r   # Reuse previously built virtual environments for speed
+        $ nox -s test_geo  # Run only the tests for the csv-reconcile-geo plugin
+        $ nox -s test_main -p 3.8   # Run only the main tests with Python3.8
+
+    Eventually, the GitHub Actions may be changed to use
+    [setup-nox](https://github.com/marketplace/actions/setup-nox).
+
+## Future enhancements
+
+It would be nice to add support for using
+[properties](https://reconciliation-api.github.io/specs/latest/#structure-of-a-reconciliation-query)
+as part of the scoring, so that more than one column of the csv could be
+taken into consideration.
