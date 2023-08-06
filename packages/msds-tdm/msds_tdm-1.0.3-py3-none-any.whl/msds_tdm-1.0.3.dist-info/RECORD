@@ -1,0 +1,10 @@
+msds_tdm/Hazard_list_detailed.xlsx,sha256=PY6IFlpdQT9XUEJp9jiaokCK2Nfd_2vB8FK9Crel_yE,13703
+msds_tdm/__init__.py,sha256=gRvdoGgktZpn-yLJyiW4iszO6pKLf9yla8QGGI6GnDw,398
+msds_tdm/sigma_aldrich.py,sha256=t11Yj2g40nAvgqr-Kq_yuCp4kKIrG1m-cfFTT58ZQeA,8503
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_msds.py,sha256=sL9A6QOe1Fn6YlIAWyXTWj9yr-uw1rmt1TiY1mkzPT4,502
+msds_tdm-1.0.3.dist-info/LICENSE,sha256=fezMPdLfwbiSMHJ6NIMDsc0JGw1COuGrnAYkBgEMqyE,1083
+msds_tdm-1.0.3.dist-info/METADATA,sha256=0obUZd6QUIq3XZH8btyk01DqlB3quA2mY04fwLuk2aQ,3972
+msds_tdm-1.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+msds_tdm-1.0.3.dist-info/top_level.txt,sha256=rPBIPEzIY_kPmtj9HI_pEHipIgny_2CAsBBkAq9W9ZE,15
+msds_tdm-1.0.3.dist-info/RECORD,,
