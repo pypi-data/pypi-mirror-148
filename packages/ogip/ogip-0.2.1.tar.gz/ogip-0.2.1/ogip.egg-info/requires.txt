@@ -1,0 +1,12 @@
+numpy>=1.16.0
+astropy
+scipy
+click
+
+[plot]
+matplotlib
+
+[testing]
+pytest>=4.6
+mypy
+pylint
