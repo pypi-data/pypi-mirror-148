@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.py
+./requirements.txt
+circles_file_iterator.egg-info/PKG-INFO
+circles_file_iterator.egg-info/SOURCES.txt
+circles_file_iterator.egg-info/dependency_links.txt
+circles_file_iterator.egg-info/requires.txt
+circles_file_iterator.egg-info/top_level.txt
+src/__init__.py
+src/__main__.py
+src/example_configuration.py
+src/example_create_file_exploration.py
+src/example_file_iterator.py
+src/example_irods.py

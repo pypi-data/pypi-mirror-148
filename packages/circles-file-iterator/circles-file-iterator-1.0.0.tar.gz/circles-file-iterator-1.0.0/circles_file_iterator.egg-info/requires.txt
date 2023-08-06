@@ -1,0 +1,14 @@
+DateTime
+defusedxml
+importlib-metadata
+numpy
+pandas
+prettytable
+python-dateutil
+python-irodsclient
+pytz
+six
+typing_extensions
+wcwidth
+zipp
+zope.interface
