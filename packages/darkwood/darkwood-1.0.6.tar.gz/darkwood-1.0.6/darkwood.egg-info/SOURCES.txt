@@ -1,0 +1,12 @@
+README.md
+setup.py
+darkwood/__init__.py
+darkwood/__main__.py
+darkwood.egg-info/PKG-INFO
+darkwood.egg-info/SOURCES.txt
+darkwood.egg-info/dependency_links.txt
+darkwood.egg-info/entry_points.txt
+darkwood.egg-info/requires.txt
+darkwood.egg-info/top_level.txt
+darkwood/client/__init__.py
+darkwood/client/call.py
