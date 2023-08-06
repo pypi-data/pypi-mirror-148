@@ -1,0 +1,9 @@
+jsonpickle
+twine
+pipfile
+pytz
+python-dateutil
+unidecode
+setuptools
+wheel
+exifread
