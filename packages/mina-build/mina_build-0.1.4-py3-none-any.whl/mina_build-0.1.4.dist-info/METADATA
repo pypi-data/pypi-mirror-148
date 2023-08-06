@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: mina-build
+Version: 0.1.4
+Summary: UNKNOWN
+License: MIT
+Author-email: GreyElaina <GreyElaina@outlook.com>
+Requires-Python: >=3.9
+Requires-Dist: pdm-pep517>=0.12.3
+Description-Content-Type: text/markdown
+
+# PEP 517 implementation for Mina Package Structure
+
+
