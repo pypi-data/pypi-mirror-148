@@ -1,0 +1,2 @@
+[console_scripts]
+cts3-viewer = cts3_viewer:main
