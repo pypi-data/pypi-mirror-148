@@ -1,0 +1,5 @@
+setup.py
+projecting.egg-info/PKG-INFO
+projecting.egg-info/SOURCES.txt
+projecting.egg-info/dependency_links.txt
+projecting.egg-info/top_level.txt
