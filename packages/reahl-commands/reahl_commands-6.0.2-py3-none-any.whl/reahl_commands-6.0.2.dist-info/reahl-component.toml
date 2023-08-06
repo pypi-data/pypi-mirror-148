@@ -1,0 +1,14 @@
+metadata_version = "1.0.0"
+
+[versions."5.2"]
+install_requires = [ "reahl-component>=5.2,<5.3",]
+
+[versions."5.1"]
+install_requires = [ "reahl-component>=5.1,<5.2",]
+
+[versions."5.0"]
+install_requires = [ "reahl-component>=5.0,<5.1",]
+
+[versions."4.0"]
+install_requires = [ "reahl-component>=4.0,<4.1",]
+migrations = [ "reahl.commands.migrations:ReahlCommandsReahlSchemaInitialise",]
