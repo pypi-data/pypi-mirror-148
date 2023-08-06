@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+versioneer.py
+src/metalattice/__init__.py
+src/metalattice/_version.py
+src/metalattice.egg-info/PKG-INFO
+src/metalattice.egg-info/SOURCES.txt
+src/metalattice.egg-info/dependency_links.txt
+src/metalattice.egg-info/top_level.txt
+src/metalattice/fem/__init__.py
+src/metalattice/fem/element/__init__.py
+src/metalattice/fem/element/base.py
+src/metalattice/plotter/__init__.py
+src/metalattice/plotter/plot.py
