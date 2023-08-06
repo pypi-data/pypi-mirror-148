@@ -1,0 +1,11 @@
+jupyter_server<2,>=1.6
+
+[tests]
+black
+coverage
+pre-commit
+pytest
+pytest-asyncio
+pytest-cov
+pytest-tornasync
+jsonschema
