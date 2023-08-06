@@ -1,0 +1,307 @@
+<html>
+<head>
+    <script src="https:unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/echarts@5.3.2/dist/echarts.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</head>
+<body>
+    <script>
+        function ajaxViewFile(type = 'get', async = false, data, sendpage, content_funtion) {
+            $.ajax({
+                type: type,
+                async: async,
+                url: sendpage,
+                data: data,
+                timeout: 1500,
+                success: content_funtion,
+                contentType: false,
+                processData: false,
+                cache: false,
+            })
+        }
+        function ajaxView(type = 'get', async = false, data, sendpage, content_funtion) {
+            $.ajax({
+                type: type,
+                async: async,
+                url: sendpage,
+                data: data,
+                timeout: 1500,
+                success: content_funtion,
+            })
+        }
+        $(document).ajaxError(function (event, request, settings) {
+            var message = null;
+            if (request.reponseJSON && request.responseJSON.hasOwnProperty("message")) {
+                message = request.responseJSON.message;
+            } else if (request.responseText) {
+                var IS_JSON = true;
+                try {
+                    var data = JSON.parse(request.responseText);
+                }
+                catch (err) {
+                    IS_JSON = false;
+                }
+
+                if (IS_JSON && data != undefined && data.hasOwnProperty("message")) {
+                    message = JSON.parse(request.responseText).message;
+                } else {
+                    message = default_error_message;
+                }
+            } else {
+                message = default_error_message;
+            }
+
+            toast(message, "error");
+
+        });
+    </script>
+
+    <div class="container p-3 mt-3 d-flex flex-column">
+        <div class="h1 mb-3">Reverse Projection Demo</div>
+        <div id="app" class="mb-3">
+            <label for="a1" class="form-label h4">上传一个xlsx数据, 第一列为number，第二列为label，其余为特征变量，不要有空值和字符</label>
+            <input id="a1" class="form-control form-control-lg" type="file" ref="upload" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" @change="upload">
+        </div>
+
+        <div class="">
+            <div class="">
+                <div class="h5">逆设计点</div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="col-1">序号</th>
+                            <th class="col-3">点击坐标</th>
+                            <th class="col-3">搜索坐标</th>
+                            <th class="col-auto">搜索到的特征数据</th>
+                        </tr>
+                    </thead>
+                    <tbody id="datatbody"></tbody>
+                </table>
+            </div>
+            <div id="echarts_pic" class="col-9"></div>
+        </div>
+    </div>
+
+    <script>
+
+        Vue.createApp({
+            data() {
+                return {
+                    message: 'Hello Vue!'
+                }
+            },
+            methods: {
+                upload(e) {
+
+                    file = e.target.files[0]
+                    console.log(file);
+                    data = new FormData();
+                    data.append("file", file);
+                    $("#datatbody").empty();
+                    ajaxViewFile(
+                        type = "post",
+                        async = false,
+                        data = data,
+                        sendpage = "/test",
+                        content_funtion = function (res) {
+                            console.log(res);
+                            eplot(res);
+                        }
+                    );
+                }
+            }
+        }).mount('#app')
+
+        function eplot(res, series) {
+            var series = [];
+
+            series.push({
+                type: 'scatter',
+                data: [],
+                name: "搜索点",
+                color: "red",
+            });
+
+            for (i in res.labels) {
+                series.push({
+                    type: 'scatter',
+                    data: res.pro_x[i],
+                    name: res.labels[i],
+                })
+            }
+            console.log(series);
+
+            var tooltip = {
+                showDelay: 0,
+                formatter: p => {
+                    //console.log(p);
+                    var cIndex = p.componentIndex;
+                    if (cIndex != 0) {
+                        var return_str = "类别:" + res.labels[cIndex - 1];
+                        return_str += ", ";
+                        return_str += "序号:" + res.numbers[cIndex - 1][p.dataIndex];
+                        return_str += "</br>";
+                        return_str += "[" + p.data[0].toFixed(2) + ", " + p.data[1].toFixed(2) + "]";
+                    } else {
+                        var return_str = "搜索点:" + (p.dataIndex+1) + "</br>" + "[" + p.data[0].toFixed(2) + ", " + p.data[1].toFixed(2) + "]";
+                    }
+                    return return_str;
+                },
+                axisPointer: {
+                    show: true,
+                    type: 'cross',
+                    lineStyle: {
+                        type: 'dashed',
+                        width: 1
+                    }
+                }
+            }
+
+            var xAxis = {
+                type: "value",
+                splitLine: {
+                    lineStyle: {
+                        type: "dashed"
+                    }
+                }
+            }
+            var yAxis = {
+                type: "value",
+                splitLine: {
+                    lineStyle: {
+                        type: "dashed"
+                    }
+                }
+            }
+
+            var option = {
+                series: series,
+                tooltip: tooltip,
+                xAxis: xAxis,
+                yAxis: yAxis,
+                legend: {}
+            }
+            console.log(option);
+            var dom = $("#echarts_pic");
+            dom.attr("class", "container");
+            var myChart = echarts.init(dom[0]);
+            myChart.clear();
+            myChart.setOption(option);
+
+            $(window).resize(function () {
+                myChart.resize(width = "100vw", height = "60vh");
+            });
+
+            myChart.getZr().off("click");
+            myChart.getZr().on("click", params => {
+                pointPixel = [params.offsetX, params.offsetY];
+                points = myChart.convertFromPixel({ seriesIndex: 0 }, pointPixel);
+                var Yrange = myChart.getModel().getComponent("yAxis").axis.scale._extent
+                var Xrange = myChart.getModel().getComponent("xAxis").axis.scale._extent
+                //console.log(points);
+                //console.log(Yrange);
+                //console.log(Xrange);
+                if (points[0] > Xrange[0] && points[0] < Xrange[1] && points[1] > Yrange[0] && points[1] < Yrange[1]) {
+                    ajaxView(
+                        type = "post",
+                        async = false,
+                        data = { "points": JSON.stringify(points) },
+                        sendpage = "/rp",
+                        content_funtion = function (res) {
+                            //console.log(res);
+                            option.series[0].data.push(res.spoint);
+                            myChart.setOption(option);
+                            var th = "<tr>" +
+                                "<td class='col-1'>" + option.series[0].data.length + "</td>" +
+                                "<td class='col-3'>" + points[0].toFixed(2) + ", " + points[1].toFixed(2) + "</td>" +
+                                "<td class='col-3'>" + res.spoint[0].toFixed(2) + ", " + res.spoint[1].toFixed(2) + "</td>";
+                            th += "<td class='col-auto'>";
+                            for (i in res.result) {
+                                console.log(i);
+                                if (i == 0) {
+                                    th += (res.result[i]).toFixed(2);
+                                } else {
+                                    th += ", " + (res.result[i]).toFixed(2);
+                                }
+                            }
+                            th += "</td>" +
+                                "</tr>";
+                            $("#datatbody").append(th);
+                        }
+                    );
+                }
+            });
+
+        }
+
+    </script>
+    <style>
+        #echarts_pic {
+            height: 60vh;
+            width: 100vw;
+        }
+    </style>
+    <script>
+        //var chartDom = document.getElementById('echarts_pic');
+        //var myChart = echarts.init(chartDom);
+        //var option;
+
+        //option = {
+        //    xAxis: {},
+        //    yAxis: {},
+        //    series: [
+        //        {
+        //            symbolSize: 20,
+        //            data: [
+        //                [10.0, 8.04],
+        //                [8.07, 6.95],
+        //                [13.0, 7.58],
+        //                [9.05, 8.81],
+        //                [11.0, 8.33],
+        //                [14.0, 7.66],
+        //                [13.4, 6.81],
+        //                [10.0, 6.33],
+        //                [14.0, 8.96],
+        //                [12.5, 6.82],
+        //                [9.15, 7.2],
+        //                [11.5, 7.2],
+        //                [3.03, 4.23],
+        //                [12.2, 7.83],
+        //                [2.02, 4.47],
+        //                [1.05, 3.33],
+        //                [4.05, 4.96],
+        //                [6.03, 7.24],
+        //                [12.0, 6.26],
+        //                [12.0, 8.84],
+        //                [7.08, 5.82],
+        //                [5.02, 5.68]
+        //            ],
+        //            type: 'scatter'
+        //        }
+        //    ]
+        //};
+
+        //option && myChart.setOption(option);
+
+        //myChart.getZr().on("click", params => {
+        //    pointPixel = [params.offsetX, params.offsetY];
+        //    points = myChart.convertFromPixel({ seriesIndex: 0 }, pointPixel);
+        //    console.log(points);
+        //    option.series.push({
+        //        type: 'scatter',
+        //        data: [points]
+        //    });
+        //    myChart.setOption(option);
+        //});
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+

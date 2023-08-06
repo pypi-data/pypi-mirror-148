@@ -1,0 +1,8 @@
+hyperopt
+numpy
+sklearn
+pandas
+scipy
+flask
+flask_cors
+cachelib

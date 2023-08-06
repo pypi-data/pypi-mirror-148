@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: reverse-projection
+Version: 0.0.2.0
+Summary: reverse-projection
+Author: luktian
+Author-email: luktian@shu.edu.cn
+Maintainer: luktian
+Maintainer-email: luktian@shu.edu.cn
+License: BSD License
+Platform: windows
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=3.6
+
+UNKNOWN
+
