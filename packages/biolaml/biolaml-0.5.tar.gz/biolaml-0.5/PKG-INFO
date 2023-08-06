@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: biolaml
+Version: 0.5
+Summary: library to help with understanding machine learning math models like, Markov Models, Temporal models e.t.c
+Home-page: https://github.com/biolajohnson/biola-props
+Author: Abiola Johnson
+Author-email: biola.johnson@yahoo.com
+License: MIT
+Download-URL: https://github.com/biolajohnson/biola-props/archive/v_01.tar.gz
+Description: UNKNOWN
+Keywords: Machine Learning,Probabilities,Math
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
