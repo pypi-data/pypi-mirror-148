@@ -1,0 +1,1 @@
+pmd cpd --files src/*.rs --minimum-tokens 11 --language rust
