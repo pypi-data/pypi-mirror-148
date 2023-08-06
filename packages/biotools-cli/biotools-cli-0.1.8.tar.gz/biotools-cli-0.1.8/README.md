@@ -1,0 +1,50 @@
+# biotools-cli
+
+[![Build status](https://ci.appveyor.com/api/projects/status/ehobd8ptbiqjovyu?svg=true)](https://ci.appveyor.com/project/Siogian/biotools-cli)
+
+## 介绍
+
+一个可扩展的，为生物信息学分析提供支持的命令行工具集合（当前仅支持 uniprotkb 网络药理学蛋白质转换基因名）。
+
+### 软件架构
+
+软件架构说明
+
+#### 安装教程
+
+请确保你的计算机已经正确安装了 [python](https://www.python.org/)
+
+```pip install biotools-cli```
+
+安装 python-Levenshtein 可以加速查找过程（可选）
+
+```pip install python-Levenshtein```
+
+#### 使用说明
+
+1. 根据你的需求下载 [uniprotkb](https://beta.uniprot.org/uniprotkb) 数据库文件，一般我们选择 Swiss-Prot 和 Human，格式请选择 xml，如果你下载的是压缩文件，请将它解压。假设最终得到的文件为 uniprot_sprot_human.xml，并把它放置在 example 目录下。
+2. 从 uniprot_sprot_human.xml 中提取蛋白质名称以及对应的基因名称并保存到 tsv 格式的文本文件中。
+
+    ```biotools uniprotkb extract .\example\uniprot_sprot_human.xml .\example\uniprot_sprot_human.xml.tsv```
+
+    如果 xml 文件不变化，extract 命令则仅需要执行一次。
+3. 准备蛋白质列表，protein.list，参考 .\example\protein.list
+4. 查找对应的基因名称并保存结果到 .\example\gene.list
+
+    ```biotools uniprotkb lookup .\example\uniprot_sprot_human.xml.tsv .\example\protein.list .\example\gene.list```
+
+#### 参与贡献
+
+1. Fork 本仓库
+2. 新建 Feat_xxx 分支
+3. 提交代码
+4. 新建 Pull Request
+
+#### 特技
+
+1. 使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
+2. Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
+3. 你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
+4. [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
+5. Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
+6. Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)

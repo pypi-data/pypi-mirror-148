@@ -1,0 +1,6 @@
+Click
+pandas
+InquirerPy
+biopython
+tqdm
+thefuzz

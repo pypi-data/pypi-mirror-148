@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+biotools/__init__.py
+biotools/main.py
+biotools/uniprotkb.py
+biotools_cli.egg-info/PKG-INFO
+biotools_cli.egg-info/SOURCES.txt
+biotools_cli.egg-info/dependency_links.txt
+biotools_cli.egg-info/entry_points.txt
+biotools_cli.egg-info/requires.txt
+biotools_cli.egg-info/top_level.txt
+src/__init__.py
+src/main.py
+src/uniprotkb.py
