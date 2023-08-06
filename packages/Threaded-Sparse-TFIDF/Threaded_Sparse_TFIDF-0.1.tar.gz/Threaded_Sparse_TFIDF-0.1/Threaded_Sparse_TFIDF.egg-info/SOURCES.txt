@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+Threaded_Sparse_TFIDF/TFIDF.py
+Threaded_Sparse_TFIDF/__init__.py
+Threaded_Sparse_TFIDF.egg-info/PKG-INFO
+Threaded_Sparse_TFIDF.egg-info/SOURCES.txt
+Threaded_Sparse_TFIDF.egg-info/dependency_links.txt
+Threaded_Sparse_TFIDF.egg-info/requires.txt
+Threaded_Sparse_TFIDF.egg-info/top_level.txt
