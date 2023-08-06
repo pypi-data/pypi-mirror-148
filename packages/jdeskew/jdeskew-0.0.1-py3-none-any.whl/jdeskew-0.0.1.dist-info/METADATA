@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: jdeskew
+Version: 0.0.1
+Summary: Document Image Skew Estimation using Adaptive Radial Projection
+Author: Luan Pham
+Author-email: phamquiluan@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: pre-commit ; extra == 'dev'
+
+UNKNOWN
+
