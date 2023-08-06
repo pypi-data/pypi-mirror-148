@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+edisonpdf.egg-info/PKG-INFO
+edisonpdf.egg-info/SOURCES.txt
+edisonpdf.egg-info/dependency_links.txt
+edisonpdf.egg-info/top_level.txt
+pythonpdf/__init__.py
+pythonpdf/pdf2image.py
+pythonpdf/pdf2text.py
