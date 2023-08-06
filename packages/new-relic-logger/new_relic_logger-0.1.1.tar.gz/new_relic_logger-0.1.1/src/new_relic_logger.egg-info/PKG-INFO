@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: new-relic-logger
+Version: 0.1.1
+Summary: NewRelic logger with headerless logging api
+Home-page: https://github.com/TitanX-AI/new-relic-logger
+Author: Kris Chou
+Author-email: krischou.me@gmail.com
+License: MIT
+Description: # NewRelic Logger
+        
+        ![Python Logo](https://www.python.org/static/community_logos/python-logo.png "inline image")
+        
+        A simple project to log data to [NewRelic](https://newrelic.com/) using its [headerless logging api](https://docs.newrelic.com/docs/logs/log-api/introduction-log-api) along with [built-in logging](https://docs.python.org/3/library/logging.html).
+        
+        The project was intended to send logs to both original monitoring tool and [NewRelic](https://newrelic.com/)
+        
+        
+        ## Installing
+        
+        ```sh
+        pip install new-relic-logger
+        ```
+        
+        ## Usage example
+        
+        ```sh
+        import logging
+        from new_relic_logger import NewRelicLogger
+        
+        ...
+        logger = NewRelicLogger(
+            api_key=<API_KEY_HERE>,
+            hostname=<HOST_NAME_HERE>,
+            service=<SERVICE>,
+            enable_built_in_logging=True,
+        )
+        
+        logger.info("Updated User Object!")
+        ...
+        logger.warning("Primary key for user object is not set yet!")
+        ...
+        logger.error("Failed to retrive user profile!")
+        ```
+        
+Keywords: new relic,logger,headerless api
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.7, <4
+Description-Content-Type: text/markdown
