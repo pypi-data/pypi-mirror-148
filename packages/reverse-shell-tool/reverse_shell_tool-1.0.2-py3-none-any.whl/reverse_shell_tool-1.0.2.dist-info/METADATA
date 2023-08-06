@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: reverse-shell-tool
+Version: 1.0.2
+Summary: Reverse Shell Tool
+Author: MustansirG
+Author-email: me@mustansirg.in
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+License-File: LICENSE
+Requires-Dist: keyboard (==0.13.5)
+Requires-Dist: netifaces (==0.10.9)
+Requires-Dist: pyngrok (==5.1.0)
+Requires-Dist: pyperclip (==1.8.0)
+Requires-Dist: pytest (>=6.0)
+Requires-Dist: rich (==12.2.0)
+Requires-Dist: setuptools (==52.0.0)
+Requires-Dist: simple-term-menu (==1.4.1)
+Provides-Extra: testing
+Requires-Dist: pytest (>=6.0) ; extra == 'testing'
+Requires-Dist: pytest-cov (>=2.0) ; extra == 'testing'
+Requires-Dist: mypy (>=0.910) ; extra == 'testing'
+Requires-Dist: flake8 (>=3.9) ; extra == 'testing'
+Requires-Dist: python-coveralls ; extra == 'testing'
+Requires-Dist: pyyaml ; extra == 'testing'
+Requires-Dist: black (==22.3.0) ; extra == 'testing'
+Requires-Dist: coverage ; extra == 'testing'
+
+UNKNOWN
+
