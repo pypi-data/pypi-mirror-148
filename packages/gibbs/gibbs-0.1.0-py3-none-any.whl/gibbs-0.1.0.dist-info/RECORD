@@ -1,0 +1,8 @@
+gibbs/__init__.py,sha256=w_vuZhqTabfSVuTfVjK7a1OmJ-M6IWTC73eAy_K36-w,120
+gibbs/hub.py,sha256=aSuEb5mNEb7EYwbKb70iEDJK5QAX2k_HRifnXy4m_8M,11274
+gibbs/worker.py,sha256=FtJsuyAgMzgt8JaPOcQXYdWqCFGc2boDqb1tIGpFOJ4,5661
+gibbs-0.1.0.dist-info/LICENSE,sha256=efxIJwqRW2jrT96PhExhD9OYd4DjZ9GKfq2UKwog8kc,1065
+gibbs-0.1.0.dist-info/METADATA,sha256=vf3mJAAeXe87-bdRoE8GnR-8mieTqDLs9mgHtpHl0aE,6616
+gibbs-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+gibbs-0.1.0.dist-info/top_level.txt,sha256=IrDvXoAdT1pSuyNc3T3Lzt_vRN1o-5C9AeEHuRH33kU,6
+gibbs-0.1.0.dist-info/RECORD,,
