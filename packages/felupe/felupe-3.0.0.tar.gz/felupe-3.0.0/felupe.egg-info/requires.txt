@@ -1,0 +1,12 @@
+numpy
+scipy
+meshio
+numpy
+scipy
+meshio
+
+[all]
+h5py
+numba
+sparse
+einsumt
