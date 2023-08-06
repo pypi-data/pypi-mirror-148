@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/chatting_chatbots/__init__.py
+src/chatting_chatbots/about.py
+src/chatting_chatbots/chatbots.py
+src/chatting_chatbots/generation.py
+src/chatting_chatbots/utils.py
+src/chatting_chatbots.egg-info/PKG-INFO
+src/chatting_chatbots.egg-info/SOURCES.txt
+src/chatting_chatbots.egg-info/dependency_links.txt
+src/chatting_chatbots.egg-info/not-zip-safe
+src/chatting_chatbots.egg-info/requires.txt
+src/chatting_chatbots.egg-info/top_level.txt
