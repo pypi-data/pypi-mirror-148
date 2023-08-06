@@ -1,0 +1,7 @@
+README.txt
+ch09_ep01_lista.py
+setup.py
+ch09_ep01_lista.egg-info/PKG-INFO
+ch09_ep01_lista.egg-info/SOURCES.txt
+ch09_ep01_lista.egg-info/dependency_links.txt
+ch09_ep01_lista.egg-info/top_level.txt
