@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+pimmi/pimmi.egg-info/PKG-INFO
+pimmi/pimmi.egg-info/SOURCES.txt
+pimmi/pimmi.egg-info/dependency_links.txt
+pimmi/pimmi.egg-info/requires.txt
+pimmi/pimmi.egg-info/top_level.txt
+pimmi/pimmi.egg-info/zip-safe
