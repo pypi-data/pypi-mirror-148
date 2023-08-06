@@ -1,0 +1,10 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+no_python_version_warning.egg-info/PKG-INFO
+no_python_version_warning.egg-info/SOURCES.txt
+no_python_version_warning.egg-info/dependency_links.txt
+no_python_version_warning.egg-info/top_level.txt
