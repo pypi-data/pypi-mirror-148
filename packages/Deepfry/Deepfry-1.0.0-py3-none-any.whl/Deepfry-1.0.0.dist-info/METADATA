@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: Deepfry
+Version: 1.0.0
+Summary: Deepfry images with ease
+Home-page: https://github.com/laughingsheep/deepfry
+Author: Jodo
+Author-email: deepfry@thejodo.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Multimedia :: Graphics :: Editors
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: Pillow (==9.1.0)
+
+# Deepfry
+
+**Deepfry images with ease.**
+
+### Install
+Install `Deepfry` by running
+```bash
+pip install Deepfry
+```
+
+### Requirements
+- Python 3
+- Pillow
+
+### Example
+```python
+from Deepfry import deepfry
+deepfry.deepfry("image.png", "deepfried_image.png") #Saves deepfried image to "deepfried_image.png"
+```
+### Why use Deepfry?
+✔️Single dependency
+✔️Easy to use
+✔️Advanced usage
+
+### Advanced usage
+deepfry() has 2 optional arguments: `sharpness` and `saturation`. Turn up if you want your image to be more deepfried.
+### License
+The contents of this repository are licensed under the MIT license. A
+copy of the MIT license can be found [here](https://github.com/laughingsheep/deepfry/blob/master/LICENSE).
+
