@@ -1,0 +1,11 @@
+longbridge/__init__.py,sha256=xD2rYbCilJoXTWzU8WOHHiGcc-nX8VCU2CF6vucPAPE,403
+longbridge/__version__,sha256=GY2wGbHL6hhGkRudORtUi4iTfCeVcfpO4GXJvGrscxQ,10
+longbridge/engine_uniffi.dll,sha256=5YSTU3r_hK76kt2wPx6_cAfr7vq9M6-v2X8xMgbq_mw,7640576
+longbridge/engine_uniffi.py,sha256=AZLHj8gNDvPpU8XGMnHsD39bpmvD0CRcDSRbrI3CpAY,58598
+longbridge/error.py,sha256=yyrhqk3961279TfvMx-aquVvxVfNxZ_XTQLbXKbC26o,952
+longbridge/http.py,sha256=5auEWkv3njSRzjs17BpKn6aB9Yg81sJ7szVnrFANo0Q,5585
+longbridge/ws.py,sha256=hWu98ObRYfyZ6meXW2y-riIkQ0g6zYiKnlG4iTQ6LN0,2609
+longbridge-0.1.1.dist-info/LICENSE.txt,sha256=JnWAYTcyg_VdpdhEXZ0gI_1PodpL3iIqjSIhJHIYiM4,1065
+longbridge-0.1.1.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+longbridge-0.1.1.dist-info/METADATA,sha256=EYtaAdf5O67SJjfQJZoa1VxWvGIQkdDExIl8-h0Ojn0,2965
+longbridge-0.1.1.dist-info/RECORD,,
