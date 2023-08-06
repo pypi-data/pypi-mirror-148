@@ -1,0 +1,15 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+persisted/__init__.py
+persisted/bytes.py
+persisted/module.py
+persisted/persisted.py
+persisted/pickle.py
+persisted/string.py
+persisted.egg-info/PKG-INFO
+persisted.egg-info/SOURCES.txt
+persisted.egg-info/dependency_links.txt
+persisted.egg-info/requires.txt
+persisted.egg-info/top_level.txt
