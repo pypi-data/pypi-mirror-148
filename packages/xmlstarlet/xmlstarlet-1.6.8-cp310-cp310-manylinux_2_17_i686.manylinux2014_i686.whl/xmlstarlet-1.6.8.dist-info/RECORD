@@ -1,0 +1,14 @@
+xmlstarlet-1.6.8.dist-info/AUTHORS.rst,sha256=GfQU9C3w4LXh4NDR-5i1zHRmw7Su3zTMgS-cb9XC0Y4,433
+xmlstarlet-1.6.8.dist-info/WHEEL,sha256=dIdPSER7KbAeXO0_KQzbPRqFhFb-f5Cab9ZqqxdUw50,148
+xmlstarlet-1.6.8.dist-info/top_level.txt,sha256=NpO-asCnznkh3j-3mtSdGc-vmrhybnWCh7Bwd_k4GDI,11
+xmlstarlet-1.6.8.dist-info/METADATA,sha256=3oq9OgAOfm16vVeQ5w0JMERuE7wLa_iSP9fcxWNAunQ,4729
+xmlstarlet-1.6.8.dist-info/RECORD,,
+xmlstarlet-1.6.8.dist-info/LICENSE,sha256=TEj1kNcWptc6ni7FUUeNCBpZhft8M3lyjHSQn1wpMFY,1078
+xmlstarlet.libs/libgpg-error-3222c8df.so.0.10.0,sha256=O4RTwfivqjobS4fNUX22LGHAtbHyYBBn75weBZz_Nes,21108
+xmlstarlet.libs/libgcrypt-d95bd281.so.11.8.2,sha256=fEYdBnkL4JbN-FtZgL79QEVKvzTUc7SbQzUZDamH0c8,573832
+xmlstarlet.libs/libxml2-4b32ec39.so.2.9.1,sha256=eX7rEUFpx1xJtQ6varKxVEdPva8ozpicaPYQDF8Mcks,1548732
+xmlstarlet.libs/libexslt-e92dcb43.so.0.8.17,sha256=dmMcWSgdq5hzeMYPk6T-0qml7w-f496bkqAoF0ta8n8,109976
+xmlstarlet.libs/liblzma-ee60765a.so.5.2.2,sha256=Mpgjxn6ZRXAExPkuhRW2YzEH6a-BOtQnD_A4T8rvpL8,175760
+xmlstarlet.libs/libxslt-a81ffc89.so.1.1.28,sha256=9kTuqP5e1ETQVJMTPVWNYp_LI46HAZx7LseKhGQR53U,275832
+xmlstarlet/_xmlstarlet.abi3.so,sha256=WJJRCiHnB_8MXZv9HqKDQrsDi8bXDIUKb_cfPXRkZZc,464448
+xmlstarlet/__init__.py,sha256=cbhN3dH8UulI4Lqd26BYJkJr7TiEys6CxbOVoRLLmhA,14519
