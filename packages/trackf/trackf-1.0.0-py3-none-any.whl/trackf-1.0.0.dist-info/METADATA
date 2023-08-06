@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: trackf
+Version: 1.0.0
+Summary: tracking polymer chain breakage
+Home-page: UNKNOWN
+Maintainer: Nattavipa Chongvimansin
+Maintainer-email: nchongvi@andrew.cmu.edu
+License: GPL
+Platform: linux
+Requires-Dist: numpy
+Requires-Dist: netCDF4
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+
+
+A module for tracking the location, molecule identifiers,
+and timeframe of breakage.
+===============================================
+trackf package performs an analysis of the state of polymer chain
+extension and chain breakage in elongational flow on the data from
+the LAMMPS parallel simulations.
+
+
