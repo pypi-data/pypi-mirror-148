@@ -1,0 +1,4 @@
+[console_scripts]
+deepsparse_support=hsf.engines:print_deepsparse_support
+hsf=hsf.factory:start
+
