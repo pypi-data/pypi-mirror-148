@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+sztaki/__init__.py
+sztaki/models.py
+sztaki/translator.py
+sztaki.egg-info/PKG-INFO
+sztaki.egg-info/SOURCES.txt
+sztaki.egg-info/dependency_links.txt
+sztaki.egg-info/not-zip-safe
+sztaki.egg-info/requires.txt
+sztaki.egg-info/top_level.txt
