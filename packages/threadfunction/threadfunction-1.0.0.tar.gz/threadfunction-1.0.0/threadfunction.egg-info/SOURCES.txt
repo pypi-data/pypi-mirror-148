@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+threadfunction/__init__.py
+threadfunction.egg-info/PKG-INFO
+threadfunction.egg-info/SOURCES.txt
+threadfunction.egg-info/dependency_links.txt
+threadfunction.egg-info/top_level.txt
