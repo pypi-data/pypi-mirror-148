@@ -1,0 +1,4 @@
+DaPy==1.16.1
+pynvml==11.4.1
+numpy==1.18.5
+xlsxwriter==3.0.3
