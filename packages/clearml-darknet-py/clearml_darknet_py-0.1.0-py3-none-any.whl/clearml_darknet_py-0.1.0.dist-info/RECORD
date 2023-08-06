@@ -1,0 +1,8 @@
+clearml_darknet/__init__.py,sha256=nmPzicBp_vpZ-f_piTp9PlcIV954mJtwCWiDCugmUzk,116
+clearml_darknet/darknet.py,sha256=oGAFgaIKEZHogN3lXQdAHdrll5Ps4ATORVoyAUnE3xE,12143
+clearml_darknet/errors.py,sha256=t2uVsIxwrNi7uLopoAFQCT391tEWHDTboV2bH-QiEDk,70
+clearml_darknet_py-0.1.0.dist-info/LICENSE,sha256=bZUTZfJTnni-m8wKP-D1n_wiINA-HncAI7JL0mewKz4,1069
+clearml_darknet_py-0.1.0.dist-info/METADATA,sha256=ntWuleOp-T-QGL9KIyNBD3zQ4E0v53r3LdhTOwH5mB0,1197
+clearml_darknet_py-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+clearml_darknet_py-0.1.0.dist-info/top_level.txt,sha256=s-DIp45h1ZzBReVrW5T7PDBmh5i59AQUb0fqI0ZWTw4,16
+clearml_darknet_py-0.1.0.dist-info/RECORD,,
