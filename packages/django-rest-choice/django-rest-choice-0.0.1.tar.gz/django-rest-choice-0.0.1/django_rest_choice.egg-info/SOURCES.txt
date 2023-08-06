@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+django_rest_choice.egg-info/PKG-INFO
+django_rest_choice.egg-info/SOURCES.txt
+django_rest_choice.egg-info/dependency_links.txt
+django_rest_choice.egg-info/requires.txt
+django_rest_choice.egg-info/top_level.txt
+rest_choice/__init__.py
+rest_choice/views.py
