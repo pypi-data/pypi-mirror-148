@@ -1,0 +1,6 @@
+[console_scripts]
+pytest-docker=girder_pytest_pyppeteer.main:run_pytest_docker_compose
+
+[pytest11]
+pyppeteer=girder_pytest_pyppeteer.plugin
+
