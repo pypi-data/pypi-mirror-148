@@ -1,0 +1,8 @@
+setuptools>=50.3.0
+numpy<2.0,>=1.19.1
+pandas<2.0,>=1.1.1
+bokeh<3.0,>=2.1.1
+requests<3.0,>=2.22.0
+appdirs<1.5,>=1.4.3
+rocketlogger<3.0,>=2.0
+pyelftools<1.0,>=0.26
