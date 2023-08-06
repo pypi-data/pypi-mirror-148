@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+fmdpy/__init__.py
+fmdpy/__main__.py
+fmdpy/api.py
+fmdpy/conf.py
+fmdpy/download.py
+fmdpy/song.py
+fmdpy/splist.py
+fmdpy/stream.py
+fmdpy.egg-info/PKG-INFO
+fmdpy.egg-info/SOURCES.txt
+fmdpy.egg-info/dependency_links.txt
+fmdpy.egg-info/entry_points.txt
+fmdpy.egg-info/requires.txt
+fmdpy.egg-info/top_level.txt

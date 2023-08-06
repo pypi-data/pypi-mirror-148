@@ -1,0 +1,3 @@
+[console_scripts]
+fmdpy = fmdpy.__main__:fmdpy
+
