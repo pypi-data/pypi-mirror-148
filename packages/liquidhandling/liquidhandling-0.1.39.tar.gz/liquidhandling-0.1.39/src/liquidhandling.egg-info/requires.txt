@@ -1,0 +1,8 @@
+jsonref
+jsonschema
+pytest
+path
+pandas
+openpyxl
+mysql-connector-python
+zmq
