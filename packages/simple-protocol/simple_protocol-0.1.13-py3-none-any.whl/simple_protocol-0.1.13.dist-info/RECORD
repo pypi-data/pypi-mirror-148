@@ -1,0 +1,9 @@
+simpleprotocol/__init__.py,sha256=khDKUuWafURKVs5EAZkpOMiUHI2-V7axlqrWLPUpuZo,23
+simpleprotocol/client.py,sha256=U4nLbnjfFrK6QHv7ddbeNmRXVKDwphCCCMUOXg30mU8,1384
+simpleprotocol/errors.py,sha256=_hSQAiauNAF3DdocTlosXV-_qRQXEioc2psJTXbltf0,333
+simpleprotocol/server.py,sha256=dKrwpcrC9VmXhxZXMiX7xcIzx5ij7skwtafLbeqlSPo,4692
+simpleprotocol/tx.py,sha256=BCW-8-hJgmUznvs4Z5GQAP9o3vOoPqrajb9gALIuXSs,3029
+simple_protocol-0.1.13.dist-info/METADATA,sha256=fBsKO645NwX_GTYN2KlH0NrFLcIPND_2FL6vbOyMIhs,4209
+simple_protocol-0.1.13.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+simple_protocol-0.1.13.dist-info/top_level.txt,sha256=obay3qR79ElUO8SrorGLX_W8meDJ8IY03h8OHuAlUwI,15
+simple_protocol-0.1.13.dist-info/RECORD,,
