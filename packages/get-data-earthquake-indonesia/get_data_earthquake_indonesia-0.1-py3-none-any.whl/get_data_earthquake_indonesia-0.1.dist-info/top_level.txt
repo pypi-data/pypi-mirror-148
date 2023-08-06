@@ -1,0 +1,2 @@
+earthquake_data
+earthquake_recent
