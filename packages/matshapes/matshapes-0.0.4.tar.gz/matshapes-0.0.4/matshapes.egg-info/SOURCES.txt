@@ -1,0 +1,7 @@
+setup.py
+matshapes/__init__.py
+matshapes/shapes.py
+matshapes.egg-info/PKG-INFO
+matshapes.egg-info/SOURCES.txt
+matshapes.egg-info/dependency_links.txt
+matshapes.egg-info/top_level.txt
