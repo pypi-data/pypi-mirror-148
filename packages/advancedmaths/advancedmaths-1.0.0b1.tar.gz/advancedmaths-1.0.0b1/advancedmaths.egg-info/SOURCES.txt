@@ -1,0 +1,14 @@
+README.md
+setup.py
+advancedmath/__init__.py
+advancedmath/abs_equation.py
+advancedmath/difficult_equation.py
+advancedmath/fraction.py
+advancedmath/integral_expression.py
+advancedmath/misc.py
+advancedmath/simple_equation.py
+advancedmath/test.py
+advancedmaths.egg-info/PKG-INFO
+advancedmaths.egg-info/SOURCES.txt
+advancedmaths.egg-info/dependency_links.txt
+advancedmaths.egg-info/top_level.txt
