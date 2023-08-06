@@ -1,0 +1,15 @@
+inspirai_fps/__init__.py,sha256=8hmQA0KD644NHX9jp-e1gmxr3VIj6atT5XWw8bdmmIA,35
+inspirai_fps/data_classes.py,sha256=BnD_AaT0MgrR32KOchbQOPMrz4ZP_iUi1bTzng3vUsM,5648
+inspirai_fps/gamecore.py,sha256=zmOdzaKIro3uezj8ZR4H2bmr2Inf4DLHtoE_5wI-VOQ,28073
+inspirai_fps/raycast.py,sha256=TShLqqlttX-5p_CFa8gwQgUyAhHImnePKYKkkkeBaBI,10120
+inspirai_fps/simple_command_pb2.py,sha256=-aMwA6ETzlfxXATXb0dxOZGxFrEw5SGrZguKUaJUqXU,27747
+inspirai_fps/simple_command_pb2_grpc.py,sha256=ak105ybRKzSXq8GJY5G1hGcV_b3wFQNGPVoRgi67Hpc,2589
+inspirai_fps/utils.py,sha256=LEDyTsq22ABpP0Q3CooBLoJ3WqekBaxJ2v-KSEDv5_c,2434
+inspirai_fps/lib/libraycaster.dll,sha256=b7iDMfcmMJ1euP_t0I9Ixd0zuU7EtsOGhBoxWrQvVqg,230912
+inspirai_fps/lib/libraycaster.dylib,sha256=fVAOVkW-IGnPLTRtn21Pa0qTSCjE9HDAKVeaDOwyE0E,355391
+inspirai_fps/lib/libraycaster.so,sha256=1K1FqzmRc1Jqz7vCyrP7Yfc8fUzxHXJsw6GxXOeB4Xo,486272
+inspirai_fps-0.0.3.dist-info/LICENSE,sha256=n9wBqoVwSZ2JrLUj5hiupezLzGc706ovCoZSfN8YZgY,1090
+inspirai_fps-0.0.3.dist-info/METADATA,sha256=OY85CugSyFjIrYBA49HYawD0Wqp1Ok5TAAvqCqGiw4s,9311
+inspirai_fps-0.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+inspirai_fps-0.0.3.dist-info/top_level.txt,sha256=hhmxKrlYmEhQr6sLKYHPVNS8JUpV_Sz5p70EEM6GmS0,13
+inspirai_fps-0.0.3.dist-info/RECORD,,
