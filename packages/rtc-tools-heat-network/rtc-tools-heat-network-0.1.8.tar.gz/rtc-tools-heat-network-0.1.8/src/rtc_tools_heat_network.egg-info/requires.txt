@@ -1,0 +1,4 @@
+pyecore
+pymoca>=0.9.0
+rtc-tools>=2.5.0
+pyesdl>=21.11.0
