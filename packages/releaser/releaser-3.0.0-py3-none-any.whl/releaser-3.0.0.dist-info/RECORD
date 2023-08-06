@@ -1,0 +1,10 @@
+CHANGES.rst,sha256=0mlZnZev2In0phvKpjo8Q_wjoLZp-61-FXjIly7LmAo,1784
+README.rst,sha256=f1ufWKioxksunmYp7B_jiurrLYJ0w-AUExYtFnv0slI,4041
+releaser/__init__.py,sha256=RPSiP0NDu3CSEcrEe6fn8n2tPPB8XRJsFke7WL5rTUU,7240
+releaser/git_steps.py,sha256=LhKUiBdcnGRW1Y-oi9jnd_vh3MuQsV6K5smvBEI_d40,4682
+releaser/regex.py,sha256=joKtYpRHk79hPBC6dfuLCQ9NGYo75Ia5l4rgYaJMN88,3226
+releaser/steps.py,sha256=_ZnpXHW8YcUCRDC7TWRpyHl68BsUm7XMz2_ODQTBgwg,6950
+releaser-3.0.0.dist-info/LICENSE.rst,sha256=m_LGoOOpcWbOqINgtcwLNb-dGPYEuDPFfu5cTvdpPUo,1102
+releaser-3.0.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+releaser-3.0.0.dist-info/METADATA,sha256=9p9mztqXftGKphwY1EBavS-kk4rTYrWHC73s79Ep2Ag,1179
+releaser-3.0.0.dist-info/RECORD,,

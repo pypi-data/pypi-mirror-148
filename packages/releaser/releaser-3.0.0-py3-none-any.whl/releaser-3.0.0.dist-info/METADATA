@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: releaser
+Version: 3.0.0
+Summary: Automates the process of releasing a new version of some software.
+Home-page: https://github.com/nandoflorestan/releaser
+License: MIT
+Keywords: release,releaser,setup,distribute,project
+Author: Nando Florestan
+Author-email: nandoflorestan@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: bag (>=5.0.0,<6.0.0)
+Requires-Dist: docutils (<0.18)
+Requires-Dist: grimace (>=0.1.0,<0.2.0)
+Requires-Dist: requests
+Requires-Dist: wheel
+Project-URL: Repository, https://github.com/nandoflorestan/releaser
