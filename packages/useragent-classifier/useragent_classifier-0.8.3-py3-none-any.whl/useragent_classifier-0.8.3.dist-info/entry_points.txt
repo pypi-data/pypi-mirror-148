@@ -1,0 +1,3 @@
+[console_scripts]
+useragent_classifier=useragent_classifier:main.ua_clustering
+
