@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: airflow-provider-fivetran-atlassian
+Version: 1.0.0
+Summary: A Fivetran provider for Apache Airflow for Python 2
+Home-page: https://github.com/fivetran/airflow-provider-fivetran-atlassian
+Author: Fivetran
+Author-email: devrel@fivetran.com
+License: Apache License 2.0
+Project-URL: Bug Tracker, https://github.com/fivetran/airflow-provider-fivetran-atlassian/issues
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: apache-airflow (>=1.10)
+
+# airflow-provider-fivetran-2
+
+
