@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: hcprint
+Version: 0.0.4
+Summary: Html styled color printer for python
+Home-page: https://github.com/ethankremerdojc/cprint
+Author: Ethan Kremer
+Author-email: ethankremer.web@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/ethankremerdojc/cprint/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
+
+text = """
+Example Text:
+
+<red>This somewhat depends on what platform you are on.</red>
+The most <yellow>common</yellow> way to do this is <blue>by printing ANSI escape sequences.</blue> 
+For a simple example, see this color map:
+
+<black>black</black>
+<red>red</red>
+<green>green</green>
+<yellow>yellow</yellow>
+<blue>blue</blue>
+<magenta>magenta</magenta>
+<cyan>cyan</cyan>
+<lightgray>lightgray</lightgray>
+<darkgray>darkgray</darkgray>
+<lightred>lightred</lightred>
+<lightgreen>lightgreen</lightgreen>
+<lightyellow>lightyellow</lightyellow>
+<lightblue>lightblue</lightblue>
+<lightmagenta>lightmagenta</lightmagenta>
+<lightcyan>lightcyan</lightcyan>
+<white>white</white>
+"""
+
+# text = "<green>TASIN IS REALLY COOL</green> Also: <blue>Ethan is cool i guess</blue>"
+
