@@ -1,0 +1,3 @@
+[console_scripts]
+ansible-deployer = ansible_deployer.main:main
+
