@@ -1,0 +1,8 @@
+taxus/__init__.py,sha256=dIBB2-hrjlNly6fhpek09qujWxokkKyY5RtZohQgN7M,245
+taxus/likelihoods.py,sha256=SbOtzP5pKBBgl5zFLxm5rB_J_0V85zy5Dt7p1GzWacc,2779
+taxus/models.py,sha256=EFeTrKDOBZD24AN63iJX3vIrtSOv1AUy6FX6eDqKCy8,9823
+taxus/tests.py,sha256=qPJLV_flxyEjNiY9LWZYP31Hk8pWRjq9amewsxqyOrI,927
+taxus/util.py,sha256=1c71nOKOwGTom2uBOdFbd0bVpOX5MghbSCKYdimFjYQ,643
+taxus-0.0.4.dist-info/WHEEL,sha256=FMw6u7Kp3jrdDDtJRZ3hkPV-9adLQT8pbM4iifKUGfw,85
+taxus-0.0.4.dist-info/METADATA,sha256=Cwwv7ydSaLFLXUKIWsqT5Jnlfu4VbAAUrBEbDRh3Juc,2384
+taxus-0.0.4.dist-info/RECORD,,
