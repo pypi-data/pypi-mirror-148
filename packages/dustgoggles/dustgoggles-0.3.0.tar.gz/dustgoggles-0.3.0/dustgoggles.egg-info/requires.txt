@@ -1,0 +1,5 @@
+cytoolz
+
+[pivot]
+numpy
+pandas
