@@ -1,0 +1,9 @@
+[console_scripts]
+dynaflow=dynaflow.cli:dynaflow
+
+[mlflow.model_registry_store]
+dynamodb=dynaflow.model_registry:DynamodbModelStore
+
+[mlflow.tracking_store]
+dynamodb=dynaflow.tracking_store:DynamodbTrackingStore
+
