@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: keepcodingtest-oliver
+Version: 0.1.0
+Summary: Ejemplo primera clase
+Author: olivetti
+Author-email: oliverp83@protonmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: build
+Requires-Dist: twine
+
+Ejemplo de la primera clase de CI/CD
+
