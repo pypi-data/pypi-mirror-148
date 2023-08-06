@@ -1,0 +1,4 @@
+flask
+flask_login
+mpi4py
+Flask-SQLAlchemy
