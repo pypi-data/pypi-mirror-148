@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+__init__.py
+setup.py
+CsmCalculator.egg-info/PKG-INFO
+CsmCalculator.egg-info/SOURCES.txt
+CsmCalculator.egg-info/dependency_links.txt
+CsmCalculator.egg-info/top_level.txt

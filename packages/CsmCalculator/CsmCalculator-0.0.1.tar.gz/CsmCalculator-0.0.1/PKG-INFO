@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: CsmCalculator
+Version: 0.0.1
+Summary: Simple Calculator
+Home-page: UNKNOWN
+Author: Chiransh Singh Mehra
+Author-email: c.s.m6717@gmail.com
+License: MIT
+Description: This is a very simple calculator that takes two number and either adds, subtracts, multiply and divide them.
+        
+        Change log 
+        ===========
+        
+        0.0.1 (3004/2022)
+        -----------------
+        
+        - First Release
+Keywords: calculator
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
