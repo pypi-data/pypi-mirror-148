@@ -1,0 +1,7 @@
+pytest
+requests
+pandas
+pillow
+matplotlib
+sqlalchemy
+filetype
