@@ -1,0 +1,9 @@
+rest_choice/__init__.py,sha256=Bs2QF1gf48dJ0xDYLa3AqC6RjYgU1j_sqFvt3PL2s70,36
+rest_choice/views.py,sha256=x_nfZiYYjKy3pFZAkdWip9PrgIeYZ56tijAxsqYGcAA,941
+rest_choices/__init__.py,sha256=Bs2QF1gf48dJ0xDYLa3AqC6RjYgU1j_sqFvt3PL2s70,36
+rest_choices/views.py,sha256=x_nfZiYYjKy3pFZAkdWip9PrgIeYZ56tijAxsqYGcAA,941
+django_rest_choices-0.0.1.dist-info/LICENSE,sha256=P6Hk9G1SRAC2MIIPmbbkzy5fVUGJWZXcDsg1AEYUU6U,1078
+django_rest_choices-0.0.1.dist-info/METADATA,sha256=MJG5_cLgwTHIQ3nxE720R2OFN5KRnrC5HkGpd4BTIb4,665
+django_rest_choices-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+django_rest_choices-0.0.1.dist-info/top_level.txt,sha256=vzEIr4bwse6rawSn0V8XvHz1HyUP54uFCEW49rv6_Q8,12
+django_rest_choices-0.0.1.dist-info/RECORD,,
