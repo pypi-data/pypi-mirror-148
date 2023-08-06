@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% comment %} {% include "includes/meta.html" %} {% endcomment %}
+
+         
+
+        {% block head %}{% endblock head %}
+
+        <title>Black Night | {% block title %}{% endblock title %}</title>
+    <script defer src="{% static 'dist/main.2196eee939d3482f9cb1.js' %}"></script><link href="{% static 'dist/main.css' %}" rel="stylesheet"></head>
+
+    <body>
+        <div 
+            class="root" id="root" 
+            role="application" aria-label="application"
+            >{% block content %}{% endblock content %}</div>
+    </body>
+</html>
