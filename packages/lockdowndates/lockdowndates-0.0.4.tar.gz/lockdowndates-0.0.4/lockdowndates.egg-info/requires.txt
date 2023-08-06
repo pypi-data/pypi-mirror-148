@@ -1,0 +1,6 @@
+pip
+packaging
+pandas==1.4.0
+pyarrow
+
+[dev]
