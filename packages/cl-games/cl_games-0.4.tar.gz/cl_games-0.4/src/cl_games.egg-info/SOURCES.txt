@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/cl_games/__init__.py
+src/cl_games/collision.py
+src/cl_games/game.py
+src/cl_games/input.py
+src/cl_games/sprites.py
+src/cl_games.egg-info/PKG-INFO
+src/cl_games.egg-info/SOURCES.txt
+src/cl_games.egg-info/dependency_links.txt
+src/cl_games.egg-info/requires.txt
+src/cl_games.egg-info/top_level.txt
