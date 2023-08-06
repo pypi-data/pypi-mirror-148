@@ -1,0 +1,10 @@
+boto3
+colorama
+pyYaml
+
+[test]
+moto==3.0.7
+nose
+pyfakefs
+pytest
+pytest-cov
