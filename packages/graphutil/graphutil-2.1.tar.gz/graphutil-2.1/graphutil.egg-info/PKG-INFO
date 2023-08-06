@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: graphutil
+Version: 2.1
+Summary: Graph Processing Library
+Home-page: https://github.com/dahvid/graphutil
+Author: David Minor
+Author-email: dahvid.minor@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/dahvid/graphutil/archive/refs/tags/v2.1.tar.gz
+Description: UNKNOWN
+Keywords: graph
+Platform: UNKNOWN
+Requires-Python: >=3.8
