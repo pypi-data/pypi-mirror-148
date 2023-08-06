@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: p1-oracles-client
+Version: 0.1.0.dev0
+Summary: Cliente web para o p1-oracles-server
+Home-page: https://github.com/daltonserey/p1-oracles-client
+Author: Dalton Serey
+Author-email: daltonserey@gmail.com
+Maintainer: Dalton Serey
+Maintainer-email: daltonserey@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >3.6
+Description-Content-Type: text/markdown
+
+# p1 oracles client
+
+Cliente de terminal (linha de comando interativa) para o servidor
+de oráculos da disciplina Programação 1 da UFCG.
+
+
