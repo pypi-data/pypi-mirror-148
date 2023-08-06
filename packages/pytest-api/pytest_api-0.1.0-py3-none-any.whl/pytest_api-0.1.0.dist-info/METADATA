@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pytest-api
+Version: 0.1.0
+Summary: An ASGI middleware to populate OpenAPI Specification examples from pytest functions
+Home-page: https://github.com/sturzaam/pytest-api
+License: MIT
+Keywords: fastapi,pytest
+Author: Andrew Sturza
+Author-email: sturzaam@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: PyYAML (>=6.0,<7.0)
+Requires-Dist: pytest (>=7.1.1,<8.0.0)
+Project-URL: Repository, https://github.com/sturzaam/pytest-api
