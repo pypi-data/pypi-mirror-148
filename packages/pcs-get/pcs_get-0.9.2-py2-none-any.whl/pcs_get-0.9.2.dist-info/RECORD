@@ -1,0 +1,13 @@
+pcsget/__init__.py,sha256=qxu7iDIL7MgBWdCyu-BNRiKv3YSLZLkh_S1OgXjVp2g,103
+pcsget/__main__.py,sha256=wVbTXUUVtXsgdziFKZOlKsT2ILRxpvai6vlcoXGZFQw,63
+pcsget/cmdline.py,sha256=jTjOx-AeKz7irXviHRPX-A6pUqSp7HA5Hv82_meuozA,2738
+pcsget/config.py,sha256=K89w2iX1lgvLU08nCahqkMCLDLDOYDBVLTbGer5q9Bo,2365
+pcsget/log.py,sha256=JeZH6uqyLIErIjQCgk2NbZrO4ZB7K9CyYgF86ZfnR7U,1054
+pcsget/login.py,sha256=gpighHpALGzTqFMi8cURzbQjIDR5oGKIuftSiwcewQo,2900
+pcsget/sync.py,sha256=R1wZtGe4bo6OY8EatSu4r3_u4g1yAXjeh40f06viHHc,8336
+pcsget/utils.py,sha256=NBwqbS2jpypRRrpK7V72t-VfTESKH-iJoei2EV9nWuY,3388
+pcs_get-0.9.2.dist-info/METADATA,sha256=2rbyrqBsk2aCLCE8C3MiiAxfpY3YRwGVHYN4XJYtGWg,2700
+pcs_get-0.9.2.dist-info/WHEEL,sha256=1VPi6hfNQaRRNuEdK_3dv9o8COtLGnHWJghhj4CQ28k,92
+pcs_get-0.9.2.dist-info/entry_points.txt,sha256=N8y7NDp70nAh6ma-bHqQObljBIaHnGtmoYbTIvcdkfQ,52
+pcs_get-0.9.2.dist-info/top_level.txt,sha256=kE4rH84CU76hHWceSqIvMEqbSJZDj6NtA7EuTSEoetw,7
+pcs_get-0.9.2.dist-info/RECORD,,
