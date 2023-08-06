@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: async-polygon
+Version: 0.0.0a1
+Summary: Asynchronous Polygon Rest Api
+Home-page: https://github.com/mirage-deadline/async-polygon
+Author: Dmitry Skripka
+Author-email: dmitrio.skripka@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# async-polygon
+This is an unofficial asynchronous version of [Official Polygon Api(REST API)](https://github.com/polygon-io/client-python)
+---
+# **Getting Started**
+
+## Client example
+```
+import asyncio
+from async_polygon import RestAsyncClient
+
+
+async def main():
+    api_key = 'API KEY'
+    async with RestAsyncClient(api_key) as requestor:
+        requestor: RestAsyncClient
+        _from: str = '2022-03-29'
+        _to: str = '2022-04-26'
+        _timespan: str = 'hour'
+        data = await requestor.aggregate_bars('AAPL', 1, _timespan, _from, _to)
+        
+        print(data)
+
+if __name__ == '__main__':
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(main())
+```
+
+In near future I'll expand the functionality of the library
+
+
