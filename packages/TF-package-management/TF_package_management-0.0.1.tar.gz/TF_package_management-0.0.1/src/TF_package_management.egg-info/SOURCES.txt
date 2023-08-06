@@ -1,0 +1,6 @@
+README.md
+setup.py
+src/TF_package_management.egg-info/PKG-INFO
+src/TF_package_management.egg-info/SOURCES.txt
+src/TF_package_management.egg-info/dependency_links.txt
+src/TF_package_management.egg-info/top_level.txt
