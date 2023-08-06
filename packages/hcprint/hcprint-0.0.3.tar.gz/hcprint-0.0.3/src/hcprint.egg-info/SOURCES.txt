@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+src/hcprint/__init__.py
+src/hcprint/main.py
+src/hcprint.egg-info/PKG-INFO
+src/hcprint.egg-info/SOURCES.txt
+src/hcprint.egg-info/dependency_links.txt
+src/hcprint.egg-info/top_level.txt
