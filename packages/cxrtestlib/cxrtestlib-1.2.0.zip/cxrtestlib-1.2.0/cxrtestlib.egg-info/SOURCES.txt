@@ -1,0 +1,10 @@
+LICENSE.txt
+README.rst
+Tool.py
+setup.py
+cxrtestlib/__init__.py
+cxrtestlib/cxrlibone.py
+cxrtestlib.egg-info/PKG-INFO
+cxrtestlib.egg-info/SOURCES.txt
+cxrtestlib.egg-info/dependency_links.txt
+cxrtestlib.egg-info/top_level.txt
