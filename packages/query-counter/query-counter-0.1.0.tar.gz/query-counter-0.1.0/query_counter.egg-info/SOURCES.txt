@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+query_counter/__init__.py
+query_counter.egg-info/PKG-INFO
+query_counter.egg-info/SOURCES.txt
+query_counter.egg-info/dependency_links.txt
+query_counter.egg-info/requires.txt
+query_counter.egg-info/top_level.txt
