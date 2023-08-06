@@ -1,0 +1,14 @@
+apeman/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+apeman/dal/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+apeman/dal/tsdb/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+apeman/dal/tsdb/proto_builder.py,sha256=Awjuebaq3JjiVmTJwC4rBt994tIUNDveXclSu8-RqLk,8423
+apeman/dal/tsdb/tsdb_client.py,sha256=HcMTOrGIsHcjDoyIzMav2j4MhYgN4lwzWdl_KRZt1ZA,1470
+apeman/dal/tsdb/tsdb_pb2.py,sha256=NZ2uvvRcGkQyOokcYSS4UE14RyhfcBc3j9z90--xwU0,15538
+apeman/dal/tsdb/tsdb_pb2_grpc.py,sha256=XNNQ-UkvhZH6etSRJGxbR0_NZQ31ySQh32LWKuJHsCI,11140
+apeman/dal/tsdb/enum/DataAmount.py,sha256=9D-3x3PJdhVtkg4bDBrYWD5H1_SqO2ZsSwLagdzN-iI,130
+apeman/dal/tsdb/enum/DataType.py,sha256=6lJvN7WENk0TyHIU6pXI4g2eHkId-nYc81l82PM12pg,202
+apeman/dal/tsdb/enum/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apeman_dal_client-0.0.5.dist-info/METADATA,sha256=C9yRmPT18zqokdy7QXVoJCRVUDePb5K8fcIR3hD4NKQ,5075
+apeman_dal_client-0.0.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+apeman_dal_client-0.0.5.dist-info/top_level.txt,sha256=qkq-T1MIzLtHIMBU7TRO77CelHGi-gzctcpOI6WM1Y8,7
+apeman_dal_client-0.0.5.dist-info/RECORD,,
