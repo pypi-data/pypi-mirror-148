@@ -1,0 +1,9 @@
+README.md
+setup.py
+hodgeys_kjv_db/__init__.py
+hodgeys_kjv_db/exceptions.py
+hodgeys_kjv_db/kjv.py
+hodgeys_kjv_db.egg-info/PKG-INFO
+hodgeys_kjv_db.egg-info/SOURCES.txt
+hodgeys_kjv_db.egg-info/dependency_links.txt
+hodgeys_kjv_db.egg-info/top_level.txt
