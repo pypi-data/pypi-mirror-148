@@ -1,0 +1,122 @@
+Metadata-Version: 2.1
+Name: MutagenTagWrapper
+Version: 0.2.0
+Summary: 为各种多媒体标签格式提供统一的编辑接口
+Home-page: https://github.com/nukemiko/MutagenTagWrapper
+License: MIT
+Project-URL: Documentation, https://github.com/nukemiko/MutagenTagWrapper
+Project-URL: Source, https://github.com/nukemiko/MutagenTagWrapper
+Project-URL: Releases, https://github.com/nukemiko/MutagenTagWrapper/releases
+Project-URL: Issues, https://github.com/nukemiko/MutagenTagWrapper/issues
+Platform: Any
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# MutagenTagWrapper
+
+本模块是 Python 模块 Mutagen 的一个包装器，为各种多媒体标签格式提供了统一的编辑接口，旨在减少批量处理多媒体标签时的时间成本和出错概率。
+
+## 支持的格式
+
+- FLAC
+- MP3
+- APE (Monkey's Audio)
+- TTA (True Audio)
+- Ogg Vorbis
+- WAV (Wave)
+
+## 如何使用
+
+### 从文件中读取标签
+
+#### 读取 MutagenTagWrapper 支持的标签
+
+```pycon
+>>> import tagwrapper
+>>> tag = tagwrapper.openfile('test1.flac')
+>>> type(tag)
+tagwrapper.flac.FLAC
+>>> tag.title
+['High jump love']
+>>> tag.artist
+['綾倉盟', 'Syrufit']
+>>> tag.album
+['over']
+>>> tag.description
+["163 key(Don't modify):cEgtqHxwpdRKcBCRPBlPktlHhmrTcizixpMvRszN1/tYwYj5XaTULrYamr8WQPUKDI+bYPvNmaZC9XGraBSuN3t8MRjPn6kvLbU9svyFF8GS1rAtJRkQTztYZu/e16yUYrPIGYS/IakMYWCoXjfTTr72Ew2bfIHYHNyIakhJnkVI0sRdsdhamD8kag/r5Q0nyysl7OXcK83QfHLlO1lVQOVy3WmfAGQzdJhR2dbk1Y2r95oWzUM198YrjS4vP63jq7v0ifagC359t1OPNnqwDBY9znck388gQhGvlT8FTu+H3WKYQthYk6kZSft3z/heFagFbTMnZt2SCfJJPuxNyQxkRhZgYuu1xm8u+f2Lq4JwaiKSMnYzHh3qw75NPQYAY2Ivv6eGeqnahfZyMi5598dOJ52O2u0+TP16N9YDNl2zw7ah//m7LrlQO9JOgRYdnhZyyPHEgiPvSZMmMKL4c/rfZfJ3uIRLVYoJIDJ+TTLDhO/k3fF9VBDRapfmHDy/"]
+>>> tag.cover  # 读取封面信息
+<Picture 'image/jpeg' (553145 bytes)>
+>>> with open('test.flac.cover.jpg', 'wb') as f:  # 将封面数据写入文件
+...     f.write(tag.cover.data)
+...
+>>>
+```
+
+#### 读取 MutagenWrapper 不支持的标签
+
+```pycon
+>>> import tagwrapper
+>>> tag = tagwrapper.openfile('test.m4a')  # MutagenTagWrapper 目前不支持 M4A 格式使用的标签，将会返回 None
+>>> tag is None
+True
+>>> tag = tagwrapper.openfile('test.m4a', raw_tag_fallback=True)  # 如果上层 TagWrapper 包装器不支持此格式，返回下层 Mutagen 标签对象；在此例中为 mutagen.mp4.MP4 对象
+>>> type(tag)
+mutagen.mp4.MP4
+>>> tag.get('©nam')
+['High jump love']
+>>>
+```
+
+### 修改标签并写入文件
+
+```pycon
+>>> import tagwrapper
+>>> tag = tagwrapper.openfile('anothertest.ogg')
+>>> tag.description
+["163 key(Don't modify):cEgtqHxwpdRKcBCRPBlPktlHhmrTcizixpMvRszN1/tYwYj5XaTULrYamr8WQPUKDI+bYPvNmaZC9XGraBSuN3t8MRjPn6kvLbU9svyFF8GS1rAtJRkQTztYZu/e16yUYrPIGYS/IakMYWCoXjfTTr72Ew2bfIHYHNyIakhJnkVI0sRdsdhamD8kag/r5Q0nyysl7OXcK83QfHLlO1lVQOVy3WmfAGQzdJhR2dbk1Y2r95oWzUM198YrjS4vP63jq7v0ifagC359t1OPNnqwDBY9znck388gQhGvlT8FTu+H3WKYQthYk6kZSft3z/heFagFbTMnZt2SCfJJPuxNyQxkRhZgYuu1xm8u+f2Lq4JwaiKSMnYzHh3qw75NPQYAY2Ivv6eGeqnahfZyMi5598dOJ52O2u0+TP16N9YDNl2zw7ah//m7LrlQO9JOgRYdnhZyyPHEgiPvSZMmMKL4c/rfZfJ3uIRLVYoJIDJ+TTLDhO/k3fF9VBDRapfmHDy/"]
+>>> tag.description = '这是一段描述'  # 修改描述信息
+>>> tag.description
+['这是一段描述']
+>>> tag.cover is None  # 读取封面信息，但此文件没有封面，将会为 None
+True
+>>> # 读取封面图像文件中的数据
+>>> with open('anothertest.ogg.cover.png', 'rb') as f:
+...     cover_data = f.read()
+...
+>>> tag.cover = cover_data  # 封面也可修改；向标签中写入封面
+>>> tag.cover
+<Picture 'image/png' (553145 bytes)>
+>>> tag.save()  # 保存对标签的更改
+>>>
+```
+
+### 在两个文件之间复制标签
+
+```pycon
+>>> import tagwrapper
+>>> tag1 = tagwrapper.openfile('source.mp3')
+>>> tag2 = tagwrapper.openfile('target.ape')
+>>> tag1
+<MP3, title=['咲かせや咲かせ'], artist=['EGOIST'], album=['咲かせや咲かせ'], date=['2019'], encoder=['Lavf59.16.100']>
+>>> tag1.cover
+<Picture 'image/png' (466954 bytes)>
+>>> tag2  # target.ape 中没有标签信息
+<MonkeysAudio>
+>>> tag2.cover is None
+True
+>>> tag2.load_tag(tag1)  # 从 tag1 复制标签信息，写入到 tag2
+>>> tag2
+<MonkeysAudio, encoder=['Lavf59.16.100'], title=['咲かせや咲かせ'], artist=['EGOIST'], album=['咲かせや咲かせ'], date=['2019']>
+>>> tag2.cover
+<Picture 'image/png' (466954 bytes)>
+>>> tag2.save()  # 保存对 tag2 进行的更改
+>>>
+```
+
+
