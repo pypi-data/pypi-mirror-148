@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: Prolog-Code-Generator
+Version: 0.2.0
+Summary: expert system code generator
+Home-page: https://github.com/ShootGan/prolog-code-generator
+Author: Pawel Nalepka
+Author-email: nawelpalepka@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/ShootGan/prolog-code-generator/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Prolog Expert system code generator
+
+Library generate prolog code for expert system from CSV file with structure like this:
+| Name | param1 | param2 | param3 |
+|------- |-------- |-------- |-------- |
+| name1 | good | good | good |
+| name3 | bad | bad | bad |
+
+## Installtion
+
+`pip install -i https://test.pypi.org/simple/ Prolog-Code-Generator==0.1.1`
+
+## How to use:
+
+`from prolog_code_generator import prolog_code_generator`
+
+
