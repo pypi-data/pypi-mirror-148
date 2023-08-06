@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: lungctproc
+Version: 0.1
+Summary: Processing of Lung CT
+Author: Victor Nani
+Author-email: <victornani07@gmail.com>
+License: UNKNOWN
+Keywords: python,lung,ct,processing
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydicom
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: skimage
+Requires-Dist: opencv-python
+Requires-Dist: ipywidgets
+Requires-Dist: plotly
+Requires-Dist: shapely
+Requires-Dist: Pillow
+Requires-Dist: mpl-toolkits
+
+A module with functionalities for processing Lung CT in DICOM format.
+
