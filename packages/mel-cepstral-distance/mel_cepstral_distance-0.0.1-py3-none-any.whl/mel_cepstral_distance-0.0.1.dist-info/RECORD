@@ -1,0 +1,12 @@
+mel_cepstral_distance/__init__.py,sha256=c-qeAldzGFtOejad1flSgIn0ETk4kuDJQp0ARGM7v-0,162
+mel_cepstral_distance/core.py,sha256=r6S2HjorO2PImwOTkmFPpZNHYKX4TPKwoOh96K6M4HA,3484
+mel_cepstral_distance/mcd_computation.py,sha256=yxiZ1vOaHACqlk84bUW4lzEk4eRrjE6oKB3OFP39NkU,9371
+mel_cepstral_distance/types.py,sha256=yh0yfvEriknidZeK5T9gwkEND9GtpLXk_psl4Y449aY,57
+mel_cepstral_distance_cli/cli.py,sha256=FeQhV7YAcnow0B3S4XeR5m7S6QT-hlrWpAHLqCWZnYU,2007
+mel_cepstral_distance_cli/main.py,sha256=3qOl8Ec6KrXmrZ02YtI05u0cvAmG_t4XczajYCV88fM,4265
+mel_cepstral_distance-0.0.1.dist-info/LICENSE,sha256=LZAeH9fhWUy_TlGoSVY2X8gusakAUDYEDWmmYiSyn2I,1073
+mel_cepstral_distance-0.0.1.dist-info/METADATA,sha256=O9ZpWQ86Fu6QWl5FyliVBfSkODUtRB_8AZWIzh7-BhQ,4026
+mel_cepstral_distance-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+mel_cepstral_distance-0.0.1.dist-info/entry_points.txt,sha256=OQLw7bPgKr4_JNRgHD1K__iEmrlhH2hUmJh9yt7IB38,67
+mel_cepstral_distance-0.0.1.dist-info/top_level.txt,sha256=kMaN2N6SssgWWucEF2yVDJpfBBuELJ9z1ZkoGUIajQ4,48
+mel_cepstral_distance-0.0.1.dist-info/RECORD,,
