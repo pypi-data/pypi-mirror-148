@@ -1,0 +1,1 @@
+from . import hacker_dictionary
