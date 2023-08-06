@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/dxw/__init__.py
+src/dxw/dxw.py
+src/dxw.egg-info/PKG-INFO
+src/dxw.egg-info/SOURCES.txt
+src/dxw.egg-info/dependency_links.txt
+src/dxw.egg-info/requires.txt
+src/dxw.egg-info/top_level.txt
