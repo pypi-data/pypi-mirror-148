@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: quantecon_book_networks
+Version: 0.3
+Summary: Companion package for book-networks
+Author-email: QuantEcon Developers <contact@quantecon.org>
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Project-URL: Home, https://github.com/quantecon/book-networks
+
+# quantecon-book-networks
+Package for networks.quantecon.org (Economic Networks)
+
