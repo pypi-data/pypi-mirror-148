@@ -1,0 +1,7 @@
+setup.py
+chatbot/__init__.py
+chatbot/dingtalk.py
+chatbotlib.egg-info/PKG-INFO
+chatbotlib.egg-info/SOURCES.txt
+chatbotlib.egg-info/dependency_links.txt
+chatbotlib.egg-info/top_level.txt
