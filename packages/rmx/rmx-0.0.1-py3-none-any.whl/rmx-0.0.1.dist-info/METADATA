@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: rmx
+Version: 0.0.1
+Summary: Remote code deployment and execution for ML researchers.
+Home-page: https://github.com/takuma-yoneda/lmd
+Author: Takuma Yoneda
+Author-email: takuma.ynd@gmail.com
+License: MIT License
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Unix
+Description-Content-Type: text/markdown
+Requires-Dist: fabric
+Requires-Dist: docker
+Requires-Dist: randomname
+Requires-Dist: colorlog
+Requires-Dist: simple-slurm-command
+
+# LMD: Remote code deployment & execution tool for Machine Learning researchers
+
+Inspired by [afdaniele/cpk](https://github.com/afdaniele/cpk) and [geyang/jaynes](https://github.com/geyang/jaynes).
+
+
