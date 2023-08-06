@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: unittest-specs
+Version: 1.0.1
+Summary: A simple wrapper around the unittest package with different styles for specs
+Home-page: https://github.com/phillipgoellner/unittest_specs
+Author: Phillip Goellner
+License: GPL-3.0 License
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+
+UNKNOWN
+
