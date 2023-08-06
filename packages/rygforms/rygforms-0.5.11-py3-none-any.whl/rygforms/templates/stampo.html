@@ -1,0 +1,46 @@
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://unpkg.com/@fontsource/fira-sans@^4/400.css">
+        <link rel="stylesheet" href="https://unpkg.com/@fontsource/fira-sans@^4/500.css">
+        <link rel="stylesheet" href="https://unpkg.com/@steffo/bluelib@^4/dist/skeleton.root.css" type="text/css">
+        <link rel="stylesheet" href="https://unpkg.com/@steffo/bluelib@^4/dist/royaldawn.root.css" title="Royal Dawn" type="text/css">
+        <link rel="stylesheet alternate" href="https://unpkg.com/@steffo/bluelib@^4/dist/paper.root.css" title="Sheet of Paper" type="text/css">
+        <link rel="stylesheet alternate" href="https://unpkg.com/@steffo/bluelib@^4/dist/hacker.root.css" title="Hacker Terminal" type="text/css">
+        <link rel="stylesheet alternate" href="https://unpkg.com/@steffo/bluelib@^4/dist/sophon.root.css" title="The Sophonity" type="text/css">
+        <link rel="stylesheet alternate" href="https://unpkg.com/@steffo/bluelib@^4/dist/amber.root.css" title="Gestione Amber" type="text/css">
+        <link rel="stylesheet alternate" href="https://unpkg.com/@steffo/bluelib@^4/dist/pumpkin.root.css" title="Pumpkin Lantern" type="text/css">
+        <link rel="stylesheet alternate" href="https://unpkg.com/@steffo/bluelib@^4/dist/royalblue.root.css" title="Royal Blue" type="text/css">
+        <style>
+            body {
+                --bluelib-title-family: "Fira Sans", sans-serif;
+                --bluelib-title-weight: 500;
+                --bluelib-text-family: "Fira Sans", sans-serif;
+                --bluelib-text-weight: 400;
+                --bluelib-code-family: monospace;
+                --bluelib-code-weight: 400;
+            }
+        </style>
+        <title>{% block title %}{% endblock %} - RYGforms</title>
+        {% block extrahead %}{% endblock %}
+    </head>
+    <body>
+        <div class="layout layout-threecol">
+            <aside class="layout-threecol-left">
+                {% block left %}{% endblock %}
+            </aside>
+            <main class="main layout-threecol-center">
+                <h1>
+                    RYGforms
+                </h1>
+                <h2>
+                    Autenticazione in moduli
+                </h2>
+                {% block center %}{% endblock %}
+            </main>
+            <aside class="layout-threecol-right">
+                {% block right %}{% endblock %}
+            </aside>
+        </div>
+    </body>
+</html>
