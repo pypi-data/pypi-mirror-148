@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: isitwo
+Version: 0.1.0
+Summary: 
+Author: pquadri
+Author-email: pquadri10@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: boto3 (>=1.22.0,<2.0.0)
+Requires-Dist: boto3-type-annotations (>=0.3.1,<0.4.0)
+Requires-Dist: typer (>=0.4.1,<0.5.0)

@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "isitwo"
+version = "0.1.0"
+description = ""
+authors = ["pquadri <pquadri10@gmail.com>"]
+
+[tool.poetry.scripts]
+isitwo = "isitwo.main:app"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+boto3 = "^1.22.0"
+typer = "^0.4.1"
+boto3-type-annotations = "^0.3.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
