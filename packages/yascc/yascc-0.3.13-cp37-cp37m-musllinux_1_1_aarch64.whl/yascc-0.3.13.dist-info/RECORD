@@ -1,0 +1,14 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+_case.cpython-37m-aarch64-linux-gnu.so,sha256=-ESvD8v_03wASS4E-M4PriYI9sa7Psc98KNZsXNnfRI,47000
+yascc/__init__.py,sha256=Z_QA9btWpxP16ny1WdGWIkq5kzjYFW_MCtjxv_6Aqk8,324
+yascc/stack.c,sha256=iGdMcG-68l_qpX_MDvO8eVbI3LdkztQoy4P54mRuWVQ,1466
+yascc/camelcase.py,sha256=lqWH6V1B-gEPGj-mRSl2yelZ9QpkpBg9vc6gxhhStPM,302
+yascc/case.c,sha256=oHjildkUQheQM1U9SB3lwTAMiy8tWKpR2GnOgU8cE7E,5380
+yascc/snakecase.py,sha256=bXqbnmE7wS5j_5ZRcRuu082Oq-nkVnIRdpYOiUUwzeQ,453
+yascc/common.py,sha256=ACz1_zPbUKipPP_Jy1c8Lp1yZpVvoB9bHMSus-P6A2o,611
+yascc/stack.h,sha256=6nWKk1XVsK8OdW35w6AW_68xf93jhL6u4Al7CM0aAmo,298
+yascc-0.3.13.dist-info/RECORD,,
+yascc-0.3.13.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+yascc-0.3.13.dist-info/METADATA,sha256=KJQH4QBMdx75WeNFSoCb8S_g_4X_vkAIYIJ0WiYaeKs,1210
+yascc-0.3.13.dist-info/top_level.txt,sha256=K13m1ugr_ihoJxbznYkWhKQDVbYMnuO7zLuTMOWWZ8U,21
+yascc-0.3.13.dist-info/WHEEL,sha256=KYa7GmA-WEYiHw0ZiAFu7g7nbb1M75FyKD13pR8VBWc,113
