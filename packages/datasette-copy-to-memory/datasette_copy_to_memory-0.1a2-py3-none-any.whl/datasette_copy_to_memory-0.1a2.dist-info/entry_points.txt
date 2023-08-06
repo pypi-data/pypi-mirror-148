@@ -1,0 +1,2 @@
+[datasette]
+copy_to_memory = datasette_copy_to_memory
