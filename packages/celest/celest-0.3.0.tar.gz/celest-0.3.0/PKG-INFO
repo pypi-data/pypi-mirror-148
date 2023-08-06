@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: celest
+Version: 0.3.0
+Summary: Satellite dynamics and mission planning library.
+Home-page: https://github.com/JaiWillems/Celest
+Author: Jai Willems et al.
+Author-email: jai52h@hotmail.com
+License: BSD
+Download-URL: https://pypi.org/project/celest/
+Project-URL: Bug Tracker, https://github.com/JaiWillems/celest/issues
+Project-URL: Documentation, https://celest.readthedocs.io/en/latest/
+Project-URL: Source Code, https://github.com/JaiWillems/celest
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+Celest is a package for satellite mission planning.
+
+It provides:
+
+- Diverse arrangement of time and coordinate conversions,
+- Satellite orbital and attitude calculations, and
+- Satellite-to-ground encounter calculations.
+
+Refer to project links for documentation and source code urls.
+
+All Celest wheels distributed on PyPI are BSD licensed.
+
+
