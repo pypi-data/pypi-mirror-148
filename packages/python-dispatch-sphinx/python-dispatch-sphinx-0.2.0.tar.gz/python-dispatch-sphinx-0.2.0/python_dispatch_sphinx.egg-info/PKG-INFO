@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: python-dispatch-sphinx
+Version: 0.2.0
+Summary: Sphinx extension for python-dispatch
+Home-page: https://github.com/nocarryr/python-dispatch
+Author: Matthew Reid
+Author-email: matt@nomadic-recording.com
+License: MIT
+Project-URL: Documentation, https://python-dispatch.readthedocs.io
+Project-URL: Source, https://github.com/nocarryr/python-dispatch
+Project-URL: Tracker, https://github.com/nocarryr/python-dispatch/issues
+Platform: any
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Intended Audience :: Developers
+Classifier: Framework :: Sphinx
+Classifier: Framework :: Sphinx :: Extension
+Classifier: Topic :: Documentation
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Documentation
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+
+python-dispatch-sphinx
+======================
+
+An extension for `Sphinx`_ to document `python-dispatch`_ objects.
+
+Links
+-----
+
+.. list-table::
+
+    * - Project Home
+      - https://github.com/nocarryr/python-dispatch/sphinx-plugin
+    * - Documentation
+      - https://python-dispatch.readthedocs.io/en/latest/sphinx-plugin
+    * - PyPI
+      - https://pypi.org/project/python-dispatch-sphinx
+
+
+License
+-------
+
+Copyright (c) 2022 Matthew Reid <matt@nomadic-recording.com>
+
+python-dispatch-sphinx is licensed under the MIT license,
+please see LICENSE file for details.
+
+
+.. _Sphinx: https://www.sphinx-doc.org
+.. _python-dispatch: https://python-dispatch.readthedocs.io/en/latest/
+
+

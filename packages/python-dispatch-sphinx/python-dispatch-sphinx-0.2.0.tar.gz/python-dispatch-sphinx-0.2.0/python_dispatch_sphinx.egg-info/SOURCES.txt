@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+pydispatch_sphinx/__init__.py
+pydispatch_sphinx/directives.py
+pydispatch_sphinx/documenters.py
+python_dispatch_sphinx.egg-info/PKG-INFO
+python_dispatch_sphinx.egg-info/SOURCES.txt
+python_dispatch_sphinx.egg-info/dependency_links.txt
+python_dispatch_sphinx.egg-info/requires.txt
+python_dispatch_sphinx.egg-info/top_level.txt
