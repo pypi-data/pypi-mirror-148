@@ -1,0 +1,10 @@
+cl_games/__init__.py,sha256=uKe4eBo4Iskyh0XzTfmx4eM3hpZte-zueVJBa4rHHLs,136
+cl_games/collision.py,sha256=w8nhc9nCSJ7s7m_NrRbPgHAWH8Yt3ZR7xzgDGiUrQ0k,859
+cl_games/game.py,sha256=RFLCIiNKZt8NSWu7-hi0i0eK2s-t4dU6TTDg8sdjPNE,3735
+cl_games/input.py,sha256=TcmGmyrdwwmI1Y9nxLqDBbd5eiDrw5PiaFMye6Djz6U,1276
+cl_games/sprites.py,sha256=ZTDSBe9JHoOjfcdXY3vlLDI8uBWRHXOXIHpJ_EvbTBQ,1080
+cl_games-0.4.dist-info/LICENSE,sha256=Ur1L5TURvaTJ_TpSIUQUkMHS9DSlKhLwjSVqX60Xips,1071
+cl_games-0.4.dist-info/METADATA,sha256=VG-hl00sYVafKI5xa6-Sri7I9VYFStozLjs0dU80UBg,1542
+cl_games-0.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+cl_games-0.4.dist-info/top_level.txt,sha256=v5jIzaQS13pM_CYlA7CAPtDZJMo-qSTa6tASAZ4xPLQ,9
+cl_games-0.4.dist-info/RECORD,,
