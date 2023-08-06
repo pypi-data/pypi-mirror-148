@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: pagtest
+Version: 2.0.0
+Summary: A print test for PyPI
+Home-page: https://www.python.org/
+Author: wilson
+Author-email: wilson@163.com
+License: MIT
+Description: UNKNOWN
+Keywords: a b c
+Platform: UNKNOWN
