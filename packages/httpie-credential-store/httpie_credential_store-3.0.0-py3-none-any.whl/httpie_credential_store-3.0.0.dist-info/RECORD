@@ -1,0 +1,9 @@
+httpie_credential_store/__init__.py,sha256=SeWBS30rUMv-7m9SQvWyrQRklxZpBihbUijjOCqoZFs,157
+httpie_credential_store/_auth.py,sha256=QjrR-SMLdReuVKhAZqBOsCfHD7PwdEE8lpOpgv2-trc,4029
+httpie_credential_store/_keychain.py,sha256=H24SsWXEcKHU_h0HFNKI7pULl3OA1gfEj9iNBQ_R_3M,1975
+httpie_credential_store/_plugin.py,sha256=IPaJcknHIt5Saz6wtnDXEaNP9sbZwrIocHV6hg0HLjM,1275
+httpie_credential_store/_store.py,sha256=Jx9JQ7mnyvx68pWDz7UR-Gd4AX1RomA018mEGcw9WGA,2440
+httpie_credential_store-3.0.0.dist-info/entry_points.txt,sha256=gMA8Cfh8hGH2LmJq3auyGXciroJO5lhgSuEXVDaGenU,139
+httpie_credential_store-3.0.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+httpie_credential_store-3.0.0.dist-info/METADATA,sha256=9Yu5BY9bH43Jywo4oT-zXicWvKZyuYfnZTh_EhGDeag,8524
+httpie_credential_store-3.0.0.dist-info/RECORD,,
