@@ -1,0 +1,10 @@
+configuration = "reahl.paypalsupport.paypalconfig:PayPalSiteConfig"
+persisted = [ "reahl.paypalsupport.paypalsupport:PayPalOrder",]
+metadata_version = "1.0.0"
+
+[versions."6.0"]
+migrations = [ "reahl.paypalsupport.migrations:AdjustJsonForMySqlCompatibility",]
+
+[versions."5.2"]
+install_requires = [ "reahl-component>=5.2,<5.3", "reahl-sqlalchemysupport>=5.2,<5.3", "reahl-web>=5.2,<5.3", "reahl-web-declarative>=5.2,<5.3", "reahl-domain>=5.2,<5.3",]
+migrations = [ "reahl.paypalsupport.migrations:CreatePaypal",]
