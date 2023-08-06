@@ -1,0 +1,16 @@
+h5mapper/__init__.py,sha256=dLTJAl5NIe_MRJiSZUrdYKnejz-EbbvXgeOZ_8IH79c,205
+h5mapper/core.py,sha256=K1ATEhQLGvdGLdVcVmjTtSRW7VdWSvljFRgVyC_CFJ4,15971
+h5mapper/create.py,sha256=jJZKVcuIHgln9q0Y02HpOMtXuoHXcSrYW6Dxt8Kuias,4734
+h5mapper/create_container.py,sha256=77rRh0oGwvJpg3D7dtY2XQ6vFs7sOnJ20DJRzhOvAQs,2227
+h5mapper/crud.py,sha256=SguH1relqqQv9ixJOpeETo2SypgMhHUn9Y4qmjF-n74,6279
+h5mapper/features.py,sha256=G4dbNbQQvO7Yri58nZDwmwYu5K-nnRtbrK6K5ZqSnSQ,8288
+h5mapper/file_walker.py,sha256=h4dIvnW8o9BoX31qb6rnpEnvWp6xmcD42-sA5ylsIko,2374
+h5mapper/serve.py,sha256=DPbUSSIj88tDEqRS_boN0qBqXIEPqFKRgYTVTFZR_8c,7531
+h5mapper/typed_files.py,sha256=CbOmMbodQ0C4YLrjKoNe6AXtBo-LJ_SYdSYPFLQsUdA,3877
+h5mapper/utils.py,sha256=pqj6HG9wUaCz0zDIusCCfezH-SJh6jjA7fGnwH3fpfA,556
+h5mapper-0.2.2.dist-info/LICENSE,sha256=zQrqrSXi3Id3zhwdLH6C5R3ZOmr19O60pLKIQMVeupc,1070
+h5mapper-0.2.2.dist-info/METADATA,sha256=5MMrqPVDCVkQZPpk37DpsO1kERpxXjHD3dbfBxC7os4,8398
+h5mapper-0.2.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+h5mapper-0.2.2.dist-info/entry_points.txt,sha256=zxKfA_nYNmvxhaOBPELQ2YuNfTP7BML8v5aF6jDB2ds,108
+h5mapper-0.2.2.dist-info/top_level.txt,sha256=QDbXrfW3ECCoh_-Wruf3dsrX7NFP4NnmahB9hwbeNkk,9
+h5mapper-0.2.2.dist-info/RECORD,,
