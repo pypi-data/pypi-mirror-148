@@ -1,0 +1,5 @@
+setup.py
+bath.egg-info/PKG-INFO
+bath.egg-info/SOURCES.txt
+bath.egg-info/dependency_links.txt
+bath.egg-info/top_level.txt
