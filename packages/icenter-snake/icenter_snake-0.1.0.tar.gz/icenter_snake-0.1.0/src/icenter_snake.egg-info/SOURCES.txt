@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/icenter_snake/__init__.py
+src/icenter_snake/__main__.py
+src/icenter_snake/snake_main.py
+src/icenter_snake.egg-info/PKG-INFO
+src/icenter_snake.egg-info/SOURCES.txt
+src/icenter_snake.egg-info/dependency_links.txt
+src/icenter_snake.egg-info/top_level.txt
