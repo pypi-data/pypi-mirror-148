@@ -1,0 +1,6 @@
+jaccard/__init__.py,sha256=Rye5TMsTqyPzJ4iwVOSusFEk5SOD7qJ_c6QvZNKqirU,102
+jaccard/jaccard.py,sha256=plwK57xRzFMiTcXYlJdEH7E6NdYtx9NRLt2U5ZtB3fQ,6190
+boolean_jaccard-0.1.1.dist-info/LICENSE,sha256=bVPzEbwumFg2dPA8TCG0lAsliFRzjcWOJXy1a1ZcymU,1090
+boolean_jaccard-0.1.1.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+boolean_jaccard-0.1.1.dist-info/METADATA,sha256=1v5cry-MUcDnZR9E5_lH_GHm-zmjsnB_ivlxV05IiFI,5457
+boolean_jaccard-0.1.1.dist-info/RECORD,,
