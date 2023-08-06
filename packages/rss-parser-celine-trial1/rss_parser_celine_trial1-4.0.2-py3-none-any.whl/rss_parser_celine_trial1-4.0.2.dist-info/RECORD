@@ -1,0 +1,16 @@
+RSSparser/RSSFeed.py,sha256=VDOvpfhLtFpkMsr89mLNKyEAjp50dwsWWNZ0MgNmOY8,4277
+RSSparser/RSSItems.py,sha256=lFO4v4D_HTBcovqyQ4VOLZZwnhiHgXTe9umtyrAZgPE,3223
+RSSparser/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+RSSparser/cache_news.py,sha256=807xP9vcuDGyEZW-toW5t8Vf5FrenFmVE6Dj8SDxURQ,9164
+RSSparser/convert_format.py,sha256=G9cjvnKIrxvMy8C30ZmK5p6uk1fjkRHgJ6UMvpGX12M,6639
+RSSparser/date_time.py,sha256=tKQAlw5fTjxVP22fzI3CQOPuljb5zO91xvIC62eKHX8,1675
+RSSparser/fetch_data.py,sha256=UWNKfTJ07aFpgoh-JhthK4s77p0y9DCiTNhWh1M8RME,3662
+RSSparser/prepare_data.py,sha256=BQbmqe0wnG8YQ9f9MHllabc-hUU3Lg9_O8Dj5kAUsEY,10762
+RSSparser/print_news.py,sha256=pbiUK99mDyHGi7wVjNWo68zRhBoYBIxbgikgspmivrw,3523
+RSSparser/rss_parser.py,sha256=76gocTx9JeSPMZoDcy7Nz6cvkTNRGgV4rg4hMdw5urE,4589
+rss_parser_celine_trial1-4.0.2.dist-info/LICENSE,sha256=uDDXm0nxE1JsUVk8zzVllKe8aoIckVO1JWGjyG3oTtw,1068
+rss_parser_celine_trial1-4.0.2.dist-info/METADATA,sha256=8APSO_gWEp2yu7CrPj83qK0tAWC-4nT39wO28PLg3PI,2076
+rss_parser_celine_trial1-4.0.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+rss_parser_celine_trial1-4.0.2.dist-info/entry_points.txt,sha256=Fve65C-QpeoEmXHbfV72yn41EQcTgo832VMyvyGtr-0,57
+rss_parser_celine_trial1-4.0.2.dist-info/top_level.txt,sha256=sREMenOtcMiEqbLvrguiudJu1tKhHoIq8Eu83Ksg89w,10
+rss_parser_celine_trial1-4.0.2.dist-info/RECORD,,
