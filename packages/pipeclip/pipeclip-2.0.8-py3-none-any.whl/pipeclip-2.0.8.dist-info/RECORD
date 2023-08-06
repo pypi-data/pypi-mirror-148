@@ -1,0 +1,13 @@
+pipeclip/lib/Alignment.py,sha256=ns0L1KNrzDstGIyUBslbWxZWzTMeWFPowC9MrEZnXBM,2970
+pipeclip/lib/CLIP.py,sha256=RdN64uzKdvEthHYPAcwYXTm-GISwKEDWNXP5rta5y6s,28217
+pipeclip/lib/Enrich.py,sha256=Ov89W3JOcWdbfuVbOVJGRkqoiIXYlowo20ZPNkuGVDk,15154
+pipeclip/lib/Utils.py,sha256=QyT6t8SR3DToy2bd3XyCfC3gEWH77Eq8PN0LD2VmnRw,4014
+pipeclip/lib/ZTNB_tryCatch.R,sha256=kzzAh7E-Ik3LxyJFB8zvLHdr_CKjq4y8UIQs5lDdArw,6281
+pipeclip/lib/__init__.py,sha256=d3Sc1eoCKmypfzXO0_Q4By5kuf-HdKsfagqVCldU1ls,96
+pipeclip/lib/runR1.sh,sha256=XZnPp-26LpZpuNTVCGkw7_Dn2r9DBSIUDZ-KxPXAMcI,928
+pipeclip/main.py,sha256=o-qFlv2FME20zZTIfSf5hmyuszCxuU9THEkrEqkRRBo,8300
+pipeclip-2.0.8.dist-info/entry_points.txt,sha256=6IyAfjcofrhEcgQJW_Z2oLu87qBJGO5w7tydyHd56P4,54
+pipeclip-2.0.8.dist-info/LICENSE,sha256=6mLTgPRf3NZAkEdmayEliGL1RZ7halXz3YwvxcGuWk0,1547
+pipeclip-2.0.8.dist-info/WHEEL,sha256=DRf8A_Psd1SF2kVqTQOOFU1Xzl3-A2qljAxBMTOusUs,83
+pipeclip-2.0.8.dist-info/METADATA,sha256=xuKGxULdupz4YkXRm8V9e1TiBP1PBs-VcxjUm78RGr0,2440
+pipeclip-2.0.8.dist-info/RECORD,,
