@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: carehomecouk
+Version: 0.0.1
+Summary: Unofficial carehome.co.uk API Client for Python.
+Home-page: https://github.com/CareHQ/carehomecouk-python
+Author: Anthony Blackshaw
+Author-email: ant@crmhq.co.uk
+Maintainer: Anthony Blackshaw
+Maintainer-email: ant@crmhq.co.uk
+License: MIT
+Description: # Unofficial CareHome.co.uk Python API client
+        
+        Unofficial CareHome.co.uk API Client for Python.
+        
+        
+        ## Installation
+        
+        ```
+        pip install carehomecouk
+        ```
+        
+        
+        ## Requirements
+        
+        - Python 3.7+
+        
+        
+        # Usage
+        
+        ```Python
+        
+        import datetime
+        
+        from autumna.client import APIClient
+        from autumna.constants import Category
+        from autumna.resources.enquiry import Enquiry
+        
+        api_client = APIClient('MY_API_KEY')
+        
+        enquiries = Enquiry.many(
+            api_client,
+            date_time_from=datetime.datetime(2022, 4, 15),
+            category_id=Category.CARE_ENQUIRY
+        )
+        
+        for enquiry in enquiries:
+            print(enquiry)
+        
+        
+Keywords: carehome.co.uk
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Database
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown

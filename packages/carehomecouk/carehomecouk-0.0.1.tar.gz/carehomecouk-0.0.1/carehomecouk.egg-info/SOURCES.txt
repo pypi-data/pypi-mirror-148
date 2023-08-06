@@ -1,0 +1,17 @@
+README.md
+setup.cfg
+setup.py
+carehomecouk/__init__.py
+carehomecouk/client.py
+carehomecouk/exceptions.py
+carehomecouk.egg-info/PKG-INFO
+carehomecouk.egg-info/SOURCES.txt
+carehomecouk.egg-info/dependency_links.txt
+carehomecouk.egg-info/requires.txt
+carehomecouk.egg-info/top_level.txt
+carehomecouk/constants/__init__.py
+carehomecouk/constants/category.py
+carehomecouk/resources/__init__.py
+carehomecouk/resources/category.py
+carehomecouk/resources/enquiry.py
+carehomecouk/resources/member.py
