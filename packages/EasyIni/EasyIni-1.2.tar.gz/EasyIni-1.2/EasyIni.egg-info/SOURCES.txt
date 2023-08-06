@@ -1,0 +1,10 @@
+MANIFEST.in
+README.txt
+setup.py
+EasyIni/__init__.py
+EasyIni/ini.py
+EasyIni/inilib.dll
+EasyIni.egg-info/PKG-INFO
+EasyIni.egg-info/SOURCES.txt
+EasyIni.egg-info/dependency_links.txt
+EasyIni.egg-info/top_level.txt
