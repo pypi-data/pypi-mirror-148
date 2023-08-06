@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+example/example.py
+src/solartotr/__init__.py
+src/solartotr/solartotr.py
+src/solartotr.egg-info/PKG-INFO
+src/solartotr.egg-info/SOURCES.txt
+src/solartotr.egg-info/dependency_links.txt
+src/solartotr.egg-info/top_level.txt
