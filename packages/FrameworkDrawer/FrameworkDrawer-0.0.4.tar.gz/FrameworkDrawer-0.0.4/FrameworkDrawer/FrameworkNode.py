@@ -1,0 +1,128 @@
+#############################################
+# File Name: FrameworkNode.py
+# Author: W-Mai
+# Mail: 1341398182@qq.com
+# Created Time:  2022-04-16
+#############################################
+from optparse import Option
+from typing import Dict, Type, Optional, List, Tuple
+from .Signals import *
+
+
+# {
+#       "name":    "ModelName",
+#       "signals": [],
+# }
+#
+
+class Point(object):
+    def __init__(self, x: float, y: float):
+        self.x = x
+        self.y = y
+
+    def __str__(self):
+        return "Point(x={}, y={})".format(self.x, self.y)
+
+    @property
+    def export(self):
+        return {
+            "x": self.x,
+            "y": self.y
+        }
+
+
+class ModelBoxBaseModelMetaclass(type):
+    def __new__(mcs, name, bases, attrs):
+        mcs._attrs = None
+        mcs._signals = None
+
+        attrs["_attrs"] = attrs
+
+        signals = []
+        for attr in attrs.items():
+            sig_name: str = attr[0]
+            sig_obj = attr[1]
+            if isinstance(sig_obj, SignalBase):
+                # sig_obj: SignalBase
+                if sig_obj.alias is None:
+                    setattr(sig_obj, 'alias', sig_name)
+                signals.append(sig_obj)
+        attrs['_signals'] = signals
+
+        return super().__new__(mcs, name, bases, attrs)
+
+
+class ModelBoxBaseModel(object, metaclass=ModelBoxBaseModelMetaclass):
+    class Meta:
+        pass
+
+    def __init__(self):
+        pass
+
+    def to_dict(self):
+        meta_dict = self.meta_dict
+        res_dict = {
+            # 如果name为空，则使用类名
+            'name': meta_dict.get('name', type(self).__name__),
+            'signals': [sig.to_dict() for sig in self.signals]
+        }
+
+        return res_dict
+
+    @property
+    def other_conf(self):
+        meta_dict = self.meta_dict
+        res_dict = {
+            conf_name:
+                meta_dict.get(conf_name, None)
+            for conf_name in self.readable_conf() if meta_dict.get(conf_name, None) is not None
+        }
+        return res_dict
+
+    # 哪些配置项可以读取
+    @staticmethod
+    def readable_conf():
+        return ["position", "flag"]
+
+    @property
+    def meta_dict(self):
+        meta_class = type(self).Meta
+        if meta_class is not None:
+            return {
+                conf_name: getattr(meta_class, conf_name, None)
+                for conf_name in self.readable_conf()
+            }
+
+    @property
+    def attrs(self):
+        return self._attrs
+
+    @property
+    def signals(self):
+        return self._signals
+
+
+class CONFIGURE(object):
+
+    def __init__(self,
+                 node_pos_pair: Dict[Type[ModelBoxBaseModel], Tuple[int, int]],
+                 other_conf=None,
+                 colors=None):
+        if colors is None:
+            colors = [
+                "#ffa502", "#ff6348", "#ff4757", "#747d8c",
+                "#2f3542", "#2ed573", "#1e90ff", "#3742fa",
+                "#e84393", "#05c46b", "#ffd43b", "#ffa000"
+            ]
+        if other_conf is None:
+            other_conf = dict()
+        self.POSITIONS_PAIR = node_pos_pair
+        self.COLORS = colors
+        self.OTHER_CONF = other_conf
+
+        for node, pos in node_pos_pair.items():
+            node.Meta.position = Point(*pos)
+
+        for node, conf in other_conf.items():
+            for attr in conf.items():
+                setattr(node.Meta, attr[0], attr[1])
