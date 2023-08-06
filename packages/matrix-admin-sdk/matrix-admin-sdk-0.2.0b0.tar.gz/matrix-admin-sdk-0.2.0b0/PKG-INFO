@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: matrix-admin-sdk
+Version: 0.2.0b0
+Summary: Async wrapper for matrix.org admin API
+Home-page: https://github.com/dmitriiweb/matrix-admin-sdk
+Keywords: sdk,matrix,synapse
+Author: Dmitrii Kurlov
+Author-email: dmitriik@protonmail.com
+Requires-Python: >=3.8,<3.11
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Dist: httpx (>=0.22.0,<0.23.0)
+Project-URL: Documentation, https://dmitriiweb.github.io/matrix-admin-sdk
+Project-URL: Repository, https://github.com/dmitriiweb/matrix-admin-sdk
+Description-Content-Type: text/markdown
+
+# Matrix Admin Sdk
+
+[![PyPI version](https://badge.fury.io/py/matrix-admin-sdk.svg)](https://badge.fury.io/py/matrix-admin-sdk)
+
+Async wrapper for matrix.org admin API
+
+
+## Installation
+```shell
+pip install matrix-admin-sdk
+```
+
+## Usage
+Documentations [here](https://dmitriiweb.github.io/matrix-admin-sdk/)
+
+### Quick Start
+```python
+import asyncio
+
+import httpx
+
+from matrix_admin_sdk import MatrixAdminClient
+from matrix_admin_sdk.endpoints.v1 import EditRoomMembership
+
+
+async def main():
+    admin_key = "admin_key"
+    http_client = httpx.AsyncClient()
+    server_url = "https://matrix.server.com"
+
+    admin_client = MatrixAdminClient(http_client, admin_key, server_url)
+
+    api = EditRoomMembership(admin_client)
+    res = await api.join_user_to_room("room_id", "user_id")
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```

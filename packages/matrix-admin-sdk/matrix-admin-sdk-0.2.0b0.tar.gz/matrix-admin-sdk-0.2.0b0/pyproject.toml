@@ -1,0 +1,88 @@
+[tool.poetry]
+name = "matrix-admin-sdk"
+version = "0.2.0b"
+readme="README.md"
+repository="https://github.com/dmitriiweb/matrix-admin-sdk"
+documentation="https://dmitriiweb.github.io/matrix-admin-sdk"
+keywords=["sdk", "matrix", "synapse"]
+description = "Async wrapper for matrix.org admin API"
+authors = ["Dmitrii Kurlov <dmitriik@protonmail.com>"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: Unix",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: Implementation :: CPython",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.11"
+httpx = "^0.22.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+pytest-cov = "^3.0.0"
+tox = "^3.24.5"
+mkdocs-material = "^8.1.7"
+mkdocstrings = "^0.17.0"
+pre-commit = "^2.17.0"
+isort = "^5.10.1"
+mypy = "^0.931"
+flake8 = "^4.0.1"
+pytest-asyncio = "^0.17.2"
+Jinja2 = "<3.1.0"
+black = "^22.3.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+force_single_line = false
+atomic = true
+include_trailing_comma = true
+lines_after_imports = 2
+lines_between_types = 1
+use_parentheses = true
+src_paths = ["matrix_admin_sdk", "tests"]
+skip_glob = ["*/setup.py"]
+filter_files = true
+known_first_party = "matrix_admin_sdk"
+
+[tool.black]
+line-length = 88
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | tests/.*/setup.py
+)/
+'''
+
+[tool.mypy]
+mypy_path = "matrix_admin_sdk"
+check_untyped_defs = true
+disallow_any_generics = true
+ignore_missing_imports = true
+no_implicit_optional = true
+show_error_codes = true
+strict_equality = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+no_implicit_reexport = true
