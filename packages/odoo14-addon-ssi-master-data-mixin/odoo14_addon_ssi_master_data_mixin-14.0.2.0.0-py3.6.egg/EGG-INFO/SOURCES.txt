@@ -1,0 +1,7 @@
+setup.py
+odoo14_addon_ssi_master_data_mixin.egg-info/PKG-INFO
+odoo14_addon_ssi_master_data_mixin.egg-info/SOURCES.txt
+odoo14_addon_ssi_master_data_mixin.egg-info/dependency_links.txt
+odoo14_addon_ssi_master_data_mixin.egg-info/not-zip-safe
+odoo14_addon_ssi_master_data_mixin.egg-info/requires.txt
+odoo14_addon_ssi_master_data_mixin.egg-info/top_level.txt
