@@ -1,0 +1,2 @@
+[console_scripts]
+loginator = loginator.loginator:run
