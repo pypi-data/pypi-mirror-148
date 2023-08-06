@@ -1,0 +1,3 @@
+[console_scripts]
+pyxcp-probe-can-drivers=pyxcp.scripts.pyxcp_probe_can_drivers:main
+
