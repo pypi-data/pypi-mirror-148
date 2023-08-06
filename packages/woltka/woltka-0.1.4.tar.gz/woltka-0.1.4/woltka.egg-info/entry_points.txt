@@ -1,0 +1,5 @@
+[console_scripts]
+woltka = woltka.cli:cli
+
+[qiime2.plugins]
+q2-woltka = woltka.q2.plugin_setup:plugin
