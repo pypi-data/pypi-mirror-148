@@ -1,0 +1,10 @@
+autopep8
+coverage
+flake8
+mock
+mockito
+pylint
+pytest
+pytest-mpl
+wheel
+twine==3.2.0
