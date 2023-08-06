@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+setup.py
+database_manager/pg_database_manager.egg-info/PKG-INFO
+database_manager/pg_database_manager.egg-info/SOURCES.txt
+database_manager/pg_database_manager.egg-info/dependency_links.txt
+database_manager/pg_database_manager.egg-info/top_level.txt
