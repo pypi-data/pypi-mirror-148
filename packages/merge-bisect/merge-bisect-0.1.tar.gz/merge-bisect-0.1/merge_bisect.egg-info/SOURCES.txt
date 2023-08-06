@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+setup.py
+merge_bisect/__init__.py
+merge_bisect/__main__.py
+merge_bisect.egg-info/PKG-INFO
+merge_bisect.egg-info/SOURCES.txt
+merge_bisect.egg-info/dependency_links.txt
+merge_bisect.egg-info/entry_points.txt
+merge_bisect.egg-info/top_level.txt

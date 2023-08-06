@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: merge-bisect
+Version: 0.1
+Summary: Like git bisect, but only with merge commits.
+Home-page: https://github.com/miki725/merge-bisect
+Author: Miroslav Shubernetskiy
+License: MIT
+Keywords: git bisect
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Testing
+
+============
+merge-bisect
+============
+
+Like git bisect, but only with merge commits.
+
+Some features:
+
+* Pure Python
+* No dependencies (other than git installed)
+* Single file. Installing is as easy as downloading a ``merge_bisect/__main__.py`` file
+
+Install
++++++++
+
+::
+
+    pipx install merge-bisect
+
+

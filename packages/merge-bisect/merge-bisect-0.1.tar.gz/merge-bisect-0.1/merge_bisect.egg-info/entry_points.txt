@@ -1,0 +1,3 @@
+[console_scripts]
+merge-bisect = merge_bisect.__main__:main
+
