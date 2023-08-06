@@ -1,0 +1,3 @@
+[console_scripts]
+langma = langma.cli:run
+
