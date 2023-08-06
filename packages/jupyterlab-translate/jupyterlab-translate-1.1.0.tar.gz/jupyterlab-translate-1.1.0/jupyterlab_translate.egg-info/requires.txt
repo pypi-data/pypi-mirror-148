@@ -1,0 +1,9 @@
+babel
+click
+cookiecutter
+polib
+
+[test]
+check-manifest
+pytest
+pytest-cov
