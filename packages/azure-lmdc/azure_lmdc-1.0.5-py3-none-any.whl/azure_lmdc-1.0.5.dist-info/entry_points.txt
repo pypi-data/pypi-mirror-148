@@ -1,0 +1,3 @@
+[console_scripts]
+azure-lmdc = azure_lmdc.demo:main
+
