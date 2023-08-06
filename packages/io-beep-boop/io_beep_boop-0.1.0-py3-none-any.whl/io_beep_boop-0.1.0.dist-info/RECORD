@@ -1,0 +1,12 @@
+io_beep_boop/__init__.py,sha256=79VKbOkK94WoynA1U_OoThXkDzQqnd3_eeKKnaOyKzQ,88
+io_beep_boop/api/__init__.py,sha256=10KNU_v_AAYX_z4gVICEglzuMjSSjnEakc6pyW2Sx9I,233
+io_beep_boop/api/client.py,sha256=wmantGo_QxA-O8mf4Da_J0r4MGxR7nwrO87azZZ4PK4,4518
+io_beep_boop/api/models.py,sha256=9md8ipi9JHSc8WUuaoWFdmFbvxpYZkC8x4y55yuiAt8,1606
+io_beep_boop/cli/__main__.py,sha256=7bojeH-2Z04Twz6Ei2j_LR0HdxKYp913O1HTyK9fMds,6232
+io_beep_boop/tests/conftest.py,sha256=AwwFgzj1thMv9fRsssqYgSQSbp8zHs3aZEe3HK_KeWA,66
+io_beep_boop/tests/test_something.py,sha256=W7OnEp4Ln19jAZAQJtJLKt7dX8UqpDcqFsogERo5g2w,73
+io_beep_boop-0.1.0.dist-info/entry_points.txt,sha256=w0opjvoksVNb4Cy1blUYlxxmgdjUtBzGmQ0gAB9VtDk,63
+io_beep_boop-0.1.0.dist-info/LICENSE.txt,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+io_beep_boop-0.1.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+io_beep_boop-0.1.0.dist-info/METADATA,sha256=oH2oqha4yBN34qx0W7DPUPzyqDFYwLZebvPiICt95ys,1450
+io_beep_boop-0.1.0.dist-info/RECORD,,

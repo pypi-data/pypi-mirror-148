@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: io-beep-boop
+Version: 0.1.0
+Summary: 
+Home-page: https://github.com/Steffo99/io-beep-boop
+License: AGPL-3.0-or-later
+Keywords: ,,,,
+Author: Stefano Pigozzi
+Author-email: you@example.org
+Maintainer: Stefano Pigozzi
+Maintainer-email: you@example.org
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: cfig[cli] (>=0.2.3,<0.3.0)
+Requires-Dist: click (>=8.1.2,<9.0.0)
+Requires-Dist: httpx (>=0.22.0,<0.23.0)
+Requires-Dist: pydantic (>=1.9.0,<2.0.0)
+Project-URL: Repository, https://github.com/Steffo99/io-beep-boop
+Description-Content-Type: text/markdown
+
+# `io-beep-boop`
+
+An experimental wrapper and command line interface for the Italian [IO App API](https://developer.io.italia.it/openapi.html)
+
+\[ [**Documentation**](https://io-beep-boop.readthedocs.io/en/latest/index.html) | [**PyPI**](https://pypi.org/project/io-beep-boop/) \]
+
+```console
+$ io-beep-boop
+Usage: io-beep-boop [OPTIONS] COMMAND [ARGS]...
+
+Options:
+  --version         Show the version and exit.
+  -t, --token TEXT  One of the two IO App API tokens of the service you want
+                    to use.
+  --base-url TEXT   The base URL of the IO App API to use.
+  --help            Show this message and exit.
+
+Commands:
+  registered-fast
+  registered-slow
+  ...
+```
+
