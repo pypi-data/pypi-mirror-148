@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: odoo14-addon-mitxelena
+Version: 14.0.0.0.2.dev1
+Summary: Manufacturing customisation for Talleres mitxelena
+Home-page: https://gitlab.com/coopdevs
+Author: Coopdevs Treball SCCL
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: Framework :: Odoo :: 14.0
+Requires-Python: >=3.6
+Requires-Dist: odoo14-addon-base-revision
+Requires-Dist: odoo14-addon-product-supplierinfo-for-customer
+Requires-Dist: odoo (<14.1dev,>=14.0a)
+
+UNKNOWN
+
