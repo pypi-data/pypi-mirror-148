@@ -1,0 +1,8 @@
+easybird/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+easybird/detection.py,sha256=V5ifg3VaeDw37yoS-FTYbfk4x6pc2CPQ45chG1aW_0Y,3276
+easybird/models/jit_bad.pt,sha256=rAlMCbdvaDCrF5ZvBb2zclLdXvx-5yb8e3zhFrug1mY,4004192
+easybird-0.0.1.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+easybird-0.0.1.dist-info/METADATA,sha256=cANJltF5l3aPWP2Rz3qYbWWyrKO5tnr3FOgg3cN417o,1167
+easybird-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+easybird-0.0.1.dist-info/top_level.txt,sha256=HxPyvBbKKGBamctuCOGPgacH9lGk4e-FPFaH2vDKABU,9
+easybird-0.0.1.dist-info/RECORD,,
