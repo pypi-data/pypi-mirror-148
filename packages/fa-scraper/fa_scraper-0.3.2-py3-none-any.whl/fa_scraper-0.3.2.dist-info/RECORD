@@ -1,0 +1,9 @@
+fa_scraper/__init__.py,sha256=ilcWEvcrsIexxUcsE2BP23_mQrpSJpqmQN9DLlL8S0I,269
+fa_scraper/cli.py,sha256=BS3te1cwkC3hQNAIBQChck7tFZETDSiZvRPkoMl9qUY,2346
+fa_scraper/fa_scraper.py,sha256=Y_k5rLwE5Kmyvn0n2TwSyvSvWrTzfO9VNnn6WKVUh0Y,6905
+fa_scraper/types.py,sha256=zDaBMLjhF3NIyvWbgizCPcIuTYsU7fc8cSSmPB9JeTM,551
+fa_scraper-0.3.2.dist-info/entry_points.txt,sha256=Ft-l9CFnHR8G6jdPFoSMxcvUK7fNhf9R47ANPoaBkv8,82
+fa_scraper-0.3.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+fa_scraper-0.3.2.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+fa_scraper-0.3.2.dist-info/METADATA,sha256=1FAMDzLq172LrObQR34qGrt1w6ICW1Z9GT9VMps3nmY,3207
+fa_scraper-0.3.2.dist-info/RECORD,,
