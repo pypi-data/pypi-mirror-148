@@ -1,0 +1,12 @@
+widgetastic.core>=1.0.0
+
+[dev]
+pre-commit
+pytest
+pytest-cov
+pytest-xdist
+codecov
+tox
+
+[doc]
+sphinx

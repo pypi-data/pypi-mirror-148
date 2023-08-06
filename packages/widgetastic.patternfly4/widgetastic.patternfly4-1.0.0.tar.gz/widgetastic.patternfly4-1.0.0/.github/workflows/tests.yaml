@@ -1,0 +1,81 @@
+name: wt.pf4 tests
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: ["opened", "synchronize", "reopened"]
+  create:
+
+jobs:
+  pre-commit:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+        with:
+          python-version: "3.8"
+      - name: Pre Commit Checks
+        uses: pre-commit/action@v2.0.3
+      - name: Analysis (git diff)
+        if: failure()
+        run: git diff
+
+  test:
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        browser: [chrome, firefox]
+        python-version: ["3.8", "3.9", "3.10"]
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+        with:
+           python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          pip install -U pip
+          pip install -U setuptools
+          pip install -e .[dev]
+      - name: Fetch selenium image
+        run: podman pull quay.io/redhatqe/selenium-standalone:latest
+      - name: Test with pytest
+        env:
+          BROWSER: ${{ matrix.browser }}
+        run: |
+          pytest -v -n 5 --no-cov-on-fail \
+                         --cov=widgetastic_patternfly4 \
+                         --cov-append
+          mv .coverage ${{ strategy.job-index }}_coverage
+      - name: Upload coverage artifact
+        uses: "actions/upload-artifact@v2"
+        with:
+          name: ${{ strategy.job-index }}_coverage
+          path: ${{ strategy.job-index }}_coverage
+
+  submit_coverage:
+    runs-on: ubuntu-20.04
+    needs: test
+    steps:
+      - uses: actions/setup-python@v3
+        with:
+          python-version: "3.8"
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -U setuptools coverage
+          python setup.py install
+      - name: Download coverage artifacts
+        uses: actions/download-artifact@v2
+        with:
+          path: /tmp/coverage
+      - name: Combine coverage data files
+        run: |
+          coverage combine -a $(find /tmp/coverage -type f)
+          coverage xml -o /tmp/coverage.xml
+      - name: Publish coverage
+        uses: codecov/codecov-action@v1.5.2
+        with:
+          files: /tmp/coverage.xml
