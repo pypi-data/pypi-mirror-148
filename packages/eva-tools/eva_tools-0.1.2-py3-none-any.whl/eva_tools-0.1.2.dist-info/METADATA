@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: eva-tools
+Version: 0.1.2
+Summary: Set of tools for manipulating research data related to the Easy Volcanic Aerosol Model, and other stratospheric aerosol datasets.
+Home-page: https://arggit.usask.ca/cj/eva_tools
+Author: C.J. Ogilvie
+Author-email: cfo188@usask.ca
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: netCDF4
+Requires-Dist: datetime
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: openpyxl
+Requires-Dist: scipy
+
+The eva_tools package is set of tools used for research on stratospheric aerosol data sets. In particular, the package
+was created to aid in the development of the Easy Volcanic Aerosol model (EVA).
+
+This package was created by C.J. Ogilvie under the supervision of Dr. Matthew Toohey, for the Institute of Space and
+Atmospheric Studies at the University of Saskatchewan.
+
+For questions, contact:
+    - C.J. Ogilvie: cfo188@usask.ca
+    - Dr. Matthew Toohey: matthew.toohey@usask.ca
+
+The package contains four tools. These are:
+    - read_eva: Reads stratospheric aerosol files into python-usable data.
+    - write_eva: Writes stratospheric aerosol data into files (netCDF4 and Excel files currently supported).
+    - plot_eva: Quickly generate data plots from stratospheric aerosol files.
+    - merge_eva: Concatenates two or more stratospheric aerosol files to cover a larger time period.
+
+Last updated April 28th, 2022.
+
