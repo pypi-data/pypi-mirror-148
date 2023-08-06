@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: kratky_rg_izero
+Version: 0.1.0
+Summary:      Create overlaid Kratky plots from a directory of PRIMUS SAXS data     
+Home-page: https://github.com/gpwolfe/kratky_rg_izero
+Author: Alisha Jones, PhD; Gregory Wolfe; Brian Wolfe, PhD
+Author-email: wolfe.gregory.p@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+License-File: LICENSE
+
+UNKNOWN
+
