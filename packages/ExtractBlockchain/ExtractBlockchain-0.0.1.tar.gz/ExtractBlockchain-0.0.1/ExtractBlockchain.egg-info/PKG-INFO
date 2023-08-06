@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: ExtractBlockchain
+Version: 0.0.1
+Summary: Extract data from any Blockchain using python
+Home-page: 
+Author: Tushar Choudhary and Aakash deep
+Author-email: tusharchoudhary0003@gmail.com
+License: UNKNOWN
+Keywords: Blockchain
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE.TXT
+
+UNKNOWN
+

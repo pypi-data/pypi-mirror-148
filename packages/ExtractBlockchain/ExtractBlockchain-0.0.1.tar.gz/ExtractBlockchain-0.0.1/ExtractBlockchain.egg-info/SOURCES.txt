@@ -1,0 +1,8 @@
+LICENSE.TXT
+MANIFEST.in
+README.md
+setup.py
+ExtractBlockchain.egg-info/PKG-INFO
+ExtractBlockchain.egg-info/SOURCES.txt
+ExtractBlockchain.egg-info/dependency_links.txt
+ExtractBlockchain.egg-info/top_level.txt
