@@ -1,0 +1,11 @@
+backups/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+backups/apps.py,sha256=iOz40L2Lkudf013CBYBv0K0Mmqf_CFtb0pSozx37CiU,174
+backups/tests.py,sha256=2uDafv3Ns6f7Vy1ekUtgYxCZEi1KRyesZDTAFhYcX-E,63
+backups/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+backups/management/commands/backupdatabase.py,sha256=KzlGADvkaNW5fQWINbl62d80GQI6HDPbtUnY19hEDG8,1792
+backups/management/commands/backupmedia.py,sha256=fHIdQaMSYv5I9TJl3fe85Mgwc1oetpnvQdftNg7IDFs,2494
+django_simple_backups-1.0.dist-info/METADATA,sha256=Nke36gwb8mcSbUxvC_xiZ8JqXmaaj1d8xIejVg_Pt-M,3184
+django_simple_backups-1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+django_simple_backups-1.0.dist-info/license,sha256=o0fuVOgtpoXHCi5WHwAV0PSzwLFrMC3RXtkK4fuHaUw,1090
+django_simple_backups-1.0.dist-info/top_level.txt,sha256=fTuqTJXUNJZIb_pN3NbnuE1-wfYhtHeU3bK5qmWSfVQ,8
+django_simple_backups-1.0.dist-info/RECORD,,
