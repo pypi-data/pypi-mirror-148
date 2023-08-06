@@ -1,0 +1,12 @@
+requests_downloader/__init__.py,sha256=vxkq4nNn5wyRk8KiEHL1o3keO8BdP8W5g8SGgiBDocY,492
+requests_downloader/cli.py,sha256=n86XjjnPcB_qDkxeOVYCIeKPHT-ZGq-sWF5CLn1t6vg,3592
+requests_downloader/downloader.py,sha256=g-YitZUTUJfzy4s4hFjRH8Bl_EZpk-L3YJ6msOFT78A,9987
+requests_downloader/handlers.py,sha256=6u_nDtPXh490Bo-gYLn9eDN-b6kmx7FDd9RafHoxZ_o,4548
+requests_downloader/utils.py,sha256=cjRHzkUmlO-lBpzZY5TeUAKre31WT6pLOMA2Sm5eoTU,771
+requests_downloader-0.4.0.dist-info/AUTHORS.rst,sha256=oPn2na2vtwDDxf9ue6OF-iGY7SgGg0rx89WZ4W9ubBM,172
+requests_downloader-0.4.0.dist-info/LICENSE,sha256=DzEtYlFLAypKm1BQyREWmOR1YVTygWn46S0s8mbnQCM,1560
+requests_downloader-0.4.0.dist-info/METADATA,sha256=YhTBW8e0Mo8Rjl5Mn1BR1xYVuVYnETKofNF1UUtDnv4,4991
+requests_downloader-0.4.0.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+requests_downloader-0.4.0.dist-info/entry_points.txt,sha256=Fp5DIYwB-1nK0KITtfiOPh0H_3CKfzHV7epwBOo-Z94,59
+requests_downloader-0.4.0.dist-info/top_level.txt,sha256=jVMRYymnGnUcITZlc_i_BIkEgqvtfV7PAiqXPoz0yJ4,20
+requests_downloader-0.4.0.dist-info/RECORD,,
