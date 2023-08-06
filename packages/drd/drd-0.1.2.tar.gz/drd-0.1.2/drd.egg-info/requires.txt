@@ -1,0 +1,16 @@
+numpy
+xarray
+requests
+tqdm
+py7zr
+
+[dev]
+build
+pytest
+sphinx
+
+[docs]
+sphinx
+
+[test]
+pytest
