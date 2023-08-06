@@ -1,0 +1,178 @@
+Qrogue<
+Name = "Level 1-2"
+
+[Robot]
+2 qubits [ *xgate, *hgate ]
+
+[Layout]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+| SR == aa == bb 13 cc .. __ .. __ .. __ |
+| ..    15    ==    12    ..    ..    .. |
+| __ .. ff 14 dd 11 ee == sh .. __ .. __ |
+| ..    ..    16    17    ..    ..    .. |
+| __ .. __ .. gg .. hh .. __ .. __ .. __ |
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[Custom Rooms]
+aa (Wild):
+#############
+# _ 0 _ c _ #
+# _ _ o _ _ #
+# _ m o _ _ #
+# o o o o o #
+# _ c _ _ _ #
+#############
+0 *superpos0p *coin tutorial *superPosTutorial
+m *wondering
+c *coin
+c *coin trigger *foundHiddenTreasure
+
+bb (Wild):
+#############
+# _ _ _ _ _ #
+# _ 0 o 0 _ #
+# _ o o o _ #
+# _ m o 0 _ #
+# _ _ _ _ _ #
+#############
+0 *superpos0m *room1
+0 *superpos1p *room1
+//0 *superpos1m1 *room1
+0 *superpos1m2 *room1
+m *allHXCombinations
+
+cc (Wild):
+#############
+# _ 0 _ 0 _ #
+# _ _ _ _ 0 #
+# _ o _ _ _ #
+# _ o o _ 0 #
+# _ _ _ _ _ #
+#############
+0 *cxOthers *energy
+0 *cxOthers *energy
+0 *base11 *energy tutorial *cxX
+0 *base00 *energy tutorial *cxEmpty
+
+dd (Wild):
+#############
+# o o _ _ _ #
+# o _ _ _ _ #
+# 0 _ m _ _ #
+# o _ _ _ _ #
+# o o _ _ _ #
+#############
+0 *sesamWarden *wardenReward trigger *sesamOpen
+
+ee (Wild):
+#############
+# 0 _ _ _ 0 #
+# _ _ _ _ _ #
+# m _ 0 _ _ #
+# _ _ _ _ _ #
+# 0 _ _ _ 0 #
+#############
+m 1 *oneWayTutorial	// display only once
+0 *eePuzzles
+
+ff (Wild):
+#############
+# _ _ _ _ _ #
+# _ _ _ _ _ #
+# _ _ _ _ _ #
+# _ _ _ _ _ #
+# _ _ _ _ _ #
+#############
+
+
+gg (Wild):
+#############
+# _ _ _ _ _ #
+# _ _ _ _ _ #
+# _ _ 0 _ _ #
+# _ _ _ _ _ #
+# _ _ _ _ _ #
+#############
+0 *boss *cxgate trigger *done
+
+hh (Wild):
+#############
+# 0 _ c _ 0 #
+# _ 0 _ 0 _ #
+# 0 _ 0 _ 0 #
+# _ 0 _ 0 _ #
+# 0 _ 0 _ 0 #
+#############
+c *coin
+
+sh (Shop):
+#############
+# _ _ _ _ _ #
+# _ _ _ _ _ #
+# _ _ $ _ _ #
+# _ _ _ _ _ #
+# _ _ _ _ _ #
+#############
+$ [gate *cx, key 1, energy 10] 2 tutorial *helpTextShop trigger *sawShop  //*shopTutorial
+
+
+[Hallways]
+11 (closed; one way East permanent; )
+12 (event *sawShop; ; )
+13 (event *sawShop; one way West; )
+14 (event *sesamOpen; ; )
+15 (event *sesamOpen; ; )
+16 (locked; ; )
+17 (locked; ; )
+
+[StateVector Pools]
+custom
+//*myStvPool [ [0j, -0j, -1j, +0], [0.5, -.5j, +.5, 0.5j ] ];
+//            default rewards: random *coin
+*superpos0p [ [0.707, 0.707, 0, 0] ]
+*superpos0m [ [0.707, -0.707, 0, 0] ]
+*superpos1p [ [0.707, 0, 0.707, 0] ]
+//*superpos1m1 [ [-0.707, 0, 0.707, 0] ]
+*superpos1m2 [ [0.707, 0, -0.707, 0] ]
+
+*eePuzzles random [ [0, 1, 0, 0], [0.707, 0.707, 0, 0], [0, 0, 1, 0], [0.707, 0, 0.707, 0], [0.707, -0.707, 0, 0], [0.707, 0, -0.707, 0] ]
+
+*base00 [ [1, 0, 0, 0] ]
+*base11 [ [0, 0, 0, 1] ]
+*cxOthers [ [0, 0, 0.707, 0.707], [1, 0, 0, 0] ]	// TODO second vector
+
+
+*sesamWarden [ [0, 0.707, 0.707, 0] ]
+*boss [ [0.707, 0, 0, 0.707] ]
+
+default *eePuzzles
+
+[Reward Pools]
+custom
+*key [key 1]
+*coin [coin 1]
+*energy [energy 10]
+*xgate [gate *x]
+*hgate [gate *h]
+*cxgate [gate *cx]
+
+*room1 ordered [coin 1, coin 1, coin 2]
+*wardenReward [coin 5]
+
+default random [coin 1, coin 2, coin 3, coin 5]
+
+[Messages]
+// highlight text by encapsulating it in "//02abcd//" where "abcd" is the text to highlight and "02" one of the available styles: 01 is for tiles, 02 is for game objects, 03 for words and 04 for keys on the keyboard
+*wondering "Hmm, I wonder how we can reach the south side of these obstacles..." event *foundHiddenTreasure alternative *noMoreWondering
+*noMoreWondering "I'm glad that you found a way to the south side of these obstacles!"
+
+*allHXCombinations "The three puzzles of this room and the one from the first room should cover all"	// TODO
+
+*superPosTutorial "Now that we have a //02Hadamard Gate// we can put //02Qubits// into //03Superposition//. This means that the state is no longer deterministic but rather somewhere inbetween 0 and 1. In the case of a single //02Hadamard Gate// this results in a 50% chance of measuring 0 and 50% chance of measuring 1. Since the probability corresponds to the values of the //02StateVector// //03squared// the target StateVector of this puzzle describes a 50% chance of measuring |00> and another 50% for |01>."
+*oneWayTutorial "Seems like this //02Hallway// is only passable from the other side. Guess we have to find another path then."
+*shopTutorial "This is a Shop"
+
+*cxEmpty "Okay you already know that puzzle. But let's try to solve it while using our new //02CX Gate//!"
+*cxX "We also know this puzzle. But now we don't have //03two// //02X Gates//. Let's try to solve it with the help of our new //02CX Gate//."
+
+>Qrogue
