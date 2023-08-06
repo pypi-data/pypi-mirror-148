@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.py
+src/application_example/__init__.py
+src/application_example/example.py
+src/keepcodingtest_oliver.egg-info/PKG-INFO
+src/keepcodingtest_oliver.egg-info/SOURCES.txt
+src/keepcodingtest_oliver.egg-info/dependency_links.txt
+src/keepcodingtest_oliver.egg-info/requires.txt
+src/keepcodingtest_oliver.egg-info/top_level.txt
