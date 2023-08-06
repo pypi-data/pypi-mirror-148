@@ -1,0 +1,3 @@
+reahl-component<6.1,>=6.0
+reahl-commands<6.1,>=6.0
+psycopg2-binary<2.8.9999,>=2.8
