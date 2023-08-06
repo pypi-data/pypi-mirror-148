@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: certify-issuer
+Version: 0.0.3
+Summary: Issue certificates using blockchain and smart contract
+Home-page: https://github.com/corex-mn/certify-issuer
+Author: Surenbayar Doloonjin
+Author-email: suugii.sd@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/corex-mn/certify-issuer/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# certify-issuer
+
+
