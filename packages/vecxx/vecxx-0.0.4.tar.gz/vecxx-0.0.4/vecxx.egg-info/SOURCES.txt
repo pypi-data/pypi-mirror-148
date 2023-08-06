@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/vecxx.cpp
+vecxx.egg-info/PKG-INFO
+vecxx.egg-info/SOURCES.txt
+vecxx.egg-info/dependency_links.txt
+vecxx.egg-info/not-zip-safe
+vecxx.egg-info/requires.txt
+vecxx.egg-info/top_level.txt

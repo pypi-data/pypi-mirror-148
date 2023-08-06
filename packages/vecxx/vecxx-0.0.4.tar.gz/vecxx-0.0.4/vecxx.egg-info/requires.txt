@@ -1,0 +1,5 @@
+pybind11>=2.5.0
+
+[test]
+pytest
+pytest-forked
