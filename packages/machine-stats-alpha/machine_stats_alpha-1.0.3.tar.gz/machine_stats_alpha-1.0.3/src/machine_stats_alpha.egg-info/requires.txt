@@ -1,0 +1,2 @@
+ansible==5.6.0
+pluginbase==1.0.1
