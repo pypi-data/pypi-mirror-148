@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: text-gists
+Version: 0.0.1
+Summary: Helper functions for matching regex and other text-based patterns.
+Author: Marcelino G. Veloso III
+Author-email: mars@veloso.one
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: arrow (>=1.2.2,<2.0.0)
+Description-Content-Type: text/markdown
+
+# Regex Gists
+
+Helper functions for matching regex and other text-based patterns.
+
