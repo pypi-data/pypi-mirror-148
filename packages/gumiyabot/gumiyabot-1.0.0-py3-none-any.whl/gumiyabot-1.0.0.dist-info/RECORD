@@ -1,0 +1,11 @@
+gumiyabot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gumiyabot/__main__.py,sha256=cXlEXzDT6y7RNjUF6r6_2R1qRurtAlHdQPF2VjXAjTs,4432
+gumiyabot/bancho.py,sha256=3riMnDY3j37EVba86texkjv2dVwKqRQeDFh8zZUJ_iY,1238
+gumiyabot/twitch.py,sha256=LcsLjfw6HdxCKThaXq4gZw7pF6r2cPAv6xmLUgJ7hMs,13260
+gumiyabot/utils.py,sha256=8-cKJ1EeazUmgcY5ee4YOdF3mYwK2aa9N3wNtZUqco8,996
+gumiyabot-1.0.0.dist-info/LICENSE,sha256=Emxag7rIc7mu_0Yahg1BiF4_qiC2IFDs_auHUZchpLM,1071
+gumiyabot-1.0.0.dist-info/METADATA,sha256=u_yO1-3zvRb8rrwREUCI5SmrcyWk4oC_qUCfG6u44Zk,4366
+gumiyabot-1.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+gumiyabot-1.0.0.dist-info/entry_points.txt,sha256=3mQEVKZM4jpId8gvZ67QtuczRWLqY78ZXJwyzHTA9Xk,54
+gumiyabot-1.0.0.dist-info/top_level.txt,sha256=OY8HYrTfS2cPEhLGJ_A8cMKIA7xpM1k2CfjVTooPdlU,10
+gumiyabot-1.0.0.dist-info/RECORD,,
