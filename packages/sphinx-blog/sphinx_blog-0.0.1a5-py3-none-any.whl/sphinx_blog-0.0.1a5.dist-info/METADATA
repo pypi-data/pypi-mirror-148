@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: sphinx-blog
+Version: 0.0.1a5
+Summary: A simple blogging engine written as a Sphinx plugin
+Home-page: https://tanayseven.com/sphinx-blog/
+Author: Tanay PrabhuDesai
+Author-email: tanayseven@gmail.com
+License: MIT
+Project-URL: Documentation, https://tanayseven.com/sphinx-blog/docs/
+Project-URL: Changes, https://tanayseven.com/sphinx-blog/changes/
+Project-URL: Source Code, https://github.com/tanayseven/sphinx-blog/
+Project-URL: Issue Tracker, https://github.com/tanayseven/sphinx-blog/issues/
+Project-URL: Twitter, https://twitter.com/tanayseven
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Plugins
+Classifier: Framework :: Sphinx :: Extension
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Documentation
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: Internet :: WWW/HTTP :: Site Management
+Classifier: Topic :: Printing
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Processing :: Markup
+Classifier: Topic :: Text Processing :: Markup :: HTML
+Classifier: Topic :: Text Processing :: Markup :: LaTeX
+Classifier: Topic :: Utilities
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: sphinx (>=4.5.0)
+
+Caution
+=======
+This project is currently in its very initial stages. You can call it pre-pre alpha. A lot of APIs will change over the course of the development of this project. Please proceed using this at your own risk.
+
+Sphinx Blog
+===========
+
+A blogging engine as a Sphinx plugin
+
+
+
