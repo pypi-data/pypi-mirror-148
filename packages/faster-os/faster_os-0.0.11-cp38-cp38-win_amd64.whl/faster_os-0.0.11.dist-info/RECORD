@@ -1,0 +1,13 @@
+faster_os.cp38-win_amd64.pyd,sha256=NN-PQL8oJj5MD_x1cqmpbLnMaVMAR97nglJxJP_MnZs,30720
+faster_os/generic.cp38-win_amd64.pyd,sha256=LeMdIZfC1xmJKXyRp3WXo01gd4umvTQS085h7h35kw8,47616
+faster_os/path.cp38-win_amd64.pyd,sha256=F7Fns1niN2ygVmrdxQkFJtDvyUf0F4btJCl9Ukno-mA,134656
+unix/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+unix/generic.py,sha256=nVUoQZAQnCmSGEf_OAaL-87QqPuEDNwajJSTgngXk0Q,428
+unix/path.py,sha256=DkQYzShOebwtDvM5H4w9nnMXV9W5fFcW1-RO3443RGo,7017
+win/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+win/generic.py,sha256=93ace1whbVEuz-CHq42-3hXQSD8F_XufNzzckzjEtpg,432
+win/path.py,sha256=SrjYeWGqBu1hq4MyXtZLS1A3b34oBvGz3KHdCG7pBgY,7904
+faster_os-0.0.11.dist-info/METADATA,sha256=fOgaF4Aoi6MgkKnfnCjxySkVs866XpiMZPQS5khCYPI,18631
+faster_os-0.0.11.dist-info/WHEEL,sha256=M2GQ3lde8oJhlQPj2wbRvnqE3cuovPJasri5X5aCmck,100
+faster_os-0.0.11.dist-info/top_level.txt,sha256=pIrB9LXsBWvBjXZlIKNCLmHiyi9EKT4smsUMPuwU8N0,19
+faster_os-0.0.11.dist-info/RECORD,,
