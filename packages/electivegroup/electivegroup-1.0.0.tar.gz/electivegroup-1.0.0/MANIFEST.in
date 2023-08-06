@@ -1,0 +1,8 @@
+include README.md
+include bin/electivegroup.py
+
+recursive-include electivegroup *
+
+exclude electivegroup/traindata.json
+exclude electivegroup/custom_train.py
+exclude electivegroup/custom_test.py
