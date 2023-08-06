@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+t_normalizer.egg-info/PKG-INFO
+t_normalizer.egg-info/SOURCES.txt
+t_normalizer.egg-info/dependency_links.txt
+t_normalizer.egg-info/requires.txt
+t_normalizer.egg-info/top_level.txt
+textnormalizer/__init__.py
+textnormalizer/_exceptions.py
+textnormalizer/_metrics.py
+textnormalizer/_textnormalizer.py
+textnormalizer/_utils.py
