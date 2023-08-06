@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+mydemo/migrations/__init__.py
+mydemo/yagnesh_demo.egg-info/PKG-INFO
+mydemo/yagnesh_demo.egg-info/SOURCES.txt
+mydemo/yagnesh_demo.egg-info/dependency_links.txt
+mydemo/yagnesh_demo.egg-info/top_level.txt
