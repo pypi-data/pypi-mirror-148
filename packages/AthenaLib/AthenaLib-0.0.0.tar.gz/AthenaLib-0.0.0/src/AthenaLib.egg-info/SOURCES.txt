@@ -1,0 +1,9 @@
+LICENSE
+setup.py
+src/AthenaLib/Fixes.py
+src/AthenaLib/__init__.py
+src/AthenaLib.egg-info/PKG-INFO
+src/AthenaLib.egg-info/SOURCES.txt
+src/AthenaLib.egg-info/dependency_links.txt
+src/AthenaLib.egg-info/requires.txt
+src/AthenaLib.egg-info/top_level.txt
