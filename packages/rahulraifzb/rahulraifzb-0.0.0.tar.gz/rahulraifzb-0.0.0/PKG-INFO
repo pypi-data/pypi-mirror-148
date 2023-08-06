@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: rahulraifzb
+Version: 0.0.0
+Summary: This is versy basic package which is used to return the hello
+Home-page: https://github.com/Rahulraifzb/hello.git
+Author: Rahul Rai
+Author-email: rrai06125@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: hello,some,meaning
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
