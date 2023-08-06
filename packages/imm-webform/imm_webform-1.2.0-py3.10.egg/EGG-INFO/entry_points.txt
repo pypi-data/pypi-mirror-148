@@ -1,0 +1,3 @@
+[console_scripts]
+prd = webform.prdata:main
+
