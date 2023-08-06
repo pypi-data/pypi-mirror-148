@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: pyrasgo
+Version: 1.1.0
+Summary: Alpha version of the Rasgo Python interface.
+Home-page: https://www.rasgoml.com/
+Author: Patrick Dougherty
+Author-email: patrick@rasgoml.com
+License: GNU Affero General Public License v3 or later (AGPLv3+)
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Provides-Extra: df
+Provides-Extra: snowflake
+License-File: LICENSE.md
+
+pyRasgo is a python SDK to interact with the Rasgo API. Rasgo accelerates feature engineering for Data Scientists.
+
+Visit us at https://www.rasgoml.com/ to turn your data into Features in minutes!
+
+Documentation is available at:
+https://docs.rasgoml.com/rasgo-docs/pyrasgo/
+
+
+Package Dependencies
+-------------------------------------------------------------------------------
+- idna>=3.3
+- more-itertools
+- pandas
+- pyarrow>=5.0.0
+- pydantic
+- pyyaml
+- requests
+- snowflake-connector-python>=2.7.0
+
+
+Major Version Releases
+-------------------------------------------------------------------------------
+v1.1.0 (Apr 26, 2022)
+    - Add `.dw_sync()` method to Dataset class. This method will synchronize any changes from the Snowflake table schema to the Dataset metadata
+
+
+See [Changelog](https://github.com/rasgointelligence/RasgoSDKPython/blob/master/pyrasgo/CHANGELOG.md) for full minor version release notes
+
+
+
+
+
+<i>Built for Data Scientists, by Data Scientists</i>
+
+
