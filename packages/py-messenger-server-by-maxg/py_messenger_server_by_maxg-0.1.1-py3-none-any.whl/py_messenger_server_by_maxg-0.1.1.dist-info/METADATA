@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: py-messenger-server-by-maxg
+Version: 0.1.1
+Summary: Messenger Server
+Home-page: UNKNOWN
+Author: MaximGubanov
+Author-email: max.gubanov@vk.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: PyQt5
+Requires-Dist: pycryptodome
+Requires-Dist: pycryptodomex
+Requires-Dist: sqlalchemy
+
+UNKNOWN
+
+
