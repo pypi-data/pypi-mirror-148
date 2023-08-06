@@ -1,0 +1,2 @@
+[console_scripts]
+tf2helm = tf2helm.tf2helm:main
