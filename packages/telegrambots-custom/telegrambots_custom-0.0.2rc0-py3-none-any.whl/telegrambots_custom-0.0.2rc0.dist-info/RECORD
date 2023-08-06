@@ -1,0 +1,9 @@
+telegrambots/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+telegrambots/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+telegrambots/custom/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+telegrambots/custom/client.py,sha256=GiHiO3h7-GxsXJpqRPpwhn8s-cndXxh4ZXK6UZvW61M,3043
+telegrambots_custom-0.0.2rc0.dist-info/LICENSE,sha256=o-31poDnmNddq3ckBNcOZyS1DxfStnGX5krT6DN4FVo,1071
+telegrambots_custom-0.0.2rc0.dist-info/METADATA,sha256=0n0luNptWvirtn5DK2goYlKtVqF0rB83qQ4aNcTV4ZU,659
+telegrambots_custom-0.0.2rc0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+telegrambots_custom-0.0.2rc0.dist-info/top_level.txt,sha256=drQ638J9ykZ_SZLm_JUJRqMWqMLMw3lD7jbV0T0QzTE,13
+telegrambots_custom-0.0.2rc0.dist-info/RECORD,,
