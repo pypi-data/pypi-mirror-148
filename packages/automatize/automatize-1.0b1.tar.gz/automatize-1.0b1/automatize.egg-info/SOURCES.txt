@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+automatize.egg-info/PKG-INFO
+automatize.egg-info/SOURCES.txt
+automatize.egg-info/dependency_links.txt
+automatize.egg-info/requires.txt
+automatize.egg-info/top_level.txt
