@@ -1,0 +1,9 @@
+pyrogram>=1.4.12
+TgCrypto>=1.2.3
+python-dotenv>=0.19.2
+pytz>=2021.3
+motor[srv]
+pyyaml>=6.0
+aiohttp
+humanize
+pillow
