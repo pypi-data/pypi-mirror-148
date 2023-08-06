@@ -1,0 +1,7 @@
+cryptg/__init__.py,sha256=rTNOwF3ce-f98yb-D2HCVVZKEQ16ra6nE4AXxAzrBnA,23
+cryptg/cryptg.cp310-win_amd64.pyd,sha256=PB4THCAyW91I9AgDwTGKUZx-w-fO2wINAOenJoV0N4A,252928
+cryptg-0.3.dist-info/LICENSE.txt,sha256=9Ofzc7m5lpUDN-jUGkopOcLZC3cl6brz1QhKInF60yg,7169
+cryptg-0.3.dist-info/METADATA,sha256=SK-nF8ahrIlcSkbLSB0svF4W-8GjplfYbRoSa12KY34,1380
+cryptg-0.3.dist-info/WHEEL,sha256=W26pYN7HLsBT1jrDSL9udgf_mdNKJmYmL23sIP-FcgM,102
+cryptg-0.3.dist-info/top_level.txt,sha256=PvMevMfLwwMBcIb6BM-uwKT1h3izfPzNCpCuvWqRuew,7
+cryptg-0.3.dist-info/RECORD,,
