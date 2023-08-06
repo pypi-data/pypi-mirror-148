@@ -1,0 +1,10 @@
+LICENSE.txt
+README.rst
+setup.cfg
+setup.py
+snookerprofile/__init__.py
+snookerprofile/myprofile.py
+snookerprofile.egg-info/PKG-INFO
+snookerprofile.egg-info/SOURCES.txt
+snookerprofile.egg-info/dependency_links.txt
+snookerprofile.egg-info/top_level.txt
