@@ -1,0 +1,10 @@
+berkeleydb
+
+[dev]
+black
+flake8-black
+mypy
+flake8
+flake8-pyi
+setuptools
+wheel

@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+berkeleydb_stubs.egg-info/PKG-INFO
+berkeleydb_stubs.egg-info/SOURCES.txt
+berkeleydb_stubs.egg-info/dependency_links.txt
+berkeleydb_stubs.egg-info/requires.txt
+berkeleydb_stubs.egg-info/top_level.txt
