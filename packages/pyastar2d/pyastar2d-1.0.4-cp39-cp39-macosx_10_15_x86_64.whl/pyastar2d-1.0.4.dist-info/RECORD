@@ -1,0 +1,8 @@
+pyastar2d/__init__.py,sha256=XgQo0LhSRhTDJVmre02qOtlG9v69JYxN5WdEHPQf5V8,72
+pyastar2d/astar.cpython-39-darwin.so,sha256=OEfREyLzuwkxOl3s1gK4lD3jVX_fP3A339jjv3amXD4,53048
+pyastar2d/astar_wrapper.py,sha256=NOcSl6_Ltpg0L1ZVVaV1FT9Ew6lHnsO5Oqq3yPzSBp0,1886
+pyastar2d-1.0.4.dist-info/LICENSE,sha256=XKV3_2Un6l3Wj3fAb8Q_olyi5s3AfI_NqG98vbLGqgs,1073
+pyastar2d-1.0.4.dist-info/METADATA,sha256=yB2GX1mVo7NYSMd_J9SGvEj2xA_K7mplN__DoWkvx_E,7076
+pyastar2d-1.0.4.dist-info/WHEEL,sha256=1aIKcOiZwCaey2y-OH_J-W7IhsRHMsIvvidnI8v_CqQ,110
+pyastar2d-1.0.4.dist-info/top_level.txt,sha256=sirwTJoF4I2DthdhahGwb3hQxZRT8XbOhsNRdorJmXM,10
+pyastar2d-1.0.4.dist-info/RECORD,,
