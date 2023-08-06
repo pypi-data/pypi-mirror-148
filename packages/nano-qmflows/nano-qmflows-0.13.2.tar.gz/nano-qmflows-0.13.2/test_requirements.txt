@@ -1,0 +1,7 @@
+assertionlib
+codacy-coverage
+pytest
+pytest-cov
+pytest-mock
+setuptools
+ipython
