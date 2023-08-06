@@ -1,0 +1,54 @@
+<!-- <div class="container p-0 m-0" id="group_data_{{group.id}}">
+    <div class="m-0 p-0">
+    <h4 class="h4 group_id_name p-0 pb-3">GRUPPE: {{group.id}}, {{group.name}}</h4>
+</div>  
+    {% for m, rels in members %}
+    <div class="p-0 m-0 pb-2 pl-3">
+    <h6 class="h6 p-0 m-0 pl-3 ">{{m.name}}, {{m.first_name}} [{{m.id}}] &emsp;&emsp; {% if m.start_date %} *{{m.start_date}} &emsp;&emsp; {% endif %}{% if m.end_date %} †{{m.end_date}} {% endif %}</h6>
+    </div>
+    <div class="p-0 m-0 pb-3 pl-5">
+    <ul class="list-group">
+    {% for r in rels %}
+    <li >{{ r.relation_type.name}} {{r.related_institution.name}} {{r.start_date.year|default:"-"}} bis {{r.end_date.year|default:"-"}}</li>
+    {% endfor %}
+</ul>
+</div>
+    {% endfor %}
+</div> -->
+
+
+<div class="container p-0 m-0" id="group_data_{{group.id}}">
+    <div class="m-0 p-0">
+    <h4 class="h4 group_id_name p-0 m-0 pb-3 d-flex justify-content-start align-items-center">GRUPPE: {{group.id}}, {{group.name}} <span>
+        <button class="btn btn-outline-secondary btn-sm p-2 m-0 ml-4" onclick="toggleItemSelect('{{group.id}}')" style="width: 2rem;"><i class="fa fa-close"></i></button>
+    <button class="btn btn-outline-secondary btn-sm p-2 m-0" onclick="renameGroup('{{group.id}}', '{{group.name}}')"> <i class="fa fa-edit"></i></button> </span></h4>
+    <span class="d-flex justify-content-start align-items-center pb-2 span_group_actions" style="height: auto; width: 100%" id="span_group_actions_{{group.id}}">
+    <!-- <button class="btn btn-danger group_action_button">Remove</button> -->
+    <!-- <button class="btn btn-primary group_action_button m-0">New Group from Selection</button> -->
+    </span>
+</div>  
+    {% for m, rels in members %}
+    <div class="m-0 p-0" id="group_member_item_{{m.id}}">
+    <div class="p-0 m-0 pb-2">
+        
+        <span class="d-flex justify-content-start align-items-center">
+            <div class="m-0 mr-2 border border-dark rounded" onclick="toggleMemberSelect('{{group.id}}','{{m.id}}')" id="select_toggle_button_{{m.id}}" style="width:2rem; height:2rem"></div>
+
+            <button class="btn btn-sm btn-outline-secondary m-0 mr-2 px-2 py-1" onclick="removeMember('{{group.id}}', '{{m.id}}')"><i class="fa fa-close"></i></button>
+    <button class="btn btn-sm btn-outline px-2 py-1 m-0" data-toggle="collapse" data-target="#data_div_{{group.id}}_{{m.id}}">{{m.name}}, {{m.first_name}} [{{m.id}}] &emsp;&emsp; {% if m.start_date %} *{{m.start_date}} &emsp;&emsp; {% endif %}{% if m.end_date %} †{{m.end_date}} {% endif %}</button>
+</span></div>
+    <div class="p-0 m-0 pb-3 collapse" id="data_div_{{group.id}}_{{m.id}}">
+    <ul class="list-group">
+        {% if rels %}
+    {% for r in rels %}
+    <li class="list-group-item list-group-item-sm border-0">{{ r.relation_type.name}} {{r.related_institution.name}} {{r.start_date.year|default:"-"}} bis {{r.end_date.year|default:"-"}}</li>
+    {% endfor %}
+    {% else %} 
+    <li class="list-group-item list-group-item-sm border-0">No Person-Institution Relations</li>
+    {% endif %}
+</ul>
+</div>
+</div>
+    {% endfor %}
+</div>
+
