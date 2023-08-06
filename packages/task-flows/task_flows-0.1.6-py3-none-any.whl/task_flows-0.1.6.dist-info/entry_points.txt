@@ -1,0 +1,4 @@
+[console_scripts]
+create_services=task_flows.services:main
+set_task_flows_db=task_flows.tables:create_missing_tables
+
