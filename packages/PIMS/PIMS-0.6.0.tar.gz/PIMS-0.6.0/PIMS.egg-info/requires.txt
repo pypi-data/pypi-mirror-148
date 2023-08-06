@@ -1,0 +1,3 @@
+imageio
+numpy>=1.19
+slicerator>=0.9.8
