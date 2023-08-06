@@ -1,0 +1,3 @@
+[console_scripts]
+rundea=deatool.__main__:run
+
