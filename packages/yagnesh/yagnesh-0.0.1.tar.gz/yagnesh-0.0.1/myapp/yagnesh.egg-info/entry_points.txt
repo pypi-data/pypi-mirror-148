@@ -1,0 +1,8 @@
+[cms.djangoapp]
+myapp = myapp.apps:MyappConfig
+
+[lms.djangoapp]
+myapp = myapp.apps:MyappConfig
+
+[openedx.block_structure_transformer]
+load_date_data = myapp.field_data:DateOverrideTransformer

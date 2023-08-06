@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+myapp/migrations/__init__.py
+myapp/yagnesh.egg-info/PKG-INFO
+myapp/yagnesh.egg-info/SOURCES.txt
+myapp/yagnesh.egg-info/dependency_links.txt
+myapp/yagnesh.egg-info/entry_points.txt
+myapp/yagnesh.egg-info/top_level.txt
