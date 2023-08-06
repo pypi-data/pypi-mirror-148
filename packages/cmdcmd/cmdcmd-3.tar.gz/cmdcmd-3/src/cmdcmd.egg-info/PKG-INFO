@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: cmdcmd
+Version: 3
+Summary: Ergonomic command line interface parser
+Home-page: https://github.com/aperezdc/python-cmdcmd
+Author: Adrian Perez de Castro
+Author-email: aperez@igalia.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6
+
+cmdcmd
+======
+
+.. image:: https://github.com/aperezdc/python-cmdcmd/actions/workflows/ci.yml/badge.svg
+   :target: https://github.com/aperezdc/python-cmdcmd/actions/workflows/ci.yml
+   :alt: Build Status
+
+.. image:: https://img.shields.io/coveralls/aperezdc/python-cmdcmd/master.svg?style=flat
+   :target: https://coveralls.io/r/aperezdc/python-cmdcmd?branch=master
+   :alt: Code Coverage
+
+
+
