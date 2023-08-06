@@ -1,0 +1,13 @@
+tempocli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tempocli/__main__.py,sha256=IzMzzdN_UT2zIwoWCEaJPkwWwT6PGxsr0SaM0jeJm2E,38
+tempocli/cli.py,sha256=_Vgy_ZdlXMeKToVKHrz8Tius9m4Fyrt0mvxldEYPBOs,4220
+tempocli/client.py,sha256=iMRvHr4KzvpnaPrnDKkp80_eI5hrueA0xCjI0RWR0nQ,989
+tempocli/funcs.py,sha256=HprAcugdOoTjxeHun-MSDMA6QASapyBS96wQbA93GH8,986
+tempocli/requests.py,sha256=prlcRRxf6p9-5Ckbr5IQ4iZNpWpOZjGE13Fwbejo5Mo,2491
+tempocli/version.py,sha256=vHOAIy5ThtrUkYi8a8UWdmV4lNDzENdzk9KjHTyHG8o,155
+tempocli-0.2.5.dev4.dist-info/LICENSE,sha256=_eZET7QMKrCnt3t-j5s6ew17sBf0jaj-vckEXpcXSjM,1094
+tempocli-0.2.5.dev4.dist-info/METADATA,sha256=rNwbjWxuM7ae6HGRVgkhJJeFuT7DwbuNUykN-_Fk3IQ,4237
+tempocli-0.2.5.dev4.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+tempocli-0.2.5.dev4.dist-info/entry_points.txt,sha256=c1WBRs5hY6Rh97CksNb5JPruAdcGZ86k83-O5a7MxV4,47
+tempocli-0.2.5.dev4.dist-info/top_level.txt,sha256=yFSVKG5C56hWMLh2Yev1bpawCjbHSnGotCly6jVr-Ns,9
+tempocli-0.2.5.dev4.dist-info/RECORD,,
