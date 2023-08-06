@@ -1,0 +1,3 @@
+[console_scripts]
+deatool=deatool.__main__:run
+

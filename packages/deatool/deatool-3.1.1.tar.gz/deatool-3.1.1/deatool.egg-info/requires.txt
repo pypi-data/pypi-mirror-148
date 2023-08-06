@@ -1,0 +1,5 @@
+pandas
+Pyside2
+numpy
+openpyxl
+mip

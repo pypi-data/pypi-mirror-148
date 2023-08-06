@@ -1,0 +1,2 @@
+recursive-include deatool *.png *.py *.xlsx
+include README.md include LICENSE
