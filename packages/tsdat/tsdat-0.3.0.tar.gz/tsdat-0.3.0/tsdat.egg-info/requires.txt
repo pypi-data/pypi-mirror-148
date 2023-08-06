@@ -1,0 +1,10 @@
+xarray[complete]<1.0,>=0.20
+act-atmos<2.0,>=1.1.3
+pydantic<2.0,>=1.9.0
+pyyaml<6.0,>=5.4
+jsonpointer==2.2
+numpy<2.0,>=1.21
+pandas<2.0,>=1.2
+dunamai==1.9.0
+boto3<2.0,>=1.21
+typer<1.0,>=0.4
