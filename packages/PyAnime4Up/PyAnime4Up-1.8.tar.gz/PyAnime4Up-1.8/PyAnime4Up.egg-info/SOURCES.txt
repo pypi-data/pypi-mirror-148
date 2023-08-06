@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+PyAnime/__init__.py
+PyAnime4Up.egg-info/PKG-INFO
+PyAnime4Up.egg-info/SOURCES.txt
+PyAnime4Up.egg-info/dependency_links.txt
+PyAnime4Up.egg-info/requires.txt
+PyAnime4Up.egg-info/top_level.txt

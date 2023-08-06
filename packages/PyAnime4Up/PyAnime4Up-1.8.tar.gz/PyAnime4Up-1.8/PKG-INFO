@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: PyAnime4Up
+Version: 1.8
+Summary: A Selenium-less Python Anime4Up Library
+Home-page: https://github.com/AmineSoukara/PyAnime4Up
+Author: AmineSoukara
+Author-email: AmineSoukara@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/AmineSoukara/PyAnime4Up
+Project-URL: Documentation, https://github.com/AmineSoukara/PyAnime4Up#readme
+Project-URL: Tracker, https://github.com/AmineSoukara/PyAnime4Up/issues
+Keywords: Anime Anime4Up Scrapper Python
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# 🦉 PyAnime4Up
+> This Is A Selenium-less Python Library That Allows You To Interact With Anime4Up
+
+## ⚙ Installation :
+[![Total Downloads](https://static.pepy.tech/personalized-badge/pyanime4up?period=total&units=none&left_color=black&right_color=blue&left_text=Total-Downloads)](https://pepy.tech/project/pyanime4up)
+
+You Can Simply Install The Library From PyPI With This Command:
+```bash
+pip3 install PyAnime4Up
+```
+
+## ❓ Usage :
+#### Search :
+```python
+>> from PyAnime import Anime
+
+TODO
+```
+
+#### Get Anime Info :
+```python
+>> from PyAnime import Show
+
+TODO
+```
+
+#### Get Episode Link / Num:
+```python
+>> from PyAnime import GetEpisodes
+
+TODO
+```
+
+#### Get Download Links :
+```python
+>> from PyAnime import Episode
+
+TODO
+```
+
+## 🪐 Credits:
+* [DamienSoukara](https://github.com/AmineSoukara) For [Nothing](https://github.com/AmineSoukara/PyAnime4Up)
+
+
