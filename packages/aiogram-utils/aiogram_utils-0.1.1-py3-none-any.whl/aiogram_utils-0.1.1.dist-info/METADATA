@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: aiogram-utils
+Version: 0.1.1
+Summary: Misc utils for aiogram
+Home-page: https://github.com/LDmitriy7/aiogram_utils
+Author: levch
+Author-email: levchenko.d.a1998@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: aiogram (>=2.20,<3.0)
+Requires-Dist: mongoengine (>=0.24.1,<0.25.0)
+Project-URL: Repository, https://github.com/LDmitriy7/aiogram_utils
+Description-Content-Type: text/markdown
+
+# TODO
