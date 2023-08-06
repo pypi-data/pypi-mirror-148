@@ -1,0 +1,12 @@
+rabbitmq_provider/__init__.py,sha256=5YUzAqv3FbtjZJTTmmn5YXcI4-Dc3chAeJt0n0y7vgg,514
+rabbitmq_provider/hooks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rabbitmq_provider/hooks/rabbitmq.py,sha256=b0F23EbMeZrzj_eqO8OIQOd0ol6-S9GW_WWoEm-ZNUo,4168
+rabbitmq_provider/operators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rabbitmq_provider/operators/rabbitmq.py,sha256=GnqTOMgZiG9ITBv6vdAxVOePkYd8rHoaFIhVuSVIWGY,1366
+rabbitmq_provider/sensors/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rabbitmq_provider/sensors/rabbitmq.py,sha256=k0qngXk7ryc8g-oLGfCK5BLJJq1BTMO_zXRjcKws0Mw,1331
+airflow_provider_rabbitmq-0.6.1.dist-info/entry_points.txt,sha256=d-d51GGsCEC9gdddbzvj2mcd3qECfgT9GXQcAyw64Bk,86
+airflow_provider_rabbitmq-0.6.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+airflow_provider_rabbitmq-0.6.1.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+airflow_provider_rabbitmq-0.6.1.dist-info/METADATA,sha256=fQ4yQ8T5YxM2qFn4Xu30EpWilqMJ9naI-vOimc3GRAU,2013
+airflow_provider_rabbitmq-0.6.1.dist-info/RECORD,,
