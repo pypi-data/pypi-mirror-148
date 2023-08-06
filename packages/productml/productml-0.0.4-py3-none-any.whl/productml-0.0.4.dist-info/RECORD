@@ -1,0 +1,10 @@
+productml/__init__.py,sha256=E8Yq6dVhdpxFl8Lyeb8DqyU2OtZK2h53r1jE95ecx6M,19
+productml/setup.py,sha256=K28_7yWNxgAVUwg3OZQU1brOTHR8EV62ZqOHg_YoX4o,1346
+productml/data/__init__.py,sha256=l8pws5PtkodX5WHKcFOi8B6LNVVME_utzL0nzHI-nmc,46
+productml/data/labelling/__init__.py,sha256=Kdx--mR0KJHlgG1B3nqU665EB44dwtv6Z3R3zTg1QEY,29
+productml/data/labelling/text_matching.py,sha256=v2H2V3LVAKuv24sCDBl4eD4WJUwWoTFpqYSOsSiAv6Y,1491
+productml/data/vision/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+productml-0.0.4.dist-info/METADATA,sha256=RO5ILxRnDYxwzqJwTBpoFYAd7WGgyBXaMXTKKMLIxl8,1799
+productml-0.0.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+productml-0.0.4.dist-info/top_level.txt,sha256=7GbsQW3kOl20Br_OV0n0fvkbK8-q8NvipegPSuQtQbg,10
+productml-0.0.4.dist-info/RECORD,,
