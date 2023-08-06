@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: trackf
+Version: 0.0.1
+Summary: tracking polymer chain breakage
+Home-page: UNKNOWN
+Maintainer: Nattavipa Chongvimansin
+Maintainer-email: nchongvi@andrew.cmu.edu
+License: GPL
+Description: 
+        A module for tracking the location, molecule identifiers,
+        and timeframe of breakage.
+        ==============
+        Handy scripts for the tracking chain breakage project.
+              
+Platform: linux
