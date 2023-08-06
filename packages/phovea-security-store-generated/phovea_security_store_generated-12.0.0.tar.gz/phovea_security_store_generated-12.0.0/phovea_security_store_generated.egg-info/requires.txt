@@ -1,0 +1,4 @@
+pydng==1.1.2
+markupsafe==2.0.1
+phovea_server<10.0.0,>=9.0.0
+tdp_core<15.0.0,>=14.0.2
