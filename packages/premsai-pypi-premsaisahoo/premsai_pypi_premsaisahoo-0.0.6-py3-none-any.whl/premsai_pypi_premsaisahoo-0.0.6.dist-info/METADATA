@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: premsai-pypi-premsaisahoo
+Version: 0.0.6
+Summary: its an implimentation of Perceptron
+Home-page: https://github.com/premsaisahoo/premsai_pypi
+Author: premsaisahoo
+Author-email: premsaisahoo@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/premsaisahoo/premsai_pypi/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: tqdm
+
+# premsai_pypi
+
+## URL
+
+(official python docs)[https://packaging.python.org/en/latest/tutorials/packaging-projects/]
+
+## URL
+
+(github docs)[https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python#publishing-to-package-registries]
+
+## how to use this package
+
+```python
+from oneNeuron.perceptron import Perceptron
+
+    model = Perceptron(eta=ETA, epochs=EPOCHS)
+    model.fit(X, y)
+```
+
+
