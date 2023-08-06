@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title%}
+  <title>{{ art.title }} - {{ blog.name }}</title>
+{% endblock %}
+
+{% block main %}
+  {{ art.content|safe }}
+  <div class="footer">
+    <div class="nav-buttons">
+      <a href="../index.html">&lt;&lt; Home</a>
+      <br>
+      <a href="../{{cat.id}}.html">&lt;&lt; Category ({{ cat.name }})</a>
+    </div>
+    <div class="author-date">
+      {% if art.author|length %}
+      <span>Author: {{ art.author }}</span>
+      {% else %}
+      <span>Author: {{ blog.author }}</span>
+      {% endif %}
+      <br>
+      <span>Updated at {{ art.updated[:10] }}</span>
+    </div>
+  </div>
+{% endblock %}
+
+{% block footer %}
+<footer>Copyright &copy; 2020-2022 Your name or Your company. All Rights Reserved.</footer>
+{% endblock %}
