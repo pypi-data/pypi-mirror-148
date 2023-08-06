@@ -1,0 +1,9 @@
+README.md
+setup.py
+resparser/__init__.py
+resparser/resparser.py
+resparser.egg-info/PKG-INFO
+resparser.egg-info/SOURCES.txt
+resparser.egg-info/dependency_links.txt
+resparser.egg-info/not-zip-safe
+resparser.egg-info/top_level.txt
