@@ -1,0 +1,10 @@
+verysimplemoduleduo/__init__.py,sha256=5Qc53hmVsm15W58rDTy_5cFJcqO-DkITy12Ag-sjWMk,55
+verysimplemoduleduo/add.py,sha256=EJioIUpnnkLD5acBN9NHe0P6TdLN72tv2TnUzuxHAOQ,32
+verysimplemoduleduo/subtract.py,sha256=ChPakN9whbxYDZoZEXX_jHFp2KTuB5mUaBETAG6tN6Q,37
+verysimplemoduleduo/extras/__init__.py,sha256=6SZpEAnCpZCnPVjKfBQ6nnt7WO3DPfzTFYJygkw6TGs,62
+verysimplemoduleduo/extras/divide.py,sha256=5_x9lI4X4mbuxxowSxFZ9NUCMxfT573UJyFG9FE01w4,35
+verysimplemoduleduo/extras/multiply.py,sha256=Y-25kAljlvwzy5V_WEaEYvU80baT7qHhhbYZnl4D1RY,37
+verysimplemoduleduo-0.0.5.dist-info/METADATA,sha256=woIVI_I4JaewGD7ZVhv7HQh0uMZ16AG_T3i1DrEqe-M,580
+verysimplemoduleduo-0.0.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+verysimplemoduleduo-0.0.5.dist-info/top_level.txt,sha256=-HC4lYs-oPfIUXmlDde2EPtVFbOwBs4VU_1P4ob8--k,20
+verysimplemoduleduo-0.0.5.dist-info/RECORD,,
