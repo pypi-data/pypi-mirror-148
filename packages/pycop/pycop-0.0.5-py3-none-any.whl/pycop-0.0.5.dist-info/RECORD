@@ -1,0 +1,13 @@
+bivariate/__init__.py,sha256=vGLmhwSaIgiYIWb1xvq9_Vv-yRZzkZVfvvSUicmssXc,35
+bivariate/archimedean.py,sha256=gqH0WnkKbC7b0MhLcdGJ3MVG7gwJ1Eg3popsO42_-pE,9038
+bivariate/copula.py,sha256=Aj6LnkQTrHZ47g-dgLNe_deuYT2g3Tib0g2Z7TTNRSc,7667
+bivariate/empirical.py,sha256=r0ai9a6QL_OzgrMzNRNdyNCHtj8XRlAiOZppWU6dnTI,7169
+bivariate/estimation.py,sha256=51Ri0Qmf8xBFqBKsir3iNEmrGVLCndYQhHjSO1-ykDI,8425
+bivariate/gaussian.py,sha256=IUWAuprdCqY2c9dYZ9OS2sih0sD2GSs_l87rGYSVeIU,1634
+bivariate/mixture.py,sha256=yJrVnL8Hej8oRUWLlmyKwocp77D_gIJo9XgjXpncES4,6730
+bivariate/student.py,sha256=c5PMnba5lFgh_liw4reAxcM6fzoMeB2z6U_5I7bbBXU,1451
+pycop-0.0.5.dist-info/LICENSE,sha256=1tu17E6iCXs1Ih1zvN22j8nXcSXUqxn7KGEf9rNREB0,1086
+pycop-0.0.5.dist-info/METADATA,sha256=eXcAAjrmiH2wwu-VSZIOBDk8z8JwAzhzs4CeDshmB_I,10357
+pycop-0.0.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pycop-0.0.5.dist-info/top_level.txt,sha256=Zb-RZUrRHjMz1vE9Xm0RX6hwzWalun9b8YeL7b_WZRE,10
+pycop-0.0.5.dist-info/RECORD,,
