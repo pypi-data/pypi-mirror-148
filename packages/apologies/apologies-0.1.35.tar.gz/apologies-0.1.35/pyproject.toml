@@ -1,0 +1,74 @@
+[tool.poetry]
+name = "apologies"
+version = "0.1.35"
+description = "Python code to play a game similar to Sorry"
+authors = ["Kenneth J. Pronovici <pronovic@ieee.org>"]
+license = "Apache-2.0"
+readme = "PyPI.md"
+homepage = "https://pypi.org/project/apologies/"
+repository = "https://github.com/pronovic/apologies"
+include = [
+   { path = 'Changelog', format = 'sdist' },
+   { path = 'LICENSE', format = 'sdist' },
+   { path = 'README.md', format = 'sdist' },
+   { path = 'docs', format = 'sdist' },
+   { path = 'tests', format = 'sdist' },
+]
+packages = [ { include = "apologies", from = "src" } ]
+classifiers=[
+   "Programming Language :: Python :: 3",
+   "License :: OSI Approved :: Apache Software License",
+   "Operating System :: OS Independent",
+   "Environment :: Console",
+   "Intended Audience :: Developers",
+   "Natural Language :: English",
+   "Topic :: Games/Entertainment :: Board Games",
+   "Topic :: Software Development :: Libraries",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.7,<4"
+attrs = "^21.2.0"
+cattrs = "^1.8.0"
+pendulum = "^2.1.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2"
+pytest-testdox = "^2.0.1"
+coverage = "^6.1.1"
+tox = "^3.24.4"
+pylint = "^2.11.1"
+sphinx = "^4.3"
+toml = "^0.10.2"
+pre-commit = "^2.15.0"
+black = "^21.10b0"
+mypy = "^0.910"
+isort = "^5.10.0"
+sphinx-autoapi = "^1.8.4"
+coveralls = "^3.3.1"
+
+[tool.black]
+line-length = 132
+target-version = ['py37', 'py38']
+include = '(src\/scripts\/.*$|\.pyi?$)'
+exclude = '''
+/(
+    \.git
+  | __pycache__
+  | \.tox
+  | \.venv
+  | build
+  | dist
+  | docs
+  | notes
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 132
+skip_glob = [ "docs", "notes" ]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
