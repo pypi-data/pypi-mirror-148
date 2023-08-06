@@ -1,0 +1,3 @@
+[console_scripts]
+cupp = cupp.__main__:main
+
