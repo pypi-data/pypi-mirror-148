@@ -1,0 +1,6 @@
+black==22.3.0
+noseOfYeti>=2.0.0
+
+[tests]
+pytest>=7.0.1
+noseOfYeti>=2.3.1
