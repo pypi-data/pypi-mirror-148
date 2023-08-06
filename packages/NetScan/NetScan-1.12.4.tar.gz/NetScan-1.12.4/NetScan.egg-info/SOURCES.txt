@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+NetScan.egg-info/PKG-INFO
+NetScan.egg-info/SOURCES.txt
+NetScan.egg-info/dependency_links.txt
+NetScan.egg-info/top_level.txt
