@@ -1,0 +1,11 @@
+mkl_devel-2022.1.0.data/data/Library/lib/mkl_core_dll.lib,sha256=S-Y4hU9tqlFlDKgJUcPbFmwUAlfDUPLMZFbtyL0_7lg,2502130
+mkl_devel-2022.1.0.data/data/Library/lib/mkl_intel_c_dll.lib,sha256=aDKXhPyZuhVmu5yaUgFR6WAZ0u1TCvVDxxKTfC2J5Dg,19804566
+mkl_devel-2022.1.0.data/data/Library/lib/mkl_intel_thread_dll.lib,sha256=2im4BTJ47jAhTmVGJPvQ_G9r302OkBLrQ63cM1ez2TU,1691604
+mkl_devel-2022.1.0.data/data/Library/lib/mkl_rt.lib,sha256=sy8mX74nc-8o9uhBBKaqBj54qkwJTl2lXK6Md14_aaA,4301462
+mkl_devel-2022.1.0.data/data/Library/lib/mkl_sequential_dll.lib,sha256=r-u49IAbZBuyJIpzEZTed-433lvoxrZ0N6bxLAHSmnU,1679342
+mkl_devel-2022.1.0.data/data/Library/lib/mkl_tbb_thread_dll.lib,sha256=VALcrpu9K7-WzncQ0qC6yRS9_kiLQDvJFKgY1KqkaBw,1679342
+mkl_devel-2022.1.0.dist-info/LICENSE.txt,sha256=0FHWqv3r5V_hjP6ydXbWRhi10tZNphthT1rPPkZAgA4,4227
+mkl_devel-2022.1.0.dist-info/METADATA,sha256=TryvjDXH9FXCpvZCPz9moARyf5JF3JAL1gPRnLzsM3w,1360
+mkl_devel-2022.1.0.dist-info/WHEEL,sha256=zHJBPiUjerLfSd6rvumXiVgCoJdoCSRj0riGeQWjlEw,114
+mkl_devel-2022.1.0.dist-info/top_level.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+mkl_devel-2022.1.0.dist-info/RECORD,,
