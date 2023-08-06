@@ -1,0 +1,10 @@
+ask_pypi/__init__.py,sha256=qAP1qVE3NikJcCBdGrXQ3EYNZDJBGIi0mp2YR0uz61M,55
+ask_pypi/__main__.py,sha256=XcsWNC16rctNufhrXv3dACwNudlvJhWLkk6_CB5tVQU,605
+ask_pypi/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ask_pypi/pypi_project.py,sha256=hLeWtwej-xv3Fx5ikjJoZPePAlf9sm12DqlvMIEYHSI,1096
+ask_pypi-0.5.0.dist-info/LICENSE.txt,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+ask_pypi-0.5.0.dist-info/METADATA,sha256=Uq3rlvceB853wwjHMXdxFGU3Gc2rdF7-7sg7KqWLevY,5440
+ask_pypi-0.5.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+ask_pypi-0.5.0.dist-info/entry_points.txt,sha256=omq-6qTrg0DinjA-eHX-GSyQ2Iq2EVnJ9NlyPKThQxY,59
+ask_pypi-0.5.0.dist-info/top_level.txt,sha256=CIRX86MkgVRXLuTtB0eqEfNeTg1PhbMncAAT5cpHEyc,9
+ask_pypi-0.5.0.dist-info/RECORD,,
