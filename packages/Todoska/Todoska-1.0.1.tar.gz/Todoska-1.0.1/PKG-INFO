@@ -1,0 +1,89 @@
+Metadata-Version: 1.2
+Name: Todoska
+Version: 1.0.1
+Summary: A Basic Todo Tracker in Cli
+Home-page: https://github.com/Abbhiishek/Todoska
+Author: Abhishek Kushwaha
+Author-email: abhishekkushwaha1479@gmail.com
+License: MIT
+Description: ## Todoska
+        
+        Todoska is a simple, fast, and powerful todo list manager.
+        
+        
+        ## Installation
+        
+        ```python
+        pip install todoska
+        ```
+        
+        
+        ## Usage
+        
+        ```python
+        Figuring out dude ,
+        ```
+        
+        
+        Usage :
+        
+        - Add new task :
+        
+        todoska add <task-name>
+        
+        - Update a task :
+        
+        todoska update <task-id> <task-name>
+        
+        - Delete a task :
+        
+        todoska delete <task-id>
+        
+        - View All task :
+        
+        todoska show
+        
+        
+        
+        
+        Change Log
+        ==========
+        
+        0.2.06 (01/05/2022)
+        -------------------
+        
+        - Code Refactoring
+        
+        
+        0.1.04 (30/04/2022)
+        -------------------
+        
+        - 🐛 Minor Bugs Fixed 
+        
+        
+        0.1.02 (30/04/2022)
+        -------------------
+        - changed some code 
+        
+        
+        0.1.03 (30/04/2022)
+        -------------------
+        - removed Sqlite3 dependency
+        
+        
+        0.1.01 (30/04/2022)
+        -------------------
+        - First Release
+        - Initial Implementation
+        
+        
+        
+        
+Keywords: Python,cli,Todo,Todotracker,todo-tracker,todo-tracker-cli,Todoska
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
