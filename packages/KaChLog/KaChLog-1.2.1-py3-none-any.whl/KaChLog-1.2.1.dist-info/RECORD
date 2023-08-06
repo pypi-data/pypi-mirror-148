@@ -1,0 +1,14 @@
+kachlog/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kachlog/_changelog.py,sha256=mRXx3Fw69ONd1q133Wbi6O8zT2RJOTdkuhOlbs5T8PU,8913
+kachlog/_version.py,sha256=VCAsF52Sp77TWPCCXAN1PTouJWol1s-8ASdNJk21LIc,65
+kachlog/_versioning.py,sha256=ye3NnW5LSisv4LuH9wKICv0_EXnHASBiOqMjdhPXIts,6269
+kachlog/commands.py,sha256=xCQpYHjx_0tNEfeHtqwSIGxb0LG-gMy7yw9sIlB0iwM,5279
+kachlog/exceptions.py,sha256=y1cPgs04AnH_wV0z2Yfb-Ex0Ln53y3nwzF4TpgJdYlc,335
+kachlog/templates.py,sha256=TJat_KdmvKTGYORgKCWPZSaIeWo0QQqITtzbJh2ypAE,378
+kachlog/utils.py,sha256=f7zKIy9qt97KibGiLLyeiTYGwWvp4pgJdZUa-kIrjN8,3725
+KaChLog-1.2.1.dist-info/LICENSE,sha256=JkhCJJ13VgviGpcNOSpywKkDxDaUI8807BCG5AAHNe4,1118
+KaChLog-1.2.1.dist-info/METADATA,sha256=Vv6WRUdL5Oe6CmAOwemROqesY_XXvGRN0QK9VdVXOtA,5906
+KaChLog-1.2.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+KaChLog-1.2.1.dist-info/entry_points.txt,sha256=nrgpLfnlUr7enTdA5XSwErovdxMchbH90jFtqyFqV9c,134
+KaChLog-1.2.1.dist-info/top_level.txt,sha256=a402V4Rf8QojmJqXUOVyECJZSSfxjVZDvtqOwPsklMc,8
+KaChLog-1.2.1.dist-info/RECORD,,
