@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+wildberries/__init__.py
+wildberries/client.py
+wildberries/urls.py
+wildberries.egg-info/PKG-INFO
+wildberries.egg-info/SOURCES.txt
+wildberries.egg-info/dependency_links.txt
+wildberries.egg-info/requires.txt
+wildberries.egg-info/top_level.txt
