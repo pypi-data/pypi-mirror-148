@@ -1,0 +1,10 @@
+keycloak/__init__.py,sha256=K2pf0jBzxVbQBVMmIWMWpxOMpAeXi-JLPTSmzfZD4EQ,2949
+keycloak/dataclass.py,sha256=_f6OklhPQZiQFlZZ9IqbgXla_AAT8jrm-11SI2OL344,468
+keycloak/token.py,sha256=goAxGbnlyyjG_vgAICs7x4P5Pd6C-iHujJijjXjCy0Q,5748
+keycloak/user.py,sha256=juaddyb4bxni9khX9F2uRKNAtO3cSr9Ofos7JfIVTKA,633
+keycloak/util.py,sha256=4srjrC3KWy7ZjsoF9kayrM3pco3ijYkTmT8kaTpZ2Rs,363
+keycloak_basic-1.2.0.dist-info/LICENSE,sha256=7g3DW81KJk5A-Hoqwjz5ctg9uwNHz0zHlGEBRnHRiVU,1067
+keycloak_basic-1.2.0.dist-info/METADATA,sha256=2gV30k223BIyeyDasUvAEnFSBwfRQ1PUeQTnSddAPbQ,1432
+keycloak_basic-1.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+keycloak_basic-1.2.0.dist-info/top_level.txt,sha256=LuJrJ_SoQ3vGwbNNj_JjiyOUf_OQr2asOV52BLe9z_M,9
+keycloak_basic-1.2.0.dist-info/RECORD,,
