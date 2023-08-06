@@ -1,0 +1,64 @@
+Category,Dictionary_Name,Parameter Name,Parameter Description,amount,unit,uncertainty_type,loc,scale,shape,minimum,maximum,Reference,Comment
+LF MSW Properties,LFMSW,frac_of_msw,Mass fraction of PFAS containing waste mixed with MSW,0.01,fraction,4,,,,0.001,0.1,,
+LF MSW Properties,LFMSW,bulk_dens,MSW bulk density - wet,890,kg/m3,4,,,,800,1000,,
+LF MSW Properties,LFMSW,ts_cont,Total solids content of the bulk MSW in the landfill  - wet,0.746,fraction wet weight,4,,,,0.69,0.77,,
+LF MSW Properties,LFMSW,C_cont,MSW organic C content -dry,0.331,fraction TS,4,,,,0.259,0.334,,
+LF Water Balance,Water_Blnc,leach_gpad,Leachate generation rate per area,500,gal/acre-day,4,,,,250,1000,,
+LF Water Balance,Water_Blnc,is_leach_col,Is leachate collected,1,1:TRUE/0:FALSE,,,,,,,,
+LF Water Balance,Water_Blnc,frac_leach_col,Fraction of leachate collected,0.998,fraction,4,,,,0.98,0.999,,
+Volatilization,Volatilization,frac_vol_loss,Fraction of PFAS lost to volatilization,0,fraction,,,,,,,,
+LF Parameters,LF,lf_ton_area,Landfill capacity per acre,100000,Mg/acre,4,,,,25000,200000,,
+Log partition coefficient,LogPartCoef,PFOA,PFOA Log Koc (Landfill),2.28,log L/kg OC,3,2.28,0.53,,1.24,3.67,"[78, 81]",
+Log partition coefficient,LogPartCoef,PFOS,PFOS Log Koc (Landfill),3.08,log L/kg OC,3,3.08,0.49,,2.13,4.74,"[78, 81]",
+Log partition coefficient,LogPartCoef,PFBA,PFBA Log Koc (Landfill),1.8,log L/kg OC,3,1.8,0.55,,0.83,2.81,[78],
+Log partition coefficient,LogPartCoef,PFPeA,PFPeA Log Koc (Landfill),1.74,log L/kg OC,3,1.74,0.53,,0.84,2.69,[78],
+Log partition coefficient,LogPartCoef,PFHxA,PFHxA Log Koc (Landfill),1.79,log L/kg OC,3,1.79,0.51,,0.84,2.76,[78],
+Log partition coefficient,LogPartCoef,PFHpA,PFHpA Log Koc (Landfill),1.98,log L/kg OC,3,1.98,0.61,,0.95,3.17,"[78, 80]",
+Log partition coefficient,LogPartCoef,PFNA,PFNA Log Koc (Landfill),2.8,log L/kg OC,3,2.8,0.51,,1.62,3.75,[78],
+Log partition coefficient,LogPartCoef,PFDA,PFDA Log Koc (Landfill),3.44,log L/kg OC,3,3.44,0.62,,2.01,4.39,"[78, 81]",
+Log partition coefficient,LogPartCoef,PFBS,PFBS Log Koc (Landfill),1.63,log L/kg OC,3,1.63,0.44,,0.84,2.65,"[78, 82]",
+Log partition coefficient,LogPartCoef,PFHxS,PFHxS Log Koc (Landfill),2.07,log L/kg OC,3,2.07,0.54,,1.06,3.15,"[78, 80]",
+Log partition coefficient,LogPartCoef,5:3FTCA,5:3FTCA Log Koc (Landfill),2.22,log L/kg OC,4,,,,1.6,2.84,,Calculated based on retention time
+Log partition coefficient,LogPartCoef,6:2FTCA,6:2FTCA Log Koc (Landfill),2.28,log L/kg OC,4,,,,1.66,2.89,,Calculated based on retention time
+Log partition coefficient,LogPartCoef,7:3FTCA,7:3FTCA Log Koc (Landfill),2.96,log L/kg OC,4,,,,2.31,3.61,,Calculated based on retention time
+Log partition coefficient,LogPartCoef,6:2FTS,6:2FTS Log Koc (Landfill),2.2,log L/kg OC,3,2.2,0.57,,1.09,3.17,[78],
+Log partition coefficient,LogPartCoef,MeFBSAA,MeFBSAA Log Koc (Landfill),2.119,log L/kg OC,,,,,,,[96],
+Log partition coefficient,LogPartCoef,nMeFOSAA,nMeFOSAA Log Koc (Landfill),3.24,log L/kg OC,4,,,,2.55,3.94,,Calculated based on retention time
+Log partition coefficient,LogPartCoef,PFBSA,PFBSA Log Koc (Landfill),1.64,log L/kg OC,4,,,,0.96,2.32,,Calculated based on retention time
+Log partition coefficient,LogPartCoef,PFPeS,PFPeS Log Koc (Landfill),1.89,log L/kg OC,3,1.89,0.46,,1.22,2.65,[78],
+Log partition coefficient for GAC,LogPartCoef_GAC,PFOA,PFOA Log K (GAC),4.86,log L/kg,3,4.86,0.23,,4.6,5.03,,"(Rodowa et al. 2020, Kempisty et al. 2022)"
+Log partition coefficient for GAC,LogPartCoef_GAC,PFOS,PFOS Log K (GAC),4.98,log L/kg,3,4.98,0.11,,4.9,5.05,,"(Rodowa et al. 2020, Kempisty et al. 2022)"
+Log partition coefficient for GAC,LogPartCoef_GAC,PFBA,PFBA Log K (GAC),4.17,log L/kg,3,4.17,0.14,,4.07,4.27,,"(Rodowa et al. 2020, Kempisty et al. 2022)"
+Log partition coefficient for GAC,LogPartCoef_GAC,PFPeA,PFPeA Log K (GAC),4.49,log L/kg,3,4.49,0.28,,4.2,4.75,,"(Rodowa et al. 2020, Kempisty et al. 2022)"
+Log partition coefficient for GAC,LogPartCoef_GAC,PFHxA,PFHxA Log K (GAC),4.56,log L/kg,3,4.56,0.29,,4.23,4.76,,"(Rodowa et al. 2020, Kempisty et al. 2022)"
+Log partition coefficient for GAC,LogPartCoef_GAC,PFHpA,PFHpA Log K (GAC),4.64,log L/kg,3,4.64,0.3,,4.43,4.85,,"(Rodowa et al. 2020, Kempisty et al. 2022)"
+Log partition coefficient for GAC,LogPartCoef_GAC,PFNA,PFNA Log K (GAC),5,log L/kg,,,,,,,,"(Rodowa et al. 2020, Kempisty et al. 2022)"
+Log partition coefficient for GAC,LogPartCoef_GAC,PFDA,PFDA Log K (GAC),5.02,log L/kg,,,,,,,,"(Rodowa et al. 2020, Kempisty et al. 2022)"
+Log partition coefficient for GAC,LogPartCoef_GAC,PFBS,PFBS Log K (GAC),4.82,log L/kg,,,,,,,,"(Rodowa et al. 2020, Kempisty et al. 2022)"
+Log partition coefficient for GAC,LogPartCoef_GAC,PFHxS,PFHxS Log K (GAC),4.9,log L/kg,3,4.9,0.08,,4.85,4.96,,"(Rodowa et al. 2020, Kempisty et al. 2022)"
+Log partition coefficient for GAC,LogPartCoef_GAC,5:3FTCA,5:3FTCA  Log K (GAC),0,log L/kg,,,,,,,,
+Log partition coefficient for GAC,LogPartCoef_GAC,6:2FTCA,6:2FTCA  Log K (GAC),0,log L/kg,,,,,,,,
+Log partition coefficient for GAC,LogPartCoef_GAC,7:3FTCA,7:3FTCA  Log K (GAC),0,log L/kg,,,,,,,,
+Log partition coefficient for GAC,LogPartCoef_GAC,6:2FTS,6:2FTS  Log K (GAC),4.65,log L/kg,,,,,,,,"(Rodowa et al. 2020, Kempisty et al. 2022)"
+Log partition coefficient for GAC,LogPartCoef_GAC,MeFBSAA,MeFBSAA  Log K (GAC),0,log L/kg,,,,,,,,
+Log partition coefficient for GAC,LogPartCoef_GAC,nMeFOSAA,nMeFOSAA  Log K (GAC),0,log L/kg,,,,,,,,
+Log partition coefficient for GAC,LogPartCoef_GAC,PFBSA,PFBSA  Log K (GAC),0,log L/kg,,,,,,,,
+Log partition coefficient for GAC,LogPartCoef_GAC,PFPeS,PFPeS  Log K (GAC),0,log L/kg,,,,,,,,
+Log partition coefficient for Spent IER,LogPartCoef_SpentIER,PFOA,PFOA Log K (SpentIER),6.02,log L/kg,3,6.02,0.24,,5.57,6.4,,"Detlef Knappe: (unpublished so far, manuscript in prep)"
+Log partition coefficient for Spent IER,LogPartCoef_SpentIER,PFOS,PFOS Log K (SpentIER),6.4,log L/kg,,,,,,,,"Detlef Knappe: (unpublished so far, manuscript in prep)"
+Log partition coefficient for Spent IER,LogPartCoef_SpentIER,PFBA,PFBA Log K (SpentIER),4.82,log L/kg,3,4.82,0.23,,4.5,5.15,,"Detlef Knappe: (unpublished so far, manuscript in prep)"
+Log partition coefficient for Spent IER,LogPartCoef_SpentIER,PFPeA,PFPeA Log K (SpentIER),5.18,log L/kg,3,5.18,0.27,,4.56,5.64,,"Detlef Knappe: (unpublished so far, manuscript in prep)"
+Log partition coefficient for Spent IER,LogPartCoef_SpentIER,PFHxA,PFHxA Log K (SpentIER),5.47,log L/kg,3,5.47,0.3,,4.65,5.99,,"Detlef Knappe: (unpublished so far, manuscript in prep)"
+Log partition coefficient for Spent IER,LogPartCoef_SpentIER,PFHpA,PFHpA Log K (SpentIER),5.79,log L/kg,3,5.79,0.29,,5.11,6.4,,"Detlef Knappe: (unpublished so far, manuscript in prep)"
+Log partition coefficient for Spent IER,LogPartCoef_SpentIER,PFNA,PFNA Log K (SpentIER),6.12,log L/kg,3,6.12,0.13,,5.92,6.4,,"Detlef Knappe: (unpublished so far, manuscript in prep)"
+Log partition coefficient for Spent IER,LogPartCoef_SpentIER,PFDA,PFDA Log K (SpentIER),6.16,log L/kg,3,6.16,0.1,,6.06,6.4,,"Detlef Knappe: (unpublished so far, manuscript in prep)"
+Log partition coefficient for Spent IER,LogPartCoef_SpentIER,PFBS,PFBS Log K (SpentIER),6.13,log L/kg,3,6.13,0.18,,5.77,6.4,,"Detlef Knappe: (unpublished so far, manuscript in prep)"
+Log partition coefficient for Spent IER,LogPartCoef_SpentIER,PFHxS,PFHxS Log K (SpentIER),6.4,log L/kg,,,,,,,,"Detlef Knappe: (unpublished so far, manuscript in prep)"
+Log partition coefficient for Spent IER,LogPartCoef_SpentIER,5:3FTCA,5:3FTCA Log K (SpentIER),0,log L/kg,,,,,,,,
+Log partition coefficient for Spent IER,LogPartCoef_SpentIER,6:2FTCA,6:2FTCA Log K (SpentIER),0,log L/kg,,,,,,,,
+Log partition coefficient for Spent IER,LogPartCoef_SpentIER,7:3FTCA,7:3FTCA Log K (SpentIER),0,log L/kg,,,,,,,,
+Log partition coefficient for Spent IER,LogPartCoef_SpentIER,6:2FTS,6:2FTS Log K (SpentIER),5.75,log L/kg,3,5.75,0.27,,5.13,6.29,,"Detlef Knappe: (unpublished so far, manuscript in prep)"
+Log partition coefficient for Spent IER,LogPartCoef_SpentIER,MeFBSAA,MeFBSAA Log K (SpentIER),0,log L/kg,,,,,,,,
+Log partition coefficient for Spent IER,LogPartCoef_SpentIER,nMeFOSAA,nMeFOSAA Log K (SpentIER),0,log L/kg,,,,,,,,
+Log partition coefficient for Spent IER,LogPartCoef_SpentIER,PFBSA,PFBSA Log K (SpentIER),0,log L/kg,,,,,,,,
+Log partition coefficient for Spent IER,LogPartCoef_SpentIER,PFPeS,PFPeS Log K (SpentIER),0,log L/kg,,,,,,,,

@@ -1,0 +1,436 @@
+Category,Dictionary_Name,Parameter Name,Parameter Description,amount,unit,uncertainty_type,loc,scale,shape,minimum,maximum,Reference,Comment
+Food Waste,FoodWaste,bulk_dens,Bulk density - wet,350,kg/m3,4,,,,130,500,[93],Baled: 600-750  Loose: 130-500
+Food Waste,FoodWaste,ts_cont,Total solids content - wet,0.3,fraction wet weight,5,0.3,,,0.2,0.5,[93],
+Food Waste,FoodWaste,VS_cont,VS content - dry,0.95,kg VS/kg TS,5,0.95,,,0.83,0.99,[12],
+Food Waste,FoodWaste,C_cont,Organic C content - dry,0.5,fraction TS,5,0.5,,,0.45,0.57,[12],
+Food Waste PFAS Concentration,FoodWaste_PFAS,PFOA,PFOA concentration,0,10e-6g/kg,5,0,,,0,114,[71],Hunted  wild boar liver
+Food Waste PFAS Concentration,FoodWaste_PFAS,PFOS,PFOS concentration,0,10e-6g/kg,5,0,,,0,1780,[72],Hunted  wild boar liver
+Food Waste PFAS Concentration,FoodWaste_PFAS,PFBA,PFBA concentration,0,10e-6g/kg,5,0,,,0,0.164,[73],Lettuce mix
+Food Waste PFAS Concentration,FoodWaste_PFAS,PFPeA,PFPeA concentration,0,10e-6g/kg,5,0,,,0,0.77,[74],"Floret; the mixture of Floret, Fruit, Garden, Fruit, Yard, Leaf, Root, Seed and Stem"
+Food Waste PFAS Concentration,FoodWaste_PFAS,PFHxA,PFHxA concentration,0,10e-6g/kg,5,0,,,0,5.38,[75],Polar cod
+Food Waste PFAS Concentration,FoodWaste_PFAS,PFHpA,PFHpA concentration,0,10e-6g/kg,5,0,,,0,0.0469,[73],Collard greens
+Food Waste PFAS Concentration,FoodWaste_PFAS,PFNA,PFNA concentration,0,10e-6g/kg,5,0,,,0,9.7,[76],Osprey (2008-2009)
+Food Waste PFAS Concentration,FoodWaste_PFAS,PFDA,PFDA concentration,0,10e-6g/kg,5,0,,,0,28.5,[76],Osprey (2008-2009)
+Food Waste PFAS Concentration,FoodWaste_PFAS,PFBS,PFBS concentration,0,10e-6g/kg,5,0,,,0,0.1294,[73],Collard greens
+Food Waste PFAS Concentration,FoodWaste_PFAS,PFHxS,PFHxS concentration,0,10e-6g/kg,5,0,,,0,1.94,[77],Milk collected from the farm near air force basement
+Food Waste PFAS Concentration,FoodWaste_PFAS,5:3FTCA,5:3FTCA concentration,0,10e-6g/kg,,,,,,,,No data!
+Food Waste PFAS Concentration,FoodWaste_PFAS,6:2FTCA,6:2FTCA concentration,0,10e-6g/kg,,,,,,,,No data!
+Food Waste PFAS Concentration,FoodWaste_PFAS,7:3FTCA,7:3FTCA concentration,0,10e-6g/kg,5,0,,,0,2.7,[76],Osprey (2008-2009)
+Food Waste PFAS Concentration,FoodWaste_PFAS,6:2FTS,6:2FTS concentration,0,10e-6g/kg,5,0,,,0,36.9,[76],Osprey (2013)
+Food Waste PFAS Concentration,FoodWaste_PFAS,MeFBSAA,MeFBSAA concentration,0,10e-6g/kg,,,,,,,,No data!
+Food Waste PFAS Concentration,FoodWaste_PFAS,nMeFOSAA,nMeFOSAA concentration,0,10e-6g/kg,,,,,,,,No data!
+Food Waste PFAS Concentration,FoodWaste_PFAS,PFBSA,PFBSA concentration,0,10e-6g/kg,,,,,,,,No data!
+Food Waste PFAS Concentration,FoodWaste_PFAS,PFPeS,PFPeS concentration,0,10e-6g/kg,5,0,,,0,0.076,[77],Milk collected from the farm near air force basement
+Compost,Compost,bulk_dens,Bulk density - wet,561,kg/m3,5,561,,,415,712,[48],
+Compost,Compost,ts_cont,TS content,0.57,fraction wet weight,4,,,,0.4,0.76,[14],
+Compost,Compost,VS_cont,VS content - dry,0.41,kg VS/kg TS,4,,,,0.3,0.578,[14],
+Compost,Compost,C_cont,Organic C content - dry,0.23,kg C/kg TS,4,0.23,,,0.18,0.33,[14],
+Compost PFAS Concentration,Compost_PFAS,PFOA,PFOA concentration,3.937,10e-6g/kg,3,3.94,3.39,,0.04,10.31,[14],10 samples: 9 OFMSW commercial composts and 1 backyard compost
+Compost PFAS Concentration,Compost_PFAS,PFOS,PFOS concentration,1.096,10e-6g/kg,3,1.1,0.41,,0.35,1.69,[14],10 samples: 9 OFMSW commercial composts and 1 backyard compost
+Compost PFAS Concentration,Compost_PFAS,PFBA,PFBA concentration,4.96,10e-6g/kg,3,4.96,4.48,,0.15,12.04,[14],10 samples: 9 OFMSW commercial composts and 1 backyard compost
+Compost PFAS Concentration,Compost_PFAS,PFPeA,PFPeA concentration,4.441,10e-6g/kg,3,4.44,3.11,,0.41,8.59,[14],10 samples: 9 OFMSW commercial composts and 1 backyard compost
+Compost PFAS Concentration,Compost_PFAS,PFHxA,PFHxA concentration,20.31,10e-6g/kg,3,20.31,17.32,,0.38,49.84,[14],10 samples: 9 OFMSW commercial composts and 1 backyard compost
+Compost PFAS Concentration,Compost_PFAS,PFHpA,PFHpA concentration,0.256,10e-6g/kg,5,0.256,,,0,0.256,[14],10 samples: 9 OFMSW commercial composts and 1 backyard compost
+Compost PFAS Concentration,Compost_PFAS,PFNA,PFNA concentration,0.229,10e-6g/kg,5,0.229,,,0,1.05,[14],10 samples: 9 OFMSW commercial composts and 1 backyard compost
+Compost PFAS Concentration,Compost_PFAS,PFDA,PFDA concentration,1.75,10e-6g/kg,3,1.75,1.44,,0,4.43,[14],10 samples: 9 OFMSW commercial composts and 1 backyard compost
+Compost PFAS Concentration,Compost_PFAS,PFBS,PFBS concentration,1.142,10e-6g/kg,5,1.14,,,0,7.63,[14],10 samples: 9 OFMSW commercial composts and 1 backyard compost
+Compost PFAS Concentration,Compost_PFAS,PFHxS,PFHxS concentration,0.185,10e-6g/kg,3,0.19,0.06,,0.07,0.25,[14],10 samples: 9 OFMSW commercial composts and 1 backyard compost
+Compost PFAS Concentration,Compost_PFAS,5:3FTCA,5:3FTCA concentration,0,10e-6g/kg,,,,,,,,No data!
+Compost PFAS Concentration,Compost_PFAS,6:2FTCA,6:2FTCA concentration,0,10e-6g/kg,,,,,,,,No data!
+Compost PFAS Concentration,Compost_PFAS,7:3FTCA,7:3FTCA concentration,0,10e-6g/kg,,,,,,,,No data!
+Compost PFAS Concentration,Compost_PFAS,6:2FTS,6:2FTS concentration,0,10e-6g/kg,,,,,,,,No data!
+Compost PFAS Concentration,Compost_PFAS,MeFBSAA,MeFBSAA concentration,0,10e-6g/kg,,,,,,,,No data!
+Compost PFAS Concentration,Compost_PFAS,nMeFOSAA,nMeFOSAA concentration,0,10e-6g/kg,,,,,,,,No data!
+Compost PFAS Concentration,Compost_PFAS,PFBSA,PFBSA concentration,0,10e-6g/kg,,,,,,,,No data!
+Compost PFAS Concentration,Compost_PFAS,PFPeS,PFPeS concentration,0,10e-6g/kg,,,,,,,,No data!
+Compost Residuals,CompostResiduals,bulk_dens,Bulk density - wet,385,kg/m3,4,,,,350,420,[93],Assumed that have same bulk density as MSW.
+Compost Residuals,CompostResiduals,ts_cont,Total solids content - wet,0.73,fraction wet weight,5,0.73,,,0.68,0.77,[94],
+Compost Residuals,CompostResiduals,VS_cont,VS content - dry,0.73,kg VS/kg TS,5,0.73,,,0.6,0.8,[94],
+Compost Residuals,CompostResiduals,C_cont,Organic C content - dry,0.26,fraction TS,4,,,,0.21,0.32,[94],
+Compost Residuals PFAS Concentration,CompostResiduals_PFAS,PFOA,PFOA concentration,5.4,10e-6g/kg,3,5.4,3,,2.5,10.3,,
+Compost Residuals PFAS Concentration,CompostResiduals_PFAS,PFOS,PFOS concentration,1.09,10e-6g/kg,3,1.09,0.4,,0.4,1.6,,
+Compost Residuals PFAS Concentration,CompostResiduals_PFAS,PFBA,PFBA concentration,6.942857,10e-6g/kg,3,6.942857,3.8,,2.8,12,,
+Compost Residuals PFAS Concentration,CompostResiduals_PFAS,PFPeA,PFPeA concentration,5.967143,10e-6g/kg,3,5.967143,2.3,,2.7,8.6,,
+Compost Residuals PFAS Concentration,CompostResiduals_PFAS,PFHxA,PFHxA concentration,28.75286,10e-6g/kg,3,28.75286,13.1,,10.5,49.8,,
+Compost Residuals PFAS Concentration,CompostResiduals_PFAS,PFHpA,PFHpA concentration,0.365714,10e-6g/kg,3,0.365714,1,,0,2.6,,
+Compost Residuals PFAS Concentration,CompostResiduals_PFAS,PFNA,PFNA concentration,0.327143,10e-6g/kg,3,0.327143,0.4,,0,1.1,,
+Compost Residuals PFAS Concentration,CompostResiduals_PFAS,PFDA,PFDA concentration,0.73,10e-6g/kg,3,0.73,1.1,,0.1,3.2,,
+Compost Residuals PFAS Concentration,CompostResiduals_PFAS,PFBS,PFBS concentration,1.631429,10e-6g/kg,3,1.631429,2.7,,0,7.6,,
+Compost Residuals PFAS Concentration,CompostResiduals_PFAS,PFHxS,PFHxS concentration,0.201429,10e-6g/kg,3,0.201429,0.1,,0.1,0.3,,
+Compost Residuals PFAS Concentration,CompostResiduals_PFAS,5:3FTCA,5:3FTCA concentration,0,10e-6g/kg,,,,,,,,
+Compost Residuals PFAS Concentration,CompostResiduals_PFAS,6:2FTCA,6:2FTCA concentration,0,10e-6g/kg,,,,,,,,
+Compost Residuals PFAS Concentration,CompostResiduals_PFAS,7:3FTCA,7:3FTCA concentration,0,10e-6g/kg,,,,,,,,
+Compost Residuals PFAS Concentration,CompostResiduals_PFAS,6:2FTS,6:2FTS concentration,0,10e-6g/kg,,,,,,,,
+Compost Residuals PFAS Concentration,CompostResiduals_PFAS,MeFBSAA,MeFBSAA concentration,0,10e-6g/kg,,,,,,,,
+Compost Residuals PFAS Concentration,CompostResiduals_PFAS,nMeFOSAA,nMeFOSAA concentration,0,10e-6g/kg,,,,,,,,
+Compost Residuals PFAS Concentration,CompostResiduals_PFAS,PFBSA,PFBSA concentration,0,10e-6g/kg,,,,,,,,
+Compost Residuals PFAS Concentration,CompostResiduals_PFAS,PFPeS,PFPeS concentration,0,10e-6g/kg,,,,,,,,
+MSW,MSW,bulk_dens,Bulk density - wet,385,kg/m3,4,,,,350,420,[93],Pressed into the bin the bulk density might be 180 kg/m3 and in the compacting collection truck in the range 350-420 kg/m3
+MSW,MSW,ts_cont,Total solids content - wet,0.73,fraction wet weight,5,0.73,,,0.68,0.77,[94],
+MSW,MSW,VS_cont,VS content - dry,0.73,kg VS/kg TS,5,0.73,,,0.6,0.8,[94],
+MSW,MSW,C_cont,Organic C content - dry,0.26,fraction TS,4,,,,0.21,0.32,[94],
+MSW PFAS Concentration,MSW_PFAS,PFOA,PFOA concentration,1.07,10e-6g/kg,4,,,,0,10,,
+MSW PFAS Concentration,MSW_PFAS,PFOS,PFOS concentration,0.84,10e-6g/kg,4,,,,0,10,,
+MSW PFAS Concentration,MSW_PFAS,PFBA,PFBA concentration,0,10e-6g/kg,4,,,,0,10,,
+MSW PFAS Concentration,MSW_PFAS,PFPeA,PFPeA concentration,0,10e-6g/kg,4,,,,0,10,,
+MSW PFAS Concentration,MSW_PFAS,PFHxA,PFHxA concentration,0,10e-6g/kg,4,,,,0,10,,
+MSW PFAS Concentration,MSW_PFAS,PFHpA,PFHpA concentration,0,10e-6g/kg,4,,,,0,10,,
+MSW PFAS Concentration,MSW_PFAS,PFNA,PFNA concentration,0,10e-6g/kg,4,,,,0,10,,
+MSW PFAS Concentration,MSW_PFAS,PFDA,PFDA concentration,0,10e-6g/kg,4,,,,0,10,,
+MSW PFAS Concentration,MSW_PFAS,PFBS,PFBS concentration,0,10e-6g/kg,4,,,,0,10,,
+MSW PFAS Concentration,MSW_PFAS,PFHxS,PFHxS concentration,0,10e-6g/kg,4,,,,0,10,,
+MSW PFAS Concentration,MSW_PFAS,5:3FTCA,5:3FTCA concentration,0,10e-6g/kg,,,,,,,,
+MSW PFAS Concentration,MSW_PFAS,6:2FTCA,6:2FTCA concentration,0,10e-6g/kg,,,,,,,,
+MSW PFAS Concentration,MSW_PFAS,7:3FTCA,7:3FTCA concentration,0,10e-6g/kg,,,,,,,,
+MSW PFAS Concentration,MSW_PFAS,6:2FTS,6:2FTS concentration,0,10e-6g/kg,,,,,,,,
+MSW PFAS Concentration,MSW_PFAS,MeFBSAA,MeFBSAA concentration,0,10e-6g/kg,,,,,,,,
+MSW PFAS Concentration,MSW_PFAS,nMeFOSAA,nMeFOSAA concentration,0,10e-6g/kg,,,,,,,,
+MSW PFAS Concentration,MSW_PFAS,PFBSA,PFBSA concentration,0,10e-6g/kg,,,,,,,,
+MSW PFAS Concentration,MSW_PFAS,PFPeS,PFPeS concentration,0,10e-6g/kg,,,,,,,,
+Contact Water,ContactWater,density,Density,1,kg/L,,,,,,,,
+Contact Water,ContactWater,ts_cont,Total solids content - wet,0.041,fraction wet weight,4,,,,0,0.082,[109],Assume the mean value is half of the maximum number
+Contact Water,ContactWater,VS_cont,VS content - dry,0.4,kg VS/kg TS,4,,,,0,0.79,[109],Assume the mean value is half of the maximum number
+Contact Water,ContactWater,C_cont,Organic C content - dry,0.2,fraction TS,4,,,,0,0.4,[109],Assume the mean value is half of the maximum number
+Contact Water PFAS Concentration,ContactWater_PFAS,PFOA,PFOA concentration,0.2,10e-6g/kg,,,,,,,,
+Contact Water PFAS Concentration,ContactWater_PFAS,PFOS,PFOS concentration,0.06,10e-6g/kg,,,,,,,,
+Contact Water PFAS Concentration,ContactWater_PFAS,PFBA,PFBA concentration,1,10e-6g/kg,,,,,,,,
+Contact Water PFAS Concentration,ContactWater_PFAS,PFPeA,PFPeA concentration,0.94,10e-6g/kg,,,,,,,,
+Contact Water PFAS Concentration,ContactWater_PFAS,PFHxA,PFHxA concentration,4.76,10e-6g/kg,,,,,,,,
+Contact Water PFAS Concentration,ContactWater_PFAS,PFHpA,PFHpA concentration,0.29,10e-6g/kg,,,,,,,,
+Contact Water PFAS Concentration,ContactWater_PFAS,PFNA,PFNA concentration,0.03,10e-6g/kg,,,,,,,,
+Contact Water PFAS Concentration,ContactWater_PFAS,PFDA,PFDA concentration,0,10e-6g/kg,,,,,,,,
+Contact Water PFAS Concentration,ContactWater_PFAS,PFBS,PFBS concentration,2.13,10e-6g/kg,,,,,,,,
+Contact Water PFAS Concentration,ContactWater_PFAS,PFHxS,PFHxS concentration,0.0115,10e-6g/kg,,,,,,,,
+Contact Water PFAS Concentration,ContactWater_PFAS,5:3FTCA,5:3FTCA concentration,0,10e-6g/kg,,,,,,,,
+Contact Water PFAS Concentration,ContactWater_PFAS,6:2FTCA,6:2FTCA concentration,0,10e-6g/kg,,,,,,,,
+Contact Water PFAS Concentration,ContactWater_PFAS,7:3FTCA,7:3FTCA concentration,0,10e-6g/kg,,,,,,,,
+Contact Water PFAS Concentration,ContactWater_PFAS,6:2FTS,6:2FTS concentration,0,10e-6g/kg,,,,,,,,
+Contact Water PFAS Concentration,ContactWater_PFAS,MeFBSAA,MeFBSAA concentration,0,10e-6g/kg,,,,,,,,
+Contact Water PFAS Concentration,ContactWater_PFAS,nMeFOSAA,nMeFOSAA concentration,0,10e-6g/kg,,,,,,,,
+Contact Water PFAS Concentration,ContactWater_PFAS,PFBSA,PFBSA concentration,0,10e-6g/kg,,,,,,,,
+Contact Water PFAS Concentration,ContactWater_PFAS,PFPeS,PFPeS concentration,0,10e-6g/kg,,,,,,,,
+Contaminated Soil,ContaminatedSoil,bulk_dens,Bulk density - wet,1424,kg/m3,4,,,,820,1660,[110],
+Contaminated Soil,ContaminatedSoil,ts_cont,Total solids content - wet,0.85,fraction wet weight,4,,,,0.65,0.9,[111],mean number is assumed
+Contaminated Soil,ContaminatedSoil,VS_cont,VS content - dry,0.02,kg VS/kg TS,4,,,,0.00016,0.098,[78],
+Contaminated Soil,ContaminatedSoil,C_cont,Organic C content - dry,0.01,fraction TS,4,,,,0.00008,0.049,[78],
+Contaminated Soil PFAS Concentration,ContaminatedSoil_PFAS,PFOA,PFOA concentration,1000,10e-6g/kg,,,,,,,,User should input known contamination level of soil.
+Contaminated Soil PFAS Concentration,ContaminatedSoil_PFAS,PFOS,PFOS concentration,1000,10e-6g/kg,,,,,,,,User should input known contamination level of soil.
+Contaminated Soil PFAS Concentration,ContaminatedSoil_PFAS,PFBA,PFBA concentration,1000,10e-6g/kg,,,,,,,,User should input known contamination level of soil.
+Contaminated Soil PFAS Concentration,ContaminatedSoil_PFAS,PFPeA,PFPeA concentration,1000,10e-6g/kg,,,,,,,,User should input known contamination level of soil.
+Contaminated Soil PFAS Concentration,ContaminatedSoil_PFAS,PFHxA,PFHxA concentration,1000,10e-6g/kg,,,,,,,,User should input known contamination level of soil.
+Contaminated Soil PFAS Concentration,ContaminatedSoil_PFAS,PFHpA,PFHpA concentration,1000,10e-6g/kg,,,,,,,,User should input known contamination level of soil.
+Contaminated Soil PFAS Concentration,ContaminatedSoil_PFAS,PFNA,PFNA concentration,1000,10e-6g/kg,,,,,,,,User should input known contamination level of soil.
+Contaminated Soil PFAS Concentration,ContaminatedSoil_PFAS,PFDA,PFDA concentration,1000,10e-6g/kg,,,,,,,,User should input known contamination level of soil.
+Contaminated Soil PFAS Concentration,ContaminatedSoil_PFAS,PFBS,PFBS concentration,1000,10e-6g/kg,,,,,,,,User should input known contamination level of soil.
+Contaminated Soil PFAS Concentration,ContaminatedSoil_PFAS,PFHxS,PFHxS concentration,1000,10e-6g/kg,,,,,,,,User should input known contamination level of soil.
+Contaminated Soil PFAS Concentration,ContaminatedSoil_PFAS,5:3FTCA,5:3FTCA concentration,1000,10e-6g/kg,,,,,,,,User should input known contamination level of soil.
+Contaminated Soil PFAS Concentration,ContaminatedSoil_PFAS,6:2FTCA,6:2FTCA concentration,1000,10e-6g/kg,,,,,,,,User should input known contamination level of soil.
+Contaminated Soil PFAS Concentration,ContaminatedSoil_PFAS,7:3FTCA,7:3FTCA concentration,1000,10e-6g/kg,,,,,,,,User should input known contamination level of soil.
+Contaminated Soil PFAS Concentration,ContaminatedSoil_PFAS,6:2FTS,6:2FTS concentration,1000,10e-6g/kg,,,,,,,,User should input known contamination level of soil.
+Contaminated Soil PFAS Concentration,ContaminatedSoil_PFAS,MeFBSAA,MeFBSAA concentration,1000,10e-6g/kg,,,,,,,,User should input known contamination level of soil.
+Contaminated Soil PFAS Concentration,ContaminatedSoil_PFAS,nMeFOSAA,nMeFOSAA concentration,1000,10e-6g/kg,,,,,,,,User should input known contamination level of soil.
+Contaminated Soil PFAS Concentration,ContaminatedSoil_PFAS,PFBSA,PFBSA concentration,1000,10e-6g/kg,,,,,,,,User should input known contamination level of soil.
+Contaminated Soil PFAS Concentration,ContaminatedSoil_PFAS,PFPeS,PFPeS concentration,1000,10e-6g/kg,,,,,,,,User should input known contamination level of soil.
+Combustion Residuals,CombustionResiduals,bulk_dens,Bulk density - wet,1400,kg/m3,4,,,,510,2283,[112],
+Combustion Residuals,CombustionResiduals,ts_cont,Total solids content - wet,0.903,fraction wet weight,4,,,,0.85,0.98,[112],
+Combustion Residuals,CombustionResiduals,C_cont,Organic C content - dry,0.058,fraction TS,4,,,,0.019,0.063,"[112, 113]",
+Combustion Residuals PFAS Concentration,CombustionResiduals_PFAS,PFOA,PFOA concentration,0.92,10e-6g/kg,4,,,,0,1.88,[70],average of 24 bottom ash samples from 3 MSW incineration plants in China
+Combustion Residuals PFAS Concentration,CombustionResiduals_PFAS,PFOS,PFOS concentration,12.29,10e-6g/kg,4,,,,1.67,24.3,[70],average of 24 bottom ash samples from 3 MSW incineration plants in China
+Combustion Residuals PFAS Concentration,CombustionResiduals_PFAS,PFBA,PFBA concentration,7.67,10e-6g/kg,4,,,,3.23,15.4,[70],average of 24 bottom ash samples from 3 MSW incineration plants in China
+Combustion Residuals PFAS Concentration,CombustionResiduals_PFAS,PFPeA,PFPeA concentration,0.51,10e-6g/kg,4,,,,0.267,0.657,[70],average of 24 bottom ash samples from 3 MSW incineration plants in China
+Combustion Residuals PFAS Concentration,CombustionResiduals_PFAS,PFHxA,PFHxA concentration,2.37,10e-6g/kg,4,,,,0.142,6.82,[70],average of 24 bottom ash samples from 3 MSW incineration plants in China
+Combustion Residuals PFAS Concentration,CombustionResiduals_PFAS,PFHpA,PFHpA concentration,0.37,10e-6g/kg,4,,,,0.249,0.521,[70],average of 24 bottom ash samples from 3 MSW incineration plants in China
+Combustion Residuals PFAS Concentration,CombustionResiduals_PFAS,PFNA,PFNA concentration,0.33,10e-6g/kg,4,,,,0.243,0.403,[70],average of 24 bottom ash samples from 3 MSW incineration plants in China
+Combustion Residuals PFAS Concentration,CombustionResiduals_PFAS,PFDA,PFDA concentration,0.04,10e-6g/kg,4,,,,0.03,0.058,[70],average of 24 bottom ash samples from 3 MSW incineration plants in China
+Combustion Residuals PFAS Concentration,CombustionResiduals_PFAS,PFBS,PFBS concentration,1.33,10e-6g/kg,4,,,,0.527,2.52,[70],average of 24 bottom ash samples from 3 MSW incineration plants in China
+Combustion Residuals PFAS Concentration,CombustionResiduals_PFAS,PFHxS,PFHxS concentration,0.17,10e-6g/kg,4,,,,0.086,0.316,[70],average of 24 bottom ash samples from 3 MSW incineration plants in China
+Combustion Residuals PFAS Concentration,CombustionResiduals_PFAS,5:3FTCA,5:3FTCA concentration,0,10e-6g/kg,,,,,,,,
+Combustion Residuals PFAS Concentration,CombustionResiduals_PFAS,6:2FTCA,6:2FTCA concentration,0,10e-6g/kg,,,,,,,,
+Combustion Residuals PFAS Concentration,CombustionResiduals_PFAS,7:3FTCA,7:3FTCA concentration,0,10e-6g/kg,,,,,,,,
+Combustion Residuals PFAS Concentration,CombustionResiduals_PFAS,6:2FTS,6:2FTS concentration,0,10e-6g/kg,,,,,,,,
+Combustion Residuals PFAS Concentration,CombustionResiduals_PFAS,MeFBSAA,MeFBSAA concentration,0,10e-6g/kg,,,,,,,,
+Combustion Residuals PFAS Concentration,CombustionResiduals_PFAS,nMeFOSAA,nMeFOSAA concentration,0,10e-6g/kg,,,,,,,,
+Combustion Residuals PFAS Concentration,CombustionResiduals_PFAS,PFBSA,PFBSA concentration,0,10e-6g/kg,,,,,,,,
+Combustion Residuals PFAS Concentration,CombustionResiduals_PFAS,PFPeS,PFPeS concentration,0,10e-6g/kg,,,,,,,,
+LF Leachate,LFLeachate,density,Density,1,kg/L,4,,,,0.995,1.005,,
+LF Leachate,LFLeachate,ts_cont,Total solids content - wet,0.01,fraction wet weight,4,,,,0.002,0.06,[100],
+LF Leachate,LFLeachate,C_cont,Organic C content - dry,0.5,fraction TS,4,,,,0.3,0.7,[100],
+LF Leachate PFAS Concentration,LFLeachate_PFAS,PFOA,PFOA concentration,0.27857,10e-6g/kg,5,0.27857,,,0.01543,0.59005,,Source: 30 samples from 15 MSW landfills in NC 2019
+LF Leachate PFAS Concentration,LFLeachate_PFAS,PFOS,PFOS concentration,0.04962,10e-6g/kg,5,0.04962,,,0,0.14988,,Source: 30 samples from 15 MSW landfills in NC 2019
+LF Leachate PFAS Concentration,LFLeachate_PFAS,PFBA,PFBA concentration,0.41665,10e-6g/kg,5,0.41665,,,0.05147,1.48333,,Source: 30 samples from 15 MSW landfills in NC 2019
+LF Leachate PFAS Concentration,LFLeachate_PFAS,PFPeA,PFPeA concentration,0.3382,10e-6g/kg,5,0.3382,,,0.00773,0.84423,,Source: 30 samples from 15 MSW landfills in NC 2019
+LF Leachate PFAS Concentration,LFLeachate_PFAS,PFHxA,PFHxA concentration,0.87973,10e-6g/kg,5,0.87973,,,0.02281,1.81431,,Source: 30 samples from 15 MSW landfills in NC 2019
+LF Leachate PFAS Concentration,LFLeachate_PFAS,PFHpA,PFHpA concentration,0.15491,10e-6g/kg,5,0.15491,,,0.00587,0.32206,,Source: 30 samples from 15 MSW landfills in NC 2019
+LF Leachate PFAS Concentration,LFLeachate_PFAS,PFNA,PFNA concentration,0.01653,10e-6g/kg,5,0.01653,,,0,0.03961,,Source: 30 samples from 15 MSW landfills in NC 2019
+LF Leachate PFAS Concentration,LFLeachate_PFAS,PFDA,PFDA concentration,0.01379,10e-6g/kg,5,0.01379,,,0,0.05264,,Source: 30 samples from 15 MSW landfills in NC 2019
+LF Leachate PFAS Concentration,LFLeachate_PFAS,PFBS,PFBS concentration,0.33833,10e-6g/kg,5,0.33833,,,0,1.76706,,Source: 30 samples from 15 MSW landfills in NC 2019
+LF Leachate PFAS Concentration,LFLeachate_PFAS,PFHxS,PFHxS concentration,0.18418,10e-6g/kg,5,0.18417,,,0.04629,0.50192,,Source: 30 samples from 15 MSW landfills in NC 2019
+LF Leachate PFAS Concentration,LFLeachate_PFAS,5:3FTCA,5:3FTCA concentration,1.74658,10e-6g/kg,5,1.74658,,,0.00399,3.73052,,Source: 30 samples from 15 MSW landfills in NC 2020
+LF Leachate PFAS Concentration,LFLeachate_PFAS,6:2FTCA,6:2FTCA concentration,0.5815,10e-6g/kg,5,0.5815,,,0,2.71406,,Source: 30 samples from 15 MSW landfills in NC 2021
+LF Leachate PFAS Concentration,LFLeachate_PFAS,7:3FTCA,7:3FTCA concentration,0.17857,10e-6g/kg,5,0.17857,,,0.00924,0.65113,,Source: 30 samples from 15 MSW landfills in NC 2022
+LF Leachate PFAS Concentration,LFLeachate_PFAS,6:2FTS,6:2FTS concentration,0.09,10e-6g/kg,5,0.09,,,0.01579,0.53179,,Source: 30 samples from 15 MSW landfills in NC 2023
+LF Leachate PFAS Concentration,LFLeachate_PFAS,MeFBSAA,MeFBSAA concentration,0,10e-6g/kg,,,,,,,,Check for data! **New Compound**
+LF Leachate PFAS Concentration,LFLeachate_PFAS,nMeFOSAA,nMeFOSAA concentration,0.04228,10e-6g/kg,5,0.04228,,,0,0.10634,,Source: 30 samples from 15 MSW landfills in NC 2023
+LF Leachate PFAS Concentration,LFLeachate_PFAS,PFBSA,PFBSA concentration,0.02038,10e-6g/kg,5,0.02038,,,0,0.2393,,Source: 30 samples from 15 MSW landfills in NC 2024
+LF Leachate PFAS Concentration,LFLeachate_PFAS,PFPeS,PFPeS concentration,0.00751,10e-6g/kg,5,0.00751,,,0,0.02256,,Source: 30 samples from 15 MSW landfills in NC 2025
+Contaminated Water,ContaminatedWater,density,Density,1,kg/L,,,,,,,[114],
+Contaminated Water,ContaminatedWater,ts_cont,Total solids content - wet,0.001,fraction wet weight,,,,,,,[115],
+Contaminated Water,ContaminatedWater,C_cont,Organic C content - dry,0.3,kg C/kg TS,4,,,,0.027,0.33,[116],Mean number assumed
+Contaminated Water PFAS Concentration,ContaminatedWater_PFAS,PFOA,PFOA concentration,100,10e-6g/kg,,,,,,,,User should input known contamination level of water.
+Contaminated Water PFAS Concentration,ContaminatedWater_PFAS,PFOS,PFOS concentration,100,10e-6g/kg,,,,,,,,User should input known contamination level of water.
+Contaminated Water PFAS Concentration,ContaminatedWater_PFAS,PFBA,PFBA concentration,100,10e-6g/kg,,,,,,,,User should input known contamination level of water.
+Contaminated Water PFAS Concentration,ContaminatedWater_PFAS,PFPeA,PFPeA concentration,100,10e-6g/kg,,,,,,,,User should input known contamination level of water.
+Contaminated Water PFAS Concentration,ContaminatedWater_PFAS,PFHxA,PFHxA concentration,100,10e-6g/kg,,,,,,,,User should input known contamination level of water.
+Contaminated Water PFAS Concentration,ContaminatedWater_PFAS,PFHpA,PFHpA concentration,100,10e-6g/kg,,,,,,,,User should input known contamination level of water.
+Contaminated Water PFAS Concentration,ContaminatedWater_PFAS,PFNA,PFNA concentration,100,10e-6g/kg,,,,,,,,User should input known contamination level of water.
+Contaminated Water PFAS Concentration,ContaminatedWater_PFAS,PFDA,PFDA concentration,100,10e-6g/kg,,,,,,,,User should input known contamination level of water.
+Contaminated Water PFAS Concentration,ContaminatedWater_PFAS,PFBS,PFBS concentration,100,10e-6g/kg,,,,,,,,User should input known contamination level of water.
+Contaminated Water PFAS Concentration,ContaminatedWater_PFAS,PFHxS,PFHxS concentration,100,10e-6g/kg,,,,,,,,User should input known contamination level of water.
+Contaminated Water PFAS Concentration,ContaminatedWater_PFAS,5:3FTCA,5:3FTCA concentration,100,10e-6g/kg,,,,,,,,User should input known contamination level of water.
+Contaminated Water PFAS Concentration,ContaminatedWater_PFAS,6:2FTCA,6:2FTCA concentration,100,10e-6g/kg,,,,,,,,User should input known contamination level of water.
+Contaminated Water PFAS Concentration,ContaminatedWater_PFAS,7:3FTCA,7:3FTCA concentration,100,10e-6g/kg,,,,,,,,User should input known contamination level of water.
+Contaminated Water PFAS Concentration,ContaminatedWater_PFAS,6:2FTS,6:2FTS concentration,100,10e-6g/kg,,,,,,,,User should input known contamination level of water.
+Contaminated Water PFAS Concentration,ContaminatedWater_PFAS,MeFBSAA,MeFBSAA concentration,100,10e-6g/kg,,,,,,,,User should input known contamination level of water.
+Contaminated Water PFAS Concentration,ContaminatedWater_PFAS,nMeFOSAA,nMeFOSAA concentration,100,10e-6g/kg,,,,,,,,User should input known contamination level of water.
+Contaminated Water PFAS Concentration,ContaminatedWater_PFAS,PFBSA,PFBSA concentration,100,10e-6g/kg,,,,,,,,User should input known contamination level of water.
+Contaminated Water PFAS Concentration,ContaminatedWater_PFAS,PFPeS,PFPeS concentration,100,10e-6g/kg,,,,,,,,User should input known contamination level of water.
+WWT Screen Rejects,WWTScreenRejects,bulk_dens,Bulk density - wet,800,kg/m3,4,,,,600,1100,[1],
+WWT Screen Rejects,WWTScreenRejects,ts_cont,Total solids content - wet,0.3,fraction wet weight,4,,,,0.1,0.5,[1],
+WWT Screen Rejects,WWTScreenRejects,C_cont,Organic C content - dry,0.5,fraction TS,,,,,,,,
+WWT Screen Rejects PFAS Concentration,WWTScreenRejects_PFAS,PFOA,PFOA concentration,0,10e-6g/kg,,,,,,,,
+WWT Screen Rejects PFAS Concentration,WWTScreenRejects_PFAS,PFOS,PFOS concentration,0.297333,10e-6g/kg,,,,,,,,
+WWT Screen Rejects PFAS Concentration,WWTScreenRejects_PFAS,PFBA,PFBA concentration,0.164333,10e-6g/kg,,,,,,,,
+WWT Screen Rejects PFAS Concentration,WWTScreenRejects_PFAS,PFPeA,PFPeA concentration,0.414,10e-6g/kg,,,,,,,,
+WWT Screen Rejects PFAS Concentration,WWTScreenRejects_PFAS,PFHxA,PFHxA concentration,0.481333,10e-6g/kg,,,,,,,,
+WWT Screen Rejects PFAS Concentration,WWTScreenRejects_PFAS,PFHpA,PFHpA concentration,0.065333,10e-6g/kg,,,,,,,,
+WWT Screen Rejects PFAS Concentration,WWTScreenRejects_PFAS,PFNA,PFNA concentration,0.054333,10e-6g/kg,,,,,,,,
+WWT Screen Rejects PFAS Concentration,WWTScreenRejects_PFAS,PFDA,PFDA concentration,0.176667,10e-6g/kg,,,,,,,,
+WWT Screen Rejects PFAS Concentration,WWTScreenRejects_PFAS,PFBS,PFBS concentration,0.060667,10e-6g/kg,,,,,,,,
+WWT Screen Rejects PFAS Concentration,WWTScreenRejects_PFAS,PFHxS,PFHxS concentration,0,10e-6g/kg,,,,,,,,
+WWT Screen Rejects PFAS Concentration,WWTScreenRejects_PFAS,5:3FTCA,5:3FTCA concentration,0,10e-6g/kg,,,,,,,,
+WWT Screen Rejects PFAS Concentration,WWTScreenRejects_PFAS,6:2FTCA,6:2FTCA concentration,0,10e-6g/kg,,,,,,,,
+WWT Screen Rejects PFAS Concentration,WWTScreenRejects_PFAS,7:3FTCA,7:3FTCA concentration,0,10e-6g/kg,,,,,,,,
+WWT Screen Rejects PFAS Concentration,WWTScreenRejects_PFAS,6:2FTS,6:2FTS concentration,0,10e-6g/kg,,,,,,,,
+WWT Screen Rejects PFAS Concentration,WWTScreenRejects_PFAS,MeFBSAA,MeFBSAA concentration,0,10e-6g/kg,,,,,,,,
+WWT Screen Rejects PFAS Concentration,WWTScreenRejects_PFAS,nMeFOSAA,nMeFOSAA concentration,0,10e-6g/kg,,,,,,,,
+WWT Screen Rejects PFAS Concentration,WWTScreenRejects_PFAS,PFBSA,PFBSA concentration,0,10e-6g/kg,,,,,,,,
+WWT Screen Rejects PFAS Concentration,WWTScreenRejects_PFAS,PFPeS,PFPeS concentration,0,10e-6g/kg,,,,,,,,
+Dewatered WWT Solids,DewateredWWTSolids,bulk_dens,Bulk density - wet,1005,kg/m3,,,,,1005,1008,[109],
+Dewatered WWT Solids,DewateredWWTSolids,ts_cont,Total solids content - wet,0.25,fraction wet weight,5,0.25,,,0.1,0.35,[1],Centrifuge Dewatering
+Dewatered WWT Solids,DewateredWWTSolids,VS_cont,VS content - dry,0.5,kg VS/kg TS,5,0.5,,,0.5,0.8,[117],
+Dewatered WWT Solids,DewateredWWTSolids,C_cont,Organic C content - dry,0.25,fraction TS,4,,,,0.35,0.4,[117],Assume to be half of VS
+Dewatered WWT Solids PFAS Concentration,DewateredWWTSolids_PFAS,PFOA,PFOA concentration,0.934565,10e-6g/kg,5,0.934565,,,0.13008,3.98008,,
+Dewatered WWT Solids PFAS Concentration,DewateredWWTSolids_PFAS,PFOS,PFOS concentration,3.678926,10e-6g/kg,5,3.678926,,,0.53208,11.30008,,
+Dewatered WWT Solids PFAS Concentration,DewateredWWTSolids_PFAS,PFBA,PFBA concentration,0.146226,10e-6g/kg,5,0.146226,,,0.00008,0.98008,,
+Dewatered WWT Solids PFAS Concentration,DewateredWWTSolids_PFAS,PFPeA,PFPeA concentration,0.365103,10e-6g/kg,5,0.365103,,,0.00008,4.98008,,
+Dewatered WWT Solids PFAS Concentration,DewateredWWTSolids_PFAS,PFHxA,PFHxA concentration,0.511518,10e-6g/kg,5,0.511518,,,0.00008,2.26008,,
+Dewatered WWT Solids PFAS Concentration,DewateredWWTSolids_PFAS,PFHpA,PFHpA concentration,0.088188,10e-6g/kg,5,0.088188,,,0.00008,0.86808,,
+Dewatered WWT Solids PFAS Concentration,DewateredWWTSolids_PFAS,PFNA,PFNA concentration,0.373149,10e-6g/kg,5,0.373149,,,0.00008,1.34208,,
+Dewatered WWT Solids PFAS Concentration,DewateredWWTSolids_PFAS,PFDA,PFDA concentration,1.55218,10e-6g/kg,5,1.55218,,,0.13928,16.86008,,
+Dewatered WWT Solids PFAS Concentration,DewateredWWTSolids_PFAS,PFBS,PFBS concentration,0.125018,10e-6g/kg,5,0.125018,,,0.00008,1.59408,,
+Dewatered WWT Solids PFAS Concentration,DewateredWWTSolids_PFAS,PFHxS,PFHxS concentration,0.107265,10e-6g/kg,5,0.107265,,,0.00008,0.55608,,
+Dewatered WWT Solids PFAS Concentration,DewateredWWTSolids_PFAS,5:3FTCA,5:3FTCA concentration,0,10e-6g/kg,,,,,,,,
+Dewatered WWT Solids PFAS Concentration,DewateredWWTSolids_PFAS,6:2FTCA,6:2FTCA concentration,0,10e-6g/kg,,,,,,,,
+Dewatered WWT Solids PFAS Concentration,DewateredWWTSolids_PFAS,7:3FTCA,7:3FTCA concentration,0,10e-6g/kg,,,,,,,,
+Dewatered WWT Solids PFAS Concentration,DewateredWWTSolids_PFAS,6:2FTS,6:2FTS concentration,0,10e-6g/kg,,,,,,,,
+Dewatered WWT Solids PFAS Concentration,DewateredWWTSolids_PFAS,MeFBSAA,MeFBSAA concentration,0,10e-6g/kg,,,,,,,,
+Dewatered WWT Solids PFAS Concentration,DewateredWWTSolids_PFAS,nMeFOSAA,nMeFOSAA concentration,0,10e-6g/kg,,,,,,,,
+Dewatered WWT Solids PFAS Concentration,DewateredWWTSolids_PFAS,PFBSA,PFBSA concentration,0,10e-6g/kg,,,,,,,,
+Dewatered WWT Solids PFAS Concentration,DewateredWWTSolids_PFAS,PFPeS,PFPeS concentration,0,10e-6g/kg,,,,,,,,
+Dried WWT Solids,DriedWWTSolids,bulk_dens,Bulk density - wet,1400,kg/m3,4,,,,1200,1500,"[119, 118]",
+Dried WWT Solids,DriedWWTSolids,ts_cont,Total solids content - wet,0.9,fraction wet weight,5,0.9,,,0.65,0.95,[1],"Rotary Drier: 0.9-0.95, Indirect drier: 0.65-0.95"
+Dried WWT Solids,DriedWWTSolids,VS_cont,VS content - dry,0.55,kg VS/kg TS,4,0.55,,,0.5,0.7,[118],
+Dried WWT Solids,DriedWWTSolids,C_cont,Organic C content - dry,0.275,fraction TS,4,,,,0.25,0.35,[118],Assume to be half of VS
+Dried WWT Solids PFAS Concentration,DriedWWTSolids_PFAS,PFOA,PFOA concentration,4.20519077,10e-6g/kg,5,4.20519077,,,0.58501,17.91001,,
+Dried WWT Solids PFAS Concentration,DriedWWTSolids_PFAS,PFOS,PFOS concentration,16.5548177,10e-6g/kg,5,16.5548177,,,2.39401,50.85001,,
+Dried WWT Solids PFAS Concentration,DriedWWTSolids_PFAS,PFBA,PFBA concentration,0.65766769,10e-6g/kg,5,0.65766769,,,0.00001,4.41001,,
+Dried WWT Solids PFAS Concentration,DriedWWTSolids_PFAS,PFPeA,PFPeA concentration,1.64261385,10e-6g/kg,5,1.64261385,,,0.00001,22.41001,,
+Dried WWT Solids PFAS Concentration,DriedWWTSolids_PFAS,PFHxA,PFHxA concentration,2.30148308,10e-6g/kg,5,2.30148308,,,0.00001,10.17001,,
+Dried WWT Solids PFAS Concentration,DriedWWTSolids_PFAS,PFHpA,PFHpA concentration,0.39649462,10e-6g/kg,5,0.39649462,,,0.00001,3.90601,,
+Dried WWT Solids PFAS Concentration,DriedWWTSolids_PFAS,PFNA,PFNA concentration,1.67882154,10e-6g/kg,5,1.67882154,,,0.00001,6.03901,,
+Dried WWT Solids PFAS Concentration,DriedWWTSolids_PFAS,PFDA,PFDA concentration,6.98446,10e-6g/kg,5,6.98446,,,0.62641,75.87001,,
+Dried WWT Solids PFAS Concentration,DriedWWTSolids_PFAS,PFBS,PFBS concentration,0.56223308,10e-6g/kg,5,0.56223308,,,0.00001,7.17301,,
+Dried WWT Solids PFAS Concentration,DriedWWTSolids_PFAS,PFHxS,PFHxS concentration,0.48234077,10e-6g/kg,5,0.48234077,,,0.00001,2.50201,,
+Dried WWT Solids PFAS Concentration,DriedWWTSolids_PFAS,5:3FTCA,5:3FTCA concentration,0,10e-6g/kg,,,,,,,,
+Dried WWT Solids PFAS Concentration,DriedWWTSolids_PFAS,6:2FTCA,6:2FTCA concentration,0,10e-6g/kg,,,,,,,,
+Dried WWT Solids PFAS Concentration,DriedWWTSolids_PFAS,7:3FTCA,7:3FTCA concentration,0,10e-6g/kg,,,,,,,,
+Dried WWT Solids PFAS Concentration,DriedWWTSolids_PFAS,6:2FTS,6:2FTS concentration,0,10e-6g/kg,,,,,,,,
+Dried WWT Solids PFAS Concentration,DriedWWTSolids_PFAS,MeFBSAA,MeFBSAA concentration,0,10e-6g/kg,,,,,,,,
+Dried WWT Solids PFAS Concentration,DriedWWTSolids_PFAS,nMeFOSAA,nMeFOSAA concentration,0,10e-6g/kg,,,,,,,,
+Dried WWT Solids PFAS Concentration,DriedWWTSolids_PFAS,PFBSA,PFBSA concentration,0,10e-6g/kg,,,,,,,,
+Dried WWT Solids PFAS Concentration,DriedWWTSolids_PFAS,PFPeS,PFPeS concentration,0,10e-6g/kg,,,,,,,,
+Raw WWT Solids,RawWWTSolids,bulk_dens,Bulk density - wet,1000,kg/m3,,,,,,,,
+Raw WWT Solids,RawWWTSolids,ts_cont,Total solids content - wet,0.05,fraction wet weight,5,0.05,,,0.03,0.1,[1],Gravity thickeners
+Raw WWT Solids,RawWWTSolids,VS_cont,VS content - dry,0.6,kg VS/kg TS,4,,,,0.6,0.88,[121],amount is assumed
+Raw WWT Solids,RawWWTSolids,C_cont,Organic C content - dry,0.65,fraction TS,4,,,,0.6,0.7,[120],amount is assumed
+Raw WWT Solids PFAS Concentration,RawWWTSolids_PFAS,PFOA,PFOA concentration,0.14027,10e-6g/kg,5,0.14027,,,0.019597,0.597097,,
+Raw WWT Solids PFAS Concentration,RawWWTSolids_PFAS,PFOS,PFOS concentration,0.551924,10e-6g/kg,5,0.551924,,,0.079897,1.695097,,
+Raw WWT Solids PFAS Concentration,RawWWTSolids_PFAS,PFBA,PFBA concentration,0.022019,10e-6g/kg,5,0.022019,,,0.000097,0.147097,,
+Raw WWT Solids PFAS Concentration,RawWWTSolids_PFAS,PFPeA,PFPeA concentration,0.05485,10e-6g/kg,5,0.05485,,,0.000097,0.747097,,
+Raw WWT Solids PFAS Concentration,RawWWTSolids_PFAS,PFHxA,PFHxA concentration,0.076813,10e-6g/kg,5,0.076813,,,0.000097,0.339097,,
+Raw WWT Solids PFAS Concentration,RawWWTSolids_PFAS,PFHpA,PFHpA concentration,0.013313,10e-6g/kg,5,0.013313,,,0.000097,0.130297,,
+Raw WWT Solids PFAS Concentration,RawWWTSolids_PFAS,PFNA,PFNA concentration,0.056057,10e-6g/kg,5,0.056057,,,0.000097,0.201397,,
+Raw WWT Solids PFAS Concentration,RawWWTSolids_PFAS,PFDA,PFDA concentration,0.232912,10e-6g/kg,5,0.232912,,,0.020977,2.529097,,
+Raw WWT Solids PFAS Concentration,RawWWTSolids_PFAS,PFBS,PFBS concentration,0.018838,10e-6g/kg,5,0.018838,,,0.000097,0.239197,,
+Raw WWT Solids PFAS Concentration,RawWWTSolids_PFAS,PFHxS,PFHxS concentration,0.016175,10e-6g/kg,5,0.016175,,,0.000097,0.083497,,
+Raw WWT Solids PFAS Concentration,RawWWTSolids_PFAS,5:3FTCA,5:3FTCA concentration,0,10e-6g/kg,,,,,,,,
+Raw WWT Solids PFAS Concentration,RawWWTSolids_PFAS,6:2FTCA,6:2FTCA concentration,0,10e-6g/kg,,,,,,,,
+Raw WWT Solids PFAS Concentration,RawWWTSolids_PFAS,7:3FTCA,7:3FTCA concentration,0,10e-6g/kg,,,,,,,,
+Raw WWT Solids PFAS Concentration,RawWWTSolids_PFAS,6:2FTS,6:2FTS concentration,0,10e-6g/kg,,,,,,,,
+Raw WWT Solids PFAS Concentration,RawWWTSolids_PFAS,MeFBSAA,MeFBSAA concentration,0,10e-6g/kg,,,,,,,,
+Raw WWT Solids PFAS Concentration,RawWWTSolids_PFAS,nMeFOSAA,nMeFOSAA concentration,0,10e-6g/kg,,,,,,,,
+Raw WWT Solids PFAS Concentration,RawWWTSolids_PFAS,PFBSA,PFBSA concentration,0,10e-6g/kg,,,,,,,,
+Raw WWT Solids PFAS Concentration,RawWWTSolids_PFAS,PFPeS,PFPeS concentration,0,10e-6g/kg,,,,,,,,
+WWT Effluent,WWTEffluent,density,Density,1,kg/L,,,,,,,[119],
+WWT Effluent,WWTEffluent,ts_cont,Total solids content - wet,0.00002,fraction wet weight,,,,,0,,[122],
+WWT Effluent,WWTEffluent,C_cont,Organic C content - dry,0.7,fraction TS,,,,,,,[118],
+WWT Effluent PFAS Concentration,WWTEffluent_PFAS,PFOA,PFOA concentration,0.01846,10e-6g/kg,5,0.01846,,,0,0.38083,,Source: 52 samples from 31  WWTP in NC
+WWT Effluent PFAS Concentration,WWTEffluent_PFAS,PFOS,PFOS concentration,0.01037,10e-6g/kg,5,0.01037,,,0,0.35858,,Source: 52 samples from 31  WWTP in NC
+WWT Effluent PFAS Concentration,WWTEffluent_PFAS,PFBA,PFBA concentration,0.00634,10e-6g/kg,5,0.00633,,,0,0.07095,,Source: 52 samples from 31  WWTP in NC
+WWT Effluent PFAS Concentration,WWTEffluent_PFAS,PFPeA,PFPeA concentration,0.01983,10e-6g/kg,5,0.01983,,,0,0.16783,,Source: 52 samples from 31  WWTP in NC
+WWT Effluent PFAS Concentration,WWTEffluent_PFAS,PFHxA,PFHxA concentration,0.01609,10e-6g/kg,5,0.01609,,,0,0.15337,,Source: 52 samples from 31  WWTP in NC
+WWT Effluent PFAS Concentration,WWTEffluent_PFAS,PFHpA,PFHpA concentration,0.00405,10e-6g/kg,5,0.00405,,,0,0.05472,,Source: 52 samples from 31  WWTP in NC
+WWT Effluent PFAS Concentration,WWTEffluent_PFAS,PFNA,PFNA concentration,0.00117,10e-6g/kg,5,0.00117,,,0,0.03819,,Source: 52 samples from 31  WWTP in NC
+WWT Effluent PFAS Concentration,WWTEffluent_PFAS,PFDA,PFDA concentration,0.00384,10e-6g/kg,5,0.00384,,,0,0.17366,,Source: 52 samples from 31  WWTP in NC
+WWT Effluent PFAS Concentration,WWTEffluent_PFAS,PFBS,PFBS concentration,0.00422,10e-6g/kg,5,0.00422,,,0,0.032,,Source: 52 samples from 31  WWTP in NC
+WWT Effluent PFAS Concentration,WWTEffluent_PFAS,PFHxS,PFHxS concentration,0.00373,10e-6g/kg,5,0.00373,,,0,0.08022,,Source: 52 samples from 31  WWTP in NC
+WWT Effluent PFAS Concentration,WWTEffluent_PFAS,5:3FTCA,5:3FTCA concentration,0.0013,10e-6g/kg,5,0.0013,,,0,0.04731,,Source: 52 samples from 31  WWTP in NC
+WWT Effluent PFAS Concentration,WWTEffluent_PFAS,6:2FTCA,6:2FTCA concentration,0.00056,10e-6g/kg,5,0.00056,,,0,0.01494,,Source: 52 samples from 31  WWTP in NC
+WWT Effluent PFAS Concentration,WWTEffluent_PFAS,7:3FTCA,7:3FTCA concentration,0.0003,10e-6g/kg,5,0.0003,,,0,0.00559,,Source: 52 samples from 31  WWTP in NC
+WWT Effluent PFAS Concentration,WWTEffluent_PFAS,6:2FTS,6:2FTS concentration,0.00324,10e-6g/kg,5,0.00324,,,0,0.07851,,Source: 52 samples from 31  WWTP in NC
+WWT Effluent PFAS Concentration,WWTEffluent_PFAS,MeFBSAA,MeFBSAA concentration,0,10e-6g/kg,,,,,,,,Check for data! **New Compound**
+WWT Effluent PFAS Concentration,WWTEffluent_PFAS,nMeFOSAA,nMeFOSAA concentration,0.00015,10e-6g/kg,5,0.00015,,,0,0.00438,,Source: 52 samples from 31  WWTP in NC
+WWT Effluent PFAS Concentration,WWTEffluent_PFAS,PFBSA,PFBSA concentration,0.00177,10e-6g/kg,5,0.00177,,,0,0.02983,,Source: 52 samples from 31  WWTP in NC
+WWT Effluent PFAS Concentration,WWTEffluent_PFAS,PFPeS,PFPeS concentration,0.00015,10e-6g/kg,5,0.00015,,,0,0.00194,,Source: 52 samples from 31  WWTP in NC
+Spent GAC,SpentGAC,bulk_dens,Bulk density - wet,1400,kg/m3,4,,,,1300,1500,[1],
+Spent GAC,SpentGAC,ts_cont,Total solids content - wet,0.5,fraction wet weight,4,,,,0.45,0.55,[28],
+Spent GAC,SpentGAC,VS_cont,VS content - dry,0.91,kg VS/kg TS,4,,,,0.71,0.98,"[28, 128]","Ash content will vary based on GAC type (coconut, wood, etc.)"
+Spent GAC,SpentGAC,C_cont,Organic C content - dry,0.867,fraction TS,,,,,0.76,0.92,[128],
+Spent GAC PFAS Concentration,SpentGAC_PFAS,PFOA,PFOA concentration,7240,10e-6g/kg,,,,,,,,
+Spent GAC PFAS Concentration,SpentGAC_PFAS,PFOS,PFOS concentration,9550,10e-6g/kg,,,,,,,,
+Spent GAC PFAS Concentration,SpentGAC_PFAS,PFBA,PFBA concentration,1480,10e-6g/kg,,,,,,,,
+Spent GAC PFAS Concentration,SpentGAC_PFAS,PFPeA,PFPeA concentration,3090,10e-6g/kg,,,,,,,,
+Spent GAC PFAS Concentration,SpentGAC_PFAS,PFHxA,PFHxA concentration,3630,10e-6g/kg,,,,,,,,
+Spent GAC PFAS Concentration,SpentGAC_PFAS,PFHpA,PFHpA concentration,4360,10e-6g/kg,,,,,,,,
+Spent GAC PFAS Concentration,SpentGAC_PFAS,PFNA,PFNA concentration,10000,10e-6g/kg,,,,,,,,
+Spent GAC PFAS Concentration,SpentGAC_PFAS,PFDA,PFDA concentration,10470,10e-6g/kg,,,,,,,,
+Spent GAC PFAS Concentration,SpentGAC_PFAS,PFBS,PFBS concentration,6610,10e-6g/kg,,,,,,,,
+Spent GAC PFAS Concentration,SpentGAC_PFAS,PFHxS,PFHxS concentration,7940,10e-6g/kg,,,,,,,,
+Spent GAC PFAS Concentration,SpentGAC_PFAS,5:3FTCA,5:3FTCA concentration,0,10e-6g/kg,,,,,,,,
+Spent GAC PFAS Concentration,SpentGAC_PFAS,6:2FTCA,6:2FTCA concentration,0,10e-6g/kg,,,,,,,,
+Spent GAC PFAS Concentration,SpentGAC_PFAS,7:3FTCA,7:3FTCA concentration,0,10e-6g/kg,,,,,,,,
+Spent GAC PFAS Concentration,SpentGAC_PFAS,6:2FTS,6:2FTS concentration,4470,10e-6g/kg,,,,,,,,
+Spent GAC PFAS Concentration,SpentGAC_PFAS,MeFBSAA,MeFBSAA concentration,0,10e-6g/kg,,,,,,,,
+Spent GAC PFAS Concentration,SpentGAC_PFAS,nMeFOSAA,nMeFOSAA concentration,0,10e-6g/kg,,,,,,,,
+Spent GAC PFAS Concentration,SpentGAC_PFAS,PFBSA,PFBSA concentration,0,10e-6g/kg,,,,,,,,
+Spent GAC PFAS Concentration,SpentGAC_PFAS,PFPeS,PFPeS concentration,0,10e-6g/kg,,,,,,,,
+RO Concentrate,ROConcentrate,density,Density,1.008,kg/L,4,,,,1.00654,1.00984,[129],
+RO Concentrate,ROConcentrate,ts_cont,Total solids content - wet,0.008,fraction wet weight,4,,,,0.00654,0.00984,[129],
+RO Concentrate,ROConcentrate,VS_cont,VS content - dry,0.882,kg VS/kg TS,4,,,,0.838,0.997,[129],
+RO Concentrate,ROConcentrate,C_cont,Organic C content - dry,0.441,fraction TS,4,,,,0.42,0.498,[129],
+RO Concentrate PFAS Concentration,ROConcentrate_PFAS,PFOA,PFOA concentration,72462250,10e-6g/kg,,,,,,,,
+RO Concentrate PFAS Concentration,ROConcentrate_PFAS,PFOS,PFOS concentration,112529250,10e-6g/kg,,,,,,,,
+RO Concentrate PFAS Concentration,ROConcentrate_PFAS,PFBA,PFBA concentration,0,10e-6g/kg,,,,,,,,
+RO Concentrate PFAS Concentration,ROConcentrate_PFAS,PFPeA,PFPeA concentration,0,10e-6g/kg,,,,,,,,
+RO Concentrate PFAS Concentration,ROConcentrate_PFAS,PFHxA,PFHxA concentration,0,10e-6g/kg,,,,,,,,
+RO Concentrate PFAS Concentration,ROConcentrate_PFAS,PFHpA,PFHpA concentration,0,10e-6g/kg,,,,,,,,
+RO Concentrate PFAS Concentration,ROConcentrate_PFAS,PFNA,PFNA concentration,0,10e-6g/kg,,,,,,,,
+RO Concentrate PFAS Concentration,ROConcentrate_PFAS,PFDA,PFDA concentration,0,10e-6g/kg,,,,,,,,
+RO Concentrate PFAS Concentration,ROConcentrate_PFAS,PFBS,PFBS concentration,0,10e-6g/kg,,,,,,,,
+RO Concentrate PFAS Concentration,ROConcentrate_PFAS,PFHxS,PFHxS concentration,0,10e-6g/kg,,,,,,,,
+RO Concentrate PFAS Concentration,ROConcentrate_PFAS,5:3FTCA,5:3FTCA concentration,0,10e-6g/kg,,,,,,,,
+RO Concentrate PFAS Concentration,ROConcentrate_PFAS,6:2FTCA,6:2FTCA concentration,0,10e-6g/kg,,,,,,,,
+RO Concentrate PFAS Concentration,ROConcentrate_PFAS,7:3FTCA,7:3FTCA concentration,0,10e-6g/kg,,,,,,,,
+RO Concentrate PFAS Concentration,ROConcentrate_PFAS,6:2FTS,6:2FTS concentration,0,10e-6g/kg,,,,,,,,
+RO Concentrate PFAS Concentration,ROConcentrate_PFAS,MeFBSAA,MeFBSAA concentration,0,10e-6g/kg,,,,,,,,
+RO Concentrate PFAS Concentration,ROConcentrate_PFAS,nMeFOSAA,nMeFOSAA concentration,0,10e-6g/kg,,,,,,,,
+RO Concentrate PFAS Concentration,ROConcentrate_PFAS,PFBSA,PFBSA concentration,0,10e-6g/kg,,,,,,,,
+RO Concentrate PFAS Concentration,ROConcentrate_PFAS,PFPeS,PFPeS concentration,0,10e-6g/kg,,,,,,,,
+Spent IER,SpentIER,density,Density,1.3,kg/L,4,,,,1.1,1.5,[125],"Amount assumed, range based on Dupont Ion Exchange Resins product sheet"
+Spent IER,SpentIER,ts_cont,Total solids content - wet,0.51,fraction wet weight,4,,,,0.47,0.55,[126],
+Spent IER,SpentIER,VS_cont,VS content - dry,0.57,kg VS/kg TS,4,,,,0.14,1,[126],
+Spent IER,SpentIER,C_cont,Organic C content - dry,0.66,fraction TS,4,,,,0.53,0.78,[130],
+Spent IER PFAS Concentration,SpentIER_PFAS,PFOA,PFOA concentration,72462250,10e-6g/kg,,,,,,,,
+Spent IER PFAS Concentration,SpentIER_PFAS,PFOS,PFOS concentration,112529250,10e-6g/kg,,,,,,,,
+Spent IER PFAS Concentration,SpentIER_PFAS,PFBA,PFBA concentration,0,10e-6g/kg,,,,,,,,
+Spent IER PFAS Concentration,SpentIER_PFAS,PFPeA,PFPeA concentration,0,10e-6g/kg,,,,,,,,
+Spent IER PFAS Concentration,SpentIER_PFAS,PFHxA,PFHxA concentration,0,10e-6g/kg,,,,,,,,
+Spent IER PFAS Concentration,SpentIER_PFAS,PFHpA,PFHpA concentration,0,10e-6g/kg,,,,,,,,
+Spent IER PFAS Concentration,SpentIER_PFAS,PFNA,PFNA concentration,0,10e-6g/kg,,,,,,,,
+Spent IER PFAS Concentration,SpentIER_PFAS,PFDA,PFDA concentration,0,10e-6g/kg,,,,,,,,
+Spent IER PFAS Concentration,SpentIER_PFAS,PFBS,PFBS concentration,0,10e-6g/kg,,,,,,,,
+Spent IER PFAS Concentration,SpentIER_PFAS,PFHxS,PFHxS concentration,0,10e-6g/kg,,,,,,,,
+Spent IER PFAS Concentration,SpentIER_PFAS,5:3FTCA,5:3FTCA concentration,0,10e-6g/kg,,,,,,,,
+Spent IER PFAS Concentration,SpentIER_PFAS,6:2FTCA,6:2FTCA concentration,0,10e-6g/kg,,,,,,,,
+Spent IER PFAS Concentration,SpentIER_PFAS,7:3FTCA,7:3FTCA concentration,0,10e-6g/kg,,,,,,,,
+Spent IER PFAS Concentration,SpentIER_PFAS,6:2FTS,6:2FTS concentration,0,10e-6g/kg,,,,,,,,
+Spent IER PFAS Concentration,SpentIER_PFAS,MeFBSAA,MeFBSAA concentration,0,10e-6g/kg,,,,,,,,
+Spent IER PFAS Concentration,SpentIER_PFAS,nMeFOSAA,nMeFOSAA concentration,0,10e-6g/kg,,,,,,,,
+Spent IER PFAS Concentration,SpentIER_PFAS,PFBSA,PFBSA concentration,0,10e-6g/kg,,,,,,,,
+Spent IER PFAS Concentration,SpentIER_PFAS,PFPeS,PFPeS concentration,0,10e-6g/kg,,,,,,,,
+AFFF Sulfonate-based,AFFF_Sulfonate,density,Density,1.11,kg/L,,,,,,,[127],
+AFFF Sulfonate-based,AFFF_Sulfonate,ts_cont,Total solids content - wet,0.165,fraction wet weight,,,,,,,[127],
+AFFF Sulfonate-based,AFFF_Sulfonate,VS_cont,VS content - dry,0.85,kg VS/kg TS,,,,,,,,No data available!
+AFFF Sulfonate-based,AFFF_Sulfonate,C_cont,Organic C content - dry,0,fraction TS,,,,,,,,
+AFFF Sulfonate-based PFAS Concentration,AFFF_Sulfonate_PFAS,PFOA,PFOA concentration,244000,10e-6g/kg,3,244000,20000,,,,[68],3M sulfonate-based formulations
+AFFF Sulfonate-based PFAS Concentration,AFFF_Sulfonate_PFAS,PFOS,PFOS concentration,6587000,10e-6g/kg,3,6587000,1500000,,,,[68],3M sulfonate-based formulations
+AFFF Sulfonate-based PFAS Concentration,AFFF_Sulfonate_PFAS,PFBA,PFBA concentration,21700,10e-6g/kg,3,21700,2700,,,,[68],3M sulfonate-based formulations
+AFFF Sulfonate-based PFAS Concentration,AFFF_Sulfonate_PFAS,PFPeA,PFPeA concentration,69300,10e-6g/kg,3,69300,5400,,,,[68],3M sulfonate-based formulations
+AFFF Sulfonate-based PFAS Concentration,AFFF_Sulfonate_PFAS,PFHxA,PFHxA concentration,178000,10e-6g/kg,3,178000,17000,,,,[68],3M sulfonate-based formulations
+AFFF Sulfonate-based PFAS Concentration,AFFF_Sulfonate_PFAS,PFHpA,PFHpA concentration,59200,10e-6g/kg,3,59200,10900,,,,[68],3M sulfonate-based formulations
+AFFF Sulfonate-based PFAS Concentration,AFFF_Sulfonate_PFAS,PFNA,PFNA concentration,0,10e-6g/kg,,,,,,,[68],3M sulfonate-based formulations
+AFFF Sulfonate-based PFAS Concentration,AFFF_Sulfonate_PFAS,PFDA,PFDA concentration,0,10e-6g/kg,,,,,,,[68],3M sulfonate-based formulations
+AFFF Sulfonate-based PFAS Concentration,AFFF_Sulfonate_PFAS,PFBS,PFBS concentration,237000,10e-6g/kg,3,237000,22000,,,,[68],3M sulfonate-based formulations
+AFFF Sulfonate-based PFAS Concentration,AFFF_Sulfonate_PFAS,PFHxS,PFHxS concentration,996000,10e-6g/kg,3,996000,9000,,,,[68],3M sulfonate-based formulations
+AFFF Sulfonate-based PFAS Concentration,AFFF_Sulfonate_PFAS,5:3FTCA,5:3FTCA concentration,0,10e-6g/kg,,,,,,,,
+AFFF Sulfonate-based PFAS Concentration,AFFF_Sulfonate_PFAS,6:2FTCA,6:2FTCA concentration,0,10e-6g/kg,,,,,,,,
+AFFF Sulfonate-based PFAS Concentration,AFFF_Sulfonate_PFAS,7:3FTCA,7:3FTCA concentration,0,10e-6g/kg,,,,,,,,
+AFFF Sulfonate-based PFAS Concentration,AFFF_Sulfonate_PFAS,6:2FTS,6:2FTS concentration,0,10e-6g/kg,0,,,,,,[68],3M sulfonate-based formulations
+AFFF Sulfonate-based PFAS Concentration,AFFF_Sulfonate_PFAS,MeFBSAA,MeFBSAA concentration,0,10e-6g/kg,,,,,,,,
+AFFF Sulfonate-based PFAS Concentration,AFFF_Sulfonate_PFAS,nMeFOSAA,nMeFOSAA concentration,0,10e-6g/kg,,,,,,,,
+AFFF Sulfonate-based PFAS Concentration,AFFF_Sulfonate_PFAS,PFBSA,PFBSA concentration,0,10e-6g/kg,,,,,,,,
+AFFF Sulfonate-based PFAS Concentration,AFFF_Sulfonate_PFAS,PFPeS,PFPeS concentration,226000,10e-6g/kg,3,226000,25000,,,,[68],3M sulfonate-based formulations
+AFFF Fluorotelomer-based,AFFF_Fluorotelomer,density,Density,1.012,kg/L,,,,,,,,
+AFFF Fluorotelomer-based,AFFF_Fluorotelomer,ts_cont,Total solids content - wet,0,fraction wet weight,,,,,,,,
+AFFF Fluorotelomer-based,AFFF_Fluorotelomer,VS_cont,VS content - dry,0.85,kg VS/kg TS,,,,,,,,No data available!
+AFFF Fluorotelomer-based,AFFF_Fluorotelomer,C_cont,Organic C content - dry,0,fraction TS,,,,,,,,
+AFFF Fluorotelomer-based PFAS Concentration,AFFF_Fluorotelomer_PFAS,PFOA,PFOA concentration,1640,10e-6g/kg,3,1640,290,,,,[68],3M fluorotelomer-based formulations
+AFFF Fluorotelomer-based PFAS Concentration,AFFF_Fluorotelomer_PFAS,PFOS,PFOS concentration,13500,10e-6g/kg,3,13500,100,,,,[68],3M fluorotelomer-based formulations
+AFFF Fluorotelomer-based PFAS Concentration,AFFF_Fluorotelomer_PFAS,PFBA,PFBA concentration,1240,10e-6g/kg,,,,,,,[68],3M fluorotelomer-based formulations
+AFFF Fluorotelomer-based PFAS Concentration,AFFF_Fluorotelomer_PFAS,PFPeA,PFPeA concentration,0,10e-6g/kg,,,,,,,[68],3M fluorotelomer-based formulations
+AFFF Fluorotelomer-based PFAS Concentration,AFFF_Fluorotelomer_PFAS,PFHxA,PFHxA concentration,2320,10e-6g/kg,3,2320,30,,,,[68],3M fluorotelomer-based formulations
+AFFF Fluorotelomer-based PFAS Concentration,AFFF_Fluorotelomer_PFAS,PFHpA,PFHpA concentration,0,10e-6g/kg,,,,,,,[68],3M fluorotelomer-based formulations
+AFFF Fluorotelomer-based PFAS Concentration,AFFF_Fluorotelomer_PFAS,PFNA,PFNA concentration,0,10e-6g/kg,,,,,,,[68],3M fluorotelomer-based formulations
+AFFF Fluorotelomer-based PFAS Concentration,AFFF_Fluorotelomer_PFAS,PFDA,PFDA concentration,0,10e-6g/kg,,,,,,,[68],3M fluorotelomer-based formulations
+AFFF Fluorotelomer-based PFAS Concentration,AFFF_Fluorotelomer_PFAS,PFBS,PFBS concentration,0,10e-6g/kg,,,,,,,[68],3M fluorotelomer-based formulations
+AFFF Fluorotelomer-based PFAS Concentration,AFFF_Fluorotelomer_PFAS,PFHxS,PFHxS concentration,3940,10e-6g/kg,3,3940,30,,,,[68],3M fluorotelomer-based formulations
+AFFF Fluorotelomer-based PFAS Concentration,AFFF_Fluorotelomer_PFAS,5:3FTCA,5:3FTCA concentration,0,10e-6g/kg,,,,,,,,
+AFFF Fluorotelomer-based PFAS Concentration,AFFF_Fluorotelomer_PFAS,6:2FTCA,6:2FTCA concentration,0,10e-6g/kg,,,,,,,,
+AFFF Fluorotelomer-based PFAS Concentration,AFFF_Fluorotelomer_PFAS,7:3FTCA,7:3FTCA concentration,0,10e-6g/kg,,,,,,,,
+AFFF Fluorotelomer-based PFAS Concentration,AFFF_Fluorotelomer_PFAS,6:2FTS,6:2FTS concentration,2950,10e-6g/kg,3,2950,470,,,,[68],3M fluorotelomer-based formulations
+AFFF Fluorotelomer-based PFAS Concentration,AFFF_Fluorotelomer_PFAS,MeFBSAA,MeFBSAA concentration,0,10e-6g/kg,,,,,,,,
+AFFF Fluorotelomer-based PFAS Concentration,AFFF_Fluorotelomer_PFAS,nMeFOSAA,nMeFOSAA concentration,0,10e-6g/kg,,,,,,,,
+AFFF Fluorotelomer-based PFAS Concentration,AFFF_Fluorotelomer_PFAS,PFBSA,PFBSA concentration,0,10e-6g/kg,,,,,,,,
+AFFF Fluorotelomer-based PFAS Concentration,AFFF_Fluorotelomer_PFAS,PFPeS,PFPeS concentration,0,10e-6g/kg,,,,,,,,
+C_D Waste,C_DWaste,bulk_dens,Bulk density - wet,574,kg/m3,4,,,,181,995,[110],
+C_D Waste,C_DWaste,ts_cont,Total solids content - wet,0.992,fraction wet weight,4,,,,0.85,0.96,[110],
+C_D Waste,C_DWaste,VS_cont,VS content - dry,0.85,kg VS/kg TS,4,,,,0.73,0.88,[110],
+C_D Waste,C_DWaste,C_cont,Organic C content - dry,0.4,fraction TS,4,,,,0.37,0.43,[110],
+C_D Waste PFAS Concentration,C_DWaste_PFAS,PFOA,PFOA concentration,0.6,10e-6g/kg,,,,,,,,
+C_D Waste PFAS Concentration,C_DWaste_PFAS,PFOS,PFOS concentration,1.97,10e-6g/kg,,,,,,,,
+C_D Waste PFAS Concentration,C_DWaste_PFAS,PFBA,PFBA concentration,0,10e-6g/kg,,,,,,,,
+C_D Waste PFAS Concentration,C_DWaste_PFAS,PFPeA,PFPeA concentration,0,10e-6g/kg,,,,,,,,
+C_D Waste PFAS Concentration,C_DWaste_PFAS,PFHxA,PFHxA concentration,0,10e-6g/kg,,,,,,,,
+C_D Waste PFAS Concentration,C_DWaste_PFAS,PFHpA,PFHpA concentration,0,10e-6g/kg,,,,,,,,
+C_D Waste PFAS Concentration,C_DWaste_PFAS,PFNA,PFNA concentration,0,10e-6g/kg,,,,,,,,
+C_D Waste PFAS Concentration,C_DWaste_PFAS,PFDA,PFDA concentration,0,10e-6g/kg,,,,,,,,
+C_D Waste PFAS Concentration,C_DWaste_PFAS,PFBS,PFBS concentration,0,10e-6g/kg,,,,,,,,
+C_D Waste PFAS Concentration,C_DWaste_PFAS,PFHxS,PFHxS concentration,0,10e-6g/kg,,,,,,,,
+C_D Waste PFAS Concentration,C_DWaste_PFAS,5:3FTCA,5:3FTCA concentration,0,10e-6g/kg,,,,,,,,
+C_D Waste PFAS Concentration,C_DWaste_PFAS,6:2FTCA,6:2FTCA concentration,0,10e-6g/kg,,,,,,,,
+C_D Waste PFAS Concentration,C_DWaste_PFAS,7:3FTCA,7:3FTCA concentration,0,10e-6g/kg,,,,,,,,
+C_D Waste PFAS Concentration,C_DWaste_PFAS,6:2FTS,6:2FTS concentration,0,10e-6g/kg,,,,,,,,
+C_D Waste PFAS Concentration,C_DWaste_PFAS,MeFBSAA,MeFBSAA concentration,0,10e-6g/kg,,,,,,,,
+C_D Waste PFAS Concentration,C_DWaste_PFAS,nMeFOSAA,nMeFOSAA concentration,0,10e-6g/kg,,,,,,,,
+C_D Waste PFAS Concentration,C_DWaste_PFAS,PFBSA,PFBSA concentration,0,10e-6g/kg,,,,,,,,
+C_D Waste PFAS Concentration,C_DWaste_PFAS,PFPeS,PFPeS concentration,0,10e-6g/kg,,,,,,,,

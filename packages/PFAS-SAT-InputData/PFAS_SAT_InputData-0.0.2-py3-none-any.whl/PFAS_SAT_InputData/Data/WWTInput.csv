@@ -1,0 +1,39 @@
+Category,Dictionary_Name,Parameter Name,Parameter Description,amount,unit,uncertainty_type,loc,scale,shape,minimum,maximum,Reference,Comment
+WWT Plant,WWT,Des_Cap,Design capacity of the WWT plant,7.6,Million Liter/day,4,,,,3,300,,
+Screen Rejects,Screen,frac_sr-grit,Mass fraction influent into screen rejects and grit,0.0001,fraction,,,,,,,,
+Screen Rejects,Screen,sol_cont_sr_grit,Solids content of the screen rejects and grit,0.65,fraction,,,,,0.5,0.9,[1],
+Primary Settling,PrimSet,is_prim_set,Is there primary settling,1,"1:TRUE,0:FALSE",,,,,,,,User should update based on process design
+Primary Settling,PrimSet,frac_prim_solids,Mass fraction influent into settling that exits in the solids,0.004,fraction,,,,,,,[1],
+Primary Settling,PrimSet,sol_cont_prim_solids,Solids content of primary solids - wet,0.06,fraction,,,,,0.04,0.08,[1],
+Biological Treatment,BioTrtmnt,sol_cont,Mixed liquor suspended solids (MLSS),3000,mg/L,4,,,,2000,4000,[1],
+Biological Treatment,BioTrtmnt,C_cont,Carbon content of the MLSS,0.5,kg TS/kg ,,,,,,,,
+Biological Treatment,BioTrtmnt,VS_cont,VS content of the MLSS - dry,0.8,kg VSS/kg TS,,,,,,,,
+Thickening,Thick,is_prim_thick,Does primary sludge go to thickening,1,"1:TRUE,0:FALSE",,,,,,,,User input based on treatment process.
+Thickening,Thick,is_sec_thick,Does secondary sludge go to thickening,1,"1:TRUE,0:FALSE",,,,,,,,User input based on treatment process.
+Thickening,Thick,sol_cont_thick,Solids content after thickening,0.05,fraction,5,0.05,,,0.03,0.1,[1],Gravity thickeners
+Dewatering,Dew,is_sol_dew,Are solids dewatered,1,"1:TRUE,0:FALSE",,,,,,,,User input based on treatment process.
+Dewatering,Dew,sol_cont_dewat,Solids content of dewatered solids ,0.25,kg TS/kg,5,0.25,,,0.1,0.35,[1],Centrifuge Dewatering
+Secondary Settling,SecSet,is_sec_set,Is there secondary settling,1,"1:TRUE,0:FALSE",,,,,,,,User input based on treatment process.
+Secondary Settling,SecSet,frac_sec_solids,Mass fraction influent into settling that exits in the solids,0.016,fraction,,,,,,,[1],
+Drying,Dry,is_sol_dry,Are solids dried,1,"1:TRUE,0:FALSE",,,,,,,,User input based on treatment process.
+Drying,Dry,sol_cont_dry,Solids content of dried solids ,0.9,kg TS/kg,5,0.9,,,0.65,0.95,[1],"Rotary Drier: 0.9-0.95, Indirect drier: 0.65-0.95"
+Drying,Dry,frac_PFAS_to_Vol,Fraction of PFAS lost to volatilization,0,fraction,,,,,,,,
+Volatilization,Volatilization,frac_vol_loss,Fraction of PFAS lost to volatilization,0,fraction,,,,,,,,
+Log partition coefficient,LogPartCoef,PFOA,PFOA Log Koc (WWT),2.28,log L/kg OC,3,2.28,0.53,,1.24,3.67,"[78, 81]",
+Log partition coefficient,LogPartCoef,PFOS,PFOS Log Koc (WWT),3.08,log L/kg OC,3,3.08,0.49,,2.13,4.74,"[78, 81]",
+Log partition coefficient,LogPartCoef,PFBA,PFBA Log Koc (WWT),1.8,log L/kg OC,3,1.8,0.55,,0.83,2.81,[78],
+Log partition coefficient,LogPartCoef,PFPeA,PFPeA Log Koc (WWT),1.74,log L/kg OC,3,1.74,0.53,,0.84,2.69,[78],
+Log partition coefficient,LogPartCoef,PFHxA,PFHxA Log Koc (WWT),1.79,log L/kg OC,3,1.79,0.51,,0.84,2.76,[78],
+Log partition coefficient,LogPartCoef,PFHpA,PFHpA Log Koc (WWT),1.98,log L/kg OC,3,1.98,0.61,,0.95,3.17,"[78, 80]",
+Log partition coefficient,LogPartCoef,PFNA,PFNA Log Koc (WWT),2.8,log L/kg OC,3,2.8,0.51,,1.62,3.75,[78],
+Log partition coefficient,LogPartCoef,PFDA,PFDA Log Koc (WWT),3.44,log L/kg OC,3,3.44,0.62,,2.01,4.39,"[78, 81]",
+Log partition coefficient,LogPartCoef,PFBS,PFBS Log Koc (WWT),1.63,log L/kg OC,3,1.63,0.44,,0.84,2.65,"[78, 82]",
+Log partition coefficient,LogPartCoef,PFHxS,PFHxS Log Koc (WWT),2.07,log L/kg OC,3,2.07,0.54,,1.06,3.15,"[78, 80]",
+Log partition coefficient,LogPartCoef,5:3FTCA,5:3FTCA Log Koc (WWT),2.22,log L/kg OC,4,,,,1.6,2.84,,Calculated based on retention time
+Log partition coefficient,LogPartCoef,6:2FTCA,6:2FTCA Log Koc (WWT),2.28,log L/kg OC,4,,,,1.66,2.89,,Calculated based on retention time
+Log partition coefficient,LogPartCoef,7:3FTCA,7:3FTCA Log Koc (WWT),2.96,log L/kg OC,4,,,,2.31,3.61,,Calculated based on retention time
+Log partition coefficient,LogPartCoef,6:2FTS,6:2FTS Log Koc (WWT),2.2,log L/kg OC,3,2.2,0.57,,1.09,3.17,[78],
+Log partition coefficient,LogPartCoef,MeFBSAA,MeFBSAA Log Koc (WWT),2.119,log L/kg OC,,,,,,,[96],
+Log partition coefficient,LogPartCoef,nMeFOSAA,nMeFOSAA Log Koc (WWT),3.24,log L/kg OC,4,,,,2.55,3.94,,Calculated based on retention time
+Log partition coefficient,LogPartCoef,PFBSA,PFBSA Log Koc (WWT),1.64,log L/kg OC,4,,,,0.96,2.32,,Calculated based on retention time
+Log partition coefficient,LogPartCoef,PFPeS,PFPeS Log Koc (WWT),1.89,log L/kg OC,3,1.89,0.46,,1.22,2.65,[78],
