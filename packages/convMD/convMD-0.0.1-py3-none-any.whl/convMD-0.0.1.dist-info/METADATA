@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: convMD
+Version: 0.0.1
+Summary: Tool for converting MD into HTML
+Home-page: https://github.com/ayuzzh/convMD
+Author: Ayush K M
+Author-email: kmayushkm@gmail.com
+License: GPL-3.0
+Keywords: python,first package,markdown,html
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+License-File: LICENSE
+
+UNKNOWN
+
