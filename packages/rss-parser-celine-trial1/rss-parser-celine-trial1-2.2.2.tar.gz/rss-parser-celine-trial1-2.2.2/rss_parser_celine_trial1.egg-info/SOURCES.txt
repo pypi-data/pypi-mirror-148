@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+rss_parser_celine_trial1.egg-info/PKG-INFO
+rss_parser_celine_trial1.egg-info/SOURCES.txt
+rss_parser_celine_trial1.egg-info/dependency_links.txt
+rss_parser_celine_trial1.egg-info/entry_points.txt
+rss_parser_celine_trial1.egg-info/requires.txt
+rss_parser_celine_trial1.egg-info/top_level.txt
