@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: rtc-tools-heat-network
+Version: 0.1.7
+Summary: Heat network models for RTC-Tools 2.
+Home-page: https://www.warmingup.info
+Author: Teresa Piovesan
+Author-email: teresa.piovesan@deltares.nl
+Maintainer: Teresa Piovesan
+License: LGPLv3
+Keywords: heat network optimization rtc tools
+Platform: Windows
+Platform: Linux
+Platform: Mac OS-X
+Platform: Unix
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Programming Language :: Other
+Classifier: Topic :: Scientific/Engineering :: GIS
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.7
+Requires-Dist: pyecore
+Requires-Dist: pymoca (>=0.9.0)
+Requires-Dist: rtc-tools (>=2.5.0)
+Requires-Dist: pyesdl (>=21.11.0)
+
+UNKNOWN
+
+
