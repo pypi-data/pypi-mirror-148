@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: pyincore
+Version: 1.4.1
+Summary: IN-CORE analysis tool python package
+Home-page: https://opensource.ncsa.illinois.edu/bitbucket/projects/INCORE1/repos/pyincore/
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: Mozilla Public License v2.0
+Keywords: infrastructure,resilience,hazards,data discovery,IN-CORE,earthquake,tsunami,tornado,hurricane,dislocation
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.6, <3.9
+Requires-Dist: boto3
+Requires-Dist: deprecated
+Requires-Dist: fiona (>=1.8.4)
+Requires-Dist: geopandas (>=0.6.1)
+Requires-Dist: jsonpickle (>=1.1)
+Requires-Dist: networkx (>=2.2)
+Requires-Dist: numpy (<2.0a0,>=1.16.6)
+Requires-Dist: owslib (>=0.17.1)
+Requires-Dist: pandas (>=0.24.1)
+Requires-Dist: pycodestyle (>=2.6.0)
+Requires-Dist: pyomo (>=5.6)
+Requires-Dist: pyproj (>=1.9.6)
+Requires-Dist: pytest (>=3.9.0)
+Requires-Dist: python-jose (>=3.0)
+Requires-Dist: pyyaml (>=3.13)
+Requires-Dist: rasterio (>=1.0.18)
+Requires-Dist: requests (>=2.21.0)
+Requires-Dist: rtree (>=0.8.3)
+Requires-Dist: scipy (>=1.2.0)
+Requires-Dist: shapely (>=1.6.4.post1)
+Requires-Dist: wntr (>=0.1.6)
+
+pyIncore is a Python package to analyze and visualize various hazard (earthquake, tornado, hurricane etc.) scenarios developed by the Center for Risk-Based Community Resilience Planning team from NCSA. The development is part of NIST sponsored IN-CORE (Interdependent Networked Community Resilience Modeling Environment) initiative. pyIncore allows users to apply hazards on infrastructure in selected areas. Python framework accesses underlying data through local or remote services and facilitates moving and synthesizing results.
+
+
