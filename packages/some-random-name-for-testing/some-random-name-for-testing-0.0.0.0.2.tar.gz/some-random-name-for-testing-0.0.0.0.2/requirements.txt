@@ -1,0 +1,23 @@
+# Pyro is Lub
+pyrogram==2.*
+TgCrypto
+
+# Logger
+pytz==2022.*
+
+# Localization
+pyyaml>=6.0
+
+# HTTP
+aiohttp~=3.8.1
+
+# Environment Variables
+python-dotenv>=0.20.0
+
+# MongoDB
+motor[srv]==2.5.1
+dnspython
+
+# Helpers
+pillow~=9.1.0
+humanize~=4.0.0
