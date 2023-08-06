@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: scBoolSeq
+Version: 0.1
+Summary: scRNA-Seq data binarisation and synthetic generation from Boolean dynamics.
+Home-page: https://github.com/bnediction/scBoolSeq
+Author: Gustavo Magaña López
+Author-email: gustavo.magana-lopez@u-psud.fr
+License: BSD-3
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: toml
+Requires-Dist: rpy2
+Requires-Dist: tzlocal
+
+
+# scBoolSeq
+
+scRNA-Seq data binarisation and synthetic generation from Boolean dynamics.
+
+
+# scBoolSeq-supplementary
+
+
