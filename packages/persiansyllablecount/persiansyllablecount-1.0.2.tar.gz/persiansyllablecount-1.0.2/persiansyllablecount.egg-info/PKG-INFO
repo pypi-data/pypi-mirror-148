@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: persiansyllablecount
+Version: 1.0.2
+Summary: This library can count the syllables of persian text or words by converting the persian text to finglish format
+Home-page: UNKNOWN
+Author: Nbic
+License: UNKNOWN
+Description: # persian-syllable-counter
+        
+        This library can count the syllables of persian text or words by converting the persian text to finglish format ( a slang used for writing persian words in english by their phonetics)
+        
+Keywords: python,first package
+Platform: UNKNOWN
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown

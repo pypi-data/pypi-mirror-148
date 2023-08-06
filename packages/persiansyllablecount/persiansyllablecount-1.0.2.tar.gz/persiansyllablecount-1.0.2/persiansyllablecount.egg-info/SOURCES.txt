@@ -1,0 +1,8 @@
+README.md
+setup.py
+persiansyllablecount/__init__.py
+persiansyllablecount/persian_syllable_counter.py
+persiansyllablecount.egg-info/PKG-INFO
+persiansyllablecount.egg-info/SOURCES.txt
+persiansyllablecount.egg-info/dependency_links.txt
+persiansyllablecount.egg-info/top_level.txt
