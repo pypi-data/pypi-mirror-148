@@ -1,0 +1,9 @@
+pytest_opentelemetry/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_opentelemetry/instrumentation.py,sha256=mh8pkhPOAlv2Ifdz0kyBm25YRwRHdCfQjWs3PP955bc,5678
+pytest_opentelemetry/plugin.py,sha256=nBLPwqAFWWOSsqLyk9VbH_yjBYwZ5XJWnpFiK0q5uDs,353
+pytest_opentelemetry-0.0.1.dist-info/LICENSE,sha256=LdtvkY10p4wFjqlPbn6UqgCwfYiYGfU-2kV4bhKftb0,1069
+pytest_opentelemetry-0.0.1.dist-info/METADATA,sha256=_lqB6dWmIVJwPWhP_Jfb4S4OYlr_HZoq2UPILy1ASlU,3474
+pytest_opentelemetry-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pytest_opentelemetry-0.0.1.dist-info/entry_points.txt,sha256=wvvX5u0Xhc2WuVpK1gUDEeepaQIicmZ78bTdKp5FkJg,126
+pytest_opentelemetry-0.0.1.dist-info/top_level.txt,sha256=oGhIXQrpc2Uc6-tMHtPdAATx2T14qbcYzHYKitU3GUQ,21
+pytest_opentelemetry-0.0.1.dist-info/RECORD,,
