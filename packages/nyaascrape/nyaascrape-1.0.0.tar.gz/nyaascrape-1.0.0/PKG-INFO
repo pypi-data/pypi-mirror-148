@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: nyaascrape
+Version: 1.0.0
+Summary: Uses search terms to find data related to torrents and has a cli to download highest seeded torrent
+Home-page: https://github.com/cpiccirilli1/nyaascrape
+Download-URL: https://github.com/cpiccirilli1/nyaascrape/archive/refs/tags/v1.0.1.tar.gz
+Author: Chelsea Piccirilli
+Author-email: piccirilli115@gmail.com
+License: BSD 2-clause
+Keywords: scrape,nyaa.si,nyaa,cli,torrent,anime
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+License-File: LICENSE.txt
+
+UNKNOWN
+

@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+nyaascrape/__init__.py
+nyaascrape/nyaascrape.py
+nyaascrape.egg-info/PKG-INFO
+nyaascrape.egg-info/SOURCES.txt
+nyaascrape.egg-info/dependency_links.txt
+nyaascrape.egg-info/requires.txt
+nyaascrape.egg-info/top_level.txt
