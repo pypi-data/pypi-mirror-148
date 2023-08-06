@@ -1,0 +1,10 @@
+LICENCE.txt
+MANIFEST.in
+pyproject.toml
+setup.cfg
+MultiEncoder.egg-info/PKG-INFO
+MultiEncoder.egg-info/SOURCES.txt
+MultiEncoder.egg-info/dependency_links.txt
+MultiEncoder.egg-info/top_level.txt
+mle/__init__.py
+mle/multi_layer_encoder.py

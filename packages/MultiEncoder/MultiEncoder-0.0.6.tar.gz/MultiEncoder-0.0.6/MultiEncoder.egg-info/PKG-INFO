@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: MultiEncoder
+Version: 0.0.6
+Summary: MultiEncoder
+Author: Mosleh Mahamud
+Author-email: mosleh.edu@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENCE.txt
+
+## SqueezeFormer
+#### Get layer embeddings from a RoBERTa, Longformer or BigBird
+###### built on top of Huggingface and Pytorch
+###### OBS: bigbird not tested yet
+
+
+
+### Why is this useful?
+* Increase Dataset Size by 8-12 x
+* Treat them as Features
+* SqueezeFormer is a fast and easy way to get embeddings from a pretrained model
+
+#### Install this 
+``!pip install MultiEncoder``
+
+#### How to Import?
+````python
+
+from mle import multi_layer_encoder
+    
+````
+
+### How to use?
+````python
+
+# intantiaite model
+le = multi_layer_encoder.multi_layer_encoder("allenai/longformer-base-4096")
+    
+# encode return list of embeddings in numpy. [its mean pooling by default]
+list_of_encoded_inputs, dect = le.multi_encode("Hi this is a dami text muhahaha")
+    
+# dect is a dictionary of layers and non pooled embeddings. This is done to give full freedom to developers!
+
+    
+#last item in the list is the last hidden state(embeddings) output (mean pooled)
+print(len(list_of_encoded_inputs)) #7
+print(list_of_encoded_inputs[-1].shape) #after mean pooling: (768,)
+    
+````
+
+#### increase/decrease the layers 
+This will return the starting layers to save from until the last layer (which is 13).
+````python
+ #default is 6 but you can increase to 8 
+le.multi_encode(input_text, encode_layers=6)
+    
+#you can even change to maxpool instead of mean pool
+le.multi_encode(input_text, encode_layers=6, max_pool=True)
+````
+
+
