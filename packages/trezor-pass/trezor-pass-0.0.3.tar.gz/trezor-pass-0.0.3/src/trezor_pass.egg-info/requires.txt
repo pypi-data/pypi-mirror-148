@@ -1,0 +1,4 @@
+trezor
+cryptography
+inquirerpy
+dropbox
