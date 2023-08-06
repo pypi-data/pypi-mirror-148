@@ -1,0 +1,10 @@
+mathematics/__init__.py,sha256=2KYC5rZd18AMWYPwyCngdtpRyMXqfK3wFXkOG7XdRC0,1838
+mathematics/function.py,sha256=8MAra91S_R4dViRh4dAbPLMENskZ0k7ep-qi-a7W4Ys,214
+mathematics/grow_lists.py,sha256=b1E3CD7CauABV3iuZ8CXhqFlQfRPAcotcWSGyjK3DMg,354
+mathematics/hold_list.py,sha256=A3Kehu1GBBgrJAXYfVncOM2DwU2IMHWBHMqR3BU3i98,1963
+mathematics/lists.py,sha256=oNtdUSnLWhwgoGg6Ku8k9zTzj0e3DQSvBu5ichUE5zM,778
+mathematics-0.0.0a0.dev20224291.dist-info/LICENSE,sha256=-yC0t63BCLJGXo8CTfBawNKOXcNuoPe6GYNhLccX5hY,1069
+mathematics-0.0.0a0.dev20224291.dist-info/METADATA,sha256=SK9w3bv_eYcPFHJ9CvM6l-Q49iYyWyeXMFhAwdhVhPc,1162
+mathematics-0.0.0a0.dev20224291.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+mathematics-0.0.0a0.dev20224291.dist-info/top_level.txt,sha256=Z6uKQ8-ZYgtXWhM3TVIYfLgh0sW1AlWqiGN548fP4Fg,12
+mathematics-0.0.0a0.dev20224291.dist-info/RECORD,,
