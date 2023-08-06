@@ -1,0 +1,4 @@
+[console_scripts]
+sc=spraycharles.spraycharles:cli
+spraycharles=spraycharles.spraycharles:cli
+
