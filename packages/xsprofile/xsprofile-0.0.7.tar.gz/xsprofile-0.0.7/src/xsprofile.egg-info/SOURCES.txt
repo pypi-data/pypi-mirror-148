@@ -1,0 +1,10 @@
+LICENSE.md
+README.md
+pyproject.toml
+setup.py
+src/utils.py
+src/xsprofile.egg-info/PKG-INFO
+src/xsprofile.egg-info/SOURCES.txt
+src/xsprofile.egg-info/dependency_links.txt
+src/xsprofile.egg-info/requires.txt
+src/xsprofile.egg-info/top_level.txt
