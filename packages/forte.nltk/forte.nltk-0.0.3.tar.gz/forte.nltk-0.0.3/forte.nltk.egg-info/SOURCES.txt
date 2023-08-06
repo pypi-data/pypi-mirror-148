@@ -1,0 +1,10 @@
+README.md
+setup.py
+forte.nltk.egg-info/PKG-INFO
+forte.nltk.egg-info/SOURCES.txt
+forte.nltk.egg-info/dependency_links.txt
+forte.nltk.egg-info/namespace_packages.txt
+forte.nltk.egg-info/requires.txt
+forte.nltk.egg-info/top_level.txt
+fortex/nltk/__init__.py
+fortex/nltk/nltk_processors.py
