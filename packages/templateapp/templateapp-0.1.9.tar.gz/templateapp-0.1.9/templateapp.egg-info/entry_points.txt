@@ -1,0 +1,4 @@
+[console_scripts]
+template-app = templateapp.application:execute
+templateapp = templateapp.main:execute
+
