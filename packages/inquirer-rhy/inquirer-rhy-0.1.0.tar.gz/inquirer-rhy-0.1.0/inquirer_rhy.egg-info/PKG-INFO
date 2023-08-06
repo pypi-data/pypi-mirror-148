@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: inquirer-rhy
+Version: 0.1.0
+Summary: inquirer in modern python3
+Home-page: https://github.com/Rhythmicc/inquirer-rhy
+Author: RhythmLian
+License: MIT
+Keywords: inquirer
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+<h1 style="text-align: center"> inquirer-rhy </h1>
+
+## Install
+```shell
+pip3 install inquirer-rhy
+```
+
+## About this Template
+
+- make release: `qrun -b`
+- upload with twice: `qrun [-r]`
+
+
+
