@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: straindesign
+Version: 0.2
+Summary: Computational strain design package for the COBRApy framework
+Home-page: https://github.com/klamt-lab/straindesign.git
+Author: Philipp Schneider
+Author-email: zgddtgt@gmail.com
+License: Apache License 2.0
+Platform: UNKNOWN
+Requires-Python: >=3.7
+License-File: LICENSE
+
+UNKNOWN
+
