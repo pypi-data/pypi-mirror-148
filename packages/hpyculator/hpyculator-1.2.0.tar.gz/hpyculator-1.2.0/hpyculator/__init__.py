@@ -1,0 +1,42 @@
+# from Signal import main_window_signal
+
+name = "hpyculator"
+
+def write(filename,anything,end="\n") -> None:
+    filename.write(str(anything)+end)
+    filename.flush()
+
+def write_without_flush(filename,anything,end="\n") -> None:
+    filename.write(str(anything)+end)
+
+def flush(filename) -> None:
+    filename.flush()
+
+def output(self,anything) -> None:
+    self.main_window_signal.appendOutPutBox.emit(str(anything))
+
+def outputNotEnd(self,msg:str) -> None:
+    self.main_window_signal.appendOutPutBox.emit(msg)
+
+def clearOutput(self) -> None:
+    self.main_window_signal.clearOutPutBox.emit()
+
+def setOutput(self, msg:str) -> None:
+    self.main_window_signal.setOutPutBox.emit(msg)
+
+def addOne(num:int) -> int:
+    return num+1
+
+STRING=(1<<0)
+NUM=(1<<1)
+FLOAT=(1<<2)
+LIST=(1<<3)
+ON=(1<<1)
+OFF=(1<<0)
+
+#'output_mode'
+RETURN_ONCE=(1<<0)
+RETURN_LIST=(1<<1)
+RETURN_LIST_OUTPUT_IN_ONE_LINE=(1<<2)
+NO_RETURN=(1<<3)
+NO_RETURN_SINGLE_FUNCTION=(1<<4)
