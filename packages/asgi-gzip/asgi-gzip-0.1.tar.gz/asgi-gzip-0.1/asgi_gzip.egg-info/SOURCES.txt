@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+asgi_gzip/__init__.py
+asgi_gzip/headers.py
+asgi_gzip.egg-info/PKG-INFO
+asgi_gzip.egg-info/SOURCES.txt
+asgi_gzip.egg-info/dependency_links.txt
+asgi_gzip.egg-info/requires.txt
+asgi_gzip.egg-info/top_level.txt
