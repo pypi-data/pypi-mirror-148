@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: interfacedoc
+Version: 0.0.3
+Summary: Interface documentation installer
+Home-page: https://github.com/rizki4106/interface-installer
+Author: rizki maulana
+Author-email: rizkimaulana348@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+Requires-Dist: Flask (==2.1.1)
+Requires-Dist: Jinja2 (==3.1.1)
+Requires-Dist: Markdown (==3.3.6)
+Requires-Dist: MarkupSafe (==2.1.1)
+Requires-Dist: Pygments (==2.12.0)
+Requires-Dist: SecretStorage (==3.3.2)
+Requires-Dist: Werkzeug (==2.1.1)
+Requires-Dist: autopep8 (==1.6.0)
+Requires-Dist: beautifulsoup4 (==4.11.1)
+Requires-Dist: bleach (==5.0.0)
+Requires-Dist: certifi (==2021.10.8)
+Requires-Dist: cffi (==1.15.0)
+Requires-Dist: charset-normalizer (==2.0.12)
+Requires-Dist: click (==8.1.2)
+Requires-Dist: colorama (==0.4.4)
+Requires-Dist: commonmark (==0.9.1)
+Requires-Dist: cryptography (==37.0.1)
+Requires-Dist: docutils (==0.18.1)
+Requires-Dist: idna (==3.3)
+Requires-Dist: importlib-metadata (==4.11.3)
+Requires-Dist: interfacedoc (==0.0.2)
+Requires-Dist: itsdangerous (==2.1.2)
+Requires-Dist: jeepney (==0.8.0)
+Requires-Dist: keyring (==23.5.0)
+Requires-Dist: pkginfo (==1.8.2)
+Requires-Dist: pycodestyle (==2.8.0)
+Requires-Dist: pycparser (==2.21)
+Requires-Dist: readme-renderer (==35.0)
+Requires-Dist: requests-toolbelt (==0.9.1)
+Requires-Dist: requests (==2.27.1)
+Requires-Dist: rfc3986 (==2.0.0)
+Requires-Dist: rich (==12.3.0)
+Requires-Dist: six (==1.16.0)
+Requires-Dist: soupsieve (==2.3.2.post1)
+Requires-Dist: toml (==0.10.2)
+Requires-Dist: twine (==4.0.0)
+Requires-Dist: typing-extensions (==4.2.0)
+Requires-Dist: urllib3 (==1.26.9)
+Requires-Dist: webencodings (==0.5.1)
+Requires-Dist: zipp (==3.8.0)
+
+# Interfacedoc
+
+Interfacedoc is a command line tools for install [interface software engineering documentation tools](https://github.com/rizki4106/interface)
+
+## Install
+
+```bash
+pip3 install interfacedoc
+```
+
+
+## Usage
+
+```bash
+$ interfacedoc startproject <projectname>
+```
+
+example
+
+```bash
+$ interfacedoc startproject api-documentation
+```
+
+```bash
+$ cd api-documentation && python3 app.py
+```
+
