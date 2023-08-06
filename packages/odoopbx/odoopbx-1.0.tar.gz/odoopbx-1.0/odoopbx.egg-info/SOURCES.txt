@@ -1,0 +1,13 @@
+MANIFEST.in
+README.rst
+setup.py
+odoopbx/__init__.py
+odoopbx/odoopbx_cli.py
+odoopbx/version.py
+odoopbx.egg-info/PKG-INFO
+odoopbx.egg-info/SOURCES.txt
+odoopbx.egg-info/dependency_links.txt
+odoopbx.egg-info/entry_points.txt
+odoopbx.egg-info/not-zip-safe
+odoopbx.egg-info/requires.txt
+odoopbx.egg-info/top_level.txt

@@ -1,0 +1,4 @@
+
+[console_scripts]
+odoopbx=odoopbx.odoopbx_cli:main
+    
