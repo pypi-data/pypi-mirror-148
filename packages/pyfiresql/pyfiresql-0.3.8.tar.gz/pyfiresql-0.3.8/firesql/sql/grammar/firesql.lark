@@ -1,0 +1,108 @@
+start: [(sql_expr ";")*] sql_expr ";"? -> final
+
+sql_expr: select | update | insert | delete
+
+select: "SELECT"i select_clause "FROM"i from_clause [ "WHERE"i where_clause ]
+
+select_clause: "DISTINCT"i select_list -> select_distinct
+              | select_list -> select_all
+select_list: [(column_expr ",")*] column_expr
+column_expr.0: expression [ [ "AS"i ] alias ] -> select_expression
+?expression: [name "."] name -> column_name
+              | expression_math
+              | literal
+
+from_clause: [(from_expr ",")*] from_expr
+?from_expr: from_item -> from_expression
+            | join -> join
+
+join: from_item "JOIN"i from_item [ "ON"i bool_expression ] -> join_expression
+from_item: name [ ["AS"i ] alias ] -> table_name
+
+alias: name -> alias_string
+
+where_clause: bool_expression
+
+update: "UPDATE"i from_item "SET"i set_clause [ "WHERE"i where_clause ]
+
+set_clause: [(set_expr ",")*] set_expr
+?set_expr: set_item -> set_expression
+
+set_item: equals
+
+insert: "INSERT"i "INTO"i from_item "(" columns_clause ")" "VALUES"i "(" values_clause ")"
+
+columns_clause: [(column_spec ",")*] column_spec
+?column_spec: [name "."] name -> column_name
+
+values_clause: [(value_spec ",")*] value_spec
+?value_spec: literal
+
+delete: "DELETE"i "FROM"i from_item [ "WHERE"i where_clause ]
+
+bool_expression: bool_parentheses
+                 | bool_expression "AND"i bool_parentheses -> bool_and
+                 | bool_expression "OR"i bool_parentheses -> bool_or
+bool_parentheses: comparison_type
+                 | "(" bool_expression "AND"i comparison_type ")" -> bool_and
+                 | "(" bool_expression "OR"i comparison_type ")" -> bool_or
+
+?expression_math: AGGREGATION expression ")" -> sql_aggregation
+AGGREGATION.8: ("sum("i | "avg("i | "min("i | "max("i | "count("i "distinct"i | "count("i)
+
+comparison_type: equals | not_equals | greater_than | less_than | greater_than_or_equal
+| less_than_or_equal | in_expr | not_in_expr | is_null | is_not_null
+| contain_expr | contain_any_expr | like_expr | not_like_expr
+
+equals: expression "=" expression
+is_null: expression "is"i "null"i
+is_not_null: expression "is"i "not"i "null"i
+not_equals: expression ("<>" | "!=") expression
+greater_than: expression ">" expression
+less_than: expression "<" expression
+greater_than_or_equal: expression ">=" expression
+less_than_or_equal: expression "<=" expression
+in_expr: expression "IN"i "(" [expression ","]* expression ")"
+not_in_expr: expression "NOT"i "IN"i "(" [expression ","]* expression ")"
+contain_expr: expression "CONTAIN"i expression
+contain_any_expr: expression "ANY"i "CONTAIN"i "(" [expression ","]* expression ")"
+like_expr: expression "LIKE"i expression
+not_like_expr: expression "NOT"i "LIKE"i expression
+
+?literal: boolean -> bool
+       | number_expr -> number
+       | /'([^']|\s)+'|''/ -> string
+       | ("JSON"i|"J"i) "(" json_value ")" -> json
+boolean: "true"i -> true
+       | "false"i -> false
+?number_expr: product
+
+?product: NUMBER
+
+
+integer: /[1-9][0-9]*/
+name: CNAME | json_string | STAR
+STAR: "*"
+CNAME: ("_"|"/"|LETTER) ("_"|"/"|LETTER|DIGIT)*
+
+?json_value: json_object
+       | json_array
+       | json_string
+       | SIGNED_NUMBER      -> json_number
+       | "true"             -> json_true
+       | "false"            -> json_false
+       | "NULL"i            -> json_null
+
+json_array  : "[" [json_value ("," json_value)*] "]"
+json_object : "{" [json_pair ("," json_pair)*] "}"
+json_pair   : json_string ":" json_value
+
+json_string: ESCAPED_STRING
+
+%import common.ESCAPED_STRING
+%import common.NUMBER
+%import common.SIGNED_NUMBER
+%import common.LETTER
+%import common.DIGIT
+%import common.WS
+%ignore WS
