@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+cmaptools/cmaptools.py
+cmaptools.egg-info/PKG-INFO
+cmaptools.egg-info/SOURCES.txt
+cmaptools.egg-info/dependency_links.txt
+cmaptools.egg-info/requires.txt
+cmaptools.egg-info/top_level.txt
