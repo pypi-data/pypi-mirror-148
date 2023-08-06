@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/mscale/__init__.py
+src/mscale/activations.py
+src/mscale/example.py
+src/mscale/layers.py
+src/mscale/mscalev5.py
+src/mscale.egg-info/PKG-INFO
+src/mscale.egg-info/SOURCES.txt
+src/mscale.egg-info/dependency_links.txt
+src/mscale.egg-info/top_level.txt
