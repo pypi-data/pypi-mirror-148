@@ -1,0 +1,2 @@
+aiogram==2.20
+mongoengine==0.24.1
