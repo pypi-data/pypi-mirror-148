@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: matmap
+Version: 0.1.0
+Summary: MatMap: A Modular, Automatable, Tunable Mapper for Accelerator Programming
+Home-page: https://github.com/gdinh/matmap
+License: Apache-2.0
+Keywords: scheduling,language,performance,dsl,autotuning
+Author: Grace Dinh
+Author-email: dinh@berkeley.edu
+Maintainer: Grace Dinh
+Maintainer-email: dinh@berkeley.edu
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: Software Development :: Compilers
+Requires-Dist: cvxpy (>=1.0.0,<2.0.0)
+Requires-Dist: exo-lang (>=0.0.2,<0.0.3)
+Project-URL: Repository, https://github.com/gdinh/matmap
+Description-Content-Type: text/markdown
+
+# Matmap: A Modular, Automatable, Tunable Mapper for Accelerator Programming
+
+A representation for higher-level transforms, currently targeting [EXO](https://github.com/ChezJrk/exo) code.
+
+## Setup
+
+This has been extensively tested on Python 3.9.7. Python versions 3.7 and earlier are not supported as Exo requires several newer language features not available. If you are on a system with an outdated version of python, we recommend using [pyenv](https://github.com/pyenv/pyenv) to install a new version of pyenv.
+
+```
+git clone https://github.com/gdinh/matmap.git
+python -m venv $HOME/.venv/matmap
+source $HOME/.venv/matmap/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -e ./matmap
+```
+
+Further documentation and demo notebooks can be found in the docs directory.
+
+## Project status:
+
+Working:
+- Tiling schedule (including automatic generation of tiles for projective nested loops)
+- Reordering schedule
+
+In progress:
+- [GPTune](https://gptune.lbl.gov/) integration
+- [CoSA](https://github.com/ucb-bar/cosa) transform
+
+Next TODOs:
+- HBL autotiling for CNNs
+- Code specialization for variable sized bounds
+
