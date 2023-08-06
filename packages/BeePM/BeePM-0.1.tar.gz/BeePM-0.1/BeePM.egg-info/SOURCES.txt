@@ -1,0 +1,8 @@
+LICENSE.md
+README.md
+setup.py
+BeePM.egg-info/PKG-INFO
+BeePM.egg-info/SOURCES.txt
+BeePM.egg-info/dependency_links.txt
+BeePM.egg-info/top_level.txt
+beepm/Main.py
