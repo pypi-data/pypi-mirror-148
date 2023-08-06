@@ -1,0 +1,5 @@
+include LICENSE-BSD
+include LICENSE-LGPL
+include README.md
+recursive-include docs *.html *.css *.png
+recursive-include intermine *.py
