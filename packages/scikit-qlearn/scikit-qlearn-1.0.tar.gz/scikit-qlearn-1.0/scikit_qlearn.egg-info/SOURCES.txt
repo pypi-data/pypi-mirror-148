@@ -1,0 +1,10 @@
+LICENSE
+README.rst
+setup.py
+scikit_qlearn.egg-info/PKG-INFO
+scikit_qlearn.egg-info/SOURCES.txt
+scikit_qlearn.egg-info/dependency_links.txt
+scikit_qlearn.egg-info/requires.txt
+scikit_qlearn.egg-info/top_level.txt
+skqlearn/__init__.py
+skqlearn/_version.py
