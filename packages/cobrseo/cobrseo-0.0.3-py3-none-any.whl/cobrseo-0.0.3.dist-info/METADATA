@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: cobrseo
+Version: 0.0.3
+Summary: A small example package
+Author: Vlad Zozulia
+Author-email: vlad@cobr.info
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+UNKNOWN
+
