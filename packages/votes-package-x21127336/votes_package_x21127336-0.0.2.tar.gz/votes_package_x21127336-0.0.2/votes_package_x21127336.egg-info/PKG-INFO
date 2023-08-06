@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: votes-package-x21127336
+Version: 0.0.2
+Summary: A package created to handle votes
+Home-page: https://github.com/rohitsalvi23/x21127336-CPP-Library.git
+Author: Rohit Salvi
+Author-email: x21127336@student.ncirl.ie
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+A basic package to handle votes.
+
