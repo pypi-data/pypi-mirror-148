@@ -1,0 +1,94 @@
+Metadata-Version: 2.1
+Name: python-recorder
+Version: 0.0.1
+Summary: 
+License: MIT
+Author: Andreu Gimenez
+Author-email: esdandreu@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: all
+Provides-Extra: realsense
+Requires-Dist: Flask (>=2.1.1,<3.0.0)
+Requires-Dist: PyInquirer (>=1.0.3,<2.0.0)
+Requires-Dist: PyYAML (>=5.1,<6.0)
+Requires-Dist: numpy (>=1.22.2,<2.0.0)
+Requires-Dist: pyrealsense2 (>=2.50.0,<3.0.0); extra == "realsense" or extra == "all"
+Requires-Dist: sounddevice (>=0.4.4,<0.5.0)
+Requires-Dist: typer[all] (>=0.4.0,<0.5.0)
+Description-Content-Type: text/markdown
+
+# python-recorder
+
+Visual and Acoustic Odometry recorder using python. Devices: RealSense D435i
+camera, RODE VideoMicNTG and smartLav+ microphones
+
+Framework
+
+TODO ros
+
+# Setup
+
+Clone this repository to your local machine. Detailed instructions about
+cloning repositories and installing python dependencies can be found
+[here](https://docs.google.com/document/d/15Mj3x9Im7Yfz3sPo5f4dUjQZgabjVtIL2RBHvM2798E/edit?usp=sharing).
+
+## Install Python (3.5 - 3.9)
+Do not install the latest version of Python (currently 3.10) as it is not
+compatible with Intel RealSense SDK yet.
+
+https://www.python.org/downloads/
+
+## Install Intel RealSense SDK 2.0
+
+https://github.com/IntelRealSense/librealsense/releases
+
+## Install dependencies
+Open a terminal in the directory where this file is located. Then create a
+virtual environment:
+```
+python -m venv venv
+```
+
+Activate the environment on Windows:
+```
+venv\Scripts\activate
+```
+or on MacOS and Linux:
+```
+source venv/bin/activate
+```
+
+Finally, install dependencies with pip:
+```
+pip install -r requirements.txt
+```
+
+# Usage
+Check the usage with the `--help` option:
+```
+python vao-recorder.py --help
+```
+
+# Workflow
+
+Configure the devices to be used. One can always modify the configuration
+manually in the generated `yaml` file.
+```
+python vao-recorder.py config
+```
+
+Test that the chosen audio devices are working
+```
+python vao-recorder.py test microphone
+```
+
+Record an experiment with the configured devices
+```
+python vao-recorder.py record
+```
