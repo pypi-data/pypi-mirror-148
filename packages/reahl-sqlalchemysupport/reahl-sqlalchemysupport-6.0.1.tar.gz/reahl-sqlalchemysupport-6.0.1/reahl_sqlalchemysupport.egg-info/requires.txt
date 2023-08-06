@@ -1,0 +1,4 @@
+reahl-component<6.1,>=6.0
+reahl-commands<6.1,>=6.0
+SQLAlchemy<1.4.999,>=1.2.0
+alembic<1.7.999,>=0.9.6

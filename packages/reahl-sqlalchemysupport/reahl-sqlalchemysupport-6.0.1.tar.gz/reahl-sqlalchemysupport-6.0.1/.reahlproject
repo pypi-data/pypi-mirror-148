@@ -1,0 +1,31 @@
+<project type="egg">
+  <namespaces>
+    <package name="reahl"/>
+  </namespaces>
+  
+  <deps purpose="test">
+    <thirdpartyegg name="pytest" minversion="3.0"/>
+    <egg name="reahl-tofu"/>
+    <egg name="reahl-sqlitesupport"/>
+    <egg name="reahl-domain"/>
+    <egg name="reahl-dev"/>
+    <egg name="reahl-stubble"/>
+  </deps>
+
+  <version number="6.0">
+    <deps purpose="run">
+      <egg name="reahl-component" versionlocked="True"/>
+      <egg name="reahl-commands" versionlocked="True"/>
+      <thirdpartyegg name="SQLAlchemy" minversion="1.2.0" maxversion="1.4.999"/>
+      <thirdpartyegg name="alembic" minversion="0.9.6" maxversion="1.7.999"/>
+    </deps>
+  </version>
+
+  <distpackage type="wheel">
+    <packageindex repository="pypi"/>
+  </distpackage>
+  <distpackage type="sdist">
+    <packageindex repository="pypi"/>
+  </distpackage>
+
+</project>
