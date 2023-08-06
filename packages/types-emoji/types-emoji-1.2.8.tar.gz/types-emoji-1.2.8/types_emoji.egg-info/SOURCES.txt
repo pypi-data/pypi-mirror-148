@@ -1,0 +1,15 @@
+CHANGELOG.md
+MANIFEST.in
+setup.py
+emoji-stubs/METADATA.toml
+emoji-stubs/__init__.pyi
+emoji-stubs/core.pyi
+emoji-stubs/unicode_codes/__init__.pyi
+emoji-stubs/unicode_codes/en.pyi
+emoji-stubs/unicode_codes/es.pyi
+emoji-stubs/unicode_codes/it.pyi
+emoji-stubs/unicode_codes/pt.pyi
+types_emoji.egg-info/PKG-INFO
+types_emoji.egg-info/SOURCES.txt
+types_emoji.egg-info/dependency_links.txt
+types_emoji.egg-info/top_level.txt
