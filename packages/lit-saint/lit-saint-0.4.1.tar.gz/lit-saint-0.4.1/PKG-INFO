@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: lit-saint
+Version: 0.4.1
+Summary: Pytorch Lightning implementation of SAINT Model
+Home-page: https://github.com/Actis92/lit-saint.git
+Download-URL: https://github.com/Actis92/lit-saint.git/archive/0.4.1.tar.gz
+Author: Luca Actis Grosso
+Author-email: lucaactisgrosso@gmail.com
+License: MIT
+Keywords: TABULAR,SELF SUPERVISED,PYTORCH LIGHTNING
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+License-File: LICENSE
+
+UNKNOWN
+
