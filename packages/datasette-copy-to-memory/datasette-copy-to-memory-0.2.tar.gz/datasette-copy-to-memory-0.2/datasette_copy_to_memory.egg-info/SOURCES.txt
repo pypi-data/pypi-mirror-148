@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+datasette_copy_to_memory/__init__.py
+datasette_copy_to_memory.egg-info/PKG-INFO
+datasette_copy_to_memory.egg-info/SOURCES.txt
+datasette_copy_to_memory.egg-info/dependency_links.txt
+datasette_copy_to_memory.egg-info/entry_points.txt
+datasette_copy_to_memory.egg-info/requires.txt
+datasette_copy_to_memory.egg-info/top_level.txt
