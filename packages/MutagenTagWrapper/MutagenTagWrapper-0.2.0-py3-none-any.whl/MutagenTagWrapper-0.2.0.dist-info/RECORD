@@ -1,0 +1,16 @@
+tagwrapper/VERSION,sha256=kR_AxIywxwYB21d1qb7xt0DcTMn5tGOJufBWP-frlNc,5
+tagwrapper/__init__.py,sha256=zG4vk0LuvDi4sXlj3TTsLbVDojdywQGUCm5pEhZoB3E,2905
+tagwrapper/common.py,sha256=0d5sNng8YTQ6ZK9ounp84ibfUy3qpcvlvZ8pt5Np2fM,16578
+tagwrapper/flac.py,sha256=ktD2AiC8lU7LrczjP9PqZw6Q2CxUNT0Taww5UESDDLo,3346
+tagwrapper/monkeysaudio.py,sha256=oujpukxWC-vZ144CyCh3794npfuO8xOKJOA3IqZicJI,4538
+tagwrapper/mp3.py,sha256=TDU-1Smrqql8wQqYdn80S4wBipxtSuNo6GhZDMu6KrY,4754
+tagwrapper/mp4.py,sha256=U4S_2y3zgLZVfMenHRaJFBW8yqh2mUBuI291LGQVOJ8,35
+tagwrapper/ogg.py,sha256=ZYy4KRiMEM5kFZNH9OKol6KMglsKbB5pVntdbyb8KPo,3959
+tagwrapper/trueaudio.py,sha256=3zcVYsZZMwzBYxl5QrfXZNk5jCUhXShD4xzkMkNRWNA,3786
+tagwrapper/util.py,sha256=SzBL48HYSA41NanaluIGcPlke6JXHy1konrYxQ4p49U,3724
+tagwrapper/wave.py,sha256=JwEdxspj86ZGxJ0nVDapPSn3hWQBDk4bFa2WWPve0FA,337
+MutagenTagWrapper-0.2.0.dist-info/LICENSE,sha256=yEnSW62NgVeQCpjdmkGiygW2lmYzwi0W5H3u8UJwFRo,1065
+MutagenTagWrapper-0.2.0.dist-info/METADATA,sha256=an9xUpamiY_QnrT0mJDMevhIGz7KT7dn7_0h6vqQeVo,4701
+MutagenTagWrapper-0.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+MutagenTagWrapper-0.2.0.dist-info/top_level.txt,sha256=mIE1V3cAjBxOcVd029BW68DjV-ub0SQuW6l7AQAT_24,11
+MutagenTagWrapper-0.2.0.dist-info/RECORD,,
