@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: newtonEQ
+Version: 0.0.4
+Summary: A library of useful college physics formulas
+Home-page: UNKNOWN
+Author: Simon Varadaraj
+Author-email: s.varadaraj03@gmail.com
+License: MIT
+Keywords: physics,college,science
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENCE.txt
+
+This is a library of formulas that can be applied to newtonian physics problems.
+
+Change Log
+============
+
+0.0.1 (04/26/2022)
+------------------
+- First Release
+
+
+0.0.2 (04/27/2022)
+------------------
+- Added Docstrings to the created functions
+- Added GRAVITY as a constant
+- Added functions for rotational and translational kinematics
+- Added functions to calculating moments of inertia
+- Added functions to convert non-SI Units to SI (for displacement and velocity)
+- Added conversion from rotational to translational units (annd vise-versa)
+- Added basic functions for mechanical energies 
+
+0.0.3 (04/27/2022)
+------------------
+- Added parameter and return values in the Docstrings
+- Added clearer parameter guidelines for "moment"
+- clearer TypeError system
+
+0.0.4 (04/27/2022)
+------------------
+- Fixed error with vmag
+- Added additional vector functions (dotprod, anglebetween)
+- Added functions to convert rad to degrees (and vise-versa)
+- Rearranged the general layout of the code
+- Added cross product
+

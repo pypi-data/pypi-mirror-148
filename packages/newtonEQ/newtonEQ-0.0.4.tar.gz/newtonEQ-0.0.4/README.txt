@@ -1,0 +1,1 @@
+This is a library of formulas that can be applied to newtonian physics problems.

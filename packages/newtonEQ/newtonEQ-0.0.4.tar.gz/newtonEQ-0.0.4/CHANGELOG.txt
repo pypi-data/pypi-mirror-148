@@ -1,0 +1,31 @@
+Change Log
+============
+
+0.0.1 (04/26/2022)
+------------------
+- First Release
+
+
+0.0.2 (04/27/2022)
+------------------
+- Added Docstrings to the created functions
+- Added GRAVITY as a constant
+- Added functions for rotational and translational kinematics
+- Added functions to calculating moments of inertia
+- Added functions to convert non-SI Units to SI (for displacement and velocity)
+- Added conversion from rotational to translational units (annd vise-versa)
+- Added basic functions for mechanical energies 
+
+0.0.3 (04/27/2022)
+------------------
+- Added parameter and return values in the Docstrings
+- Added clearer parameter guidelines for "moment"
+- clearer TypeError system
+
+0.0.4 (04/27/2022)
+------------------
+- Fixed error with vmag
+- Added additional vector functions (dotprod, anglebetween)
+- Added functions to convert rad to degrees (and vise-versa)
+- Rearranged the general layout of the code
+- Added cross product
