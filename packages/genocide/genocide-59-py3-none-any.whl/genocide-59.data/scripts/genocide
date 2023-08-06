@@ -1,0 +1,135 @@
+#!python
+# This file is placed in the Public Domain.
+
+
+"irc bot"
+
+
+import os
+import readline
+import sys
+import termios
+import time
+import threading
+import traceback
+
+
+from gcd.evt import Command
+from gcd.hdl import Bus, Callbacks, Commands, Handler, dispatch
+from gcd.obj import Object, get, keys, update
+from gcd.obj import Class, Config, Db, find, fntime, last, save
+from gcd.obj import edit, format, register
+from gcd.rss import Fetcher
+from gcd.thr import getname
+from gcd.irc import IRC
+
+
+Config.name = "genocide"
+Config.workdir = os.path.expanduser("~/.genocide")
+
+
+
+
+starttime = time.time()
+
+
+class CLI(Handler):
+
+    def cmd(self, txt):
+        Bus.add(self)
+        e = Command()
+        e.orig = repr(self)
+        e.txt = txt
+        e.cmd = txt.split()[0]
+        self.handle(e)
+        e.wait()
+
+    def raw(self, txt):
+        cprint(txt)
+
+
+class Console(CLI):
+
+    def announce(self, txt):
+        pass
+
+    def handle(self, e):
+        CLI.handle(self, e)
+        e.wait()
+
+    def poll(self):
+        e = Command()
+        e.txt = input("> ")
+        e.orig = repr(self)
+        e.cmd = e.txt.split()[0]
+        if e.cmd:
+            e.args = e.txt.split()[1:]
+        return e
+
+
+def cprint(*args):
+    print(*args)
+    sys.stdout.flush()
+
+
+def daemon():
+    pid = os.fork()
+    if pid != 0:
+        os._exit(0)
+    os.setsid()
+    os.umask(0)
+    si = open("/dev/null", 'r')
+    so = open("/dev/null", 'a+')
+    se = open("/dev/null", 'a+')
+    os.dup2(si.fileno(), sys.stdin.fileno())
+    os.dup2(so.fileno(), sys.stdout.fileno())
+    os.dup2(se.fileno(), sys.stderr.fileno())
+
+
+def from_exception(ex, txt="", sep=" "):
+    result = []
+    for fr in traceback.extract_tb(ex.__traceback__):
+        fnc = str(fr).split()[-1][:-1]
+        nme = os.sep.join(fr.filename.split(os.sep)[-2:])
+        result.append("%s %s.%s" % (nme, fnc, fr.lineno))
+    return "%s -> %s -> %s" % (getname(ex), " -> ".join(result), ex)
+
+
+def wait():
+    while 1:
+        time.sleep(1.0)
+
+
+def wrap(func):
+    fd = sys.stdin.fileno()
+    old = termios.tcgetattr(fd)
+    try:
+        func()
+    except (EOFError, KeyboardInterrupt):
+        cprint("")
+    finally:
+        termios.tcsetattr(fd, termios.TCSADRAIN, old)
+
+
+
+def main():
+    Callbacks.add("command", dispatch)
+    import gcd.cmds
+    from genocide.mdl import init
+    if len(sys.argv) > 1:
+        c = CLI()
+        return c.cmd(" ".join(sys.argv[1:]))
+    if "-d" in sys.argv:
+        daemon()
+    elif "-c" not in sys.argv:
+        i = IRC()
+        i.start()
+        f = Fetcher()
+        f.start()
+    c = Console()
+    c.start()
+    init()
+    wait()
+
+
+wrap(main)
