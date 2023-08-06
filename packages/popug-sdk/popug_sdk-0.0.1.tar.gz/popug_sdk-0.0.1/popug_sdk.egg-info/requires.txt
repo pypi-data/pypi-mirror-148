@@ -1,0 +1,9 @@
+alembic
+fastapi
+ipython
+pydantic
+typer
+SQLAlchemy
+uvicorn
+psycopg2
+pika
