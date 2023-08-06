@@ -1,0 +1,7 @@
+setup.cfg
+setup.py
+dsv-docx/__init__.py
+dsv_docx.egg-info/PKG-INFO
+dsv_docx.egg-info/SOURCES.txt
+dsv_docx.egg-info/dependency_links.txt
+dsv_docx.egg-info/top_level.txt
