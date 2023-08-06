@@ -1,0 +1,11 @@
+textualog/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+textualog/__main__.py,sha256=tqGm8zn5CQZ06tf9YbjixSeBDmBVgwZVT5ceHRJuEOM,4054
+textualog/__version__.py,sha256=xDOzZxk-EjvfcfZm-jhinEkSEKY3hc965ApsiQ3mCDc,118
+textualog/emojis.py,sha256=UkNAlaG2rXZlu4_C-qRAYsgFcNhG3ug-0rurxH92GFA,147
+textualog/styles.py,sha256=O0EwwO7528hh9nqypPlZ1CZ-CvfCycopztVcZBWLrJE,161
+textualog/unicodes.py,sha256=GI9rigG7r33YeqhtJXiTPlf12ABE8cv4e_sbMqpj5IE,188
+textualog-0.0.3.dist-info/METADATA,sha256=IGQQVYUn2eGyUr5YouGyKlER5EB53fQ9EmP4fZ5Dt4c,1035
+textualog-0.0.3.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+textualog-0.0.3.dist-info/entry_points.txt,sha256=1EtgI8JwwWHfR8E_8NmSpn2q25KClY9cfgBYX2WaJWQ,54
+textualog-0.0.3.dist-info/top_level.txt,sha256=JJ6MG5QwBuQstokmxKlHT4YpBG2aP2CCuAw2rQ_978U,10
+textualog-0.0.3.dist-info/RECORD,,
