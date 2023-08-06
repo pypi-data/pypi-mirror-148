@@ -1,0 +1,2 @@
+[console_scripts]
+rss_reader = source.rss_version_11:main
