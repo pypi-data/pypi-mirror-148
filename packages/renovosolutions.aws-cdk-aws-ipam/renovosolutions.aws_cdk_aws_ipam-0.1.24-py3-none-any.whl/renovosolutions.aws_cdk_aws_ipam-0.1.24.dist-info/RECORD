@@ -1,0 +1,9 @@
+ipam/__init__.py,sha256=0A8uDaghVmTR0VSVcxJ2GtJfaN4_UD9VXmUcpC5S_Wo,39729
+ipam/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+ipam/_jsii/__init__.py,sha256=at2BpKjQxDD4d3FqKfHQD4zKpMwk-FVFvS4RfNjgWW8,405
+ipam/_jsii/cdk-library-aws-ipam@0.1.24.jsii.tgz,sha256=tHFfjh6e0kpl2ehKimZD7md3WOGA2aJStZw3ozaJGHQ,31042
+renovosolutions.aws_cdk_aws_ipam-0.1.24.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+renovosolutions.aws_cdk_aws_ipam-0.1.24.dist-info/METADATA,sha256=894GltDU-ltgOovnLpkrZ0yqKnTAJpUAuXPqjgj1bAI,1225
+renovosolutions.aws_cdk_aws_ipam-0.1.24.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+renovosolutions.aws_cdk_aws_ipam-0.1.24.dist-info/top_level.txt,sha256=hLAiFWm09E88OULzygfneQeUB4c6I6MEZY5iAl9FxQ0,5
+renovosolutions.aws_cdk_aws_ipam-0.1.24.dist-info/RECORD,,
