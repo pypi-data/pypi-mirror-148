@@ -1,0 +1,8 @@
+tqdm
+requests
+argcomplete
+numpy
+pillow
+
+[ml]
+torch
