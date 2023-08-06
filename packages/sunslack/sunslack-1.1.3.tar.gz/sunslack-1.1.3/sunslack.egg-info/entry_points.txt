@@ -1,0 +1,2 @@
+[console_scripts]
+sunslack = sunslack:main
