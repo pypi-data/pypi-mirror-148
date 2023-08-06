@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: CreatePro
+Version: 1.0.6
+Summary: A build tool
+Home-page: https://github.com/CleverCreater/BuildTools
+Author: CleverCreator
+Author-email: clevercreator@icloud.com
+License: MIT
+Platform: Linux
+Platform: MacOS
+Requires-Python: >=3.9
+
+Seeing https://github.com/CleverCreater/BuildTools
+
+
