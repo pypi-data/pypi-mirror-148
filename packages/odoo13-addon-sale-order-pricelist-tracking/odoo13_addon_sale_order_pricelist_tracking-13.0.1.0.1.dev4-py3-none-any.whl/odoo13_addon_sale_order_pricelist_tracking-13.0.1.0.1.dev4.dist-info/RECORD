@@ -1,0 +1,14 @@
+odoo/addons/sale_order_pricelist_tracking/README.rst,sha256=V7a9yhruVodXhX_gqgqJfRCVqvwZdA8SliuKh0AKXfc,2797
+odoo/addons/sale_order_pricelist_tracking/__init__.py,sha256=X9EJGOE2GtZbS0G82PtSXmWSZ_R8jEM0rlJTDliQjp4,21
+odoo/addons/sale_order_pricelist_tracking/__manifest__.py,sha256=oPWA1ZyO_A0Dv-fMk1HNafKdBYmRI2lhD6crKJONGB4,439
+odoo/addons/sale_order_pricelist_tracking/i18n/sale_order_pricelist_tracking.pot,sha256=LEydqU_T70siGw4AlqjdBw-WOJGZA8sGSSLX1NY4KEU,913
+odoo/addons/sale_order_pricelist_tracking/models/__init__.py,sha256=LsPoCIAYodIFzh85VEjY5GiuzDQDQpiF38txDw10qT0,25
+odoo/addons/sale_order_pricelist_tracking/models/sale_order.py,sha256=BlYVSTECMsRe272XV1Ln6m-N_N4WgwBideqmKHY45qg,254
+odoo/addons/sale_order_pricelist_tracking/readme/CONTRIBUTORS.rst,sha256=Jlkf7wToSTYRhhKv2cgpZqeC40FmS7P8X4IdzmrW5wI,62
+odoo/addons/sale_order_pricelist_tracking/readme/DESCRIPTION.rst,sha256=j_cfKvxKbftopRGwWK4mrxSVt28vYM8f2s9ch8KM86g,88
+odoo/addons/sale_order_pricelist_tracking/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/sale_order_pricelist_tracking/static/description/index.html,sha256=hF-TEd3dr9S0dgageDu_cGe_40JQ46Uj1B9dhDwbyf4,11874
+odoo13_addon_sale_order_pricelist_tracking-13.0.1.0.1.dev4.dist-info/METADATA,sha256=WryQhe8qmy53T3ukF4hQE4IedEyAswTcsMUmYvETgCs,3364
+odoo13_addon_sale_order_pricelist_tracking-13.0.1.0.1.dev4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+odoo13_addon_sale_order_pricelist_tracking-13.0.1.0.1.dev4.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo13_addon_sale_order_pricelist_tracking-13.0.1.0.1.dev4.dist-info/RECORD,,
