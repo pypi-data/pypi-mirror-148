@@ -1,0 +1,17 @@
+faker
+scikit-learn
+opencv_python
+texttable
+setuptools
+numpy
+pandas
+validators
+pycryptodome
+requests
+pyyaml
+rfc3339
+pytesseract
+PyPDF2
+poppler-utils
+pdf2image
+transformers
