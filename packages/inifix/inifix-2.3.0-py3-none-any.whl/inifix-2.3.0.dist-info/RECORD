@@ -1,0 +1,14 @@
+inifix/__init__.py,sha256=iv9SsgYG8kjTaM2rhe919YBiObCbk4nartF7DPJfC-k,157
+inifix/_typing.py,sha256=jIlTLGMKTOPw_Grk-rLXft2jXVzls6j_uIbTLr8BgW4,650
+inifix/enotation.py,sha256=IbRSKrgifmMQM1Yv5TtqNUCjO_wWPuVL2-8HG7r9CY0,4543
+inifix/format.py,sha256=EvsRuVYyyeyeGu2Xuynl6ybhy7GO_wtKp2dKzBENw4s,5910
+inifix/io.py,sha256=wg1NgEbZNBK5RBT_WHUiiSBBEWdIJSZ9uIlGJgdueME,9288
+inifix/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+inifix/validate.py,sha256=txxPiVb6Aqs9cwKkJgJysLATPO12l_IsUDHcOuoimRI,783
+inifix/validation.py,sha256=HVWmXlk1uflYwrXdOkw4cGlsjSRn4H_GMCkgebM7WI0,2005
+inifix-2.3.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+inifix-2.3.0.dist-info/METADATA,sha256=UE2QMVdKVaGrooycXrXfVzppmBs5Bwp3k0IW7OcH2Oc,7117
+inifix-2.3.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+inifix-2.3.0.dist-info/entry_points.txt,sha256=hqEbyvNGoEjGoU8BXbqAu4VqOujCrbYpqrjs6oV_9tU,93
+inifix-2.3.0.dist-info/top_level.txt,sha256=oMA9oWd1OReAs0Hu-4wdf2VF7cPPBdxY8gaBAGlA-xk,7
+inifix-2.3.0.dist-info/RECORD,,
