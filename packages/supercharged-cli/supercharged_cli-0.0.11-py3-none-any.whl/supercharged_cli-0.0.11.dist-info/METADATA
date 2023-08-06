@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: supercharged-cli
+Version: 0.0.11
+Summary: CLI to setup a website connected to the Supercharged Network
+Home-page: https://github.com/ShenpaEngineering/Supercharged
+Author: Shariq Torres
+Author-email: shariq.torres@gmail.com
+License: GNU General
+Platform: UNKNOWN
+Requires-Python: >3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: attrs (==21.4.0)
+Requires-Dist: bcrypt (==3.2.0)
+Requires-Dist: certifi (==2021.10.8)
+Requires-Dist: cffi (==1.15.0)
+Requires-Dist: charset-normalizer (==2.0.12)
+Requires-Dist: click (==8.0.4)
+Requires-Dist: cryptography (==36.0.2)
+Requires-Dist: distro (==1.7.0)
+Requires-Dist: docker (==5.0.3)
+Requires-Dist: docker-compose (==1.29.2)
+Requires-Dist: dockerpty (==0.4.1)
+Requires-Dist: docopt (==0.6.2)
+Requires-Dist: idna (==3.3)
+Requires-Dist: iniconfig (==1.1.1)
+Requires-Dist: Jinja2 (==3.0.3)
+Requires-Dist: jsonschema (==3.2.0)
+Requires-Dist: MarkupSafe (==2.1.1)
+Requires-Dist: packaging (==21.3)
+Requires-Dist: paramiko (==2.10.2)
+Requires-Dist: peewee (==3.14.10)
+Requires-Dist: pluggy (==1.0.0)
+Requires-Dist: py (==1.11.0)
+Requires-Dist: pycparser (==2.21)
+Requires-Dist: PyNaCl (==1.5.0)
+Requires-Dist: pyparsing (==3.0.7)
+Requires-Dist: pyrsistent (==0.18.1)
+Requires-Dist: pytest (==7.1.0)
+Requires-Dist: python-dotenv (==0.19.2)
+Requires-Dist: PyYAML (==5.4.1)
+Requires-Dist: requests (==2.27.1)
+Requires-Dist: six (==1.16.0)
+Requires-Dist: texttable (==1.6.4)
+Requires-Dist: tomli (==2.0.1)
+Requires-Dist: urllib3 (==1.26.9)
+Requires-Dist: websocket-client (==0.59.0)
+
+# Supercharged
+
+This is the CLI tool to create a Supercharged website on your server. 
+
+This is a Proof-Of-Concept for a new way for people to reclaim their space on the internet. 
+

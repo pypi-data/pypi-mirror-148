@@ -1,0 +1,2 @@
+[console_scripts]
+supercharged = supercharged.lib.__main__:cli
