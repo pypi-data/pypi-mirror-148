@@ -1,0 +1,17 @@
+HISTORY.rst
+MANIFEST.in
+README.rst
+requirements.txt
+setup.cfg
+setup.py
+versioneer.py
+mockend/__init__.py
+mockend/__main__.py
+mockend/_version.py
+mockend.egg-info/PKG-INFO
+mockend.egg-info/SOURCES.txt
+mockend.egg-info/dependency_links.txt
+mockend.egg-info/entry_points.txt
+mockend.egg-info/not-zip-safe
+mockend.egg-info/requires.txt
+mockend.egg-info/top_level.txt
