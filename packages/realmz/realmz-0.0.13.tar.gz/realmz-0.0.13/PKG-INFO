@@ -1,0 +1,19 @@
+Metadata-Version: 1.2
+Name: realmz
+Version: 0.0.13
+Summary: To send birthday wishes to employees
+Home-page: https://github.com/Billykat7/wishes
+Author: Billy Katalayi
+Author-email: billysbn7@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/Billykat7/wishes/issues
+Description: 
+            A service component that will send birthday wishes to employees. The service extracts a list of employees whose birthdays occur today using the Realm Digital Employee API
+        and create a generic message E.g. “Happy Birthday {name 1}, {name 2}” and send the message to an email address configured for the component. https://interview-assessment-1.realmdigital.co.za/
+            
+Keywords: employees birthday,anniversary automated wishes
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
