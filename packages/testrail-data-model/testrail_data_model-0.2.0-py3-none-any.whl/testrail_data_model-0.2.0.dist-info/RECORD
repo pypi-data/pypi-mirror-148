@@ -1,0 +1,12 @@
+testrail_data_model/__init__.py,sha256=6gBqHCX6lkLcCUSjEefAc_2_ttbhYBKWEqQbcg0SWEk,687
+testrail_data_model/adapter.py,sha256=1J4It35zGPOE1My-hQrsRSCeHcOmrINrsGdwqPhRawI,15063
+testrail_data_model/builder.py,sha256=3W3G1_-IJdprcLYpyjnza8bQhK8aQZSGYXxoLrYDGvg,2541
+testrail_data_model/deletion.py,sha256=ktY-6td2VQaBQPdsvxMXY1Pn_79RMyZO1SSsmonnXFI,12789
+testrail_data_model/model.py,sha256=qoglSpBIJ-wssJJ1Cwg6qW0ckkaN8i5wO_9tqq-drcM,16482
+testrail_data_model/singleton.py,sha256=bO6-WFI6VmGVSJpT6DTD3ZCPPUmi-ZxSu3Iq8rLO6Zc,917
+testrail_data_model/stats.py,sha256=eUrKIzgOQZTD5g_HeNTFotQN---LNBSMoTR8ymbRL3Y,2338
+testrail_data_model-0.2.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+testrail_data_model-0.2.0.dist-info/METADATA,sha256=WV-epcgM-e91CbtNodTHMWRWMJYNKe7SLwNXBk5AmTg,4632
+testrail_data_model-0.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+testrail_data_model-0.2.0.dist-info/top_level.txt,sha256=Z2oz-9NbGziZK7SiuGVdljsdXJ7OmhDHQ9T5tKzOKP8,20
+testrail_data_model-0.2.0.dist-info/RECORD,,
