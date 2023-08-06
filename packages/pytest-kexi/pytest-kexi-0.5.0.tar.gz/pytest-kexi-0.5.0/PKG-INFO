@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: pytest-kexi
+Version: 0.5.0
+Summary: 
+Author: Kei Nakayama
+Author-email: kei.of.nakayama@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: logzero (>=1.7.0,<2.0.0)
+Requires-Dist: setuptools (>=62.1.0,<63.0.0)
