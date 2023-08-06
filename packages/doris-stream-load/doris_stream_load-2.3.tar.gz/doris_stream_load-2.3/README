@@ -1,0 +1,44 @@
+## 简介
+Stream load 是一个同步的导入方式,用户通过发送 HTTP 协议发送请求将本地文件或数据流导入到 Doris 中。Stream load 同步执行导入并返回导入结果。用户可直接通过请求的返回体判断本次导入是否成功。
+Stream load 主要适用于导入本地文件,或通过程序导入数据流中的数据。
+
+## Install
+```
+pip install doris_stream_load
+```
+
+## Usage
+```
+from doris_stream_load1 import stream_load
+dsl = stream_load(doris_host, doris_user, doris_password, doris_http_port, database, table_name, column_separator)
+row_list=[] # 数据源每行数据的列表,列表元素必须是由column_separator拼接的字段字符串,建议row_list长度为10000~100000
+dsl.sendData(row_list)
+```
+
+## __init__
+```
+def __init__(self, doris_host,doris_http_port,doris_user,doris_password,,database,table_name,column_separator):
+    """
+    stream_load类初始化
+    :param doris_host: doris的Be节点IP地址
+    :param doris_http_port: doris_host对应的http端口号
+    :param doris_user: doris账户
+    :param doris_password: doris账户对应的密码
+    :param database: 要导入的数据库
+    :param table_name: 要导入的表
+    :param column_separator: 字段分隔符
+```
+
+## sendData
+```
+def sendData(self,row_list):
+    """
+    stream_load导入数据
+    :param row_list: 数据源每行数据的列表,列表元素必须是由column_separator拼接的字段字符串,建议row_list长度为10000~100000
+    :return: str,stream load返回的json格式结果
+```
+
+
+
+
+
