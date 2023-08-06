@@ -1,0 +1,10 @@
+README.md
+setup.py
+forte.vader.egg-info/PKG-INFO
+forte.vader.egg-info/SOURCES.txt
+forte.vader.egg-info/dependency_links.txt
+forte.vader.egg-info/namespace_packages.txt
+forte.vader.egg-info/requires.txt
+forte.vader.egg-info/top_level.txt
+fortex/vader/__init__.py
+fortex/vader/sentiment_analysis.py
