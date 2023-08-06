@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+tests/__init__.py
+tests/test_tinyspace.py
+tinyspace/__init__.py
+tinyspace/tinyspace.py
+tinyspace/version.py
+tinyspace.egg-info/PKG-INFO
+tinyspace.egg-info/SOURCES.txt
+tinyspace.egg-info/dependency_links.txt
+tinyspace.egg-info/not-zip-safe
+tinyspace.egg-info/requires.txt
+tinyspace.egg-info/top_level.txt
