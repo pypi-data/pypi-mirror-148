@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+mfyhttpreport.egg-info/PKG-INFO
+mfyhttpreport.egg-info/SOURCES.txt
+mfyhttpreport.egg-info/dependency_links.txt
+mfyhttpreport.egg-info/requires.txt
+mfyhttpreport.egg-info/top_level.txt
