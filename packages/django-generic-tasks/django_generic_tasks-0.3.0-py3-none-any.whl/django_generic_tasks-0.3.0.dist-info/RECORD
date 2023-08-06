@@ -1,0 +1,10 @@
+django_generic_tasks/__init__.py,sha256=lR2zMdMw-T-2k6SzpX3B8AkfqjRDW3P7FSLfL66Vx60,41
+django_generic_tasks/api.py,sha256=VHyTtYCWgJior4Y6MTLIJ33ZSx_cV-VCFl4MrM-kHec,44
+django_generic_tasks/apps.py,sha256=FHDrk0ixhdwGp6rrNPkCQ_Wf_0B1PzD99PsYK_HXbHY,157
+django_generic_tasks/backends.py,sha256=TbcDTV0InujGwV2KOkYMbMPEY64SrxIC9_2NWWeS5FM,1295
+django_generic_tasks/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_generic_tasks/security.py,sha256=B3r2o4W-JSdIu-CycvmYsLDjhgGsw3yD7dnCjyzOozk,459
+django_generic_tasks/task.py,sha256=peqC-mcAMbKRPRgmqUJUCiBUlx4nl5j0i0gfWZ8gL7g,1426
+django_generic_tasks-0.3.0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+django_generic_tasks-0.3.0.dist-info/METADATA,sha256=hE8QgkCtqinEseBCc1HPdBh-mx_900CK-7Az1de29G4,612
+django_generic_tasks-0.3.0.dist-info/RECORD,,
