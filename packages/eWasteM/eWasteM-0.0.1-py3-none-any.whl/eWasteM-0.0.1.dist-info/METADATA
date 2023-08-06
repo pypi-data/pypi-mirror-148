@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: eWasteM
+Version: 0.0.1
+Summary: Package for our E-Waste Management application
+Home-page: UNKNOWN
+Author: Dominic Percy
+Author-email: <dom2code@gmail.com>
+License: UNKNOWN
+Keywords: E-Waste
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+
+UNKNOWN
+
