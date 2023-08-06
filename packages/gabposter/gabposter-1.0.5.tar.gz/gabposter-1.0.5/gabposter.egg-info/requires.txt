@@ -1,0 +1,6 @@
+auto-selenium
+pyjpgclipboard
+download
+
+[test]
+pytest
