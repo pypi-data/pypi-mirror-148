@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: pypetwalk
+Version: 0.0.1
+Summary: Python library to communicate with the petWALK.control module
+Home-page: https://github.com/p0l0/pypetwalk
+Author: Marco Neumann
+Author-email: pypetwalk@binware.dev
+License: MIT License
+Download-URL: https://github.com/p0l0/pypetwalk/tarball/0.0.1
+Keywords: petwalk,petwalk.control,home,automation
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Home Automation
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pypetwalk
+
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pypetwalk?logo=python)
+[![codecov](https://codecov.io/gh/p0l0/pypetwalk/branch/main/graph/badge.svg?token=V5C2O6SK2O)](https://codecov.io/gh/p0l0/pypetwalk)
+[![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
+[![Pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=f8b424)](https://github.com/pre-commit/pre-commit)
+![Build Pipeline](https://github.com/p0l0/pypetwalk/actions/workflows/ci.yml/badge.svg?branch=main)
+
+`pypetwalk` is a Python 3 (>= 3.9) library to communicate with the petWALK.control module.
+
+It is intended to be used in a custom_component for [Home Assistant](https://www.home-assistant.io/).
+
