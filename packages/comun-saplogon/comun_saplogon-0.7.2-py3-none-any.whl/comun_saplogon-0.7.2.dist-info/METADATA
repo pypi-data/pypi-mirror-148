@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: comun-saplogon
+Version: 0.7.2
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pywin32
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: pyautogui
+
+UNKNOWN
+
