@@ -1,0 +1,8 @@
+README.md
+setup.py
+gsttaxlib/__init__.py
+gsttaxlib/gstcommonfunctions.py
+gsttaxlib.egg-info/PKG-INFO
+gsttaxlib.egg-info/SOURCES.txt
+gsttaxlib.egg-info/dependency_links.txt
+gsttaxlib.egg-info/top_level.txt
