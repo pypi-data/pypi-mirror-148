@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: netsm
+Version: 0.1.3
+Summary: Cross-platform lib for network speed monitoring in Python
+Home-page: https://github.com/XavierJiezou/NetSM
+License: MIT
+Keywords: network speed,monitor
+Author: XavierJiezou
+Author-email: 878972272@qq.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: System :: Networking :: Monitoring
+Requires-Dist: fire (>=0.4.0,<0.5.0)
+Requires-Dist: psutil (>=5.9.0,<6.0.0)
+Requires-Dist: rich (>=12.3.0,<13.0.0)
+Project-URL: Documentation, https://github.com/XavierJiezou/NetSM
+Project-URL: Repository, https://github.com/XavierJiezou/NetSM
+Description-Content-Type: text/markdown
+
+# NetSM
+
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/XavierJiezou/NetSM/Release)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/netsm)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/netsm)
+![PyPI](https://img.shields.io/pypi/v/netsm)
+[![GitHub stars](https://img.shields.io/github/stars/XavierJiezou/NetSM)](https://github.com/XavierJiezou/NetSM/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/XavierJiezou/NetSM)](https://github.com/XavierJiezou/NetSM/network)
+[![GitHub issues](https://img.shields.io/github/issues/XavierJiezou/NetSM)](https://github.com/XavierJiezou/NetSM/issues)
+[![GitHub license](https://img.shields.io/github/license/XavierJiezou/NetSM)](https://github.com/XavierJiezou/NetSM/blob/main/LICENSE)
+
+Cross-platform lib for network speed monitoring in Python.
+
+## Install
+
+```bash
+pip install netsm
+```
+
+## Usage
+
+`$ netsm show`
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md)
+
+## License
+
+[MIT License](License)
+
+## References
+
+- [gpustat](https://github.com/wookayin/gpustat)
+- [Python Packaging User Guide](https://packaging.python.org/en/latest/tutorials/packaging-projects/)
+- [psutil documentation](https://psutil.readthedocs.io/en/latest/#network)
+

@@ -1,0 +1,3 @@
+[console_scripts]
+netsm=netsm.cli:main
+
