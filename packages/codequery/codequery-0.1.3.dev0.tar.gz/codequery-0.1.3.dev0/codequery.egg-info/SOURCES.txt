@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+codequery/code-outline
+codequery/code-profile
+codequery.egg-info/PKG-INFO
+codequery.egg-info/SOURCES.txt
+codequery.egg-info/dependency_links.txt
+codequery.egg-info/top_level.txt
