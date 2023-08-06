@@ -1,0 +1,12 @@
+beepy
+gpib-ctypes
+importlib-resources
+numpy
+pandas
+pyserial
+pyusb
+pyvisa
+pyvisa-py
+seaborn
+tk
+wget

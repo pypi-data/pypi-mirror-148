@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: calibrate-receiver
+Version: 0.8.0
+Summary: A graphic tool used to calibrate a multifeed receiver
+Home-page: https://github.com/LorenzoMonti/calibrate-multifeed-receiver
+Author: Lorenzo Monti
+Author-email: lorenzo.monti@inaf.it
+License: MIT
+Description: # Calibrate-multifeed-receiver
+        
+        
+        ## Download
+        
+        This project is written in Python3 (3.8), so make sure you have it installed in your machine.
+        After that you can download the repository, open terminal and type:
+        
+        ```bash
+        git clone https://github.com/LorenzoMonti/calibrate-multifeed-receiver.git
+        ```
+        
+        ## Project's dependecies
+        
+        ```bash
+        sudo apt-get install python3-tk
+        
+        cd calibrate-multifeed-receiver/
+        python3 setup.py install
+        ```
+        
+        ## Install
+        ```bash
+        python3 setup.py install
+        ```
+        
+        ## Usage
+        
+        Now you can run the project:
+        
+        ```bash
+        calibrate_multifeed_receiver
+        ```
+        
+        ## License
+        
+        [MIT](https://choosealicense.com/licenses/mit/)
+Platform: all
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown

@@ -1,0 +1,3 @@
+[console_scripts]
+calibrate_receiver = src.gui:vp_start_gui
+
