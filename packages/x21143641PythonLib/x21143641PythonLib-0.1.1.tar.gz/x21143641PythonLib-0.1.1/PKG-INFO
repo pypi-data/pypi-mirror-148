@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: x21143641PythonLib
+Version: 0.1.1
+Summary: Library to calculate the total amount
+Home-page: https://github.com/praveergupta1/x21143641PythonLib
+Author: x21143641
+Author-email: x21143641@student.ncirl.ie
+License: MIT
+Download-URL: https://github.com/praveergupta1/x21143641PythonLib/archive/refs/tags/v_01.1.tar.gz
+Description: UNKNOWN
+Keywords: AMOUNT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
