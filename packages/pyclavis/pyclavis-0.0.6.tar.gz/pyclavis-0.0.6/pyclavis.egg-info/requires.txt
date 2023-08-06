@@ -1,0 +1,6 @@
+pygitgrab
+pyjsoncfg
+pyautogui
+pyperclip
+cryptography
+semver
