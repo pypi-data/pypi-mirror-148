@@ -1,0 +1,8 @@
+pytest_kexi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_kexi/helper.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_kexi/plugin.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_kexi-0.0.20220429153809.dist-info/METADATA,sha256=LkBTpZ87sXSGd34uzZfekO_KSQwKq7ZnM57GbnajaqM,185
+pytest_kexi-0.0.20220429153809.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pytest_kexi-0.0.20220429153809.dist-info/entry_points.txt,sha256=askSvEJii3ZKQ4Fn2PNwAjNFt3_r24JMpDNOYjhx7_4,52
+pytest_kexi-0.0.20220429153809.dist-info/top_level.txt,sha256=_Mbz7Xi_3m-2b7GC8TKsj59zaPlFu6z03rJe8KZ8Zu4,12
+pytest_kexi-0.0.20220429153809.dist-info/RECORD,,
