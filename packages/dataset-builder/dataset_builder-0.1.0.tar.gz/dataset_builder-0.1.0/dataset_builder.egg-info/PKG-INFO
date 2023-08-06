@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: dataset-builder
+Version: 0.1.0
+Summary: Dataset builder for CAMELS-DE dataset
+Author: Mirko Mälicke
+Author-email: mirko@hydrocode.de
+License: GNU General Public License v3.0
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# harvest
+Data harvester around wetterdienst
+
+
+## docker
+
+run docker container with correct mount-points
+
+```bash
+docker run -it --rm -v /src/EZG:<local EZG folder> -v /src/input_data:<local input folder> -v /src/output_data:<local output target> harvest
+```
+
