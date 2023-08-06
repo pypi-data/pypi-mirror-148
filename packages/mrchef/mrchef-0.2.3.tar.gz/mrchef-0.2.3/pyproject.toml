@@ -1,0 +1,60 @@
+[tool.poetry]
+name = "mrchef"
+version = "0.2.3"
+description = "Metarepo Chef"
+authors = ["Moduon <info@moduon.team>"]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+repository = "https://gitlab.com/moduon/mrchef"
+
+[tool.poetry.scripts]
+# HACK https://github.com/nix-community/poetry2nix/issues/504
+mrchef = "mrchef.__main__:run"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+coloredlogs = ">=15.0.1"
+decorator = ">=5.1.1"
+git-autoshare = ">=1.0.0-beta.6"
+mergedeep = ">=1.3.4"
+plumbum = ">=1.7.2"
+requests = ">=2.27.1"
+tomlkit = ">=0.10.0"
+xdg = ">=5.1.1"
+
+# Indirect dependencies
+platformdirs = "<2.5.2" # HACK https://github.com/nix-community/poetry2nix/pull/600
+
+[tool.poetry.dev-dependencies]
+autoflake = ">=1.4"
+black = ">=22.1.0"
+blacken-docs = ">=1.12.1"
+commitizen = ">=2.21.2"
+flake8 = ">=4.0.1"
+flake8-bugbear = ">=22.1.11"
+isort = ">=5.10.1"
+pre-commit = "^2.17.0"
+pydocstyle = {extras = ["toml"], version = ">=6.1.1"}
+pytest = ">=7.0.1"
+pytest-xdist = "^2.5.0"
+pyupgrade = ">=2.31.0"
+
+[tool.commitizen]
+annotated_tag = true
+changelog_incremental = true
+tag_format = "v$version"
+update_changelog_on_bump = true
+version = "0.2.3"
+version_files = ["mrchef/__init__.py", "pyproject.toml"]
+
+[tool.pydocstyle]
+convention = "google"
+ignore_decorators = "handle_error"
+
+[tool.pytest.ini_options]
+addopts = "-n auto -ra"
+testpaths = ["tests"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
