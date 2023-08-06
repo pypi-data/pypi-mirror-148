@@ -1,0 +1,30 @@
+Metadata-Version: 2.0
+Name: triware
+Version: 1.0.2
+Summary: A script that collects data from sensors and send them to azure blob storage
+Home-page: https://github.com/triware/smart-space-management
+Author: Yosri Jendoubi
+Author-email: yosri.jendoubi@esprit.tn
+License: MIT
+Keywords: IOT raspberry cloud azure
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: RPi.GPIO (==0.7.1)
+Requires-Dist: adafruit-dht (==1.4.0)
+Requires-Dist: azure-iot-device (==2.10.0)
+Requires-Dist: paho-mqtt (==1.6.1)
+
+UNKNOWN
+
+
