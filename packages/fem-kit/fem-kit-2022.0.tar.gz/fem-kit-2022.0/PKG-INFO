@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: fem-kit
+Version: 2022.0
+Summary: Geoemtry modification and modeling tools to create and publish an industry strength numerical solver into an optimization chain, which can handle real-time data. 
+Home-page: https://github.com/tamasorosz/fem-kit
+License: Apache-2.0
+Keywords: scientific,engineering,fem,transformers,optimization,digital twin
+Author: Tamás Orosz
+Author-email: orosz.tamas@yahoo.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: typer
+Project-URL: Repository, https://github.com/tamasorosz/fem-kit
+Description-Content-Type: text/markdown
+
+# Sim-Kit / Sim-Paster /FEM - kit 
+
