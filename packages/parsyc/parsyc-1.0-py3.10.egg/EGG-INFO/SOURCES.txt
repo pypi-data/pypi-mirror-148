@@ -1,0 +1,10 @@
+README.md
+setup.py
+parsyc/__init__.py
+parsyc/operators.py
+parsyc/parser.py
+parsyc/utils.py
+parsyc.egg-info/PKG-INFO
+parsyc.egg-info/SOURCES.txt
+parsyc.egg-info/dependency_links.txt
+parsyc.egg-info/top_level.txt
