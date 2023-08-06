@@ -1,0 +1,1 @@
+Suggests an automatic password for the user registeration

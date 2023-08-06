@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+password_suggestions.egg-info/PKG-INFO
+password_suggestions.egg-info/SOURCES.txt
+password_suggestions.egg-info/dependency_links.txt
+password_suggestions.egg-info/top_level.txt
