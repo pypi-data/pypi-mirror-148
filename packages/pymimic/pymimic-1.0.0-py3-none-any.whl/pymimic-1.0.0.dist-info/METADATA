@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: pymimic
+Version: 1.0.0
+Summary: A pure-Python implementation of linear prediction
+Home-page: https://github.com/AmeryGration/pymimic
+Author: Amery Gration
+Author-email: amerygration@hotmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6.9
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib (>=3.3.4)
+Requires-Dist: numpy (>=1.19.5)
+Requires-Dist: scipy (>=1.5.4)
+
+PyMimic
+=======
+
+A pure-Python implementation of linear prediction intended for use in
+curve-fitting, kriging, DACE modelling, and Gaussian-process
+emulation.
+
+Access the documentation at [Read the Docs](https://pymimic.readthedocs.io/en/latest/).
+
