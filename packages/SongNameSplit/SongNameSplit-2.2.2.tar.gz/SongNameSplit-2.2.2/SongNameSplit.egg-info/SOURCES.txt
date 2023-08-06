@@ -1,0 +1,8 @@
+setup.py
+SongNameSplit/__init__.py
+SongNameSplit/mainsplit.py
+SongNameSplit.egg-info/PKG-INFO
+SongNameSplit.egg-info/SOURCES.txt
+SongNameSplit.egg-info/dependency_links.txt
+SongNameSplit.egg-info/requires.txt
+SongNameSplit.egg-info/top_level.txt
