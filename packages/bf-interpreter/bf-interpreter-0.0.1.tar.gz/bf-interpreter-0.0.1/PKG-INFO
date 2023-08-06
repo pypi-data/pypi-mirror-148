@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: bf-interpreter
+Version: 0.0.1
+Summary: 
+Author: Bruno Silva Oliveira
+Author-email: brunooliveira095@protonmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
