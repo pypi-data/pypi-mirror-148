@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+dean.egg-info/PKG-INFO
+dean.egg-info/SOURCES.txt
+dean.egg-info/dependency_links.txt
+dean.egg-info/top_level.txt
+simplestat/__init__.py
+simplestat/content.py
