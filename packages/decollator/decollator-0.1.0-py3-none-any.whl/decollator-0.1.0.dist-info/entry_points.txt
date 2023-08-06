@@ -1,0 +1,3 @@
+[console_scripts]
+prysk=decollator:cli.main
+

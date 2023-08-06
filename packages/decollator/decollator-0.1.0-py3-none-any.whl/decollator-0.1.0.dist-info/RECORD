@@ -1,0 +1,13 @@
+README.rst,sha256=-LrkgKlUYLuaXYqQsDOTbfJB9t1IDeU7nSjqSHwSAtk,820
+docs/.empty,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+examples/.empty,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+noxfile.py,sha256=zbncD_KFs7FnNbmd3Qr_yyzvY-bW2TFty4jhP7bvSYc,3266
+pyproject.toml,sha256=b-ucUGaVt9zAmbra5mQfRrr3ii1wu7QQJdaihdPmlDk,1516
+scripts/.empty,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+decollator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+decollator/__main__.py,sha256=pagbysBmznDvJx8FL0NFDd1R4hOdkH4T-8TgfTLWtUA,114
+decollator/cli.py,sha256=FuhWhLc7KLTTpbDJ6CEphvkBlw8JVj55Rpi-dZPj-rM,67
+decollator-0.1.0.dist-info/entry_points.txt,sha256=ORBSELYfQY9MEd8XjZkwMBGBD5aG27P9o90UNrbBKuU,45
+decollator-0.1.0.dist-info/WHEEL,sha256=N0LZrBtofpkS5mJXgVHTCEy52Sam4D6PHQWC8HnMeTs,83
+decollator-0.1.0.dist-info/METADATA,sha256=i1TR3BgGoIXAORbYvj7ANu9y6HcYzrtuGH06usmTVcM,1678
+decollator-0.1.0.dist-info/RECORD,,
