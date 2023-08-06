@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+fsspy.egg-info/PKG-INFO
+fsspy.egg-info/SOURCES.txt
+fsspy.egg-info/dependency_links.txt
+fsspy.egg-info/entry_points.txt
+fsspy.egg-info/requires.txt
+fsspy.egg-info/top_level.txt
+spy/__init__.py
+spy/spy.py
