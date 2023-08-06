@@ -1,0 +1,18 @@
+# Folders
+__pycache__/
+*.egg-info*
+_build
+build
+dist
+.vscode/
+.vs/
+data/
+# Files
+*.pyc
+*.csv
+*.xlsx
+*.zip
+*.tar
+*.tar.gz
+
+
