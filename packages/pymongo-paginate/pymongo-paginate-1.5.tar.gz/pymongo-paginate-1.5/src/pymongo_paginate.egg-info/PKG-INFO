@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: pymongo-paginate
+Version: 1.5
+Summary: Package to paginate pymongo queries
+Author: Gabriel Martins
+License: UNKNOWN
+Project-URL: Source, https://github.com/gabrielmrts/pymongo-paginate
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Pymongo Paginate
+
+> author: github.com/gabrielmrts/
+
+## Example
+
+```
+
+from pymongo_paginate import PyMongoPaginate
+
+collection = db['your_pymongo_collection']
+query = collection.find()
+
+page = 1 ## Current page
+pageSize = 10 ## Items per page
+
+pagination = PyMongoPaginate(query, page, pageSize)
+paginate = pagination.paginate()
+
+---------------------------------------------------
+Output -> dict {
+            "page": 1,
+            "page_count": 1,
+            "item_count": 10,
+            "items": []
+        }
+        
+
+```
+
+
+

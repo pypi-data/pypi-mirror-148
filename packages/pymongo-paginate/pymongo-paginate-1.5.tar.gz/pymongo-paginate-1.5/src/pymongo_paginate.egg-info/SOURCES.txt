@@ -1,0 +1,7 @@
+README.md
+setup.py
+src/pymongo_paginate.py
+src/pymongo_paginate.egg-info/PKG-INFO
+src/pymongo_paginate.egg-info/SOURCES.txt
+src/pymongo_paginate.egg-info/dependency_links.txt
+src/pymongo_paginate.egg-info/top_level.txt
