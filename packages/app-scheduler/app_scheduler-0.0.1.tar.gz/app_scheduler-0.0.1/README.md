@@ -1,0 +1,54 @@
+# 添加调度
+## 如何使用?
+<p>将config.json文件和excel文件放到和python代码在同一目录上。</p>
+
+### config.json
+
+```json
+{
+    "CN": {
+        "type": "mysql",
+        "host": "xxx",
+        "port": xx,
+        "user": "xx",
+        "password": "xx",
+        "db": "xx"
+    },
+    "US": {
+        "type": "mysql",
+        "host": "xxx",
+        "port": xx,
+        "user": "xxx",
+        "password": "xxx",
+        "db": "xxx"
+    }
+}
+```
+
+### main.py
+
+```python
+from app_scheduler import Scheduler
+
+'''
+  scheduler.set_cron(pub_code=pub_code, hours=2)    # 120分钟调度一次
+  scheduler.set_cron(pub_code=pub_code, days=2)     # 2天调度一次
+  scheduler.set_cron(pub_code=pub_code, minutes=5)  # 5分钟调度一次
+  scheduler.set_encoding("utf-8", "listing")        # 设置listing编码,需放在操作前
+  scheduler.set_encoding("utf-8", "content")        # 设置content编码,需放在操作前
+  scheduler.output_sql()                            # 输出sql语句,需放在操作前
+ '''
+
+if __name__ == '__main__':
+    choose_db = "cn"
+    excel_name = "insertFeeds.xlsx"
+    pub_code = "test"
+    scheduler = Scheduler(choose_db)
+    scheduler.output_sql()
+    scheduler.add_feed_pub(excel_name)
+    scheduler.set_cron(pub_code=pub_code, hours=2)
+
+```
+
+
+

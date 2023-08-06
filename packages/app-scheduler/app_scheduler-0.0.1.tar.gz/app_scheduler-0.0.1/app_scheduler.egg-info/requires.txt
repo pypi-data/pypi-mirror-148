@@ -1,0 +1,2 @@
+py3db>=0.0.18
+openpyxl
