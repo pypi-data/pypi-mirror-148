@@ -1,0 +1,27 @@
+Last login: Thu Aug 26 15:53:27 2021 from 13.57.229.17
+
+
+
+Number of failed attempts since last successful login: 0
+
+
+kirk@PA-VM> set 
+kirk@PA-VM> set cli 
+kirk@PA-VM> set cli scripting-mode 
+kirk@PA-VM> set cli scripting-mode on
+kirk@PA-VM> set cli terminal width 500
+kirk@PA-VM> set cli pager off
+kirk@PA-VM> 
+kirk@PA-VM> 
+
+
+kirk@PA-VM> kirk@PA-VM> kirk@PA-VM> 
+kirk@PA-VM> show admins
+
+  Admin                           From   Client Session-start   Idle-for    Session-expiry 
+---------------------------------------------------------------------------------------------
+  kirk                    13.57.229.17      CLI 08/26 15:53:10  00:00:53s  09/25 15:53:10
+* kirk                    13.57.229.17      CLI 08/26 15:54:03  00:00:00s  09/25 15:54:03
+  kirk                    13.57.229.17      CLI 08/26 15:51:02  00:02:30s  09/25 15:51:02
+
+kirk@PA-VM> 

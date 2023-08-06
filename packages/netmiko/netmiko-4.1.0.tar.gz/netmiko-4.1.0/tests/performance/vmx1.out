@@ -1,0 +1,43 @@
+Last login: Tue Apr 26 17:04:24 2022 from 13.57.229.17
+--- JUNOS 18.4R1.8 Kernel 64-bit  JNPR-11.0-20181207.6c2f68b_2_bu
+pyclass@vmx1> 
+
+pyclass@vmx1> set cli screen-width 511 
+Screen width set to 511
+
+pyclass@vmx1> set cli complete-on-space off 
+set cli screen-length 0
+Disabling complete-on-space
+
+pyclass@vmx1> set cli screen-length 0 
+Screen length set to 0
+
+pyclass@vmx1> 
+
+pyclass@vmx1> 
+
+pyclass@vmx1> configure 
+Entering configuration mode
+The configuration has been changed but not committed
+
+
+[edit]
+pyclass@vmx1# 
+
+rollback 0
+[edit]
+pyclass@vmx1# rollback 0 
+load complete
+
+[edit]
+pyclass@vmx1# 
+
+[edit]
+pyclass@vmx1# exit configuration-mode 
+Exiting configuration mode
+
+pyclass@vmx1> 
+
+pyclass@vmx1> 
+
+pyclass@vmx1> 

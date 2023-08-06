@@ -1,0 +1,414 @@
+WARNING: Package(s) not found: netmiko
+
+Verifying that netmiko is not installed ... [OK]
+Testing version 2.4.2
+Collecting netmiko==2.4.2
+  Using cached netmiko-2.4.2-py2.py3-none-any.whl (144 kB)
+Requirement already satisfied: scp>=0.13.2 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==2.4.2) (0.13.5)
+Requirement already satisfied: pyserial in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==2.4.2) (3.5)
+Requirement already satisfied: textfsm in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==2.4.2) (1.1.2)
+Requirement already satisfied: paramiko>=2.4.3 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==2.4.2) (2.7.2)
+Requirement already satisfied: setuptools>=38.4.0 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==2.4.2) (47.1.0)
+Requirement already satisfied: cryptography>=2.5 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from paramiko>=2.4.3->netmiko==2.4.2) (3.3.1)
+Requirement already satisfied: bcrypt>=3.1.3 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from paramiko>=2.4.3->netmiko==2.4.2) (3.2.0)
+Requirement already satisfied: pynacl>=1.0.1 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from paramiko>=2.4.3->netmiko==2.4.2) (1.4.0)
+Requirement already satisfied: cffi>=1.1 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from bcrypt>=3.1.3->paramiko>=2.4.3->netmiko==2.4.2) (1.14.5)
+Requirement already satisfied: six>=1.4.1 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from bcrypt>=3.1.3->paramiko>=2.4.3->netmiko==2.4.2) (1.16.0)
+Requirement already satisfied: pycparser in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from cffi>=1.1->bcrypt>=3.1.3->paramiko>=2.4.3->netmiko==2.4.2) (2.20)
+Requirement already satisfied: future in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from textfsm->netmiko==2.4.2) (0.18.2)
+Installing collected packages: netmiko
+Successfully installed netmiko-2.4.2
+WARNING: You are using pip version 21.1.3; however, version 21.2.4 is available.
+You should consider upgrading via the '/home/kbyers/netmiko/.venv/bin/python3.8 -m pip install --upgrade pip' command.
+Name: netmiko
+Version: 2.4.2
+Summary: Multi-vendor library to simplify Paramiko SSH connections to network devices
+Home-page: https://github.com/ktbyers/netmiko
+Author: Kirk Byers
+Author-email: ktbyers@twb-tech.com
+License: MIT
+Location: /home/kbyers/netmiko/.venv/lib/python3.8/site-packages
+Requires: scp, textfsm, pyserial, paramiko, setuptools
+Required-by: 
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-5.1.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kbyers/netmiko, inifile: setup.cfg
+plugins: pylama-7.7.1
+collected 1 item
+
+test_netmiko.py 
+
+
+--------------------------------------------------------------------------------
+Device name: hp_procurve
+------------
+<function connect at 0x7f184f7f8b80>: Elapsed time: 0:00:11.258269
+<function send_command_simple at 0x7f184f7f8ca0>: Elapsed time: 0:00:21.831155
+<function send_config_simple at 0x7f184f7f8dc0>: Elapsed time: 0:00:32.216741
+<function send_config_large_acl at 0x7f184f8073a0>: Elapsed time: 0:00:42.488945
+<function cleanup at 0x7f184f8074c0>: Elapsed time: 0:00:00.000006
+--------------------------------------------------------------------------------
+
+
+
+
+.
+
+======================== 1 passed in 107.81s (0:01:47) =========================
+Found existing installation: netmiko 2.4.2
+Uninstalling netmiko-2.4.2:
+  Successfully uninstalled netmiko-2.4.2
+
+Running performance tests ... [OK]
+
+Testing version 3.0.0
+Collecting netmiko==3.0.0
+  Using cached netmiko-3.0.0-py2.py3-none-any.whl (139 kB)
+Requirement already satisfied: scp>=0.13.2 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==3.0.0) (0.13.5)
+Requirement already satisfied: pyserial in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==3.0.0) (3.5)
+Requirement already satisfied: setuptools>=38.4.0 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==3.0.0) (47.1.0)
+Requirement already satisfied: paramiko>=2.4.3 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==3.0.0) (2.7.2)
+Requirement already satisfied: textfsm in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==3.0.0) (1.1.2)
+Requirement already satisfied: cryptography>=2.5 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from paramiko>=2.4.3->netmiko==3.0.0) (3.3.1)
+Requirement already satisfied: pynacl>=1.0.1 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from paramiko>=2.4.3->netmiko==3.0.0) (1.4.0)
+Requirement already satisfied: bcrypt>=3.1.3 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from paramiko>=2.4.3->netmiko==3.0.0) (3.2.0)
+Requirement already satisfied: cffi>=1.1 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from bcrypt>=3.1.3->paramiko>=2.4.3->netmiko==3.0.0) (1.14.5)
+Requirement already satisfied: six>=1.4.1 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from bcrypt>=3.1.3->paramiko>=2.4.3->netmiko==3.0.0) (1.16.0)
+Requirement already satisfied: pycparser in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from cffi>=1.1->bcrypt>=3.1.3->paramiko>=2.4.3->netmiko==3.0.0) (2.20)
+Requirement already satisfied: future in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from textfsm->netmiko==3.0.0) (0.18.2)
+Installing collected packages: netmiko
+Successfully installed netmiko-3.0.0
+WARNING: You are using pip version 21.1.3; however, version 21.2.4 is available.
+You should consider upgrading via the '/home/kbyers/netmiko/.venv/bin/python3.8 -m pip install --upgrade pip' command.
+Name: netmiko
+Version: 3.0.0
+Summary: Multi-vendor library to simplify Paramiko SSH connections to network devices
+Home-page: https://github.com/ktbyers/netmiko
+Author: Kirk Byers
+Author-email: ktbyers@twb-tech.com
+License: MIT
+Location: /home/kbyers/netmiko/.venv/lib/python3.8/site-packages
+Requires: paramiko, setuptools, scp, textfsm, pyserial
+Required-by: 
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-5.1.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kbyers/netmiko, inifile: setup.cfg
+plugins: pylama-7.7.1
+collected 1 item
+
+test_netmiko.py 
+
+
+--------------------------------------------------------------------------------
+Device name: hp_procurve
+------------
+<function connect at 0x7f1e852a9ca0>: Elapsed time: 0:00:17.901763
+<function send_command_simple at 0x7f1e852a9dc0>: Elapsed time: 0:00:22.221532
+<function send_config_simple at 0x7f1e852a9ee0>: Elapsed time: 0:00:30.534230
+<function send_config_large_acl at 0x7f1e852bc4c0>: Elapsed time: 0:00:42.045111
+<function cleanup at 0x7f1e852bc5e0>: Elapsed time: 0:00:00.000005
+--------------------------------------------------------------------------------
+
+
+
+
+.
+
+======================== 1 passed in 112.72s (0:01:52) =========================
+Found existing installation: netmiko 3.0.0
+Uninstalling netmiko-3.0.0:
+  Successfully uninstalled netmiko-3.0.0
+
+Running performance tests ... [OK]
+
+Testing version 3.1.0
+Collecting netmiko==3.1.0
+  Using cached netmiko-3.1.0-py2.py3-none-any.whl (144 kB)
+Requirement already satisfied: textfsm in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==3.1.0) (1.1.2)
+Requirement already satisfied: pyserial in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==3.1.0) (3.5)
+Requirement already satisfied: scp>=0.13.2 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==3.1.0) (0.13.5)
+Requirement already satisfied: setuptools>=38.4.0 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==3.1.0) (47.1.0)
+Requirement already satisfied: paramiko>=2.4.3 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==3.1.0) (2.7.2)
+Requirement already satisfied: bcrypt>=3.1.3 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from paramiko>=2.4.3->netmiko==3.1.0) (3.2.0)
+Requirement already satisfied: pynacl>=1.0.1 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from paramiko>=2.4.3->netmiko==3.1.0) (1.4.0)
+Requirement already satisfied: cryptography>=2.5 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from paramiko>=2.4.3->netmiko==3.1.0) (3.3.1)
+Requirement already satisfied: cffi>=1.1 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from bcrypt>=3.1.3->paramiko>=2.4.3->netmiko==3.1.0) (1.14.5)
+Requirement already satisfied: six>=1.4.1 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from bcrypt>=3.1.3->paramiko>=2.4.3->netmiko==3.1.0) (1.16.0)
+Requirement already satisfied: pycparser in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from cffi>=1.1->bcrypt>=3.1.3->paramiko>=2.4.3->netmiko==3.1.0) (2.20)
+Requirement already satisfied: future in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from textfsm->netmiko==3.1.0) (0.18.2)
+Installing collected packages: netmiko
+Successfully installed netmiko-3.1.0
+WARNING: You are using pip version 21.1.3; however, version 21.2.4 is available.
+You should consider upgrading via the '/home/kbyers/netmiko/.venv/bin/python3.8 -m pip install --upgrade pip' command.
+Name: netmiko
+Version: 3.1.0
+Summary: Multi-vendor library to simplify Paramiko SSH connections to network devices
+Home-page: https://github.com/ktbyers/netmiko
+Author: Kirk Byers
+Author-email: ktbyers@twb-tech.com
+License: MIT
+Location: /home/kbyers/netmiko/.venv/lib/python3.8/site-packages
+Requires: setuptools, scp, textfsm, paramiko, pyserial
+Required-by: 
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-5.1.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kbyers/netmiko, inifile: setup.cfg
+plugins: pylama-7.7.1
+collected 1 item
+
+test_netmiko.py 
+
+
+--------------------------------------------------------------------------------
+Device name: hp_procurve
+------------
+<function connect at 0x7f2c5ff76670>: Elapsed time: 0:00:18.419321
+<function send_command_simple at 0x7f2c5ff76790>: Elapsed time: 0:00:22.937060
+<function send_config_simple at 0x7f2c5ff768b0>: Elapsed time: 0:00:31.002139
+<function send_config_large_acl at 0x7f2c5ff76e50>: Elapsed time: 0:00:42.630991
+<function cleanup at 0x7f2c5ff76f70>: Elapsed time: 0:00:00.000005
+--------------------------------------------------------------------------------
+
+
+
+
+.
+
+======================== 1 passed in 115.00s (0:01:55) =========================
+Found existing installation: netmiko 3.1.0
+Uninstalling netmiko-3.1.0:
+  Successfully uninstalled netmiko-3.1.0
+
+Running performance tests ... [OK]
+
+Testing version 3.2.0
+Collecting netmiko==3.2.0
+  Using cached netmiko-3.2.0-py2.py3-none-any.whl (157 kB)
+Requirement already satisfied: setuptools>=38.4.0 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==3.2.0) (47.1.0)
+Requirement already satisfied: scp>=0.13.2 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==3.2.0) (0.13.5)
+Requirement already satisfied: textfsm in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==3.2.0) (1.1.2)
+Requirement already satisfied: paramiko>=2.4.3 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==3.2.0) (2.7.2)
+Requirement already satisfied: pyserial in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==3.2.0) (3.5)
+Requirement already satisfied: pynacl>=1.0.1 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from paramiko>=2.4.3->netmiko==3.2.0) (1.4.0)
+Requirement already satisfied: bcrypt>=3.1.3 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from paramiko>=2.4.3->netmiko==3.2.0) (3.2.0)
+Requirement already satisfied: cryptography>=2.5 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from paramiko>=2.4.3->netmiko==3.2.0) (3.3.1)
+Requirement already satisfied: six>=1.4.1 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from bcrypt>=3.1.3->paramiko>=2.4.3->netmiko==3.2.0) (1.16.0)
+Requirement already satisfied: cffi>=1.1 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from bcrypt>=3.1.3->paramiko>=2.4.3->netmiko==3.2.0) (1.14.5)
+Requirement already satisfied: pycparser in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from cffi>=1.1->bcrypt>=3.1.3->paramiko>=2.4.3->netmiko==3.2.0) (2.20)
+Requirement already satisfied: future in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from textfsm->netmiko==3.2.0) (0.18.2)
+Installing collected packages: netmiko
+Successfully installed netmiko-3.2.0
+WARNING: You are using pip version 21.1.3; however, version 21.2.4 is available.
+You should consider upgrading via the '/home/kbyers/netmiko/.venv/bin/python3.8 -m pip install --upgrade pip' command.
+Name: netmiko
+Version: 3.2.0
+Summary: Multi-vendor library to simplify Paramiko SSH connections to network devices
+Home-page: https://github.com/ktbyers/netmiko
+Author: Kirk Byers
+Author-email: ktbyers@twb-tech.com
+License: MIT
+Location: /home/kbyers/netmiko/.venv/lib/python3.8/site-packages
+Requires: paramiko, pyserial, scp, setuptools, textfsm
+Required-by: 
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-5.1.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kbyers/netmiko, inifile: setup.cfg
+plugins: pylama-7.7.1
+collected 1 item
+
+test_netmiko.py 
+
+
+--------------------------------------------------------------------------------
+Device name: hp_procurve
+------------
+<function connect at 0x7f0c729caa60>: Elapsed time: 0:00:18.353988
+<function send_command_simple at 0x7f0c729cab80>: Elapsed time: 0:00:22.718488
+<function send_config_simple at 0x7f0c729caca0>: Elapsed time: 0:00:30.893432
+<function send_config_large_acl at 0x7f0c729dd280>: Elapsed time: 0:00:42.584148
+<function cleanup at 0x7f0c729dd3a0>: Elapsed time: 0:00:00.000006
+--------------------------------------------------------------------------------
+
+
+
+
+.
+
+======================== 1 passed in 114.56s (0:01:54) =========================
+Found existing installation: netmiko 3.2.0
+Uninstalling netmiko-3.2.0:
+  Successfully uninstalled netmiko-3.2.0
+
+Running performance tests ... [OK]
+
+Testing version 3.3.3
+Collecting netmiko==3.3.3
+  Using cached netmiko-3.3.3-py3-none-any.whl (168 kB)
+Requirement already satisfied: setuptools>=38.4.0 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==3.3.3) (47.1.0)
+Requirement already satisfied: tenacity in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==3.3.3) (8.0.0)
+Requirement already satisfied: scp>=0.13.2 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==3.3.3) (0.13.5)
+Requirement already satisfied: paramiko>=2.6.0 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==3.3.3) (2.7.2)
+Requirement already satisfied: ntc-templates in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==3.3.3) (2.1.0)
+Requirement already satisfied: pyserial in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==3.3.3) (3.5)
+Requirement already satisfied: bcrypt>=3.1.3 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from paramiko>=2.6.0->netmiko==3.3.3) (3.2.0)
+Requirement already satisfied: pynacl>=1.0.1 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from paramiko>=2.6.0->netmiko==3.3.3) (1.4.0)
+Requirement already satisfied: cryptography>=2.5 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from paramiko>=2.6.0->netmiko==3.3.3) (3.3.1)
+Requirement already satisfied: cffi>=1.1 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from bcrypt>=3.1.3->paramiko>=2.6.0->netmiko==3.3.3) (1.14.5)
+Requirement already satisfied: six>=1.4.1 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from bcrypt>=3.1.3->paramiko>=2.6.0->netmiko==3.3.3) (1.16.0)
+Requirement already satisfied: pycparser in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from cffi>=1.1->bcrypt>=3.1.3->paramiko>=2.6.0->netmiko==3.3.3) (2.20)
+Requirement already satisfied: textfsm<2.0.0,>=1.1.0 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from ntc-templates->netmiko==3.3.3) (1.1.2)
+Requirement already satisfied: future in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from textfsm<2.0.0,>=1.1.0->ntc-templates->netmiko==3.3.3) (0.18.2)
+Installing collected packages: netmiko
+Successfully installed netmiko-3.3.3
+WARNING: You are using pip version 21.1.3; however, version 21.2.4 is available.
+You should consider upgrading via the '/home/kbyers/netmiko/.venv/bin/python3.8 -m pip install --upgrade pip' command.
+Name: netmiko
+Version: 3.3.3
+Summary: Multi-vendor library to simplify Paramiko SSH connections to network devices
+Home-page: https://github.com/ktbyers/netmiko
+Author: Kirk Byers
+Author-email: ktbyers@twb-tech.com
+License: MIT
+Location: /home/kbyers/netmiko/.venv/lib/python3.8/site-packages
+Requires: scp, ntc-templates, paramiko, tenacity, pyserial, setuptools
+Required-by: 
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-5.1.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kbyers/netmiko, inifile: setup.cfg
+plugins: pylama-7.7.1
+collected 1 item
+
+test_netmiko.py 
+
+
+--------------------------------------------------------------------------------
+Device name: hp_procurve
+------------
+<function connect at 0x7f0d321174c0>: Elapsed time: 0:00:18.020695
+<function send_command_simple at 0x7f0d321175e0>: Elapsed time: 0:00:22.391657
+<function send_config_simple at 0x7f0d32117700>: Elapsed time: 0:00:30.752905
+<function send_config_large_acl at 0x7f0d32117ca0>: Elapsed time: 0:00:42.227986
+<function cleanup at 0x7f0d32117dc0>: Elapsed time: 0:00:00.000005
+--------------------------------------------------------------------------------
+
+
+
+
+.
+
+======================== 1 passed in 113.41s (0:01:53) =========================
+Found existing installation: netmiko 3.3.3
+Uninstalling netmiko-3.3.3:
+  Successfully uninstalled netmiko-3.3.3
+
+Running performance tests ... [OK]
+
+Testing version 3.4.0
+Collecting netmiko==3.4.0
+  Using cached netmiko-3.4.0-py3-none-any.whl (178 kB)
+Requirement already satisfied: tenacity in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==3.4.0) (8.0.0)
+Requirement already satisfied: ntc-templates in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==3.4.0) (2.1.0)
+Requirement already satisfied: paramiko>=2.6.0 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==3.4.0) (2.7.2)
+Requirement already satisfied: setuptools>=38.4.0 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==3.4.0) (47.1.0)
+Requirement already satisfied: pyserial in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==3.4.0) (3.5)
+Requirement already satisfied: scp>=0.13.2 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from netmiko==3.4.0) (0.13.5)
+Requirement already satisfied: bcrypt>=3.1.3 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from paramiko>=2.6.0->netmiko==3.4.0) (3.2.0)
+Requirement already satisfied: cryptography>=2.5 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from paramiko>=2.6.0->netmiko==3.4.0) (3.3.1)
+Requirement already satisfied: pynacl>=1.0.1 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from paramiko>=2.6.0->netmiko==3.4.0) (1.4.0)
+Requirement already satisfied: cffi>=1.1 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from bcrypt>=3.1.3->paramiko>=2.6.0->netmiko==3.4.0) (1.14.5)
+Requirement already satisfied: six>=1.4.1 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from bcrypt>=3.1.3->paramiko>=2.6.0->netmiko==3.4.0) (1.16.0)
+Requirement already satisfied: pycparser in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from cffi>=1.1->bcrypt>=3.1.3->paramiko>=2.6.0->netmiko==3.4.0) (2.20)
+Requirement already satisfied: textfsm<2.0.0,>=1.1.0 in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from ntc-templates->netmiko==3.4.0) (1.1.2)
+Requirement already satisfied: future in /home/kbyers/netmiko/.venv/lib/python3.8/site-packages (from textfsm<2.0.0,>=1.1.0->ntc-templates->netmiko==3.4.0) (0.18.2)
+Installing collected packages: netmiko
+Successfully installed netmiko-3.4.0
+WARNING: You are using pip version 21.1.3; however, version 21.2.4 is available.
+You should consider upgrading via the '/home/kbyers/netmiko/.venv/bin/python3.8 -m pip install --upgrade pip' command.
+Name: netmiko
+Version: 3.4.0
+Summary: Multi-vendor library to simplify Paramiko SSH connections to network devices
+Home-page: https://github.com/ktbyers/netmiko
+Author: Kirk Byers
+Author-email: ktbyers@twb-tech.com
+License: MIT
+Location: /home/kbyers/netmiko/.venv/lib/python3.8/site-packages
+Requires: paramiko, scp, setuptools, pyserial, ntc-templates, tenacity
+Required-by: 
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-5.1.2, py-1.10.0, pluggy-0.13.1
+rootdir: /home/kbyers/netmiko, inifile: setup.cfg
+plugins: pylama-7.7.1
+collected 1 item
+
+test_netmiko.py 
+
+
+--------------------------------------------------------------------------------
+Device name: hp_procurve
+------------
+<function connect at 0x7f402948d040>: Elapsed time: 0:00:18.010017
+<function send_command_simple at 0x7f402948d160>: Elapsed time: 0:00:22.410676
+<function send_config_simple at 0x7f402948d280>: Elapsed time: 0:00:30.529921
+<function send_config_large_acl at 0x7f402948d820>: Elapsed time: 0:00:42.211889
+<function cleanup at 0x7f402948d940>: Elapsed time: 0:00:00.000005
+--------------------------------------------------------------------------------
+
+
+
+
+.
+
+======================== 1 passed in 113.18s (0:01:53) =========================
+Found existing installation: netmiko 3.4.0
+Uninstalling netmiko-3.4.0:
+  Successfully uninstalled netmiko-3.4.0
+
+Running performance tests ... [OK]
+
+[{'connect': '0:00:11.258269',
+  'date': '2021-10-2 14:27:36',
+  'device_name': 'hp_procurve',
+  'netmiko_version': '2.4.2',
+  'send_command_simple': '0:00:21.831155',
+  'send_config_large_acl': '0:00:42.488945',
+  'send_config_simple': '0:00:32.216741'},
+ {'connect': '0:00:17.901763',
+  'date': '2021-10-2 14:29:32',
+  'device_name': 'hp_procurve',
+  'netmiko_version': '3.0.0',
+  'send_command_simple': '0:00:22.221532',
+  'send_config_large_acl': '0:00:42.045111',
+  'send_config_simple': '0:00:30.534230'},
+ {'connect': '0:00:18.419321',
+  'date': '2021-10-2 14:31:31',
+  'device_name': 'hp_procurve',
+  'netmiko_version': '3.1.0',
+  'send_command_simple': '0:00:22.937060',
+  'send_config_large_acl': '0:00:42.630991',
+  'send_config_simple': '0:00:31.002139'},
+ {'connect': '0:00:18.353988',
+  'date': '2021-10-2 14:33:29',
+  'device_name': 'hp_procurve',
+  'netmiko_version': '3.2.0',
+  'send_command_simple': '0:00:22.718488',
+  'send_config_large_acl': '0:00:42.584148',
+  'send_config_simple': '0:00:30.893432'},
+ {'connect': '0:00:18.020695',
+  'date': '2021-10-2 14:35:27',
+  'device_name': 'hp_procurve',
+  'netmiko_version': '3.3.3',
+  'send_command_simple': '0:00:22.391657',
+  'send_config_large_acl': '0:00:42.227986',
+  'send_config_simple': '0:00:30.752905'},
+ {'connect': '0:00:18.010017',
+  'date': '2021-10-2 14:37:24',
+  'device_name': 'hp_procurve',
+  'netmiko_version': '3.4.0',
+  'send_command_simple': '0:00:22.410676',
+  'send_config_large_acl': '0:00:42.211889',
+  'send_config_simple': '0:00:30.529921'}]
+['2.4.2', '3.0.0', '3.1.0', '3.2.0', '3.3.3', '3.4.0']
+[11.258269, 17.901763, 18.419321, 18.353988, 18.020695, 18.010017]
+
+Generating graphs ... [OK]
+

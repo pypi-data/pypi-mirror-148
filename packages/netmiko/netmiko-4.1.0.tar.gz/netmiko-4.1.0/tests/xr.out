@@ -1,0 +1,265 @@
+
+
+RP/0/RP0/CPU0:iosxr3#terminal width 511
+
+Thu Mar 17 01:50:53.989 UTC
+terminal length 0
+RP/0/RP0/CPU0:iosxr3#terminal length 0
+
+Thu Mar 17 01:50:54.088 UTC
+RP/0/RP0/CPU0:iosxr3#
+
+RP/0/RP0/CPU0:iosxr3#
+
+RP/0/RP0/CPU0:iosxr3#
+
+RP/0/RP0/CPU0:iosxr3#
+
+RP/0/RP0/CPU0:iosxr3#show version
+
+Thu Mar 17 01:50:54.511 UTC
+Cisco IOS XR Software, Version 6.5.3
+Copyright (c) 2013-2019 by Cisco Systems, Inc.
+
+Build Information:
+ Built By     : ahoang
+ Built On     : Tue Mar 26 06:52:25 PDT 2019
+ Built Host   : iox-ucs-019
+ Workspace    : /auto/srcarchive13/prod/6.5.3/xrv9k/ws
+ Version      : 6.5.3
+ Location     : /opt/cisco/XR/packages/
+
+cisco IOS-XRv 9000 () processor
+System uptime is 36 weeks 1 day 8 hours 43 minutes
+
+RP/0/RP0/CPU0:iosxr3#
+
+RP/0/RP0/CPU0:iosxr3#configure terminal
+
+Thu Mar 17 01:50:54.774 UTC
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#logging buffered 4000000
+
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#commit
+
+Thu Mar 17 01:50:55.979 UTC
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#show run | inc logging buffer
+
+Thu Mar 17 01:50:57.341 UTC
+Building configuration...
+logging buffered 4000000
+logging buffered notifications
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#logging buffered 4000000
+
+RP/0/RP0/CPU0:iosxr3(config)#no logging console
+
+RP/0/RP0/CPU0:iosxr3(config)#logging buffered 4000010
+
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#commit
+
+Thu Mar 17 01:50:58.277 UTC
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#show run | inc logging buffer
+
+Thu Mar 17 01:50:59.553 UTC
+Building configuration...
+logging buffered 4000010
+logging buffered notifications
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#logging buffered 4000000
+
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#commit
+
+Thu Mar 17 01:51:00.435 UTC
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#show run | inc logging buffer
+
+Thu Mar 17 01:51:01.753 UTC
+Building configuration...
+logging buffered 4000000
+logging buffered notifications
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#logging buffered 4000000
+
+RP/0/RP0/CPU0:iosxr3(config)#no logging console
+
+RP/0/RP0/CPU0:iosxr3(config)#logging buffered 4000010
+
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#commit confirmed 60
+
+Thu Mar 17 01:51:02.680 UTC
+y
+RP/0/RP0/CPU0:iosxr3(config)#y
+
+                             ^
+% Invalid input detected at '^' marker.
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#show run | inc logging buffer
+
+Thu Mar 17 01:51:06.953 UTC
+Building configuration...
+logging buffered 4000010
+logging buffered notifications
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#commit
+
+Thu Mar 17 01:51:07.565 UTC
+
+% Confirming commit for trial session.
+RP/0/RP0/CPU0:iosxr3(config)#y
+
+                             ^
+% Invalid input detected at '^' marker.
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#logging buffered 4000000
+
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#commit
+
+Thu Mar 17 01:51:08.068 UTC
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#show run | inc logging buffer
+
+Thu Mar 17 01:51:09.337 UTC
+Building configuration...
+logging buffered 4000000
+logging buffered notifications
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#logging buffered 4000000
+
+RP/0/RP0/CPU0:iosxr3(config)#no logging console
+
+RP/0/RP0/CPU0:iosxr3(config)#logging buffered 4000010
+
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#commit confirmed 60
+
+Thu Mar 17 01:51:10.281 UTC
+y
+RP/0/RP0/CPU0:iosxr3(config)#y
+
+                             ^
+% Invalid input detected at '^' marker.
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#show run | inc logging buffer
+
+Thu Mar 17 01:51:14.671 UTC
+Building configuration...
+logging buffered 4000010
+logging buffered notifications
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#commit
+
+Thu Mar 17 01:51:15.284 UTC
+
+% Confirming commit for trial session.
+RP/0/RP0/CPU0:iosxr3(config)#y
+
+                             ^
+% Invalid input detected at '^' marker.
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#logging buffered 4000000
+
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#commit
+
+Thu Mar 17 01:51:15.807 UTC
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#show run | inc logging buffer
+
+Thu Mar 17 01:51:17.125 UTC
+Building configuration...
+logging buffered 4000000
+logging buffered notifications
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#logging buffered 4000000
+
+RP/0/RP0/CPU0:iosxr3(config)#no logging console
+
+RP/0/RP0/CPU0:iosxr3(config)#logging buffered 4000010
+
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#commit confirmed 30
+
+Thu Mar 17 01:51:18.075 UTC
+y
+RP/0/RP0/CPU0:iosxr3(config)#y
+
+                             ^
+% Invalid input detected at '^' marker.
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#
+
+RP/0/RP0/CPU0:iosxr3(config)#show run | inc logging buffer
+
+Thu Mar 17 01:51:22.386 UTC
+Building configuration...
+logging buffered 4000010
+logging buffered notifications
+RP/0/RP0/CPU0:iosxr3(config)#

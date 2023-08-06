@@ -1,0 +1,20 @@
+============================= test session starts ==============================
+platform linux -- Python 3.9.5, pytest-5.1.2, py-1.10.0, pluggy-0.13.1 -- /home/kbyers/VENV/py39_netmiko/bin/python3.9
+cachedir: .pytest_cache
+rootdir: /home/kbyers/netmiko, inifile: setup.cfg
+plugins: pylama-7.7.1
+collecting ... collected 11 items
+
+test_timeout_read_until_pattern.py::test_read_longrunning_cmd PASSED
+test_timeout_read_until_pattern.py::test_read_timeout[0.4-5.0] PASSED
+test_timeout_read_until_pattern.py::test_read_timeout[1-2.0] PASSED
+test_timeout_read_until_pattern.py::test_read_timeout[5-1.0] PASSED
+test_timeout_read_until_pattern.py::test_read_timeout[10-0.5] PASSED
+test_timeout_read_until_pattern.py::test_read_timeout[60-0.2] PASSED
+test_timeout_read_until_pattern.py::test_read_timeout_override[1-2.0] PASSED
+test_timeout_read_until_pattern.py::test_read_timeout_override[5-1.0] PASSED
+test_timeout_read_until_pattern.py::test_read_timeout_override[10-0.5] PASSED
+test_timeout_read_until_pattern.py::test_read_timeout_override[60-0.2] PASSED
+test_timeout_read_until_pattern.py::test_deprecation_max_loops PASSED
+
+======================= 11 passed in 1851.54s (0:30:51) ========================

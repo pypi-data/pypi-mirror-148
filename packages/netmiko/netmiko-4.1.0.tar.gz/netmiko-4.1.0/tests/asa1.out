@@ -1,0 +1,154 @@
+Type help or '?' for a list of available commands.
+pynet-asa1> show curpriv
+Username : pyclass
+Current privilege level : 1
+Current Mode/s : P_UNPR
+pynet-asa1> 
+pynet-asa1> 
+pynet-asa1> enable
+Password: **********
+pynet-asa1# terminal pager 0
+pynet-asa1# 
+pynet-asa1# configure terminal
+pynet-asa1(config)# 
+pynet-asa1(config)# terminal width 511
+pynet-asa1(config)# 
+pynet-asa1(config)# end
+pynet-asa1# 
+pynet-asa1# 
+pynet-asa1# 
+pynet-asa1# show version
+
+Cisco Adaptive Security Appliance Software Version 8.2(1)11 
+Device Manager Version 6.2(1)
+
+Compiled on Mon 21-Sep-09 17:47 by builders
+System image file is "disk0:/asa821-11-k8.bin"
+Config file at boot was "startup-config"
+
+pynet-asa1 up 274 days 17 hours
+
+Hardware:   ASA5505, 256 MB RAM, CPU Geode 500 MHz
+Internal ATA Compact Flash, 128MB
+BIOS Flash M50FW080 @ 0xffe00000, 1024KB
+
+Encryption hardware device : Cisco ASA-5505 on-board accelerator (revision 0x0)
+                             Boot microcode   : CN1000-MC-BOOT-2.00 
+                             SSL/IKE microcode: CNLite-MC-SSLm-PLUS-2.03
+                             IPSec microcode  : CNlite-MC-IPSECm-MAIN-2.04
+ 0: Int: Internal-Data0/0    : address is 0024.c4e9.48ae, irq 11
+ 1: Ext: Ethernet0/0         : address is 0024.c4e9.48a6, irq 255
+ 2: Ext: Ethernet0/1         : address is 0024.c4e9.48a7, irq 255
+ 3: Ext: Ethernet0/2         : address is 0024.c4e9.48a8, irq 255
+ 4: Ext: Ethernet0/3         : address is 0024.c4e9.48a9, irq 255
+ 5: Ext: Ethernet0/4         : address is 0024.c4e9.48aa, irq 255
+ 6: Ext: Ethernet0/5         : address is 0024.c4e9.48ab, irq 255
+ 7: Ext: Ethernet0/6         : address is 0024.c4e9.48ac, irq 255
+ 8: Ext: Ethernet0/7         : address is 0024.c4e9.48ad, irq 255
+ 9: Int: Internal-Data0/1    : address is 0000.0003.0002, irq 255
+10: Int: Not used            : irq 255
+11: Int: Not used            : irq 255
+
+Licensed features for this platform:
+Maximum Physical Interfaces    : 8         
+VLANs                          : 20, DMZ Unrestricted
+Inside Hosts                   : Unlimited 
+Failover                       : Active/Standby
+VPN-DES                        : Enabled   
+VPN-3DES-AES                   : Enabled   
+SSL VPN Peers                  : 2         
+Total VPN Peers                : 25        
+Dual ISPs                      : Enabled   
+VLAN Trunk Ports               : 8         
+Shared License                 : Disabled
+AnyConnect for Mobile          : Disabled  
+AnyConnect for Cisco VPN Phone : Disabled  
+AnyConnect Essentials          : Disabled  
+Advanced Endpoint Assessment   : Disabled  
+UC Phone Proxy Sessions        : 2         
+Total UC Proxy Sessions        : 2         
+Botnet Traffic Filter          : Disabled  
+
+This platform has an ASA 5505 Security Plus license.
+
+Serial Number: JMX1315Z05L
+Running Activation Key: 0x080ce55f 0x60862351 0x3cd2d134 0x82d818d8 0xc70a2281 
+Configuration register is 0x1
+Configuration last modified by enable_15 at 17:54:29.739 UTC Fri May 29 2009
+pynet-asa1# 
+pynet-asa1# 
+pynet-asa1# 
+pynet-asa1# configure terminal
+pynet-asa1(config)# 
+pynet-asa1(config)# 
+pynet-asa1(config)# 
+pynet-asa1(config)# end
+pynet-asa1# 
+pynet-asa1# 
+pynet-asa1# 
+pynet-asa1# configure terminal
+pynet-asa1(config)# 
+pynet-asa1(config)# logging buffered notifications
+pynet-asa1(config)# 
+pynet-asa1(config)# end
+pynet-asa1# 
+pynet-asa1# 
+pynet-asa1# show run | inc logging buffer
+logging buffered notifications
+pynet-asa1# 
+pynet-asa1# configure terminal
+pynet-asa1(config)# 
+pynet-asa1(config)# logging buffered notifications
+pynet-asa1(config)# no logging console
+pynet-asa1(config)# logging buffered warnings
+pynet-asa1(config)# 
+pynet-asa1(config)# end
+pynet-asa1# 
+pynet-asa1# 
+pynet-asa1# show run | inc logging buffer
+logging buffered warnings
+pynet-asa1# 
+pynet-asa1# configure terminal
+pynet-asa1(config)# 
+pynet-asa1(config)# logging buffered notifications
+pynet-asa1(config)# no logging console
+pynet-asa1(config)# logging buffered warnings
+pynet-asa1(config)# 
+pynet-asa1(config)# end
+pynet-asa1# 
+pynet-asa1# 
+pynet-asa1# show run | inc logging buffer
+logging buffered warnings
+pynet-asa1# 
+pynet-asa1# configure terminal
+pynet-asa1(config)# 
+pynet-asa1(config)# logging buffered notifications
+pynet-asa1(config)# no logging console
+pynet-asa1(config)# logging buffered warnings
+pynet-asa1(config)# invalid command
+                      ^
+ERROR: % Invalid input detected at '^' marker.
+pynet-asa1(config)# 
+pynet-asa1(config)# end
+pynet-asa1# 
+pynet-asa1# 
+pynet-asa1# configure terminal
+pynet-asa1(config)# 
+pynet-asa1(config)# logging buffered notifications
+pynet-asa1(config)# no logging console
+pynet-asa1(config)# logging buffered warnings
+pynet-asa1(config)# invalid command
+                      ^
+ERROR: % Invalid input detected at '^' marker.
+pynet-asa1(config)# 
+pynet-asa1(config)# logging buffered notifications
+pynet-asa1(config)# no logging console
+pynet-asa1(config)# logging buffered warnings
+pynet-asa1(config)# invalid command
+                      ^
+ERROR: % Invalid input detected at '^' marker.
+pynet-asa1(config)# 
+pynet-asa1(config)# 
+pynet-asa1(config)# end
+pynet-asa1# 
+pynet-asa1# exit

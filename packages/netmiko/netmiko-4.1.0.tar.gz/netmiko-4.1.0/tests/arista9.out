@@ -1,0 +1,19 @@
+Last login: Wed Mar 16 14:35:28 2022 from 13.57.229.17
+arista9-napalm#show version
+[?1h=
+Arista vEOS
+Hardware version:    
+Serial number:       
+System MAC address:  5254.abda.5495
+
+Software image version: 4.20.10M
+Architecture:           i386
+Internal build version: 4.20.10M-10040268.42010M
+Internal build ID:      68f3ae78-65cb-4ed3-8675-0ff2219bf118
+
+Uptime:                 39 weeks, 1 days, 17 hours and 37 minutes
+Total memory:           4010924 kB
+Free memory:            2237268 kB
+
+
+[K[?1l>arista9-napalm#

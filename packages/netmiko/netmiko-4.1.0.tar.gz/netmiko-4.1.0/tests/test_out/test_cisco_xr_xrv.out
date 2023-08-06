@@ -1,0 +1,683 @@
+Starting tests...good luck:
+Cisco IOS-XR (xrv)
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-5.1.2, py-1.10.0, pluggy-0.13.1 -- /home/kbyers/netmiko/.venv/bin/python3.8
+cachedir: .pytest_cache
+rootdir: /home/kbyers/netmiko, inifile: setup.cfg
+plugins: pylama-7.7.1
+collecting ... collected 24 items
+
+test_netmiko_show.py::test_disable_paging PASSED
+test_netmiko_show.py::test_terminal_width PASSED
+test_netmiko_show.py::test_ssh_connect PASSED
+test_netmiko_show.py::test_ssh_connect_cm PASSED
+test_netmiko_show.py::test_send_command_timing PASSED
+test_netmiko_show.py::test_send_command_timing_no_cmd_verify SKIPPED
+test_netmiko_show.py::test_send_command PASSED
+test_netmiko_show.py::test_send_command_no_cmd_verify SKIPPED
+test_netmiko_show.py::test_complete_on_space_disabled SKIPPED
+test_netmiko_show.py::test_send_command_textfsm PASSED
+test_netmiko_show.py::test_send_command_ttp SKIPPED
+test_netmiko_show.py::test_send_command_genie PASSED
+test_netmiko_show.py::test_send_multiline_timing SKIPPED
+test_netmiko_show.py::test_send_multiline SKIPPED
+test_netmiko_show.py::test_send_multiline_prompt SKIPPED
+test_netmiko_show.py::test_send_multiline_simple SKIPPED
+test_netmiko_show.py::test_base_prompt PASSED
+test_netmiko_show.py::test_strip_prompt PASSED
+test_netmiko_show.py::test_strip_command PASSED
+test_netmiko_show.py::test_normalize_linefeeds PASSED
+test_netmiko_show.py::test_clear_buffer PASSED
+test_netmiko_show.py::test_enable_mode PASSED
+test_netmiko_show.py::test_disconnect PASSED
+test_netmiko_show.py::test_disconnect_no_enable PASSED
+
+=========================== short test summary info ============================
+SKIPPED [1] /home/kbyers/netmiko/tests/test_netmiko_show.py:71: <Skipped instance>
+SKIPPED [1] /home/kbyers/netmiko/tests/test_netmiko_show.py:89: <Skipped instance>
+SKIPPED [1] /home/kbyers/netmiko/tests/test_netmiko_show.py:111: <Skipped instance>
+SKIPPED [1] /home/kbyers/netmiko/tests/test_netmiko_show.py:154: TTP template not existing for this platform
+SKIPPED [1] /home/kbyers/netmiko/tests/test_netmiko_show.py:214: <Skipped instance>
+SKIPPED [1] /home/kbyers/netmiko/tests/test_netmiko_show.py:230: <Skipped instance>
+SKIPPED [1] /home/kbyers/netmiko/tests/test_netmiko_show.py:255: <Skipped instance>
+SKIPPED [1] /home/kbyers/netmiko/tests/test_netmiko_show.py:279: <Skipped instance>
+======================== 16 passed, 8 skipped in 33.18s ========================
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-5.1.2, py-1.10.0, pluggy-0.13.1 -- /home/kbyers/netmiko/.venv/bin/python3.8
+cachedir: .pytest_cache
+rootdir: /home/kbyers/netmiko, inifile: setup.cfg
+plugins: pylama-7.7.1
+collecting ... collected 12 items
+
+test_netmiko_config.py::test_ssh_connect PASSED
+test_netmiko_config.py::test_enable_mode PASSED
+test_netmiko_config.py::test_config_mode PASSED
+test_netmiko_config.py::test_exit_config_mode PASSED
+test_netmiko_config.py::test_config_set PASSED
+test_netmiko_config.py::test_config_set_longcommand PASSED
+test_netmiko_config.py::test_config_hostname PASSED
+test_netmiko_config.py::test_config_from_file SKIPPED
+test_netmiko_config.py::test_config_error_pattern PASSED
+test_netmiko_config.py::test_banner SKIPPED
+test_netmiko_config.py::test_global_cmd_verify SKIPPED
+test_netmiko_config.py::test_disconnect PASSED
+
+=========================== short test summary info ============================
+SKIPPED [1] /home/kbyers/netmiko/tests/test_netmiko_config.py:115: <Skipped instance>
+SKIPPED [1] /home/kbyers/netmiko/tests/test_netmiko_config.py:161: No banner defined.
+SKIPPED [1] /home/kbyers/netmiko/tests/test_netmiko_config.py:194: No banner defined.
+======================== 9 passed, 3 skipped in 11.75s =========================
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-5.1.2, py-1.10.0, pluggy-0.13.1 -- /home/kbyers/netmiko/.venv/bin/python3.8
+cachedir: .pytest_cache
+rootdir: /home/kbyers/netmiko, inifile: setup.cfg
+plugins: pylama-7.7.1
+collecting ... collected 1 item
+
+test_netmiko_config_acl.py::test_large_acl PASSED
+
+============================== 1 passed in 24.58s ==============================
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-5.1.2, py-1.10.0, pluggy-0.13.1 -- /home/kbyers/netmiko/.venv/bin/python3.8
+cachedir: .pytest_cache
+rootdir: /home/kbyers/netmiko, inifile: setup.cfg
+plugins: pylama-7.7.1
+collecting ... collected 15 items
+
+test_netmiko_commit.py::test_ssh_connect PASSED
+test_netmiko_commit.py::test_config_mode PASSED
+test_netmiko_commit.py::test_commit_base PASSED
+test_netmiko_commit.py::test_commit_confirm PASSED
+test_netmiko_commit.py::test_confirm_delay PASSED
+test_netmiko_commit.py::test_no_confirm PASSED
+test_netmiko_commit.py::test_clear_msg PASSED
+test_netmiko_commit.py::test_commit_check SKIPPED
+test_netmiko_commit.py::test_commit_comment PASSED
+test_netmiko_commit.py::test_commit_andquit SKIPPED
+test_netmiko_commit.py::test_commit_label PASSED
+test_netmiko_commit.py::test_commit_label_comment PASSED
+test_netmiko_commit.py::test_commit_label_confirm PASSED
+test_netmiko_commit.py::test_exit_config_mode PASSED
+test_netmiko_commit.py::test_disconnect PASSED
+
+=========================== short test summary info ============================
+SKIPPED [1] /home/kbyers/netmiko/tests/test_netmiko_commit.py:232: <Skipped instance>
+SKIPPED [1] /home/kbyers/netmiko/tests/test_netmiko_commit.py:291: <Skipped instance>
+================== 13 passed, 2 skipped in 181.93s (0:03:01) ===================
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-5.1.2, py-1.10.0, pluggy-0.13.1 -- /home/kbyers/netmiko/.venv/bin/python3.8
+cachedir: .pytest_cache
+rootdir: /home/kbyers/netmiko, inifile: setup.cfg
+plugins: pylama-7.7.1
+collecting ... collected 12 items
+
+test_netmiko_scp.py::test_scp_put PASSED
+test_netmiko_scp.py::test_remote_space_available PASSED
+test_netmiko_scp.py::test_local_space_available PASSED
+test_netmiko_scp.py::test_verify_space_available_put PASSED
+test_netmiko_scp.py::test_remote_file_size PASSED
+test_netmiko_scp.py::test_md5_methods PASSED
+test_netmiko_scp.py::test_disconnect PASSED
+test_netmiko_scp.py::test_verify_space_available_get PASSED
+test_netmiko_scp.py::test_scp_get PASSED
+test_netmiko_scp.py::test_md5_methods_get PASSED
+test_netmiko_scp.py::test_disconnect_get PASSED
+test_netmiko_scp.py::test_file_transfer ERROR
+
+==================================== ERRORS ====================================
+_____________________ ERROR at setup of test_file_transfer _____________________
+
+self = <paramiko.Transport at 0x4024c040 (unconnected)>
+
+    def _check_banner(self):
+        # this is slow, but we only have to do it once
+        for i in range(100):
+            # give them 15 seconds for the first line, then just 2 seconds
+            # each additional line.  (some sites have very high latency.)
+            if i == 0:
+                timeout = self.banner_timeout
+            else:
+                timeout = 2
+            try:
+>               buf = self.packetizer.readline(timeout)
+
+../../paramiko/paramiko/transport.py:2278: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <paramiko.packet.Packetizer object at 0x7f274024c8e0>, timeout = 40
+
+    def readline(self, timeout):
+        """
+        Read a line from the socket.  We assume no data is pending after the
+        line, so it's okay to attempt large reads.
+        """
+        buf = self.__remainder
+        while linefeed_byte not in buf:
+>           buf += self._read_timeout(timeout)
+
+../../paramiko/paramiko/packet.py:380: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <paramiko.packet.Packetizer object at 0x7f274024c8e0>, timeout = 40
+
+    def _read_timeout(self, timeout):
+        start = time.time()
+        while True:
+            try:
+>               x = self.__socket.recv(128)
+E               ConnectionResetError: [Errno 104] Connection reset by peer
+
+../../paramiko/paramiko/packet.py:607: ConnectionResetError
+
+During handling of the above exception, another exception occurred:
+
+self = <netmiko.cisco.cisco_xr.CiscoXrSSH object at 0x7f274024c430>, width = 511
+height = 511
+
+    def establish_connection(self, width: int = 511, height: int = 1000) -> None:
+        """Establish SSH connection to the network device
+    
+        Timeout will generate a NetmikoTimeoutException
+        Authentication failure will generate a NetmikoAuthenticationException
+    
+        :param width: Specified width of the VT100 terminal window (default: 511)
+        :type width: int
+    
+        :param height: Specified height of the VT100 terminal window (default: 1000)
+        :type height: int
+        """
+        self.channel: Channel
+        if self.protocol == "telnet":
+            self.remote_conn = telnetlib.Telnet(
+                self.host, port=self.port, timeout=self.timeout
+            )
+            # Migrating communication to channel class
+            self.channel = TelnetChannel(conn=self.remote_conn, encoding=self.encoding)
+            self.telnet_login()
+        elif self.protocol == "serial":
+            self.remote_conn = serial.Serial(**self.serial_settings)
+            self.channel = SerialChannel(conn=self.remote_conn, encoding=self.encoding)
+            self.serial_login()
+        elif self.protocol == "ssh":
+            ssh_connect_params = self._connect_params_dict()
+            self.remote_conn_pre: Optional[paramiko.SSHClient]
+            self.remote_conn_pre = self._build_ssh_client()
+    
+            # initiate SSH connection
+            try:
+>               self.remote_conn_pre.connect(**ssh_connect_params)
+
+../netmiko/base_connection.py:1021: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <paramiko.client.SSHClient object at 0x7f274024c460>
+hostname = '184.105.247.77', port = 22, username = 'admin1'
+password = '8monday0X', pkey = None, key_filename = None, timeout = 10
+allow_agent = False, look_for_keys = False, compress = False
+sock = <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>
+gss_auth = False, gss_kex = False, gss_deleg_creds = True, gss_host = None
+banner_timeout = 40, auth_timeout = None, gss_trust_dns = True
+passphrase = None, disabled_algorithms = {}
+
+    def connect(
+        self,
+        hostname,
+        port=SSH_PORT,
+        username=None,
+        password=None,
+        pkey=None,
+        key_filename=None,
+        timeout=None,
+        allow_agent=True,
+        look_for_keys=True,
+        compress=False,
+        sock=None,
+        gss_auth=False,
+        gss_kex=False,
+        gss_deleg_creds=True,
+        gss_host=None,
+        banner_timeout=None,
+        auth_timeout=None,
+        gss_trust_dns=True,
+        passphrase=None,
+        disabled_algorithms=None,
+    ):
+        """
+        Connect to an SSH server and authenticate to it.  The server's host key
+        is checked against the system host keys (see `load_system_host_keys`)
+        and any local host keys (`load_host_keys`).  If the server's hostname
+        is not found in either set of host keys, the missing host key policy
+        is used (see `set_missing_host_key_policy`).  The default policy is
+        to reject the key and raise an `.SSHException`.
+    
+        Authentication is attempted in the following order of priority:
+    
+            - The ``pkey`` or ``key_filename`` passed in (if any)
+    
+              - ``key_filename`` may contain OpenSSH public certificate paths
+                as well as regular private-key paths; when files ending in
+                ``-cert.pub`` are found, they are assumed to match a private
+                key, and both components will be loaded. (The private key
+                itself does *not* need to be listed in ``key_filename`` for
+                this to occur - *just* the certificate.)
+    
+            - Any key we can find through an SSH agent
+            - Any "id_rsa", "id_dsa" or "id_ecdsa" key discoverable in
+              ``~/.ssh/``
+    
+              - When OpenSSH-style public certificates exist that match an
+                existing such private key (so e.g. one has ``id_rsa`` and
+                ``id_rsa-cert.pub``) the certificate will be loaded alongside
+                the private key and used for authentication.
+    
+            - Plain username/password auth, if a password was given
+    
+        If a private key requires a password to unlock it, and a password is
+        passed in, that password will be used to attempt to unlock the key.
+    
+        :param str hostname: the server to connect to
+        :param int port: the server port to connect to
+        :param str username:
+            the username to authenticate as (defaults to the current local
+            username)
+        :param str password:
+            Used for password authentication; is also used for private key
+            decryption if ``passphrase`` is not given.
+        :param str passphrase:
+            Used for decrypting private keys.
+        :param .PKey pkey: an optional private key to use for authentication
+        :param str key_filename:
+            the filename, or list of filenames, of optional private key(s)
+            and/or certs to try for authentication
+        :param float timeout:
+            an optional timeout (in seconds) for the TCP connect
+        :param bool allow_agent:
+            set to False to disable connecting to the SSH agent
+        :param bool look_for_keys:
+            set to False to disable searching for discoverable private key
+            files in ``~/.ssh/``
+        :param bool compress: set to True to turn on compression
+        :param socket sock:
+            an open socket or socket-like object (such as a `.Channel`) to use
+            for communication to the target host
+        :param bool gss_auth:
+            ``True`` if you want to use GSS-API authentication
+        :param bool gss_kex:
+            Perform GSS-API Key Exchange and user authentication
+        :param bool gss_deleg_creds: Delegate GSS-API client credentials or not
+        :param str gss_host:
+            The targets name in the kerberos database. default: hostname
+        :param bool gss_trust_dns:
+            Indicates whether or not the DNS is trusted to securely
+            canonicalize the name of the host being connected to (default
+            ``True``).
+        :param float banner_timeout: an optional timeout (in seconds) to wait
+            for the SSH banner to be presented.
+        :param float auth_timeout: an optional timeout (in seconds) to wait for
+            an authentication response.
+        :param dict disabled_algorithms:
+            an optional dict passed directly to `.Transport` and its keyword
+            argument of the same name.
+    
+        :raises:
+            `.BadHostKeyException` -- if the server's host key could not be
+            verified
+        :raises: `.AuthenticationException` -- if authentication failed
+        :raises:
+            `.SSHException` -- if there was any other error connecting or
+            establishing an SSH session
+        :raises socket.error: if a socket error occurred while connecting
+    
+        .. versionchanged:: 1.15
+            Added the ``banner_timeout``, ``gss_auth``, ``gss_kex``,
+            ``gss_deleg_creds`` and ``gss_host`` arguments.
+        .. versionchanged:: 2.3
+            Added the ``gss_trust_dns`` argument.
+        .. versionchanged:: 2.4
+            Added the ``passphrase`` argument.
+        .. versionchanged:: 2.6
+            Added the ``disabled_algorithms`` argument.
+        """
+        if not sock:
+            errors = {}
+            # Try multiple possible address families (e.g. IPv4 vs IPv6)
+            to_try = list(self._families_and_addresses(hostname, port))
+            for af, addr in to_try:
+                try:
+                    sock = socket.socket(af, socket.SOCK_STREAM)
+                    if timeout is not None:
+                        try:
+                            sock.settimeout(timeout)
+                        except:
+                            pass
+                    retry_on_signal(lambda: sock.connect(addr))
+                    # Break out of the loop on success
+                    break
+                except socket.error as e:
+                    # Raise anything that isn't a straight up connection error
+                    # (such as a resolution error)
+                    if e.errno not in (ECONNREFUSED, EHOSTUNREACH):
+                        raise
+                    # Capture anything else so we know how the run looks once
+                    # iteration is complete. Retain info about which attempt
+                    # this was.
+                    errors[addr] = e
+    
+            # Make sure we explode usefully if no address family attempts
+            # succeeded. We've no way of knowing which error is the "right"
+            # one, so we construct a hybrid exception containing all the real
+            # ones, of a subclass that client code should still be watching for
+            # (socket.error)
+            if len(errors) == len(to_try):
+                raise NoValidConnectionsError(errors)
+    
+        t = self._transport = Transport(
+            sock,
+            gss_kex=gss_kex,
+            gss_deleg_creds=gss_deleg_creds,
+            disabled_algorithms=disabled_algorithms,
+        )
+        t.use_compression(compress=compress)
+        t.set_gss_host(
+            # t.hostname may be None, but GSS-API requires a target name.
+            # Therefore use hostname as fallback.
+            gss_host=gss_host or hostname,
+            trust_dns=gss_trust_dns,
+            gssapi_requested=gss_auth or gss_kex,
+        )
+        if self._log_channel is not None:
+            t.set_log_channel(self._log_channel)
+        if banner_timeout is not None:
+            t.banner_timeout = banner_timeout
+        if auth_timeout is not None:
+            t.auth_timeout = auth_timeout
+    
+        if port == SSH_PORT:
+            server_hostkey_name = hostname
+        else:
+            server_hostkey_name = "[{}]:{}".format(hostname, port)
+        our_server_keys = None
+    
+        our_server_keys = self._system_host_keys.get(server_hostkey_name)
+        if our_server_keys is None:
+            our_server_keys = self._host_keys.get(server_hostkey_name)
+        if our_server_keys is not None:
+            keytype = our_server_keys.keys()[0]
+            sec_opts = t.get_security_options()
+            other_types = [x for x in sec_opts.key_types if x != keytype]
+            sec_opts.key_types = [keytype] + other_types
+    
+>       t.start_client(timeout=timeout)
+
+../../paramiko/paramiko/client.py:406: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <paramiko.Transport at 0x4024c040 (unconnected)>
+event = <threading.Event object at 0x7f274024ca30>, timeout = 10
+
+    def start_client(self, event=None, timeout=None):
+        """
+        Negotiate a new SSH2 session as a client.  This is the first step after
+        creating a new `.Transport`.  A separate thread is created for protocol
+        negotiation.
+    
+        If an event is passed in, this method returns immediately.  When
+        negotiation is done (successful or not), the given ``Event`` will
+        be triggered.  On failure, `is_active` will return ``False``.
+    
+        (Since 1.4) If ``event`` is ``None``, this method will not return until
+        negotiation is done.  On success, the method returns normally.
+        Otherwise an SSHException is raised.
+    
+        After a successful negotiation, you will usually want to authenticate,
+        calling `auth_password <Transport.auth_password>` or
+        `auth_publickey <Transport.auth_publickey>`.
+    
+        .. note:: `connect` is a simpler method for connecting as a client.
+    
+        .. note::
+            After calling this method (or `start_server` or `connect`), you
+            should no longer directly read from or write to the original socket
+            object.
+    
+        :param .threading.Event event:
+            an event to trigger when negotiation is complete (optional)
+    
+        :param float timeout:
+            a timeout, in seconds, for SSH2 session negotiation (optional)
+    
+        :raises:
+            `.SSHException` -- if negotiation fails (and no ``event`` was
+            passed in)
+        """
+        self.active = True
+        if event is not None:
+            # async, return immediately and let the app poll for completion
+            self.completion_event = event
+            self.start()
+            return
+    
+        # synchronous, wait for a result
+        self.completion_event = event = threading.Event()
+        self.start()
+        max_time = time.time() + timeout if timeout is not None else None
+        while True:
+            event.wait(0.1)
+            if not self.active:
+                e = self.get_exception()
+                if e is not None:
+>                   raise e
+
+../../paramiko/paramiko/transport.py:698: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <paramiko.Transport at 0x4024c040 (unconnected)>
+
+    def run(self):
+        # (use the exposed "run" method, because if we specify a thread target
+        # of a private method, threading.Thread will keep a reference to it
+        # indefinitely, creating a GC cycle and not letting Transport ever be
+        # GC'd. it's a bug in Thread.)
+    
+        # Hold reference to 'sys' so we can test sys.modules to detect
+        # interpreter shutdown.
+        self.sys = sys
+    
+        # active=True occurs before the thread is launched, to avoid a race
+        _active_threads.append(self)
+        tid = hex(long(id(self)) & xffffffff)
+        if self.server_mode:
+            self._log(DEBUG, "starting thread (server mode): {}".format(tid))
+        else:
+            self._log(DEBUG, "starting thread (client mode): {}".format(tid))
+        try:
+            try:
+                self.packetizer.write_all(b(self.local_version + "\r\n"))
+                self._log(
+                    DEBUG,
+                    "Local version/idstring: {}".format(self.local_version),
+                )  # noqa
+>               self._check_banner()
+
+../../paramiko/paramiko/transport.py:2101: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <paramiko.Transport at 0x4024c040 (unconnected)>
+
+    def _check_banner(self):
+        # this is slow, but we only have to do it once
+        for i in range(100):
+            # give them 15 seconds for the first line, then just 2 seconds
+            # each additional line.  (some sites have very high latency.)
+            if i == 0:
+                timeout = self.banner_timeout
+            else:
+                timeout = 2
+            try:
+                buf = self.packetizer.readline(timeout)
+            except ProxyCommandFailure:
+                raise
+            except Exception as e:
+>               raise SSHException(
+                    "Error reading SSH protocol banner" + str(e)
+                )
+E               paramiko.ssh_exception.SSHException: Error reading SSH protocol banner[Errno 104] Connection reset by peer
+
+../../paramiko/paramiko/transport.py:2282: SSHException
+
+During handling of the above exception, another exception occurred:
+
+request = <SubRequest 'scp_file_transfer' for <Function test_file_transfer>>
+
+    @pytest.fixture(scope="module")
+    def scp_file_transfer(request):
+        """
+        Testing file_transfer
+    
+        Return the netmiko connection object
+        """
+        platform_args = get_platform_args()
+    
+        # Create the files
+        with open("test9.txt", "w") as f:
+            # Not important what it is in the file
+            f.write("no logging console\n")
+    
+        with open("test2_src.txt", "w") as f:
+            # Not important what it is in the file
+            f.write("no logging console\n")
+            f.write("logging buffered 10000\n")
+    
+        device_under_test = request.config.getoption("test_device")
+        test_devices = parse_yaml(PWD + "/etc/test_devices.yml")
+        device = test_devices[device_under_test]
+        device["verbose"] = False
+>       ssh_conn = ConnectHandler(**device)
+
+conftest.py:458: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../netmiko/ssh_dispatcher.py:343: in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+../netmiko/base_connection.py:434: in __init__
+    self._open()
+../netmiko/base_connection.py:439: in _open
+    self.establish_connection()
+../netmiko/cisco/cisco_xr.py:11: in establish_connection
+    super().establish_connection(width=width, height=height)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <netmiko.cisco.cisco_xr.CiscoXrSSH object at 0x7f274024c430>, width = 511
+height = 511
+
+        def establish_connection(self, width: int = 511, height: int = 1000) -> None:
+            """Establish SSH connection to the network device
+    
+            Timeout will generate a NetmikoTimeoutException
+            Authentication failure will generate a NetmikoAuthenticationException
+    
+            :param width: Specified width of the VT100 terminal window (default: 511)
+            :type width: int
+    
+            :param height: Specified height of the VT100 terminal window (default: 1000)
+            :type height: int
+            """
+            self.channel: Channel
+            if self.protocol == "telnet":
+                self.remote_conn = telnetlib.Telnet(
+                    self.host, port=self.port, timeout=self.timeout
+                )
+                # Migrating communication to channel class
+                self.channel = TelnetChannel(conn=self.remote_conn, encoding=self.encoding)
+                self.telnet_login()
+            elif self.protocol == "serial":
+                self.remote_conn = serial.Serial(**self.serial_settings)
+                self.channel = SerialChannel(conn=self.remote_conn, encoding=self.encoding)
+                self.serial_login()
+            elif self.protocol == "ssh":
+                ssh_connect_params = self._connect_params_dict()
+                self.remote_conn_pre: Optional[paramiko.SSHClient]
+                self.remote_conn_pre = self._build_ssh_client()
+    
+                # initiate SSH connection
+                try:
+                    self.remote_conn_pre.connect(**ssh_connect_params)
+                except socket.error as conn_error:
+                    self.paramiko_cleanup()
+                    msg = f"""TCP connection to device failed.
+    
+    Common causes of this problem are:
+    1. Incorrect hostname or IP address.
+    2. Wrong TCP port.
+    3. Intermediate firewall blocking access.
+    
+    Device settings: {self.device_type} {self.host}:{self.port}
+    
+    """
+    
+                    # Handle DNS failures separately
+                    if "Name or service not known" in str(conn_error):
+                        msg = (
+                            f"DNS failure--the hostname you provided was not resolvable "
+                            f"in DNS: {self.host}:{self.port}"
+                        )
+    
+                    msg = msg.lstrip()
+                    raise NetmikoTimeoutException(msg)
+                except paramiko.ssh_exception.AuthenticationException as auth_err:
+                    self.paramiko_cleanup()
+                    msg = f"""Authentication to device failed.
+    
+    Common causes of this problem are:
+    1. Invalid username and password
+    2. Incorrect SSH-key file
+    3. Connecting to the wrong device
+    
+    Device settings: {self.device_type} {self.host}:{self.port}
+    
+    """
+    
+                    msg += self.RETURN + str(auth_err)
+                    raise NetmikoAuthenticationException(msg)
+                except paramiko.ssh_exception.SSHException as e:
+                    self.paramiko_cleanup()
+                    if "No existing session" in str(e):
+                        msg = (
+                            "Paramiko: 'No existing session' error: "
+                            "try increasing 'conn_timeout' to 15 seconds or larger."
+                        )
+                        raise NetmikoTimeoutException(msg)
+                    else:
+                        msg = f"""
+    A paramiko SSHException occurred during connection creation:
+    
+    {str(e)}
+    
+    """
+>                       raise NetmikoTimeoutException(msg)
+E                       netmiko.exceptions.NetmikoTimeoutException: 
+E                       A paramiko SSHException occurred during connection creation:
+E                       
+E                       Error reading SSH protocol banner[Errno 104] Connection reset by peer
+
+../netmiko/base_connection.py:1074: NetmikoTimeoutException
+------------------------------ Captured log setup ------------------------------
+ERROR    paramiko.transport:transport.py:1881 Exception (client): Error reading SSH protocol banner[Errno 104] Connection reset by peer
+ERROR    paramiko.transport:transport.py:1879 Traceback (most recent call last):
+ERROR    paramiko.transport:transport.py:1879   File "/home/kbyers/paramiko/paramiko/transport.py", line 2278, in _check_banner
+ERROR    paramiko.transport:transport.py:1879     buf = self.packetizer.readline(timeout)
+ERROR    paramiko.transport:transport.py:1879   File "/home/kbyers/paramiko/paramiko/packet.py", line 380, in readline
+ERROR    paramiko.transport:transport.py:1879     buf += self._read_timeout(timeout)
+ERROR    paramiko.transport:transport.py:1879   File "/home/kbyers/paramiko/paramiko/packet.py", line 607, in _read_timeout
+ERROR    paramiko.transport:transport.py:1879     x = self.__socket.recv(128)
+ERROR    paramiko.transport:transport.py:1879 ConnectionResetError: [Errno 104] Connection reset by peer
+ERROR    paramiko.transport:transport.py:1879 
+ERROR    paramiko.transport:transport.py:1879 During handling of the above exception, another exception occurred:
+ERROR    paramiko.transport:transport.py:1879 
+ERROR    paramiko.transport:transport.py:1879 Traceback (most recent call last):
+ERROR    paramiko.transport:transport.py:1879   File "/home/kbyers/paramiko/paramiko/transport.py", line 2101, in run
+ERROR    paramiko.transport:transport.py:1879     self._check_banner()
+ERROR    paramiko.transport:transport.py:1879   File "/home/kbyers/paramiko/paramiko/transport.py", line 2282, in _check_banner
+ERROR    paramiko.transport:transport.py:1879     raise SSHException(
+ERROR    paramiko.transport:transport.py:1879 paramiko.ssh_exception.SSHException: Error reading SSH protocol banner[Errno 104] Connection reset by peer
+ERROR    paramiko.transport:transport.py:1879
+========================= 11 passed, 1 error in 11.71s =========================

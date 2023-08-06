@@ -1,0 +1,172 @@
+nohup: ignoring input
+Starting tests...good luck:
+Test read_timeout on Cisco3 (slow, slow, and more slow)
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-5.1.2, py-1.10.0, pluggy-0.13.1 -- /home/kbyers/netmiko/.venv/bin/python3.8
+cachedir: .pytest_cache
+rootdir: /home/kbyers/netmiko, inifile: setup.cfg
+plugins: pylama-7.7.1
+collecting ... collected 7 items
+
+test_timeout_read_timing.py::test_read_show_tech PASSED
+test_timeout_read_timing.py::test_read_md5 PASSED
+test_timeout_read_timing.py::test_read_ping PASSED
+test_timeout_read_timing.py::test_read_ping_no_response PASSED
+test_timeout_read_timing.py::test_read_traceroute_no_response PASSED
+test_timeout_read_timing.py::test_read_traceroute_no_response_full PASSED
+test_timeout_read_timing.py::test_read_traceroute PASSED
+
+======================== 7 passed in 581.88s (0:09:41) =========================
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-5.1.2, py-1.10.0, pluggy-0.13.1 -- /home/kbyers/netmiko/.venv/bin/python3.8
+cachedir: .pytest_cache
+rootdir: /home/kbyers/netmiko, inifile: setup.cfg
+plugins: pylama-7.7.1
+collecting ... collected 7 items
+
+test_timeout_send_command_timing.py::test_read_show_tech PASSED
+test_timeout_send_command_timing.py::test_read_md5 PASSED
+test_timeout_send_command_timing.py::test_read_ping PASSED
+test_timeout_send_command_timing.py::test_read_ping_no_response PASSED
+test_timeout_send_command_timing.py::test_read_traceroute_no_response PASSED
+test_timeout_send_command_timing.py::test_read_traceroute_no_response_full PASSED
+test_timeout_send_command_timing.py::test_read_traceroute PASSED
+
+======================== 7 passed in 580.55s (0:09:40) =========================
+Autodetect tests
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-5.1.2, py-1.10.0, pluggy-0.13.1 -- /home/kbyers/netmiko/.venv/bin/python3.8
+cachedir: .pytest_cache
+rootdir: /home/kbyers/netmiko, inifile: setup.cfg
+plugins: pylama-7.7.1
+collecting ... collected 1 item
+
+test_netmiko_autodetect.py::test_ssh_connect cisco_ios
+PASSED
+
+============================== 1 passed in 6.26s ===============================
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-5.1.2, py-1.10.0, pluggy-0.13.1 -- /home/kbyers/netmiko/.venv/bin/python3.8
+cachedir: .pytest_cache
+rootdir: /home/kbyers/netmiko, inifile: setup.cfg
+plugins: pylama-7.7.1
+collecting ... collected 1 item
+
+test_netmiko_autodetect.py::test_ssh_connect arista_eos
+PASSED
+
+============================== 1 passed in 6.66s ===============================
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-5.1.2, py-1.10.0, pluggy-0.13.1 -- /home/kbyers/netmiko/.venv/bin/python3.8
+cachedir: .pytest_cache
+rootdir: /home/kbyers/netmiko, inifile: setup.cfg
+plugins: pylama-7.7.1
+collecting ... collected 1 item
+
+test_netmiko_autodetect.py::test_ssh_connect juniper_junos
+PASSED
+
+============================== 1 passed in 8.55s ===============================
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-5.1.2, py-1.10.0, pluggy-0.13.1 -- /home/kbyers/netmiko/.venv/bin/python3.8
+cachedir: .pytest_cache
+rootdir: /home/kbyers/netmiko, inifile: setup.cfg
+plugins: pylama-7.7.1
+collecting ... collected 1 item
+
+test_netmiko_autodetect.py::test_ssh_connect cisco_asa
+PASSED
+
+============================== 1 passed in 8.10s ===============================
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-5.1.2, py-1.10.0, pluggy-0.13.1 -- /home/kbyers/netmiko/.venv/bin/python3.8
+cachedir: .pytest_cache
+rootdir: /home/kbyers/netmiko, inifile: setup.cfg
+plugins: pylama-7.7.1
+collecting ... collected 1 item
+
+test_netmiko_autodetect.py::test_ssh_connect cisco_xr
+PASSED
+
+============================== 1 passed in 8.90s ===============================
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-5.1.2, py-1.10.0, pluggy-0.13.1 -- /home/kbyers/netmiko/.venv/bin/python3.8
+cachedir: .pytest_cache
+rootdir: /home/kbyers/netmiko, inifile: setup.cfg
+plugins: pylama-7.7.1
+collecting ... collected 1 item
+
+test_netmiko_autodetect.py::test_ssh_connect cisco_xr
+PASSED
+
+============================== 1 passed in 8.10s ===============================
+HP ProCurve
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-5.1.2, py-1.10.0, pluggy-0.13.1 -- /home/kbyers/netmiko/.venv/bin/python3.8
+cachedir: .pytest_cache
+rootdir: /home/kbyers/netmiko, inifile: setup.cfg
+plugins: pylama-7.7.1
+collecting ... collected 24 items
+
+test_netmiko_show.py::test_disable_paging PASSED
+test_netmiko_show.py::test_terminal_width PASSED
+test_netmiko_show.py::test_ssh_connect PASSED
+test_netmiko_show.py::test_ssh_connect_cm PASSED
+test_netmiko_show.py::test_send_command_timing PASSED
+test_netmiko_show.py::test_send_command_timing_no_cmd_verify SKIPPED
+test_netmiko_show.py::test_send_command PASSED
+test_netmiko_show.py::test_send_command_no_cmd_verify SKIPPED
+test_netmiko_show.py::test_complete_on_space_disabled SKIPPED
+test_netmiko_show.py::test_send_command_textfsm PASSED
+test_netmiko_show.py::test_send_command_ttp SKIPPED
+test_netmiko_show.py::test_send_command_genie SKIPPED
+test_netmiko_show.py::test_send_multiline_timing SKIPPED
+test_netmiko_show.py::test_send_multiline SKIPPED
+test_netmiko_show.py::test_send_multiline_prompt SKIPPED
+test_netmiko_show.py::test_send_multiline_simple SKIPPED
+test_netmiko_show.py::test_base_prompt PASSED
+test_netmiko_show.py::test_strip_prompt PASSED
+test_netmiko_show.py::test_strip_command PASSED
+test_netmiko_show.py::test_normalize_linefeeds PASSED
+test_netmiko_show.py::test_clear_buffer PASSED
+test_netmiko_show.py::test_enable_mode PASSED
+test_netmiko_show.py::test_disconnect PASSED
+test_netmiko_show.py::test_disconnect_no_enable PASSED
+
+=========================== short test summary info ============================
+SKIPPED [1] /home/kbyers/netmiko/tests/test_netmiko_show.py:71: <Skipped instance>
+SKIPPED [1] /home/kbyers/netmiko/tests/test_netmiko_show.py:89: <Skipped instance>
+SKIPPED [1] /home/kbyers/netmiko/tests/test_netmiko_show.py:111: <Skipped instance>
+SKIPPED [1] /home/kbyers/netmiko/tests/test_netmiko_show.py:154: TTP template not existing for this platform
+SKIPPED [1] /home/kbyers/netmiko/tests/test_netmiko_show.py:194: Genie not supported on this platform
+SKIPPED [1] /home/kbyers/netmiko/tests/test_netmiko_show.py:214: <Skipped instance>
+SKIPPED [1] /home/kbyers/netmiko/tests/test_netmiko_show.py:230: <Skipped instance>
+SKIPPED [1] /home/kbyers/netmiko/tests/test_netmiko_show.py:255: <Skipped instance>
+SKIPPED [1] /home/kbyers/netmiko/tests/test_netmiko_show.py:279: <Skipped instance>
+======================== 15 passed, 9 skipped in 31.97s ========================
+============================= test session starts ==============================
+platform linux -- Python 3.8.5, pytest-5.1.2, py-1.10.0, pluggy-0.13.1 -- /home/kbyers/netmiko/.venv/bin/python3.8
+cachedir: .pytest_cache
+rootdir: /home/kbyers/netmiko, inifile: setup.cfg
+plugins: pylama-7.7.1
+collecting ... collected 12 items
+
+test_netmiko_config.py::test_ssh_connect PASSED
+test_netmiko_config.py::test_enable_mode PASSED
+test_netmiko_config.py::test_config_mode PASSED
+test_netmiko_config.py::test_exit_config_mode PASSED
+test_netmiko_config.py::test_config_set PASSED
+test_netmiko_config.py::test_config_set_longcommand PASSED
+test_netmiko_config.py::test_config_hostname PASSED
+test_netmiko_config.py::test_config_from_file SKIPPED
+test_netmiko_config.py::test_config_error_pattern SKIPPED
+test_netmiko_config.py::test_banner SKIPPED
+test_netmiko_config.py::test_global_cmd_verify SKIPPED
+test_netmiko_config.py::test_disconnect PASSED
+
+=========================== short test summary info ============================
+SKIPPED [1] /home/kbyers/netmiko/tests/test_netmiko_config.py:115: <Skipped instance>
+SKIPPED [1] /home/kbyers/netmiko/tests/test_netmiko_config.py:127: No error_pattern defined.
+SKIPPED [1] /home/kbyers/netmiko/tests/test_netmiko_config.py:161: No banner defined.
+SKIPPED [1] /home/kbyers/netmiko/tests/test_netmiko_config.py:194: No banner defined.
+========================= 8 passed, 4 skipped in 3.60s =========================
