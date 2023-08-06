@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+src/tdash/__init__.py
+src/tdash/components.py
+src/tdash/core.py
+src/tdash/dashboard.py
+src/tdash/nav.py
+src/tdash/properties.py
+src/thrill_dash.egg-info/PKG-INFO
+src/thrill_dash.egg-info/SOURCES.txt
+src/thrill_dash.egg-info/dependency_links.txt
+src/thrill_dash.egg-info/not-zip-safe
+src/thrill_dash.egg-info/requires.txt
+src/thrill_dash.egg-info/top_level.txt
