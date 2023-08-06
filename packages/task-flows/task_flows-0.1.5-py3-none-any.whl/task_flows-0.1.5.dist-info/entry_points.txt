@@ -1,0 +1,3 @@
+[console_scripts]
+create_services=task_flows.services:main
+
