@@ -1,0 +1,128 @@
+{%- if command == "acl" %}
+
+{%- else %}
+{%- if command == "arp" %}
+
+{%- else %}
+{%- if command == "bgp" %}
+
+{%- else %}
+
+{%- if command == "hsrp" %}
+
+{%- else %}
+{%- if command == 'interface' %}
+
+{%- else %}
+{%- if command == 'lldp' %}
+
+{%- else %}
+{%- if command == "ntp" %}
+
+{%- else %}
+{%- if command == 'ospf' %}
+
+{%- else %}
+{%- if command == "platform" %}
+
+{%- else %}
+{%- if command == "routing" %}
+
+{%- else %}
+{%- if command == "vlan" %}
+
+{%- else %}
+{%- if command == 'vrf' %}
+
+{%- else %}
+{%- if command == "show access-lists" %}
+
+{%- else %}
+{%- if command == "show bgp process vrf all" %}
+
+{%- else %}
+{%- if command == "show bgp sessions" %}
+
+{% else %}
+{% if command == "show cdp neighbors" %}
+
+{%- else %}
+{%- if command == "show cdp neighbors detail" %}
+
+{%- else %}
+{%- if command == "show environment" %}
+
+{%- else %}
+{%- if command == "show port-channel summary" %}
+
+{%- else %}
+{%- if command == "show interface" %}
+
+{%- else %}
+{%- if command == "show interface status" %}
+
+{%- else %}
+{%- if command == "show interface transceiver" %}
+
+{%- else %}
+{%- if command == "show inventory" %}
+
+{%- else %}
+{% if command == "show ip arp vrf all" %}
+
+{%- else %}
+{%- if command == "show ip interface brief" %}
+
+{%- else %}
+{%- if command == "show ip ospf" %}
+
+{%- else %}
+{%- if command == "show ip ospf interface" %}
+
+{%- else %}
+{%- if command == "show ip ospf interface vrf all" %}
+
+{%- else %}
+{%- if command == "show ip ospf neighbors detail" %}
+
+{%- else %}
+{%- if command == "show ip ospf neighbors detail vrf all" %}
+
+{%- else %}
+{%- if command == "show ip route" %}
+
+{%- else %}
+{%- if command == "show ip route vrf all" %}
+
+{%- else %}
+{%- if command == "show mac address-table" %}
+
+{%- else %}
+{%- if command == "show version" %}
+Hello! pie A T S has parsed the following information from the {{ command }} command.
+The hostname of the device is {{ hostname }}.
+The boot flash is located at {{ data_to_template['platform'].hardware.bootflash }}.
+The chassis is a {{ data_to_template['platform'].hardware.chassis }}.
+The C P U is a {{ data_to_template['platform'].hardware.cpu }}.
+The device name is {{ data_to_template['platform'].hardware.device_name }}.
+The device has {{ data_to_template['platform'].hardware.memory | int // 1024 }} memory.
+The device model is a {{ data_to_template['platform'].hardware.model }}.
+The processor board I D is {{ data_to_template['platform'].hardware.processor_board_id }}.
+The R P is {{ data_to_template['platform'].hardware.rp }}.
+The device has {{ data_to_template['platform'].hardware.slots }} slots. 
+The kernal has been up for {{ data_to_template['platform'].kernel_uptime.days }} {{ data_to_template['platform'].kernel_uptime.hours }} {{ data_to_template['platform'].kernel_uptime.minutes }} {{ data_to_template['platform'].kernel_uptime.seconds }}.
+The platform is a {{ data_to_template['platform'].name }}.
+The operating system is {{ data_to_template['platform'].os }}.
+The system was reloaded last because {{ data_to_template['platform'].reason }}.
+The BIOS compile time was {{ data_to_template['platform'].software.bios_compile_time }}.
+The BIOS version is {{ data_to_template['platform'].software.bios_version }}.
+The kick start compile time was {{ data_to_template['platform'].software.kickstart_compile_time }}.
+The kick start image is {{ data_to_template['platform'].software.kickstart_image_file }}.
+The kick start version is {{ data_to_template['platform'].software.kickstart_version }}.
+The system compile time was {{ data_to_template['platform'].software.system_compile_time }}.
+The software image is {{ data_to_template['platform'].software.system_image_file }}.
+The software version is {{ data_to_template['platform'].software.system_version }}.
+{%- else %}
+{%- if command == "show vlan" %}
+
+{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}{%- endif %}
