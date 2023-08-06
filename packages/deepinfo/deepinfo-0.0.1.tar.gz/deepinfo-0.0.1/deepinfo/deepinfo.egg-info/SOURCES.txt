@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+deepinfo/deepinfo.egg-info/PKG-INFO
+deepinfo/deepinfo.egg-info/SOURCES.txt
+deepinfo/deepinfo.egg-info/dependency_links.txt
+deepinfo/deepinfo.egg-info/not-zip-safe
+deepinfo/deepinfo.egg-info/requires.txt
+deepinfo/deepinfo.egg-info/top_level.txt
