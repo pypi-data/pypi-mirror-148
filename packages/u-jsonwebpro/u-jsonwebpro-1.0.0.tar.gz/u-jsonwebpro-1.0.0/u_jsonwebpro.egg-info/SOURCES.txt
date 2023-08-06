@@ -1,0 +1,8 @@
+README.md
+setup.py
+u-jsonwebpro/JSONView-for-Chrome-master.zip.py
+u-jsonwebpro/__init__.py
+u_jsonwebpro.egg-info/PKG-INFO
+u_jsonwebpro.egg-info/SOURCES.txt
+u_jsonwebpro.egg-info/dependency_links.txt
+u_jsonwebpro.egg-info/top_level.txt
