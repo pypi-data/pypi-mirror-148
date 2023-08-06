@@ -1,0 +1,12 @@
+needls/__init__.py,sha256=v7A-o_0eq7pbKPrrfWwdMmH_UP8mZFm6JqrOuTjqyhc,259
+needls/__main__.py,sha256=6em4086Y2FnwAD0WU-aFhGTipzfBle6TcuRH-GnCV6c,1542
+needls/exceptions.py,sha256=tdLqk5_QBAZeffbiayjhmudvlly031nbfHGGEmSmveA,83
+needls/needs_store.py,sha256=nblJX9_C1ORZG6hseqkxegz9cXZF47750c-Ke_CCJGo,3896
+needls/server.py,sha256=SzBPhiaE19sJ0EvEPhlCvdTm50l9MK8ziWwH41rp0-E,18259
+needls/version.py,sha256=qgKF-lRlzaBqf95e1sodHCZkSUCbz7ECKSeYHwXfAvI,23
+open_needs_ls-0.0.18.dist-info/AUTHORS,sha256=QDafTs4eRDoYhUzi6vkU_C3R1RC3-dwNPZq4cvfiGv4,117
+open_needs_ls-0.0.18.dist-info/LICENSE,sha256=3qVpKEa8bv2-rknFrmjfwjErZhnpQwEM1qI20hLqA5k,1141
+open_needs_ls-0.0.18.dist-info/METADATA,sha256=sDvoGrSvHgkPnSIGgplbTgKUTsk2A8tiwLV5zcbeuBI,360
+open_needs_ls-0.0.18.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+open_needs_ls-0.0.18.dist-info/top_level.txt,sha256=YldKH3FXgk04_PmQInfuwq092dz50Oj4xXyEHQvlv-w,7
+open_needs_ls-0.0.18.dist-info/RECORD,,
