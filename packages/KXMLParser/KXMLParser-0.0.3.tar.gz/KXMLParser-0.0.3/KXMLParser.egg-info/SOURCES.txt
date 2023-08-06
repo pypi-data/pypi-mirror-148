@@ -1,0 +1,8 @@
+README.md
+setup.py
+KXMLParser/parsers.py
+KXMLParser.egg-info/PKG-INFO
+KXMLParser.egg-info/SOURCES.txt
+KXMLParser.egg-info/dependency_links.txt
+KXMLParser.egg-info/requires.txt
+KXMLParser.egg-info/top_level.txt
