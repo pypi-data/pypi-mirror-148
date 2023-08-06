@@ -1,0 +1,2 @@
+[spacy_factories]
+dbpedia_spotlight = spacy_dbpedia_spotlight:entity_linker.EntityLinker
