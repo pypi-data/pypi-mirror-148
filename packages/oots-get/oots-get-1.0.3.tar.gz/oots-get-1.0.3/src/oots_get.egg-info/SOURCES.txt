@@ -1,0 +1,15 @@
+AUTHORS.md
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/oots_get.egg-info/PKG-INFO
+src/oots_get.egg-info/SOURCES.txt
+src/oots_get.egg-info/dependency_links.txt
+src/oots_get.egg-info/entry_points.txt
+src/oots_get.egg-info/not-zip-safe
+src/oots_get.egg-info/requires.txt
+src/oots_get.egg-info/top_level.txt
+src/ootsget/__init__.py
+src/ootsget/ootsget.py
