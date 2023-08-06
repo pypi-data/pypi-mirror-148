@@ -1,0 +1,12 @@
+JoBase-1.3.dist-info/WHEEL,sha256=-AEWSmmPX2napY0KgFkOkhU4tG_r1jAc9rjCSZ0EDrY,112
+JoBase-1.3.dist-info/top_level.txt,sha256=gFgl35vrm_xlXMKRPzxl4sozSJ7rbW9rWcSuOV81LLQ,7
+JoBase-1.3.dist-info/METADATA,sha256=UinQZQc3WS3LoRB_UjWEhBmV2-kIkpS-rQI-JSUEHmc,1053
+JoBase-1.3.dist-info/RECORD,,
+JoBase.libs/libXrandr-1e86e73f.so.2.2.0,sha256=VbYmAMo7bmylanxHTVt-oOhfMQIg6-BmirI1c2WW4II,51732
+JoBase.libs/libXi-dac1b579.so.6.1.0,sha256=1jx9vbWm3d7a7nDT6Vc9evGx-gxYqJsjbOseVxxSuww,76648
+JoBase.libs/libpng16-5f843754.so.16.28.0,sha256=4GUoU6Rwj8719yCC9Do_qsf_YcuGENQR4x2wQCVDlMs,240980
+JoBase/__init__.cpython-310-i386-linux-gnu.so,sha256=zotic_fkwJoGT_QxApE36B8tlFmx5vzUOQzfC-iVUhQ,1126832
+JoBase/examples/coin_collector.py,sha256=YzAoAWBwjqXuJYlL9iZkCVHUjTn7Q8NWbt_gOu54Vf4,739
+JoBase/images/coin.png,sha256=eWKhTocaHKqMux872oz9eDyu8WITxc83gPcS9UCAp-s,653
+JoBase/images/enemy.png,sha256=5T74OTeW5nXS34oFubgbiFxV-eABracTzOxTyEH7KY4,3342
+JoBase/images/man.png,sha256=CQ0e-FXAdOotKuhb_hMQpP7JLogiaSm-Ty7QiZAMMsk,5384
