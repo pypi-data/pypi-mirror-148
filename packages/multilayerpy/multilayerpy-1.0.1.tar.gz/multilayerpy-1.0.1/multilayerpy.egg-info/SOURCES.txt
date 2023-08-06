@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.py
+multilayerpy/__init__.py
+multilayerpy/build.py
+multilayerpy/optimize.py
+multilayerpy/simulate.py
+multilayerpy.egg-info/PKG-INFO
+multilayerpy.egg-info/SOURCES.txt
+multilayerpy.egg-info/dependency_links.txt
+multilayerpy.egg-info/requires.txt
+multilayerpy.egg-info/top_level.txt
