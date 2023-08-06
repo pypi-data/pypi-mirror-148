@@ -1,0 +1,11 @@
+fastplotlib/__init__.py,sha256=eiOSTAurLsHarhaNhKQXjnVldLCTQNyHVEXFP_piBRM,102
+fastplotlib/generate_colormaps.py,sha256=dWXfln9ko43OwVvrleBXFB_x-ztJfrf2p5VmDCgP4sc,1662
+fastplotlib/graphics.py,sha256=B91VSwR4ENT6_5h2RVSnjKqoSuoyZnqQI2K9p13QKMw,4173
+fastplotlib/layouts.py,sha256=3AxNoFuYbKxycnZFRb3hqq9QI_xZ09-bLYbVvO2Nde4,4248
+fastplotlib/subplot.py,sha256=hxqCK9VgPBdMukm8NU52gWeF6P1z_W7FMtjvH8FU4wY,2215
+fastplotlib/utils.py,sha256=5rV9beTSUee6QeH_XWn5azeXczuTMfavfXCtKy7Xilg,1991
+fastplotlib-0.1.0a1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+fastplotlib-0.1.0a1.dist-info/METADATA,sha256=Jdq6yqon84W4M-99vA2o4YoEIHq4corONZO07U-cvF0,404
+fastplotlib-0.1.0a1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+fastplotlib-0.1.0a1.dist-info/top_level.txt,sha256=3wkajHDNDXr8V0EjhnGtHBMyeybp1D2HfgFlrhv7Zlg,12
+fastplotlib-0.1.0a1.dist-info/RECORD,,
