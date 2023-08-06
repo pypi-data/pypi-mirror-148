@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: rpi-intercom
+Version: 0.0.3
+Summary: Intercom library for a raspberrypi
+Author: Stephen Beechen
+Author-email: stephen@beechens.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# RPi Intercom
+A mumble client written in python that makes a raspberry pi run as an 'intercom'.  It can be used as a standalone service or imported as a library to integrate into other more complex projects.
+
+
+More documentation to follow as I work out all the bugs and stuff.
+
+
