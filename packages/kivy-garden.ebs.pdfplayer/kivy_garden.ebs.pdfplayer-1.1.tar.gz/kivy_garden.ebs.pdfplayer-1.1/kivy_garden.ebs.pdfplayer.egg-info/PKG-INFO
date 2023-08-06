@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: kivy-garden.ebs.pdfplayer
+Version: 1.1
+Summary: PDF Player Widget for Kivy
+Home-page: https://github.com/ebs-universe/kivy_garden.ebs.pdfplayer
+Author: Chintalagiri Shashank
+Author-email: shashank.chintalagiri@gmail.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/ebs-universe/kivy_garden.ebs.pdfplayer/issues
+Project-URL: Source, https://github.com/ebs-universe/kivy_garden.ebs.pdfplayer
+Description: PDF Player Widget for Kivy
+        ==========================
+        
+        [![Github Build Status](https://github.com/ebs-universe/kivy_garden.ebs.pdfplayer/workflows/Garden%20flower/badge.svg)](https://github.com/ebs-universe/kivy_garden.ebs.pdfplayer/actions)
+        
+        This provides a simple PDFPlayer widget for Kivy, based on 
+        kivy_garden.ebs.gallery.ImageGallery.
+        
+        Documentation for this widget needs work.
+        
+        This package is part of the EBS widget collection for Kivy. It is written in 
+        mostly Python and depends on the EBS core widgets and widget infrastructure package. 
+        For more information, see [kivy_garden.ebs.core](https://github.com/ebs-universe/kivy_garden.ebs.core)
+        
+        See https://kivy-garden.github.io/ebs.flower/ for the rendered flower docs.
+        
+        Please see the garden [instructions](https://kivy-garden.github.io) for 
+        how to use kivy garden flowers.
+        
+        
+        CI
+        --
+        
+        Every push or pull request run the [GitHub Action](https://github.com/kivy-garden/flower/actions) CI.
+        It tests the code on various OS and also generates wheels that can be released on PyPI upon a
+        tag. Docs are also generated and uploaded to the repo as well as artifacts of the CI.
+        
+        
+        TODO
+        -------
+        
+        * add your code
+        
+        Contributing
+        --------------
+        
+        Check out our [contribution guide](CONTRIBUTING.md) and feel free to improve the flower.
+        
+        License
+        ---------
+        
+        This software is released under the terms of the MIT License.
+        Please see the [LICENSE.txt](LICENSE.txt) file.
+        
+        How to release
+        ===============
+        
+        See the garden [instructions](https://kivy-garden.github.io/#makingareleaseforyourflower) for how to make a new release.
+        
+Keywords: Kivy kivy-garden
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: ci
