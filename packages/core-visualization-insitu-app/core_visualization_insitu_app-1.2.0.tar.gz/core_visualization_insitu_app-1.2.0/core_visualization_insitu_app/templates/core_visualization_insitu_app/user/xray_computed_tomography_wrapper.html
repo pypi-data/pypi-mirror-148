@@ -1,0 +1,20 @@
+<div class="tab">
+    <button class="xrayComputedTomographytablinks" onclick="openXrayComputedTomographyTab(event, 'xray-computed-tomography-tab1')"
+            id="xrayComputedTomographyDefaultOpen">Cropped
+    </button>
+</div>
+
+<div id="xray-computed-tomography-tab1" class="xrayComputedTomographytabcontent">
+    {% include 'core_visualization_insitu_app/user/xray_computed_tomography/tab1.html' %}
+</div>
+
+<div class="input-access-layer">
+
+    <button type="button" id="download-xray-computed-tomography" class="btn btn-info btn-download">Download Image</button>
+
+    <input type="text" name="enter" class="input-box" placeholder="Stack Number.." id="access-layer-number-xray-computed-tomography"/>
+    <input type="button" value="Go" class="btn btn-info btn-validate" id="access-layer-validate-xray-computed-tomography"/><br>
+
+    <div id="xray-computed-tomography-page-number" class="layer-number-info"></div>
+
+</div>

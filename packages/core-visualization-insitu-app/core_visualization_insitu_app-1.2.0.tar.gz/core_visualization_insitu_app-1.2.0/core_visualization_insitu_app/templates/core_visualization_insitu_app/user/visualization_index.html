@@ -1,0 +1,66 @@
+{% load static %}
+
+{% if data.error %}
+<div class="alert alert-danger">
+    {{data.error}}
+</div>
+{% else %}
+
+<link href="{% static 'core_visualization_insitu_app/user/css/main.css' %}" rel="stylesheet">
+<link href="{% static 'core_visualization_insitu_app/user/css/frame.css' %}" rel="stylesheet">
+
+<div id="visualization-view-error" style="margin-top: 50px; display: none;">
+    <p class="alert alert-danger">
+        <i class="fa fa-exclamation-triangle"></i> An error occurred. If you keep
+        seeing this message, please <a href="{% url 'core_website_app_contact' %}"> contact an administrator</a>.
+    </p>
+</div>
+<div id='insitu' class="visualization-selection">
+
+    <h3>Visualization Selection</h3>
+
+    {% include 'core_visualization_insitu_app/user/select_wrapper_forms.html' %}
+</div>
+
+<div id="data-view">
+
+    <h3>Data information</h3>
+
+    <div id='data-info' class="parts-info">
+        {% include 'core_visualization_insitu_app/user/insitu_data_information.html' %}
+
+    </div>
+
+    <div id='stl-document' class="parts-info">
+        {% include 'core_visualization_insitu_app/user/stl_document.html' %}
+    </div>
+
+</div>
+
+<div id='data-frames'>
+    <div id="build-command" class="insitu-frame">
+        <h3>Build Commands</h3>
+        {% include 'core_visualization_insitu_app/user/build_command_wrapper.html' %}
+    </div>
+
+    <div id="melt-pool" class="insitu-frame">
+        <h3>Melt Pool</h3>
+        {% include 'core_visualization_insitu_app/user/melt_pool_wrapper.html' %}
+    </div>
+
+    <div id="layerwise-image" class="insitu-frame">
+        <h3>Layer Wise</h3>
+        {% include 'core_visualization_insitu_app/user/layer_wise_wrapper.html' %}
+    </div>
+    <div id="xray-computed-tomography" class="insitu-frame">
+        <h3>X-ray Computed Tomography</h3>
+        {% include 'core_visualization_insitu_app/user/xray_computed_tomography_wrapper.html' %}
+    </div>
+</div>
+
+<div id="loading_background" style="visibility: hidden;">
+    {% include 'core_visualization_insitu_app/common/loading_background.html' %}
+</div>
+
+
+{% endif %}

@@ -1,0 +1,24 @@
+{% extends 'core_main_app/_render/admin/theme/tools/box.html' %}
+
+{% block box_title %}Visualization Cache Management{% endblock %}
+
+{% block box_body %}
+
+<button type="button" name="" id="build-visualization-data" class="btn btn-default">Load all images</button>
+
+{% include 'core_visualization_insitu_app/admin/data_table.html' %}
+
+<div id="loading_background" style="visibility: hidden;">
+    {% include 'core_visualization_insitu_app/common/loading_background.html' %}
+</div>
+
+<div id="visualization-view-error" style="margin-top: 50px; display: none;">
+    <p class="alert alert-danger">
+        <i class="fa fa-exclamation-triangle"></i> An error occurred while building the visualization. If you keep
+        seeing this message, please <a href="{% url 'core_website_app_contact' %}"> contact an administrator</a>.
+    </p>
+</div>
+{% endblock %}
+
+{% block box_footer %}
+{% endblock %}
