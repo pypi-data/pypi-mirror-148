@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        todoska=Todo_Tracker.__main__:app
+    
