@@ -1,0 +1,6 @@
+pytest_skip_slow.py,sha256=g9aryWvlJp2SI7LSWVlxmbtjrpY5VsXpFFH0sV2_MyA,687
+pytest_skip_slow-0.0.3.dist-info/entry_points.txt,sha256=MYH8prisjBLKF8jzpK7BJFObexbTj4X5aLOl4FUL42o,39
+pytest_skip_slow-0.0.3.dist-info/LICENSE,sha256=J1khrtIr9XsJdHt3m6r5a8yuoOlLNuDA4HCxgjvfc_s,1078
+pytest_skip_slow-0.0.3.dist-info/WHEEL,sha256=4TfKIB_xu-04bc2iKz6_zFt-gEFEEDU_31HGhqzOCE8,81
+pytest_skip_slow-0.0.3.dist-info/METADATA,sha256=gMRAgm7UJQFUYGeiHnvG8hQ5PdtqFy6d9rX_6FzNQUk,2108
+pytest_skip_slow-0.0.3.dist-info/RECORD,,
