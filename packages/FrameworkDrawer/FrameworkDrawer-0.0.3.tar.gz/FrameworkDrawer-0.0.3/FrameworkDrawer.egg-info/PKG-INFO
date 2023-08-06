@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: FrameworkDrawer
+Version: 0.0.3
+Summary: Draw a simple RTL block diagram.
+Home-page: https://github.com/W-Mai/FrameworkDrawer
+Author: W-Mai
+Author-email: 1341398182@qq.com
+License: MIT Licence
+Platform: UNKNOWN
+License-File: LICENSE
+
+A module for drawing simple RTL gate-level circuits.
+
