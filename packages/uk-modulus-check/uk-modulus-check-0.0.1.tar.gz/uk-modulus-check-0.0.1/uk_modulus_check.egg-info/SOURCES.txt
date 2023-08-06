@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+./uk_modulus_check/__init__.py
+./uk_modulus_check/sort_code_substitution_table.py
+./uk_modulus_check/uk_modulus_checker.py
+./uk_modulus_check/weight_table.py
+uk_modulus_check.egg-info/PKG-INFO
+uk_modulus_check.egg-info/SOURCES.txt
+uk_modulus_check.egg-info/dependency_links.txt
+uk_modulus_check.egg-info/top_level.txt

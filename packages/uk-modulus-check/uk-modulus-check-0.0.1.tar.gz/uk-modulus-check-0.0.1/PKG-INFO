@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: uk-modulus-check
+Version: 0.0.1
+Summary: A thing to check UK bank sort code and IBAN
+Home-page: UNKNOWN
+Author: ANNA
+Author-email: yury.pliner@gmail.com
+License: MIT
+Platform: macOS
+Platform: POSIX
+Platform: Windows
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# uk-modulus-check
+https://www.vocalink.com/tools/modulus-checking/
+
+
