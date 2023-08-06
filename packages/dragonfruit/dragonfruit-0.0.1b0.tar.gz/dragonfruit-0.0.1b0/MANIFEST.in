@@ -1,0 +1,3 @@
+include requirements/*requirements.txt dragonfruit/_version.txt
+
+prune .tox

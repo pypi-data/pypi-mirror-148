@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: dragonfruit
+Version: 0.0.1b0
+Summary: Workflow tool
+Home-page: https://gitlab.com/computationalmaterials/dragonfruit
+Author: A. S. Tygesen, J. H. Chang, Martin Uhrin
+Author-email: alexty@dtu.dk, jchang@dtu.dk, martin.uhrin.10@ucl.ac.uk
+License: MPL-2.0
+Project-URL: Source, https://gitlab.com/computationalmaterials/dragonfruit
+Keywords: Workflow,Simulation,Computational materials,Materials research
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Provides-Extra: publish
+Provides-Extra: test
+Provides-Extra: doc
+Provides-Extra: jupyter
+Provides-Extra: all
+License-File: LICENSE.md
+
+# Dragonfruit
+[![pipeline status](https://gitlab.com/computationalmaterials/dragonfruit/badges/main/pipeline.svg)](https://gitlab.com/computationalmaterials/dragonfruit/-/commits/main)
+[![Documentation Status](https://readthedocs.org/projects/dragonfruit/badge/?version=latest)](https://dragonfruit.readthedocs.io/en/latest/?badge=latest)
+
+A workflow tool for simulation software. For more information, please see our [documentation](https://dragonfruit.readthedocs.io/en/latest/).
+
+

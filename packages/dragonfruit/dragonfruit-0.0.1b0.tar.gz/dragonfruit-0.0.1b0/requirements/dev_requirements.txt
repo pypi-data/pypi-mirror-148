@@ -1,0 +1,6 @@
+pre-commit
+black[jupyter]
+flake8
+pylint
+tox
+ipython
