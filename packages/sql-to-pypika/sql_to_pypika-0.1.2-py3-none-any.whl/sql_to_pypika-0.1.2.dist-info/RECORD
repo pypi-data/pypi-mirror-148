@@ -1,0 +1,11 @@
+sql_to_pypika/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sql_to_pypika/builders.py,sha256=jhccKPANMuxkLeBkKXUbAJZ0ouwtT0ShL0i1KwDsKhE,417
+sql_to_pypika/decorators.py,sha256=yBaztg-DzhAuEvVgUexs75sIZMaoYMAD_s8HvtlRwjo,410
+sql_to_pypika/evaluator.py,sha256=HBwPFPE9RPEv2wGhFlCMqsqmeq_tLw0g29tTBeg-rps,849
+sql_to_pypika/exceptions.py,sha256=Gu8EWdELDg_yhqVuXjoFy6K5sKzp-XRetAuq0i86zLA,49
+sql_to_pypika/lexer.py,sha256=plBU6HnwfstJ4AXZ15T67z5oFhge1Vt7wm7SmlNuqFo,4527
+sql_to_pypika/parser.py,sha256=pvjmVXJwXP_ZHdHR_9RneZRymfCK4L6NMH2gqVCxBJQ,12619
+sql_to_pypika-0.1.2.dist-info/LICENSE,sha256=73A-ToLDTunI7Y_Rb6PbXQWHzDfbqGWKX2jCS-f0T1o,1067
+sql_to_pypika-0.1.2.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+sql_to_pypika-0.1.2.dist-info/METADATA,sha256=vCWFvmoKD-SVghlGlVnx84i4i3a_HZnBMO84qbmR0gk,2434
+sql_to_pypika-0.1.2.dist-info/RECORD,,
