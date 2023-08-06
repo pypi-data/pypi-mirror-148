@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage{fontspec}
+\setmainfont{Brill}
+\usepackage{glossingtool}
+\usepackage{booktabs}
+\usepackage[style=authoryear]{biblatex}
+\addbibresource{% raw %}{{% endraw %}{{ cookiecutter.bibfile }}{% raw %}}{% endraw %}
+\def\tightlist{}
+
+\title{% raw %}{{% endraw %}{{ cookiecutter.project_title }}{% raw %}}{% endraw %}
+\author{% raw %}{{% endraw %}{{ cookiecutter.author }}{% raw %}}{% endraw %}
+
+\usepackage{hyperref}
+\usepackage[capitalise]{cleveref}
+\begin{document}
+\maketitle
+
+{{ cookiecutter.content }}
+
+% {% for id, title in cookiecutter.parts.list.items() %}
+% \input{% raw %}{{% endraw %}{{ id }}.tex{% raw %}}{% endraw %}
+% {% endfor %}
+
+\end{document}
