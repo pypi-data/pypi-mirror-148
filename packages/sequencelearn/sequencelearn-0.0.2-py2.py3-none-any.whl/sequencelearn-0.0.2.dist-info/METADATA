@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: sequencelearn
+Version: 0.0.2
+Summary: Scikit-Learn like Named Entity Recognition modules
+Home-page: https://github.com/onetask-ai/sequencelearn
+Author: Johannes Hötter
+Author-email: johannes.hoetter@onetask.ai
+License: UNKNOWN
+Keywords: onetask,machine learning,supervised learning,python
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+Requires-Dist: joblib (==1.1.0)
+Requires-Dist: numpy (==1.22.3)
+Requires-Dist: scikit-learn (==1.0.2)
+Requires-Dist: scipy (==1.8.0)
+Requires-Dist: threadpoolctl (==3.1.0)
+
+# sequence-learn
+Sklearn-like API for Sequence Learning tasks like Named Entity Recognition.
+
+`sequence-learn` takes as input embedded token lists, which you can produce using e.g. Spacy or NLTK for tokenization and Sklearn or Hugging Face for the embedding procedure. The labels are on token-level, i.e., for each token, you must provide some information in a simple list.
+
+## Example
+```python
+# some token-level embedding, e.g. based on character embeddings
+x = [[
+    [0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0],
+],[
+    [0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0],
+    [1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0]
+]]
+
+# token-level labels, where OUTSIDE means that this token contains no label
+y = [["OUTSIDE", "LABEL-1"],
+     ["LABEL-2","LABEL-1","OUTSIDE"]]
+```
+
+
