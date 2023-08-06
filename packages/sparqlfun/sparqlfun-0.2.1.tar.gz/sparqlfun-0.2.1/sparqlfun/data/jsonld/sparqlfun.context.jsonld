@@ -1,0 +1,574 @@
+{
+   "_comments": "Auto generated from sparqlfun.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-04-29T17:00:51\n    Schema: sparqlfun\n    \n    id: https://linkml.io/sparqlfun\n    description: SPARQL Templates\n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
+   "@context": {
+      "CHEBI": {
+         "@id": "http://purl.obolibrary.org/obo/CHEBI_",
+         "@prefix": true
+      },
+      "CL": {
+         "@id": "http://purl.obolibrary.org/obo/CL_",
+         "@prefix": true
+      },
+      "IAO": {
+         "@id": "http://purl.obolibrary.org/obo/IAO_",
+         "@prefix": true
+      },
+      "NCBITaxon": {
+         "@id": "http://purl.obolibrary.org/obo/NCBITaxon_",
+         "@prefix": true
+      },
+      "RO": {
+         "@id": "http://purl.obolibrary.org/obo/RO_",
+         "@prefix": true
+      },
+      "UBERON": {
+         "@id": "http://purl.obolibrary.org/obo/UBERON_",
+         "@prefix": true
+      },
+      "chebirel": "http://purl.obolibrary.org/obo/chebi#",
+      "chebivocab": "http://purl.obolibrary.org/obo/chebi/",
+      "dcterms": "http://purl.org/dc/terms/",
+      "linkml": "https://w3id.org/linkml/",
+      "oboInOwl": "http://www.geneontology.org/formats/oboInOwl#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "resultset": {
+         "@id": "https://linkml.io/sparqlfun/resultset",
+         "@prefix": true
+      },
+      "sh": "http://www.w3.org/ns/shacl#",
+      "sparqlfun": "https://linkml.io/sparqlfun/",
+      "sparqlfun_biolink": {
+         "@id": "https://linkml.io/sparqlfun/biolink",
+         "@prefix": true
+      },
+      "sparqlfun_chebi": "https://linkml.io/sparqlfun/chebi/",
+      "sparqlfun_omo": {
+         "@id": "https://linkml.io/sparqlfun/omo",
+         "@prefix": true
+      },
+      "sparqlfun_owl": {
+         "@id": "https://linkml.io/sparqlfun/owl",
+         "@prefix": true
+      },
+      "sparqlfun_rdf": "https://linkml.io/sparqlfun/rdf/",
+      "sparqlfun_ubergraph": {
+         "@id": "https://linkml.io/sparqlfun/ubergraph",
+         "@prefix": true
+      },
+      "ubergraph": "http://reasoner.renci.org/",
+      "@vocab": "https://linkml.io/sparqlfun/",
+      "ancestor": {
+         "@type": "@id",
+         "@id": "sparqlfun_ubergraph:ancestor"
+      },
+      "annotations": {
+         "@type": "@id",
+         "@id": "sparqlfun_owl:annotations"
+      },
+      "axiom_identifier": {
+         "@type": "@id",
+         "@id": "sparqlfun_owl:axiom_identifier"
+      },
+      "axiom_object": {
+         "@type": "@id",
+         "@id": "sparqlfun_owl:axiom_object"
+      },
+      "axiom_predicate": {
+         "@type": "@id",
+         "@id": "sparqlfun_owl:axiom_predicate"
+      },
+      "base": {
+         "@type": "@id",
+         "@id": "sh:namespace"
+      },
+      "subClassOf": {
+         "@type": "@id",
+         "@id": "rdfs:subClassOf"
+      },
+      "binding_key": {
+         "@id": "resultset:binding_key"
+      },
+      "binding_value": {
+         "@id": "resultset:binding_value"
+      },
+      "bindings": {
+         "@type": "@id",
+         "@id": "resultset:bindings"
+      },
+      "branching_part_of": {
+         "@type": "@id",
+         "@id": "RO:0002380"
+      },
+      "category": {
+         "@type": "@id",
+         "@id": "sparqlfun_rdf:category"
+      },
+      "charge": {
+         "@type": "@id",
+         "@id": "sparqlfun_chebi:charge"
+      },
+      "class1": {
+         "@type": "@id",
+         "@id": "sparqlfun_owl:class1"
+      },
+      "class2": {
+         "@type": "@id",
+         "@id": "sparqlfun_owl:class2"
+      },
+      "class_with_constraint": {
+         "@type": "@id",
+         "@id": "sparqlfun_ubergraph:class_with_constraint"
+      },
+      "object_charge": {
+         "@type": "xsd:integer"
+      },
+      "subject_charge": {
+         "@type": "xsd:integer"
+      },
+      "datatype": {
+         "@type": "@id",
+         "@id": "sparqlfun_rdf:datatype"
+      },
+      "definition": {
+         "@id": "IAO:0000115"
+      },
+      "descendant": {
+         "@type": "@id",
+         "@id": "sparqlfun_ubergraph:descendant"
+      },
+      "descendant_class": {
+         "@type": "@id",
+         "@id": "sparqlfun_owl:descendant_class"
+      },
+      "description": {
+         "@type": "@id",
+         "@id": "dcterms:description"
+      },
+      "direct_taxon": {
+         "@type": "@id",
+         "@id": "sparqlfun_ubergraph:direct_taxon"
+      },
+      "drains": {
+         "@type": "@id",
+         "@id": "RO:0002179"
+      },
+      "exact_synonyms": {
+         "@id": "oboInOwl:hasExactSynonym"
+      },
+      "filler": {
+         "@type": "@id",
+         "@id": "sparqlfun_owl:filler"
+      },
+      "graph": {
+         "@type": "@id",
+         "@id": "rdfs:isDefinedBy"
+      },
+      "id": "@id",
+      "is_direction_canonical": {
+         "@type": "xsd:boolean",
+         "@id": "sparqlfun_ubergraph:is_direction_canonical"
+      },
+      "label": {
+         "@id": "rdfs:label"
+      },
+      "label_regex": {
+         "@id": "sparqlfun_omo:label_regex"
+      },
+      "label_starts_with": {
+         "@id": "sparqlfun_omo:label_starts_with"
+      },
+      "language": {
+         "@id": "sparqlfun_rdf:language"
+      },
+      "xobject": {
+         "@type": "@id",
+         "@id": "rdf:xobject"
+      },
+      "node1": {
+         "@type": "@id",
+         "@id": "sparqlfun_ubergraph:node1"
+      },
+      "node1_candidates": {
+         "@type": "@id",
+         "@id": "sparqlfun_ubergraph:node1_candidates"
+      },
+      "node2": {
+         "@type": "@id",
+         "@id": "sparqlfun_ubergraph:node2"
+      },
+      "node2_candidates": {
+         "@type": "@id",
+         "@id": "sparqlfun_ubergraph:node2_candidates"
+      },
+      "node_object": {
+         "@type": "@id",
+         "@id": "sparqlfun_rdf:node_object"
+      },
+      "node_statements": {
+         "@type": "@id"
+      },
+      "nodes": {
+         "@type": "@id",
+         "@id": "sparqlfun_ubergraph:nodes"
+      },
+      "object": {
+         "@type": "@id",
+         "@id": "rdf:object"
+      },
+      "object_category": {
+         "@type": "@id",
+         "@id": "sparqlfun_biolink:object_category"
+      },
+      "object_category_inferred": {
+         "@type": "@id",
+         "@id": "sparqlfun_biolink:object_category_inferred"
+      },
+      "predicate": {
+         "@type": "@id",
+         "@id": "rdf:predicate"
+      },
+      "predicate1": {
+         "@type": "@id",
+         "@id": "sparqlfun_ubergraph:predicate1"
+      },
+      "predicate2": {
+         "@type": "@id",
+         "@id": "sparqlfun_ubergraph:predicate2"
+      },
+      "prefix": {
+         "@id": "sh:prefix"
+      },
+      "query_has_subclass_ancestor": {
+         "@type": "@id",
+         "@id": "sparqlfun_ubergraph:query_has_subclass_ancestor"
+      },
+      "query_template": {
+         "@id": "resultset:query_template"
+      },
+      "regex_slot": {
+         "@id": "sparqlfun_rdf:regex_slot"
+      },
+      "results": {
+         "@type": "@id",
+         "@id": "resultset:results"
+      },
+      "statements": {
+         "@type": "@id"
+      },
+      "subcategory": {
+         "@type": "@id"
+      },
+      "subject": {
+         "@type": "@id",
+         "@id": "rdf:subject"
+      },
+      "subject_category": {
+         "@type": "@id",
+         "@id": "sparqlfun_biolink:subject_category"
+      },
+      "subject_category_inferred": {
+         "@type": "@id",
+         "@id": "sparqlfun_biolink:subject_category_inferred"
+      },
+      "subject_predicate": {
+         "@type": "@id",
+         "@id": "sparqlfun_ubergraph:subject_predicate"
+      },
+      "supplies": {
+         "@type": "@id",
+         "@id": "RO:0002178"
+      },
+      "type": {
+         "@type": "@id",
+         "@id": "rdf:type"
+      },
+      "value": {
+         "@id": "sparqlfun_rdf:value"
+      },
+      "value_object": {
+         "@id": "sparqlfun_rdf:value_object"
+      },
+      "value_statements": {
+         "@type": "@id"
+      },
+      "xxresults": {
+         "@type": "@id",
+         "@id": "sparqlfun_omo:xxresults"
+      },
+      "AnatomicalEntity": {
+         "@id": "UBERON:0001062"
+      },
+      "Association": {
+         "@id": "sparqlfun_biolink:Association"
+      },
+      "AssociationWithInferredCategories": {
+         "@id": "sparqlfun_biolink:AssociationWithInferredCategories"
+      },
+      "BasicClass": {
+         "@id": "owl:Class"
+      },
+      "Binding": {
+         "@id": "resultset:Binding"
+      },
+      "BiolinkCategoryTriple": {
+         "@id": "sparqlfun_biolink:BiolinkCategoryTriple"
+      },
+      "BlankNode": {
+         "@id": "sparqlfun_rdf:BlankNode"
+      },
+      "BloodVessel": {
+         "@id": "UBERON:0001981"
+      },
+      "CellType": {
+         "@id": "CL:0000000"
+      },
+      "Charge": {
+         "@id": "sparqlfun_chebi:Charge"
+      },
+      "ChemicalEntity": {
+         "@id": "CHEBI:24431"
+      },
+      "ClassNode": {
+         "@id": "owl:Class"
+      },
+      "ClassTaxonExclusion": {
+         "@id": "sparqlfun_ubergraph:ClassTaxonExclusion"
+      },
+      "ClassTaxonExclusionViaNeverIn": {
+         "@id": "sparqlfun_ubergraph:ClassTaxonExclusionViaNeverIn"
+      },
+      "ClassTaxonExclusionViaOnlyIn": {
+         "@id": "sparqlfun_ubergraph:ClassTaxonExclusionViaOnlyIn"
+      },
+      "ClassTrait": {
+         "@id": "sparqlfun_rdf:ClassTrait"
+      },
+      "ConformsToStatement": {
+         "@id": "sparqlfun_omo:ConformsToStatement"
+      },
+      "ConformsToTriple": {
+         "@id": "sparqlfun_omo:ConformsToTriple"
+      },
+      "ConjugateBase": {
+         "@id": "sparqlfun_chebi:ConjugateBase"
+      },
+      "ConjugateBaseWithCharge": {
+         "@id": "sparqlfun_chebi:ConjugateBaseWithCharge"
+      },
+      "DefinitionTriple": {
+         "@id": "sparqlfun_omo:DefinitionTriple"
+      },
+      "DescribeEquivalentExpression": {
+         "@id": "sparqlfun_owl:DescribeEquivalentExpression"
+      },
+      "EquivalenceTripleMixin": {
+         "@id": "sparqlfun_owl:EquivalenceTripleMixin"
+      },
+      "GeneToGeneAssociation": {
+         "@id": "sparqlfun_biolink:GeneToGeneAssociation"
+      },
+      "GenericResult": {
+         "@id": "resultset:GenericResult"
+      },
+      "GraphClassNode": {
+         "@id": "sparqlfun_omo:GraphClassNode"
+      },
+      "InTaxonTriple": {
+         "@id": "sparqlfun_ubergraph:InTaxonTriple"
+      },
+      "IndividualTrait": {
+         "@id": "sparqlfun_rdf:IndividualTrait"
+      },
+      "IriNode": {
+         "@id": "sparqlfun_rdf:IriNode"
+      },
+      "IsAOrPartOf": {
+         "@id": "sparqlfun_ubergraph:IsAOrPartOf"
+      },
+      "NamedIndividualNode": {
+         "@id": "owl:NamedIndividual"
+      },
+      "NamedNodeToNamedNodeTriple": {
+         "@id": "sparqlfun_rdf:NamedNodeToNamedNodeTriple"
+      },
+      "NestedNodeObject": {
+         "@id": "rdf:Resource"
+      },
+      "NestedTriple": {
+         "@id": "rdf:Statement"
+      },
+      "NeverInTaxonTriple": {
+         "@id": "sparqlfun_ubergraph:NeverInTaxonTriple"
+      },
+      "Node": {
+         "@id": "sparqlfun_rdf:Node"
+      },
+      "NodeObject": {
+         "@id": "rdf:Resource"
+      },
+      "NodeOrLiteral": {
+         "@id": "linkml:Any"
+      },
+      "NodeToNodeStatement": {
+         "@id": "sparqlfun_rdf:NodeToNodeStatement"
+      },
+      "NodeToNodeTriple": {
+         "@id": "sparqlfun_rdf:NodeToNodeTriple"
+      },
+      "NodeToValueStatement": {
+         "@id": "sparqlfun_rdf:NodeToValueStatement"
+      },
+      "NodeToValueTriple": {
+         "@id": "sparqlfun_rdf:NodeToValueTriple"
+      },
+      "NodeTrait": {
+         "@id": "sparqlfun_rdf:NodeTrait"
+      },
+      "NonRedundantQuad": {
+         "@id": "sparqlfun_rdf:NonRedundantQuad"
+      },
+      "NormalizedInformationContentTriple": {
+         "@id": "sparqlfun_ubergraph:NormalizedInformationContentTriple"
+      },
+      "OboClass": {
+         "@id": "owl:Class"
+      },
+      "OboClassFiltered": {
+         "@id": "owl:Class"
+      },
+      "OboClassQuery": {
+         "@id": "sparqlfun_omo:OboClassQuery"
+      },
+      "OboClassWithCategory": {
+         "@id": "UBERON:0001062"
+      },
+      "OwlAnnotation": {
+         "@id": "sparqlfun_owl:OwlAnnotation"
+      },
+      "OwlEquivalentClassTriple": {
+         "@id": "sparqlfun_owl:OwlEquivalentClassTriple"
+      },
+      "OwlNamedEquivalentClassTriple": {
+         "@id": "sparqlfun_owl:OwlNamedEquivalentClassTriple"
+      },
+      "OwlTripleAnnotation": {
+         "@id": "sparqlfun_owl:OwlTripleAnnotation"
+      },
+      "OwlTripleWithAnnotationsTODO": {
+         "@id": "sparqlfun_owl:OwlTripleWithAnnotationsTODO"
+      },
+      "PairwiseCommonAncestor": {
+         "@id": "sparqlfun_ubergraph:PairwiseCommonAncestor"
+      },
+      "PairwiseCommonDescendant": {
+         "@id": "sparqlfun_ubergraph:PairwiseCommonDescendant"
+      },
+      "PairwiseCommonDescendantMatrix": {
+         "@id": "sparqlfun_ubergraph:PairwiseCommonDescendantMatrix"
+      },
+      "PairwiseCommonSubClassAncestor": {
+         "@id": "sparqlfun_ubergraph:PairwiseCommonSubClassAncestor"
+      },
+      "PairwiseCommonSubClassDescendant": {
+         "@id": "sparqlfun_ubergraph:PairwiseCommonSubClassDescendant"
+      },
+      "PairwiseCommonSubClassDescendantMatrix": {
+         "@id": "sparqlfun_ubergraph:PairwiseCommonSubClassDescendantMatrix"
+      },
+      "PairwiseMostRecentCommonAncestor": {
+         "@id": "sparqlfun_ubergraph:PairwiseMostRecentCommonAncestor"
+      },
+      "PairwiseMostRecentCommonSubClassAncestor": {
+         "@id": "sparqlfun_ubergraph:PairwiseMostRecentCommonSubClassAncestor"
+      },
+      "Prefix": {
+         "@id": "sh:PrefixDeclaration"
+      },
+      "PropertyNode": {
+         "@id": "owl:Property"
+      },
+      "PropertyTrait": {
+         "@id": "sparqlfun_rdf:PropertyTrait"
+      },
+      "Quad": {
+         "@id": "sparqlfun_rdf:Quad"
+      },
+      "RdfTypeStatement": {
+         "@id": "sparqlfun_rdf:RdfTypeStatement"
+      },
+      "RdfTypeTriple": {
+         "@id": "sparqlfun_rdf:RdfTypeTriple"
+      },
+      "RdfsDomainTriple": {
+         "@id": "sparqlfun_rdf:RdfsDomainTriple"
+      },
+      "RdfsLabelTriple": {
+         "@id": "sparqlfun_rdf:RdfsLabelTriple"
+      },
+      "RdfsRangeTriple": {
+         "@id": "sparqlfun_rdf:RdfsRangeTriple"
+      },
+      "RdfsSubclassOfNamedTriple": {
+         "@id": "sparqlfun_rdf:RdfsSubclassOfNamedTriple"
+      },
+      "RdfsSubclassOfTriple": {
+         "@id": "sparqlfun_rdf:RdfsSubclassOfTriple"
+      },
+      "RdfsSubpropertyOfTriple": {
+         "@id": "sparqlfun_rdf:RdfsSubpropertyOfTriple"
+      },
+      "RedundantRdfsSubclassOfTriple": {
+         "@id": "sparqlfun_rdf:RedundantRdfsSubclassOfTriple"
+      },
+      "RelationGraphQuad": {
+         "@id": "sparqlfun_rdf:RelationGraphQuad"
+      },
+      "ResultSet": {
+         "@id": "resultset:ResultSet"
+      },
+      "SetwiseCommonSubClassAncestor": {
+         "@id": "sparqlfun_ubergraph:SetwiseCommonSubClassAncestor"
+      },
+      "SetwiseMostRecentCommonSubClassAncestor": {
+         "@id": "sparqlfun_ubergraph:SetwiseMostRecentCommonSubClassAncestor"
+      },
+      "SomeValuesFromRestriction": {
+         "@id": "owl:Restriction"
+      },
+      "Statement": {
+         "@id": "sparqlfun_rdf:Statement"
+      },
+      "SubClassCountTriple": {
+         "@id": "sparqlfun_ubergraph:SubClassCountTriple"
+      },
+      "SubclassOfSomeValuesFrom": {
+         "@id": "sparqlfun_owl:SubclassOfSomeValuesFrom"
+      },
+      "TaxonApplicable": {
+         "@id": "sparqlfun_ubergraph:TaxonApplicable"
+      },
+      "TaxonApplicableClass": {
+         "@id": "sparqlfun_ubergraph:TaxonApplicableClass"
+      },
+      "TaxonClass": {
+         "@id": "sparqlfun_ubergraph:TaxonClass"
+      },
+      "TraversalBasedPairwiseDisjointnessViolation": {
+         "@id": "sparqlfun_owl:TraversalBasedPairwiseDisjointnessViolation"
+      },
+      "Triple": {
+         "@id": "rdf:Statement"
+      },
+      "TypedNode": {
+         "@id": "sparqlfun_rdf:TypedNode"
+      },
+      "UbergraphQuad": {
+         "@id": "sparqlfun_ubergraph:UbergraphQuad"
+      },
+      "UbergraphTaxonClass": {
+         "@id": "sparqlfun_ubergraph:UbergraphTaxonClass"
+      }
+   }
+}

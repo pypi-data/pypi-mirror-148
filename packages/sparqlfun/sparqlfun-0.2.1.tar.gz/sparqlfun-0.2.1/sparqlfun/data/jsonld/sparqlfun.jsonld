@@ -1,0 +1,4263 @@
+{
+  "name": "sparqlfun",
+  "description": "SPARQL Templates",
+  "title": "SPARQLFun",
+  "see_also": [
+    "https://github.com/cmungall/semantic-sql"
+  ],
+  "id": "https://linkml.io/sparqlfun",
+  "imports": [
+    "linkml:types",
+    "resultset",
+    "rdf",
+    "owl",
+    "relation_graph",
+    "ro",
+    "omo",
+    "ubergraph",
+    "chebi",
+    "uberon",
+    "biolink"
+  ],
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "prefixes": [
+    {
+      "prefix_prefix": "sparqlfun",
+      "prefix_reference": "https://linkml.io/sparqlfun/"
+    },
+    {
+      "prefix_prefix": "linkml",
+      "prefix_reference": "https://w3id.org/linkml/"
+    },
+    {
+      "prefix_prefix": "IAO",
+      "prefix_reference": "http://purl.obolibrary.org/obo/IAO_"
+    },
+    {
+      "prefix_prefix": "NCBITaxon",
+      "prefix_reference": "http://purl.obolibrary.org/obo/NCBITaxon_"
+    },
+    {
+      "prefix_prefix": "RO",
+      "prefix_reference": "http://purl.obolibrary.org/obo/RO_"
+    },
+    {
+      "prefix_prefix": "ubergraph",
+      "prefix_reference": "http://reasoner.renci.org/"
+    },
+    {
+      "prefix_prefix": "chebirel",
+      "prefix_reference": "http://purl.obolibrary.org/obo/chebi#"
+    },
+    {
+      "prefix_prefix": "chebivocab",
+      "prefix_reference": "http://purl.obolibrary.org/obo/chebi/"
+    }
+  ],
+  "default_curi_maps": [
+    "semweb_context",
+    "obo_context",
+    "idot_context"
+  ],
+  "default_prefix": "sparqlfun",
+  "default_range": "node",
+  "subsets": [
+    {
+      "name": "export",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/Export",
+      "description": "Used to indicate a table/class that should be dumped as part of the export of a db",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "@type": "SubsetDefinition"
+    },
+    {
+      "name": "base_table",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/BaseTable",
+      "description": "Indicates the class/table is typically not constructed from a view",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "@type": "SubsetDefinition"
+    }
+  ],
+  "types": [
+    {
+      "name": "string",
+      "definition_uri": "https://w3id.org/linkml/String",
+      "description": "A character string",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "integer",
+      "definition_uri": "https://w3id.org/linkml/Integer",
+      "description": "An integer",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "int",
+      "uri": "http://www.w3.org/2001/XMLSchema#integer",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "boolean",
+      "definition_uri": "https://w3id.org/linkml/Boolean",
+      "description": "A binary (true or false) value",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "Bool",
+      "uri": "http://www.w3.org/2001/XMLSchema#boolean",
+      "repr": "bool",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "float",
+      "definition_uri": "https://w3id.org/linkml/Float",
+      "description": "A real number that conforms to the xsd:float specification",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "float",
+      "uri": "http://www.w3.org/2001/XMLSchema#float",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "double",
+      "definition_uri": "https://w3id.org/linkml/Double",
+      "description": "A real number that conforms to the xsd:double specification",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "float",
+      "uri": "http://www.w3.org/2001/XMLSchema#double",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "decimal",
+      "definition_uri": "https://w3id.org/linkml/Decimal",
+      "description": "A real number with arbitrary precision that conforms to the xsd:decimal specification",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "Decimal",
+      "uri": "http://www.w3.org/2001/XMLSchema#decimal",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "time",
+      "definition_uri": "https://w3id.org/linkml/Time",
+      "description": "A time object represents a (local) time of day, independent of any particular day",
+      "notes": [
+        "URI is dateTime because OWL reasoners don't work with straight date or time"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "XSDTime",
+      "uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "date",
+      "definition_uri": "https://w3id.org/linkml/Date",
+      "description": "a date (year, month and day) in an idealized calendar",
+      "notes": [
+        "URI is dateTime because OWL reasoners don't work with straight date or time"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "XSDDate",
+      "uri": "http://www.w3.org/2001/XMLSchema#date",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "datetime",
+      "definition_uri": "https://w3id.org/linkml/Datetime",
+      "description": "The combination of a date and time",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "XSDDateTime",
+      "uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "uriorcurie",
+      "definition_uri": "https://w3id.org/linkml/Uriorcurie",
+      "description": "a URI or a CURIE",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "URIorCURIE",
+      "uri": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "uri",
+      "definition_uri": "https://w3id.org/linkml/Uri",
+      "description": "a complete URI",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "URI",
+      "uri": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "ncname",
+      "definition_uri": "https://w3id.org/linkml/Ncname",
+      "description": "Prefix part of CURIE",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "NCName",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "objectidentifier",
+      "definition_uri": "https://w3id.org/linkml/Objectidentifier",
+      "description": "A URI or CURIE that represents an object in the model.",
+      "comments": [
+        "Used for inheritence and type checking"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "ElementIdentifier",
+      "uri": "http://www.w3.org/ns/shex#iri",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "nodeidentifier",
+      "definition_uri": "https://w3id.org/linkml/Nodeidentifier",
+      "description": "A URI, CURIE or BNODE that represents a node in a model.",
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "NodeIdentifier",
+      "uri": "http://www.w3.org/ns/shex#nonLiteral",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "node_id_type",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/NodeIdType",
+      "description": "IDs are either CURIEs, IRI, or blank nodes. IRIs are wrapped in <>s to distinguish them from CURIEs, but in general it is good practice to populate the [prefixes][Prefixes.md] table such that they are shortened to CURIEs. Blank nodes are ids starting with `_:`.",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "see_also": [
+        "https://github.com/ontodev/rdftab.rs/issues/18"
+      ],
+      "typeof": "uriorcurie",
+      "base": "URIorCURIE",
+      "uri": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "literal_as_string_type",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/LiteralAsStringType",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "typeof": "string",
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "@type": "TypeDefinition"
+    }
+  ],
+  "enums": [
+    {
+      "name": "UberGraphSourceEnum",
+      "definition_uri": "https://linkml.io/sparqlfun/relation_graph/UberGraphSourceEnum",
+      "from_schema": "https://linkml.io/sparqlfun/relation_graph"
+    },
+    {
+      "name": "BloodVesselSubcategory",
+      "definition_uri": "https://linkml.io/sparqlfun/uberonBloodVesselSubcategory",
+      "from_schema": "https://linkml.io/sparqlfun/uberon",
+      "permissible_values": [
+        {
+          "text": "artery",
+          "meaning": "UBERON:0001637"
+        },
+        {
+          "text": "vein",
+          "meaning": "UBERON:0001638"
+        }
+      ]
+    }
+  ],
+  "slots": [
+    {
+      "name": "results",
+      "definition_uri": "https://linkml.io/sparqlfun/resultsetresults",
+      "from_schema": "https://linkml.io/sparqlfun/resultset",
+      "slot_uri": "https://linkml.io/sparqlfun/resultsetresults",
+      "multivalued": true,
+      "inlined": true,
+      "owner": "DeprecatedOboClassQuery",
+      "domain_of": [
+        "ResultSet",
+        "DescribeEquivalentExpression",
+        "OboClassQuery",
+        "DeprecatedOboClassQuery"
+      ],
+      "range": "GenericResult",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "binding_key",
+      "definition_uri": "https://linkml.io/sparqlfun/resultsetbinding_key",
+      "from_schema": "https://linkml.io/sparqlfun/resultset",
+      "slot_uri": "https://linkml.io/sparqlfun/resultsetbinding_key",
+      "key": true,
+      "owner": "Binding",
+      "domain_of": [
+        "Binding"
+      ],
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "binding_value",
+      "definition_uri": "https://linkml.io/sparqlfun/resultsetbinding_value",
+      "from_schema": "https://linkml.io/sparqlfun/resultset",
+      "slot_uri": "https://linkml.io/sparqlfun/resultsetbinding_value",
+      "owner": "Binding",
+      "domain_of": [
+        "Binding"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "query_template",
+      "definition_uri": "https://linkml.io/sparqlfun/resultsetquery_template",
+      "from_schema": "https://linkml.io/sparqlfun/resultset",
+      "slot_uri": "https://linkml.io/sparqlfun/resultsetquery_template",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "bindings",
+      "definition_uri": "https://linkml.io/sparqlfun/resultsetbindings",
+      "from_schema": "https://linkml.io/sparqlfun/resultset",
+      "slot_uri": "https://linkml.io/sparqlfun/resultsetbindings",
+      "multivalued": true,
+      "inlined": true,
+      "range": "Binding",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "id",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/id",
+      "description": "An identifier for an element. Note blank node ids are not unique across databases",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "slot_uri": "https://linkml.io/sparqlfun/rdf/id",
+      "identifier": true,
+      "owner": "Node",
+      "domain_of": [
+        "Node"
+      ],
+      "range": "node_id_type",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "subject",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/subject",
+      "mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject",
+      "owner": "DescribeEquivalentExpression",
+      "domain_of": [
+        "Triple",
+        "Quad",
+        "SomeValuesFromRestriction",
+        "DescribeEquivalentExpression"
+      ],
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "predicate",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/predicate",
+      "mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate",
+      "owner": "OwlAnnotation",
+      "domain_of": [
+        "Triple",
+        "Quad",
+        "SomeValuesFromRestriction",
+        "OwlAnnotation"
+      ],
+      "range": "PropertyNode",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "object",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/object",
+      "mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#object"
+      ],
+      "description": "a literal or node representing the object of the triple",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "abstract": true,
+      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#object",
+      "inlined": true,
+      "owner": "OwlAnnotation",
+      "domain_of": [
+        "Triple",
+        "Quad",
+        "OwlAnnotation"
+      ],
+      "range": "NodeOrLiteral",
+      "exactly_one_of": [
+        {
+          "range": "string",
+          "@type": "AnonymousSlotExpression"
+        },
+        {
+          "range": "Node",
+          "@type": "AnonymousSlotExpression"
+        }
+      ],
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "value_object",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/value_object",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "object",
+      "slot_uri": "https://linkml.io/sparqlfun/rdf/value_object",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "node_object",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/node_object",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "object",
+      "slot_uri": "https://linkml.io/sparqlfun/rdf/node_object",
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "graph",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/graph",
+      "mappings": [
+        "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+      ],
+      "description": "Graph to which the triple belongs",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "slot_uri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+      "owner": "GraphClassNode",
+      "domain_of": [
+        "Quad",
+        "GraphClassNode"
+      ],
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "statements",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/statements",
+      "mappings": [
+        "https://linkml.io/sparqlfun/statements"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "slot_uri": "https://linkml.io/sparqlfun/statements",
+      "multivalued": true,
+      "inlined": true,
+      "range": "Statement",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "value_statements",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/value_statements",
+      "mappings": [
+        "https://linkml.io/sparqlfun/value_statements"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "statements",
+      "slot_uri": "https://linkml.io/sparqlfun/value_statements",
+      "multivalued": true,
+      "inlined": true,
+      "owner": "NestedNodeObject",
+      "domain_of": [
+        "Statement",
+        "NodeObject",
+        "NestedNodeObject"
+      ],
+      "range": "NodeToValueStatement",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "node_statements",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/node_statements",
+      "mappings": [
+        "https://linkml.io/sparqlfun/node_statements"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "statements",
+      "slot_uri": "https://linkml.io/sparqlfun/node_statements",
+      "multivalued": true,
+      "inlined": true,
+      "owner": "NestedNodeObject",
+      "domain_of": [
+        "Statement",
+        "NodeObject",
+        "NestedNodeObject"
+      ],
+      "range": "NodeToNodeStatement",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "type",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/type",
+      "mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "owner": "TypedNode",
+      "domain_of": [
+        "TypedNode"
+      ],
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "label",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/label",
+      "mappings": [
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "slot_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "owner": "OboClass",
+      "domain_of": [
+        "OboClass"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "category",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/category",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "slot_uri": "https://linkml.io/sparqlfun/rdf/category",
+      "owner": "OboClassWithCategory",
+      "domain_of": [
+        "OboClassWithCategory"
+      ],
+      "range": "ClassNode",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "datatype",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/datatype",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "slot_uri": "https://linkml.io/sparqlfun/rdf/datatype",
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "value",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/value",
+      "close_mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#object"
+      ],
+      "description": "Note the range of this slot is always a string. Only used the triple represents a literal assertion",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "slot_uri": "https://linkml.io/sparqlfun/rdf/value",
+      "range": "literal_as_string_type",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "language",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/language",
+      "todos": [
+        "use an enum"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "slot_uri": "https://linkml.io/sparqlfun/rdf/language",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "prefix",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/prefix",
+      "mappings": [
+        "http://www.w3.org/ns/shacl#prefix"
+      ],
+      "description": "A standardized prefix such as 'GO' or 'rdf' or 'FlyBase'",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "slot_uri": "http://www.w3.org/ns/shacl#prefix",
+      "owner": "Prefix",
+      "domain_of": [
+        "Prefix"
+      ],
+      "range": "ncname",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "base",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/base",
+      "mappings": [
+        "http://www.w3.org/ns/shacl#namespace"
+      ],
+      "description": "The base URI a prefix will expand to",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "slot_uri": "http://www.w3.org/ns/shacl#namespace",
+      "owner": "Prefix",
+      "domain_of": [
+        "Prefix"
+      ],
+      "range": "uri",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "description",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/description",
+      "mappings": [
+        "http://purl.org/dc/terms/description"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "slot_uri": "http://purl.org/dc/terms/description",
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "regex_slot",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/regex_slot",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "slot_uri": "https://linkml.io/sparqlfun/rdf/regex_slot",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "class1",
+      "definition_uri": "https://linkml.io/sparqlfun/owlclass1",
+      "from_schema": "https://linkml.io/sparqlfun/owl",
+      "slot_uri": "https://linkml.io/sparqlfun/owlclass1",
+      "owner": "TraversalBasedPairwiseDisjointnessViolation",
+      "domain_of": [
+        "TraversalBasedPairwiseDisjointnessViolation"
+      ],
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "class2",
+      "definition_uri": "https://linkml.io/sparqlfun/owlclass2",
+      "from_schema": "https://linkml.io/sparqlfun/owl",
+      "slot_uri": "https://linkml.io/sparqlfun/owlclass2",
+      "owner": "TraversalBasedPairwiseDisjointnessViolation",
+      "domain_of": [
+        "TraversalBasedPairwiseDisjointnessViolation"
+      ],
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "descendant_class",
+      "definition_uri": "https://linkml.io/sparqlfun/owldescendant_class",
+      "from_schema": "https://linkml.io/sparqlfun/owl",
+      "slot_uri": "https://linkml.io/sparqlfun/owldescendant_class",
+      "owner": "TraversalBasedPairwiseDisjointnessViolation",
+      "domain_of": [
+        "TraversalBasedPairwiseDisjointnessViolation"
+      ],
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "axiom_identifier",
+      "definition_uri": "https://linkml.io/sparqlfun/owlaxiom_identifier",
+      "from_schema": "https://linkml.io/sparqlfun/owl",
+      "slot_uri": "https://linkml.io/sparqlfun/owlaxiom_identifier",
+      "owner": "OwlTripleAnnotation",
+      "domain_of": [
+        "OwlTripleAnnotation"
+      ],
+      "range": "BlankNode",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "filler",
+      "definition_uri": "https://linkml.io/sparqlfun/owlfiller",
+      "from_schema": "https://linkml.io/sparqlfun/owl",
+      "slot_uri": "https://linkml.io/sparqlfun/owlfiller",
+      "owner": "SomeValuesFromRestriction",
+      "domain_of": [
+        "SomeValuesFromRestriction"
+      ],
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "axiom_predicate",
+      "definition_uri": "https://linkml.io/sparqlfun/owlaxiom_predicate",
+      "from_schema": "https://linkml.io/sparqlfun/owl",
+      "slot_uri": "https://linkml.io/sparqlfun/owlaxiom_predicate",
+      "owner": "OwlTripleAnnotation",
+      "domain_of": [
+        "OwlTripleAnnotation"
+      ],
+      "range": "PropertyNode",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "axiom_object",
+      "definition_uri": "https://linkml.io/sparqlfun/owlaxiom_object",
+      "from_schema": "https://linkml.io/sparqlfun/owl",
+      "slot_uri": "https://linkml.io/sparqlfun/owlaxiom_object",
+      "inlined": true,
+      "owner": "OwlTripleAnnotation",
+      "domain_of": [
+        "OwlTripleAnnotation"
+      ],
+      "range": "NodeOrLiteral",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "annotations",
+      "definition_uri": "https://linkml.io/sparqlfun/owlannotations",
+      "from_schema": "https://linkml.io/sparqlfun/owl",
+      "slot_uri": "https://linkml.io/sparqlfun/owlannotations",
+      "inlined": true,
+      "owner": "OwlTripleWithAnnotationsTODO",
+      "domain_of": [
+        "OwlTripleWithAnnotationsTODO"
+      ],
+      "range": "OwlAnnotation",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "label_regex",
+      "definition_uri": "https://linkml.io/sparqlfun/omolabel_regex",
+      "from_schema": "https://linkml.io/sparqlfun/omo",
+      "mixins": [
+        "regex_slot"
+      ],
+      "slot_uri": "https://linkml.io/sparqlfun/omolabel_regex",
+      "owner": "DeprecatedOboClassQuery",
+      "domain_of": [
+        "OboClassQuery",
+        "DeprecatedOboClassQuery"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "label_starts_with",
+      "definition_uri": "https://linkml.io/sparqlfun/omolabel_starts_with",
+      "from_schema": "https://linkml.io/sparqlfun/omo",
+      "slot_uri": "https://linkml.io/sparqlfun/omolabel_starts_with",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "xxresults",
+      "definition_uri": "https://linkml.io/sparqlfun/omoxxresults",
+      "from_schema": "https://linkml.io/sparqlfun/omo",
+      "slot_uri": "https://linkml.io/sparqlfun/omoxxresults",
+      "multivalued": true,
+      "inlined": true,
+      "inlined_as_list": true,
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "definition",
+      "definition_uri": "https://linkml.io/sparqlfun/omodefinition",
+      "mappings": [
+        "http://purl.obolibrary.org/obo/IAO_0000115"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/omo",
+      "slot_uri": "http://purl.obolibrary.org/obo/IAO_0000115",
+      "owner": "OboClassFiltered",
+      "domain_of": [
+        "OboClass",
+        "OboClassFiltered"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "exact_synonyms",
+      "definition_uri": "https://linkml.io/sparqlfun/omoexact_synonyms",
+      "mappings": [
+        "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/omo",
+      "slot_uri": "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym",
+      "multivalued": true,
+      "owner": "OboClassFiltered",
+      "domain_of": [
+        "OboClass",
+        "OboClassFiltered"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "ancestor",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphancestor",
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "slot_uri": "https://linkml.io/sparqlfun/ubergraphancestor",
+      "owner": "PairwiseMostRecentCommonSubClassAncestor",
+      "domain_of": [
+        "SetwiseCommonSubClassAncestor",
+        "SetwiseMostRecentCommonSubClassAncestor",
+        "PairwiseCommonAncestor",
+        "PairwiseMostRecentCommonAncestor",
+        "PairwiseMostRecentCommonSubClassAncestor"
+      ],
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "descendant",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphdescendant",
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "slot_uri": "https://linkml.io/sparqlfun/ubergraphdescendant",
+      "owner": "PairwiseCommonDescendantMatrix",
+      "domain_of": [
+        "PairwiseCommonDescendant",
+        "PairwiseCommonDescendantMatrix"
+      ],
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "node1",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphnode1",
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "slot_uri": "https://linkml.io/sparqlfun/ubergraphnode1",
+      "owner": "PairwiseCommonDescendantMatrix",
+      "domain_of": [
+        "PairwiseCommonAncestor",
+        "PairwiseMostRecentCommonAncestor",
+        "PairwiseMostRecentCommonSubClassAncestor",
+        "PairwiseCommonDescendant",
+        "PairwiseCommonDescendantMatrix"
+      ],
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "node2",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphnode2",
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "slot_uri": "https://linkml.io/sparqlfun/ubergraphnode2",
+      "owner": "PairwiseCommonDescendantMatrix",
+      "domain_of": [
+        "PairwiseCommonAncestor",
+        "PairwiseMostRecentCommonAncestor",
+        "PairwiseMostRecentCommonSubClassAncestor",
+        "PairwiseCommonDescendant",
+        "PairwiseCommonDescendantMatrix"
+      ],
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "is_direction_canonical",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphis_direction_canonical",
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "slot_uri": "https://linkml.io/sparqlfun/ubergraphis_direction_canonical",
+      "owner": "PairwiseCommonDescendant",
+      "domain_of": [
+        "PairwiseCommonDescendant"
+      ],
+      "range": "boolean",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "node1_candidates",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphnode1_candidates",
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "slot_uri": "https://linkml.io/sparqlfun/ubergraphnode1_candidates",
+      "multivalued": true,
+      "owner": "PairwiseCommonDescendantMatrix",
+      "domain_of": [
+        "PairwiseCommonDescendantMatrix"
+      ],
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "node2_candidates",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphnode2_candidates",
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "slot_uri": "https://linkml.io/sparqlfun/ubergraphnode2_candidates",
+      "multivalued": true,
+      "owner": "PairwiseCommonDescendantMatrix",
+      "domain_of": [
+        "PairwiseCommonDescendantMatrix"
+      ],
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "nodes",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphnodes",
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "slot_uri": "https://linkml.io/sparqlfun/ubergraphnodes",
+      "multivalued": true,
+      "owner": "SetwiseMostRecentCommonSubClassAncestor",
+      "domain_of": [
+        "SetwiseCommonSubClassAncestor",
+        "SetwiseMostRecentCommonSubClassAncestor"
+      ],
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "predicate1",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphpredicate1",
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "is_a": "predicate",
+      "slot_uri": "https://linkml.io/sparqlfun/ubergraphpredicate1",
+      "owner": "PairwiseCommonDescendantMatrix",
+      "domain_of": [
+        "PairwiseCommonAncestor",
+        "PairwiseMostRecentCommonAncestor",
+        "PairwiseCommonDescendant",
+        "PairwiseCommonDescendantMatrix"
+      ],
+      "range": "PropertyNode",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "predicate2",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphpredicate2",
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "is_a": "predicate",
+      "slot_uri": "https://linkml.io/sparqlfun/ubergraphpredicate2",
+      "owner": "PairwiseCommonDescendantMatrix",
+      "domain_of": [
+        "PairwiseCommonAncestor",
+        "PairwiseMostRecentCommonAncestor",
+        "PairwiseCommonDescendant",
+        "PairwiseCommonDescendantMatrix"
+      ],
+      "range": "PropertyNode",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "subject_predicate",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphsubject_predicate",
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "slot_uri": "https://linkml.io/sparqlfun/ubergraphsubject_predicate",
+      "owner": "ClassTaxonExclusion",
+      "domain_of": [
+        "ClassTaxonExclusionViaNeverIn",
+        "ClassTaxonExclusionViaOnlyIn",
+        "ClassTaxonExclusion"
+      ],
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "class_with_constraint",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphclass_with_constraint",
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "slot_uri": "https://linkml.io/sparqlfun/ubergraphclass_with_constraint",
+      "owner": "ClassTaxonExclusion",
+      "domain_of": [
+        "ClassTaxonExclusionViaNeverIn",
+        "ClassTaxonExclusionViaOnlyIn",
+        "ClassTaxonExclusion"
+      ],
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "direct_taxon",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphdirect_taxon",
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "slot_uri": "https://linkml.io/sparqlfun/ubergraphdirect_taxon",
+      "owner": "ClassTaxonExclusion",
+      "domain_of": [
+        "ClassTaxonExclusionViaNeverIn",
+        "ClassTaxonExclusionViaOnlyIn",
+        "ClassTaxonExclusion"
+      ],
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "query_has_subclass_ancestor",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphquery_has_subclass_ancestor",
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "slot_uri": "https://linkml.io/sparqlfun/ubergraphquery_has_subclass_ancestor",
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "charge",
+      "definition_uri": "https://linkml.io/sparqlfun/chebi/charge",
+      "from_schema": "https://linkml.io/sparqlfun/chebi",
+      "slot_uri": "https://linkml.io/sparqlfun/chebi/charge",
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "subcategory",
+      "definition_uri": "https://linkml.io/sparqlfun/uberonsubcategory",
+      "mappings": [
+        "https://linkml.io/sparqlfun/subcategory"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/uberon",
+      "slot_uri": "https://linkml.io/sparqlfun/subcategory",
+      "owner": "BloodVessel",
+      "domain_of": [
+        "BloodVessel"
+      ],
+      "range": "ClassNode",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "supplies",
+      "definition_uri": "https://linkml.io/sparqlfun/uberonsupplies",
+      "mappings": [
+        "http://purl.obolibrary.org/obo/RO_0002178"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/uberon",
+      "slot_uri": "http://purl.obolibrary.org/obo/RO_0002178",
+      "owner": "BloodVessel",
+      "domain_of": [
+        "BloodVessel"
+      ],
+      "range": "AnatomicalEntity",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "drains",
+      "definition_uri": "https://linkml.io/sparqlfun/uberondrains",
+      "mappings": [
+        "http://purl.obolibrary.org/obo/RO_0002179"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/uberon",
+      "slot_uri": "http://purl.obolibrary.org/obo/RO_0002179",
+      "owner": "BloodVessel",
+      "domain_of": [
+        "BloodVessel"
+      ],
+      "range": "AnatomicalEntity",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "branching_part_of",
+      "definition_uri": "https://linkml.io/sparqlfun/uberonbranching_part_of",
+      "mappings": [
+        "http://purl.obolibrary.org/obo/RO_0002380"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/uberon",
+      "slot_uri": "http://purl.obolibrary.org/obo/RO_0002380",
+      "owner": "BloodVessel",
+      "domain_of": [
+        "BloodVessel"
+      ],
+      "range": "AnatomicalEntity",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "subject_category",
+      "definition_uri": "https://linkml.io/sparqlfun/biolinksubject_category",
+      "from_schema": "https://linkml.io/sparqlfun/biolink",
+      "is_a": "category",
+      "slot_uri": "https://linkml.io/sparqlfun/biolinksubject_category",
+      "owner": "AssociationWithInferredCategories",
+      "domain_of": [
+        "Association",
+        "AssociationWithInferredCategories"
+      ],
+      "range": "ClassNode",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "object_category",
+      "definition_uri": "https://linkml.io/sparqlfun/biolinkobject_category",
+      "from_schema": "https://linkml.io/sparqlfun/biolink",
+      "is_a": "category",
+      "slot_uri": "https://linkml.io/sparqlfun/biolinkobject_category",
+      "owner": "AssociationWithInferredCategories",
+      "domain_of": [
+        "Association",
+        "AssociationWithInferredCategories"
+      ],
+      "range": "ClassNode",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "subject_category_inferred",
+      "definition_uri": "https://linkml.io/sparqlfun/biolinksubject_category_inferred",
+      "from_schema": "https://linkml.io/sparqlfun/biolink",
+      "is_a": "category",
+      "slot_uri": "https://linkml.io/sparqlfun/biolinksubject_category_inferred",
+      "range": "ClassNode",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "object_category_inferred",
+      "definition_uri": "https://linkml.io/sparqlfun/biolinkobject_category_inferred",
+      "from_schema": "https://linkml.io/sparqlfun/biolink",
+      "is_a": "category",
+      "slot_uri": "https://linkml.io/sparqlfun/biolinkobject_category_inferred",
+      "range": "ClassNode",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "nestedTriple__xobject",
+      "mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#xobject"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun",
+      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#xobject",
+      "alias": "xobject",
+      "owner": "NestedTriple",
+      "domain_of": [
+        "NestedTriple"
+      ],
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "basicClass__subClassOf",
+      "mappings": [
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun",
+      "slot_uri": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "multivalued": true,
+      "alias": "subClassOf",
+      "owner": "BasicClass",
+      "domain_of": [
+        "BasicClass"
+      ],
+      "range": "ClassNode",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "conjugateBaseWithCharge__subject_charge",
+      "from_schema": "https://linkml.io/sparqlfun",
+      "slot_uri": "https://linkml.io/sparqlfun/subject_charge",
+      "alias": "subject_charge",
+      "owner": "ConjugateBaseWithCharge",
+      "domain_of": [
+        "ConjugateBaseWithCharge"
+      ],
+      "range": "integer",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "conjugateBaseWithCharge__object_charge",
+      "from_schema": "https://linkml.io/sparqlfun",
+      "slot_uri": "https://linkml.io/sparqlfun/object_charge",
+      "alias": "object_charge",
+      "owner": "ConjugateBaseWithCharge",
+      "domain_of": [
+        "ConjugateBaseWithCharge"
+      ],
+      "range": "integer",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "statement_node_statements",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/node_statements",
+      "mappings": [
+        "https://linkml.io/sparqlfun/node_statements"
+      ],
+      "description": "statements about the quad where the object is a node",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "node_statements",
+      "domain": "Statement",
+      "slot_uri": "https://linkml.io/sparqlfun/node_statements",
+      "multivalued": true,
+      "inlined": true,
+      "alias": "node_statements",
+      "owner": "Statement",
+      "domain_of": [
+        "Statement"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "node_statements",
+      "range": "NodeToNodeStatement",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "statement_value_statements",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/value_statements",
+      "mappings": [
+        "https://linkml.io/sparqlfun/value_statements"
+      ],
+      "description": "statements about the quad where the object is a literal",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "value_statements",
+      "domain": "Statement",
+      "slot_uri": "https://linkml.io/sparqlfun/value_statements",
+      "multivalued": true,
+      "inlined": true,
+      "alias": "value_statements",
+      "owner": "Statement",
+      "domain_of": [
+        "Statement"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "value_statements",
+      "range": "NodeToValueStatement",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "node_to_node_triple_object",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/object",
+      "mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#object"
+      ],
+      "description": "a literal or node representing the object of the triple",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "object",
+      "abstract": true,
+      "domain": "NodeToNodeTriple",
+      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#object",
+      "alias": "object",
+      "owner": "NodeToNodeTriple",
+      "domain_of": [
+        "NodeToNodeTriple"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "object",
+      "range": "Node",
+      "exactly_one_of": [
+        {
+          "range": "string",
+          "@type": "AnonymousSlotExpression"
+        },
+        {
+          "range": "Node",
+          "@type": "AnonymousSlotExpression"
+        }
+      ],
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "node_to_node_statement_object",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/object",
+      "mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#object"
+      ],
+      "description": "a literal or node representing the object of the triple",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "object",
+      "abstract": true,
+      "domain": "NodeToNodeStatement",
+      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#object",
+      "alias": "object",
+      "owner": "NodeToNodeStatement",
+      "domain_of": [
+        "NodeToNodeStatement"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "object",
+      "range": "Node",
+      "exactly_one_of": [
+        {
+          "range": "string",
+          "@type": "AnonymousSlotExpression"
+        },
+        {
+          "range": "Node",
+          "@type": "AnonymousSlotExpression"
+        }
+      ],
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "node_to_value_triple_object",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/object",
+      "mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#object"
+      ],
+      "description": "a literal or node representing the object of the triple",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "object",
+      "abstract": true,
+      "domain": "NodeToValueTriple",
+      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#object",
+      "alias": "object",
+      "owner": "NodeToValueTriple",
+      "domain_of": [
+        "NodeToValueTriple"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "object",
+      "range": "string",
+      "exactly_one_of": [
+        {
+          "range": "string",
+          "@type": "AnonymousSlotExpression"
+        },
+        {
+          "range": "integer",
+          "@type": "AnonymousSlotExpression"
+        },
+        {
+          "range": "date",
+          "@type": "AnonymousSlotExpression"
+        }
+      ],
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "node_to_value_statement_object",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/object",
+      "mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#object"
+      ],
+      "description": "a literal or node representing the object of the triple",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "object",
+      "abstract": true,
+      "domain": "NodeToValueStatement",
+      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#object",
+      "alias": "object",
+      "owner": "NodeToValueStatement",
+      "domain_of": [
+        "NodeToValueStatement"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "object",
+      "range": "string",
+      "exactly_one_of": [
+        {
+          "range": "string",
+          "@type": "AnonymousSlotExpression"
+        },
+        {
+          "range": "integer",
+          "@type": "AnonymousSlotExpression"
+        },
+        {
+          "range": "date",
+          "@type": "AnonymousSlotExpression"
+        }
+      ],
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "rdf_type_triple_object",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/object",
+      "mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#object"
+      ],
+      "description": "The entity type",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "node_to_node_triple_object",
+      "abstract": true,
+      "domain": "RdfTypeTriple",
+      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#object",
+      "alias": "object",
+      "owner": "RdfTypeTriple",
+      "domain_of": [
+        "RdfTypeTriple"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "object",
+      "range": "ClassNode",
+      "exactly_one_of": [
+        {
+          "range": "string",
+          "@type": "AnonymousSlotExpression"
+        },
+        {
+          "range": "Node",
+          "@type": "AnonymousSlotExpression"
+        }
+      ],
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "rdf_type_statement_object",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/object",
+      "mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#object"
+      ],
+      "description": "The entity type",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "node_to_node_statement_object",
+      "abstract": true,
+      "domain": "RdfTypeStatement",
+      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#object",
+      "alias": "object",
+      "owner": "RdfTypeStatement",
+      "domain_of": [
+        "RdfTypeStatement"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "object",
+      "range": "ClassNode",
+      "exactly_one_of": [
+        {
+          "range": "string",
+          "@type": "AnonymousSlotExpression"
+        },
+        {
+          "range": "Node",
+          "@type": "AnonymousSlotExpression"
+        }
+      ],
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "rdfs_subclass_of_triple_subject",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/subject",
+      "mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject"
+      ],
+      "description": "The subclass element of the triple",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "subject",
+      "domain": "RdfsSubclassOfTriple",
+      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject",
+      "alias": "subject",
+      "owner": "RdfsSubclassOfTriple",
+      "domain_of": [
+        "RdfsSubclassOfTriple"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "subject",
+      "range": "ClassNode",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "rdfs_subclass_of_triple_object",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/object",
+      "mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#object"
+      ],
+      "description": "The superclass element of the triple",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "node_to_node_triple_object",
+      "abstract": true,
+      "domain": "RdfsSubclassOfTriple",
+      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#object",
+      "alias": "object",
+      "owner": "RdfsSubclassOfTriple",
+      "domain_of": [
+        "RdfsSubclassOfTriple"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "object",
+      "range": "ClassNode",
+      "exactly_one_of": [
+        {
+          "range": "string",
+          "@type": "AnonymousSlotExpression"
+        },
+        {
+          "range": "Node",
+          "@type": "AnonymousSlotExpression"
+        }
+      ],
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "rdfs_subproperty_of_triple_subject",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/subject",
+      "mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject"
+      ],
+      "description": "The subproperty element of the triple",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "subject",
+      "domain": "RdfsSubpropertyOfTriple",
+      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject",
+      "alias": "subject",
+      "owner": "RdfsSubpropertyOfTriple",
+      "domain_of": [
+        "RdfsSubpropertyOfTriple"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "subject",
+      "range": "PropertyNode",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "rdfs_subproperty_of_triple_object",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/object",
+      "mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#object"
+      ],
+      "description": "The superproperty element of the triple",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "node_to_node_triple_object",
+      "abstract": true,
+      "domain": "RdfsSubpropertyOfTriple",
+      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#object",
+      "alias": "object",
+      "owner": "RdfsSubpropertyOfTriple",
+      "domain_of": [
+        "RdfsSubpropertyOfTriple"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "object",
+      "range": "PropertyNode",
+      "exactly_one_of": [
+        {
+          "range": "string",
+          "@type": "AnonymousSlotExpression"
+        },
+        {
+          "range": "Node",
+          "@type": "AnonymousSlotExpression"
+        }
+      ],
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "rdfs_label_triple_value",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/value",
+      "close_mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#object"
+      ],
+      "description": "The label value",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "value",
+      "domain": "RdfsLabelTriple",
+      "slot_uri": "https://linkml.io/sparqlfun/rdf/value",
+      "alias": "value",
+      "owner": "RdfsLabelTriple",
+      "domain_of": [
+        "RdfsLabelTriple"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "value",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "iri_node_id",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/id",
+      "description": "An identifier for an element. Note blank node ids are not unique across databases",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "id",
+      "domain": "IriNode",
+      "slot_uri": "https://linkml.io/sparqlfun/rdf/id",
+      "identifier": true,
+      "alias": "id",
+      "owner": "IriNode",
+      "domain_of": [
+        "IriNode"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "id",
+      "range": "node_id_type",
+      "required": true,
+      "pattern": "^_:",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "nested_triple_subject",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/subject",
+      "mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "subject",
+      "domain": "NestedTriple",
+      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject",
+      "alias": "subject",
+      "owner": "NestedTriple",
+      "domain_of": [
+        "NestedTriple"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "subject",
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "nested_triple_object",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/object",
+      "mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#object"
+      ],
+      "description": "a literal or node representing the object of the triple",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "object",
+      "abstract": true,
+      "domain": "NestedTriple",
+      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#object",
+      "alias": "object",
+      "owner": "NestedTriple",
+      "domain_of": [
+        "NestedTriple"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "object",
+      "range": "Node",
+      "exactly_one_of": [
+        {
+          "range": "string",
+          "@type": "AnonymousSlotExpression"
+        },
+        {
+          "range": "Node",
+          "@type": "AnonymousSlotExpression"
+        }
+      ],
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "equivalence_triple_mixin_subject",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/subject",
+      "mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject"
+      ],
+      "description": "One of the two classes that are equivalent. No significance to subject vs object",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "subject",
+      "domain": "EquivalenceTripleMixin",
+      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject",
+      "alias": "subject",
+      "owner": "EquivalenceTripleMixin",
+      "domain_of": [
+        "EquivalenceTripleMixin"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "subject",
+      "range": "ClassNode",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "equivalence_triple_mixin_object",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/object",
+      "mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#object"
+      ],
+      "description": "One of the two classes that are equivalent. No significance to subject vs object",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "object",
+      "abstract": true,
+      "domain": "EquivalenceTripleMixin",
+      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#object",
+      "alias": "object",
+      "owner": "EquivalenceTripleMixin",
+      "domain_of": [
+        "EquivalenceTripleMixin"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "object",
+      "range": "ClassNode",
+      "exactly_one_of": [
+        {
+          "range": "string",
+          "@type": "AnonymousSlotExpression"
+        },
+        {
+          "range": "Node",
+          "@type": "AnonymousSlotExpression"
+        }
+      ],
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "owl_named_equivalent_class_triple_subject",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/subject",
+      "mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject"
+      ],
+      "description": "One of the two classes that are equivalent. No significance to subject vs object",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "equivalence_triple_mixin_subject",
+      "domain": "OwlNamedEquivalentClassTriple",
+      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject",
+      "alias": "subject",
+      "owner": "OwlNamedEquivalentClassTriple",
+      "domain_of": [
+        "OwlNamedEquivalentClassTriple"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "subject",
+      "range": "ClassNode",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "owl_named_equivalent_class_triple_object",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/object",
+      "mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#object"
+      ],
+      "description": "One of the two classes that are equivalent. No significance to subject vs object",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "equivalence_triple_mixin_object",
+      "abstract": true,
+      "domain": "OwlNamedEquivalentClassTriple",
+      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#object",
+      "alias": "object",
+      "owner": "OwlNamedEquivalentClassTriple",
+      "domain_of": [
+        "OwlNamedEquivalentClassTriple"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "object",
+      "range": "ClassNode",
+      "exactly_one_of": [
+        {
+          "range": "string",
+          "@type": "AnonymousSlotExpression"
+        },
+        {
+          "range": "Node",
+          "@type": "AnonymousSlotExpression"
+        }
+      ],
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "describe_equivalent_expression_results",
+      "definition_uri": "https://linkml.io/sparqlfun/resultsetresults",
+      "from_schema": "https://linkml.io/sparqlfun/resultset",
+      "is_a": "results",
+      "domain": "DescribeEquivalentExpression",
+      "slot_uri": "https://linkml.io/sparqlfun/resultsetresults",
+      "multivalued": true,
+      "alias": "results",
+      "owner": "DescribeEquivalentExpression",
+      "domain_of": [
+        "DescribeEquivalentExpression"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "results",
+      "range": "ClassNode",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "relation_graph_quad_graph",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/graph",
+      "mappings": [
+        "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+      ],
+      "description": "Indicates inference/redundancy status",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "graph",
+      "domain": "RelationGraphQuad",
+      "slot_uri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+      "alias": "graph",
+      "owner": "RelationGraphQuad",
+      "domain_of": [
+        "RelationGraphQuad"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "graph",
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "non_redundant_quad_graph",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/graph",
+      "mappings": [
+        "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+      ],
+      "description": "Source of",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "relation_graph_quad_graph",
+      "domain": "NonRedundantQuad",
+      "slot_uri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+      "alias": "graph",
+      "owner": "NonRedundantQuad",
+      "domain_of": [
+        "NonRedundantQuad"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "graph",
+      "range": "ClassNode",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "taxon_applicable_subject",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/subject",
+      "mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "subject",
+      "domain": "TaxonApplicable",
+      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject",
+      "alias": "subject",
+      "owner": "TaxonApplicable",
+      "domain_of": [
+        "TaxonApplicable"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "subject",
+      "range": "TaxonApplicableClass",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "taxon_applicable_object",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/object",
+      "mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#object"
+      ],
+      "description": "a literal or node representing the object of the triple",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "object",
+      "abstract": true,
+      "domain": "TaxonApplicable",
+      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#object",
+      "alias": "object",
+      "owner": "TaxonApplicable",
+      "domain_of": [
+        "TaxonApplicable"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "object",
+      "range": "TaxonClass",
+      "exactly_one_of": [
+        {
+          "range": "string",
+          "@type": "AnonymousSlotExpression"
+        },
+        {
+          "range": "Node",
+          "@type": "AnonymousSlotExpression"
+        }
+      ],
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "obo_class_query_results",
+      "definition_uri": "https://linkml.io/sparqlfun/resultsetresults",
+      "from_schema": "https://linkml.io/sparqlfun/resultset",
+      "is_a": "results",
+      "domain": "OboClassQuery",
+      "slot_uri": "https://linkml.io/sparqlfun/resultsetresults",
+      "multivalued": true,
+      "alias": "results",
+      "owner": "OboClassQuery",
+      "domain_of": [
+        "OboClassQuery"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "results",
+      "range": "OboClass",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "deprecated_obo_class_query_results",
+      "definition_uri": "https://linkml.io/sparqlfun/resultsetresults",
+      "from_schema": "https://linkml.io/sparqlfun/resultset",
+      "is_a": "results",
+      "domain": "DeprecatedOboClassQuery",
+      "slot_uri": "https://linkml.io/sparqlfun/resultsetresults",
+      "multivalued": true,
+      "alias": "results",
+      "owner": "DeprecatedOboClassQuery",
+      "domain_of": [
+        "DeprecatedOboClassQuery"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "results",
+      "range": "OboClass",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "class_taxon_exclusion_via_never_in_subject",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/subject",
+      "mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject"
+      ],
+      "description": "The class inferred to have the constraint",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "subject",
+      "domain": "ClassTaxonExclusionViaNeverIn",
+      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject",
+      "alias": "subject",
+      "owner": "ClassTaxonExclusionViaNeverIn",
+      "domain_of": [
+        "ClassTaxonExclusionViaNeverIn"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "subject",
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "class_taxon_exclusion_via_never_in_object",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/object",
+      "mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#object"
+      ],
+      "description": "The taxon that cannot have the subject class.",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "object",
+      "abstract": true,
+      "domain": "ClassTaxonExclusionViaNeverIn",
+      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#object",
+      "inlined": true,
+      "alias": "object",
+      "owner": "ClassTaxonExclusionViaNeverIn",
+      "domain_of": [
+        "ClassTaxonExclusionViaNeverIn"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "object",
+      "range": "NodeOrLiteral",
+      "exactly_one_of": [
+        {
+          "range": "string",
+          "@type": "AnonymousSlotExpression"
+        },
+        {
+          "range": "Node",
+          "@type": "AnonymousSlotExpression"
+        }
+      ],
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "class_taxon_exclusion_via_only_in_subject",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/subject",
+      "mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject"
+      ],
+      "description": "The class inferred to have the constraint",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "subject",
+      "domain": "ClassTaxonExclusionViaOnlyIn",
+      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject",
+      "alias": "subject",
+      "owner": "ClassTaxonExclusionViaOnlyIn",
+      "domain_of": [
+        "ClassTaxonExclusionViaOnlyIn"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "subject",
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "class_taxon_exclusion_via_only_in_object",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/object",
+      "mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#object"
+      ],
+      "description": "The taxon that cannot have the subject class.",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "object",
+      "abstract": true,
+      "domain": "ClassTaxonExclusionViaOnlyIn",
+      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#object",
+      "inlined": true,
+      "alias": "object",
+      "owner": "ClassTaxonExclusionViaOnlyIn",
+      "domain_of": [
+        "ClassTaxonExclusionViaOnlyIn"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "object",
+      "range": "NodeOrLiteral",
+      "exactly_one_of": [
+        {
+          "range": "string",
+          "@type": "AnonymousSlotExpression"
+        },
+        {
+          "range": "Node",
+          "@type": "AnonymousSlotExpression"
+        }
+      ],
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "class_taxon_exclusion_subject",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/subject",
+      "mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject"
+      ],
+      "description": "The class inferred to have the constraint",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "subject",
+      "domain": "ClassTaxonExclusion",
+      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject",
+      "alias": "subject",
+      "owner": "ClassTaxonExclusion",
+      "domain_of": [
+        "ClassTaxonExclusion"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "subject",
+      "range": "Node",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "class_taxon_exclusion_object",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/object",
+      "mappings": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#object"
+      ],
+      "description": "The taxon that cannot have the subject class.",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "object",
+      "abstract": true,
+      "domain": "ClassTaxonExclusion",
+      "slot_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#object",
+      "inlined": true,
+      "alias": "object",
+      "owner": "ClassTaxonExclusion",
+      "domain_of": [
+        "ClassTaxonExclusion"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "object",
+      "range": "NodeOrLiteral",
+      "exactly_one_of": [
+        {
+          "range": "string",
+          "@type": "AnonymousSlotExpression"
+        },
+        {
+          "range": "Node",
+          "@type": "AnonymousSlotExpression"
+        }
+      ],
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "blood_vessel_subcategory",
+      "definition_uri": "https://linkml.io/sparqlfun/uberonsubcategory",
+      "mappings": [
+        "https://linkml.io/sparqlfun/subcategory"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/uberon",
+      "is_a": "subcategory",
+      "domain": "BloodVessel",
+      "slot_uri": "https://linkml.io/sparqlfun/subcategory",
+      "alias": "subcategory",
+      "owner": "BloodVessel",
+      "domain_of": [
+        "BloodVessel"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "subcategory",
+      "range": "BloodVesselSubcategory",
+      "@type": "SlotDefinition"
+    }
+  ],
+  "classes": [
+    {
+      "name": "GenericResult",
+      "definition_uri": "https://linkml.io/sparqlfun/resultsetGenericResult",
+      "from_schema": "https://linkml.io/sparqlfun/resultset",
+      "mixin": true,
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/resultsetGenericResult",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "ResultSet",
+      "definition_uri": "https://linkml.io/sparqlfun/resultsetResultSet",
+      "from_schema": "https://linkml.io/sparqlfun/resultset",
+      "slots": [
+        "results"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/resultsetResultSet",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Binding",
+      "definition_uri": "https://linkml.io/sparqlfun/resultsetBinding",
+      "from_schema": "https://linkml.io/sparqlfun/resultset",
+      "slots": [
+        "binding_key",
+        "binding_value"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/resultsetBinding",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "NodeOrLiteral",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/NodeOrLiteral",
+      "mappings": [
+        "linkml:Any"
+      ],
+      "description": "A grouping for nodes or literals, maps to Any type",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/linkml/Any",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Prefix",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/Prefix",
+      "mappings": [
+        "sh:PrefixDeclaration"
+      ],
+      "description": "Maps CURIEs to URIs",
+      "in_subset": [
+        "export",
+        "base_table"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "slots": [
+        "prefix",
+        "base"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://www.w3.org/ns/shacl#PrefixDeclaration",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "NodeTrait",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/NodeTrait",
+      "description": "abstract groupings/properties for different aspects of the model",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "abstract": true,
+      "mixin": true,
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/rdf/NodeTrait",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "ClassTrait",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/ClassTrait",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "NodeTrait",
+      "mixin": true,
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/rdf/ClassTrait",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "PropertyTrait",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/PropertyTrait",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "NodeTrait",
+      "mixin": true,
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/rdf/PropertyTrait",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "IndividualTrait",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/IndividualTrait",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "NodeTrait",
+      "mixin": true,
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/rdf/IndividualTrait",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Triple",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/Triple",
+      "aliases": [
+        "statement"
+      ],
+      "mappings": [
+        "rdf:Statement"
+      ],
+      "annotations": [
+        {
+          "tag": "sparql.select",
+          "value": "SELECT * WHERE { ?subject ?predicate ?object}",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "Represents a single unadorned RDF triple",
+      "in_subset": [
+        "base_table"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "slots": [
+        "subject",
+        "predicate",
+        "object"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Quad",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/Quad",
+      "aliases": [
+        "statement with graph"
+      ],
+      "annotations": [
+        {
+          "tag": "sparql.select",
+          "value": "SELECT * WHERE { GRAPH ?graph { ?subject ?predicate ?object} }",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "Represents an RDF triple plus named graph to which the triple belongs",
+      "in_subset": [
+        "base_table"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "Triple",
+      "slots": [
+        "subject",
+        "predicate",
+        "object",
+        "graph"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/rdf/Quad",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Statement",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/Statement",
+      "description": "A quad that is optionally adorned with statements about it",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "Quad",
+      "slots": [
+        "subject",
+        "predicate",
+        "object",
+        "graph",
+        "statement_node_statements",
+        "statement_value_statements"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/rdf/Statement",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "NodeToNodeTriple",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/NodeToNodeTriple",
+      "annotations": [
+        {
+          "tag": "sparql.select",
+          "value": "SELECT * WHERE { ?subject ?predicate ?object . FILTER isIRI(?object) }",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "A triple where object is a node (isIRI)",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "Triple",
+      "slots": [
+        "subject",
+        "predicate",
+        "node_to_node_triple_object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/rdf/NodeToNodeTriple",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "NodeToNodeStatement",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/NodeToNodeStatement",
+      "annotations": [
+        {
+          "tag": "sparql.select",
+          "value": "SELECT * WHERE { GRAPH ?graph { ?subject ?predicate ?object . FILTER isIRI(?object) } }",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "A statement where object is a node (isIRI)",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "Statement",
+      "slots": [
+        "subject",
+        "predicate",
+        "graph",
+        "statement_node_statements",
+        "statement_value_statements",
+        "node_to_node_statement_object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/rdf/NodeToNodeStatement",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "NamedNodeToNamedNodeTriple",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/NamedNodeToNamedNodeTriple",
+      "annotations": [
+        {
+          "tag": "sparql.select",
+          "value": "SELECT * WHERE {\n ?subject ?predicate ?object .\n FILTER isIRI(?subject) .\n FILTER isIRI(?object) .\n}",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "A triple where subject and object are both nodes (isIRI)",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "NodeToNodeTriple",
+      "slots": [
+        "subject",
+        "predicate",
+        "node_to_node_triple_object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/rdf/NamedNodeToNamedNodeTriple",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "NodeToValueTriple",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/NodeToValueTriple",
+      "annotations": [
+        {
+          "tag": "sparql.select",
+          "value": "SELECT * WHERE { ?subject ?predicate ?object . FILTER (isLiteral(?object)) }",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "A triple where object is a literal",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "Triple",
+      "abstract": true,
+      "slots": [
+        "subject",
+        "predicate",
+        "node_to_value_triple_object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/rdf/NodeToValueTriple",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "NodeToValueStatement",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/NodeToValueStatement",
+      "annotations": [
+        {
+          "tag": "sparql.select",
+          "value": "SELECT * WHERE { GRAPH ?graph { ?subject ?predicate ?object . FILTER (isLiteral(?object)) }}",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "A statement where object is a literal",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "Statement",
+      "abstract": true,
+      "slots": [
+        "subject",
+        "predicate",
+        "graph",
+        "statement_node_statements",
+        "statement_value_statements",
+        "node_to_value_statement_object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/rdf/NodeToValueStatement",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "RdfTypeTriple",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/RdfTypeTriple",
+      "description": "A triple that indicates the asserted type of the subject entity",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "NodeToNodeTriple",
+      "slots": [
+        "subject",
+        "predicate",
+        "rdf_type_triple_object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/rdf/RdfTypeTriple",
+      "classification_rules": [
+        {
+          "is_a": "Triple",
+          "slot_conditions": [
+            {
+              "name": "predicate",
+              "equals_string": "rdf:type",
+              "@type": "SlotDefinition"
+            }
+          ],
+          "@type": "AnonymousClassExpression"
+        }
+      ],
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "RdfTypeStatement",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/RdfTypeStatement",
+      "description": "A statement that indicates the asserted type of the subject entity",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "NodeToNodeStatement",
+      "slots": [
+        "subject",
+        "predicate",
+        "graph",
+        "statement_node_statements",
+        "statement_value_statements",
+        "rdf_type_statement_object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/rdf/RdfTypeStatement",
+      "classification_rules": [
+        {
+          "is_a": "Statement",
+          "slot_conditions": [
+            {
+              "name": "predicate",
+              "equals_string": "rdf:type",
+              "@type": "SlotDefinition"
+            }
+          ],
+          "@type": "AnonymousClassExpression"
+        }
+      ],
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "RdfsSubclassOfTriple",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/RdfsSubclassOfTriple",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "NodeToNodeTriple",
+      "slots": [
+        "predicate",
+        "rdfs_subclass_of_triple_subject",
+        "rdfs_subclass_of_triple_object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/rdf/RdfsSubclassOfTriple",
+      "classification_rules": [
+        {
+          "is_a": "Triple",
+          "slot_conditions": [
+            {
+              "name": "predicate",
+              "equals_string": "rdfs:subClassOf",
+              "@type": "SlotDefinition"
+            }
+          ],
+          "@type": "AnonymousClassExpression"
+        }
+      ],
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "RdfsSubclassOfNamedTriple",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/RdfsSubclassOfNamedTriple",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "RdfsSubclassOfTriple",
+      "slots": [
+        "predicate",
+        "rdfs_subclass_of_triple_subject",
+        "rdfs_subclass_of_triple_object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/rdf/RdfsSubclassOfNamedTriple",
+      "classification_rules": [
+        {
+          "is_a": "RdfsSubclassOfTriple",
+          "slot_conditions": [
+            {
+              "name": "object",
+              "range": "Node",
+              "@type": "SlotDefinition"
+            }
+          ],
+          "@type": "AnonymousClassExpression"
+        }
+      ],
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "RedundantRdfsSubclassOfTriple",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/RedundantRdfsSubclassOfTriple",
+      "annotations": [
+        {
+          "tag": "sparql.select",
+          "value": "SELECT * WHERE {\n  ?subject rdfs}",
+          "@type": "Annotation"
+        }
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "RdfsSubclassOfTriple",
+      "slots": [
+        "predicate",
+        "rdfs_subclass_of_triple_subject",
+        "rdfs_subclass_of_triple_object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/rdf/RedundantRdfsSubclassOfTriple",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "RdfsSubpropertyOfTriple",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/RdfsSubpropertyOfTriple",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "NodeToNodeTriple",
+      "slots": [
+        "predicate",
+        "rdfs_subproperty_of_triple_subject",
+        "rdfs_subproperty_of_triple_object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/rdf/RdfsSubpropertyOfTriple",
+      "classification_rules": [
+        {
+          "is_a": "Triple",
+          "slot_conditions": [
+            {
+              "name": "predicate",
+              "equals_string": "rdfs:subPropertyOf",
+              "@type": "SlotDefinition"
+            }
+          ],
+          "@type": "AnonymousClassExpression"
+        }
+      ],
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "RdfsLabelTriple",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/RdfsLabelTriple",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "NodeToValueTriple",
+      "slots": [
+        "subject",
+        "predicate",
+        "node_to_value_triple_object",
+        "rdfs_label_triple_value"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/rdf/RdfsLabelTriple",
+      "classification_rules": [
+        {
+          "is_a": "Triple",
+          "slot_conditions": [
+            {
+              "name": "predicate",
+              "equals_string": "rdfs:label",
+              "@type": "SlotDefinition"
+            }
+          ],
+          "@type": "AnonymousClassExpression"
+        }
+      ],
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "RdfsDomainTriple",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/RdfsDomainTriple",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "NodeToNodeTriple",
+      "slots": [
+        "subject",
+        "predicate",
+        "node_to_node_triple_object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/rdf/RdfsDomainTriple",
+      "classification_rules": [
+        {
+          "is_a": "Triple",
+          "slot_conditions": [
+            {
+              "name": "predicate",
+              "equals_string": "rdfs:domain",
+              "@type": "SlotDefinition"
+            }
+          ],
+          "@type": "AnonymousClassExpression"
+        }
+      ],
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "RdfsRangeTriple",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/RdfsRangeTriple",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "NodeToNodeTriple",
+      "slots": [
+        "subject",
+        "predicate",
+        "node_to_node_triple_object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/rdf/RdfsRangeTriple",
+      "classification_rules": [
+        {
+          "is_a": "Triple",
+          "slot_conditions": [
+            {
+              "name": "predicate",
+              "equals_string": "rdfs:range",
+              "@type": "SlotDefinition"
+            }
+          ],
+          "@type": "AnonymousClassExpression"
+        }
+      ],
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Node",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/Node",
+      "aliases": [
+        "object",
+        "resource"
+      ],
+      "exact_mappings": [
+        "rdf:Resource"
+      ],
+      "description": "The basic unit of representation in an RDF or OWL graph",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "slots": [
+        "id"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/rdf/Node",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "BlankNode",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/BlankNode",
+      "description": "A node with an ID that is not preserved between databases",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "Node",
+      "slots": [
+        "id"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/rdf/BlankNode",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "IriNode",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/IriNode",
+      "aliases": [
+        "IRI",
+        "named entity"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "Node",
+      "slots": [
+        "iri_node_id"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/rdf/IriNode",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "TypedNode",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/TypedNode",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "Node",
+      "slots": [
+        "id",
+        "type"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/rdf/TypedNode",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "ClassNode",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/ClassNode",
+      "mappings": [
+        "owl:Class"
+      ],
+      "description": "A node that represents an RDFS/OWL class",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "TypedNode",
+      "mixins": [
+        "ClassTrait"
+      ],
+      "slots": [
+        "id",
+        "type"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://www.w3.org/2002/07/owl#Class",
+      "classification_rules": [
+        {
+          "is_a": "TypedNode",
+          "slot_conditions": [
+            {
+              "name": "type",
+              "equals_string": "owl:Class",
+              "@type": "SlotDefinition"
+            }
+          ],
+          "@type": "AnonymousClassExpression"
+        }
+      ],
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "PropertyNode",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/PropertyNode",
+      "mappings": [
+        "owl:Property"
+      ],
+      "description": "Note this only directly classifies nodes asserted to be rdf:Properties",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "TypedNode",
+      "abstract": true,
+      "slots": [
+        "id",
+        "type"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://www.w3.org/2002/07/owl#Property",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "NamedIndividualNode",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/NamedIndividualNode",
+      "mappings": [
+        "owl:NamedIndividual"
+      ],
+      "description": "A node that represents an OWL Named Individual",
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "Node",
+      "slots": [
+        "id"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "classification_rules": [
+        {
+          "is_a": "TypedNode",
+          "slot_conditions": [
+            {
+              "name": "type",
+              "equals_string": "owl:NamedIndividual",
+              "@type": "SlotDefinition"
+            }
+          ],
+          "@type": "AnonymousClassExpression"
+        }
+      ],
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "NestedTriple",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/NestedTriple",
+      "mappings": [
+        "rdf:Statement"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "Triple",
+      "slots": [
+        "predicate",
+        "nestedTriple__xobject",
+        "nested_triple_subject",
+        "nested_triple_object"
+      ],
+      "slot_usage": {},
+      "attributes": [
+        {
+          "name": "xobject",
+          "slot_uri": "rdf:xobject",
+          "range": "Node",
+          "@type": "SlotDefinition"
+        }
+      ],
+      "class_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "NodeObject",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/NodeObject",
+      "mappings": [
+        "rdf:Resource"
+      ],
+      "annotations": [
+        {
+          "tag": "sparql.construct",
+          "value": "CONSTRUCT {\n  ?id a rdf:Resource ;\n      sparqlfun:value_statements [\n          rdf:predicate ?value_predicate ;\n          rdf:object ?value_object ;\n          rdfs:isDefinedBy ?value_graph\n      ] ;\n      sparqlfun:node_statements [\n         rdf:predicate ?node_predicate ;\n         rdf:object ?node_object ;\n         rdfs:isDefinedBy ?node_graph\n      ] .\n}\nWHERE {\n  {\n    GRAPH ?node_graph {\n      ?id ?node_predicate ?node_object\n      FILTER(isIRI(?node_object))\n    }\n  }\n  UNION\n  {\n    GRAPH ?value_graph {\n      ?id ?value_predicate ?value_object\n      FILTER(isLiteral(?value_object))\n    }\n  }\n}",
+          "@type": "Annotation"
+        }
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "Node",
+      "slots": [
+        "id",
+        "node_statements",
+        "value_statements"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Resource",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "NestedNodeObject",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/NestedNodeObject",
+      "mappings": [
+        "rdf:Resource"
+      ],
+      "annotations": [
+        {
+          "tag": "sparql.construct",
+          "value": "CONSTRUCT {\n  ?id a rdf:Resource ;\n      sparqlfun:value_statements [\n          rdf:predicate ?value_predicate ;\n          rdf:object ?value_object ;\n          rdfs:isDefinedBy ?value_graph ;\n          sparqlfun:value_statements [\n                            rdf:predicate ?vi_value_predicate ;\n                            rdf:object ?vi_value_object ;\n                        ] ;\n      ] ;\n      sparqlfun:node_statements [\n                        rdf:predicate ?node_predicate ;\n                        rdf:object ?node_object ;\n                        rdfs:isDefinedBy ?node_graph ;\n                        sparqlfun:value_statements [\n                                          rdf:predicate ?ni_value_predicate ;\n                                          rdf:object ?ni_value_object ;\n                                      ] ;\n                    ]\n}\nWHERE {\n  {\n    GRAPH ?value_graph {\n      ?id ?value_predicate ?value_object .\n      OPTIONAL {\n           ?value_statement_id owl:annotatedSource ?id ;\n               owl:annotatedProperty ?value_predicate ;\n               owl:annotatedTarget ?value_object ;\n               ?vi_value_predicate ?vi_value_object .\n           FILTER (?vi_value_predicate != owl:annotatedSource)\n           FILTER (?vi_value_predicate != owl:annotatedProperty)\n           FILTER (?vi_value_predicate != owl:annotatedTarget)\n           FILTER (!(?vi_value_predicate = rdf:type AND ?vi_value_object = owl:Axiom))\n      }\n      FILTER(isLiteral(?value_object))\n    }\n  } UNION {\n            GRAPH ?node_graph {\n              ?id ?node_predicate ?node_object .\n              OPTIONAL {\n                   ?node_statement_id owl:annotatedSource ?id ;\n                       owl:annotatedProperty ?node_predicate ;\n                       owl:annotatedTarget ?node_object ;\n                       ?ni_value_predicate ?ni_value_object .\n                   FILTER (?ni_value_predicate != owl:annotatedSource)\n                   FILTER (?ni_value_predicate != owl:annotatedProperty)\n                   FILTER (?ni_value_predicate != owl:annotatedTarget)\n                   FILTER (!(?ni_value_predicate = rdf:type AND ?ni_value_object = owl:Axiom))\n              }\n              FILTER(isIRI(?node_object))\n            }\n  }\n}",
+          "@type": "Annotation"
+        }
+      ],
+      "comments": [
+        "{'EXPERIMENTAL': 'currently used OWL reif vocab so should move to OWL module'}"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "Node",
+      "slots": [
+        "id",
+        "node_statements",
+        "value_statements"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Resource",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "BasicClass",
+      "definition_uri": "https://linkml.io/sparqlfun/rdf/BasicClass",
+      "mappings": [
+        "owl:Class"
+      ],
+      "annotations": [
+        {
+          "tag": "sparql.construct",
+          "value": "CONSTRUCT { ?id a owl:Class ; rdfs:subClassOf ?subClassOf }\nWHERE {\n ?id rdfs:subClassOf ?subClassOf .\n FILTER(?id != ?subClassOf)\n FILTER(isIRI(?subClassOf))\n}",
+          "@type": "Annotation"
+        }
+      ],
+      "comments": [
+        "this is mostly to serve as an example and may move"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/rdf",
+      "is_a": "Node",
+      "slots": [
+        "id",
+        "basicClass__subClassOf"
+      ],
+      "slot_usage": {},
+      "attributes": [
+        {
+          "name": "subClassOf",
+          "slot_uri": "rdfs:subClassOf",
+          "multivalued": true,
+          "range": "ClassNode",
+          "@type": "SlotDefinition"
+        }
+      ],
+      "class_uri": "http://www.w3.org/2002/07/owl#Class",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "EquivalenceTripleMixin",
+      "definition_uri": "https://linkml.io/sparqlfun/owlEquivalenceTripleMixin",
+      "from_schema": "https://linkml.io/sparqlfun/owl",
+      "mixin": true,
+      "slots": [
+        "equivalence_triple_mixin_subject",
+        "equivalence_triple_mixin_object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/owlEquivalenceTripleMixin",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "OwlEquivalentClassTriple",
+      "definition_uri": "https://linkml.io/sparqlfun/owlOwlEquivalentClassTriple",
+      "description": "A statement that connects two class nodes where both classes are equivalent",
+      "from_schema": "https://linkml.io/sparqlfun/owl",
+      "is_a": "NodeToNodeTriple",
+      "mixins": [
+        "EquivalenceTripleMixin"
+      ],
+      "slots": [
+        "subject",
+        "predicate",
+        "node_to_node_triple_object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/owlOwlEquivalentClassTriple",
+      "classification_rules": [
+        {
+          "is_a": "Triple",
+          "slot_conditions": [
+            {
+              "name": "predicate",
+              "equals_string": "owl:equivalentClass",
+              "@type": "SlotDefinition"
+            }
+          ],
+          "@type": "AnonymousClassExpression"
+        }
+      ],
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "OwlNamedEquivalentClassTriple",
+      "definition_uri": "https://linkml.io/sparqlfun/owlOwlNamedEquivalentClassTriple",
+      "description": "An equivalence triple between two named classes",
+      "from_schema": "https://linkml.io/sparqlfun/owl",
+      "is_a": "NamedNodeToNamedNodeTriple",
+      "mixins": [
+        "EquivalenceTripleMixin"
+      ],
+      "slots": [
+        "predicate",
+        "owl_named_equivalent_class_triple_subject",
+        "owl_named_equivalent_class_triple_object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/owlOwlNamedEquivalentClassTriple",
+      "classification_rules": [
+        {
+          "is_a": "Triple",
+          "slot_conditions": [
+            {
+              "name": "predicate",
+              "equals_string": "owl:equivalentClass",
+              "@type": "SlotDefinition"
+            }
+          ],
+          "@type": "AnonymousClassExpression"
+        }
+      ],
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "SomeValuesFromRestriction",
+      "definition_uri": "https://linkml.io/sparqlfun/owlSomeValuesFromRestriction",
+      "mappings": [
+        "owl:Restriction"
+      ],
+      "annotations": [
+        {
+          "tag": "sparql.construct",
+          "value": "CONSTRUCT { ?subject a owl:Restriction ; owl:onProperty ?predicate ; owl:someValuesFrom ?filler } WHERE { ?subject a owl:Restriction ; owl:onProperty ?predicate ; owl:someValuesFrom ?filler }",
+          "@type": "Annotation"
+        }
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/owl",
+      "slots": [
+        "subject",
+        "predicate",
+        "filler"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://www.w3.org/2002/07/owl#Restriction",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "SubclassOfSomeValuesFrom",
+      "definition_uri": "https://linkml.io/sparqlfun/owlSubclassOfSomeValuesFrom",
+      "annotations": [
+        {
+          "tag": "sparql.select",
+          "value": "SELECT * WHERE { ?subject rdfs:subClassOf [ a owl:Restriction ; owl:onProperty ?predicate ; owl:someValuesFrom ?object ] }",
+          "@type": "Annotation"
+        }
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/owl",
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/owlSubclassOfSomeValuesFrom",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "DescribeEquivalentExpression",
+      "definition_uri": "https://linkml.io/sparqlfun/owlDescribeEquivalentExpression",
+      "annotations": [
+        {
+          "tag": "sparql.results_slot",
+          "value": "results",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "sparql.construct",
+          "value": "DESCRIBE ?object WHERE { ?subject owl:equivalentClass ?object }",
+          "@type": "Annotation"
+        }
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/owl",
+      "is_a": "ResultSet",
+      "slots": [
+        "describe_equivalent_expression_results",
+        "subject"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/owlDescribeEquivalentExpression",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "OwlTripleAnnotation",
+      "definition_uri": "https://linkml.io/sparqlfun/owlOwlTripleAnnotation",
+      "annotations": [
+        {
+          "tag": "sparql.select",
+          "value": "SELECT * WHERE {\n  ?axiom_identifier a owl:Axiom ;\n    owl:annotatedSource ?subject ;\n    owl:annotatedProperty ?predicate ;\n    owl:annotatedTarget ?object ;\n    ?axiom_predicate ?axiom_object .\n  FILTER (?axiom_predicate != owl:annotatedSource) .\n  FILTER (?axiom_predicate != owl:annotatedProperty) .\n  FILTER (?axiom_predicate != owl:annotatedTarget) .\n\n}",
+          "@type": "Annotation"
+        }
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/owl",
+      "is_a": "Triple",
+      "slots": [
+        "subject",
+        "predicate",
+        "object",
+        "axiom_identifier",
+        "axiom_predicate",
+        "axiom_object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/owlOwlTripleAnnotation",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "OwlTripleWithAnnotationsTODO",
+      "definition_uri": "https://linkml.io/sparqlfun/owlOwlTripleWithAnnotationsTODO",
+      "annotations": [
+        {
+          "tag": "sparql.construct",
+          "value": "CONSTRUCT {\n  ?axiom_identifier a owl:Axiom ;\n                owl:annotatedSource ?subject ;\n                owl:annotatedProperty ?predicate ;\n                owl:annotatedTarget ?object ;\n                ?axiom_predicate ?axiom_object .\n}\nWHERE {\n  ?axiom_identifier a owl:Axiom ;\n    owl:annotatedSource ?subject ;\n    owl:annotatedProperty ?predicate ;\n    owl:annotatedTarget ?object ;\n    ?axiom_predicate ?axiom_object .\n  FILTER (?axiom_predicate != owl:annotatedSource) .\n  FILTER (?axiom_predicate != owl:annotatedProperty) .\n  FILTER (?axiom_predicate != owl:annotatedTarget) .\n\n}",
+          "@type": "Annotation"
+        }
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/owl",
+      "is_a": "Triple",
+      "slots": [
+        "subject",
+        "predicate",
+        "object",
+        "annotations"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/owlOwlTripleWithAnnotationsTODO",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "OwlAnnotation",
+      "definition_uri": "https://linkml.io/sparqlfun/owlOwlAnnotation",
+      "from_schema": "https://linkml.io/sparqlfun/owl",
+      "slots": [
+        "predicate",
+        "object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/owlOwlAnnotation",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "TraversalBasedPairwiseDisjointnessViolation",
+      "definition_uri": "https://linkml.io/sparqlfun/owlTraversalBasedPairwiseDisjointnessViolation",
+      "annotations": [
+        {
+          "tag": "sparql.select",
+          "value": "SELECT * WHERE {\n  ?descendant_class rdfs:subClassOf* ?class1 .\n  ?descendant_class rdfs:subClassOf* ?class2 .\n  ?class1 owl:disjointWith ?class1\n}",
+          "@type": "Annotation"
+        }
+      ],
+      "comments": [
+        "This is not intended to replace using an OWL reasoner to discover unsatisfiable classes",
+        "This works by traversing over subClassOf links. Note that results may be incomplete if inferred subClassOf edges are not added. However, note that reasoner runners such as robot may fail fast if unsatisfiable classes are discovered"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/owl",
+      "slots": [
+        "class1",
+        "class2",
+        "descendant_class"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/owlTraversalBasedPairwiseDisjointnessViolation",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "RelationGraphQuad",
+      "definition_uri": "https://linkml.io/sparqlfun/relation_graph/RelationGraphQuad",
+      "from_schema": "https://linkml.io/sparqlfun/relation_graph",
+      "is_a": "Quad",
+      "abstract": true,
+      "slots": [
+        "subject",
+        "predicate",
+        "object",
+        "relation_graph_quad_graph"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/rdf/RelationGraphQuad",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "NonRedundantQuad",
+      "definition_uri": "https://linkml.io/sparqlfun/relation_graph/NonRedundantQuad",
+      "description": "A triple that indicates the asserted type of the subject entity",
+      "from_schema": "https://linkml.io/sparqlfun/relation_graph",
+      "is_a": "RelationGraphQuad",
+      "slots": [
+        "subject",
+        "predicate",
+        "object",
+        "non_redundant_quad_graph"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/rdf/NonRedundantQuad",
+      "classification_rules": [
+        {
+          "is_a": "Quad",
+          "slot_conditions": [
+            {
+              "name": "graph",
+              "equals_string": "ubergraph:nonredundant",
+              "@type": "SlotDefinition"
+            }
+          ],
+          "@type": "AnonymousClassExpression"
+        }
+      ],
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "TaxonApplicableClass",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphTaxonApplicableClass",
+      "from_schema": "https://linkml.io/sparqlfun/ro",
+      "is_a": "ClassNode",
+      "abstract": true,
+      "slots": [
+        "id",
+        "type"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/ubergraphTaxonApplicableClass",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "TaxonClass",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphTaxonClass",
+      "comments": [
+        "see ubergraph module for an implementation of this"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/ro",
+      "is_a": "ClassNode",
+      "abstract": true,
+      "slots": [
+        "id",
+        "type"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/ubergraphTaxonClass",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "TaxonApplicable",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphTaxonApplicable",
+      "from_schema": "https://linkml.io/sparqlfun/ro",
+      "abstract": true,
+      "mixin": true,
+      "slots": [
+        "taxon_applicable_subject",
+        "taxon_applicable_object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/ubergraphTaxonApplicable",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "NeverInTaxonTriple",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphNeverInTaxonTriple",
+      "from_schema": "https://linkml.io/sparqlfun/ro",
+      "is_a": "Triple",
+      "mixins": [
+        "TaxonApplicable"
+      ],
+      "slots": [
+        "subject",
+        "predicate",
+        "object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/ubergraphNeverInTaxonTriple",
+      "classification_rules": [
+        {
+          "is_a": "Triple",
+          "slot_conditions": [
+            {
+              "name": "predicate",
+              "equals_string": "RO:0002161",
+              "@type": "SlotDefinition"
+            }
+          ],
+          "@type": "AnonymousClassExpression"
+        }
+      ],
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "InTaxonTriple",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphInTaxonTriple",
+      "description": "In ubergraph, an in-taxon triple is pre-inferred",
+      "from_schema": "https://linkml.io/sparqlfun/ro",
+      "is_a": "Triple",
+      "mixins": [
+        "TaxonApplicable"
+      ],
+      "slots": [
+        "subject",
+        "predicate",
+        "object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/ubergraphInTaxonTriple",
+      "classification_rules": [
+        {
+          "is_a": "Triple",
+          "slot_conditions": [
+            {
+              "name": "predicate",
+              "equals_string": "RO:0002162",
+              "@type": "SlotDefinition"
+            }
+          ],
+          "@type": "AnonymousClassExpression"
+        }
+      ],
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "DefinitionTriple",
+      "definition_uri": "https://linkml.io/sparqlfun/omoDefinitionTriple",
+      "from_schema": "https://linkml.io/sparqlfun/omo",
+      "is_a": "NodeToValueTriple",
+      "slots": [
+        "subject",
+        "predicate",
+        "node_to_value_triple_object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/omoDefinitionTriple",
+      "classification_rules": [
+        {
+          "is_a": "Triple",
+          "slot_conditions": [
+            {
+              "name": "predicate",
+              "equals_string": "IAO:0000115",
+              "@type": "SlotDefinition"
+            }
+          ],
+          "@type": "AnonymousClassExpression"
+        }
+      ],
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "ConformsToTriple",
+      "definition_uri": "https://linkml.io/sparqlfun/omoConformsToTriple",
+      "from_schema": "https://linkml.io/sparqlfun/omo",
+      "is_a": "NodeToNodeTriple",
+      "slots": [
+        "subject",
+        "predicate",
+        "node_to_node_triple_object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/omoConformsToTriple",
+      "classification_rules": [
+        {
+          "is_a": "Triple",
+          "slot_conditions": [
+            {
+              "name": "predicate",
+              "equals_string": "dcterms:conformsTo",
+              "@type": "SlotDefinition"
+            }
+          ],
+          "@type": "AnonymousClassExpression"
+        }
+      ],
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "ConformsToStatement",
+      "definition_uri": "https://linkml.io/sparqlfun/omoConformsToStatement",
+      "from_schema": "https://linkml.io/sparqlfun/omo",
+      "is_a": "NodeToNodeStatement",
+      "slots": [
+        "subject",
+        "predicate",
+        "graph",
+        "statement_node_statements",
+        "statement_value_statements",
+        "node_to_node_statement_object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/omoConformsToStatement",
+      "classification_rules": [
+        {
+          "is_a": "NodeToNodeStatement",
+          "slot_conditions": [
+            {
+              "name": "predicate",
+              "equals_string": "dcterms:conformsTo",
+              "@type": "SlotDefinition"
+            }
+          ],
+          "@type": "AnonymousClassExpression"
+        }
+      ],
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "GraphClassNode",
+      "definition_uri": "https://linkml.io/sparqlfun/omoGraphClassNode",
+      "from_schema": "https://linkml.io/sparqlfun/omo",
+      "is_a": "ClassNode",
+      "slots": [
+        "id",
+        "type",
+        "graph"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/omoGraphClassNode",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "OboClass",
+      "definition_uri": "https://linkml.io/sparqlfun/omoOboClass",
+      "mappings": [
+        "owl:Class"
+      ],
+      "annotations": [
+        {
+          "tag": "sparql.construct",
+          "value": "CONSTRUCT {\n  ?id a owl:Class ;\n      rdfs:label ?label ;\n      IAO:0000115 ?definition ;\n      oboInOwl:hasExactSynonym ?exact_snonyms ;\n      rdfs:isDefinedBy ?graph\n}\nWHERE {\n  GRAPH ?graph {\n  ?id a owl:Class .\n  OPTIONAL { ?id rdfs:label ?label } .\n  OPTIONAL { ?id IAO:0000115 ?definition } .\n  OPTIONAL { ?id oboInOwl:hasExactSynonym ?exact_snonyms } .\n  }\n}",
+          "@type": "Annotation"
+        }
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/omo",
+      "is_a": "GraphClassNode",
+      "slots": [
+        "id",
+        "type",
+        "graph",
+        "label",
+        "definition",
+        "exact_synonyms"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://www.w3.org/2002/07/owl#Class",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "OboClassQuery",
+      "definition_uri": "https://linkml.io/sparqlfun/omoOboClassQuery",
+      "annotations": [
+        {
+          "tag": "sparql.results_slot",
+          "value": "results",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "sparql.construct",
+          "value": "CONSTRUCT {\n  ?id a owl:Class ;\n      ?_p ?_v\n}\nWHERE {\n  ?id a owl:Class .\n  ?id ?_p ?_v .\n  VALUES ?_p { IAO:0000115 oboInOwl:hasExactSynonym }\n  {% if label_regex  %}\n  ?id rdfs:label ?label .\n  FILTER regex( ?label, {{label_regex}}, \"i\" )\n  {% endif %}\n  {% if label_starts_with  %}\n  ?id rdfs:label ?label .\n  FILTER strStarts( ?label, {{label_starts_with}} )\n  {% endif %}\n}",
+          "@type": "Annotation"
+        }
+      ],
+      "comments": [
+        "INCOMPLETE"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/omo",
+      "is_a": "ResultSet",
+      "slots": [
+        "obo_class_query_results",
+        "label_regex"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/omoOboClassQuery",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "DeprecatedOboClassQuery",
+      "definition_uri": "https://linkml.io/sparqlfun/omoDeprecatedOboClassQuery",
+      "mappings": [
+        "sparqlfun:OboClassQuery"
+      ],
+      "annotations": [
+        {
+          "tag": "sparql.construct",
+          "value": "CONSTRUCT {\n  [a sparqlfun:OboClassQuery ;\n     sparqlfun:results ?id\n  ] .\n  ?id a owl:Class ;\n      ?_p ?_v\n}\nWHERE {\n  ?id a owl:Class .\n  ?id ?_p ?_v .\n  {% if label_regex  %}\n  ?id rdfs:label ?label .\n  FILTER regex( ?label, {{label_regex}}, \"i\" )\n  {% endif %}\n}",
+          "@type": "Annotation"
+        }
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/omo",
+      "slots": [
+        "deprecated_obo_class_query_results",
+        "label_regex"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/OboClassQuery",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "UbergraphTaxonClass",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphUbergraphTaxonClass",
+      "annotations": [
+        {
+          "tag": "uses_resource",
+          "value": "NCBITaxon",
+          "@type": "Annotation"
+        },
+        {
+          "tag": "sparql.select",
+          "value": "SELECT ?id WHERE { ?id rdfs:subClassOf NCBITaxon:1 }",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "all classes representing a taxon in ubergraph",
+      "comments": [
+        "this query works on ubergraph-style endpoints where (1) inferred reflexive subClassOf triples are asserted (2) NCBITaxon is loaded"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "is_a": "TaxonClass",
+      "slots": [
+        "id",
+        "type"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/ubergraphUbergraphTaxonClass",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "UbergraphQuad",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphUbergraphQuad",
+      "description": "a quad in an ubergraph endpoint",
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "is_a": "RelationGraphQuad",
+      "abstract": true,
+      "slots": [
+        "subject",
+        "predicate",
+        "object",
+        "relation_graph_quad_graph"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/ubergraphUbergraphQuad",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "NormalizedInformationContentTriple",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphNormalizedInformationContentTriple",
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "is_a": "Triple",
+      "slots": [
+        "subject",
+        "predicate",
+        "object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/ubergraphNormalizedInformationContentTriple",
+      "classification_rules": [
+        {
+          "is_a": "Triple",
+          "slot_conditions": [
+            {
+              "name": "predicate",
+              "equals_string": "ubergraph_vocab:normalizedInformationContent",
+              "@type": "SlotDefinition"
+            }
+          ],
+          "@type": "AnonymousClassExpression"
+        }
+      ],
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "SubClassCountTriple",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphSubClassCountTriple",
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "is_a": "Triple",
+      "slots": [
+        "subject",
+        "predicate",
+        "object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/ubergraphSubClassCountTriple",
+      "classification_rules": [
+        {
+          "is_a": "Triple",
+          "slot_conditions": [
+            {
+              "name": "predicate",
+              "equals_string": "ubergraph_vocab:subClassCount",
+              "@type": "SlotDefinition"
+            }
+          ],
+          "@type": "AnonymousClassExpression"
+        }
+      ],
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "IsAOrPartOf",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphIsAOrPartOf",
+      "annotations": [
+        {
+          "tag": "sparql.select",
+          "value": "SELECT * WHERE { GRAPH ?graph { ?subject ?predicate ?object . VALUES ?predicate { rdfs:subClassOf BFO:0000050 } } }",
+          "@type": "Annotation"
+        }
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "is_a": "UbergraphQuad",
+      "slots": [
+        "subject",
+        "predicate",
+        "object",
+        "relation_graph_quad_graph"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/ubergraphIsAOrPartOf",
+      "classification_rules": [
+        {
+          "is_a": "Triple",
+          "exactly_one_of": [
+            {
+              "slot_conditions": [
+                {
+                  "name": "predicate",
+                  "equals_string": "rdfs:subClassOf",
+                  "@type": "SlotDefinition"
+                }
+              ],
+              "@type": "AnonymousClassExpression"
+            },
+            {
+              "slot_conditions": [
+                {
+                  "name": "predicate",
+                  "equals_string": "BFO:0000050",
+                  "@type": "SlotDefinition"
+                }
+              ],
+              "@type": "AnonymousClassExpression"
+            }
+          ],
+          "@type": "AnonymousClassExpression"
+        }
+      ],
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "ClassTaxonExclusionViaNeverIn",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphClassTaxonExclusionViaNeverIn",
+      "annotations": [
+        {
+          "tag": "sparql.select",
+          "value": "SELECT * WHERE {\n  ?subject ?subject_predicate ?class_with_constraint .\n  ?class_with_constraint RO:0002161 ?direct_taxon .\n  FILTER EXISTS { ?object rdfs:subClassOf ?direct_taxon }\n}",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "An inferred never-in between a subject term and an object taxon, which holds\nwhen the inferred direct taxon is not in an ancestry relationship with the object taxon",
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "is_a": "Triple",
+      "mixins": [
+        "TaxonApplicable"
+      ],
+      "slots": [
+        "predicate",
+        "subject_predicate",
+        "class_with_constraint",
+        "direct_taxon",
+        "class_taxon_exclusion_via_never_in_subject",
+        "class_taxon_exclusion_via_never_in_object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/ubergraphClassTaxonExclusionViaNeverIn",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "ClassTaxonExclusionViaOnlyIn",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphClassTaxonExclusionViaOnlyIn",
+      "annotations": [
+        {
+          "tag": "sparql.select",
+          "value": "SELECT * WHERE {\n  ?subject ?subject_predicate ?class_with_constraint .\n  ?class_with_constraint RO:0002162 ?direct_taxon .\n  FILTER NOT EXISTS { ?object (rdfs:subClassOf|^rdfs:subClassOf) ?direct_taxon }\n}",
+          "@type": "Annotation"
+        }
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "is_a": "Triple",
+      "mixins": [
+        "TaxonApplicable"
+      ],
+      "slots": [
+        "predicate",
+        "subject_predicate",
+        "class_with_constraint",
+        "direct_taxon",
+        "class_taxon_exclusion_via_only_in_subject",
+        "class_taxon_exclusion_via_only_in_object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/ubergraphClassTaxonExclusionViaOnlyIn",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "ClassTaxonExclusion",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphClassTaxonExclusion",
+      "annotations": [
+        {
+          "tag": "sparql.select",
+          "value": "SELECT * WHERE {\n {\n  ?subject ?subject_predicate ?class_with_constraint BIND(RO:0002162 as ?predicate) .\n  ?class_with_constraint RO:0002162 ?direct_taxon .\n  FILTER NOT EXISTS { ?object (rdfs:subClassOf|^rdfs:subClassOf) ?direct_taxon }\n }\n UNION\n {\n  ?subject ?subject_predicate ?class_with_constraint BIND(RO:0002161 as ?predicate).\n  ?class_with_constraint RO:0002161 ?direct_taxon .\n  FILTER EXISTS { ?object rdfs:subClassOf ?direct_taxon }\n }\n}",
+          "@type": "Annotation"
+        }
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "is_a": "Triple",
+      "mixins": [
+        "TaxonApplicable"
+      ],
+      "slots": [
+        "predicate",
+        "subject_predicate",
+        "class_with_constraint",
+        "direct_taxon",
+        "class_taxon_exclusion_subject",
+        "class_taxon_exclusion_object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/ubergraphClassTaxonExclusion",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "SetwiseCommonSubClassAncestor",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphSetwiseCommonSubClassAncestor",
+      "annotations": [
+        {
+          "tag": "sparql.select",
+          "value": "SELECT ?ancestor WHERE {\n  VALUES ?sub { {{ _values(nodes) }} }\n  ?sub rdfs:subClassOf ?ancestor .\n  FILTER(isIRI(?ancestor))\n}",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "Common superclass ancestor to a set of nodes",
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "slots": [
+        "nodes",
+        "ancestor"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/ubergraphSetwiseCommonSubClassAncestor",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "SetwiseMostRecentCommonSubClassAncestor",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphSetwiseMostRecentCommonSubClassAncestor",
+      "annotations": [
+        {
+          "tag": "sparql.select",
+          "value": "SELECT ?ancestor WHERE {\n  VALUES ?sub { {{ _values(nodes) }} }\n  ?sub rdfs:subClassOf ?ancestor .\n  FILTER(isIRI(?ancestor)) .\n  FILTER NOT EXISTS {\n              VALUES ?sub2 { {{ _values(nodes) }} }\n              ?sub2 rdfs:subClassOf ?a2 .\n              ?a2 rdfs:subClassOf ?ancestor .\n              FILTER(?a2 != ?ancestor)\n              FILTER(isIRI(?a2))\n  }\n}",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "Most recent common superclass ancestor to a set of nodes",
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "slots": [
+        "nodes",
+        "ancestor"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/ubergraphSetwiseMostRecentCommonSubClassAncestor",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "PairwiseCommonAncestor",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphPairwiseCommonAncestor",
+      "annotations": [
+        {
+          "tag": "sparql.select",
+          "value": "SELECT * WHERE {\n  ?node1 ?predicate1 ?ancestor .\n  ?node2 ?predicate2 ?ancestor .\n}",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "Common ancestor in relation graph over any relations between two nodes",
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "slots": [
+        "node1",
+        "node2",
+        "predicate1",
+        "predicate2",
+        "ancestor"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/ubergraphPairwiseCommonAncestor",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "PairwiseCommonSubClassAncestor",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphPairwiseCommonSubClassAncestor",
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "is_a": "PairwiseCommonAncestor",
+      "slots": [
+        "node1",
+        "node2",
+        "predicate1",
+        "predicate2",
+        "ancestor"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/ubergraphPairwiseCommonSubClassAncestor",
+      "classification_rules": [
+        {
+          "is_a": "PairwiseCommonAncestor",
+          "slot_conditions": [
+            {
+              "name": "predicate1",
+              "equals_string": "rdfs:subClassOf",
+              "@type": "SlotDefinition"
+            },
+            {
+              "name": "predicate2",
+              "equals_string": "rdfs:subClassOf",
+              "@type": "SlotDefinition"
+            }
+          ],
+          "@type": "AnonymousClassExpression"
+        }
+      ],
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "PairwiseMostRecentCommonAncestor",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphPairwiseMostRecentCommonAncestor",
+      "annotations": [
+        {
+          "tag": "sparql.select",
+          "value": "SELECT * WHERE {\n  ?node1 ?predicate1 ?ancestor .\n  ?node2 ?predicate2 ?ancestor .\n  FILTER NOT EXISTS {\n    ?a2 (?predicate1|?predicate2|rdfs:subClassOf) ?ancestor .\n    ?node1 ?predicate1 ?a2 .\n    ?node2 ?predicate2 ?a2 .\n    FILTER(?a2 != ?ancestor)\n  }\n}",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "Common non-redundant ancestor in relation graph over any relations between two nodes",
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "slots": [
+        "node1",
+        "node2",
+        "predicate1",
+        "predicate2",
+        "ancestor"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/ubergraphPairwiseMostRecentCommonAncestor",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "PairwiseMostRecentCommonSubClassAncestor",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphPairwiseMostRecentCommonSubClassAncestor",
+      "annotations": [
+        {
+          "tag": "sparql.select",
+          "value": "SELECT * WHERE {\n  ?node1 rdfs:subClassOf ?ancestor .\n  ?node2 rdfs:subClassOf ?ancestor .\n  FILTER NOT EXISTS {\n    ?a2 rdfs:subClassOf ?ancestor .\n    ?node1 rdfs:subClassOf ?a2 .\n    ?node2 rdfs:subClassOf ?a2 .\n    FILTER(?a2 != ?ancestor)\n  }\n}",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "Common non-redundant SubClass ancestor between two nodes",
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "slots": [
+        "node1",
+        "node2",
+        "ancestor"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/ubergraphPairwiseMostRecentCommonSubClassAncestor",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "PairwiseCommonDescendant",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphPairwiseCommonDescendant",
+      "annotations": [
+        {
+          "tag": "sparql.select",
+          "value": "SELECT * WHERE {\n  ?descendant ?predicate1 ?node1 .\n  ?descendant ?predicate1 ?node2\n  FILTER (?node1 != ?node2) .\n  BIND( str(?node1) < str(?node2) AS ?is_direction_canonical)\n}",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "Common descendant in relation graph over any relations between two nodes",
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "slots": [
+        "node1",
+        "node2",
+        "predicate1",
+        "predicate2",
+        "descendant",
+        "is_direction_canonical"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/ubergraphPairwiseCommonDescendant",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "PairwiseCommonSubClassDescendant",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphPairwiseCommonSubClassDescendant",
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "is_a": "PairwiseCommonDescendant",
+      "slots": [
+        "node1",
+        "node2",
+        "predicate1",
+        "predicate2",
+        "descendant",
+        "is_direction_canonical"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/ubergraphPairwiseCommonSubClassDescendant",
+      "classification_rules": [
+        {
+          "is_a": "PairwiseCommonDescendant",
+          "slot_conditions": [
+            {
+              "name": "predicate1",
+              "equals_string": "rdfs:subClassOf",
+              "@type": "SlotDefinition"
+            },
+            {
+              "name": "predicate2",
+              "equals_string": "rdfs:subClassOf",
+              "@type": "SlotDefinition"
+            }
+          ],
+          "@type": "AnonymousClassExpression"
+        }
+      ],
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "PairwiseCommonDescendantMatrix",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphPairwiseCommonDescendantMatrix",
+      "annotations": [
+        {
+          "tag": "sparql.select",
+          "value": "SELECT * WHERE {\n\n  ?descendant ?predicate1 ?node1 .\n  ?descendant ?predicate1 ?node2 .\n  FILTER (?node1 = ?node1_candidates)\n  FILTER (?node2 = ?node2_candidates)\n}",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "Common descendant in relation graph over any relations between two nodes from two axes",
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "slots": [
+        "node1",
+        "node2",
+        "node1_candidates",
+        "node2_candidates",
+        "predicate1",
+        "predicate2",
+        "descendant"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/ubergraphPairwiseCommonDescendantMatrix",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "PairwiseCommonSubClassDescendantMatrix",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphPairwiseCommonSubClassDescendantMatrix",
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "is_a": "PairwiseCommonDescendantMatrix",
+      "slots": [
+        "node1",
+        "node2",
+        "node1_candidates",
+        "node2_candidates",
+        "predicate1",
+        "predicate2",
+        "descendant"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/ubergraphPairwiseCommonSubClassDescendantMatrix",
+      "classification_rules": [
+        {
+          "is_a": "PairwiseCommonDescendantMatrix",
+          "slot_conditions": [
+            {
+              "name": "predicate1",
+              "equals_string": "rdfs:subClassOf",
+              "@type": "SlotDefinition"
+            },
+            {
+              "name": "predicate2",
+              "equals_string": "rdfs:subClassOf",
+              "@type": "SlotDefinition"
+            }
+          ],
+          "@type": "AnonymousClassExpression"
+        }
+      ],
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "OboClassFiltered",
+      "definition_uri": "https://linkml.io/sparqlfun/ubergraphOboClassFiltered",
+      "mappings": [
+        "owl:Class"
+      ],
+      "annotations": [
+        {
+          "tag": "sparql.construct",
+          "value": "CONSTRUCT {\n  ?id a owl:Class ;\n      IAO:0000115 ?definition ;\n      oboInOwl:hasExactSynonym ?exact_snonyms\n}\nWHERE {\n  ?id a owl:Class .\n  OPTIONAL { ?id IAO:0000115 ?definition } .\n  OPTIONAL { ?id oboInOwl:hasExactSynonym ?exact_snonyms } .\n  {% if query_has_subclass_ancestor %}\n  ?id rdfs:subClassOf ?query_has_subclass_ancestor\n  {% endif %}\n}",
+          "@type": "Annotation"
+        }
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/ubergraph",
+      "is_a": "ClassNode",
+      "slots": [
+        "id",
+        "type",
+        "definition",
+        "exact_synonyms"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://www.w3.org/2002/07/owl#Class",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Charge",
+      "definition_uri": "https://linkml.io/sparqlfun/chebi/Charge",
+      "from_schema": "https://linkml.io/sparqlfun/chebi",
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/chebi/Charge",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "ChemicalEntity",
+      "definition_uri": "https://linkml.io/sparqlfun/chebi/ChemicalEntity",
+      "mappings": [
+        "CHEBI:24431"
+      ],
+      "annotations": [
+        {
+          "tag": "sparql.construct",
+          "value": "CONSTRUCT {\n  ?id a biolink:ChemicalEntity ;\n    rdfs:label ?label\n}\nWHERE {\n  ?id rdfs:label ?label ;\n      rdfs:subClassOf* CHEBI:0001062 .\n}",
+          "@type": "Annotation"
+        }
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/chebi",
+      "is_a": "OboClass",
+      "slots": [
+        "id",
+        "type",
+        "graph",
+        "label",
+        "definition",
+        "exact_synonyms"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://purl.obolibrary.org/obo/CHEBI_24431",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "ConjugateBase",
+      "definition_uri": "https://linkml.io/sparqlfun/chebi/ConjugateBase",
+      "from_schema": "https://linkml.io/sparqlfun/chebi",
+      "is_a": "SubclassOfSomeValuesFrom",
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/chebi/ConjugateBase",
+      "classification_rules": [
+        {
+          "is_a": "SubclassOfSomeValuesFrom",
+          "slot_conditions": [
+            {
+              "name": "predicate",
+              "equals_string": "chebirel:is_conjugate_base_of",
+              "@type": "SlotDefinition"
+            }
+          ],
+          "@type": "AnonymousClassExpression"
+        }
+      ],
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "ConjugateBaseWithCharge",
+      "definition_uri": "https://linkml.io/sparqlfun/chebi/ConjugateBaseWithCharge",
+      "annotations": [
+        {
+          "tag": "sparql.select",
+          "value": "SELECT * WHERE { ?subject rdfs:subClassOf [ a owl:Restriction ; owl:onProperty chebirel:is_conjugate_base_of ; owl:someValuesFrom ?object ] . ?subject chebivocab:charge ?subject_charge . ?object chebivocab:charge ?object_charge . }",
+          "@type": "Annotation"
+        }
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/chebi",
+      "is_a": "ConjugateBase",
+      "slots": [
+        "conjugateBaseWithCharge__subject_charge",
+        "conjugateBaseWithCharge__object_charge"
+      ],
+      "slot_usage": {},
+      "attributes": [
+        {
+          "name": "subject_charge",
+          "range": "integer",
+          "@type": "SlotDefinition"
+        },
+        {
+          "name": "object_charge",
+          "range": "integer",
+          "@type": "SlotDefinition"
+        }
+      ],
+      "class_uri": "https://linkml.io/sparqlfun/chebi/ConjugateBaseWithCharge",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "OboClassWithCategory",
+      "definition_uri": "https://linkml.io/sparqlfun/uberonOboClassWithCategory",
+      "mappings": [
+        "UBERON:0001062"
+      ],
+      "annotations": [
+        {
+          "tag": "sparql.construct",
+          "value": "CONSTRUCT {\n  ?id a ?category ;\n    rdfs:label ?label\n}\nWHERE {\n  ?id rdfs:label ?label .\n  ?id rdfs:subClassOf ?category\n}",
+          "@type": "Annotation"
+        }
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/uberon",
+      "is_a": "OboClass",
+      "slots": [
+        "id",
+        "type",
+        "graph",
+        "label",
+        "definition",
+        "exact_synonyms",
+        "category"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://purl.obolibrary.org/obo/UBERON_0001062",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "AnatomicalEntity",
+      "definition_uri": "https://linkml.io/sparqlfun/uberonAnatomicalEntity",
+      "mappings": [
+        "UBERON:0001062"
+      ],
+      "annotations": [
+        {
+          "tag": "sparql.construct",
+          "value": "CONSTRUCT {\n  ?id a UBERON:0001062 ;\n    rdfs:label ?label\n}\nWHERE {\n  ?id rdfs:label ?label .\n  ?id rdfs:subClassOf UBERON:0001062\n}",
+          "@type": "Annotation"
+        }
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/uberon",
+      "is_a": "OboClass",
+      "slots": [
+        "id",
+        "type",
+        "graph",
+        "label",
+        "definition",
+        "exact_synonyms"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://purl.obolibrary.org/obo/UBERON_0001062",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "BloodVessel",
+      "definition_uri": "https://linkml.io/sparqlfun/uberonBloodVessel",
+      "mappings": [
+        "UBERON:0001981"
+      ],
+      "annotations": [
+        {
+          "tag": "sparql.construct",
+          "value": "CONSTRUCT {\n  ?id a UBERON:0001981 ;\n    rdfs:label ?label ;\n    sparqlfun:subcategory ?subcategory ;\n    RO:0002178 ?supplies ;\n    RO:0002179 ?drains ;\n    RO:0002380 ?branching_part_of\n}\nWHERE {\n  ?id rdfs:label ?label .\n  ?id rdfs:subClassOf UBERON:0001981 .\n  ?id rdfs:subClassOf ?subcategory .\n  VALUES ?subcategory { UBERON:0001637 UBERON:0001638 } .\n  OPTIONAL {\n     GRAPH ubergraph:nonredundant { ?id RO:0002178 ?supplies }\n  }\n  OPTIONAL {\n     GRAPH ubergraph:nonredundant { ?id RO:0002179 ?drains }\n  }\n  OPTIONAL {\n               GRAPH ubergraph:nonredundant { ?id RO:0002380 ?branching_part_of }\n            }\n}",
+          "@type": "Annotation"
+        }
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/uberon",
+      "is_a": "OboClass",
+      "slots": [
+        "id",
+        "type",
+        "graph",
+        "label",
+        "definition",
+        "exact_synonyms",
+        "blood_vessel_subcategory",
+        "supplies",
+        "drains",
+        "branching_part_of"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://purl.obolibrary.org/obo/UBERON_0001981",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "CellType",
+      "definition_uri": "https://linkml.io/sparqlfun/uberonCellType",
+      "mappings": [
+        "CL:0000000"
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/uberon",
+      "is_a": "OboClass",
+      "slots": [
+        "id",
+        "type",
+        "graph",
+        "label",
+        "definition",
+        "exact_synonyms"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://purl.obolibrary.org/obo/CL_0000000",
+      "classification_rules": [
+        {
+          "is_a": "OboClassWithCategory",
+          "slot_conditions": [
+            {
+              "name": "category",
+              "equals_string": "CL:0000000",
+              "@type": "SlotDefinition"
+            }
+          ],
+          "@type": "AnonymousClassExpression"
+        }
+      ],
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "BiolinkCategoryTriple",
+      "definition_uri": "https://linkml.io/sparqlfun/biolinkBiolinkCategoryTriple",
+      "description": "A triple that connects any node to its biolink category",
+      "from_schema": "https://linkml.io/sparqlfun/biolink",
+      "is_a": "NodeToNodeTriple",
+      "slots": [
+        "subject",
+        "predicate",
+        "node_to_node_triple_object"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/biolinkBiolinkCategoryTriple",
+      "classification_rules": [
+        {
+          "is_a": "Triple",
+          "slot_conditions": [
+            {
+              "name": "predicate",
+              "equals_string": "biolink:category",
+              "@type": "SlotDefinition"
+            }
+          ],
+          "@type": "AnonymousClassExpression"
+        }
+      ],
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Association",
+      "definition_uri": "https://linkml.io/sparqlfun/biolinkAssociation",
+      "annotations": [
+        {
+          "tag": "sparql.select",
+          "value": "SELECT * WHERE {\n  ?subject ?predicate ?object .\n  ?subject biolink:category ?subject_category .\n  ?object biolink:category ?object_category .\n}",
+          "@type": "Annotation"
+        }
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/biolink",
+      "is_a": "Statement",
+      "slots": [
+        "subject",
+        "predicate",
+        "object",
+        "graph",
+        "statement_node_statements",
+        "statement_value_statements",
+        "subject_category",
+        "object_category"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/biolinkAssociation",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "AssociationWithInferredCategories",
+      "definition_uri": "https://linkml.io/sparqlfun/biolinkAssociationWithInferredCategories",
+      "annotations": [
+        {
+          "tag": "sparql.select",
+          "value": "SELECT * WHERE {\n  ?subject ?predicate ?object .\n  ?subject biolink:category ?subject_category .\n  ?object biolink:category ?object_category .\n  ?subject_category rdfs:subClassOf* ?subject_category_inferred .\n  ?object_category rdfs:subClassOf* ?object_category_inferred .\n}",
+          "@type": "Annotation"
+        }
+      ],
+      "from_schema": "https://linkml.io/sparqlfun/biolink",
+      "is_a": "Statement",
+      "slots": [
+        "subject",
+        "predicate",
+        "object",
+        "graph",
+        "statement_node_statements",
+        "statement_value_statements",
+        "subject_category",
+        "object_category"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/biolinkAssociationWithInferredCategories",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "GeneToGeneAssociation",
+      "definition_uri": "https://linkml.io/sparqlfun/biolinkGeneToGeneAssociation",
+      "from_schema": "https://linkml.io/sparqlfun/biolink",
+      "is_a": "Association",
+      "slots": [
+        "subject",
+        "predicate",
+        "object",
+        "graph",
+        "statement_node_statements",
+        "statement_value_statements",
+        "subject_category",
+        "object_category"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://linkml.io/sparqlfun/biolinkGeneToGeneAssociation",
+      "classification_rules": [
+        {
+          "is_a": "Association",
+          "slot_conditions": [
+            {
+              "name": "subject_category",
+              "equals_string": "biolink:Gene",
+              "@type": "SlotDefinition"
+            },
+            {
+              "name": "object_category",
+              "equals_string": "biolink:Gene",
+              "@type": "SlotDefinition"
+            }
+          ],
+          "@type": "AnonymousClassExpression"
+        }
+      ],
+      "@type": "ClassDefinition"
+    }
+  ],
+  "metamodel_version": "1.7.0",
+  "source_file": "sparqlfun.yaml",
+  "source_file_date": "2022-04-29T17:00:04",
+  "source_file_size": 927,
+  "generation_date": "2022-04-29T17:00:52",
+  "@type": "SchemaDefinition",
+  "@context": [
+    "sparqlfun/data/jsonld/sparqlfun.context.jsonld",
+    "https://w3id.org/linkml/types.context.jsonld",
+    "resultset.context.jsonld",
+    "rdf.context.jsonld",
+    "owl.context.jsonld",
+    "relation_graph.context.jsonld",
+    "ro.context.jsonld",
+    "omo.context.jsonld",
+    "ubergraph.context.jsonld",
+    "chebi.context.jsonld",
+    "uberon.context.jsonld",
+    "biolink.context.jsonld",
+    {
+      "@base": "https://linkml.io/sparqlfun/"
+    }
+  ]
+}

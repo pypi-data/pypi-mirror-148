@@ -1,0 +1,200 @@
+id: https://linkml.io/sparqlfun/owl
+name: sparqlfun-OWL
+title: sparqlfun OWL module
+description: >-
+  Abstractions for working with RDF and RDFS triples
+license: https://creativecommons.org/publicdomain/zero/1.0/
+
+prefixes:
+  sparqlfun_owl: https://linkml.io/sparqlfun/owl
+  linkml: https://w3id.org/linkml/
+
+default_prefix: sparqlfun_owl
+default_range: string
+
+default_curi_maps:
+  - semweb_context
+
+imports:
+  - linkml:types
+  - rdf
+
+classes:
+
+  equivalence triple mixin:
+    mixin: true
+    slot_usage:
+      subject:
+        description: >-
+          One of the two classes that are equivalent. No significance to subject vs object
+        range: class node
+      object:
+        description: >-
+          One of the two classes that are equivalent. No significance to subject vs object
+        range: class node
+
+  owl equivalent class triple:
+    is_a: node to node triple
+    mixins:
+      - equivalence triple mixin
+    description: >-
+      A statement that connects two class nodes where both classes are equivalent
+    classification_rules:
+      - is_a: triple
+        slot_conditions:
+          predicate:
+            equals_string: owl:equivalentClass
+
+  owl named equivalent class triple:
+    is_a: named node to named node triple
+    mixins:
+      - equivalence triple mixin
+    description: >-
+      An equivalence triple between two named classes
+    slot_usage:
+      subject:
+        description: >-
+          One of the two classes that are equivalent. No significance to subject vs object
+        range: class node
+      object:
+        description: >-
+          One of the two classes that are equivalent. No significance to subject vs object
+        range: class node
+    classification_rules:
+      - is_a: triple
+        slot_conditions:
+          predicate:
+            equals_string: owl:equivalentClass
+
+  some values from restriction:
+    class_uri: owl:Restriction
+    slots:
+      - subject
+      - predicate
+      - filler
+    annotations:
+      sparql.construct:
+        CONSTRUCT {
+          ?subject a owl:Restriction ;
+            owl:onProperty ?predicate ;
+            owl:someValuesFrom ?filler
+        }
+        WHERE {
+        ?subject a owl:Restriction ;
+          owl:onProperty ?predicate ;
+          owl:someValuesFrom ?filler
+        }
+
+  subclass of some values from:
+    annotations:
+      sparql.select:
+        SELECT *
+        WHERE {
+        ?subject rdfs:subClassOf [
+          a owl:Restriction ;
+          owl:onProperty ?predicate ;
+          owl:someValuesFrom ?object
+        ]
+        }
+
+  describe equivalent expression:
+    is_a: ResultSet
+    slots:
+      - results
+      - subject
+    slot_usage:
+      results:
+        range: class node
+    annotations:
+      sparql.results_slot: results
+      sparql.construct:
+        DESCRIBE ?object
+        WHERE {
+        ?subject owl:equivalentClass ?object
+        }
+
+  owl triple annotation:
+    is_a: triple
+    slots:
+      - axiom_identifier
+      - axiom_predicate
+      - axiom_object
+    annotations:
+      sparql.select: |-
+        SELECT * WHERE {
+          ?axiom_identifier a owl:Axiom ;
+            owl:annotatedSource ?subject ;
+            owl:annotatedProperty ?predicate ;
+            owl:annotatedTarget ?object ;
+            ?axiom_predicate ?axiom_object .
+          FILTER (?axiom_predicate != owl:annotatedSource) .
+          FILTER (?axiom_predicate != owl:annotatedProperty) .
+          FILTER (?axiom_predicate != owl:annotatedTarget) .
+
+        }
+    ## TODO: check why this doesn't work: FILTER NOT EXISTS {VALUES (?axiom_predicate) { (owl:annotatedSource) (owl:annotatedProperty) }}
+
+  owl triple with annotations TODO:
+    is_a: triple
+    slots:
+      - annotations
+    annotations:
+      sparql.construct: |-
+        CONSTRUCT {
+          ?axiom_identifier a owl:Axiom ;
+                        owl:annotatedSource ?subject ;
+                        owl:annotatedProperty ?predicate ;
+                        owl:annotatedTarget ?object ;
+                        ?axiom_predicate ?axiom_object .
+        }
+        WHERE {
+          ?axiom_identifier a owl:Axiom ;
+            owl:annotatedSource ?subject ;
+            owl:annotatedProperty ?predicate ;
+            owl:annotatedTarget ?object ;
+            ?axiom_predicate ?axiom_object .
+          FILTER (?axiom_predicate != owl:annotatedSource) .
+          FILTER (?axiom_predicate != owl:annotatedProperty) .
+          FILTER (?axiom_predicate != owl:annotatedTarget) .
+
+        }
+
+  owl annotation:
+    slots:
+      - predicate
+      - object
+
+  traversal based pairwise disjointness violation:
+    slots:
+      - class1
+      - class2
+      - descendant_class
+    comments:
+      - This is not intended to replace using an OWL reasoner to discover unsatisfiable classes
+      - >-
+        This works by traversing over subClassOf links. Note that results may be incomplete if
+        inferred subClassOf edges are not added. However, note that reasoner runners such as robot
+        may fail fast if unsatisfiable classes are discovered
+    annotations:
+      sparql.select: |-
+        SELECT * WHERE {
+          ?descendant_class rdfs:subClassOf* ?class1 .
+          ?descendant_class rdfs:subClassOf* ?class2 .
+          ?class1 owl:disjointWith ?class1
+        }
+
+slots:
+  class1:
+  class2:
+  descendant_class:
+  axiom_identifier:
+    identifier: false  ## blank nodes cannot be true identifiers
+    range: blank node
+  filler:
+    range: node
+  axiom_predicate:
+    range: property node
+  axiom_object:
+    range: node or literal  ## TODO
+  annotations:
+    range: owl annotation
