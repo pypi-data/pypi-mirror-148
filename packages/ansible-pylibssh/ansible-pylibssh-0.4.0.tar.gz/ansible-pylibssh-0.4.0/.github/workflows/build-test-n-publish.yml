@@ -1,0 +1,1111 @@
+name: 🏗 📦 & test & publish
+
+on:
+  create:  # is used for publishing to PyPI and TestPyPI
+    tags:  # any tag regardless of its name, no branches
+    - >-
+      **
+    branches-ignore:
+    - >-
+      **
+  push:  # publishes to TestPyPI pushes to the main branch
+    branches:  # any branch but not tag
+    - >-
+      **
+    - >-  # NOTE: "branches-ignore" cannot be used with "branches"
+      !dependabot/**
+    tags-ignore:
+    - >-
+      **
+  pull_request:
+    paths-ignore:  # NOTE: cannot be combined with "paths"
+    - docs/**
+  workflow_run:
+    workflows:
+    - ♲ manylinux containers
+    branches:
+    - devel
+    types:
+    - completed
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}
+  cancel-in-progress: true
+
+jobs:
+  pre-setup:
+    name: Pre-set global build settings
+    if: >-  # https://twitter.com/webKnjaZ/status/1308803017001652225
+      github.event_name != 'create' ||
+      github.event.ref_type == 'tag'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: python
+    outputs:
+      dist_version: ${{ steps.scm_version.outputs.dist_version }}
+      is_untagged_devel: >-
+        ${{ steps.not_tagged_check.outputs.is_untagged_devel || false }}
+      is_tagged: ${{ steps.tagged_check.outputs.is_tagged || false }}
+      profiling_enabled: >-
+        ${{ steps.profiling_check.outputs.profiling_enabled || false }}
+      cache_key_files: >-
+        ${{ steps.calc_cache_key_files.outputs.files_hash_key }}
+    steps:
+    - name: Switch to using Python 3.9 by default
+      uses: actions/setup-python@v3.1.2
+      with:
+        python-version: 3.9
+    - name: >-
+        Mark the build as non-tagged
+        ${{ github.event.repository.default_branch }} build
+      id: not_tagged_check
+      if: >-
+        github.event_name == 'push' &&
+        github.ref == format(
+          'refs/heads/{0}', github.event.repository.default_branch
+        )
+      run: >-
+        print('::set-output name=is_untagged_devel::true')
+    - name: Mark the build as tagged
+      id: tagged_check
+      if: >-  # "create" workflows run separately from "push" & "pull_request"
+        github.event_name == 'create' &&
+        github.event.ref_type == 'tag'
+      run: >-
+        print('::set-output name=is_tagged::true')
+    - name: Enable profiling of the build
+      id: profiling_check
+      if: >-
+        steps.tagged_check.outputs.is_tagged != 'true'
+      run: >-
+        print('::set-output name=profiling_enabled::true')
+    - name: Check out src from Git
+      uses: actions/checkout@v2.3.4
+      with:
+        fetch-depth: >-
+          ${{ steps.tagged_check.outputs.is_tagged == 'true' && 1 || 0 }}
+    - name: >-
+        Calculate Python interpreter version hash value
+        for use in the cache key
+      id: calc_cache_key_py
+      run: |
+        from hashlib import sha512
+        from sys import version
+        hash = sha512(version.encode()).hexdigest()
+        print(f'::set-output name=py_hash_key::{hash}')
+    - name: >-
+        Calculate dependency files' combined hash value
+        for use in the cache key
+      id: calc_cache_key_files
+      run: |
+        from hashlib import sha512
+        hashes_combo = sha512('-'.join((
+          "${{ hashFiles('setup.cfg') }}",
+          "${{ hashFiles('tox.ini')}}",
+          "${{ hashFiles('pyproject.toml') }}",
+          "${{ hashFiles('.pre-commit-config.yaml') }}",
+          "${{ hashFiles('pytest.ini') }}",
+          "${{ hashFiles('requirements-build.*') }}",
+          "${{ hashFiles('docs/requirements.*') }}",
+        )).encode()).hexdigest()
+        print(f'::set-output name=files_hash_key::{hashes_combo}')
+    - name: Set up pip cache
+      uses: actions/cache@v3.0.2
+      with:
+        path: >-
+          ${{
+              runner.os == 'Linux'
+              && '~/.cache/pip'
+              || '~/Library/Caches/pip'
+          }}
+        key: >-
+          ${{ runner.os }}-pip-${{
+          steps.calc_cache_key_py.outputs.py_hash_key }}-${{
+          steps.calc_cache_key_files.outputs.files_hash_key }}
+        restore-keys: |
+          ${{ runner.os }}-pip-${{ steps.calc_cache_key_py.outputs.py_hash_key }}-
+          ${{ runner.os }}-pip-
+          ${{ runner.os }}-
+    - name: Drop Git tags from HEAD for non-tag-create events
+      if: >-
+        steps.tagged_check.outputs.is_tagged != 'true'
+      run: >-
+        git tag --points-at HEAD
+        |
+        xargs git tag --delete
+      shell: bash
+    - name: Set up versioning prerequisites
+      run: >-
+        python -m
+        pip install
+        --user
+        setuptools-scm
+      shell: bash
+    - name: Set the current dist version
+      id: scm_version
+      run: |
+        import setuptools_scm
+        ver = setuptools_scm.get_version(
+          ${{ steps.not_tagged_check.outputs.is_untagged_devel == 'true' && 'local_scheme="no-local-version"' || '' }}
+        )
+        print('::set-output name=dist_version::{ver}'.format(ver=ver))
+
+  build-bin-macos:
+    name: 🏗 macOS 📦 for 🐍 ${{ matrix.python-version }}
+    needs:
+    - pre-setup
+    # NOTE: I tried also making wheels for 32-bit runtime but it's
+    # NOTE: proven to be useless and hard to maintain. Also macOS
+    # NOTE: Catalina ditched support for 32-bit executables so it
+    # NOTE: doesn't really make sense to try shimming it.
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        python-version:
+        # NOTE: Research on the wheel names / platform tags and how they
+        # NOTE: are matched under various macOS versions:
+        # NOTE: https://github.com/MacPython/wiki/wiki/Spinning-wheels
+        - "3.10"
+        - 3.9
+        - 3.8
+        - 3.7
+        - 3.6
+
+    env:
+      ANSIBLE_PYLIBSSH_TRACING: >-
+        ${{ fromJSON(needs.pre-setup.outputs.profiling_enabled) && 1 || 0 }}
+      PEP517_BUILD_ARGS: --wheel
+      PY_COLORS: 1
+      TOXENV: build-wheels-pip,delocate-macos-wheels,metadata-validation
+      TOX_PARALLEL_NO_SPINNER: 1
+
+    steps:
+    - name: Patch env context to match docs expectations
+      run: |
+        from __future__ import print_function
+        import os
+        with open(os.environ['GITHUB_ENV'], 'a') as env_file:
+            env_file.write(
+                'HOME={home_dir}\n'.
+                format(home_dir=os.environ['HOME'])
+            )
+      shell: python
+    - uses: actions/checkout@v3
+    - name: Install python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3.1.2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install libssh from brew
+      run: brew install libssh  # @0.9.4  # pinning the version does not work
+    # FIXME: can we pre-build libssh once in a pre-requisite job?
+    # NOTE: Currently we use a brew-installed libssh build that also
+    # NOTE: pulls-in openssl@1.1 as well. In the future we may want to
+    # NOTE: be in control of what and how we build. This is what the
+    # NOTE: commented out code below is for. Doing own builds may help
+    # NOTE: us produce a smaller footprint by not building the server-
+    # NOTE: side APIs. Controlling the supply chain is also safer from
+    # NOTE: the security perspective. Also, it breaks when brew replaces
+    # NOTE: the versions.
+    #- name: Fetch libssh src
+    #  env:
+    #    LIBSSH_VERSION: 0.9.3
+    #  run: >-
+    #    git clone --depth=1
+    #    -b "libssh-${{ env.LIBSSH_VERSION }}"
+    #    https://git.libssh.org/projects/libssh.git
+    #- name: Make libssh build dir
+    #  run: mkdir -pv build
+    #  working_directory: libssh
+    #- name: Build libssh
+    #  env:
+    #    CFLAGS: -I/usr/local/opt/openssl/include
+    #    LDFLAGS: -L/usr/local/opt/openssl/lib
+    #  run: |
+    #    cmake ..
+    #    make
+    #    make install/strip
+    #  working_directory: libssh/build
+    - name: Install tox
+      run: python -m pip install --user tox
+    - name: >-
+        Calculate Python interpreter version hash value
+        for use in the cache key
+      id: calc_cache_key_py
+      run: |
+        from __future__ import print_function
+        from hashlib import sha512
+        from sys import version, version_info
+        b_version = version if version_info[0] == 2 else version.encode()
+        hash = sha512(b_version).hexdigest()
+        print('::set-output name=py_hash_key::{hash}'.format(hash=hash))
+      shell: python
+    - name: Set up pip cache
+      uses: actions/cache@v3.0.2
+      with:
+        path: >-
+          ${{
+              runner.os == 'Linux'
+              && '~/.cache/pip'
+              || '~/Library/Caches/pip'
+          }}
+        key: >-
+          ${{ runner.os }}-pip-${{
+          steps.calc_cache_key_py.outputs.py_hash_key }}-${{
+          needs.pre-setup.outputs.cache_key_files }}
+        restore-keys: |
+          ${{ runner.os }}-pip-${{ steps.calc_cache_key_py.outputs.py_hash_key }}-
+          ${{ runner.os }}-pip-
+          ${{ runner.os }}-
+    - name: Check out src from Git
+      uses: actions/checkout@v2.3.4
+      with:
+        fetch-depth: >-
+          ${{ fromJSON(needs.pre-setup.outputs.is_tagged) && 1 || 0 }}
+    - name: Drop Git tags from HEAD for non-tag-create events
+      if: >-
+        !fromJSON(needs.pre-setup.outputs.is_tagged)
+      run: >-
+        git tag --points-at HEAD
+        |
+        xargs git tag --delete
+      shell: bash
+    - name: Pre-populate tox env
+      run: python -m tox -p auto --parallel-live -vvvv --notest
+    - name: Install toml Python distribution package
+      if: fromJSON(needs.pre-setup.outputs.is_untagged_devel)
+      run: >-
+        python -m pip install --user toml
+    - name: Instruct setuptools-scm not to add a local version part
+      if: fromJSON(needs.pre-setup.outputs.is_untagged_devel)
+      run: |
+        import toml
+        with open('pyproject.toml') as pyproject_toml:
+            pyproj = toml.load(pyproject_toml)
+
+        pyproj['tool']['setuptools_scm']['local_scheme'] = 'no-local-version'
+        with open('pyproject.toml', 'w') as pyproject_toml:
+            toml.dump(pyproj, pyproject_toml)
+      shell: python
+    - name: Pretend that pyproject.toml is unchanged
+      if: fromJSON(needs.pre-setup.outputs.is_untagged_devel)
+      run: |
+        git diff --color=always
+        git update-index --assume-unchanged pyproject.toml
+    - name: Build dist
+      run: python -m tox -p auto --parallel-live -vvvv -e build-wheels-pip
+    - name: Bundle external shared libs
+      run: python -m tox -p auto --parallel-live -vvvv -e delocate-macos-wheels -- dist/*.whl
+    - name: Verify wheel metadata
+      run: python -m tox -p auto --parallel-live -vvvv -e metadata-validation
+    - name: Install pytest and its plugins
+      run: python -m pip install --user pytest pytest-cov pytest-xdist
+    - name: Install the generated Python wheel distribution
+      run: python -m pip install --user --no-index -f dist --only-binary ansible-pylibssh ansible-pylibssh
+    - name: Run tests using pytest
+      run: python -m pytest -m smoke --no-cov
+    - name: Store the binary wheel
+      uses: actions/upload-artifact@v2
+      with:
+        name: python-package-distributions
+        path: dist
+        retention-days: 4
+
+  build-bin-manylinux:
+    name: >-
+      🏗 manylinux${{ matrix.manylinux-image-target.year
+      }}-${{ matrix.manylinux-image-target.arch
+      }} 📦 for 🐍 ${{ matrix.manylinux-python-target }}
+    needs:
+    - pre-setup
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        manylinux-python-target:
+        # NOTE: Must be from this list:
+        # NOTE: $ podman run -it --rm \
+        # NOTE:   quay.io/pypa/manylinux2010_x86_64 \
+        # NOTE:   ls -1 /opt/python
+        - cp310-cp310
+        - cp39-cp39
+        - cp38-cp38
+        - cp37-cp37m
+        - cp36-cp36m
+        manylinux-image-target:
+        # NOTE: Keep in sync with `build-manylinux-container-images.yml`.
+        # NOTE: Ordered from "heavy" to "fast".
+        - arch: aarch64
+          qemu_arch: arm64
+          year: 2014
+        - arch: aarch64
+          qemu_arch: arm64
+          year: _2_24
+
+        - arch: s390x
+          qemu_arch: s390x
+          year: _2_24
+
+        - arch: ppc64le
+          qemu_arch: ppc64le
+          year: 2014
+        - arch: ppc64le
+          qemu_arch: ppc64le
+          year: _2_24
+
+        - arch: x86_64
+          year: 2010
+        - arch: x86_64
+          year: 2014
+        - arch: x86_64
+          year: _2_24
+        include:
+        # NOTE: manylinux1 caps out at Python 3.9
+        - manylinux-python-target: cp36-cp36m
+          manylinux-image-target:
+            arch: x86_64
+            year: 1
+        - manylinux-python-target: cp37-cp37m
+          manylinux-image-target:
+            arch: x86_64
+            year: 1
+        - manylinux-python-target: cp38-cp38
+          manylinux-image-target:
+            arch: x86_64
+            year: 1
+        - manylinux-python-target: cp39-cp39
+          manylinux-image-target:
+            arch: x86_64
+            year: 1
+
+    env:
+      ANSIBLE_PYLIBSSH_TRACING: >-
+        ${{ fromJSON(needs.pre-setup.outputs.profiling_enabled) && 1 || 0 }}
+      DOCKER_EXECUTABLE: podman
+      PY_COLORS: 1
+      QEMU_ARCH: ${{ matrix.manylinux-image-target.qemu_arch || 'amd64' }}
+      TOXENV: >-
+        build-dists-manylinux${{ matrix.manylinux-image-target.year
+        }}-${{ matrix.manylinux-image-target.arch }},metadata-validation
+      TOX_PARALLEL_NO_SPINNER: 1
+
+    steps:
+    - name: Switch to using Python 3.9 by default
+      uses: actions/setup-python@v3.1.2
+      with:
+        python-version: 3.9
+    - name: >-
+        Calculate Python interpreter version hash value
+        for use in the cache key
+      id: calc_cache_key_py
+      run: |
+        from __future__ import print_function
+        from hashlib import sha512
+        from sys import version, version_info
+        b_version = version if version_info[0] == 2 else version.encode()
+        hash = sha512(b_version).hexdigest()
+        print('::set-output name=py_hash_key::{hash}'.format(hash=hash))
+      shell: python
+    - name: Set up pip cache
+      uses: actions/cache@v3.0.2
+      with:
+        path: >-
+          ${{
+              runner.os == 'Linux'
+              && '~/.cache/pip'
+              || '~/Library/Caches/pip'
+          }}
+        key: >-
+          ${{ runner.os }}-pip-${{
+          steps.calc_cache_key_py.outputs.py_hash_key }}-${{
+          needs.pre-setup.outputs.cache_key_files }}
+        restore-keys: |
+          ${{ runner.os }}-pip-${{ steps.calc_cache_key_py.outputs.py_hash_key }}-
+          ${{ runner.os }}-pip-
+          ${{ runner.os }}-
+    - name: Install tox
+      run: >-
+        python -m
+        pip install
+        --user
+        tox
+    - name: Check out src from Git
+      uses: actions/checkout@v2.3.4
+      with:
+        fetch-depth: >-
+          ${{ fromJSON(needs.pre-setup.outputs.is_tagged) && 1 || 0 }}
+    - name: Drop Git tags from HEAD for non-tag-create events
+      if: >-
+        !fromJSON(needs.pre-setup.outputs.is_tagged)
+      run: >-
+        git tag --points-at HEAD
+        |
+        xargs git tag --delete
+      shell: bash
+    - name: Pre-populate tox env
+      run: python -m tox -p auto --parallel-live -vvvv --notest
+    - name: Install toml Python distribution package
+      if: fromJSON(needs.pre-setup.outputs.is_untagged_devel)
+      run: >-
+        python -m
+        pip install
+        --user
+        toml
+    - name: Instruct setuptools-scm not to add a local version part
+      if: fromJSON(needs.pre-setup.outputs.is_untagged_devel)
+      run: |
+        import toml
+        with open('pyproject.toml') as pyproject_toml:
+            pyproj = toml.load(pyproject_toml)
+
+        pyproj['tool']['setuptools_scm']['local_scheme'] = 'no-local-version'
+        with open('pyproject.toml', 'w') as pyproject_toml:
+            toml.dump(pyproj, pyproject_toml)
+      shell: python
+    - name: Pretend that pyproject.toml is unchanged
+      if: fromJSON(needs.pre-setup.outputs.is_untagged_devel)
+      run: |
+        git diff --color=always
+        git update-index --assume-unchanged pyproject.toml
+    - name: >-
+        Set up QEMU ${{ env.QEMU_ARCH }} arch emulation
+        with Podman
+      if: env.QEMU_ARCH != 'amd64'
+      run: >-
+        sudo podman run
+        --rm --privileged
+        multiarch/qemu-user-static
+        --reset -p yes
+    - name: >-
+        Build ${{ matrix.manylinux-python-target }} dist
+        and verify wheel metadata
+      run: >-
+        python -m
+        tox -p auto --parallel-live -vvvv
+        --
+        ${{ matrix.manylinux-python-target }}
+    - name: Store ${{ matrix.manylinux-python-target }} binary wheel
+      uses: actions/upload-artifact@v2
+      with:
+        name: python-package-distributions
+        path: dist
+        retention-days: 4
+
+  build-src:
+    name: 🏗 an sdist 📦
+    needs:
+    - pre-setup
+    runs-on: ubuntu-latest
+
+    env:
+      ANSIBLE_PYLIBSSH_TRACING: >-
+        ${{ fromJSON(needs.pre-setup.outputs.profiling_enabled) && 1 || 0 }}
+      PEP517_BUILD_ARGS: --sdist
+      PY_COLORS: 1
+      TOXENV: build-dists,metadata-validation
+      TOX_PARALLEL_NO_SPINNER: 1
+
+    steps:
+    - name: Switch to using Python 3.9 by default
+      uses: actions/setup-python@v3.1.2
+      with:
+        python-version: 3.9
+    - name: >-
+        Calculate Python interpreter version hash value
+        for use in the cache key
+      id: calc_cache_key_py
+      run: |
+        from __future__ import print_function
+        from hashlib import sha512
+        from sys import version, version_info
+        b_version = version if version_info[0] == 2 else version.encode()
+        hash = sha512(b_version).hexdigest()
+        print('::set-output name=py_hash_key::{hash}'.format(hash=hash))
+      shell: python
+    - name: Set up pip cache
+      uses: actions/cache@v3.0.2
+      with:
+        path: >-
+          ${{
+              runner.os == 'Linux'
+              && '~/.cache/pip'
+              || '~/Library/Caches/pip'
+          }}
+        key: >-
+          ${{ runner.os }}-pip-${{
+          steps.calc_cache_key_py.outputs.py_hash_key }}-${{
+          needs.pre-setup.outputs.cache_key_files }}
+        restore-keys: |
+          ${{ runner.os }}-pip-${{ steps.calc_cache_key_py.outputs.py_hash_key }}-
+          ${{ runner.os }}-pip-
+          ${{ runner.os }}-
+    - name: Install tox
+      run: >-
+        python -m
+        pip install
+        --user
+        tox
+    - name: Check out src from Git
+      uses: actions/checkout@v2.3.4
+      with:
+        fetch-depth: >-
+          ${{ fromJSON(needs.pre-setup.outputs.is_tagged) && 1 || 0 }}
+    - name: Drop Git tags from HEAD for non-tag-create events
+      if: >-
+        !fromJSON(needs.pre-setup.outputs.is_tagged)
+      run: >-
+        git tag --points-at HEAD
+        |
+        xargs git tag --delete
+      shell: bash
+    - name: Pre-populate tox env
+      run: python -m tox -p auto --parallel-live -vvvv --notest
+    - name: Install toml Python distribution package
+      if: fromJSON(needs.pre-setup.outputs.is_untagged_devel)
+      run: >-
+        python -m
+        pip install
+        --user
+        toml
+    - name: Instruct setuptools-scm not to add a local version part
+      if: fromJSON(needs.pre-setup.outputs.is_untagged_devel)
+      run: |
+        import toml
+        with open('pyproject.toml') as pyproject_toml:
+            pyproj = toml.load(pyproject_toml)
+
+        pyproj['tool']['setuptools_scm']['local_scheme'] = 'no-local-version'
+        with open('pyproject.toml', 'w') as pyproject_toml:
+            toml.dump(pyproj, pyproject_toml)
+      shell: python
+    - name: Pretend that pyproject.toml is unchanged
+      if: fromJSON(needs.pre-setup.outputs.is_untagged_devel)
+      run: |
+        git diff --color=always
+        git update-index --assume-unchanged pyproject.toml
+    - name: Build sdist and verify metadata
+      run: python -m tox -p auto --parallel-live -vvvv
+    - name: Store the source distribution
+      uses: actions/upload-artifact@v2
+      with:
+        name: python-package-distributions
+        path: dist
+        retention-days: 4
+
+  build-rpms:
+    name: ${{ matrix.target-container.tag }}
+    needs:
+    - build-src
+    - pre-setup  # transitive, for accessing settings
+    strategy:
+      matrix:
+        target-container:
+        - tag: fedora:34
+        - tag: centos/centos:stream8
+          registry: quay.io
+        - tag: ubi8/ubi:8.3
+          registry: registry.access.redhat.com
+        - tag: ubi8/ubi:8.4
+          registry: registry.access.redhat.com
+        - tag: ubi8/ubi:8.5
+          registry: registry.access.redhat.com
+        # TODO: add a UBI9 beta container too
+
+    continue-on-error: >-
+      ${{
+          contains(matrix.target-container.tag, 'ubi')
+          && true
+          || false
+      }}
+
+    runs-on: ubuntu-latest
+    container:
+      # NOTE: GHA has poor support for concat which is why I resorted to
+      # NOTE: using this ugly ternary syntax
+      image: >-
+        ${{
+          matrix.target-container.registry
+          && matrix.target-container.registry
+          || ''
+        }}${{
+          matrix.target-container.registry
+          && '/'
+          || ''
+        }}${{
+          matrix.target-container.tag
+        }}
+
+    steps:
+    - name: Enable EPEL repository
+      if: contains(matrix.target-container.tag, 'centos')
+      run: dnf install --assumeyes epel-release
+
+    - name: Install build tooling
+      run: >-
+        dnf install
+        --assumeyes
+        dnf-plugins-core
+        rpm-build
+        ${{
+            !contains(matrix.target-container.tag, 'ubi')
+            && 'rpmdevtools rpmlint'
+            || ''
+        }}
+
+    - name: Create rpmbuild directory structure on a community distro
+      if: >-
+        !contains(matrix.target-container.tag, 'ubi')
+      run: rpmdev-setuptree
+    - name: Create rpmbuild directory structure on RHEL
+      if: contains(matrix.target-container.tag, 'ubi')
+      run: mkdir -pv ~/rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
+
+    - name: Grab the source from Git
+      uses: actions/checkout@v2
+
+    - name: Set an SCM version in the spec
+      run: >-
+        sed -i
+        "s#^\(Version:\s\+\).*#\1${{ needs.pre-setup.outputs.dist_version }}#"
+        packaging/rpm/ansible-pylibssh.spec
+
+    - name: Download all the dists  # because `rpmlint` executes the spec file
+      uses: actions/download-artifact@v3
+      with:
+        name: python-package-distributions
+        path: dist/
+
+    - name: Lint the RPM spec file
+      if: >-
+        !contains(matrix.target-container.tag, 'ubi')
+      run: rpmlint packaging/rpm/ansible-pylibssh.spec
+
+    - name: Copy sdist to the sources dir
+      run: >-
+        cp -v
+        dist/ansible-pylibssh-${{ needs.pre-setup.outputs.dist_version }}.tar.gz
+        ~/rpmbuild/SOURCES/
+
+    - name: Install static build dependencies missing from UBI
+      if: contains(matrix.target-container.tag, 'ubi')
+      run: >-
+        dnf install
+        --assumeyes
+        https://rpmfind.net/linux/centos/8-stream/AppStream/x86_64/os/Packages/cmake-filesystem-${{
+          endsWith(matrix.target-container.tag, ':8.5')
+          && '3.20.2-4'
+          || '3.18.2-9'
+        }}.el8.x86_64.rpm
+        https://rpmfind.net/linux/centos/8-stream/AppStream/x86_64/os/Packages/libssh-devel-0.9.4-${{
+          endsWith(matrix.target-container.tag, ':8.5')
+          && '3'
+          || '2'
+        }}.el8.x86_64.rpm
+
+    - name: Install static test dependencies missing from UBI
+      if: contains(matrix.target-container.tag, 'ubi')
+      run: >-
+        rpm
+        -ivh
+        --nodeps
+        https://vault.centos.org/8.4.2105/BaseOS/x86_64/os/Packages/openssh-8.0p1-6.el8_4.2.x86_64.rpm
+        https://rpmfind.net/linux/epel/8/Everything/x86_64/Packages/p/python3-pytest-cov-2.6.0-1.el8.noarch.rpm
+        https://rpmfind.net/linux/epel/8/Everything/x86_64/Packages/p/python3-pytest-forked-1.0.2-1.el8.noarch.rpm
+        https://rpmfind.net/linux/epel/8/Everything/x86_64/Packages/p/python3-pytest-xdist-1.24.1-1.el8.noarch.rpm
+        https://rpmfind.net/linux/epel/8/Everything/x86_64/Packages/p/python3-tox-3.4.0-2.el8.noarch.rpm
+        https://rpmfind.net/linux/epel/8/Everything/x86_64/Packages/p/python3-execnet-1.7.1-1.el8.noarch.rpm
+        https://rpmfind.net/linux/epel/8/Everything/x86_64/Packages/p/python3-toml-0.10.0-3.el8.noarch.rpm
+        https://rpmfind.net/linux/centos/8-stream/AppStream/x86_64/os/Packages/python3-coverage-4.5.1-7.el8.x86_64.rpm
+        https://rpmfind.net/linux/epel/8/Everything/x86_64/Packages/p/python3-apipkg-1.5-6.el8.noarch.rpm
+
+    - name: Install static build requirements
+      run: dnf builddep --assumeyes --spec packaging/rpm/ansible-pylibssh.spec
+
+    - name: Fetch sources and patches on a community distro
+      if: >-
+        !contains(matrix.target-container.tag, 'ubi')
+      run: spectool --all --get-files --sourcedir packaging/rpm/ansible-pylibssh.spec
+
+    - name: Resolve and install dynamic build deps and build an SRPM on Fedora
+      # Ref: https://github.com/rpm-software-management/rpm/commit/58dcfdd
+      if: contains(matrix.target-container.tag, 'fedora')
+      run: |
+        while :
+        do
+          set +e
+          rpmbuild -br packaging/rpm/ansible-pylibssh.spec
+          rc="$?"
+          [ "${rc}" -eq 0 ] && break
+          [ "${rc}" -ne 11 ] && exit "${rc}"
+          set -e
+          dnf builddep --assumeyes \
+            $HOME/rpmbuild/SRPMS/python-ansible-pylibssh-${{
+                needs.pre-setup.outputs.dist_version
+            }}-1.fc34.buildreqs.nosrc.rpm
+        done
+
+    - name: Build an SRPM on RHELish
+      if: >-
+        !contains(matrix.target-container.tag, 'fedora')
+      run: >-
+        rpmbuild
+        ${{
+            contains(matrix.target-container.tag, 'ubi')
+            && '--undefine=_disable_source_fetch'
+            || ''
+        }}
+        -bs
+        packaging/rpm/ansible-pylibssh.spec
+
+    - name: Build binary RPMs
+      run: >-
+        rpmbuild
+        --rebuild
+        $HOME/rpmbuild/SRPMS/python-ansible-pylibssh-${{
+            needs.pre-setup.outputs.dist_version
+        }}-1.${{
+            contains(matrix.target-container.tag, 'fedora')
+            && 'fc34'
+            || 'el8'
+        }}.src.rpm
+    - name: Install the packaged binary RPM on the system
+      run: >-
+        dnf
+        install
+        --assumeyes
+        $HOME/rpmbuild/RPMS/x86_64/python3-ansible-pylibssh-${{
+            needs.pre-setup.outputs.dist_version
+        }}-1.${{
+            contains(matrix.target-container.tag, 'fedora')
+            && 'fc34'
+            || 'el8'
+        }}.x86_64.rpm
+
+    - name: Smoke-test the installed library
+      run: >-
+        python3 -c
+        'from pylibsshext.session import Session; print(Session())'
+    - name: Produce artifact name
+      id: artifact-name
+      run: >-
+        normalized_container_id=$(
+            echo '${{ matrix.target-container.tag }}' | sed 's#[.\/:]#--#g'
+        );
+        echo "::set-output name=artifact-id::${normalized_container_id}"
+    - name: Store RPM and SRPM as artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: ${{ steps.artifact-name.outputs.artifact-id }}--srpm-n-rpm
+        path: |
+          ~/rpmbuild/SRPMS/
+          ~/rpmbuild/RPMS/
+
+  test-matrix:
+    name: >-
+      Test 🐍
+      ${{ matrix.python-version }}
+      ${{ matrix.runner-vm-os }}
+      ${{ matrix.dist-type }} dists
+    needs:
+    - build-bin-macos
+    - build-bin-manylinux
+    - build-src
+    - pre-setup  # transitive, for accessing settings
+    runs-on: ${{ matrix.runner-vm-os }}
+    strategy:
+      matrix:
+        python-version:
+        - "3.10"
+        - 3.9
+        - 3.8
+        - 3.7
+        - 3.6
+        runner-vm-os:
+        - ubuntu-20.04
+        - macos-latest
+        - ubuntu-18.04
+        dist-type:
+        - binary
+        - source
+
+    env:
+      ANSIBLE_PYLIBSSH_TRACING: >-
+        ${{ fromJSON(needs.pre-setup.outputs.profiling_enabled) && 1 || 0 }}
+      PY_COLORS: 1
+      TOXENV: test-${{ matrix.dist-type }}-dists
+      TOX_PARALLEL_NO_SPINNER: 1
+
+    steps:
+    - name: Install libssh and openssl headers on Linux
+      if: >-
+        matrix.dist-type == 'source' &&
+        runner.os == 'Linux'
+      run: sudo apt update && sudo apt install libssh-dev libssl-dev build-essential
+    - name: Install libssh and openssl headers on macOS
+      if: >-
+        runner.os == 'macOS'
+      run: brew install libssh
+    - name: Install libssh headers on Linux for cythonize+coverage
+      if: >-
+        runner.os == 'Linux'
+      run: sudo add-apt-repository ppa:kedazo/libssh-0.7.x && sudo apt update && sudo apt install libssh-dev
+    - name: Switch 🐍 to v${{ matrix.python-version }}
+      uses: actions/setup-python@v3.1.2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: >-
+        Calculate Python interpreter version hash value
+        for use in the cache key
+      id: calc_cache_key_py
+      run: |
+        from __future__ import print_function
+        from hashlib import sha512
+        from sys import version, version_info
+        b_version = version if version_info[0] == 2 else version.encode()
+        hash = sha512(b_version).hexdigest()
+        print('::set-output name=py_hash_key::{hash}'.format(hash=hash))
+      shell: python
+    - name: Set up pip cache
+      uses: actions/cache@v3.0.2
+      with:
+        path: >-
+          ${{
+              runner.os == 'Linux'
+              && '~/.cache/pip'
+              || '~/Library/Caches/pip'
+          }}
+        key: >-
+          ${{ runner.os }}-pip-${{
+          steps.calc_cache_key_py.outputs.py_hash_key }}-${{
+          needs.pre-setup.outputs.cache_key_files }}
+        restore-keys: |
+          ${{ runner.os }}-pip-${{ steps.calc_cache_key_py.outputs.py_hash_key }}-
+          ${{ runner.os }}-pip-
+          ${{ runner.os }}-
+    - name: Install tox
+      run: >-
+        python -m
+        pip install
+        --user
+        tox
+    - name: Check out src from Git
+      uses: actions/checkout@v2.3.4
+    - name: Download all the dists
+      uses: actions/download-artifact@v3
+      with:
+        name: python-package-distributions
+        path: dist/
+    - name: Pre-populate tox env
+      run: python -m tox -p auto --parallel-live -vvvv --notest
+    - name: Configure tox to run pytest under catchsegv
+      if: runner.os == 'Linux'
+      run: |
+        from __future__ import print_function
+        import os
+        with open(os.environ['GITHUB_ENV'], 'a') as env_file:
+            env_file.write('CATCHSEGV_BINARY=catchsegv\n')
+      shell: python
+    - name: Run tests
+      run: python -m tox -p auto --parallel-live -vvvv
+    - name: Send coverage data to Codecov
+      uses: codecov/codecov-action@v3.1.0
+      with:
+        file: .test-results/pytest/cov.xml
+
+  dist-meta:
+    name: Verify 🐍📦 metadata
+    needs:
+    - build-bin-macos
+    - build-bin-manylinux
+    - build-src
+    - pre-setup  # transitive, for accessing settings
+    runs-on: ubuntu-latest
+
+    env:
+      PY_COLORS: 1
+      TOXENV: metadata-validation
+      TOX_PARALLEL_NO_SPINNER: 1
+
+    steps:
+    - name: Switch to using Python 3.9 by default
+      uses: actions/setup-python@v3.1.2
+      with:
+        python-version: 3.9
+    - name: >-
+        Calculate Python interpreter version hash value
+        for use in the cache key
+      id: calc_cache_key_py
+      run: |
+        from __future__ import print_function
+        from hashlib import sha512
+        from sys import version, version_info
+        b_version = version if version_info[0] == 2 else version.encode()
+        hash = sha512(b_version).hexdigest()
+        print('::set-output name=py_hash_key::{hash}'.format(hash=hash))
+      shell: python
+    - name: Set up pip cache
+      uses: actions/cache@v3.0.2
+      with:
+        path: >-
+          ${{
+              runner.os == 'Linux'
+              && '~/.cache/pip'
+              || '~/Library/Caches/pip'
+          }}
+        key: >-
+          ${{ runner.os }}-pip-${{
+          steps.calc_cache_key_py.outputs.py_hash_key }}-${{
+          needs.pre-setup.outputs.cache_key_files }}
+        restore-keys: |
+          ${{ runner.os }}-pip-${{ steps.calc_cache_key_py.outputs.py_hash_key }}-
+          ${{ runner.os }}-pip-
+          ${{ runner.os }}-
+    - name: Install tox
+      run: >-
+        python -m
+        pip install
+        --user
+        tox
+    - name: Check out src from Git
+      uses: actions/checkout@v2.3.4
+    - name: Pre-populate tox env
+      run: python -m tox -p auto --parallel-live -vvvv --notest
+    - name: Download all the dists
+      uses: actions/download-artifact@v3
+      with:
+        name: python-package-distributions
+        path: dist/
+    - name: Verify metadata
+      run: python -m tox -p auto --parallel-live -vvvv
+
+  check:  # This job does nothing and is only used for the branch protection
+    if: always()
+
+    needs:
+    - dist-meta
+    - test-matrix
+
+    runs-on: Ubuntu-latest
+
+    steps:
+    - name: Decide whether the needed jobs succeeded or failed
+      uses: re-actors/alls-green@release/v1
+      with:
+        jobs: ${{ toJSON(needs) }}
+
+  deploy:
+    name: Publish 🐍📦 to (Test)PyPI
+    needs:
+    - check
+    - pre-setup  # transitive, for accessing settings
+    if: >-
+      fromJSON(needs.pre-setup.outputs.is_untagged_devel) ||
+      fromJSON(needs.pre-setup.outputs.is_tagged)
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Download all the dists
+      uses: actions/download-artifact@v3
+      with:
+        name: python-package-distributions
+        path: dist/
+    - name: Publish 🐍📦 to TestPyPI
+      if: >-
+        fromJSON(needs.pre-setup.outputs.is_untagged_devel) ||
+        fromJSON(needs.pre-setup.outputs.is_tagged)
+      uses: pypa/gh-action-pypi-publish@master
+      with:
+        password: ${{ secrets.testpypi_password }}
+        repository_url: https://test.pypi.org/legacy/
+    - name: Publish 🐍📦 to PyPI
+      if: fromJSON(needs.pre-setup.outputs.is_tagged)
+      uses: pypa/gh-action-pypi-publish@master
+      with:
+        password: ${{ secrets.pypi_password }}
+
+  dumb-pypi:
+    name: Publish nightlies to Dumb PyPI  # https://ansible.github.io/pylibssh/
+    needs:
+    - check
+    - pre-setup  # transitive, for accessing settings
+    if: >-
+      fromJSON(needs.pre-setup.outputs.is_untagged_devel) ||
+      fromJSON(needs.pre-setup.outputs.is_tagged)
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Download the recent published versions from TestPyPI
+      run: >-
+        python -m
+        pip download
+        --index-url https://test.pypi.org/simple/
+        --dest dist/
+        --no-deps
+        --pre
+        ansible-pylibssh
+    - name: Download all the dists
+      uses: actions/download-artifact@v3
+      with:
+        name: python-package-distributions
+        path: dist/
+
+    - name: Switch to Python 3.9
+      uses: actions/setup-python@v3.1.2
+      with:
+        python-version: 3.9
+    - name: >-
+        Calculate Python interpreter version hash value
+        for use in the cache key
+      id: calc_cache_key_py
+      run: |
+        from __future__ import print_function
+        from hashlib import sha512
+        from sys import version, version_info
+        b_version = version if version_info[0] == 2 else version.encode()
+        hash = sha512(b_version).hexdigest()
+        print('::set-output name=py_hash_key::{hash}'.format(hash=hash))
+      shell: python
+    - name: Set up pip cache
+      uses: actions/cache@v3.0.2
+      with:
+        path: >-
+          ${{
+              runner.os == 'Linux'
+              && '~/.cache/pip'
+              || '~/Library/Caches/pip'
+          }}
+        key: >-
+          ${{ runner.os }}-pip-${{
+          steps.calc_cache_key_py.outputs.py_hash_key }}-${{
+          needs.pre-setup.outputs.cache_key_files }}
+        restore-keys: |
+          ${{ runner.os }}-pip-${{ steps.calc_cache_key_py.outputs.py_hash_key }}-
+          ${{ runner.os }}-pip-
+          ${{ runner.os }}-
+    - name: Install dumb-pypi dist from PyPI
+      run: python -m pip install dumb-pypi --user
+    - name: Generate a dumb PyPI website
+      run: |
+        python -m dumb_pypi.main \
+          --package-list <(ls dist/) \
+          --packages-url https://raw.githubusercontent.com/${{ github.repository }}/gh-pages/dist \
+          --output-dir gh-pages-dumb-pypi
+      shell: bash
+
+    - name: >-
+        Copy dists from this build and TestPyPI
+        to the generated dumb PyPI website dir
+      run: cp -av dist gh-pages-dumb-pypi/
+
+    - name: Publish the dumb PyPI website to GH Pages
+      uses: peaceiris/actions-gh-pages@v3.8.0
+      with:
+        force_orphan: true
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: gh-pages-dumb-pypi
+
+
+# TODO: Test install from sdist
+#
+# TODO: Figure out if we can use Py_LIMITED_API / PEP 384:
+# TODO: * https://docs.python.org/3/c-api/stable.html
+# TODO: https://github.com/cython/cython/issues/2542
