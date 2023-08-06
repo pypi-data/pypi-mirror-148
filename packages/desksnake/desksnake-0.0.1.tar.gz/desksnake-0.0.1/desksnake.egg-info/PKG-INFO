@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: desksnake
+Version: 0.0.1
+Summary: A Desksnake Game.
+Home-page: https://ruckusist.com/snake
+Author: Ruckusist
+Author-email: ruckusist@outlook.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pythons
+A snake game. Because you have to start somewhere.
+
+

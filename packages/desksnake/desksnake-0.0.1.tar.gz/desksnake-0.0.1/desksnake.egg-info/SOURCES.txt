@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+desksnake/__init__.py
+desksnake/desksnake.py
+desksnake.egg-info/PKG-INFO
+desksnake.egg-info/SOURCES.txt
+desksnake.egg-info/dependency_links.txt
+desksnake.egg-info/entry_points.txt
+desksnake.egg-info/top_level.txt

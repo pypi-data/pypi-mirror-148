@@ -1,0 +1,3 @@
+[console_scripts]
+desksnake = desksnake.desksnake:main
+desksnake_server = desksnake.desksnake:main
