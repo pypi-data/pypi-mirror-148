@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+src/new_relic_logger.egg-info/PKG-INFO
+src/new_relic_logger.egg-info/SOURCES.txt
+src/new_relic_logger.egg-info/dependency_links.txt
+src/new_relic_logger.egg-info/requires.txt
+src/new_relic_logger.egg-info/top_level.txt
