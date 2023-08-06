@@ -1,0 +1,22 @@
+
+<div class="container-fluid m-0 p-0" id="single_data_{{s.id}}">
+<div class="p-0 m-0 pb-2" >
+        
+    <span class="d-flex justify-content-start align-items-center">
+        <div class="m-0 mr-2 border border-dark rounded" onclick="toggleMemberSelect('singles','{{s.id}}')" id="select_toggle_button_single_{{s.id}}" style="width:2rem; height:2rem"></div>
+
+        <button class="btn btn-sm btn-outline-secondary m-0 mr-2 px-2 py-1" onclick="toggleSingleSelect('{{s.id}}')"><i class="fa fa-close"></i></button>
+<button class="btn btn-sm btn-outline px-2 py-1 m-0" data-toggle="collapse" data-target="#data_div_single_{{s.id}}">{{s.name}}, {{s.first_name}} [{{s.id}}] &emsp;&emsp; {% if s.start_date %} *{{s.start_date}} &emsp;&emsp; {% endif %}{% if s.end_date %} †{{s.end_date}} {% endif %}</button>
+</span></div>
+<div class="p-0 m-0 pb-3 collapse" id="data_div_single_{{s.id}}">
+<ul class="list-group">
+    {% if rels %}
+{% for r in rels %}
+<li class="list-group-item list-group-item-sm border-0">{{ r.relation_type.name}} {{r.related_institution.name}} {{r.start_date.year|default:"-"}} bis {{r.end_date.year|default:"-"}}</li>
+{% endfor %}
+{% else %} 
+<li class="list-group-item list-group-item-sm border-0">No Person-Institution Relations</li>
+{% endif %}
+</ul>
+</div>
+</div>
