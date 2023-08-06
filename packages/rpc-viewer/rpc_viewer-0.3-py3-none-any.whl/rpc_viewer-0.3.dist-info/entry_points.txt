@@ -1,0 +1,3 @@
+[console_scripts]
+rpc_viewer = rpc_viewer.rpc_viewer:main
+
