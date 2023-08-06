@@ -1,0 +1,10 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+no_cache_dir.egg-info/PKG-INFO
+no_cache_dir.egg-info/SOURCES.txt
+no_cache_dir.egg-info/dependency_links.txt
+no_cache_dir.egg-info/top_level.txt
