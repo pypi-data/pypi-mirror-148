@@ -1,0 +1,12 @@
+src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/dc_cli.py,sha256=wmM45Nl85GdAJAUXF2-AAB5dhdoBbhzJeg_cnlqnCfQ,8016
+src/dc_utils.py,sha256=yf6W3jTq_O4_eyPJQW6L39GCf7dR8An9MABtAhVMtoY,2601
+src/scripts/__init__.py,sha256=IwZQLN3R18e-o6awZsBDr8FxiH-rElhH11H-GQhJLt4,24
+src/scripts/system-tools/__init__.py,sha256=IwZQLN3R18e-o6awZsBDr8FxiH-rElhH11H-GQhJLt4,24
+src/scripts/system-tools/vim/__init__.py,sha256=IwZQLN3R18e-o6awZsBDr8FxiH-rElhH11H-GQhJLt4,24
+devcloudcli-0.21.dist-info/LICENSE.txt,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+devcloudcli-0.21.dist-info/METADATA,sha256=5Fvz_76rLYc3QDyG6_zf6y8NYiWwEWhph0R3jxAC2iU,354
+devcloudcli-0.21.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+devcloudcli-0.21.dist-info/entry_points.txt,sha256=9zG452d9rX79oWM7_dGAhnnN-mRMb8symtTVjggbbx8,44
+devcloudcli-0.21.dist-info/top_level.txt,sha256=74rtVfumQlgAPzR5_2CgYN24MB0XARCg0t-gzk6gTrM,4
+devcloudcli-0.21.dist-info/RECORD,,
