@@ -1,0 +1,10 @@
+numpy
+matplotlib
+
+[dev]
+build
+twine
+pytest
+
+[test]
+pytest
