@@ -1,0 +1,10 @@
+darkwood/__init__.py,sha256=BbSBy66DMQcD5MkHI86O5y1zbDsd6emcFO83z6YrLRk,52
+darkwood/__main__.py,sha256=_vHFq06hwsBpWYXtNW-M64K5A3Otqn6ey8tJex06_6o,2386
+darkwood/client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+darkwood/client/call.py,sha256=f2UR6JdiiZ8ZzKCmGj1s5J3-7KXwtDj0p57JVTrJi8k,925
+darkwood-1.0.8.dist-info/LICENSE,sha256=JPEAlSpFWA_IeD5XXLdW4-2K-lHOdk6CUmTETmAWrU8,1065
+darkwood-1.0.8.dist-info/METADATA,sha256=yd-jsZ8jMaTf7jPzPQ68BubYYNgjZQTVV9bkdDdxMCU,2547
+darkwood-1.0.8.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+darkwood-1.0.8.dist-info/entry_points.txt,sha256=oya-Md3ggPH7y6l5_bvuurqPxgsyGSBvw2Tl9wqJq0k,58
+darkwood-1.0.8.dist-info/top_level.txt,sha256=MYtGT0HZDAPAtCHIwJYFZC06jlw4T4MHu4K1t36esxY,9
+darkwood-1.0.8.dist-info/RECORD,,
