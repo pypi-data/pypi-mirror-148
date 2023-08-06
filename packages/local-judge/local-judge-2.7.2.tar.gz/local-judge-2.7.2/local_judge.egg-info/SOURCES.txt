@@ -1,0 +1,15 @@
+README.md
+setup.py
+local_judge/__init__.py
+local_judge/error_handler.py
+local_judge/judge.py
+local_judge/report.py
+local_judge/ta_judge.py
+local_judge/utils.py
+local_judge/version.py
+local_judge.egg-info/PKG-INFO
+local_judge.egg-info/SOURCES.txt
+local_judge.egg-info/dependency_links.txt
+local_judge.egg-info/entry_points.txt
+local_judge.egg-info/requires.txt
+local_judge.egg-info/top_level.txt

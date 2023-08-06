@@ -1,0 +1,4 @@
+
+[ta]
+openpyxl>=2.5.0
+rarfile>=4.0
