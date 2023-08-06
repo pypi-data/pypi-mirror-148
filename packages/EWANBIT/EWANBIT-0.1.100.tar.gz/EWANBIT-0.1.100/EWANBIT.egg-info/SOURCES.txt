@@ -1,0 +1,7 @@
+setup.py
+EWANBIT/__init__.py
+EWANBIT.egg-info/PKG-INFO
+EWANBIT.egg-info/SOURCES.txt
+EWANBIT.egg-info/dependency_links.txt
+EWANBIT.egg-info/requires.txt
+EWANBIT.egg-info/top_level.txt
