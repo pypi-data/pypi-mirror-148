@@ -1,0 +1,8 @@
+fic/__init__.py,sha256=O3VFhQZ5a49nP8gpVGWoRBU4kqKtYmbBpFWexShXHck,50
+fic/cli.py,sha256=NUuqlKk8UIrvE5tfn1eAuSVRO49CTThmephlG69E99o,93
+fic/fic.py,sha256=A_lua9DkKn9gyZyilZOL97N-HQ9O2ww1Qj7Yfsmzscg,6998
+fic-0.3.dist-info/entry_points.txt,sha256=OYZXW64qLA42ME702EyD4rOoBf314EZr758dO7Ip_04,36
+fic-0.3.dist-info/LICENSE,sha256=IAwC7-_ExWH1e31Mx0buus6TB42NOAkopirU0qH5J10,1072
+fic-0.3.dist-info/WHEEL,sha256=96_DCfscDnVj9fVNwi1rfifiRwfpxLjwXWglVksjj_E,99
+fic-0.3.dist-info/METADATA,sha256=y7vflbQIDnrK2aGq4LvGoX84uTkrQ2MU_wpTJfZ8qmw,290
+fic-0.3.dist-info/RECORD,,
