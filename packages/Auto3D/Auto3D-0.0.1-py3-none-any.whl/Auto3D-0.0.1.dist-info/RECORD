@@ -1,0 +1,17 @@
+Auto3D/SPE.py,sha256=3PxnzNOly-whIoWk_yxQUxo-qeXZegrdFOq-XveyaiQ,8014
+Auto3D/__init__.py,sha256=4W8VliAYUP1KY2gLJ_YDy2TmcXYVm-PY7XikQD_bFwA,2
+Auto3D/auto3D.py,sha256=LWPukFagAC6e-GGyUxfBy0W2RS42am2ymxDVu0hp0Y8,18237
+Auto3D/isomer_engine.py,sha256=Pw4mNshpaOQBGWjmRw1raW3OiIcR472vQAOjGtZoTIQ,11639
+Auto3D/ranking.py,sha256=TKHmUJ0zZzXQv24T_BRpx3xxnGhNSBAnKLfCXnRBN3s,7895
+Auto3D/utils.py,sha256=07wj3sPnDA_n7bx9qIQLWVzvargnumTkE-sV-D58Ow0,21004
+Auto3D/ASE/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+Auto3D/ASE/geometry.py,sha256=A2t5OM2DFmHPEwMfbbt41bnGrCo1WsPPcf08MNFe68A,9112
+Auto3D/ASE/thermo.py,sha256=QfybabjgOQcB2imp7ZwfFCQu0DTqmBGHNKkjLT2dqh4,13187
+Auto3D/batch_opt/ANI2xt.py,sha256=4D5SbQzsZ7MQXz_JA4FpX5YP_2ocBZCoU5dDGgOWDA4,5122
+Auto3D/batch_opt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+Auto3D/batch_opt/batchopt.py,sha256=Av9nSKBbTCFM168I-2JXD0gfbYiBI5yADyBYg7uI5dc,14813
+Auto3D-0.0.1.dist-info/LICENSE,sha256=33Y_EoYaR6eUgYKCd5OLqz6AGXQnez41Q-pcvRb0G-A,1086
+Auto3D-0.0.1.dist-info/METADATA,sha256=-4DkRzdarCwZ1xzfZCuDOcwH6FnITqoN--jyrPN2cWs,776
+Auto3D-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+Auto3D-0.0.1.dist-info/top_level.txt,sha256=AKsTsuplf1KzY9WZvdAv7qw-BOyi40n9s_gkDLpDWmk,7
+Auto3D-0.0.1.dist-info/RECORD,,
