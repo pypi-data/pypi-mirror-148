@@ -1,0 +1,16 @@
+cwitch/__init__.py,sha256=bIzM1YtVwyLe7DKce6Y2HAOuAe7hAcCrPpY-3KPNQrw,254
+cwitch/__main__.py,sha256=-iVobodc7b6koP-JPfy-SISbzkooeBJoIsc1WkGqRhM,122
+cwitch/auto_completion.py,sha256=8Iv-7wPTOCgAOjplb6mwjNW21zKkm3tAHHWo4o8nIUQ,1309
+cwitch/cli.py,sha256=uDLsd4C7CwMkDfZYGDtDAn6Xz_cARheZ6x3W3Na4MgE,6061
+cwitch/config.py,sha256=Vmftqp-zrzUw9MgPZf4G8EPE7Av7MeDSlNwyyoYt8d0,1543
+cwitch/extractors.py,sha256=iE6ggUM5otfE0lJYv_Jx9lRI7lxVj1xy_bTv6ML5ioY,2339
+cwitch/input_validation.py,sha256=TqDGDg8wa5DzL0-1abC38XxKc6b-wVklBpMMBZIY-0Q,2022
+cwitch/printers.py,sha256=cfQUyGCdmYx_ukcA0KU1MXfKR_Oeu63OfGhsQqjG5xs,2148
+cwitch/prompts.py,sha256=BX-n_QAwDpKHmvUmThMdvdOKJRWa-7To4YoMlQw1u70,1847
+cwitch/subcommands.py,sha256=9eEVmTd1isBswW8eWoXf6TFJiPXzibF8ETZWtvONUuo,5753
+cwitch-0.1.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+cwitch-0.1.0.dist-info/METADATA,sha256=u-T3YH_BpKOjMNPF87dptY3h4qwfOO05do6JkgE6YZU,2536
+cwitch-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+cwitch-0.1.0.dist-info/entry_points.txt,sha256=4LCA5NcV-DVW0UgDnR9ZzJ01NRtiS_u8k9zpL7B-978,44
+cwitch-0.1.0.dist-info/top_level.txt,sha256=VLAV2GyMzVsSz2NsHcjFDMgepQRVIs2u_zLWuV9vkVY,7
+cwitch-0.1.0.dist-info/RECORD,,
