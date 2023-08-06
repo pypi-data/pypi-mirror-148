@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+reportlab_stubs.egg-info/PKG-INFO
+reportlab_stubs.egg-info/SOURCES.txt
+reportlab_stubs.egg-info/dependency_links.txt
+reportlab_stubs.egg-info/requires.txt
+reportlab_stubs.egg-info/top_level.txt
