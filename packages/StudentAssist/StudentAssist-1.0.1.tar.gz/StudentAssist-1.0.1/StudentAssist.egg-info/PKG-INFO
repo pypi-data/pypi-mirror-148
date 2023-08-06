@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: StudentAssist
+Version: 1.0.1
+Summary: StudentAssist is a Utica College CSC433 Final Project
+Home-page: https://github.com/wesleyaou/CSC433
+Author: A+ Labs
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/wesleyaou/CSC433/issues
+Description: # StudentAssist
+        ## The A+ Labs: CSC433 Project
+        
+        To setup the initial webserver:
+        - Execute `git clone https://github.com/wesleyaou/CSC433.git`
+        - Change into the StudentAssist/ directory, `cd CSC433/StudentAssist/`
+        - Run the webserver using `python3 main.py`
+        - In your browser, navigate to <http://localhost:5000/home>
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: Unix
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
