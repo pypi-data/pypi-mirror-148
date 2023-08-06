@@ -1,0 +1,3 @@
+[console_scripts]
+Todoska = Todoska.__main__:app
+
