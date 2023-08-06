@@ -1,0 +1,3 @@
+[console_scripts]
+mapreader = mapreader.mapreader:main
+
