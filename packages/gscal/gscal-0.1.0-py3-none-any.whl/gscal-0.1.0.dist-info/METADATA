@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: gscal
+Version: 0.1.0
+Summary: GTK Simple Calendar
+Home-page: https://github.com/Akmadan23/gscal
+Author: Azad Ahmadi
+Author-email: azadahmadi@mailo.com
+License: GPL-3
+Project-URL: Bug Tracker, https://github.com/Akmadan23/gscal/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: PyGObject
+Requires-Dist: toml
+
+# gscal (GTK Simple Calendar)
+
+Extremely minimal calendar inspired by [Gsimplecal](https://github.com/dmedvinsky/gsimplecal).
+
+
