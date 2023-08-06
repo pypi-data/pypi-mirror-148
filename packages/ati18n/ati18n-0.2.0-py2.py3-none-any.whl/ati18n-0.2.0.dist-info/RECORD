@@ -1,0 +1,14 @@
+ati18n/__init__.py,sha256=7w8tfgYQTxRSPLWS4Ge3rjBgNK4pBEzR2e9bQ-w3XVM,121
+ati18n/ati18n.py,sha256=h0hwdogXGFqerm-5ZPeT-irPn91pCcQRjiHThXsRzEk,19
+ati18n/cli.py,sha256=idGMS_5HWhAmTG5O5OK505Tu8XUnS8ZrjLgN0DveZw0,888
+ati18n/ati18n/__init__.py,sha256=LPlVJFB7X_49iEmSUWjKehLWQB-VHmJ0uvwEEhuqf6M,681
+ati18n/ati18n/ati18n.py,sha256=92ElrWbzvS3u_yMwUgvwGl-2iTePWe9Ls-MGBgzTYWQ,685
+ati18n/ati18n/aticheck.py,sha256=I2d-KeZn2xrNmCEZBgxXZwT7Xv_LypiAyY3waoiYAa8,3399
+ati18n/ati18n/common.py,sha256=C-5cq3YFw0lytQ5MIAZ0QJ1pym0hTGPtpYQvPvYhNVc,1160
+ati18n-0.2.0.dist-info/AUTHORS.rst,sha256=OoxySSy_Tsa4vESEOUFIrb52AihEgMcb8wtdbczjjaQ,153
+ati18n-0.2.0.dist-info/LICENSE,sha256=HnfFtSWL7fyVaanj4kIqxRT3RmJlxCgzu31EmU8xJlQ,1068
+ati18n-0.2.0.dist-info/METADATA,sha256=cuvU21iMci4JCXIcPn3vOkvvIHSzjputgy6miYTYUUQ,1795
+ati18n-0.2.0.dist-info/WHEEL,sha256=WzZ8cwjh8l0jtULNjYq1Hpr-WCqCRgPr--TX4P5I1Wo,110
+ati18n-0.2.0.dist-info/entry_points.txt,sha256=uNDZpJYRPAsZ_ejsH2gHZ9HhhCfxGJCKZTUoQA0eC7k,44
+ati18n-0.2.0.dist-info/top_level.txt,sha256=wEPXm5FuPZFlrrZCazMzhMZEPngQRWJvfw9J-1jiRdU,7
+ati18n-0.2.0.dist-info/RECORD,,
