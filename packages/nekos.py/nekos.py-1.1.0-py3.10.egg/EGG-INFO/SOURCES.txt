@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+nekos/__init__.py
+nekos/dict.py
+nekos/errors.py
+nekos/http.py
+nekos/nekos.py
+nekos.py.egg-info/PKG-INFO
+nekos.py.egg-info/SOURCES.txt
+nekos.py.egg-info/dependency_links.txt
+nekos.py.egg-info/requires.txt
+nekos.py.egg-info/top_level.txt
