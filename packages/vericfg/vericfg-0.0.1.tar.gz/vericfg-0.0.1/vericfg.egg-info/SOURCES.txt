@@ -1,0 +1,9 @@
+README.md
+setup.py
+vericfg/__init__.py
+vericfg/config.py
+vericfg/cstm_exceptions.py
+vericfg.egg-info/PKG-INFO
+vericfg.egg-info/SOURCES.txt
+vericfg.egg-info/dependency_links.txt
+vericfg.egg-info/top_level.txt

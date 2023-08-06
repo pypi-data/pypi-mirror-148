@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: vericfg
+Version: 0.0.1
+Summary: vericfg: Parameter Configuration Manager that organizes parameters with string keys and supports default values, setting value restrictions, and insuring that restrictions do not conflict between multiple calls.
+Home-page: https://github.com/StephenMal/vericfg
+Author: Stephen Maldonado
+Author-email: vericfg@stephenmal.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Utilities
+
+UNKNOWN
+
