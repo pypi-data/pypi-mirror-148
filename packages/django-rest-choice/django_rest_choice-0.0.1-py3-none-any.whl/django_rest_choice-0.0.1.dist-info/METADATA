@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: django-rest-choice
+Version: 0.0.1
+Summary: A small library to list django choices with REST_FRAMEWORK
+Home-page: https://github.com/marlonmp/django-rest-choices
+Author: Marlon Mosquera
+License: MIT
+Keywords: django,django_rest,choices
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+License-File: LICENSE
+Requires-Dist: django
+Requires-Dist: djangorestframework
+
+UNKNOWN
+
