@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: lytorch
+Version: 0.0.4
+Summary: my implementation of pytorch
+Home-page: https://github.com/luzhixing12345/mytorch
+Author: kamilu
+Author-email: luzhixing12345@163.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# lytorch
+
+## Introduction
+
+This is my python implementation of pytorch.
+
+> Letter `L` comes from my Chinese last name.
+
+## Requirements
+
+haven't finished yet!
+
+```bash
+pip install lytorch
+```
+
+## Supported part
+
+- lytorch
+- lytorch.nn
+
+## Usage
+
+lytorch is very similar to pytorch, if you are familar with pytorch, just change `torch` to `lytorch`, `torch.nn` to `lytorch.nn` and so on.
+
+see more information in [Documents](https://luzhixing12345.github.io/lytorch/)
+
+## Result
+
+a simple demo using lytorch to do machine learning job GAN
+
+## Conclusion
+
+
