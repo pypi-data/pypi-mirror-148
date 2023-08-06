@@ -1,0 +1,10 @@
+pandorasat/__init__.py,sha256=G0OKhmuXowIh3cHgiFp26POYX-g3dk8__Uv8KW2rN7s,65
+pandorasat/irdetector.py,sha256=TJY5UD4ngPXBso9dQy2jnK-YjT1F4VS64U97Z5fgibk,3503
+pandorasat/optics.py,sha256=ObSA6EBMlC3yhdvOxa2AZQJvjdfCzd9ilhyWz9x32Yk,618
+pandorasat/orbit.py,sha256=V5q2j16zY4NlcICIRN2BO6sI6WG6WlWvQizwLbH52HY,277
+pandorasat/pandorasat.py,sha256=TvS0w4ysTmZHEZ7GGoYzbDDdL-NOQc-NAFJk6SPzA6k,713
+pandorasat/visibledetector.py,sha256=_Qnsg6i-99xiMw6PqAbaZAgXDfLyVkvjsyW-3NERd9U,240
+pandorasat-0.1.0.dist-info/LICENSE,sha256=-sILuSWFH3L-WYVMEMRfH4J6BaMy-1UHJmY5S5p7uPc,1073
+pandorasat-0.1.0.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+pandorasat-0.1.0.dist-info/METADATA,sha256=Xpek8P0R2CsAiJFdiQ7y13PjOW8ntR-rY6_b83AhsG4,386
+pandorasat-0.1.0.dist-info/RECORD,,
