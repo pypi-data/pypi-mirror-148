@@ -1,0 +1,3 @@
+[console_scripts]
+holeinfo = holeinfo.src:main
+
