@@ -1,0 +1,13 @@
+drd/__init__.py,sha256=UBVh8pVlrecJ6PlOXNKRDby32Hbfla4kBLfh4oBITpc,491
+drd/_version.py,sha256=xwUxqNB1me5mfO6PXPXd-gWwNTAl_-Idf0ktsITBEpU,142
+drd/datasets/__init__.py,sha256=N3i23v0w2qn9EGRha7FRv9lVprv8Thx1acFXkrRkVz8,367
+drd/datasets/download_utils.py,sha256=y7XW86YP7eeMLeAmvmpcucnJCIx62To2Of0t15UukDk,18549
+drd/datasets/eleven_sandstones.py,sha256=-yLLd6dnl2BaaxIprd_RCVIe3QTmLOOzzaSPvEun0CU,14970
+drd/datasets/icl_microct_sandstones_carbonates_2015.py,sha256=2B3cwmCQA0CKc6HTXDR-eKPN9OaW5OmVpq70PPP7TCg,3569
+drd/datasets/icl_sandstones_carbonates_2009.py,sha256=MMGPjdAJkB37iVA-EpD-UbA_HLahgfCmK3O8GnllL7Q,3424
+drd/datasets/utils.py,sha256=B1ckBG4U_UuI8MKBchjqhiOaa4yebbuW6iytS9HFLsw,1163
+drd-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+drd-0.1.0.dist-info/METADATA,sha256=cQEMna462yl99Kkm7Poiay9ADTcLUkmk-Oh6Ae_AsQo,4459
+drd-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+drd-0.1.0.dist-info/top_level.txt,sha256=6z3EotdAPBtqIbvda3HqErokNBkyux7P_1ajWfNgBz8,4
+drd-0.1.0.dist-info/RECORD,,
