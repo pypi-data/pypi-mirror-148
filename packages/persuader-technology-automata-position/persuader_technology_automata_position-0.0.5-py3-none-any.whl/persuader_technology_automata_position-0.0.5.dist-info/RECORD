@@ -1,0 +1,10 @@
+position/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+position/provider/PositionProvider.py,sha256=hpGMWi5rDBumKBG3i6DRFk2oT41kfRWM8imBAq0xd1k,1787
+position/provider/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+position/provider/supplier/PositionSupplier.py,sha256=efVZT6AubGGarAf1XYgPObvF0RVOVMYapMk80X5S4Qs,156
+position/provider/supplier/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+persuader_technology_automata_position-0.0.5.dist-info/LICENSE,sha256=awOCsWJ58m_2kBQwBUGWejVqZm6wuRtCL2hi9rfa0X4,1211
+persuader_technology_automata_position-0.0.5.dist-info/METADATA,sha256=tjqDgd0PzU6Myy2q4DReZm5xFJtt__dlSBMKtECvF_k,601
+persuader_technology_automata_position-0.0.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+persuader_technology_automata_position-0.0.5.dist-info/top_level.txt,sha256=fZ88uFpZ3srgHFQ-RUvJw-7kTQO46EBHOWJrkxp6h1s,9
+persuader_technology_automata_position-0.0.5.dist-info/RECORD,,
