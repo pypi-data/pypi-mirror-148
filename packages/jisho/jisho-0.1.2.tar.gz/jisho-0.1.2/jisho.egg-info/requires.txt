@@ -1,0 +1,2 @@
+SnakeMD>=0.7
+subete>=0.9
