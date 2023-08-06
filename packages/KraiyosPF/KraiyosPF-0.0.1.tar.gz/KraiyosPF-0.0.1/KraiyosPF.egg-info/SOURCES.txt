@@ -1,0 +1,10 @@
+LICENSE.txt
+README.rst
+setup.cfg
+setup.py
+KraiyosPF/__init__.py
+KraiyosPF/ubloadpakgae.py
+KraiyosPF.egg-info/PKG-INFO
+KraiyosPF.egg-info/SOURCES.txt
+KraiyosPF.egg-info/dependency_links.txt
+KraiyosPF.egg-info/top_level.txt

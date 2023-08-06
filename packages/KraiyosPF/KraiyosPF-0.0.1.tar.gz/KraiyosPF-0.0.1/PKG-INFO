@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: KraiyosPF
+Version: 0.0.1
+Summary: KraiyosPF Dev. by kraiyosw
+Home-page: https://github.com/KraiyosW/KraiyosPF
+Author: Kraiyos Wanna
+Author-email: Kraiyos.wanna@gmail.com
+License: MIT
+Download-URL: https://github.com/KraiyosW/KraiyosPF/archive/v0.0.1.zip
+Keywords: PF,profile,GG
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+License-File: LICENSE.txt
+
+(KraiyosPF) is example upload package to pypi
+=============================================
+
+PyPi: https://pypi.org/project/KraiyosPF/
+
+is package showprofile me
+
+วิธีติดตั้ง
+~~~~~~~~~~~
+
+เปิด CMD / Terminal
+
+.. code:: python
+
+   pip install KraiyosPF
+
+วิธีใช้งานแพ็คเพจนี้
+~~~~~~~~~~~~~~~~~~~~
+
+-  เปิด IDLE ขึ้นมาแล้วพิมพ์…
+
+\```python Example: my =Profile(‘Kraiyosw’) my.company =
+‘EnkeiThai.co.th’ my.hobby = [‘Programer’,‘Movie’,‘Reading’,]
+print(my.name) my.show_email() my.show_myart() my.show_hobby()
+
+Develop by Kraiyos Wanna
+
+
