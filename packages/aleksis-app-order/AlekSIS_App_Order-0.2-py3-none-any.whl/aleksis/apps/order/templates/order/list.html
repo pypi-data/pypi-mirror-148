@@ -1,0 +1,121 @@
+{% extends 'core/base.html' %}
+{% load i18n material_form %}
+{% load render_table from django_tables2 %}
+{% block page_title %}
+  {% trans "Order list" %}
+{% endblock %}
+{% block browser_title %}
+  {% trans "Order list" %}
+{% endblock %}
+
+{% block nav_content %}
+  <ul class="tabs tabs-transparent tabs-icons tabs-fixed-width">
+    <li class="tab">
+      <a href="#list">
+        <i class="material-icons">list</i>
+        {% trans "List" %}
+      </a>
+    </li>
+    <li class="tab">
+      <a href="#overview">
+        <i class="material-icons">analytics</i>
+        {% trans "Overview" %}
+      </a>
+    </li>
+  </ul>
+{% endblock %}
+
+{% block content %}
+  <div class="row">
+    <div id="overview">
+      <table>
+        <tr>
+          <th>{% trans "Order form" %}</th>
+          <th>{% trans "Item" %}</th>
+          <th>{% trans "Count" %}</th>
+          <th>
+            <i class="material-icons left iconify" data-icon="mdi:check"></i>
+            {% trans "Confirmed" %}
+          </th>
+          <th>
+            <i class="material-icons left iconify" data-icon="mdi:currency-eur"></i>
+            {% trans "Paid" %}
+          </th>
+          <th>
+            <i class="material-icons left iconify" data-icon="mdi:truck"></i>
+            {% trans "Sent" %}
+          </th>
+          <th>{% trans "Sum" %}</th>
+        </tr>
+        {% for form in forms %}
+          <tr>
+            <th rowspan="{{ form.available_items.count|add:"2" }}">{{ form }}</th>
+            <td>{% trans "Sum" %}</td>
+            <td>{{ form.items_count }}</td>
+            <td>{{ form.confirmed_count }}</td>
+            <td>{{ form.paid_count }}</td>
+            <td>{{ form.sent_count }}</td>
+            <td>{{ form.total|floatformat:"2" }} €</td>
+          </tr>
+          {% for item in form.annotated_items %}
+            <tr>
+              <td>{{ item }}</td>
+              <td>{{ item.items_count }}</td>
+              <td>{{ item.confirmed_count }}</td>
+              <td>{{ item.paid_count }}</td>
+              <td>{{ item.sent_count }}</td>
+              <td>{{ item.items_total|floatformat:"2" }} €</td>
+            </tr>
+          {% endfor %}
+        {% endfor %}
+      </table>
+
+    </div>
+    <div id="list">
+      {% if filter %}
+        <form action="" method="get">
+          {% form form=filter.form %}{% endform %}
+          <button type="submit" class="btn waves-effect waves-light">
+            {% trans "Refresh filters" %}
+          </button>
+        </form>
+      {% endif %}
+      <form action="" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="all-action" value="yes">
+        <p>
+          <button type="submit" class="btn waves-effect waves-green margin-bottom" value="yes" name="mark-as-paid">
+            <i class="material-icons left iconify" data-icon="mdi:currency-eur"></i>
+            {% trans "Mark all as paid" %}
+          </button>
+          <button type="submit" class="btn waves-effect waves-green margin-bottom" name="mark-as-paid-email"
+                  value="yes">
+            <i class="material-icons left iconify" data-icon="mdi:currency-eur"></i>
+            {% trans "Mark all as paid and send pay confirmation" %}
+          </button>
+          <button type="submit" class="btn waves-effect waves-green margin-bottom" value="yes" name="mark-as-sent">
+            <i class="material-icons left iconify" data-icon="mdi:truck"></i>
+            {% trans "Mark all as sent" %}
+          </button>
+          <button type="submit" class="btn waves-effect waves-green margin-bottom" name="print" value="yes">
+            <i class="material-icons left iconify" data-icon="mdi:printer-outline"></i>
+            {% trans "Print" %}
+          </button>
+          <button type="submit" class="btn waves-effect waves-green margin-bottom" name="labels" value="yes">
+            <i class="material-icons left iconify" data-icon="mdi:barcode"></i>
+            {% trans "Print labels" %}
+          </button>
+          <button type="submit" class="btn waves-effect waves-green margin-bottom" name="address-labels" value="yes">
+            <i class="material-icons left iconify" data-icon="mdi:receipt-outline"></i>
+            {% trans "Print address labels" %}
+          </button>
+          <button type="submit" class="btn waves-effect waves-green margin-bottom" name="packing-lists" value="yes">
+            <i class="material-icons left iconify" data-icon="mdi:format-list-checkbox"></i>
+            {% trans "Print packing lists" %}
+          </button>
+        </p>
+      </form>
+      {% render_table table %}
+    </div>
+  </div>
+{% endblock %}
