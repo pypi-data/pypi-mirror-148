@@ -1,0 +1,14 @@
+LICENCE
+README.md
+pyproject.toml
+setup.py
+src/newiotclient/__init__.py
+src/newiotclient/__main__.py
+src/newiotclient/core.py
+src/newiotclient.egg-info/PKG-INFO
+src/newiotclient.egg-info/SOURCES.txt
+src/newiotclient.egg-info/dependency_links.txt
+src/newiotclient.egg-info/requires.txt
+src/newiotclient.egg-info/top_level.txt
+src/newiotclient.egg-info/zip-safe
+src/newiotclient/cert/ca-bundle.crt
