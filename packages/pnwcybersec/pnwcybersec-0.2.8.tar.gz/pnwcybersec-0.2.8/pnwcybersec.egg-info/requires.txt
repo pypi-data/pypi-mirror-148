@@ -1,0 +1,7 @@
+fastai
+numpy
+pillow
+matplotlib
+os
+warnings
+colorama
