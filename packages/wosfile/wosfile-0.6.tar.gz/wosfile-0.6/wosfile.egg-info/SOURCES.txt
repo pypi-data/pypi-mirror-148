@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+wosfile/__init__.py
+wosfile/read.py
+wosfile/record.py
+wosfile/tags.py
+wosfile.egg-info/PKG-INFO
+wosfile.egg-info/SOURCES.txt
+wosfile.egg-info/dependency_links.txt
+wosfile.egg-info/top_level.txt
