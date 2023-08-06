@@ -1,0 +1,15 @@
+s3synchrony/BasePlatform.py,sha256=FLzh60Nbst-trP1caNMJCXq4IPwDW8C7zyoqoNULrvM,26052
+s3synchrony/__init__.py,sha256=-I7CLQGu3iumPyj6gVGdbX4Oe4tDDHnPM12caqYJnEk,644
+s3synchrony/__main__.py,sha256=2A2cbhVcU37QnaE-Ymp4i0L0ei-XvYFMVJIpfrNdHGA,35
+s3synchrony/s3synchrony_main.py,sha256=uUcZA1wa3ldXq8P-HX8ZybQtsfGrn5YisaFXmsGrm5A,4780
+s3synchrony/s3synchrony_template.json,sha256=2U9Vnh107BSpJPMjX6AYv35QP_aVSve_8N4_80LvcXQ,205
+s3synchrony/Platforms/__init__.py,sha256=av0wGJ0eM42twsUVwVpVmC3u9ao6Yfd74x8dJUxjaIM,16
+s3synchrony/Platforms/s3.py,sha256=gXdSsVlJWYQ6eF3ErnuLI0zNfrIde097wyXoHzUAhYE,2030
+s3synchrony/Templates/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+s3synchrony/Templates/default.py,sha256=mEzEkRtNpr5P1EqCkdzJo_Z6lHykXbcbhj9OZJ0LRcg,322
+s3synchrony/Templates/no_creds_needed.py,sha256=SHGev-d3nXcN-e92fjdDzKt1LoYBhXx6kJftKMZguh8,71
+kabbes_s3synchrony-0.3.0.dist-info/LICENSE.md,sha256=6xoWNXNbKoqipUTYTri1aEKDQ4pS6-5YKPLPmNAeFeM,34888
+kabbes_s3synchrony-0.3.0.dist-info/METADATA,sha256=STveMZ4XZKvVB8pyvzeCVRqwLkTNTbbsUNCH6tT5Lec,4650
+kabbes_s3synchrony-0.3.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+kabbes_s3synchrony-0.3.0.dist-info/top_level.txt,sha256=QH2dZteHICutyk2MZK-Ugxgzev6AodOXENUGmjDXboA,12
+kabbes_s3synchrony-0.3.0.dist-info/RECORD,,
