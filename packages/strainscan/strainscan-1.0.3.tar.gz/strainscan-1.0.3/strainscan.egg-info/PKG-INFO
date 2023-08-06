@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: strainscan
+Version: 1.0.3
+Summary: One efficient and accurate strain-level microbiome composition analysis tool based on reference genomes and k-mers.
+Home-page: https://github.com/liaoherui/StrainScan
+Author: Liao Herui and Ji Yongxin
+Author-email: heruiliao2-c@my.cityu.edu.hk
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: ~=3.7
+Description-Content-Type: text/markdown
+
+StrainScan takes reference database and sequencing data as input, outputs strain-level microbiome compistion analysis report.
+
