@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: python-onix
+Version: 0.0.1
+Summary: Dataclasses for EDItEUR's ONIX standards
+Home-page: https://github.com/oboratav/python-onix
+Author: Ömer Boratav
+Author-email: omerboratav@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/oboratav/python-onix/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# editeur-onix
+
+A very simple module to provide dataclasses for EDItEUR's ONIX standards. Mostly generated using [xsdata](https://github.com/tefra/xsdata).
+
+
