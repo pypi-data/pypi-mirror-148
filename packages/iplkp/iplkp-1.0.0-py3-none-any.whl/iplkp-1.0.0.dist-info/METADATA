@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: iplkp
+Version: 1.0.0
+Summary: "iplkp - Geo IP and RDAP lookup tool"
+Home-page: https://github.com/hernan-erasmo/iplkp
+Author: "Hernán Erasmo"
+Author-email: "dherasmo@gmail.com"
+Maintainer: "Hernán Erasmo"
+Maintainer-email: "dherasmo@gmail.com"
+License: "MIT License"
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: aiohttp
+
+UNKNOWN
+
