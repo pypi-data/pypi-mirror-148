@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: cuneb-chenn
+Version: 0.0.1
+Summary: A simple package to wrap a pytorch CUDA/C++ extension
+Home-page: https://github.com/chrishenn/
+Author: Chris Henn
+Author-email: chenn@alum.mit.edu
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: GPU :: NVIDIA CUDA
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: Implementation :: CPython
+License-File: LICENSE
+
+UNKNOWN
+
