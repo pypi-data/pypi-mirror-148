@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: dragonfruit
+Version: 0.0.1b0
+Summary: Workflow tool
+Home-page: https://gitlab.com/computationalmaterials/dragonfruit
+Author: A. S. Tygesen, J. H. Chang, Martin Uhrin
+Author-email: alexty@dtu.dk, jchang@dtu.dk, martin.uhrin.10@ucl.ac.uk
+License: MPL-2.0
+Project-URL: Source, https://gitlab.com/computationalmaterials/dragonfruit
+Keywords: Workflow,Simulation,Computational materials,Materials research
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: ase (==3.22.1)
+Requires-Dist: clease (<0.12,>=0.11.3)
+Requires-Dist: click
+Requires-Dist: dnspython
+Requires-Dist: mincepy (>=0.15.25)
+Requires-Dist: mincepy-sci
+Requires-Dist: minkipy (<0.3.0,>=0.2.17)
+Requires-Dist: kiwipy (==0.7.0)
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pint
+Requires-Dist: plams
+Requires-Dist: pyos (<0.8.0,>=0.7.14)
+Requires-Dist: spglib
+Requires-Dist: tqdm
+Requires-Dist: uncertainties
+Requires-Dist: packaging
+Requires-Dist: contextlib2 ; python_version < "3.7"
+Provides-Extra: all
+Requires-Dist: flake8 ; extra == 'all'
+Requires-Dist: sphinx ; extra == 'all'
+Requires-Dist: tox ; extra == 'all'
+Requires-Dist: pytest (>=4) ; extra == 'all'
+Requires-Dist: nbsphinx ; extra == 'all'
+Requires-Dist: pre-commit ; extra == 'all'
+Requires-Dist: sphinx-rtd-theme ; extra == 'all'
+Requires-Dist: jupyter ; extra == 'all'
+Requires-Dist: build ; extra == 'all'
+Requires-Dist: pytest-mock ; extra == 'all'
+Requires-Dist: pytest-cases ; extra == 'all'
+Requires-Dist: ipython ; extra == 'all'
+Requires-Dist: pyclean (>=2.0.0) ; extra == 'all'
+Requires-Dist: twine ; extra == 'all'
+Requires-Dist: jupyter-sphinx ; extra == 'all'
+Requires-Dist: autodoc ; extra == 'all'
+Requires-Dist: pylint ; extra == 'all'
+Requires-Dist: black[jupyter] ; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: black[jupyter] ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: tox ; extra == 'dev'
+Requires-Dist: ipython ; extra == 'dev'
+Provides-Extra: doc
+Requires-Dist: sphinx ; extra == 'doc'
+Requires-Dist: sphinx-rtd-theme ; extra == 'doc'
+Requires-Dist: jupyter-sphinx ; extra == 'doc'
+Requires-Dist: nbsphinx ; extra == 'doc'
+Requires-Dist: autodoc ; extra == 'doc'
+Provides-Extra: jupyter
+Requires-Dist: jupyter ; extra == 'jupyter'
+Provides-Extra: publish
+Requires-Dist: pyclean (>=2.0.0) ; extra == 'publish'
+Requires-Dist: twine ; extra == 'publish'
+Requires-Dist: build ; extra == 'publish'
+Provides-Extra: test
+Requires-Dist: pytest (>=4) ; extra == 'test'
+Requires-Dist: pytest-mock ; extra == 'test'
+Requires-Dist: pytest-cases ; extra == 'test'
+
+# Dragonfruit
+[![pipeline status](https://gitlab.com/computationalmaterials/dragonfruit/badges/main/pipeline.svg)](https://gitlab.com/computationalmaterials/dragonfruit/-/commits/main)
+[![Documentation Status](https://readthedocs.org/projects/dragonfruit/badge/?version=latest)](https://dragonfruit.readthedocs.io/en/latest/?badge=latest)
+
+A workflow tool for simulation software. For more information, please see our [documentation](https://dragonfruit.readthedocs.io/en/latest/).
+
+
