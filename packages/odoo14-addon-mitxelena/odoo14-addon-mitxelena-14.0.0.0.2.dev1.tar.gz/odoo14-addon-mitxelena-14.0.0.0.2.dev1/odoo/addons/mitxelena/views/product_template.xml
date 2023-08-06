@@ -1,0 +1,108 @@
+<odoo>
+<data>
+    <record id="view_product_template_search" model="ir.ui.view">
+        <field name="name">product.template.search.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_search_view"/>
+        <field name="arch" type="xml">
+           <xpath expr="//field[@name='categ_id']" position="before">
+                <field name="customer_ids"/>
+                <field name="seller_ids"/>
+           </xpath>
+        </field>
+    </record>
+    <record id='view_product_template_form' model='ir.ui.view'>
+        <field name="name">product.template.form.inherit</field>
+        <field name="model">product.template</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" postion='inside'>
+                <field name="state" invisible="True"/>
+                <button
+                    name="create_revision"
+                    string="New Revision of Product"
+                    type="object"
+                    attrs="{'invisible': [('state','!=','active')]}"
+                />
+            </xpath>
+            <xpath
+                expr="//field[@name='name']"
+                position="before">
+                <h4 style="color:red;" attrs="{'invisible': [('current_revision_id', '=', False)]}">Old Revision</h4>
+            </xpath>
+            <xpath
+                expr="//button[@name='action_update_quantity_on_hand']"
+                position="attributes">
+                <attribute name="attrs">{'invisible': [('active', '=', False)]}</attribute>
+            </xpath>
+            <button name="%(stock.action_product_replenish)d" position="attributes">
+                <attribute name="attrs">{'invisible': [('active', '=', False)]}</attribute>
+            </button> 
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <field name="has_old_revisions" invisible="True"/>
+                <field name="current_revision_id" invisible="True"/>
+                <field name="state" invisible="True"/>
+                <button
+                    name="action_view_revisions"
+                    string="Old revisions"
+                    type="object"
+                    class="oe_stat_button"
+                    icon="fa-file-archive-o"
+                    attrs="{'invisible': [('has_old_revisions', '=', False)]}"
+                />
+                <button
+                    name="action_view_active_revision"
+                    string="Active revision"
+                    type="object"
+                    class="oe_stat_button"
+                    icon="fa-file-archive-o"
+                    attrs="{'invisible': ['|',('current_revision_id', '=', False),('state','=','active')]}"
+                />
+            </xpath>
+            <xpath expr="//field[@name='barcode']" position="attributes">
+                <attribute name='invisible'>True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='customer_ids']" position="replace">
+                <field name="customer_ids" widget="one2many_list">
+                    <tree>
+                        <field name="name"/>
+                        <field name="product_code"/>
+                    </tree>
+                    <form>
+                        <group>
+                            <field name="company_id" invisible="True"/>
+                            <field name="name"/>
+                            <field name="product_code"/>
+                        </group>
+                    </form>
+                </field>
+            </xpath>
+            <xpath expr="//notebook" postion="inside">
+                <page
+                    string="Revisions"
+                    attrs="{'invisible': ['&amp;',('has_old_revisions', '=', False), ('current_revision_id', '=', False)]}"
+                >
+                    <field
+                        name="old_revision_ids"
+                        domain="['|', ('active', '=', False), ('active', '=', True)]"
+                        context="{'active_test': 0}"
+                        attrs="{'invisible': [('has_old_revisions', '=', False)]}"
+                    >
+                        <tree>
+                            <field name="name" />
+                            <field name="create_date" string="Superseeded on" />
+                            <field name="create_uid" string="Superseeded by" />
+                            <field name="state" invisible="1" />
+                        </tree>
+                    </field>
+                    <group attrs="{'invisible': [('current_revision_id', '=', False)]}">
+                        <field name="current_revision_id" />
+                        <field name="has_old_revisions" invisible="1" />
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</data>
+</odoo>

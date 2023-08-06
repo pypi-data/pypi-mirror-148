@@ -1,0 +1,3 @@
+odoo14-addon-base_revision
+odoo14-addon-product_supplierinfo_for_customer
+odoo<14.1dev,>=14.0a
