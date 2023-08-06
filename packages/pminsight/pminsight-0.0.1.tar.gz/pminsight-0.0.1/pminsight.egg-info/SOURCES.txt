@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+pminsight/__init__.py
+pminsight/pminsight.py
+pminsight.egg-info/PKG-INFO
+pminsight.egg-info/SOURCES.txt
+pminsight.egg-info/dependency_links.txt
+pminsight.egg-info/requires.txt
+pminsight.egg-info/top_level.txt
