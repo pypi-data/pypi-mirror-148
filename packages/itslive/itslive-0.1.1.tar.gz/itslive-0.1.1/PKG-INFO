@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: itslive
+Version: 0.1.1
+Summary: Python client for ITSLIVE gralcier velocity data
+License: GNUL V3
+Author: betolink
+Author-email: luis.lopez@nsidc.org
+Requires-Python: >=3.9,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Shapely (>=1.8.1,<2.0.0)
+Requires-Dist: matplotlib (>=3.5.1,<4.0.0)
+Requires-Dist: pyproj (>=3.3.1,<4.0.0)
+Requires-Dist: s3fs (>=2022.3.0,<2023.0.0)
+Requires-Dist: xarray (>=2022.3.0,<2023.0.0)
+Requires-Dist: zarr (>=2.11.3,<3.0.0)
