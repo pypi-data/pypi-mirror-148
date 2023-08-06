@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+mysegdemo98765.egg-info/PKG-INFO
+mysegdemo98765.egg-info/SOURCES.txt
+mysegdemo98765.egg-info/dependency_links.txt
+mysegdemo98765.egg-info/top_level.txt
+segseg/__init__.py
+segseg/segfuns.py
