@@ -1,0 +1,13 @@
+setup.py
+pysimpleig/__a1.py
+pysimpleig/__init__.py
+pysimpleig/conversions.py
+pysimpleig/exceptions.py
+pysimpleig/library.py
+pysimpleig/login.py
+pysimpleig/syntaxes.py
+pysimpleig.egg-info/PKG-INFO
+pysimpleig.egg-info/SOURCES.txt
+pysimpleig.egg-info/dependency_links.txt
+pysimpleig.egg-info/requires.txt
+pysimpleig.egg-info/top_level.txt
