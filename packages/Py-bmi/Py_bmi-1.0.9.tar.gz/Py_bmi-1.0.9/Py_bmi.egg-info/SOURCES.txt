@@ -1,0 +1,9 @@
+LICENSE
+README.md
+py_bmi.py
+setup.py
+Py_bmi.egg-info/PKG-INFO
+Py_bmi.egg-info/SOURCES.txt
+Py_bmi.egg-info/dependency_links.txt
+Py_bmi.egg-info/not-zip-safe
+Py_bmi.egg-info/top_level.txt
