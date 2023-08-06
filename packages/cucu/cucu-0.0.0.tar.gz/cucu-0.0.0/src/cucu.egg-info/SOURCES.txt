@@ -1,0 +1,7 @@
+README.rst
+setup.cfg
+setup.py
+src/cucu.egg-info/PKG-INFO
+src/cucu.egg-info/SOURCES.txt
+src/cucu.egg-info/dependency_links.txt
+src/cucu.egg-info/top_level.txt
