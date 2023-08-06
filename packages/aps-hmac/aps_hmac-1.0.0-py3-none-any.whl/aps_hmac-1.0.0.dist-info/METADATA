@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: aps-hmac
+Version: 1.0.0
+Summary: Used with APS CoP API
+Home-page: https://accesspaysuite.com
+Author: Access PaySuite
+Author-email: help@accesspaysuite.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+UNKNOWN
+
