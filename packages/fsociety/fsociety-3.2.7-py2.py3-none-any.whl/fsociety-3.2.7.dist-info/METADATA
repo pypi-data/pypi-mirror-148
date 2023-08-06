@@ -1,0 +1,112 @@
+Metadata-Version: 2.1
+Name: fsociety
+Version: 3.2.7
+Summary: A Modular Penetration Testing Framework
+Home-page: https://fsociety.dev/
+Author: fsociety-team
+Author-email: contact@fsociety.dev
+License: MIT
+Project-URL: Packages, https://github.com/fsociety-team/fsociety/blob/main/PACKAGES.md
+Project-URL: Changelog, https://github.com/fsociety-team/fsociety/blob/main/CHANGELOG.md
+Project-URL: Funding, https://github.com/sponsors/thehappydinoa
+Project-URL: Tracker, https://github.com/fsociety-team/fsociety/issues
+Project-URL: Source, https://github.com/fsociety-team/fsociety
+Keywords: fsociety
+Platform: UNKNOWN
+Classifier: Topic :: Internet
+Classifier: Topic :: Security
+Classifier: Framework :: Flake8
+Classifier: Environment :: Console
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
+Requires-Dist: distro (>=1.7.0)
+Requires-Dist: GitPython (>=3.1.3)
+Requires-Dist: requests (>=2.23.0)
+Requires-Dist: rich (>=9.2.0)
+Provides-Extra: dev
+Requires-Dist: black (==22.3.0) ; extra == 'dev'
+Requires-Dist: flake8 (==4.0.1) ; extra == 'dev'
+Requires-Dist: flake8-black (==0.3.2) ; extra == 'dev'
+Requires-Dist: flake8-comprehensions (==3.8.0) ; extra == 'dev'
+Requires-Dist: flake8-simplify (==0.19.2) ; extra == 'dev'
+Requires-Dist: isort (==4.3.21) ; extra == 'dev'
+Requires-Dist: mypy (==0.950) ; extra == 'dev'
+Requires-Dist: pre-commit (==2.18.1) ; extra == 'dev'
+Requires-Dist: twine (==4.0.0) ; extra == 'dev'
+
+
+# fsociety
+
+[![PyPI](https://img.shields.io/pypi/v/fsociety?color=orange&logo=pypi&logoColor=orange&style=flat-square)](https://pypi.org/project/fsociety/)
+[![Python Version](https://img.shields.io/badge/python-3.6%2B-blue?logo=python&style=flat-square)](https://www.python.org/downloads/)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/fsociety?style=flat-square)
+[![Docker Cloud build](https://img.shields.io/docker/cloud/build/fsocietyteam/fsociety?style=flat-square)](https://hub.docker.com/r/fsocietyteam/fsociety)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-organge.svg?logo=git&logoColor=organge&style=flat-square)](http://makeapullrequest.com)
+[![Open in Visual Studio Code](https://img.shields.io/badge/VSCode-Open-0098FF)](https://open.vscode.dev/fsociety-team/fsociety)
+
+A Modular Penetration Testing Framework
+
+[![Packages](https://img.shields.io/badge/PACKAGES.md-red?style=flat-square)](https://github.com/fsociety-team/fsociety/blob/main/PACKAGES.md) [![Changelog](https://img.shields.io/badge/CHANGELOG.md-red?style=flat-square)](https://github.com/fsociety-team/fsociety/blob/main/CHANGELOG.md)
+
+[![fsociety](https://raw.githubusercontent.com/fsociety-team/fsociety/main/images/fsociety.png)](https://github.com/fsociety-team/fsociety)
+
+![cli](https://raw.githubusercontent.com/fsociety-team/fsociety/main/images/cli.png)
+
+## Install
+
+```bash
+pip install fsociety
+```
+
+## Update
+
+```bash
+pip install --upgrade fsociety
+```
+
+## Usage
+
+```bash
+usage: fsociety [-h] [-i] [-s]
+
+A Penetration Testing Framework
+
+optional arguments:
+  -h, --help     show this help message and exit
+  -i, --info     gets fsociety info
+  -s, --suggest  suggest a tool
+```
+
+## Develop
+
+```bash
+git clone https://github.com/fsociety-team/fsociety.git
+pip install -e ".[dev]"
+```
+
+## Docker
+
+```bash
+docker pull fsocietyteam/fsociety
+docker run -it fsocietyteam/fsociety fsociety
+```
+
+## License
+
+This software is licensed under the [MIT](https://github.com/fsociety-team/fsociety/blob/main/LICENSE) License.
+
+[![Twitter Follow](https://img.shields.io/badge/fuck%20it-ship%20it-blue?style=flat-square)](https://twitter.com/fsociety_team) [![Twitter Follow](https://img.shields.io/twitter/follow/fsociety_team?color=blue&style=flat-square)](https://twitter.com/fsociety_team)
+
+
