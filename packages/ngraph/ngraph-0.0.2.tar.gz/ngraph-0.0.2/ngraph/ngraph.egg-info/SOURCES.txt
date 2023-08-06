@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+ngraph/algorithms/__init__.py
+ngraph/algorithms/spf.py
+ngraph/ngraph.egg-info/PKG-INFO
+ngraph/ngraph.egg-info/SOURCES.txt
+ngraph/ngraph.egg-info/dependency_links.txt
+ngraph/ngraph.egg-info/top_level.txt
