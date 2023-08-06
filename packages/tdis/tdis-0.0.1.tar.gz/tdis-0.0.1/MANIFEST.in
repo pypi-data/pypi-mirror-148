@@ -1,0 +1,3 @@
+recursive-include tdis *
+global-exclude *.py[cod]
+include VERSION

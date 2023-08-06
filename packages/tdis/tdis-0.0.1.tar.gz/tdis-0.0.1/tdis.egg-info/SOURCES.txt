@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+VERSION
+pyproject.toml
+setup.cfg
+setup.py
+tdis/__init__.py
+tdis/__main__.py
+tdis.egg-info/PKG-INFO
+tdis.egg-info/SOURCES.txt
+tdis.egg-info/dependency_links.txt
+tdis.egg-info/entry_points.txt
+tdis.egg-info/not-zip-safe
+tdis.egg-info/requires.txt
+tdis.egg-info/top_level.txt
+tests/__init__.py
