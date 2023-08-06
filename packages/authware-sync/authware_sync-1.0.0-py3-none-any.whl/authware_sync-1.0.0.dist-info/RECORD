@@ -1,0 +1,12 @@
+authware/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+authware/application.py,sha256=l4b1TAphdaer27GD9LqWDwgA0x5xsP8GGlUI5UeCErM,4415
+authware/cryptography.py,sha256=D_aYVdP9qqGHWY9yGHsyrXhugIw9ZgFjHqSrUUCX0lc,144
+authware/exceptions.py,sha256=Da0raYZoEMK8VeenTU6HVZAhuwQT9smuCJHGg7TYgkQ,203
+authware/hwid.py,sha256=rlzVfL9xwqsS2KpBisVkETxCw4s6aQIuzTkP5jqFg70,438
+authware/user.py,sha256=O7uDLypiJAuLqD_eOZTKDChsgZ2kdkki1CL0vKABLY4,8458
+authware/utils.py,sha256=dENX4qNG54DuSRqCJP5q7TqpGRLidfmHRST2WSegilY,2383
+authware_sync-1.0.0.dist-info/LICENSE,sha256=XDBB212WdD2ssa7tLUyByTgFz2Pqc6LcJL_om5ATHJs,1086
+authware_sync-1.0.0.dist-info/METADATA,sha256=Tl2Ly-ptOWoJjSXoW5mjtwUMm-kRUnKbZf2GRyZE9l4,618
+authware_sync-1.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+authware_sync-1.0.0.dist-info/top_level.txt,sha256=1JeTF4GxDSDew3lVxxvCfYvxapnt0kE11rDtBizcfYo,9
+authware_sync-1.0.0.dist-info/RECORD,,
