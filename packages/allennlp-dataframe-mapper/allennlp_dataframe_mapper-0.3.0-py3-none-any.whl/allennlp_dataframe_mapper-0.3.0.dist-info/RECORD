@@ -1,0 +1,13 @@
+allennlp_dataframe_mapper/__init__.py,sha256=qbmyfm_Gx6PlTMWGqxsTbkYsdFKb0ZGtEY1i9zpsSAE,69
+allennlp_dataframe_mapper/common/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+allennlp_dataframe_mapper/common/testing/__init__.py,sha256=lG2xRef9t_Kt3vgksq3QJhuXoTUD_FCYC-2qfMgyVBg,112
+allennlp_dataframe_mapper/common/testing/test_case.py,sha256=ZPki1Vc08z1eLfVm9S4BJFQVEW711mb9SrIYkBS8zoo,401
+allennlp_dataframe_mapper/mapper.py,sha256=G38K7AzcWePLnQSbdneglEkXMIxzdwvMzBRpVOuzyHM,1812
+allennlp_dataframe_mapper/transforms/__init__.py,sha256=CMvIbDh4z4UCmT07CNMOK7OWoJhpfPaKm6ZW5mBDHp0,331
+allennlp_dataframe_mapper/transforms/base.py,sha256=d3ThdkLTDnFxdHxvHU_6Vb25m0OMUJMNaFZdcR5O8QU,405
+allennlp_dataframe_mapper/transforms/hash_name.py,sha256=bBAITfddWi8wadpltMJMCUZQZXLpP7o-FLxbcLDfqzQ,672
+allennlp_dataframe_mapper/transforms/preprocessing.py,sha256=GnZxz7350Z1w_YWKclT7k4AtCJb8ztz-VRLYaoLFgZ8,1485
+allennlp_dataframe_mapper-0.3.0.dist-info/LICENSE,sha256=9dIeoMc7Nh_ycWsY68td1iakBuM4T1DLSnNHx4B91lg,1072
+allennlp_dataframe_mapper-0.3.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+allennlp_dataframe_mapper-0.3.0.dist-info/METADATA,sha256=6QaAXjVWsO9Bakjeno9ephQqIAxf8WbJEjZ0Ocjo8lY,2982
+allennlp_dataframe_mapper-0.3.0.dist-info/RECORD,,
