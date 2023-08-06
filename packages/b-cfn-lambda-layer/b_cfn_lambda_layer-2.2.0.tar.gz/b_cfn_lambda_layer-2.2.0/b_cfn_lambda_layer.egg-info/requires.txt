@@ -1,0 +1,2 @@
+aws-cdk.aws_lambda<2.0.0,>=1.150.0
+aws-cdk.aws-ssm<2.0.0,>=1.150.0
