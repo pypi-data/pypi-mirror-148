@@ -1,0 +1,8 @@
+README.md
+setup.py
+paddle_nnUNet.egg-info/PKG-INFO
+paddle_nnUNet.egg-info/SOURCES.txt
+paddle_nnUNet.egg-info/dependency_links.txt
+paddle_nnUNet.egg-info/requires.txt
+paddle_nnUNet.egg-info/top_level.txt
+paddlennunet/__init__.py
