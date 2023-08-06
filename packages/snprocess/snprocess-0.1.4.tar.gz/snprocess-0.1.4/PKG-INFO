@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: snprocess
+Version: 0.1.4
+Summary: A SNP processing package
+Home-page: https://github.com/dokastho/snprocess
+Author: Thomas Dokas
+Author-email: dokastho@umich.edu
+License: UNKNOWN
+Description: # Scripts for Data Handling
+          by Thomas Dokas
+          
+          <dokastho@umich.edu>
+          
+          for mbni
+          
+        - [x] QC
+        - [x] Phase 1, 2 & 3 generalized script
+        ## QC
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
