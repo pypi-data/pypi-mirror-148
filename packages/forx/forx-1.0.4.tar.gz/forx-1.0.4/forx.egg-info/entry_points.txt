@@ -1,0 +1,3 @@
+[console_scripts]
+forx = forx.__main__:main
+
