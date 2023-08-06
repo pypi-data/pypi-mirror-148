@@ -1,0 +1,11 @@
+license.md,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+matmap/__init__.py,sha256=tedVQYNhbJsuYOw10EGSKVMjZsYcN1jeyCmWm3LjY30,42
+matmap/base.py,sha256=mcK2VOffi89LHvXTDZDeavEWUbnyLdVyXHl8k60l4Xc,4235
+matmap/qast_utils/loopReader.py,sha256=EEQRzWtQCAEl9o-ckMdE-4C-0BTi7-3JUK1FthbZ_ZU,4406
+matmap/transforms/ReorderingTransform.py,sha256=xz2aaaJyB1TD-HcpH7qAu7c2j2SCZt3rRRSuOiCGO7Q,1514
+matmap/transforms/TilingTransform.py,sha256=asVD21DB5-vCNXGnx74XwYwLGAm7vX75BhHySmo80ho,4987
+matmap/tuning/gptune_harness.py,sha256=lBcEOv4x3baTK6GRyl7HxbPcjyGUmFYlc3v_3gJ8S8M,928
+matmap/tuning/tunableTransform,sha256=PTu-6y3TX-7oT-yg24B0KmNLJtlteGY-oEHA_WMAZWY,495
+matmap-0.1.0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+matmap-0.1.0.dist-info/METADATA,sha256=GdCX5WPJKW8bgxveBCora3ImSwNKLqjHihwzb5aZmb4,2522
+matmap-0.1.0.dist-info/RECORD,,

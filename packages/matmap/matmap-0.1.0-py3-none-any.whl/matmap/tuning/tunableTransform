@@ -1,0 +1,17 @@
+from __future__ import annotations
+from cmath import cos
+import sys
+from exo import proc, Procedure, DRAM, config, instr, QAST
+from MoST.MoST_base import *
+from MoST.qast_utils.loopReader import *
+from itertools import dropwhile
+
+class tunableTransform(MoSTSchedule):
+    def __init__(self):
+        pass
+
+    def tuningParameters(fieldName):
+        assert fieldName in self.fields(), "Tuning variable nonexistent!"
+
+# each tun
+# we can generate configs with factory methods to generate configs
