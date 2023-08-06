@@ -1,0 +1,3 @@
+[console_scripts]
+file-split=fsai_file_split.main:app
+

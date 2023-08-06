@@ -1,0 +1,9 @@
+LICENSE,sha256=l1Ag4sGIgyTX4RsASJof3yz0wzocjq-47UFMVRoijwQ,1076
+fsai_file_split/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fsai_file_split/main.py,sha256=VRGjNGH6URtwG0wRBu2DcM0omfojLrIr9KOtSK40DGY,2210
+fsai_file_split/split_libs/jsonl_split.py,sha256=pwx24HMTQL4UvUP3OqOTY3LVCYfm6rgM0YYiJOrPZmQ,1311
+fsai_file_split-0.1.0.dist-info/entry_points.txt,sha256=MX5zVShh-IXmrZ5h-1gxS8pkLpaqwulXPJ5svefuEg4,55
+fsai_file_split-0.1.0.dist-info/LICENSE,sha256=l1Ag4sGIgyTX4RsASJof3yz0wzocjq-47UFMVRoijwQ,1076
+fsai_file_split-0.1.0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+fsai_file_split-0.1.0.dist-info/METADATA,sha256=QyMNM8qtcdp7L4VqGRbfVjXlq5rasqa_9LSP4vRcqTg,996
+fsai_file_split-0.1.0.dist-info/RECORD,,
