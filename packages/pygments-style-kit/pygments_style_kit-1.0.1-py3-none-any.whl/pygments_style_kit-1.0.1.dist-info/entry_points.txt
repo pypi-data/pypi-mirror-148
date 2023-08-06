@@ -1,0 +1,2 @@
+[pygments.styles]
+kitdark = pygments_style_kit.kitdark:KitdarkStyle
