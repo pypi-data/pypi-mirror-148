@@ -1,0 +1,11 @@
+msgpack
+python-dateutil
+pyyaml
+toolz
+
+[:python_version == "3.6"]
+dataclasses
+
+[dev]
+black
+jupyter
