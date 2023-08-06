@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: standoffconverter
+Version: 0.8.11
+Summary: converter from xml to standoff and back
+Home-page: https://github.com/standoff-nlp/standoffconverter
+Author: David Lassner
+Author-email: lassner@tu-berlin.de
+License: MIT
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: lxml
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: tqdm
+
+UNKNOWN
+
