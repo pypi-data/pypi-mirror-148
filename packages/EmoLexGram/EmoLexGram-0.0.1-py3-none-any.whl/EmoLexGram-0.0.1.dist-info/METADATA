@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: EmoLexGram
+Version: 0.0.1
+Summary: EmoLexGram is a python package for text-based emotion classification
+Home-page: https://github.com/mary123mary/EmoLexGram
+Author: Moksha Thisarani
+Author-email: moksha.util@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.5
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: nltk
+Requires-Dist: requests
+
+# EmoLexGram
+A python package for classifying emotion based on EmoLexGram (NRC Emotion Lexicon).
+
+NRC Word-Emotion Association Lexicon aka NRC Emotion Lexicon aka EmoLexGram: 
+
+association of words with eight emotions (anger, fear, anticipation, trust, surprise, sadness, joy, and disgust)
+
+and two sentiments (negative and positive) manually annotated on Amazon's Mechanical Turk. Available in 40 different languages.
+
+Version: 0.0.1
+
+Number of terms: 14,182 unigrams (words), ~25,000 word senses
+
+Association scores: binary (associated or not)
+
+Creators of Lexicon: Saif M. Mohammad and Peter D. Turney 
+https://www.saifmohammad.com/WebPages/AccessResource.htm
+
+
