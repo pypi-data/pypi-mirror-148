@@ -1,0 +1,15 @@
+click
+exit_codes
+stevedore
+asq
+more-itertools
+
+[dev]
+black
+bumpversion
+twine
+
+[test]
+hypothesis
+pytest
+tox
