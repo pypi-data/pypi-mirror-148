@@ -1,0 +1,111 @@
+Metadata-Version: 2.1
+Name: packing2porenet
+Version: 0.1.1
+Summary: Python package to compute pore network based on given particle packing
+Home-page: https://gitlab.com/stranskyjan/packing2porenet
+Author: Jan Stránský
+Author-email: honzik.stransky@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://gitlab.com/stranskyjan/packing2porenet/-/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# [packing2porenet](https://gitlab.com/stranskyjan/packing2porenet)
+Python package to compute pore network based on given particle packing.
+
+## Overview
+Computes pores and throats and their properties based on given packing.
+
+#### spherical pores from spherical packing
+Firstly, the weighted (also denoted as regular) Voronoi tesselation is done based on the input spherical packing. Weights are spheres' radii.
+
+From the weighted Voronoi tesselation, Delaunay tetrahedralization is determined, resulting in the set of tetrahedrons and their connectivity.
+
+Pores are assigned for each Delaunay tetrahedron.
+Size and position of the pore is assigned as an inscribed spheres between the four "vertex" spheres.
+
+Throats between pores currently has only information about connected pores.
+Properties like area is in TODO list.
+
+It is possible to merge overlapping pores.
+Then the new pore is such that:
+- volume is equal to the volume of spheres union
+- position is weighted average of positions, with weights being input volumes
+
+### Usage
+
+#### Example
+```python
+from packing2porenet import Sphere, Voronoi, PoreNetwork, export, ymport
+
+# testing sphere pack
+spheres = (
+    Sphere((0.00, 0.00, 0.00), 1.00),
+    Sphere((2.10, 0.10, 0.05), 1.20),
+    Sphere((4.05, 0.20, 0.10), 1.10),
+    Sphere((1.15, 2.15, 0.15), 1.15),
+    Sphere((3.05, 2.05, 0.05), 1.05),
+    Sphere((2.10, 4.20, 0.10), 1.25),
+    Sphere((1.05, 1.05, 2.10), 1.00),
+    Sphere((3.15, 1.10, 2.20), 1.10),
+    Sphere((2.05, 3.10, 2.05), 1.20),
+    Sphere((2.10, 2.15, 4.10), 1.15),
+)
+
+# pore network
+export.spheres2vtk(spheres, "vtk-packing")
+voro = Voronoi(spheres)
+export.network2vtk(voro, "vtk-voro")
+network = PoreNetwork().fromVoronoi(voro)
+export.spheres2vtk([pore.asSphere() for pore in network.cells], "vtk-pores")
+export.network2vtk(network, "vtk-throats")
+network.mergeIntersectingPores()
+export.spheres2vtk([pore.asSphere() for pore in network.cells], "vtk-pores-merged")
+export.network2vtk(network, "vtk-throats-merged")
+```
+
+### Compatibility
+Tested on [Ubuntu](https://ubuntu.com/) 18.04 LTS and [Python](https://www.python.org/) 3.6
+
+## Installation
+
+1. Using [`pip`](https://pypi.org/project/pip/)
+
+	`python3 -m pip install packing2porenet`
+
+2. Using `make` (calls `python3 -m pip install .`, i.e. option 3, internally):
+
+	`make install`
+
+3. Using [`pip`](https://pypi.org/project/pip/) locally
+
+	`python3 -m pip install .`
+
+
+## Contribution
+#### Merge Requests
+Are welcome
+
+#### Bug reporting
+In case of any question or problem, please leave an issue at the [GitLab page of the project](https://gitlab.com/stranskyjan/packing2porenet/-/issues).
+
+#### Contributors
+- [Jan Stránský](https://gitlab.com/stranskyjan)
+
+## License
+This project is licensed under the [MIT License](https://en.wikipedia.org/wiki/MIT_License) - see the [license file](LICENSE) for details.
+
+## TODO
+- throat properties
+- documentation
+- tests
+- periodicity
+- other shapes
+- other properties and functionality
+
+
