@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+kfilecontroller/__init__.py
+kfilecontroller/_about.py
+kfilecontroller/database.py
+kfilecontroller/filecontroller.py
+kfilecontroller.egg-info/PKG-INFO
+kfilecontroller.egg-info/SOURCES.txt
+kfilecontroller.egg-info/dependency_links.txt
+kfilecontroller.egg-info/requires.txt
+kfilecontroller.egg-info/top_level.txt

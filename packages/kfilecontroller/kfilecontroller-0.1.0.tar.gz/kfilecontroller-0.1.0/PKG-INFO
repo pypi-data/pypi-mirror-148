@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: kfilecontroller
+Version: 0.1.0
+Summary: Python package for keeping track of files accidentally deleted
+Home-page: https://github.com/fjmaro/Kfilecontroller
+Author: Francisco José Mata Aroco
+Author-email: 
+License: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Topic :: Desktop Environment :: File Managers
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.9, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Kfilecontroller
+Python package for keeping track of files accidentally deleted
+
+
