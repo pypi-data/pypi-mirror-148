@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: prathistabasiccalculator
+Version: 0.0.1
+Summary: A very basic calculator
+Home-page: UNKNOWN
+Author: Prathista Shetty
+Author-email: prathista1995@gmail.com
+License: MIT
+Description: Simple calculator 
+        
+        
+        Log changes hereby
+        
+Keywords: calculator
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3

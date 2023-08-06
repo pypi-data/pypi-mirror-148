@@ -1,0 +1,7 @@
+MANIFEST.in
+README.txt
+setup.py
+prathistabasiccalculator.egg-info/PKG-INFO
+prathistabasiccalculator.egg-info/SOURCES.txt
+prathistabasiccalculator.egg-info/dependency_links.txt
+prathistabasiccalculator.egg-info/top_level.txt
