@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: supercharged-cli
+Version: 0.0.11
+Summary: CLI to setup a website connected to the Supercharged Network
+Home-page: https://github.com/ShenpaEngineering/Supercharged
+Author: Shariq Torres
+Author-email: shariq.torres@gmail.com
+License: GNU General
+Platform: UNKNOWN
+Requires-Python: >3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Supercharged
+
+This is the CLI tool to create a Supercharged website on your server. 
+
+This is a Proof-Of-Concept for a new way for people to reclaim their space on the internet. 
+
