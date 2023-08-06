@@ -1,0 +1,109 @@
+# Bodo Platform SDK
+
+A simple SDK for Bodo Cloud Platform.
+
+## Getting started
+
+First step is to create API token for your workspace. You can do it under Admin Console.
+
+You will obtain `client_id` and `secret_key`. Those are needed for BodoClient definition.
+
+```python
+from bodosdk.models import WorkspaceKeys
+from bodosdk.client import get_bodo_client
+
+keys = WorkspaceKeys(
+    client_id='XYZ',
+    secret_key='XYZ'
+)
+client = get_bodo_client(keys)
+```
+
+You can also export `client_id` and `secret_key` as `BODO_CLIENT_ID` and `BODO_SECRET_KEY`, then you don't need to define keys.
+
+```python
+from bodosdk.client import get_bodo_client
+
+client = get_bodo_client()
+```
+
+### Job resource
+
+#### `client.job.create`
+Creates a job with job dedicated cluster
+
+Example:
+```python3
+from bodosdk.models import WorkspaceKeys, JobDefinition, JobClusterDefinition
+from bodosdk.client import get_bodo_client
+
+keys = WorkspaceKeys(
+    client_id='XYZ',
+    secret_key='XYZ'
+)
+client = get_bodo_client(keys)
+
+job_definition = JobDefinition(
+    name='test',
+    command='test.py',
+    workspacePath='https://github.com/Bodo-inc/bodo-jobs-dummy-code-test-repo.git',
+    workspaceUsername='XYZ',
+    workspacePassword='XYZ',
+    clusterObject=JobClusterDefinition(
+        instanceType='c5.large',
+        acceleratedNetworking=False,
+        imageId='ami-0a2005b824a8758e5',
+        workersQuantity=2
+    )
+)
+
+client.job.create(job_definition)
+```
+
+
+#### `client.job.list`
+Returns list of all jobs defined in workspace.
+Example:
+```python
+from typing import List
+from bodosdk.models import WorkspaceKeys, JobResponse
+from bodosdk.client import get_bodo_client
+
+keys = WorkspaceKeys(
+    client_id='XYZ',
+    secret_key='XYZ'
+)
+client = get_bodo_client(keys)
+jobs: List[JobResponse] = client.job.list()
+```
+
+#### `client.job.get`
+Returns specific job in workspace.
+Example:
+```python
+from bodosdk.models import WorkspaceKeys, JobResponse
+from bodosdk.client import get_bodo_client
+
+keys = WorkspaceKeys(
+    client_id='XYZ',
+    secret_key='XYZ'
+)
+client = get_bodo_client(keys)
+job: JobResponse = client.job.get('8c32aec5-7181-45cc-9e17-8aff35fd269e')
+```
+
+#### `client.job.delete`
+Removes specific job from workspace.
+Example:
+```python
+from bodosdk.models import WorkspaceKeys
+from bodosdk.client import get_bodo_client
+
+keys = WorkspaceKeys(
+    client_id='XYZ',
+    secret_key='XYZ'
+)
+client = get_bodo_client(keys)
+client.job.delete('8c32aec5-7181-45cc-9e17-8aff35fd269e')
+```
+
