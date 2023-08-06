@@ -1,0 +1,9 @@
+README.md
+setup.py
+pyflit/__init__.py
+pyflit/flit.py
+pyflit.egg-info/PKG-INFO
+pyflit.egg-info/SOURCES.txt
+pyflit.egg-info/dependency_links.txt
+pyflit.egg-info/requires.txt
+pyflit.egg-info/top_level.txt
