@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+scap/__init__.py
+scap.egg-info/PKG-INFO
+scap.egg-info/SOURCES.txt
+scap.egg-info/dependency_links.txt
+scap.egg-info/entry_points.txt
+scap.egg-info/not-zip-safe
+scap.egg-info/requires.txt
+scap.egg-info/top_level.txt

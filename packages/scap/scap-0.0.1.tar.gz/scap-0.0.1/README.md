@@ -1,0 +1,3 @@
+# Scap
+
+Light Python webserver
