@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: dotgen
+Version: 0.2.0
+Summary: Created Python library
+Home-page: UNKNOWN
+Author: Claudio Lau
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# How to Create your Own Data Structures Library
+
+Create a virtual environment:
+
+```
+python3 -m venv venv
+```
+
+Activate the environment by using:
+
+```
+source venv/bin/activate
+```
+
+Utility our Python library:
+
+```
+pip3 install wheel
+pip3 install setuptools
+pip3 install twine
+```
+
+Run test-runner:
+
+```
+python3 setup.py pytest
+```
+
+Build Library:
+
+```
+python3 setup.py bdist_wheel
+```
+
+Wheel file is stored in the “dist” folder that is now created.
+You can install your library by using:
+
+```
+pip3 install dist/*.whl
+```
+
+Test your import 🚀:
+
+```
+from dotstruct import Stack
+```
+
+
