@@ -1,0 +1,12 @@
+minumtium/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+minumtium/infra/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+minumtium/infra/authentication.py,sha256=HrWky9b51JBRDMHzHfQxx8hASY3971pN2WHdf8nW2dc,3064
+minumtium/infra/database.py,sha256=3hXrfgLHHXUk2vRkYygjOCTjkMnAcDcl5YXtFczBe3k,3375
+minumtium/modules/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+minumtium/modules/idm.py,sha256=-ujLh-T3gbJeAWhJZ_G4DHOgdtMRL2Aq9YZ60jrGMoc,7229
+minumtium/modules/posts.py,sha256=6kC42oskJ4802usLTXOdH7vR0MLU4q_44me6l9sxDiQ,6476
+minumtium-1.1.0.dist-info/LICENSE,sha256=PcCtAPK9Ckak3WL6ofTKUMitOL0OhCgOMEV6iRbrFOQ,554
+minumtium-1.1.0.dist-info/METADATA,sha256=coKyqCXj7qeP5vGOURdosozWGXx-kkWg7Jj0Lr954Zw,5975
+minumtium-1.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+minumtium-1.1.0.dist-info/top_level.txt,sha256=p2hcuGnE_SlknG3kDtAZTc5z94dI4CvmAE3omJdzIUc,10
+minumtium-1.1.0.dist-info/RECORD,,
