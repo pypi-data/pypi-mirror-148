@@ -1,0 +1,7 @@
+sentry_auth_ldap/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sentry_auth_ldap/backend.py,sha256=cvRdAEZDqJTniIUEVSRe9Lvq9B2r17XXJePkQYLSvAM,3011
+sentry_auth_ldap-21.9.5.dist-info/LICENSE.txt,sha256=xllut76FgcGL5zbIRvuRc7aezPbvlMUTWJPsVr2Sugg,11358
+sentry_auth_ldap-21.9.5.dist-info/METADATA,sha256=ZlAoFbh5OO7Pt2hdRZeIbyZSaaRAkgtZbsI6Bgho1ro,5410
+sentry_auth_ldap-21.9.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+sentry_auth_ldap-21.9.5.dist-info/top_level.txt,sha256=QG4VkEuyWxrtcXH73axYcZw-BgdCj-BtqNdyUltyZ2Q,17
+sentry_auth_ldap-21.9.5.dist-info/RECORD,,
