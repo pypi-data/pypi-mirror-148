@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/workshopenvs/__init__.py
+src/workshopenvs/workshopenvs.py
+src/workshopenvs.egg-info/PKG-INFO
+src/workshopenvs.egg-info/SOURCES.txt
+src/workshopenvs.egg-info/dependency_links.txt
+src/workshopenvs.egg-info/top_level.txt
