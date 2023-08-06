@@ -1,0 +1,11 @@
+
+[ci]
+coveralls
+pycodestyle
+
+[dev]
+pytest>=3.6
+pytest-cov
+pytest-asyncio
+flake8
+sphinx_rtd_theme
