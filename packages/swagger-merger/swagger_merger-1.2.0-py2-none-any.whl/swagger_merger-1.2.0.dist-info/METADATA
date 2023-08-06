@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: swagger-merger
+Version: 1.2.0
+Summary: swagger merger python package
+Home-page: https://github.com/ostadkarteam/swagger-merger
+Author: Sina Mehrabi
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: deepmerge
+Requires-Dist: PyYAML
+
+# SWAGGER MERGER
+
+* ### Merge multiple swagger files with single level ref tag ($ref) into one swagger file
+* ### We will support multiple level ref tag soon!.
+#### $ref
+> Includes a _single-level_ of swagger file.
+
+
+
+For example:
+```yaml
+$ref: "./order.yaml"
+```
+
+#### You can merge swagger files with command below: (There are some test files in examples directory)
+
+```
+merger -f index.yml
+```
+(index.yml is just a file name in example)
+
+#### You can optionally specify an output filename with the -o argument, the default is swagger.yml
+
+```
+merger -f index.yml -o output.yml
+```
+
