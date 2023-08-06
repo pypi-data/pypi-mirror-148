@@ -1,0 +1,14 @@
+aiodeu/__init__.py,sha256=aBEbDvx4LMg8A1TJJR6dEHu8rQODVin528hLS_EDvuA,22
+aiodeu/app.py,sha256=50oUaBDzxAfagjipqqGb-1FQKW0bzS01nm_4ZcD7MpY,1588
+aiodeu/codecs.py,sha256=vDM5z7zIDRgcOC0pYXdi6r2nE9EmunUoKgGRNGpDR_E,1137
+aiodeu/config.py,sha256=LDbX-RgYOqj5-sYRzeY9PVVbXbwmbqtVWU0yOtdse4M,1241
+aiodeu/console.py,sha256=bVoSDIiv0-wVxexiHEBMe4rqclafRWnZUD7LGPn9t8w,1852
+aiodeu/etl.py,sha256=DV_hcs7Dfiv9Opq2X4yvfKqzVpugIPyfKUYNw2D0k1Q,2558
+aiodeu/logger.py,sha256=7ZACV8N37CaKG-vqGA7ztL4KYv4TZ8ddhtESDLVE-XM,318
+aiodeu/s3.py,sha256=01RGtliO9d-zU0rbMAmVid2oW60gbI1rfn4Ep-imMlE,2150
+aiodeu/utils.py,sha256=vvNSrFDQHTbhYreFhCO-3asd6zekkwgWtK3zIu9aDY0,816
+aiodeu-0.1.11.dist-info/entry_points.txt,sha256=etJMvhlUlomarVWJH97fh-WD9CFRscaXxN4Az76kUOc,46
+aiodeu-0.1.11.dist-info/LICENSE,sha256=L3MnCk-llbbkiKQbaNxUNxEHaHNwRUlBvx3fsOhZ6es,1066
+aiodeu-0.1.11.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+aiodeu-0.1.11.dist-info/METADATA,sha256=Vj1vCBzFPCPbqdiKx6mN0bwvpsuUw_Brry4KZX6bowU,571
+aiodeu-0.1.11.dist-info/RECORD,,
