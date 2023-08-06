@@ -1,0 +1,2 @@
+[console_scripts]
+gilito = gilito.cli:main
