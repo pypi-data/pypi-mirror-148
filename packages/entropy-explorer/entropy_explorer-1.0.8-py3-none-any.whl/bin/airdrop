@@ -1,0 +1,100 @@
+#!/usr/bin/env python3
+
+import argparse
+import os
+import os.path
+import sys
+import typing
+
+from decimal import Decimal
+from solana.publickey import PublicKey
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+import entropy  # nopep8
+
+
+def airdrop_token(
+    context: entropy.Context,
+    wallet: entropy.Wallet,
+    token: entropy.Token,
+    faucet: typing.Optional[PublicKey],
+    quantity: Decimal,
+) -> typing.Sequence[str]:
+    if faucet is None:
+        raise Exception(f"Faucet must be specified for airdropping {token.symbol}")
+
+    # This is a root wallet account - get the associated token account
+    destination: PublicKey = entropy.TokenAccount.find_or_create_token_address_to_use(
+        context, wallet, wallet.address, token
+    )
+
+    signers: entropy.CombinableInstructions = (
+        entropy.CombinableInstructions.from_wallet(wallet)
+    )
+
+    entropy.output(f"Airdropping {quantity} {token.symbol} to {destination}")
+    native_quantity = token.shift_to_native(quantity)
+    airdrop = entropy.build_spl_faucet_airdrop_instructions(
+        token.mint, destination, faucet, native_quantity
+    )
+
+    all_instructions = signers + airdrop
+    return all_instructions.execute(context)
+
+
+def airdrop_sol(
+    context: entropy.Context,
+    wallet: entropy.Wallet,
+    token: entropy.Token,
+    quantity: Decimal,
+) -> typing.Sequence[str]:
+    entropy.output(f"Airdropping {quantity} {token.symbol} to {wallet.address}")
+    lamports = token.shift_to_native(quantity)
+    response = context.client.compatible_client.request_airdrop(
+        wallet.address, int(lamports)
+    )
+    return [response["result"]]
+
+
+parser = argparse.ArgumentParser(description="mint SPL tokens to your wallet")
+entropy.ContextBuilder.add_command_line_parameters(parser)
+entropy.Wallet.add_command_line_parameters(parser)
+parser.add_argument(
+    "--symbol", type=str, required=True, help="token symbol to airdrop (e.g. USDC)"
+)
+parser.add_argument(
+    "--faucet", type=PublicKey, required=False, help="public key of the faucet"
+)
+parser.add_argument(
+    "--quantity", type=Decimal, required=True, help="quantity token to airdrop"
+)
+parser.add_argument(
+    "--wait",
+    action="store_true",
+    default=False,
+    help="wait until the transactions are confirmed",
+)
+args: argparse.Namespace = entropy.parse_args(parser)
+
+with entropy.ContextBuilder.from_command_line_parameters(args) as context:
+    wallet = entropy.Wallet.from_command_line_parameters_or_raise(args)
+    token: entropy.Token = entropy.token(context, args.symbol)
+
+    # The loaded `token` variable will be from the `context`, so if it's SOL it will be
+    # 'wrapped SOL' with a 1112 mint address, not regular SOL with a 1111 mint address.
+    if token.symbol == entropy.SolToken.symbol:
+        signatures = airdrop_sol(context, wallet, token, args.quantity)
+    else:
+        signatures = airdrop_token(context, wallet, token, args.faucet, args.quantity)
+
+    if args.wait:
+        entropy.output("Waiting on transaction signatures:")
+        entropy.output(entropy.indent_collection_as_str(signatures, 1))
+        results = entropy.WebSocketTransactionMonitor.wait_for_all(
+            context.client.cluster_ws_url, signatures
+        )
+        entropy.output("Transaction results:")
+        entropy.output(entropy.indent_collection_as_str(results, 1))
+    else:
+        entropy.output("Transaction signatures:")
+        entropy.output(entropy.indent_collection_as_str(signatures, 1))

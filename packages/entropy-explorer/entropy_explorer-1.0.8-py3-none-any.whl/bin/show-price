@@ -1,0 +1,56 @@
+#!/usr/bin/env python3
+
+import argparse
+import os
+import os.path
+import sys
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+import entropy  # nopep8
+
+parser = argparse.ArgumentParser(
+    description="Displays the price from the Pyth Network."
+)
+entropy.ContextBuilder.add_command_line_parameters(parser)
+parser.add_argument(
+    "--provider",
+    type=str,
+    required=True,
+    help="name of the price provider to use (e.g. pyth)",
+)
+parser.add_argument(
+    "--market", type=str, required=True, help="market symbol to display (e.g. ETH/USDC)"
+)
+parser.add_argument(
+    "--stream",
+    action="store_true",
+    default=False,
+    help="stream the prices until stopped",
+)
+args: argparse.Namespace = entropy.parse_args(parser)
+
+with entropy.ContextBuilder.from_command_line_parameters(args) as context:
+    oracle_provider: entropy.OracleProvider = entropy.create_oracle_provider(
+        context, args.provider
+    )
+
+    market = entropy.market(context, args.market)
+    oracle = oracle_provider.oracle_for_market(context, market)
+    if oracle is None:
+        entropy.output(
+            f"Could not find oracle for market {market.fully_qualified_symbol} from provider {args.provider}."
+        )
+    else:
+        if not args.stream:
+            price = oracle.fetch_price(context)
+            entropy.output(price)
+        else:
+            entropy.output("Press <ENTER> to quit.")
+            price_subscription = oracle.to_streaming_observable(context)
+            disposable = price_subscription.subscribe(
+                entropy.PrintingObserverSubscriber(False)
+            )
+
+            # Wait - don't exit
+            input()
+            disposable.dispose()
