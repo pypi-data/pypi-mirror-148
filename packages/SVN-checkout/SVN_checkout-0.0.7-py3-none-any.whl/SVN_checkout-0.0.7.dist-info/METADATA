@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: SVN-checkout
+Version: 0.0.7
+Summary: To checkout files from SVN Repository based on Project M2, S2 & MOD.
+Home-page: http://packages.python.org/an_example_pypi_project
+Author: Himanshu Yadav
+Author-email: h.yadav@technologyandstrategy.com
+License: BSD
+Keywords: SVN_repo_checkout
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: BSD License
+License-File: LICENSE.txt
+Requires-Dist: request
+Requires-Dist: yaml
+Requires-Dist: subprocess
+Requires-Dist: argparse
+Requires-Dist: os
+
+# SVN Checkout
+
+A python package to checkout SVN reposity based on project selected
+
+##
+ following query on terminal will checkout repos mention in the yaml.db file.
+ 
+ ...
+ python python fetch_Lib_SVN.py	-y db.yaml -p (Project Name) --user TandS
+
+ ...
+
