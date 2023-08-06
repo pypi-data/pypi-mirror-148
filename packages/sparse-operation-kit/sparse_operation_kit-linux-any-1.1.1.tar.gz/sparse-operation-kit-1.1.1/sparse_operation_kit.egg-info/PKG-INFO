@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: sparse-operation-kit
+Version: 1.1.1
+Summary: sparse-operation-kit is now merlin-sok
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 7 - Inactive
+Description-Content-Type: text/markdown
+
+# sparse-operation-kit is now merlin-sok
+
+This package has been renamed. Use `pip install merlin-sok` instead.
+
+New package: https://pypi.org/project/merlin-sok/
+
+
