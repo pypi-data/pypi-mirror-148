@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "utsc.switchconfig"
+version = "2022.4.26"
+description = "A tool to easily provision switches on the bench"
+authors = ["Alex Tremblay <alex.tremblay@utoronto.ca>", "University of Toronto Governing Council <governing.council@utoronto.ca>"]
+license = "MIT"
+packages = [
+  { include = "utsc/switchconfig", from = "src" }
+]
+
+
+[tool.poetry.scripts]
+"utsc.switchconfig" = "utsc.switchconfig.__main__:cli"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+"utsc.core" = "*"
+Jinja2 = ">=3.0.1"
+pydantic = ">=1.9.0"
+arrow = ">=1.1.1"
+prompt-toolkit = ">=3.0.19"
+paramiko = ">=2.7.2"
+pexpect = ">=4.8.0"
+rich = ">=10.7.0"
+hier-config = ">=2.1.0"
+ipdb = ">=0.13.9"
+netaddr = ">=0.8.0"
+
+
+[tool.poe.tasks]
+cov.cmd = "pytest --cov-report xml:cov.xml --cov-report term-missing --cov"
+bump-version.script = "si_utils.dev_utils:bump_version"
+publish.shell = """\
+  git push
+  poetry build
+  poetry publish
+  """
+check.shell = """\
+  black .
+  mypy .
+  prospector .
+  pytest .
+  """
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

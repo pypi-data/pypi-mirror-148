@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: utsc.switchconfig
+Version: 2022.4.26
+Summary: A tool to easily provision switches on the bench
+License: MIT
+Author: Alex Tremblay
+Author-email: alex.tremblay@utoronto.ca
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: Jinja2 (>=3.0.1)
+Requires-Dist: arrow (>=1.1.1)
+Requires-Dist: hier-config (>=2.1.0)
+Requires-Dist: ipdb (>=0.13.9)
+Requires-Dist: netaddr (>=0.8.0)
+Requires-Dist: paramiko (>=2.7.2)
+Requires-Dist: pexpect (>=4.8.0)
+Requires-Dist: prompt-toolkit (>=3.0.19)
+Requires-Dist: pydantic (>=1.9.0)
+Requires-Dist: rich (>=10.7.0)
+Requires-Dist: utsc.core
