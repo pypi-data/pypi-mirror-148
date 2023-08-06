@@ -1,0 +1,4 @@
+include LICENSE
+include README.rst
+recursive-include cta/static *
+recursive-include cta/templates *
