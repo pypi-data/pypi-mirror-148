@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+lazilypy/__init__.py
+lazilypy/defaults.py
+lazilypy/lazy.py
+lazilypy/logs.py
+lazilypy.egg-info/PKG-INFO
+lazilypy.egg-info/SOURCES.txt
+lazilypy.egg-info/dependency_links.txt
+lazilypy.egg-info/top_level.txt
+test/test_int_operators.py
+test/test_numeric_builtins.py
+test/test_seq_operators.py

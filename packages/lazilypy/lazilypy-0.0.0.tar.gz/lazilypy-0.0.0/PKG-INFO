@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: lazilypy
+Version: 0.0.0
+Summary: Generic lazy evaluation with proper type hints
+License: BSD 3-Clause License
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+License-File: LICENSE
+
+UNKNOWN
+
