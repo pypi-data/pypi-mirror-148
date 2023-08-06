@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+autoDropbox/__init__.py
+autoDropbox/authorize.py
+autoDropbox/exceptions.py
+autoDropbox/file.py
+autoDropbox/others.py
+autoDropbox.egg-info/PKG-INFO
+autoDropbox.egg-info/SOURCES.txt
+autoDropbox.egg-info/dependency_links.txt
+autoDropbox.egg-info/requires.txt
+autoDropbox.egg-info/top_level.txt
