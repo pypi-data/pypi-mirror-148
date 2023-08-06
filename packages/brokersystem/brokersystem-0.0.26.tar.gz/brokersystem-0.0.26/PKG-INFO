@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: brokersystem
+Version: 0.0.26
+Summary: A Python module for communicating with brokersystem
+Author: chocolate
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: ISC License (ISCL)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Broker System
+
+This is a python module for using the broker system.
+
+## Installation
+
+For macOS and Linux:
+
+```shell
+pip3 install brokersystem
+```
+
+For Windows:
+
+```shell
+pip install brokersystem
+```
+
+
+
