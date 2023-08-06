@@ -1,0 +1,47 @@
+#!python
+# This file is placed in the Public Domain.
+
+
+"rss to irc feed fetcher"
+
+
+import sys
+
+
+from evt import Command
+from obj import Config
+from hdl import Callbacks, Handler, dispatch
+
+
+Config.name = "rssbot"
+Config.workdir = "/var/lib/rssbot/"
+
+
+import rssbot.cmds
+
+
+class CLI(Handler):
+
+    def cmd(self, txt):
+        e = Command()
+        e.parse(txt, repr(self))
+        self.handle(e)
+        e.wait()
+
+    def raw(self, txt):
+        cprint(txt)
+
+
+def cprint(*args):
+    print(*args)
+    sys.stdout.flush()
+
+
+def main():
+    Callbacks.add("command", dispatch)
+    Callbacks.threaded = False
+    c = CLI()
+    return c.cmd(" ".join(sys.argv[1:]))
+
+
+main()
