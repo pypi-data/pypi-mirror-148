@@ -1,0 +1,14 @@
+cryptography
+pandas
+requests
+python-dotenv
+hvac
+fhir-kindling
+loguru
+pendulum
+pika
+xmltodict
+oauthlib
+requests_oauthlib
+docker
+loguru
