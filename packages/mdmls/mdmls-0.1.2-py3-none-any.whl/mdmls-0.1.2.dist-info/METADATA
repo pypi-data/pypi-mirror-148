@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: mdmls
+Version: 0.1.2
+Summary: Summarize long document in multiple languages
+Home-page: https://github.com/airklizz/mdmls
+Author: Rémi Calizzano
+Author-email: remi.calizzano@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: bert-extractive-summarizer (>=0.9.0)
+Requires-Dist: bert-score (>=0.3.11)
+Requires-Dist: clean-text (>=0.5.0)
+Requires-Dist: datasets (>=2.1.0)
+Requires-Dist: nltk (>=3.5)
+Requires-Dist: torch (>=1.11.0)
+Requires-Dist: transformers (>=4.18.0)
+Requires-Dist: typer (>=0.4.0)
+
+# MDMLS
+
+
