@@ -1,0 +1,2 @@
+[console_scripts]
+tempocli = tempocli.cli:main
