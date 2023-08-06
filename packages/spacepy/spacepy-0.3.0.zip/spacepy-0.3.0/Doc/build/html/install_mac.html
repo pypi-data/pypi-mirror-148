@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>MacOS Installation &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Windows Installation" href="install_windows.html" />
+    <link rel="prev" title="Linux Installation" href="install_linux.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="index.html"><img src="_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="install_windows.html" title="Windows Installation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="install_linux.html" title="Linux Installation"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+       <li><a href="index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="install.html" accesskey="U">Installing SpacePy</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">MacOS Installation</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">MacOS Installation</a><ul>
+<li><a class="reference internal" href="#dependencies-via-conda-and-pip">Dependencies via conda and pip</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="install_linux.html"
+                          title="previous chapter">Linux Installation</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="install_windows.html"
+                          title="next chapter">Windows Installation</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/install_mac.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="macos-installation">
+<h1>MacOS Installation<a class="headerlink" href="#macos-installation" title="Permalink to this headline">¶</a></h1>
+<p>The following are performed from the command line on OSX.</p>
+<p>Installation on OSX requires a C compiler:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">xcode</span><span class="o">-</span><span class="n">select</span> <span class="o">--</span><span class="n">install</span>
+</pre></div>
+</div>
+<p>Our recommended (but not required) Python distribution is <a class="reference external" href="https://docs.anaconda.com/anaconda/">Anaconda</a> running 64-bit
+Python 3. Anaconda includes much of the scientific Python
+stack. Another excellent distribution is <a class="reference external" href="https://www.enthought.com/product/canopy/">Canopy</a>.</p>
+<p>Once python is installed (Anaconda assumed) install the Fortran compiler:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">gfortran_osx</span><span class="o">-</span><span class="mi">64</span>
+</pre></div>
+</div>
+<section id="dependencies-via-conda-and-pip">
+<h2>Dependencies via conda and pip<a class="headerlink" href="#dependencies-via-conda-and-pip" title="Permalink to this headline">¶</a></h2>
+<p>Installation via <code class="docutils literal notranslate"><span class="pre">pip</span></code> will automatically install most Python
+dependencies (but not the <a class="reference internal" href="install_linux.html#linux-cdf"><span class="std std-ref">NASA CDF library</span></a>). They
+can also be installed from conda:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">numpy</span> <span class="n">scipy</span> <span class="n">matplotlib</span> <span class="n">h5py</span>
+</pre></div>
+</div>
+<p>Once this is set up, <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">spacepy</span></code> should just work. If
+you’re installing as a single user (not in a virtual environment) then
+add the <code class="docutils literal notranslate"><span class="pre">--user</span></code> flag.</p>
+<p>You will also need the <a class="reference internal" href="install_linux.html#linux-cdf"><span class="std std-ref">NASA CDF library</span></a> to use
+<a class="reference internal" href="pycdf.html#module-spacepy.pycdf" title="spacepy.pycdf"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pycdf</span></code></a>.</p>
+<p>To install the latest code from the repository, rather than
+the latest stable release, use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">spacepy</span><span class="o">/</span><span class="n">spacepy</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="install_windows.html" title="Windows Installation"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="install_linux.html" title="Linux Installation"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+       <li><a href="index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="install.html" >Installing SpacePy</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">MacOS Installation</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

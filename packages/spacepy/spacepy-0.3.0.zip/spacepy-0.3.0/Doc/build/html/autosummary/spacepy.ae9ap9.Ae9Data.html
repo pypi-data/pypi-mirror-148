@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.ae9ap9.Ae9Data &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy.ae9ap9.readFile" href="spacepy.ae9ap9.readFile.html" />
+    <link rel="prev" title="ae9ap9 - Handle AE9/AP9 data files" href="../ae9ap9.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.ae9ap9.readFile.html" title="spacepy.ae9ap9.readFile"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../ae9ap9.html" title="ae9ap9 - Handle AE9/AP9 data files"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../ae9ap9.html" accesskey="U">ae9ap9 - Handle AE9/AP9 data files</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.ae9ap9.Ae9Data</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../ae9ap9.html"
+                          title="previous chapter">ae9ap9 - Handle AE9/AP9 data files</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.ae9ap9.readFile.html"
+                          title="next chapter">spacepy.ae9ap9.readFile</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.ae9ap9.Ae9Data.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-ae9ap9-ae9data">
+<h1>spacepy.ae9ap9.Ae9Data<a class="headerlink" href="#spacepy-ae9ap9-ae9data" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="spacepy.ae9ap9.Ae9Data">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">spacepy.ae9ap9.</span></span><span class="sig-name descname"><span class="pre">Ae9Data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/ae9ap9.html#Ae9Data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.ae9ap9.Ae9Data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dictionary-like container for AE9/AP9/SPM data, derived from SpacePy’s datamodel</p>
+<p>To inspect the variables within this class, use the tree method.
+To export the data to a CDF, HDF5 or JSON-headed ASCII file use the relevant “to” method
+(toCDF, toHDF5, toJSONheadedASCII).</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.ae9ap9.Ae9Data.getLm" title="spacepy.ae9ap9.Ae9Data.getLm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLm</span></code></a>([alpha, model])</p></td>
+<td><p>Calculate McIlwain L for the imported AE9/AP9 run and add to object</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.ae9ap9.Ae9Data.plotOrbit" title="spacepy.ae9ap9.Ae9Data.plotOrbit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotOrbit</span></code></a>([timerange, coord_sys, landscape, ...])</p></td>
+<td><p>Plot X-Y and X-Z projections of satellite orbit in requested coordinate system</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.ae9ap9.Ae9Data.plotSummary" title="spacepy.ae9ap9.Ae9Data.plotSummary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotSummary</span></code></a>([timerange, coord_sys, ...])</p></td>
+<td><p>Generate summary plot of AE9/AP9/SPM data loaded</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.ae9ap9.Ae9Data.plotSpectrogram" title="spacepy.ae9ap9.Ae9Data.plotSpectrogram"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotSpectrogram</span></code></a>([ecol, pvars])</p></td>
+<td><p>Plot a spectrogram of the flux along the requested orbit, as a function of Lm and time</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.ae9ap9.Ae9Data.setUnits" title="spacepy.ae9ap9.Ae9Data.setUnits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setUnits</span></code></a>([per])</p></td>
+<td><p>Set units of energy and flux/fluence</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.ae9ap9.Ae9Data.getLm">
+<span class="sig-name descname"><span class="pre">getLm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[90]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'T89'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/ae9ap9.html#Ae9Data.getLm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.ae9ap9.Ae9Data.getLm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate McIlwain L for the imported AE9/AP9 run and add to object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.ae9ap9.Ae9Data.plotOrbit">
+<span class="sig-name descname"><span class="pre">plotOrbit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timerange</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coord_sys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">landscape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_target</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/ae9ap9.html#Ae9Data.plotOrbit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.ae9ap9.Ae9Data.plotOrbit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot X-Y and X-Z projections of satellite orbit in requested coordinate system</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.ae9ap9.Ae9Data.plotSummary">
+<span class="sig-name descname"><span class="pre">plotSummary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timerange</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coord_sys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_target</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orbit_params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(False,</span> <span class="pre">True)</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/ae9ap9.html#Ae9Data.plotSummary"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.ae9ap9.Ae9Data.plotSummary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate summary plot of AE9/AP9/SPM data loaded</p>
+<p>spec : if True, plot spectrogram instead of flux/fluence lineplot, requires ‘ecol’ keyword</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.ae9ap9.Ae9Data.plotSpectrogram">
+<span class="sig-name descname"><span class="pre">plotSpectrogram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ecol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pvars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/ae9ap9.html#Ae9Data.plotSpectrogram"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.ae9ap9.Ae9Data.plotSpectrogram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot a spectrogram of the flux along the requested orbit, as a function of Lm and time</p>
+<dl class="field-list simple">
+<dt class="field-odd">Other Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>zlim</strong><span class="classifier">list</span></dt><dd><p>2-element list with upper and lower bounds for color scale</p>
+</dd>
+<dt><strong>colorbar_label</strong><span class="classifier">string</span></dt><dd><p>text to appear next to colorbar (default is ‘Flux’ plus the units)</p>
+</dd>
+<dt><strong>ylabel</strong><span class="classifier">string</span></dt><dd><p>text to label y-axis (default is ‘Lm’ plus the field model name)</p>
+</dd>
+<dt><strong>title</strong><span class="classifier">string</span></dt><dd><p>text to appear above spectrogram (default is climatology model name, data type and energy)</p>
+</dd>
+<dt><strong>pvars</strong><span class="classifier">list</span></dt><dd><p>list of plotting variable names in order [Epoch-like (X axis), Flux-like (Z axis), Energy (Index var for Flux-like)]</p>
+</dd>
+<dt><strong>ylim</strong><span class="classifier">list</span></dt><dd><p>2-element list with upper and lower bounds for y axis</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.ae9ap9.Ae9Data.setUnits">
+<span class="sig-name descname"><span class="pre">setUnits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">per</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/ae9ap9.html#Ae9Data.setUnits"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.ae9ap9.Ae9Data.setUnits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set units of energy and flux/fluence</p>
+<p>If keyword ‘per’ is set to None, this method reports the units currently set.
+To set energy in MeV and flux/fluence in ‘per MeV’, set ‘per=MeV’. Valid options are
+‘eV’, ‘keV’, ‘Mev’ and ‘GeV’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Other Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>per</strong><span class="classifier">string (optional)</span></dt><dd><p>Energy units for both energy and flux/fluence</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.ae9ap9.readFile.html" title="spacepy.ae9ap9.readFile"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../ae9ap9.html" title="ae9ap9 - Handle AE9/AP9 data files"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../ae9ap9.html" >ae9ap9 - Handle AE9/AP9 data files</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.ae9ap9.Ae9Data</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

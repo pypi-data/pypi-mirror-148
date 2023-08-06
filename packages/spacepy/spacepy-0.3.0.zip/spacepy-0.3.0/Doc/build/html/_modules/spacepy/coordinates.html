@@ -1,0 +1,1325 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>spacepy.coordinates &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../index.html"><img src="../../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../../search.html">search</a>|&nbsp;</li>
+       <li><a href="../../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../spacepy.html" accesskey="U">spacepy</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.coordinates</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+            </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for spacepy.coordinates</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;Implementation of Coords class functions for coordinate transformations</span>
+
+<span class="sd">The coordinate systems supported by this module cover the most commonly</span>
+<span class="sd">used geophysical and magnetospheric systems. The naming conventions can</span>
+<span class="sd">follow the names used by the popular IRBEM library, but for inertial</span>
+<span class="sd">systems we use a more consistent, fine-grained naming convention that</span>
+<span class="sd">clarifies the different systems.</span>
+
+<span class="sd">    Earth-centered Inertial Systems</span>
+<span class="sd">    -------------------------------</span>
+<span class="sd">    * **ECI2000** Earth-centered Inertial, J2000 epoch</span>
+<span class="sd">    * **ECIMOD** Earth-centered Inertial, mean-of-date</span>
+<span class="sd">    * **ECITOD** Earth-centered Inertial, true-of-date</span>
+<span class="sd">    * **GEI** Geocentric Equatorial Inertial (IRBEM approximation of TOD)</span>
+
+<span class="sd">    Magnetospheric Systems</span>
+<span class="sd">    ----------------------</span>
+<span class="sd">    * **GSM** Geocentric Solar Magnetospheric</span>
+<span class="sd">    * **GSE** Geocentric Solar Ecliptic</span>
+<span class="sd">    * **SM** Solar Magnetic</span>
+<span class="sd">    * **MAG** Geomagnetic Coordinate System (aka CDMAG)</span>
+
+<span class="sd">    Earth-fixed Systems</span>
+<span class="sd">    -------------------</span>
+<span class="sd">    * **GEO** Geocentric geographic, aka Earth-centered Earth-fixed</span>
+<span class="sd">    * **GDZ** Geodetic coordinates</span>
+
+<span class="sd">By convention *all* systems are treated as natively Cartesian except</span>
+<span class="sd">geodetic (GDZ), which is defined in [altitude, latitude, longitude]</span>
+<span class="sd">where altitude is relative to a reference ellipsoid. Similarly, distance</span>
+<span class="sd">units are assumed to be Earth radii (Re) in all systems except GDZ, where</span>
+<span class="sd">altitude is given in km. Conversions to GDZ will output altitude in km</span>
+<span class="sd">regardless of the input distance units and conversions from GDZ will</span>
+<span class="sd">output in Re regardless of input units. In all other cases, the distance</span>
+<span class="sd">units will be preserved.</span>
+
+<span class="sd">    .. versionchanged:: 0.3.0</span>
+
+<span class="sd">    The new CTrans backend was added, which includes support for the names</span>
+<span class="sd">    ``ECI2000``, ``ECIMOD``, ``ECITOD``, and ``CDMAG``. With the exception</span>
+<span class="sd">    of ``ECIMOD``, these can be used with the existing IRBEM backend, and</span>
+<span class="sd">    will be converted to their closest equivalents.</span>
+
+<span class="sd">Notes on differences between representations</span>
+<span class="sd">--------------------------------------------</span>
+<span class="sd">IRBEM&#39;s coordinate transformations are low-accuracy and were written for</span>
+<span class="sd">a library with a driving philosophy of speed and robustness as priorities.</span>
+<span class="sd">The coordinate transformations are therefore approximate. Further, most of</span>
+<span class="sd">the geophysical systems (e.g., GSE, SM) are derived from an inertial</span>
+<span class="sd">system. It is standard practice to use ECIMOD as this system. However,</span>
+<span class="sd">IRBEM does not currently make ECIMOD available as one of its inertial</span>
+<span class="sd">systems. IRBEM&#39;s default inertial system (called GEI) is consistent with</span>
+<span class="sd">an approximation of ECITOD. Hence there will be small differences between</span>
+<span class="sd">IRBEM&#39;s transformations and those using SpacePy&#39;s CTrans backend.</span>
+<span class="sd">Further sources of difference include: IRBEM uses a low-order approximation</span>
+<span class="sd">to the sidereal time and other parameters; the calculation of the Earth-Sun</span>
+<span class="sd">vector differs between the representations; the definitions of an Earth</span>
+<span class="sd">radius differ (SpacePy = 6378.137km; IRBEM = 6371.2 km). SpacePy&#39;s in-built</span>
+<span class="sd">representation is higher accuracy and is comprehensively tested, including</span>
+<span class="sd">tests for consistency with other high accuracy packages such as LANLGeoMag</span>
+<span class="sd">and AstroPy. However, for use cases where the required precision is of order</span>
+<span class="sd">1 percent the output can be considered equivalent.</span>
+
+<span class="sd">Setting options for coordinate transformation</span>
+<span class="sd">---------------------------------------------</span>
+<span class="sd">The backend for coordinate transformations can be provided at</span>
+<span class="sd">instantiation of a :class:`Coords` object using a keyword</span>
+<span class="sd">argument. However, for convenience and flexibility the options can be</span>
+<span class="sd">set at the module level. Configurable options include the backend used</span>
+<span class="sd">(:mod:`~spacepy.irbempy` or SpacePy&#39;s :mod:`~spacepy.ctrans`) and the</span>
+<span class="sd">reference ellipsoid (only configurable for the SpacePy backend). A</span>
+<span class="sd">warning will be raised if the backend is not set (either through the</span>
+<span class="sd">defaults or the keyword argument). The final configurable option</span>
+<span class="sd">(``itol``) is the maximum separation, in seconds, for which the</span>
+<span class="sd">coordinate transformations will not be recalculated. To force all</span>
+<span class="sd">transformations to use an exact transform for the time, set ``itol``</span>
+<span class="sd">to zero. Values between 10s and 60s are recommended for speed while</span>
+<span class="sd">also preserving accuracy, though different applications will require</span>
+<span class="sd">different accuracies.  For example, assuming this module has been</span>
+<span class="sd">imported as ``spc``, to set the SpacePy backend as the default and set</span>
+<span class="sd">``itol`` to 5 seconds:</span>
+
+<span class="sd">    &gt;&gt;&gt; spc.DEFAULTS.set_values(use_irbem=False, itol=5)</span>
+
+<span class="sd">Authors: Steven Morley and Josef Koller</span>
+<span class="sd">Institution: Los ALamos National Laboratory</span>
+<span class="sd">Contact: smorley@lanl.gov</span>
+
+<span class="sd">Copyright 2010-2016 Los Alamos National Security, LLC.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
+<span class="kn">import</span> <span class="nn">numbers</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">spacepy</span> <span class="kn">import</span> <span class="n">help</span>
+<span class="kn">import</span> <span class="nn">spacepy</span>
+<span class="kn">import</span> <span class="nn">spacepy.datamodel</span> <span class="k">as</span> <span class="nn">dm</span>
+<span class="kn">import</span> <span class="nn">spacepy.time</span>
+<span class="kn">from</span> <span class="nn">spacepy</span> <span class="kn">import</span> <span class="n">ctrans</span>
+
+<span class="n">__contact__</span> <span class="o">=</span> <span class="s1">&#39;Steven Morley, smorley@lanl.gov&#39;</span>
+
+
+<span class="c1"># -----------------------------------------------</span>
+<span class="c1"># space coordinate class</span>
+<span class="c1"># -----------------------------------------------</span>
+
+<span class="n">SYSAXES_TYPES</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;GDZ&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;sph&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;car&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>
+                 <span class="s1">&#39;GEO&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;sph&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;car&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span> <span class="s1">&#39;GSM&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;sph&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;car&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">},</span>
+                 <span class="s1">&#39;GSE&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;sph&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;car&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">},</span> <span class="s1">&#39;SM&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;sph&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;car&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">},</span>
+                 <span class="s1">&#39;GEI&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;sph&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;car&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">},</span> <span class="s1">&#39;CDMAG&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;sph&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;car&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">},</span>
+                 <span class="s1">&#39;MAG&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;sph&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;car&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">},</span> <span class="s1">&#39;SPH&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;sph&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;car&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span>
+                 <span class="s1">&#39;RLL&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;sph&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;car&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">},</span> <span class="s1">&#39;TOD&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;sph&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;car&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">},</span>
+                 <span class="s1">&#39;ECITOD&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;sph&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;car&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">},</span> <span class="s1">&#39;J2000&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;sph&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;car&#39;</span><span class="p">:</span> <span class="mi">13</span><span class="p">},</span>
+                 <span class="s1">&#39;ECI2000&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;sph&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;car&#39;</span><span class="p">:</span> <span class="mi">13</span><span class="p">},</span> <span class="s1">&#39;ECIMOD&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;sph&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;car&#39;</span><span class="p">:</span> <span class="mi">14</span><span class="p">}}</span>
+
+<span class="n">SYS_EQUIV</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;GEI&#39;</span><span class="p">:</span> <span class="s1">&#39;ECITOD&#39;</span><span class="p">,</span> <span class="s1">&#39;TOD&#39;</span><span class="p">:</span> <span class="s1">&#39;ECITOD&#39;</span><span class="p">,</span> <span class="s1">&#39;J2000&#39;</span><span class="p">:</span> <span class="s1">&#39;ECI2000&#39;</span><span class="p">,</span> <span class="s1">&#39;MAG&#39;</span><span class="p">:</span> <span class="s1">&#39;CDMAG&#39;</span><span class="p">}</span>
+
+<span class="n">IRBEM_RE</span> <span class="o">=</span> <span class="mf">6371.2</span>  <span class="c1"># kilometers</span>
+
+
+<span class="k">class</span> <span class="nc">__Defaults</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Configuration factory for coordinates module default settings</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_fac</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;values&#39;</span><span class="p">,</span> <span class="s1">&#39;use_irbem, ellipsoid, itol&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_values</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">full</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+        <span class="n">b1</span> <span class="o">=</span> <span class="n">full</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;(&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s1">&#39;DEFAULTS</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">full</span><span class="p">[</span><span class="n">b1</span><span class="p">:])</span>
+
+    <span class="k">def</span> <span class="nf">set_values</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">use_irbem</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ellipsoid</span><span class="o">=</span><span class="n">ctrans</span><span class="o">.</span><span class="n">WGS84</span><span class="p">,</span> <span class="n">itol</span><span class="o">=</span><span class="mi">30</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Set options for coordinate transforms</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        use_irbem : bool</span>
+<span class="sd">            If True, use IRBEM as coordinate transform backend. If False, use SpacePy&#39;s</span>
+<span class="sd">            implementations. Default is to use IRBEM (and warn) but this will change.</span>
+<span class="sd">        ellipsoid : spacepy.ctrans.Ellipsoid</span>
+<span class="sd">            A reference ellipsoid to use for the Earth radius definition and for geodetic</span>
+<span class="sd">            coordinate conversion. SpacePy defaults to the WGS84 ellipsoid and the semi-major</span>
+<span class="sd">            axis as the Earth radius (6738.137 km). The IRBEM backend uses WGS84, but expresses</span>
+<span class="sd">            an Earth radius using 6371.2 km.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">values</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fac</span><span class="p">(</span><span class="n">use_irbem</span><span class="o">=</span><span class="n">use_irbem</span><span class="p">,</span>
+                                <span class="n">ellipsoid</span><span class="o">=</span><span class="n">ellipsoid</span><span class="p">,</span>
+                                <span class="n">itol</span><span class="o">=</span><span class="n">itol</span><span class="p">)</span>
+
+<span class="n">DEFAULTS</span> <span class="o">=</span> <span class="n">__Defaults</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="Coords"><a class="viewcode-back" href="../../autosummary/spacepy.coordinates.Coords.html#spacepy.coordinates.Coords">[docs]</a><span class="k">class</span> <span class="nc">Coords</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    a = Coords( data, dtype, carsph, [units, ticks, use_irbem])</span>
+
+<span class="sd">    A class holding spatial coordinates and enabling transformation between</span>
+<span class="sd">    coordinate systems. Coordinates can be stored as Cartesian or spherical</span>
+<span class="sd">    and units are assumed to be Re (distance) and degrees (angle)</span>
+
+<span class="sd">    .. note:: Although other units may be specified and will be carried</span>
+<span class="sd">         through, most functions throughout SpacePy assume distances</span>
+<span class="sd">         in Re and angles in degrees, regardless of specified units.</span>
+
+<span class="sd">    By default, coordinate transforms are based on the IRBEM library; `its</span>
+<span class="sd">    manual &lt;http://svn.code.sf.net/p/irbem/code/trunk/manual/user_guide.html&gt;`_</span>
+<span class="sd">    may prove useful. SpacePy also provides a framework for accurate coordinate</span>
+<span class="sd">    transformations. This can be used by setting the `use_irbem` flag to False.</span>
+<span class="sd">    In a future release of SpacePy this will become the default method.</span>
+<span class="sd">    For a good reference on heliospheric and magnetospheric</span>
+<span class="sd">    coordinate systems, see Franz &amp; Harper, &quot;Heliospheric Coordinate Systems&quot;,</span>
+<span class="sd">    Planet. Space Sci., 50, pp 217-233, 2002</span>
+<span class="sd">    (https://doi.org/10.1016/S0032-0633(01)00119-2).</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data : list or ndarray, dim = (n,3)</span>
+<span class="sd">        coordinate points [X,Y,Z] or [rad, lat, lon]</span>
+<span class="sd">    dtype : string</span>
+<span class="sd">        coordinate system; supported systems are defined in</span>
+<span class="sd">        module-level documentation. Common systems include</span>
+<span class="sd">        GEO, GSE, GSM, SM, MAG, ECIMOD</span>
+<span class="sd">    carsph : string</span>
+<span class="sd">        Cartesian or spherical, &#39;car&#39; or &#39;sph&#39;</span>
+<span class="sd">    units : list of strings, optional</span>
+<span class="sd">        standard are  [&#39;Re&#39;, &#39;Re&#39;, &#39;Re&#39;] or [&#39;Re&#39;, &#39;deg&#39;, &#39;deg&#39;] depending</span>
+<span class="sd">        on the carsph content. See note.</span>
+<span class="sd">    ticks : Ticktock instance, optional</span>
+<span class="sd">        used for coordinate transformations (see a.convert)</span>
+<span class="sd">    use_irbem : bool</span>
+
+<span class="sd">        .. versionadded:: 0.3.0</span>
+
+<span class="sd">        Set to True to use IRBEM for coordinate transforms (current default).</span>
+<span class="sd">        Otherwise use SpacePy&#39;s coordinate transform library.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : Coords instance</span>
+<span class="sd">        instance with a.data, a.carsph, etc.</span>
+
+<span class="sd">    See Also</span>
+<span class="sd">    --------</span>
+<span class="sd">    spacepy.coordinates.DEFAULTS</span>
+<span class="sd">    spacepy.time.Ticktock</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; from spacepy import coordinates as coord</span>
+<span class="sd">    &gt;&gt;&gt; cvals = coord.Coords([[1,2,4],[1,2,2]], &#39;GEO&#39;, &#39;car&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; cvals.x  # returns all x coordinates</span>
+<span class="sd">    array([1, 1])</span>
+<span class="sd">    &gt;&gt;&gt; from spacepy.time import Ticktock</span>
+<span class="sd">    &gt;&gt;&gt; cvals.ticks = Ticktock([&#39;2002-02-02T12:00:00&#39;, &#39;2002-02-02T12:00:00&#39;], &#39;ISO&#39;) # add ticks</span>
+<span class="sd">    &gt;&gt;&gt; newcoord = cvals.convert(&#39;GSM&#39;, &#39;sph&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; newcoord</span>
+
+<span class="sd">    .. currentmodule:: spacepy.coordinates</span>
+<span class="sd">    .. autosummary::</span>
+<span class="sd">        ~Coords.append</span>
+<span class="sd">        ~Coords.convert</span>
+<span class="sd">        ~Coords.from_skycoord</span>
+<span class="sd">        ~Coord.to_skycoord</span>
+<span class="sd">    .. automethod:: append</span>
+<span class="sd">    .. automethod:: convert</span>
+<span class="sd">    .. automethod:: from_skycoord</span>
+<span class="sd">    .. automethod:: to_skycoord</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">dtype</span><span class="p">,</span> <span class="n">carsph</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ticks</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">use_irbem</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">use_irbem</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">use_irbem</span> <span class="o">=</span> <span class="n">DEFAULTS</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">use_irbem</span>
+        <span class="k">if</span> <span class="n">use_irbem</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">use_irbem</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;No coordinate backend specified; using IRBEM.&#39;</span>
+                          <span class="s1">&#39; This default will change in the future.&#39;</span><span class="p">,</span>
+                          <span class="ne">DeprecationWarning</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">use_irbem</span><span class="p">:</span>
+            <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">irbempy</span> <span class="k">as</span> <span class="n">op</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">use_irbem</span> <span class="o">=</span> <span class="n">use_irbem</span>
+        <span class="c1"># setup units</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Re</span> <span class="o">=</span> <span class="n">IRBEM_RE</span> <span class="k">if</span> <span class="n">use_irbem</span> <span class="k">else</span> <span class="n">DEFAULTS</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">ellipsoid</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]</span>  <span class="c1"># kilometers</span>
+
+        <span class="c1"># Make sure that inputs are all formed correctly</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_2d</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float_</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Input position vectors must be Nx3&#39;</span><span class="p">)</span>
+
+        <span class="n">dtype</span> <span class="o">=</span> <span class="n">dtype</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+        <span class="n">carsph</span> <span class="o">=</span> <span class="n">carsph</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">dtype</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">SYSAXES_TYPES</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;This dtype=&#39;</span> <span class="o">+</span> <span class="n">dtype</span> <span class="o">+</span> <span class="s1">&#39; is not supported. Only &#39;</span> <span class="o">+</span>
+                             <span class="nb">str</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">SYSAXES_TYPES</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
+                             <span class="p">)</span>
+        <span class="k">if</span> <span class="n">carsph</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;car&#39;</span><span class="p">,</span> <span class="s1">&#39;sph&#39;</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;This carsph=&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">carsph</span><span class="p">)</span> <span class="o">+</span>
+                             <span class="s1">&#39; is not supported. Only &quot;car&quot; or &quot;sph&quot;&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">dtype</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;GDZ&#39;</span><span class="p">,</span> <span class="s1">&#39;RLL&#39;</span><span class="p">]</span> <span class="ow">and</span> <span class="n">carsph</span> <span class="o">==</span> <span class="s1">&#39;car&#39;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Geodetic coordinates are referenced to an ellipsoid &quot;</span>
+                             <span class="o">+</span> <span class="s2">&quot;and can not be properly represented as Cartesian&quot;</span><span class="p">)</span>
+
+        <span class="c1"># add ticks</span>
+        <span class="k">if</span> <span class="n">ticks</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">ticks</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">),</span> <span class="s1">&#39;Ticktock dimensions seem off&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ticks</span> <span class="o">=</span> <span class="n">ticks</span>
+
+        <span class="c1"># GEO and SPH are cartesian/spherical versions of GEO, so use GEO for everything</span>
+        <span class="k">if</span> <span class="n">dtype</span> <span class="o">==</span> <span class="s1">&#39;SPH&#39;</span><span class="p">:</span>
+            <span class="n">dtype</span> <span class="o">=</span> <span class="s1">&#39;GEO&#39;</span>
+        <span class="c1"># Make sure we&#39;re using the SpacePy name if we&#39;re using the SpacePy backend</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dtype</span> <span class="o">=</span> <span class="n">SYS_EQUIV</span><span class="p">[</span><span class="n">dtype</span><span class="p">]</span> <span class="k">if</span> <span class="p">(</span><span class="ow">not</span> <span class="n">use_irbem</span> <span class="ow">and</span> <span class="n">dtype</span> <span class="ow">in</span> <span class="n">SYS_EQUIV</span><span class="p">)</span> <span class="k">else</span> <span class="n">dtype</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sysaxes</span> <span class="o">=</span> <span class="n">SYSAXES_TYPES</span><span class="p">[</span><span class="n">dtype</span><span class="p">][</span><span class="n">carsph</span><span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">carsph</span> <span class="o">=</span> <span class="n">carsph</span>
+        <span class="c1"># setup units</span>
+        <span class="k">if</span> <span class="n">units</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">carsph</span> <span class="o">==</span> <span class="s1">&#39;car&#39;</span><span class="p">:</span>
+            <span class="c1"># use standard units</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Re&#39;</span><span class="p">,</span> <span class="s1">&#39;Re&#39;</span><span class="p">,</span> <span class="s1">&#39;Re&#39;</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">units</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">carsph</span> <span class="o">==</span> <span class="s1">&#39;sph&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Re&#39;</span><span class="p">,</span> <span class="s1">&#39;deg&#39;</span><span class="p">,</span> <span class="s1">&#39;deg&#39;</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="n">units</span>
+        <span class="k">if</span> <span class="n">dtype</span> <span class="o">==</span> <span class="s1">&#39;GDZ&#39;</span> <span class="ow">and</span> <span class="n">carsph</span> <span class="o">==</span> <span class="s1">&#39;sph&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;km&#39;</span><span class="p">,</span> <span class="s1">&#39;deg&#39;</span><span class="p">,</span> <span class="s1">&#39;deg&#39;</span><span class="p">]</span>
+        <span class="c1"># setup x,y,z etc</span>
+        <span class="k">if</span> <span class="n">carsph</span> <span class="o">==</span> <span class="s1">&#39;car&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">spacepy</span><span class="o">.</span><span class="n">datamodel</span><span class="o">.</span><span class="n">dmcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">spacepy</span><span class="o">.</span><span class="n">datamodel</span><span class="o">.</span><span class="n">dmcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">spacepy</span><span class="o">.</span><span class="n">datamodel</span><span class="o">.</span><span class="n">dmcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">radi</span> <span class="o">=</span> <span class="n">spacepy</span><span class="o">.</span><span class="n">datamodel</span><span class="o">.</span><span class="n">dmcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">lati</span> <span class="o">=</span> <span class="n">spacepy</span><span class="o">.</span><span class="n">datamodel</span><span class="o">.</span><span class="n">dmcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">long</span> <span class="o">=</span> <span class="n">spacepy</span><span class="o">.</span><span class="n">datamodel</span><span class="o">.</span><span class="n">dmcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="c1"># -----------------------------------------------</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        a.__str__() or a</span>
+
+<span class="sd">        Will be called when printing Coords instance a</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        out : string</span>
+<span class="sd">            string represenation of the instance</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; from spacepy.coordinates import Coords</span>
+<span class="sd">        &gt;&gt;&gt; y = Coords([[1,2,4],[1,2,2]], &#39;GEO&#39;, &#39;car&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; y</span>
+<span class="sd">        Coords( [[1 2 4]</span>
+<span class="sd">         [1 2 2]] ), dtype=GEO,car, units=[&#39;Re&#39;, &#39;Re&#39;, &#39;Re&#39;]</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">rstr</span> <span class="o">=</span> <span class="s2">&quot;Coords( </span><span class="si">{0}</span><span class="s2"> , &#39;</span><span class="si">{1}</span><span class="s2">&#39;, &#39;</span><span class="si">{2}</span><span class="s2">&#39;)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">carsph</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">rstr</span>
+    <span class="fm">__repr__</span> <span class="o">=</span> <span class="fm">__str__</span>
+
+    <span class="c1"># -----------------------------------------------</span>
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        a.__getitem__(idx) or a[idx]</span>
+
+<span class="sd">        Will be called when requesting items in this instance</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        idx : int</span>
+<span class="sd">            integer numbers as index</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        out : numpy array</span>
+<span class="sd">            new values</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; from spacepy.coordinates import Coords</span>
+<span class="sd">        &gt;&gt;&gt; y = Coords([[1,2,4],[1,2,2]], &#39;GEO&#39;, &#39;car&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; y[0]</span>
+<span class="sd">        Coords( [[1 2 4]] ), dtype=GEO,car, units=[&#39;Re&#39;, &#39;Re&#39;, &#39;Re&#39;]</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+        <span class="n">t_select</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ticks</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ticks</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">ticks</span>
+
+        <span class="k">return</span> <span class="n">Coords</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">carsph</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">units</span><span class="p">,</span>
+                      <span class="n">t_select</span><span class="p">,</span> <span class="n">use_irbem</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">use_irbem</span><span class="p">)</span>
+
+    <span class="c1"># -----------------------------------------------</span>
+    <span class="k">def</span> <span class="fm">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">vals</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        a.__setitem__(idx, vals) or a[idx] = vals</span>
+
+<span class="sd">        Will be called setting items in this instance</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        idx : int</span>
+<span class="sd">            integer numbers as index</span>
+<span class="sd">        vals : numpy array or list</span>
+<span class="sd">            new values</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; from spacepy.coordinates import Coords</span>
+<span class="sd">        &gt;&gt;&gt; y = Coords([[1,2,4],[1,2,2]], &#39;GEO&#39;, &#39;car&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; y[1] = [9,9,9]</span>
+<span class="sd">        &gt;&gt;&gt; y</span>
+<span class="sd">        Coords( [[1 2 4]</span>
+<span class="sd">            [9 9 9]] ), dtype=GEO,car, units=[&#39;Re&#39;, &#39;Re&#39;, &#39;Re&#39;]</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">vals</span>
+        <span class="k">return</span>
+
+    <span class="c1"># -----------------------------------------------</span>
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        a.__len__() or len(a)</span>
+
+<span class="sd">        Will be called when requesting the length, i.e. number of items</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        out : int</span>
+<span class="sd">            length</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; from spacepy.coordinates import Coords</span>
+<span class="sd">        &gt;&gt;&gt; y = Coords([[1,2,4],[1,2,2]], &#39;GEO&#39;, &#39;car&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; len(y)</span>
+<span class="sd">        2</span>
+
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)):</span>
+            <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">1</span>
+        <span class="k">return</span>
+
+    <span class="c1"># -----------------------------------------------</span>
+<div class="viewcode-block" id="Coords.convert"><a class="viewcode-back" href="../../autosummary/spacepy.coordinates.Coords.html#spacepy.coordinates.Coords.convert">[docs]</a>    <span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">returntype</span><span class="p">,</span> <span class="n">returncarsph</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Create a new Coords instance with new coordinate types</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        returntype : string</span>
+<span class="sd">            coordinate system, see module level documentation for</span>
+<span class="sd">            supported systems</span>
+<span class="sd">        returncarsph : string</span>
+<span class="sd">            coordinate type, possible &#39;car&#39; for Cartesian and &#39;sph&#39; for spherical</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        out : Coords object</span>
+<span class="sd">            Coords object in the new coordinate system</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &gt;&gt;&gt; from spacepy.coordinates import Coords</span>
+<span class="sd">        &gt;&gt;&gt; y = Coords([[1,2,4],[1,2,2]], &#39;GEO&#39;, &#39;car&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; from spacepy.time import Ticktock</span>
+<span class="sd">        &gt;&gt;&gt; y.ticks = Ticktock([&#39;2002-02-02T12:00:00&#39;, &#39;2002-02-02T12:00:00&#39;], &#39;ISO&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; x = y.convert(&#39;SM&#39;,&#39;car&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; x</span>
+<span class="sd">        Coords( [[ 0.81134097  2.6493305   3.6500375 ]</span>
+<span class="sd">         [ 0.92060408  2.30678864  1.68262126]] ), dtype=SM,car, units=[&#39;Re&#39;, &#39;Re&#39;, &#39;Re&#39;]</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="c1"># Check whether the name is an equivalent IRBEM name</span>
+        <span class="n">returnname</span> <span class="o">=</span> <span class="n">SYS_EQUIV</span><span class="p">[</span><span class="n">returntype</span><span class="p">]</span> <span class="k">if</span> <span class="n">returntype</span> <span class="ow">in</span> <span class="n">SYS_EQUIV</span> <span class="k">else</span> <span class="n">returntype</span>
+        <span class="n">is_dtype_returntype</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="n">returntype</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="n">returnname</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">returntype</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;GDZ&#39;</span><span class="p">,</span> <span class="s1">&#39;RLL&#39;</span><span class="p">]</span> <span class="ow">and</span> <span class="n">returncarsph</span> <span class="o">==</span> <span class="s1">&#39;car&#39;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Geodetic coordinates are referenced to an ellipsoid &quot;</span>
+                             <span class="o">+</span> <span class="s2">&quot;and can not be properly represented as Cartesian&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Then check whether a full coordinate transformation is required</span>
+        <span class="k">if</span> <span class="n">is_dtype_returntype</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">carsph</span> <span class="o">==</span> <span class="n">returncarsph</span><span class="p">:</span>
+                <span class="c1"># no change necessary</span>
+                <span class="k">return</span> <span class="bp">self</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">carsph</span> <span class="o">!=</span> <span class="n">returncarsph</span><span class="p">:</span>
+                <span class="c1"># only car2sph or sph2car is needed</span>
+                <span class="k">if</span> <span class="n">returncarsph</span> <span class="o">==</span> <span class="s1">&#39;car&#39;</span><span class="p">:</span>
+                    <span class="n">carsph</span> <span class="o">=</span> <span class="s1">&#39;car&#39;</span>
+                    <span class="n">units</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">units</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="o">*</span><span class="mi">3</span>
+                    <span class="n">data</span> <span class="o">=</span> <span class="n">sph2car</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">carsph</span> <span class="o">=</span> <span class="s1">&#39;sph&#39;</span>
+                    <span class="n">units</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">units</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;deg&#39;</span><span class="p">,</span> <span class="s1">&#39;deg&#39;</span><span class="p">]</span>
+                    <span class="n">data</span> <span class="o">=</span> <span class="n">car2sph</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">Coords</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">carsph</span><span class="p">,</span> <span class="n">units</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ticks</span><span class="p">,</span>
+                              <span class="n">use_irbem</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">use_irbem</span><span class="p">)</span>
+
+        <span class="c1"># check the length of ticks and do the more complex conversions</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ticks</span> <span class="ow">and</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ticks</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">)):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Ticktock dimension does not match Coords dimensions&#39;</span><span class="p">)</span>
+
+        <span class="c1"># check if car2sph is needed first for oneralib compatibility</span>
+        <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sysaxes</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span>  <span class="c1"># a car2sph or sph2car is needed</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">carsph</span> <span class="o">==</span> <span class="s1">&#39;sph&#39;</span><span class="p">:</span>
+                <span class="n">carsph</span> <span class="o">=</span> <span class="s1">&#39;car&#39;</span>
+                <span class="n">units</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">units</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="o">*</span><span class="mi">3</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="n">sph2car</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">carsph</span> <span class="o">=</span> <span class="s1">&#39;sph&#39;</span>
+                <span class="n">units</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">units</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;deg&#39;</span><span class="p">,</span> <span class="s1">&#39;deg&#39;</span><span class="p">]</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="n">car2sph</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+            <span class="n">units</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">dmcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
+            <span class="n">carsph</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">dmcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">carsph</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_irbem</span><span class="p">:</span>
+            <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">irbempy</span> <span class="k">as</span> <span class="n">op</span>
+            <span class="c1"># irbempy.coord_trans needs the passed Coords object to have the &quot;from&quot; dtype</span>
+            <span class="n">NewCoords</span> <span class="o">=</span> <span class="n">Coords</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">carsph</span><span class="p">,</span> <span class="n">units</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ticks</span><span class="p">,</span>
+                               <span class="n">use_irbem</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">use_irbem</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># SpacePy conversion takes input/output type separately, so set to desired output</span>
+            <span class="n">NewCoords</span> <span class="o">=</span> <span class="n">Coords</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">returntype</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_irbem</span> <span class="k">else</span> <span class="n">returnname</span><span class="p">,</span>
+                               <span class="n">returncarsph</span><span class="p">,</span> <span class="n">units</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ticks</span><span class="p">,</span> <span class="n">use_irbem</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">use_irbem</span><span class="p">)</span>
+
+        <span class="c1"># now convert to other coordinate system</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">is_dtype_returntype</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">ticks</span><span class="p">,</span> <span class="s2">&quot;Time information required; add a .ticks attribute&quot;</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_irbem</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">returnname</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;GDZ&#39;</span><span class="p">,</span> <span class="s1">&#39;RLL&#39;</span><span class="p">]</span> <span class="ow">and</span> <span class="n">units</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;km&#39;</span><span class="p">:</span>
+                    <span class="n">NewCoords</span><span class="o">.</span><span class="n">data</span> <span class="o">/=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Re</span>  <span class="c1"># IRBEM geodetic calculation requires Re input</span>
+                <span class="n">NewCoords</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">coord_trans</span><span class="p">(</span><span class="n">NewCoords</span><span class="p">,</span> <span class="n">returntype</span><span class="p">,</span> <span class="n">returncarsph</span><span class="p">)</span>
+                <span class="n">NewCoords</span><span class="o">.</span><span class="n">dtype</span> <span class="o">=</span> <span class="n">returntype</span>
+                <span class="k">if</span> <span class="n">returnname</span> <span class="o">==</span> <span class="s1">&#39;RLL&#39;</span> <span class="ow">and</span> <span class="n">units</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;km&#39;</span><span class="p">:</span>
+                    <span class="n">NewCoords</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">*=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Re</span>  <span class="c1"># Preserve units</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">returnname</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;GDZ&#39;</span><span class="p">,</span> <span class="s1">&#39;RLL&#39;</span><span class="p">]</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">units</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Re&#39;</span><span class="p">:</span>
+                    <span class="c1"># converting from a Cartesian referenced system to an</span>
+                    <span class="c1"># ellipsoid referenced system, input must be in km</span>
+                    <span class="n">data</span> <span class="o">*=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Re</span>  <span class="c1"># geodetic is defined in [km, deg, deg]</span>
+                <span class="n">NewCoords</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_2d</span><span class="p">(</span><span class="n">ctrans</span><span class="o">.</span><span class="n">convert_multitime</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ticks</span><span class="p">,</span>
+                                                                        <span class="bp">self</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">returnname</span><span class="p">,</span>
+                                                                        <span class="n">DEFAULTS</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
+                <span class="k">if</span> <span class="n">returnname</span> <span class="o">==</span> <span class="s1">&#39;RLL&#39;</span> <span class="ow">and</span> <span class="n">units</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Re&#39;</span><span class="p">:</span>
+                    <span class="c1"># RLL is defined in Re, deg, deg, but all geodetic calcs are in km</span>
+                    <span class="n">NewCoords</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">NewCoords</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">Re</span>
+                <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dtype</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;RLL&#39;</span><span class="p">,</span> <span class="s1">&#39;GDZ&#39;</span><span class="p">]</span> <span class="ow">and</span>
+                    <span class="n">returnname</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;RLL&#39;</span><span class="p">,</span> <span class="s1">&#39;GDZ&#39;</span><span class="p">]</span> <span class="ow">and</span>
+                    <span class="n">units</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;km&#39;</span><span class="p">):</span>
+                    <span class="c1"># input was in km, needs to be Earth radii</span>
+                    <span class="n">NewCoords</span><span class="o">.</span><span class="n">data</span> <span class="o">/=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Re</span>
+                <span class="k">if</span> <span class="n">returncarsph</span> <span class="o">==</span> <span class="s1">&#39;sph&#39;</span> <span class="ow">and</span> <span class="n">returnname</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;GDZ&#39;</span><span class="p">,</span> <span class="s1">&#39;RLL&#39;</span><span class="p">]:</span>
+                    <span class="n">NewCoords</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">car2sph</span><span class="p">(</span><span class="n">NewCoords</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="s1">&#39;GDZ&#39;</span><span class="p">:</span>  <span class="c1"># GDZ is defined in km and everything else is strictly Re</span>
+                <span class="n">units</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Re&#39;</span>  <span class="c1"># Converting back from GDZ set units to Re</span>
+            <span class="n">NewCoords</span><span class="o">.</span><span class="n">carsph</span> <span class="o">=</span> <span class="n">returncarsph</span>
+            <span class="n">NewCoords</span><span class="o">.</span><span class="n">sysaxes</span> <span class="o">=</span> <span class="n">SYSAXES_TYPES</span><span class="p">[</span><span class="n">NewCoords</span><span class="o">.</span><span class="n">dtype</span><span class="p">][</span><span class="n">NewCoords</span><span class="o">.</span><span class="n">carsph</span><span class="p">]</span>
+
+        <span class="c1"># Correct corresponding attributes and units</span>
+        <span class="k">if</span> <span class="n">returncarsph</span> <span class="o">==</span> <span class="s1">&#39;sph&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">returnname</span> <span class="o">==</span> <span class="s1">&#39;GDZ&#39;</span><span class="p">:</span>
+                <span class="n">NewCoords</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;km&#39;</span><span class="p">,</span> <span class="s1">&#39;deg&#39;</span><span class="p">,</span> <span class="s1">&#39;deg&#39;</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">NewCoords</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="p">[</span><span class="n">units</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;deg&#39;</span><span class="p">,</span> <span class="s1">&#39;deg&#39;</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">):</span>
+                <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">NewCoords</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+                    <span class="nb">delattr</span><span class="p">(</span><span class="n">NewCoords</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+            <span class="n">NewCoords</span><span class="o">.</span><span class="n">radi</span> <span class="o">=</span> <span class="n">NewCoords</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+            <span class="n">NewCoords</span><span class="o">.</span><span class="n">lati</span> <span class="o">=</span> <span class="n">NewCoords</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+            <span class="n">NewCoords</span><span class="o">.</span><span class="n">long</span> <span class="o">=</span> <span class="n">NewCoords</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>  <span class="c1"># &#39;car&#39;</span>
+            <span class="n">NewCoords</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="p">[</span><span class="n">units</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="o">*</span><span class="mi">3</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;radi&#39;</span><span class="p">,</span> <span class="s1">&#39;lati&#39;</span><span class="p">,</span> <span class="s1">&#39;long&#39;</span><span class="p">):</span>
+                <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">NewCoords</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+                    <span class="nb">delattr</span><span class="p">(</span><span class="n">NewCoords</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+            <span class="n">NewCoords</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">NewCoords</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+            <span class="n">NewCoords</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">NewCoords</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+            <span class="n">NewCoords</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">NewCoords</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">NewCoords</span></div>
+
+    <span class="c1"># -----------------------------------------------</span>
+    <span class="k">def</span> <span class="nf">__getstate__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Is called when pickling</span>
+<span class="sd">        See Also http://docs.python.org/library/pickle.html</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">odict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>  <span class="c1"># copy the dict since we change it</span>
+        <span class="k">return</span> <span class="n">odict</span>
+
+    <span class="k">def</span> <span class="nf">__setstate__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Is called when unpickling</span>
+<span class="sd">        See Also http://docs.python.org/library/pickle.html</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">dict</span><span class="p">)</span>
+        <span class="k">return</span>
+
+    <span class="c1"># -----------------------------------------------</span>
+<div class="viewcode-block" id="Coords.append"><a class="viewcode-back" href="../../autosummary/spacepy.coordinates.Coords.html#spacepy.coordinates.Coords.append">[docs]</a>    <span class="k">def</span> <span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;Append another Coords instance to the current one</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        other : Coords instance</span>
+<span class="sd">            Coords instance to append</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        --------</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+        <span class="n">otherdata</span> <span class="o">=</span> <span class="n">other</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">carsph</span><span class="p">)</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">otherdata</span><span class="o">.</span><span class="n">data</span><span class="p">))</span>
+        <span class="k">with</span> <span class="n">warnings</span><span class="o">.</span><span class="n">catch_warnings</span><span class="p">():</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;Use of IRBEM to perform&#39;</span><span class="p">,</span>
+                                    <span class="n">category</span><span class="o">=</span><span class="ne">DeprecationWarning</span><span class="p">,</span>
+                                    <span class="n">module</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;spacepy.coordinates$&#39;</span><span class="p">)</span>
+            <span class="n">newobj</span> <span class="o">=</span> <span class="n">Coords</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">carsph</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">carsph</span><span class="p">,</span> <span class="n">use_irbem</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">use_irbem</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">newobj</span></div>
+
+    <span class="c1"># -----------------------------------------------</span>
+<div class="viewcode-block" id="Coords.to_skycoord"><a class="viewcode-back" href="../../autosummary/spacepy.coordinates.Coords.html#spacepy.coordinates.Coords.to_skycoord">[docs]</a>    <span class="k">def</span> <span class="nf">to_skycoord</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Create an Astropy SkyCoord instance based on this instance</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        =======</span>
+<span class="sd">        out : `astropy.coordinates.SkyCoord`</span>
+<span class="sd">            This coordinate as an Astropy SkyCoord</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        =====</span>
+<span class="sd">        This method requires Astropy to be installed.</span>
+
+<span class="sd">        This method uses the GEO coordinate frame as the common frame between the two libraries.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ticks</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;This method requires the attribute `ticks` to be specified.&quot;</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="kn">import</span> <span class="nn">astropy.coordinates</span>
+            <span class="kn">import</span> <span class="nn">astropy.time</span>
+        <span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">e</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span><span class="s2">&quot;This method requires Astropy to be installed.&quot;</span><span class="p">)</span>
+
+        <span class="n">coord</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s1">&#39;GEO&#39;</span><span class="p">,</span> <span class="s1">&#39;car&#39;</span><span class="p">)</span>  <span class="c1"># GEO is Astropy ITRS</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">coord</span><span class="o">.</span><span class="n">data</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">Re</span> <span class="o">*</span> <span class="mi">1000</span> <span class="c1"># convert to meters</span>
+        <span class="n">obstime</span> <span class="o">=</span> <span class="n">coord</span><span class="o">.</span><span class="n">ticks</span><span class="o">.</span><span class="n">APT</span>
+
+        <span class="k">return</span> <span class="n">astropy</span><span class="o">.</span><span class="n">coordinates</span><span class="o">.</span><span class="n">SkyCoord</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">data</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">z</span><span class="o">=</span><span class="n">data</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">],</span>
+                                            <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="s1">&#39;itrs&#39;</span><span class="p">,</span> <span class="n">obstime</span><span class="o">=</span><span class="n">obstime</span><span class="p">)</span></div>
+
+    <span class="c1"># -----------------------------------------------</span>
+<div class="viewcode-block" id="Coords.from_skycoord"><a class="viewcode-back" href="../../autosummary/spacepy.coordinates.Coords.html#spacepy.coordinates.Coords.from_skycoord">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_skycoord</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">skycoord</span><span class="p">,</span> <span class="n">use_irbem</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Create a Coords instance from an Astropy SkyCoord instance</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ==========</span>
+<span class="sd">        skycoord : `astropy.coordinates.SkyCoord`</span>
+<span class="sd">            The coordinate to be converted</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        =======</span>
+<span class="sd">        out : Coords instance</span>
+<span class="sd">            The converted coordinate</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        =====</span>
+<span class="sd">        This method requires Astropy to be installed.</span>
+
+<span class="sd">        This method uses the GEO coordinate frame as the common frame between the two libraries.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="kn">import</span> <span class="nn">astropy.coordinates</span>
+        <span class="k">except</span> <span class="ne">ImportError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">e</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span><span class="s2">&quot;This method requires Astropy to be installed.&quot;</span><span class="p">)</span>
+
+        <span class="n">skycoord</span> <span class="o">=</span> <span class="n">astropy</span><span class="o">.</span><span class="n">coordinates</span><span class="o">.</span><span class="n">SkyCoord</span><span class="p">(</span><span class="n">skycoord</span><span class="p">)</span><span class="o">.</span><span class="n">itrs</span>  <span class="c1"># Astropy ITRS is GEO</span>
+        <span class="c1"># Ticktock constructor warns if use_irbem is None; just do right thing</span>
+        <span class="n">use_Re</span> <span class="o">=</span> <span class="n">IRBEM_RE</span> <span class="k">if</span> <span class="p">(</span><span class="n">use_irbem</span> <span class="ow">or</span> <span class="n">use_irbem</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span>\
+                 <span class="k">else</span> <span class="n">DEFAULTS</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">ellipsoid</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]</span>  <span class="c1"># kilometers</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="n">skycoord</span><span class="o">.</span><span class="n">cartesian</span><span class="o">.</span><span class="n">xyz</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s1">&#39;m&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1000</span> <span class="o">*</span> <span class="n">use_Re</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>  <span class="c1"># convert Cartesian to Re units</span>
+        <span class="n">ticks</span> <span class="o">=</span> <span class="n">spacepy</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">Ticktock</span><span class="p">(</span><span class="n">skycoord</span><span class="o">.</span><span class="n">obstime</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s1">&#39;GEO&#39;</span><span class="p">,</span> <span class="s1">&#39;car&#39;</span><span class="p">,</span> <span class="n">ticks</span><span class="o">=</span><span class="n">ticks</span><span class="p">,</span> <span class="n">use_irbem</span><span class="o">=</span><span class="n">use_irbem</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="car2sph"><a class="viewcode-back" href="../../autosummary/spacepy.coordinates.car2sph.html#spacepy.coordinates.car2sph">[docs]</a><span class="k">def</span> <span class="nf">car2sph</span><span class="p">(</span><span class="n">car_in</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Coordinate transformation from Cartesian to spherical</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">        - car_in (list or ndarray) : coordinate points in (n,3) shape with n coordinate points in</span>
+<span class="sd">            units of [Re, Re, Re] = [x,y,z]</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">        - results (ndarray) : values after conversion to spherical coordinates in</span>
+<span class="sd">            radius, latitude, longitude in units of [Re, deg, deg]</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; sph2car([1,45,0])</span>
+<span class="sd">    array([ 0.70710678,  0.        ,  0.70710678])</span>
+
+<span class="sd">    See Also</span>
+<span class="sd">    --------</span>
+<span class="sd">    sph2car</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">car_in</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">numbers</span><span class="o">.</span><span class="n">Number</span><span class="p">):</span>
+        <span class="n">car</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">car_in</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">car</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span><span class="n">car_in</span><span class="p">)</span>
+
+    <span class="n">res</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">car</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">car</span><span class="p">)):</span>
+        <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">car</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">car</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">car</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">*</span><span class="n">y</span><span class="o">+</span><span class="n">z</span><span class="o">*</span><span class="n">z</span><span class="p">)</span>
+        <span class="n">sq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">*</span><span class="n">y</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">y</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>  <span class="c1"># on the poles</span>
+            <span class="n">longi</span> <span class="o">=</span> <span class="mf">0.</span>
+            <span class="k">if</span> <span class="n">z</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">lati</span> <span class="o">=</span> <span class="o">-</span><span class="mf">90.</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">lati</span> <span class="o">=</span> <span class="mf">90.0</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">longi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="mf">180.</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+            <span class="n">lati</span> <span class="o">=</span> <span class="mf">90.</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">sq</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span><span class="o">*</span><span class="mf">180.</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+        <span class="n">res</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span><span class="p">,</span> <span class="n">lati</span><span class="p">,</span> <span class="n">longi</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">car_in</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">numbers</span><span class="o">.</span><span class="n">Number</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">res</span></div>
+
+
+<div class="viewcode-block" id="sph2car"><a class="viewcode-back" href="../../autosummary/spacepy.coordinates.sph2car.html#spacepy.coordinates.sph2car">[docs]</a><span class="k">def</span> <span class="nf">sph2car</span><span class="p">(</span><span class="n">sph_in</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Coordinate transformation from spherical to Cartesian</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">        - sph_in (list or ndarray) : coordinate points in (n,3) shape with n coordinate points in</span>
+<span class="sd">            units of [Re, deg, deg] = [r, latitude, longitude]</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">        - results (ndarray) : values after conversion to cartesian coordinates x,y,z</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; sph2car([1,45,45])</span>
+<span class="sd">    array([ 0.5       ,  0.5       ,  0.70710678])</span>
+
+<span class="sd">    See Also</span>
+<span class="sd">    --------</span>
+<span class="sd">    car2sph</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sph_in</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">numbers</span><span class="o">.</span><span class="n">Number</span><span class="p">):</span>
+        <span class="n">sph</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">sph_in</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">sph</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span><span class="n">sph_in</span><span class="p">)</span>
+
+    <span class="n">res</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">sph</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sph</span><span class="p">)):</span>
+        <span class="n">r</span><span class="p">,</span> <span class="n">lati</span><span class="p">,</span> <span class="n">longi</span> <span class="o">=</span> <span class="n">sph</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">sph</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">sph</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+        <span class="n">colat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">2.</span> <span class="o">-</span> <span class="n">lati</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">r</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">colat</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">longi</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">r</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">colat</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">longi</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.</span><span class="p">)</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="n">r</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">colat</span><span class="p">)</span>
+        <span class="n">res</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sph_in</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">numbers</span><span class="o">.</span><span class="n">Number</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">res</span></div>
+
+
+<div class="viewcode-block" id="quaternionNormalize"><a class="viewcode-back" href="../../autosummary/spacepy.coordinates.quaternionNormalize.html#spacepy.coordinates.quaternionNormalize">[docs]</a><span class="k">def</span> <span class="nf">quaternionNormalize</span><span class="p">(</span><span class="n">Qin</span><span class="p">,</span> <span class="n">scalarPos</span><span class="o">=</span><span class="s1">&#39;last&#39;</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Given an input quaternion (or array of quaternions), return the unit quaternion</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    vec : array_like</span>
+<span class="sd">        input quaternion to normalize</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : array_like</span>
+<span class="sd">        normalized quaternion</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import spacepy.coordinates</span>
+<span class="sd">    &gt;&gt;&gt; spacepy.coordinates.quaternionNormalize([0.707, 0, 0.707, 0.2])</span>
+<span class="sd">    array([ 0.69337122,  0.        ,  0.69337122,  0.19614462])</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">w</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;first&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;last&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">scalarPos</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+    <span class="k">if</span> <span class="n">w</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">errmsg</span> <span class="o">=</span> <span class="s1">&#39;quaternionNormalize: scalarPos must be set to &quot;First&quot; or &quot;Last&quot;&#39;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="n">errmsg</span><span class="p">)</span>
+
+    <span class="n">Quse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span><span class="n">Qin</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+    <span class="n">squeeze</span> <span class="o">=</span> <span class="n">Quse</span><span class="o">.</span><span class="n">ndim</span> <span class="o">&lt;</span> <span class="mi">2</span>
+    <span class="k">if</span> <span class="n">squeeze</span><span class="p">:</span>
+        <span class="n">Quse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">Quse</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">magn</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">Quse</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="c1"># Find places where the magnitude is tiny, convert to unit real</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">magn</span> <span class="o">&lt;=</span> <span class="mf">1e-12</span><span class="p">)</span>
+    <span class="n">magn</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">outarr</span> <span class="o">=</span> <span class="n">Quse</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">magn</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">magn</span><span class="o">.</span><span class="n">ndim</span><span class="p">)</span>
+    <span class="n">outarr</span><span class="p">[</span><span class="n">idx</span> <span class="o">+</span> <span class="p">(</span><span class="kc">None</span><span class="p">,)]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">outarr</span><span class="p">[</span><span class="n">idx</span> <span class="o">+</span> <span class="p">(</span><span class="n">w</span><span class="p">,)]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">squeeze</span><span class="p">:</span>
+        <span class="n">outarr</span> <span class="o">=</span> <span class="n">outarr</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">outarr</span></div>
+
+
+<div class="viewcode-block" id="quaternionRotateVector"><a class="viewcode-back" href="../../autosummary/spacepy.coordinates.quaternionRotateVector.html#spacepy.coordinates.quaternionRotateVector">[docs]</a><span class="k">def</span> <span class="nf">quaternionRotateVector</span><span class="p">(</span><span class="n">Qin</span><span class="p">,</span> <span class="n">Vin</span><span class="p">,</span> <span class="n">scalarPos</span><span class="o">=</span><span class="s1">&#39;last&#39;</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Given quaternions and vectors, return the vectors rotated by the quaternions</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    Qin : array_like</span>
+<span class="sd">        input quaternion to rotate by</span>
+<span class="sd">    Vin : array-like</span>
+<span class="sd">        input vector to rotate</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : array_like</span>
+<span class="sd">        rotated vector</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import spacepy.coordinates</span>
+<span class="sd">    &gt;&gt;&gt; import numpy as np</span>
+<span class="sd">    &gt;&gt;&gt; vec = [1, 0, 0]</span>
+<span class="sd">    &gt;&gt;&gt; quat_wijk = [np.sin(np.pi/4), 0, np.sin(np.pi/4), 0.0]</span>
+<span class="sd">    &gt;&gt;&gt; quat_ijkw = [0.0, np.sin(np.pi/4), 0, np.sin(np.pi/4)]</span>
+<span class="sd">    &gt;&gt;&gt; spacepy.coordinates.quaternionRotateVector(quat_ijkw, vec)</span>
+<span class="sd">    array([ 0.,  0., -1.])</span>
+<span class="sd">    &gt;&gt;&gt; spacepy.coordinates.quaternionRotateVector(</span>
+<span class="sd">    ...     quat_wijk, vec, scalarPos=&#39;first&#39;)</span>
+<span class="sd">    array([ 0.,  0., -1.])</span>
+
+<span class="sd">    See Also</span>
+<span class="sd">    --------</span>
+<span class="sd">    quaternionMultiply</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">scalarPos</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;last&#39;</span><span class="p">:</span>
+        <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="k">elif</span> <span class="n">scalarPos</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;first&#39;</span><span class="p">:</span>
+        <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">errmsg</span> <span class="o">=</span> <span class="s1">&#39;quaternionRotateVector: scalarPos must be set to &quot;First&quot; or &quot;Last&quot;&#39;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="n">errmsg</span><span class="p">)</span>
+
+    <span class="n">Quse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span><span class="n">Qin</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">normalize</span><span class="p">:</span>
+        <span class="n">Quse</span> <span class="o">=</span> <span class="n">quaternionNormalize</span><span class="p">(</span><span class="n">Quse</span><span class="p">,</span> <span class="n">scalarPos</span><span class="o">=</span><span class="n">scalarPos</span><span class="p">)</span>
+    <span class="n">Vuse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span><span class="n">Vin</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">Quse</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+        <span class="n">Quse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">([</span><span class="n">Quse</span><span class="p">])</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">Vuse</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+        <span class="n">Vuse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">([</span><span class="n">Vuse</span><span class="p">])</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="n">Vuse</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">Quse</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">except</span> <span class="ne">AssertionError</span><span class="p">:</span>
+        <span class="n">errmsg</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;quaternionRotateVector:&#39;</span><span class="p">,</span>
+                           <span class="s1">&#39;Input vector array must have same length&#39;</span><span class="p">,</span>
+                           <span class="s1">&#39;as input quaternion array&#39;</span><span class="p">])</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">errmsg</span><span class="p">)</span>
+
+    <span class="n">outarr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">Quse</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">3</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">Quse</span><span class="p">):</span>
+        <span class="n">Vrow</span> <span class="o">=</span> <span class="n">Vuse</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+        <span class="n">ii</span><span class="p">,</span> <span class="n">jj</span><span class="p">,</span> <span class="n">kk</span><span class="p">,</span> <span class="n">ww</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">row</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">row</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">row</span><span class="p">[</span><span class="n">w</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span>
+        <span class="n">iw</span><span class="p">,</span> <span class="n">jw</span><span class="p">,</span> <span class="n">kw</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">row</span><span class="p">[</span><span class="n">w</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">row</span><span class="p">[</span><span class="n">w</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">*</span><span class="n">row</span><span class="p">[</span><span class="n">w</span><span class="p">]</span>
+        <span class="n">ij</span><span class="p">,</span> <span class="n">ik</span><span class="p">,</span> <span class="n">jk</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">row</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">row</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">row</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+
+        <span class="n">outarr</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">ww</span><span class="o">*</span><span class="n">Vrow</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">jw</span><span class="o">*</span><span class="n">Vrow</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">kw</span><span class="o">*</span><span class="n">Vrow</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> \
+                         <span class="n">ii</span><span class="o">*</span><span class="n">Vrow</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">ij</span><span class="o">*</span><span class="n">Vrow</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">ik</span><span class="o">*</span><span class="n">Vrow</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> \
+                         <span class="n">kk</span><span class="o">*</span><span class="n">Vrow</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">jj</span><span class="o">*</span><span class="n">Vrow</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">outarr</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">ij</span><span class="o">*</span><span class="n">Vrow</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">jj</span><span class="o">*</span><span class="n">Vrow</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">jk</span><span class="o">*</span><span class="n">Vrow</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> \
+                         <span class="mi">2</span><span class="o">*</span><span class="n">kw</span><span class="o">*</span><span class="n">Vrow</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">kk</span><span class="o">*</span><span class="n">Vrow</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">ww</span><span class="o">*</span><span class="n">Vrow</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> \
+                         <span class="mi">2</span><span class="o">*</span><span class="n">iw</span><span class="o">*</span><span class="n">Vrow</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">ii</span><span class="o">*</span><span class="n">Vrow</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">outarr</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">ik</span><span class="o">*</span><span class="n">Vrow</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">jk</span><span class="o">*</span><span class="n">Vrow</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">kk</span><span class="o">*</span><span class="n">Vrow</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> \
+                         <span class="mf">2.0</span><span class="o">*</span><span class="n">jw</span><span class="o">*</span><span class="n">Vrow</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">jj</span><span class="o">*</span><span class="n">Vrow</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="mf">2.0</span><span class="o">*</span><span class="n">iw</span><span class="o">*</span><span class="n">Vrow</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> \
+                         <span class="n">ii</span><span class="o">*</span><span class="n">Vrow</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">ww</span><span class="o">*</span><span class="n">Vrow</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">outarr</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="quaternionMultiply"><a class="viewcode-back" href="../../autosummary/spacepy.coordinates.quaternionMultiply.html#spacepy.coordinates.quaternionMultiply">[docs]</a><span class="k">def</span> <span class="nf">quaternionMultiply</span><span class="p">(</span><span class="n">Qin1</span><span class="p">,</span> <span class="n">Qin2</span><span class="p">,</span> <span class="n">scalarPos</span><span class="o">=</span><span class="s1">&#39;last&#39;</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Given quaternions, return the product, i.e. Qin1*Qin2</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    Qin1 : array_like</span>
+<span class="sd">        input quaternion, first position</span>
+<span class="sd">    Qin2 : array-like</span>
+<span class="sd">        input quaternion, second position</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : array_like</span>
+<span class="sd">        quaternion product</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import spacepy.coordinates</span>
+<span class="sd">    &gt;&gt;&gt; import numpy as np</span>
+<span class="sd">    &gt;&gt;&gt; vecX = [1, 0, 0] #shared X-axis</span>
+<span class="sd">    &gt;&gt;&gt; vecZ = [0, 0, 1] #unshared, but similar, Z-axis</span>
+<span class="sd">    &gt;&gt;&gt; quat_eci_to_gsm = [-0.05395384,  0.07589845, -0.15172533,  0.98402634]</span>
+<span class="sd">    &gt;&gt;&gt; quat_eci_to_gse = [ 0.20016056,  0.03445775, -0.16611386,  0.96496352]</span>
+<span class="sd">    &gt;&gt;&gt; quat_gsm_to_eci = spacepy.coordinates.quaternionConjugate(</span>
+<span class="sd">    ...     quat_eci_to_gsm)</span>
+<span class="sd">    &gt;&gt;&gt; quat_gse_to_gsm = spacepy.coordinates.quaternionMultiply(</span>
+<span class="sd">    ...     quat_gsm_to_eci, quat_eci_to_gse)</span>
+<span class="sd">    &gt;&gt;&gt; spacepy.coordinates.quaternionRotateVector(quat_gse_to_gsm, vecX)</span>
+<span class="sd">    array([  1.00000000e+00,   1.06536725e-09,  -1.16892107e-08])</span>
+<span class="sd">    &gt;&gt;&gt; spacepy.coordinates.quaternionRotateVector(quat_gse_to_gsm, vecZ)</span>
+<span class="sd">    array([  1.06802834e-08,  -4.95669027e-01,   8.68511494e-01])</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">scalarPos</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;last&#39;</span><span class="p">:</span>
+        <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="k">elif</span> <span class="n">scalarPos</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;first&#39;</span><span class="p">:</span>
+        <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">&#39;quaternionMultiply: scalarPos must be set to &quot;First&quot; or &quot;Last&quot;&#39;</span><span class="p">)</span>
+
+    <span class="n">Quse1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span><span class="n">Qin1</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+    <span class="n">Quse2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span><span class="n">Qin2</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">Quse1</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+        <span class="n">Quse1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">([</span><span class="n">Quse1</span><span class="p">])</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">Quse2</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+        <span class="n">Quse2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">([</span><span class="n">Quse2</span><span class="p">])</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="n">Quse2</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="n">Quse1</span><span class="o">.</span><span class="n">shape</span>
+    <span class="k">except</span> <span class="ne">AssertionError</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;quaternionMultiply: Input quaternion arrays must have same length&#39;</span><span class="p">)</span>
+
+    <span class="n">outarr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty_like</span><span class="p">(</span><span class="n">Quse1</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">Quse1</span><span class="p">):</span>
+        <span class="n">row1</span> <span class="o">=</span> <span class="n">row</span>
+        <span class="n">row2</span> <span class="o">=</span> <span class="n">Quse2</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+        <span class="c1"># vector components</span>
+        <span class="n">outarr</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">row1</span><span class="p">[</span><span class="n">w</span><span class="p">]</span><span class="o">*</span><span class="n">row2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">row1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">row2</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="o">+</span> <span class="n">row1</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">row2</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">-</span> <span class="n">row1</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">*</span><span class="n">row2</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+        <span class="n">outarr</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">row1</span><span class="p">[</span><span class="n">w</span><span class="p">]</span><span class="o">*</span><span class="n">row2</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">-</span> <span class="n">row1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">row2</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">+</span> <span class="n">row1</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">row2</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="o">+</span> <span class="n">row1</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">*</span><span class="n">row2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">outarr</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">row1</span><span class="p">[</span><span class="n">w</span><span class="p">]</span><span class="o">*</span><span class="n">row2</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">+</span> <span class="n">row1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">row2</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">-</span> <span class="n">row1</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">row2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">row1</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">*</span><span class="n">row2</span><span class="p">[</span><span class="n">w</span><span class="p">]</span>
+        <span class="c1"># real part</span>
+        <span class="n">outarr</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="n">w</span><span class="p">]</span> <span class="o">=</span> <span class="n">row1</span><span class="p">[</span><span class="n">w</span><span class="p">]</span><span class="o">*</span><span class="n">row2</span><span class="p">[</span><span class="n">w</span><span class="p">]</span> <span class="o">-</span> <span class="n">row1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">row2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">row1</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">row2</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">-</span> <span class="n">row1</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">*</span><span class="n">row2</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">outarr</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="quaternionConjugate"><a class="viewcode-back" href="../../autosummary/spacepy.coordinates.quaternionConjugate.html#spacepy.coordinates.quaternionConjugate">[docs]</a><span class="k">def</span> <span class="nf">quaternionConjugate</span><span class="p">(</span><span class="n">Qin</span><span class="p">,</span> <span class="n">scalarPos</span><span class="o">=</span><span class="s1">&#39;last&#39;</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Given an input quaternion (or array of quaternions), return the conjugate</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    Qin : array_like</span>
+<span class="sd">        input quaternion to conjugate</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : array_like</span>
+<span class="sd">        conjugate quaternion</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import spacepy.coordinates</span>
+<span class="sd">    &gt;&gt;&gt; spacepy.coordinates.quaternionConjugate(</span>
+<span class="sd">    ...     [0.707, 0, 0.707, 0.2], scalarPos=&#39;last&#39;)</span>
+<span class="sd">    array([-0.707, -0.   , -0.707,  0.2  ])</span>
+
+<span class="sd">    See Also</span>
+<span class="sd">    --------</span>
+<span class="sd">    quaternionMultiply</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">scalarPos</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;last&#39;</span><span class="p">:</span>
+        <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="k">elif</span> <span class="n">scalarPos</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;first&#39;</span><span class="p">:</span>
+        <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">errmsg</span> <span class="o">=</span> <span class="s1">&#39;quaternionConjugate: scalarPos must be set to &quot;First&quot; or &quot;Last&quot;&#39;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="n">errmsg</span><span class="p">)</span>
+
+    <span class="n">Quse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span><span class="n">Qin</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">Quse</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+        <span class="n">Quse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">([</span><span class="n">Quse</span><span class="p">])</span>
+    <span class="n">outarr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty_like</span><span class="p">(</span><span class="n">Quse</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">Quse</span><span class="p">):</span>
+        <span class="n">outarr</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">row</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">outarr</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">row</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+        <span class="n">outarr</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">row</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+        <span class="n">outarr</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="n">w</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="n">w</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">outarr</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="quaternionFromMatrix"><a class="viewcode-back" href="../../autosummary/spacepy.coordinates.quaternionFromMatrix.html#spacepy.coordinates.quaternionFromMatrix">[docs]</a><span class="k">def</span> <span class="nf">quaternionFromMatrix</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">scalarPos</span><span class="o">=</span><span class="s1">&#39;last&#39;</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Given an input rotation matrix, return the equivalent quaternion</span>
+
+<span class="sd">    The output has one fewer axis than the input (the last axis) and the</span>
+<span class="sd">    shape is otherwise unchanged, allowing multi-dimensional matrix input.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    matrix : array_like</span>
+<span class="sd">        input rotation matrix or array of matrices</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : array_like</span>
+<span class="sd">        Quaternions representing the same rotation as the input rotation</span>
+<span class="sd">        matrices.</span>
+
+<span class="sd">    Other Parameters</span>
+<span class="sd">    ----------------</span>
+<span class="sd">    scalarPos : str</span>
+<span class="sd">        Location of the scalar component of the output quaternion, either</span>
+<span class="sd">        &#39;last&#39; (default) or &#39;first&#39;.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    NotImplementedError</span>
+<span class="sd">        for invalid values of ``scalarPos``</span>
+
+<span class="sd">    ValueError</span>
+<span class="sd">        for inputs which are obviously not valid 3D rotation matrices or</span>
+<span class="sd">        arrays thereof: if the size doesn&#39;t end in (3, 3), if the matrix is</span>
+<span class="sd">        not orthogonal, or not a proper rotation.</span>
+
+<span class="sd">    See Also</span>
+<span class="sd">    --------</span>
+<span class="sd">    quaternionToMatrix</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    .. versionadded:: 0.2.2</span>
+
+<span class="sd">    No attempt is made to resolve the sign ambiguity; in particular,</span>
+<span class="sd">    conversions of very similar matrices may result in equivalent quaternions</span>
+<span class="sd">    with the opposite sign. This may have implications for interpolating a</span>
+<span class="sd">    sequence of quaternions.</span>
+
+<span class="sd">    The conversion of a rotation matrix to a quaternion suffers from some</span>
+<span class="sd">    of the same disadvantages inherent to rotation matrices, such as potential</span>
+<span class="sd">    numerical instabilities. Working in quaternion space as much as possible</span>
+<span class="sd">    is recommended.</span>
+
+<span class="sd">    There are several algorithms; the most well-known algorithm for this</span>
+<span class="sd">    conversion is Shepperd&#39;s [#Shepperd]_, although the many &quot;rediscoveries&quot;</span>
+<span class="sd">    indicate</span>
+<span class="sd">    it is not sufficiently well-known. This function uses the method of</span>
+<span class="sd">    Bar-Itzhack [#BarItzhack]_ (version 3), which should be resistant to small</span>
+<span class="sd">    errors in the rotation matrix. As a result, the input checking is quite</span>
+<span class="sd">    coarse and will likely accept many matrices that do not represent valid</span>
+<span class="sd">    rotations.</span>
+
+<span class="sd">    Also potentially of interest, although not implemented here, is Sarabandi</span>
+<span class="sd">    and Thomas [#Sarabandi]_.</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    .. [#Shepperd] S.W. Shepperd, &quot;Quaternion from rotation matrix,&quot; Journal of</span>
+<span class="sd">            Guidance and Control, Vol. 1, No. 3, pp. 223-224, 1978,</span>
+<span class="sd">            `doi:10.2514/3.55767b &lt;https://doi.org/10.2514/3.55767b&gt;`_</span>
+
+<span class="sd">    .. [#BarItzhack] I. Y. Bar-Itzhack, &quot;New method for extracting the</span>
+<span class="sd">            quaternion from a rotation matrix&quot;, AIAA Journal of Guidance,</span>
+<span class="sd">            Control and Dynamics, 23 (6): 1085–1087,</span>
+<span class="sd">            `doi:10.2514/2.4654 &lt;https://doi.org/10.2514/2.4654&gt;`_</span>
+
+<span class="sd">    .. [#Sarabandi] S. Sarabandi and F. Thomas, &quot;Accurate Computation of</span>
+<span class="sd">            Quaternions from Rotation Matrices&quot;, In: Lenarcic J.,</span>
+<span class="sd">            Parenti-Castelli V. (eds) Advances in Robot Kinematics 2018,</span>
+<span class="sd">            Springer.</span>
+<span class="sd">            `doi:10.1007/978-3-319-93188-3_5</span>
+<span class="sd">            &lt;https://doi.org/10.1007/978-3-319-93188-3_5&gt;`_</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import spacepy.coordinates</span>
+<span class="sd">    &gt;&gt;&gt; spacepy.coordinates.quaternionFromMatrix(</span>
+<span class="sd">    ...     [[ 0.,  0.,  1.],</span>
+<span class="sd">    ...      [ 1.,  0.,  0.],</span>
+<span class="sd">    ...      [ 0.,  1.,  0.]])</span>
+<span class="sd">    array([0.5, 0.5, 0.5, 0.5])</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">scalarPos</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;last&#39;</span><span class="p">,</span> <span class="s1">&#39;first&#39;</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+            <span class="s1">&#39;quaternionFromMatrix: scalarPos must be set to &quot;First&quot; or &quot;Last&quot;&#39;</span><span class="p">)</span>
+    <span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="ow">or</span> <span class="n">matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span> <span class="o">!=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s1">&#39;Input does not appear to be 3D rotation matrix, wrong size.&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">ndindex</span><span class="p">(</span><span class="n">matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]):</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="p">(</span><span class="bp">Ellipsis</span><span class="p">,)]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">transpose</span><span class="p">()),</span>
+                           <span class="n">np</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">atol</span><span class="o">=</span><span class="mf">0.2</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Input rotation matrix</span><span class="si">{}</span><span class="s1"> not orthogonal.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="s1">&#39;&#39;</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span> <span class="k">else</span> <span class="s1">&#39; at &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)))</span>
+        <span class="n">det</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">det</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Input rotation matrix at </span><span class="si">{}</span><span class="s1"> not proper.&#39;</span>
+                             <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)))</span>
+    <span class="n">inshape</span> <span class="o">=</span> <span class="n">matrix</span><span class="o">.</span><span class="n">shape</span>
+    <span class="c1"># Flatten out most dimensions, easier to index</span>
+    <span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+    <span class="c1"># Indexing in Bar-Itzhack is reversed relative to numpy</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+         <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+         <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+         <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>  <span class="c1"># row 0</span>
+         <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+         <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+         <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+         <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>  <span class="c1"># row 1</span>
+         <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+         <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+         <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+         <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>  <span class="c1"># row 2</span>
+         <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+         <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+         <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+         <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">matrix</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>  <span class="c1"># row 3</span>
+         <span class="p">)</span>
+    <span class="c1"># Stack together on a new axis after the input sample, then</span>
+    <span class="c1"># split that axis into the 4x4 k arrays</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">/</span> <span class="mf">3.</span>
+    <span class="n">evals</span><span class="p">,</span> <span class="n">evects</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+    <span class="n">evects</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">evects</span><span class="p">)</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">evals</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">Qout</span> <span class="o">=</span> <span class="n">evects</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">mgrid</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">idx</span><span class="p">)],</span> <span class="p">:,</span> <span class="n">idx</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">scalarPos</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;first&#39;</span><span class="p">:</span>
+        <span class="n">Qout</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">roll</span><span class="p">(</span><span class="n">Qout</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="c1"># Recover original shape</span>
+    <span class="n">Qout</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">Qout</span><span class="p">,</span> <span class="n">inshape</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="mi">4</span><span class="p">,))</span>
+    <span class="k">return</span> <span class="n">Qout</span></div>
+
+
+<div class="viewcode-block" id="quaternionToMatrix"><a class="viewcode-back" href="../../autosummary/spacepy.coordinates.quaternionToMatrix.html#spacepy.coordinates.quaternionToMatrix">[docs]</a><span class="k">def</span> <span class="nf">quaternionToMatrix</span><span class="p">(</span><span class="n">Qin</span><span class="p">,</span> <span class="n">scalarPos</span><span class="o">=</span><span class="s1">&#39;last&#39;</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Given an input quaternion, return the equivalent rotation matrix.</span>
+
+<span class="sd">    The output has one more axis than the input (the last axis) and the</span>
+<span class="sd">    shape is otherwise unchanged, allowing multi-dimensional quaternion input.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    Qin : array_like</span>
+<span class="sd">        input quaternion or array of quaternions, must be normalized.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    out : array_like</span>
+<span class="sd">        Rotation matrix</span>
+
+<span class="sd">    Other Parameters</span>
+<span class="sd">    ----------------</span>
+<span class="sd">    scalarPos : str</span>
+<span class="sd">        Location of the scalar component of the input quaternion, either</span>
+<span class="sd">        &#39;last&#39; (default) or &#39;first&#39;.</span>
+
+<span class="sd">    normalize : True</span>
+<span class="sd">        Normalize input quaternions before conversion (default). If False,</span>
+<span class="sd">        raises error for non-normalized.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    NotImplementedError</span>
+<span class="sd">        for invalid values of ``scalarPos``.</span>
+
+<span class="sd">    ValueError</span>
+<span class="sd">        for inputs which are not valid normalized quaternions or arrays</span>
+<span class="sd">        thereof: if the size doesn&#39;t end in (4), if the quaternion is not</span>
+<span class="sd">        normalized and ``normalize`` is False.</span>
+
+<span class="sd">    See Also</span>
+<span class="sd">    --------</span>
+<span class="sd">    quaternionFromMatrix</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    .. versionadded:: 0.2.2</span>
+
+<span class="sd">    Implementation of the Euler–Rodrigues formula.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import spacepy.coordinates</span>
+<span class="sd">    &gt;&gt;&gt; spacepy.coordinates.quaternionToMatrix([0.5, 0.5, 0.5, 0.5])</span>
+<span class="sd">    array([[ 0.,  0.,  1.],</span>
+<span class="sd">           [ 1.,  0.,  0.],</span>
+<span class="sd">           [ 0.,  1.,  0.]])</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">scalarPos</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;last&#39;</span><span class="p">,</span> <span class="s1">&#39;first&#39;</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+            <span class="s1">&#39;quaternionToMatrix: scalarPos must be set to &quot;First&quot; or &quot;Last&quot;&#39;</span><span class="p">)</span>
+    <span class="n">Qin</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span><span class="n">Qin</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">Qin</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Input does not appear to be quaternion, wrong size.&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">normalize</span><span class="p">:</span>
+        <span class="n">Qin</span> <span class="o">=</span> <span class="n">quaternionNormalize</span><span class="p">(</span><span class="n">Qin</span><span class="p">,</span> <span class="n">scalarPos</span><span class="o">=</span><span class="n">scalarPos</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">scalarPos</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;first&#39;</span><span class="p">:</span>
+        <span class="n">Qin</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">roll</span><span class="p">(</span><span class="n">Qin</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">Qin</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">),</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Input quaternion not normalized.&#39;</span><span class="p">)</span>
+    <span class="c1"># Maintain dimensions at end for stacking</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="n">Qin</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">:],</span> <span class="n">Qin</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">],</span> <span class="n">Qin</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">],</span> <span class="n">Qin</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+    <span class="c1"># Output array, &quot;flattened&quot;</span>
+    <span class="c1"># This can probably be written with a clever vector notation...</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">a</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">b</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">c</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">d</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span>
+                          <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">b</span> <span class="o">*</span> <span class="n">c</span> <span class="o">-</span> <span class="n">a</span> <span class="o">*</span> <span class="n">d</span><span class="p">),</span>
+                          <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">b</span> <span class="o">*</span> <span class="n">d</span> <span class="o">+</span> <span class="n">a</span> <span class="o">*</span> <span class="n">c</span><span class="p">),</span>
+                          <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">b</span> <span class="o">*</span> <span class="n">c</span> <span class="o">+</span> <span class="n">a</span> <span class="o">*</span> <span class="n">d</span><span class="p">),</span>
+                          <span class="n">a</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">c</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">b</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">d</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span>
+                          <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">c</span> <span class="o">*</span> <span class="n">d</span> <span class="o">-</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">),</span>
+                          <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">b</span> <span class="o">*</span> <span class="n">d</span> <span class="o">-</span> <span class="n">a</span> <span class="o">*</span> <span class="n">c</span><span class="p">),</span>
+                          <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">c</span> <span class="o">*</span> <span class="n">d</span> <span class="o">+</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">),</span>
+                          <span class="n">a</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">d</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">b</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">c</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span>
+                          <span class="p">),</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="c1"># And last two dims are 3x3 array for matrix</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">out</span><span class="o">.</span><span class="n">shape</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">out</span></div>
+</pre></div>
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../../search.html">search</a>|&nbsp;</li>
+       <li><a href="../../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../spacepy.html" >spacepy</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.coordinates</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

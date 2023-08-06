@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Python 2 End of Support &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="SpacePy Configuration" href="configuration.html" />
+    <link rel="prev" title="Publication List" href="publications.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="index.html"><img src="_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="configuration.html" title="SpacePy Configuration"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="publications.html" title="Publication List"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+       <li><a href="index.html">documentation </a> &raquo;</li>
+
+        <li class="nav-item nav-item-this"><a href="">Python 2 End of Support</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Python 2 End of Support</a><ul>
+<li><a class="reference internal" href="#series-full-support">0.2 series: full support</a></li>
+<li><a class="reference internal" href="#series-no-feature-support">0.3 series: no feature support</a></li>
+<li><a class="reference internal" href="#series-no-bugfix-support">0.4 series: no bugfix support</a></li>
+<li><a class="reference internal" href="#series-remove-support">0.5 series: remove support</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="publications.html"
+                          title="previous chapter">Publication List</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="configuration.html"
+                          title="next chapter">SpacePy Configuration</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/py2k_eol.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="python-2-end-of-support">
+<h1>Python 2 End of Support<a class="headerlink" href="#python-2-end-of-support" title="Permalink to this headline">¶</a></h1>
+<p>Python 3 is fully supported by SpacePy and used in daily work by the
+SpacePy team.</p>
+<p>On January 1, 2020, Python 2 reached <a class="reference external" href="https://www.python.org/doc/sunset-python-2/">end of life</a>. Most of the
+scientific Python stack has committed to ending Python 2 support <a class="reference external" href="https://python3statement.org/">by
+2020</a>. This includes <a class="reference external" href="https://numpy.org/neps/nep-0014-dropping-python2.7-proposal.html">numpy</a>.</p>
+<p>As a result, the SpacePy team will phase out Python 2 support over the
+course of 2020 and early 2021. This process is managed through SpacePy <a class="reference external" href="https://github.com/spacepy/spacepy/issues/26">issue 26</a>.</p>
+<section id="series-full-support">
+<h2>0.2 series: full support<a class="headerlink" href="#series-full-support" title="Permalink to this headline">¶</a></h2>
+<p>The last release of the SpacePy 0.2 series will be 0.2.3, by the end
+of 2020. This will be the last release where all
+functionality works with Python 2 and that has binary installers
+provided for Python 2. 0.2 will <em>not</em> be supported past this release
+(this will not be a “long-term support” release.)</p>
+</section>
+<section id="series-no-feature-support">
+<h2>0.3 series: no feature support<a class="headerlink" href="#series-no-feature-support" title="Permalink to this headline">¶</a></h2>
+<p>Starting with 0.3.0 in early 2021, the SpacePy team will:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Provide no prebuilt packages for Python 2. We will attempt to
+ensure the last 0.2.x version will still install from pip on
+Python 2.</p></li>
+<li><p>Allow new features that do not support Python 2 as long as they do
+not break existing functionality.</p></li>
+<li><p>Provide no workarounds for dependencies that no longer support
+Python 2.</p></li>
+</ul>
+</div></blockquote>
+<p>SpacePy 0.3.x will still function on Python 2 for those who install
+“by hand”.</p>
+</section>
+<section id="series-no-bugfix-support">
+<h2>0.4 series: no bugfix support<a class="headerlink" href="#series-no-bugfix-support" title="Permalink to this headline">¶</a></h2>
+<p>Starting with 0.4.0, no later than mid-2021, the SpacePy team will
+provide no fixes for bugs that cannot be reproduced on Python 3.</p>
+<p>SpacePy 0.4.x will still function on Python 2 for those who install
+“by hand”.</p>
+</section>
+<section id="series-remove-support">
+<h2>0.5 series: remove support<a class="headerlink" href="#series-remove-support" title="Permalink to this headline">¶</a></h2>
+<p>Starting with 0.5.0, mid-2021, SpacePy developers will begin
+removing code that exists only to support Python 2. SpacePy 0.5.x will
+not function on Python 2.</p>
+<hr class="docutils" />
+<dl class="field-list simple">
+<dt class="field-odd">Release</dt>
+<dd class="field-odd"><p>0.3.0</p>
+</dd>
+<dt class="field-even">Doc generation date</dt>
+<dd class="field-even"><p>Apr 27, 2022</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="configuration.html" title="SpacePy Configuration"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="publications.html" title="Publication List"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+       <li><a href="index.html">documentation </a> &raquo;</li>
+
+        <li class="nav-item nav-item-this"><a href="">Python 2 End of Support</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

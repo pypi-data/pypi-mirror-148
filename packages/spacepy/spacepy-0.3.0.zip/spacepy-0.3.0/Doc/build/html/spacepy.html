@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy - main SpacePy module &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="ae9ap9 - Handle AE9/AP9 data files" href="ae9ap9.html" />
+    <link rel="prev" title="Continuous Integration" href="ci.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="index.html"><img src="_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="ae9ap9.html" title="ae9ap9 - Handle AE9/AP9 data files"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ci.html" title="Continuous Integration"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+       <li><a href="index.html">documentation </a> &raquo;</li>
+
+        <li class="nav-item nav-item-this"><a href="">spacepy - main SpacePy module</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="ci.html"
+                          title="previous chapter">Continuous Integration</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="ae9ap9.html"
+                          title="next chapter">ae9ap9 - Handle AE9/AP9 data files</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/spacepy.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-spacepy">
+<span id="spacepy-main-spacepy-module"></span><h1>spacepy - main SpacePy module<a class="headerlink" href="#module-spacepy" title="Permalink to this headline">¶</a></h1>
+<p>SpacePy: Space Science Tools for Python</p>
+<p>SpacePy is a package of tools primarily aimed at the space science community.
+This __init__.py file sets the parameters for import statements.</p>
+<p>If running the ipython shell, simply type ‘?’ after any command for help.
+ipython also offers tab completion, so hitting tab after ‘&lt;module name&gt;.’
+will list all available functions, classes and variables.</p>
+<p>Detailed HTML documentation is available online by typing:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">spacepy</span><span class="o">.</span><span class="n">help</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Most functionality is in spacepy’s submodules. Each module has specific
+help available:</p>
+<p class="rubric">Submodules</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="coordinates.html#module-spacepy.coordinates" title="spacepy.coordinates"><code class="xref py py-obj docutils literal notranslate"><span class="pre">coordinates</span></code></a></p></td>
+<td><p>Implementation of Coords class functions for coordinate transformations</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="data_assimilation.html#module-spacepy.data_assimilation" title="spacepy.data_assimilation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">data_assimilation</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="datamodel.html#module-spacepy.datamodel" title="spacepy.datamodel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datamodel</span></code></a></p></td>
+<td><p>The datamodel classes constitute a data model implementation meant to mirror the functionality of the data model output from pycdf, though implemented slightly differently.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="empiricals.html#module-spacepy.empiricals" title="spacepy.empiricals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">empiricals</span></code></a></p></td>
+<td><p>Module with some useful empirical models (plasmapause, magnetopause, Lmax)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="irbempy.html#module-spacepy.irbempy" title="spacepy.irbempy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">irbempy</span></code></a></p></td>
+<td><p>module wrapper for irbem_lib Reference for this library <a class="reference external" href="https://sourceforge.net/projects/irbem/">https://sourceforge.net/projects/irbem/</a> D.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="omni.html#module-spacepy.omni" title="spacepy.omni"><code class="xref py py-obj docutils literal notranslate"><span class="pre">omni</span></code></a></p></td>
+<td><p>Tools to read and process omni data (Qin-Denton, etc.)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="poppy.html#module-spacepy.poppy" title="spacepy.poppy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">poppy</span></code></a></p></td>
+<td><p>PoPPy -- Point Processes in Python.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pybats.html#module-spacepy.pybats" title="spacepy.pybats"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pybats</span></code></a></p></td>
+<td><p>PyBats!  An open source Python-based interface for reading, manipulating, and visualizing BATS-R-US and SWMF output.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pycdf.html#module-spacepy.pycdf" title="spacepy.pycdf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pycdf</span></code></a></p></td>
+<td><p>This package provides a Python interface to the Common Data Format (CDF) library used for many NASA missions, available at <a class="reference external" href="http://cdf.gsfc.nasa.gov/">http://cdf.gsfc.nasa.gov/</a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="radbelt.html#module-spacepy.radbelt" title="spacepy.radbelt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">radbelt</span></code></a></p></td>
+<td><p>Functions supporting radiation belt diffusion codes</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="seapy.html#module-spacepy.seapy" title="spacepy.seapy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">seapy</span></code></a></p></td>
+<td><p>SeaPy -- Superposed Epoch in Python.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="time.html#module-spacepy.time" title="spacepy.time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time</span></code></a></p></td>
+<td><p>Time conversion, manipulation and implementation of Ticktock class</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="toolbox.html#module-spacepy.toolbox" title="spacepy.toolbox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">toolbox</span></code></a></p></td>
+<td><p>Toolbox of various functions and generic utilities.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="ae9ap9.html#module-spacepy.ae9ap9" title="spacepy.ae9ap9"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ae9ap9</span></code></a></p></td>
+<td><p>Module for reading and dealing with AE9AP9 data files.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Functions</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.deprecated" title="spacepy.deprecated"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deprecated</span></code></a>(version, message[, docstring])</p></td>
+<td><p>Decorator to deprecate a function/method</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.help" title="spacepy.help"><code class="xref py py-obj docutils literal notranslate"><span class="pre">help</span></code></a>()</p></td>
+<td><p>Launches web browser with SpacePy documentation</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.deprecated">
+<span class="sig-prename descclassname"><span class="pre">spacepy.</span></span><span class="sig-name descname"><span class="pre">deprecated</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">docstring</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spacepy.html#deprecated"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.deprecated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator to deprecate a function/method</p>
+<p>Modifies a function so that calls to it raise
+<code class="docutils literal notranslate"><span class="pre">DeprecationWarning</span></code> and the docstring has a deprecation
+note added in accordance with <a class="reference external" href="https://numpydoc.readthedocs.io/en/latest/format.html#sections">numpydoc format</a></p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>version</strong><span class="classifier">str</span></dt><dd><p>What is the first version where this was deprecated?</p>
+</dd>
+<dt><strong>message</strong><span class="classifier">str</span></dt><dd><p>Message to include in the deprecation warning and in the
+docstring.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Other Parameters</dt>
+<dd class="field-even"><dl>
+<dt><strong>docstring</strong><span class="classifier">str</span></dt><dd><div class="versionadded">
+<p><span class="versionmodified added">New in version 0.2.2.</span></p>
+</div>
+<p>If specified, <code class="docutils literal notranslate"><span class="pre">docstring</span></code> will be added to the modified function’s
+docstring instead of <code class="docutils literal notranslate"><span class="pre">message</span></code> (which will only be used in the
+deprecation warning.) It can be a multi-line string (separated with
+<code class="docutils literal notranslate"><span class="pre">\n</span></code>). It will be indented to match the existing docstring.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>On Python 2, the deprecated function’s signature won’t be preserved.
+The function will work but will not have proper argument names listed
+in e.g. <code class="docutils literal notranslate"><span class="pre">help</span></code>.</p>
+<p>This warning will show as coming from SpacePy, not the deprecated
+function.</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nd">@spacepy</span><span class="o">.</span><span class="n">deprecated</span><span class="p">(</span><span class="s1">&#39;0.2.1&#39;</span><span class="p">,</span> <span class="s1">&#39;Use a different function instead&#39;</span><span class="p">,</span>
+<span class="gp">... </span>                    <span class="n">docstring</span><span class="o">=</span><span class="s1">&#39;A different function is better</span><span class="se">\n</span><span class="s1">&#39;</span>
+<span class="gp">... </span>                              <span class="s1">&#39;because of reasons xyz&#39;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="sd">&#39;&#39;&#39;This is a test function</span>
+<span class="gp">...</span><span class="sd"></span>
+<span class="gp">... </span><span class="sd">    It may do many useful things.</span>
+<span class="gp">... </span><span class="sd">    &#39;&#39;&#39;</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">help</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+<span class="go">Help on function foo in module __main__:</span>
+<span class="go">foo(x)</span>
+<span class="go">    This is a test function</span>
+<span class="go">    .. deprecated:: 0.2.1</span>
+<span class="go">       A different function is better</span>
+<span class="go">       because of reasons xyz</span>
+<span class="go">    It may do many useful things.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">foo</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">DeprecationWarning: Use a different function instead</span>
+<span class="go">3</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.help">
+<span class="sig-prename descclassname"><span class="pre">spacepy.</span></span><span class="sig-name descname"><span class="pre">help</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/spacepy.html#help"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Launches web browser with SpacePy documentation</p>
+<p>Online help is always for the latest release of SpacePy.</p>
+</dd></dl>
+
+<p>Copyright 2010-2016 Los Alamos National Security, LLC.</p>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="ae9ap9.html" title="ae9ap9 - Handle AE9/AP9 data files"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ci.html" title="Continuous Integration"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+       <li><a href="index.html">documentation </a> &raquo;</li>
+
+        <li class="nav-item nav-item-this"><a href="">spacepy - main SpacePy module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

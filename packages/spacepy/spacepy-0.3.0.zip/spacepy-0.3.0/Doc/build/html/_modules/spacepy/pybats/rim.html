@@ -1,0 +1,731 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>spacepy.pybats.rim &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+    
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../../../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../../index.html"><img src="../../../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../../../search.html">search</a>|&nbsp;</li>
+       <li><a href="../../../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../../index.html" >Module code</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../spacepy.html" >spacepy</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../pybats.html" accesskey="U">spacepy.pybats</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.pybats.rim</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/logo.png" alt="Logo"/>
+            </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for spacepy.pybats.rim</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Classes, functions, and methods for reading, writing, and plotting output</span>
+<span class="sd">from the Ridley Ionosphere Model (RIM) and the similar legacy code, </span>
+<span class="sd">Ridley Serial.</span>
+
+<span class="sd">Copyright 2010 Los Alamos National Security, LLC.</span>
+
+<span class="sd">.. rubric:: Classes</span>
+
+<span class="sd">.. autosummary::</span>
+<span class="sd">    :toctree:</span>
+<span class="sd">    :template: clean_class.rst</span>
+
+<span class="sd">    Iono</span>
+<span class="sd">    OvalDebugFile</span>
+
+<span class="sd">.. rubric:: Functions</span>
+
+<span class="sd">.. autosummary::</span>
+<span class="sd">    :toctree:</span>
+
+<span class="sd">    get_iono_cb</span>
+<span class="sd">    tex_label</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">spacepy</span> <span class="kn">import</span> <span class="n">deprecated</span>
+<span class="kn">import</span> <span class="nn">spacepy.plot.apionly</span>
+<span class="kn">from</span> <span class="nn">spacepy.plot</span> <span class="kn">import</span> <span class="n">set_target</span>
+<span class="kn">from</span> <span class="nn">spacepy.pybats</span> <span class="kn">import</span> <span class="n">PbData</span><span class="p">,</span> <span class="n">dmarray</span>
+
+<div class="viewcode-block" id="get_iono_cb"><a class="viewcode-back" href="../../../autosummary/spacepy.pybats.rim.get_iono_cb.html#spacepy.pybats.rim.get_iono_cb">[docs]</a><span class="k">def</span> <span class="nf">get_iono_cb</span><span class="p">(</span><span class="n">ct_name</span><span class="o">=</span><span class="s1">&#39;bwr&#39;</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Several custom colorbars used by RIM and AMIE have become standard when</span>
+<span class="sd">    visualizing data from these models.  These are &#39;blue_white_red&#39; and </span>
+<span class="sd">    &#39;white_red&#39;, used for data that have positive and negative values and</span>
+<span class="sd">    for data that have only positive values, respectively.  This function</span>
+<span class="sd">    builds and returns these colorbars when called with the initials of the</span>
+<span class="sd">    color table name as the only argument.</span>
+
+<span class="sd">    Other Parameters</span>
+<span class="sd">    ================</span>
+<span class="sd">    ct_name : str</span>
+<span class="sd">       Select the color table.  Can be &#39;bwr&#39; for blue-white-red or &#39;wr&#39; for</span>
+<span class="sd">       white-red.  Defaults to &#39;bwr&#39;.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    ========</span>
+<span class="sd">    &gt;&gt;&gt; bwr_map = get_iono_cb(&#39;bwr&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; wr_map  = get_iono_cb(&#39;wr&#39;)</span>
+
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="kn">from</span> <span class="nn">matplotlib.colors</span> <span class="kn">import</span> <span class="n">LinearSegmentedColormap</span> <span class="k">as</span> <span class="n">lsc</span>
+
+    <span class="k">if</span> <span class="n">ct_name</span><span class="o">==</span><span class="s1">&#39;bwr&#39;</span><span class="p">:</span>
+        <span class="n">table</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;red&#39;</span><span class="p">:</span>  <span class="p">[(</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="mf">.0</span><span class="p">),(</span><span class="mf">.34</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">),(</span><span class="mf">.5</span><span class="p">,</span><span class="mf">1.</span><span class="p">,</span><span class="mf">1.</span><span class="p">),(</span><span class="mf">1.</span><span class="p">,</span><span class="mf">1.</span><span class="p">,</span><span class="mf">1.</span><span class="p">)],</span>
+            <span class="s1">&#39;green&#39;</span><span class="p">:[(</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">),(</span><span class="mf">.35</span><span class="p">,</span><span class="mf">1.</span><span class="p">,</span><span class="mf">1.</span><span class="p">),(</span><span class="mf">.66</span><span class="p">,</span><span class="mf">1.</span><span class="p">,</span><span class="mf">1.</span><span class="p">),(</span><span class="mf">1.</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">)],</span>
+            <span class="s1">&#39;blue&#39;</span> <span class="p">:[(</span><span class="mf">0.</span><span class="p">,</span><span class="mf">1.</span><span class="p">,</span><span class="mf">1.</span><span class="p">),(</span><span class="mf">.5</span><span class="p">,</span><span class="mf">1.</span><span class="p">,</span><span class="mf">1.</span><span class="p">),(</span><span class="mf">.66</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">),(</span><span class="mf">.85</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">),(</span><span class="mf">1.</span><span class="p">,</span><span class="mf">.1</span><span class="p">,</span><span class="mf">.1</span><span class="p">)]</span>
+            <span class="p">}</span>
+        <span class="n">cmap</span> <span class="o">=</span> <span class="n">lsc</span><span class="p">(</span><span class="s1">&#39;blue_white_red&#39;</span><span class="p">,</span><span class="n">table</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">ct_name</span><span class="o">==</span><span class="s1">&#39;wr&#39;</span><span class="p">:</span>
+        <span class="n">table</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;red&#39;</span><span class="p">:</span>  <span class="p">[(</span><span class="mf">0.</span><span class="p">,</span><span class="mf">1.</span><span class="p">,</span><span class="mf">1.</span><span class="p">),(</span><span class="mf">1.</span><span class="p">,</span><span class="mf">1.</span><span class="p">,</span><span class="mf">1.</span><span class="p">)],</span>
+            <span class="s1">&#39;green&#39;</span><span class="p">:[(</span><span class="mf">0.</span><span class="p">,</span><span class="mf">1.</span><span class="p">,</span><span class="mf">1.</span><span class="p">),(</span><span class="mf">1.</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">)],</span>
+            <span class="s1">&#39;blue&#39;</span> <span class="p">:[(</span><span class="mf">0.</span><span class="p">,</span><span class="mf">1.</span><span class="p">,</span><span class="mf">1.</span><span class="p">),(</span><span class="mf">1.</span><span class="p">,</span><span class="mf">.0</span><span class="p">,</span><span class="mf">.0</span><span class="p">)]</span>
+            <span class="p">}</span>
+        <span class="n">cmap</span> <span class="o">=</span> <span class="n">lsc</span><span class="p">(</span><span class="s1">&#39;white_red&#39;</span><span class="p">,</span><span class="n">table</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">cmap</span></div>
+
+<div class="viewcode-block" id="tex_label"><a class="viewcode-back" href="../../../autosummary/spacepy.pybats.rim.tex_label.html#spacepy.pybats.rim.tex_label">[docs]</a><span class="k">def</span> <span class="nf">tex_label</span><span class="p">(</span><span class="n">varname</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Many variable names used in the Ridley Ionosphere Model look much better</span>
+<span class="sd">    in LaTeX format with their proper Greek letters.  This function takes</span>
+<span class="sd">    a variable name, and if it is recognized, returns a properly formatted</span>
+<span class="sd">    string that uses MatPlotLib&#39;s MathText functionality to display the </span>
+<span class="sd">    proper characters.  If it is not recognized, the varname is returned.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ==========</span>
+<span class="sd">    varname : string</span>
+<span class="sd">       The variable to convert to a LaTeX label.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    ========</span>
+<span class="sd">    &gt;&gt;&gt;tex_label(&#39;n_phi&#39;)</span>
+<span class="sd">    &#39;\\Phi_{Ionosphere}&#39;</span>
+<span class="sd">    &gt;&gt;&gt;tex_label(&#39;Not Recognized&#39;)</span>
+<span class="sd">    &#39;Not Recognized&#39;</span>
+
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="k">if</span> <span class="n">varname</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;n_&#39;</span> <span class="ow">or</span> <span class="n">varname</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;s_&#39;</span><span class="p">:</span>
+        <span class="n">varname</span><span class="o">=</span><span class="n">varname</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+    
+    <span class="n">known</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;phi&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;$\Phi_</span><span class="si">{Ionosphere}</span><span class="s1">$&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;sigmah&#39;</span><span class="p">:</span><span class="sa">r</span><span class="s1">&#39;$\sigma_</span><span class="si">{Hall}</span><span class="s1">$&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;sigmap&#39;</span><span class="p">:</span><span class="sa">r</span><span class="s1">&#39;$\sigma_</span><span class="si">{Peder}</span><span class="s1">$&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;jr&#39;</span><span class="p">:</span><span class="sa">r</span><span class="s1">&#39;$J_</span><span class="si">{radial}</span><span class="s1">$&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;mA/m^2&#39;</span><span class="p">:</span><span class="sa">r</span><span class="s1">&#39;$\mu A/m^</span><span class="si">{2}</span><span class="s1">$&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;W/m2&#39;</span><span class="p">:</span><span class="sa">r</span><span class="s1">&#39;$W/m^2$&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;eV&#39;</span><span class="p">:</span><span class="s1">&#39;$eV$&#39;</span>
+        <span class="p">}</span>
+
+
+    <span class="k">if</span> <span class="n">varname</span> <span class="ow">in</span> <span class="n">known</span><span class="p">:</span>
+        <span class="n">label</span> <span class="o">=</span> <span class="n">known</span><span class="p">[</span><span class="n">varname</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">label</span> <span class="o">=</span> <span class="n">varname</span>
+
+    <span class="k">return</span> <span class="n">label</span></div>
+
+<div class="viewcode-block" id="Iono"><a class="viewcode-back" href="../../../autosummary/spacepy.pybats.rim.Iono.html#spacepy.pybats.rim.Iono">[docs]</a><span class="k">class</span> <span class="nc">Iono</span><span class="p">(</span><span class="n">PbData</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    A class for handling 2D output from the Ridley Ionosphere Model.</span>
+<span class="sd">    Instantiate an object as follows:</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; iono = rim.Iono(&#39;filename.idl&#39;)</span>
+
+<span class="sd">    ...where filename.idl is the name of a RIM 2D output file.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">infile</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Iono</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">infile</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">readascii</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">readascii</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Read an ascii &quot;.idl&quot; output file and load the contents into the object.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+
+        <span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">version_info</span>
+        <span class="kn">import</span> <span class="nn">re</span>
+        <span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+        <span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">zeros</span><span class="p">,</span> <span class="n">reshape</span>
+        <span class="kn">import</span> <span class="nn">gzip</span>
+
+        <span class="c1"># slurp entire file.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span><span class="o">==</span><span class="s1">&#39;.gz&#39;</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">infile</span> <span class="o">=</span> <span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">],</span><span class="s1">&#39;rt&#39;</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span> <span class="c1">#Python2.7 (Windows) compatibility</span>
+                <span class="n">infile</span> <span class="o">=</span> <span class="n">gzip</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">infile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">],</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+        <span class="n">raw</span> <span class="o">=</span> <span class="n">infile</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+        <span class="n">infile</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+        <span class="c1"># Parse header</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="n">raw</span><span class="p">[</span><span class="n">raw</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;TITLE</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">title</span><span class="p">[</span><span class="n">title</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">title</span><span class="o">.</span><span class="n">rindex</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">)]</span>
+
+        <span class="n">i</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;NUMERICAL VALUES</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;nvars&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;ntheta&#39;</span><span class="p">]</span><span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;nphi&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="c1"># Convenience:</span>
+        <span class="n">nphi</span><span class="p">,</span> <span class="n">ntheta</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;nphi&#39;</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;ntheta&#39;</span><span class="p">]</span>
+
+        <span class="n">i</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;TIME</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span>
+            <span class="nb">int</span><span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">]),</span>      <span class="c1">#year</span>
+            <span class="nb">int</span><span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">]),</span>      <span class="c1">#month</span>
+            <span class="nb">int</span><span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">]),</span>      <span class="c1">#day</span>
+            <span class="nb">int</span><span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">]),</span>      <span class="c1">#hour</span>
+            <span class="nb">int</span><span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">]),</span>      <span class="c1">#min</span>
+            <span class="nb">int</span><span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">6</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">]),</span>      <span class="c1">#sec</span>
+            <span class="nb">int</span><span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">7</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span><span class="o">*</span><span class="mi">1000</span>  <span class="c1">#microsec</span>
+            <span class="p">)</span>
+
+        <span class="n">i</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;SIMULATION</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;iter&#39;</span><span class="p">]</span>    <span class="o">=</span>   <span class="nb">int</span><span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;simtime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="n">i</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;DIPOLE TILT</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tilt</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tilt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tilt</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="n">i</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;VARIABLE LIST</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">namevar</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">units</span>   <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;nvars&#39;</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\s*\d+\s+([\w\s\W]+)\[([\w\s\W]+)\]&#39;</span><span class="p">,</span><span class="n">raw</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+            <span class="k">if</span> <span class="n">match</span><span class="p">:</span>
+                <span class="n">name</span> <span class="o">=</span> <span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+                <span class="n">namevar</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+                <span class="n">units</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Could not parse </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">raw</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+                
+            
+        <span class="c1">### Read all data ###</span>
+
+        <span class="c1"># Create data arrays</span>
+        <span class="n">nPts</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;ntheta&#39;</span><span class="p">]</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;nphi&#39;</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">namevar</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;n_&#39;</span><span class="o">+</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">dmarray</span><span class="p">(</span><span class="n">zeros</span><span class="p">(</span><span class="n">nPts</span><span class="p">),</span> <span class="p">{</span><span class="s1">&#39;units&#39;</span><span class="p">:</span><span class="n">units</span><span class="p">[</span><span class="n">key</span><span class="p">]})</span>
+            <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;s_&#39;</span><span class="o">+</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">dmarray</span><span class="p">(</span><span class="n">zeros</span><span class="p">(</span><span class="n">nPts</span><span class="p">),</span> <span class="p">{</span><span class="s1">&#39;units&#39;</span><span class="p">:</span><span class="n">units</span><span class="p">[</span><span class="n">key</span><span class="p">]})</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;BEGIN NORTHERN HEMISPHERE</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span>
+
+        <span class="c1"># Some compilers insert line breaks automatically when fortran format</span>
+        <span class="c1"># string is not adequately specified.  Let&#39;s see if that&#39;s the</span>
+        <span class="c1"># case here: how many lines does it take to cover all variables?</span>
+        <span class="n">nvars</span><span class="p">,</span> <span class="n">nvarline</span><span class="p">,</span> <span class="n">nwrap</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">namevar</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="n">nvarline</span><span class="o">&lt;</span><span class="n">nvars</span><span class="p">:</span>
+            <span class="n">nvarline</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">raw</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">nwrap</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+            <span class="n">nwrap</span> <span class="o">+=</span> <span class="mi">1</span>
+        
+        <span class="c1"># Fill data arrays:</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nPts</span><span class="p">):</span>
+            <span class="c1"># Build list of variables; accounting for line-wrapping:</span>
+            <span class="n">parts</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">iLine</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="n">j</span><span class="o">*</span><span class="n">nwrap</span>
+            <span class="k">for</span> <span class="n">iwrap</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nwrap</span><span class="p">):</span>
+                <span class="n">parts</span> <span class="o">+=</span> <span class="n">raw</span><span class="p">[</span><span class="n">iLine</span><span class="o">+</span><span class="n">iwrap</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;nvars&#39;</span><span class="p">]):</span>
+                <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;n_&#39;</span><span class="o">+</span><span class="n">namevar</span><span class="p">[</span><span class="n">k</span><span class="p">]][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">raw</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;BEGIN SOUTHERN HEMISPHERE</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nPts</span><span class="p">):</span>
+            <span class="n">parts</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">iLine</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="n">j</span><span class="o">*</span><span class="n">nwrap</span>
+            <span class="k">for</span> <span class="n">iwrap</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nwrap</span><span class="p">):</span>
+                <span class="n">parts</span> <span class="o">+=</span> <span class="n">raw</span><span class="p">[</span><span class="n">iLine</span><span class="o">+</span><span class="n">iwrap</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;nvars&#39;</span><span class="p">]):</span>
+                <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;s_&#39;</span><span class="o">+</span><span class="n">namevar</span><span class="p">[</span><span class="n">k</span><span class="p">]][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+
+        <span class="c1"># Create 2-D arrays.</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">namevar</span><span class="p">:</span>
+            <span class="n">nkey</span><span class="p">,</span> <span class="n">skey</span> <span class="o">=</span> <span class="s1">&#39;n_&#39;</span><span class="o">+</span><span class="n">key</span><span class="p">,</span> <span class="s1">&#39;s_&#39;</span><span class="o">+</span><span class="n">key</span>
+            <span class="bp">self</span><span class="p">[</span><span class="n">nkey</span><span class="p">]</span> <span class="o">=</span> <span class="n">reshape</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="n">nkey</span><span class="p">],</span> <span class="p">(</span><span class="n">ntheta</span><span class="p">,</span> <span class="n">nphi</span><span class="p">),</span> <span class="s1">&#39;F&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="p">[</span><span class="n">skey</span><span class="p">]</span> <span class="o">=</span> <span class="n">reshape</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="n">skey</span><span class="p">],</span> <span class="p">(</span><span class="n">ntheta</span><span class="p">,</span> <span class="n">nphi</span><span class="p">),</span> <span class="s1">&#39;F&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Some extra grid info:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dlon</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;n_psi&#39;</span>  <span class="p">][</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span><span class="o">-</span><span class="bp">self</span><span class="p">[</span><span class="s1">&#39;n_psi&#39;</span>  <span class="p">][</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dlat</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;n_theta&#39;</span><span class="p">][</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="bp">self</span><span class="p">[</span><span class="s1">&#39;n_theta&#39;</span><span class="p">][</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+        
+    <span class="k">def</span> <span class="nf">calc_I</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Integrate radial current to get the following values:</span>
+<span class="sd">        I:     The total radial current over one hemisphere.</span>
+<span class="sd">        Iup:   The total upward current over one hemisphere.</span>
+<span class="sd">        Idown: The total downward current over one hemisphere.</span>
+
+<span class="sd">        Values are stored in the object with the prefix &#39;n_&#39; or &#39;s_&#39;</span>
+<span class="sd">        to indicate the hemisphere and may be accessed via self[&#39;n_I&#39;], etc.</span>
+
+<span class="sd">        Values are stored in units of mega Amps.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ==========</span>
+
+
+<span class="sd">        Returns</span>
+<span class="sd">        =======</span>
+<span class="sd">        True</span>
+
+
+<span class="sd">        Examples</span>
+<span class="sd">        ========</span>
+<span class="sd">        &gt;&gt;&gt; a = rim.Iono(&#39;spacepy/tests/data/pybats_test/it000321_104510_000.idl.gz&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; a.calc_I()</span>
+<span class="sd">        &gt;&gt;&gt; print(a[&#39;n_Iup&#39;])</span>
+<span class="sd">        </span>
+<span class="sd">        &#39;&#39;&#39;</span>
+
+        <span class="c1"># Calculate some physically meaningful values/units</span>
+        <span class="n">units</span> <span class="o">=</span> <span class="mf">1E-6</span><span class="o">*</span><span class="mf">1E-6</span>  <span class="c1"># micro amps to amps, amps to MegaAmps</span>
+        <span class="n">R</span> <span class="o">=</span> <span class="p">(</span><span class="mf">6371.0</span><span class="o">+</span><span class="mf">110.0</span><span class="p">)</span><span class="o">*</span><span class="mf">1000.0</span> <span class="c1"># Radius of Earth + iono altitude</span>
+        <span class="n">dTheta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">dlat</span><span class="o">/</span><span class="mf">180.</span>
+        <span class="n">dPhi</span>   <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">dlon</span><span class="o">/</span><span class="mf">180.</span>
+        
+        <span class="c1"># -----NORTHERN HEMISPHERE-----</span>
+        <span class="c1"># Get relevant values:</span>
+        <span class="n">colat</span>     <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;n_theta&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.</span>
+        <span class="n">integrand</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;n_jr&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">colat</span><span class="p">)</span><span class="o">*</span><span class="n">dTheta</span><span class="o">*</span><span class="n">dPhi</span>
+        <span class="c1"># Get locations of &quot;up&quot; and &quot;down&quot;</span>
+        <span class="n">loc_up</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;n_jr&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">0</span>
+        <span class="n">loc_do</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;n_jr&#39;</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">0</span>
+        <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;n_I&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="n">units</span><span class="o">*</span><span class="n">R</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">integrand</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;n_Iup&#39;</span><span class="p">]</span>   <span class="o">=</span> <span class="n">units</span><span class="o">*</span><span class="n">R</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">integrand</span><span class="p">[</span><span class="n">loc_up</span><span class="p">])</span>
+        <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;n_Idown&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">units</span><span class="o">*</span><span class="n">R</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">integrand</span><span class="p">[</span><span class="n">loc_do</span><span class="p">])</span>
+
+        <span class="c1"># -----SOUTHERN HEMISPHERE-----</span>
+        <span class="c1"># Get relevant values:</span>
+        <span class="n">colat</span>     <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;s_theta&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.</span>
+        <span class="n">integrand</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;s_jr&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">colat</span><span class="p">)</span><span class="o">*</span><span class="n">dTheta</span><span class="o">*</span><span class="n">dPhi</span>
+        <span class="c1"># Get locations of &quot;up&quot; and &quot;down&quot;</span>
+        <span class="n">loc_up</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;s_jr&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">0</span>
+        <span class="n">loc_do</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;s_jr&#39;</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">0</span>
+        <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;s_I&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="n">units</span><span class="o">*</span><span class="n">R</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">integrand</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;s_Iup&#39;</span><span class="p">]</span>   <span class="o">=</span> <span class="n">units</span><span class="o">*</span><span class="n">R</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">integrand</span><span class="p">[</span><span class="n">loc_up</span><span class="p">])</span>
+        <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;s_Idown&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">units</span><span class="o">*</span><span class="n">R</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">integrand</span><span class="p">[</span><span class="n">loc_do</span><span class="p">])</span>
+        
+    <span class="k">def</span> <span class="nf">add_cont</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">var</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">24</span><span class="p">,</span> <span class="n">maxz</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">lines</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+                 <span class="n">cmap</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">add_cbar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="mi">111</span><span class="p">,</span>
+                 <span class="n">xticksize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">yticksize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">max_colat</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Create a polar contour of variable *var*.  Plot will be either drawn</span>
+<span class="sd">        on a new matplotlib figure and axes, or you can specify a plot target</span>
+<span class="sd">        using the *target* kwarg.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ==========</span>
+<span class="sd">        var : str</span>
+<span class="sd">           The name of the variable to plot.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        =======</span>
+<span class="sd">        fig : matplotlib figure object</span>
+<span class="sd">        ax  : matplotlib axes object</span>
+<span class="sd">        cnt : matplotlib contour object</span>
+<span class="sd">        cb  : matplotlib colorbar object</span>
+
+<span class="sd">        Other Parameters</span>
+<span class="sd">        ================</span>
+<span class="sd">        target : Figure or Axes</span>
+<span class="sd">            If None (default), a new figure is generated from scratch.</span>
+<span class="sd">            If a matplotlib Figure object, a new axis is created</span>
+<span class="sd">            to fill that figure.</span>
+<span class="sd">            If a matplotlib Axes object, the plot is placed</span>
+<span class="sd">            into that axis.</span>
+<span class="sd">        loc : int</span>
+<span class="sd">            Use to specify the subplot placement of the axis</span>
+<span class="sd">            (e.g. loc=212, etc.) Used if target is a Figure or None.</span>
+<span class="sd">            Default 111 (single plot).</span>
+<span class="sd">        n : int</span>
+<span class="sd">            Set number of levels.  Should be a multiple of 3 for best match</span>
+<span class="sd">            between filled and traced contours.  Default is 21.</span>
+<span class="sd">        lines : bool</span>
+<span class="sd">            Add unfilled black solid/dashed contours to plot for additional</span>
+<span class="sd">            contrast.  Default is **True**.</span>
+<span class="sd">        maxz : real</span>
+<span class="sd">            Set the max/min value for the color bar.  Default is set by data.</span>
+<span class="sd">        max_colat : real</span>
+<span class="sd">            Set the co-latitude range of the plot, in degrees.  Defaults to 40.</span>
+<span class="sd">        cmap : str</span>
+<span class="sd">            Set the colormap.  Default is to autoselect using classic IE maps.</span>
+<span class="sd">            Can be &#39;bwr&#39;, &#39;wr&#39;, or any name of a matplotlib colar map.</span>
+<span class="sd">        add_cbar : bool</span>
+<span class="sd">            Add colorbar to plot.  Default is **False** which will</span>
+<span class="sd">            not add one to the plot.</span>
+<span class="sd">        label : str or None</span>
+<span class="sd">            Label to place at top of plot.  Defaults to variable name.</span>
+<span class="sd">        xticksize : int</span>
+<span class="sd">            Size of longitude markers in text points.  Defaults to 12.</span>
+<span class="sd">        yticksize : int</span>
+<span class="sd">            Size of latitude markers in text points.  Defaults to 12.</span>
+
+<span class="sd">        Extra keywords are passed to the contourf routine.</span>
+
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="c1"># Get only what we need to decrease runtime.</span>
+        <span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span>
+        <span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">linspace</span>
+        <span class="kn">from</span> <span class="nn">matplotlib.colors</span> <span class="kn">import</span> <span class="n">Normalize</span>
+        <span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="kn">import</span> <span class="n">MaxNLocator</span><span class="p">,</span> <span class="n">MultipleLocator</span>
+        <span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">clabel</span><span class="p">,</span> <span class="n">colorbar</span>
+
+        <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">set_target</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">polar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">loc</span><span class="p">)</span>
+        
+        <span class="n">hemi</span> <span class="o">=</span> <span class="n">var</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+
+        <span class="c1"># user defined variables may not have hemisphere marking.</span>
+        <span class="c1"># Assume nothern hemi in those cases.</span>
+        <span class="k">if</span> <span class="n">hemi</span><span class="o">!=</span><span class="s1">&#39;n_&#39;</span> <span class="ow">and</span> <span class="n">hemi</span><span class="o">!=</span><span class="s1">&#39;s_&#39;</span><span class="p">:</span> <span class="n">hemi</span> <span class="o">=</span> <span class="s1">&#39;n_&#39;</span>
+
+        <span class="c1"># Set levels and ticks:</span>
+        <span class="k">if</span> <span class="n">label</span><span class="o">==</span><span class="kc">None</span><span class="p">:</span>
+            <span class="n">label</span><span class="o">=</span><span class="n">tex_label</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
+        <span class="n">lt_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;06&#39;</span><span class="p">,</span>    <span class="n">label</span><span class="p">,</span> <span class="s1">&#39;18&#39;</span><span class="p">,</span>   <span class="s1">&#39;00&#39;</span><span class="p">]</span>
+        <span class="n">xticks</span>    <span class="o">=</span> <span class="p">[</span>   <span class="mi">0</span><span class="p">,</span>   <span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span>   <span class="n">pi</span><span class="p">,</span> <span class="mi">3</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">]</span>
+        <span class="n">lct</span> <span class="o">=</span> <span class="n">MultipleLocator</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+        <span class="n">minz</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="n">var</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">minz</span> <span class="o">&lt;</span> <span class="mf">0.0</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">maxz</span><span class="p">:</span>
+                <span class="n">maxz</span> <span class="o">=</span> <span class="nb">max</span><span class="p">([</span><span class="nb">abs</span><span class="p">(</span><span class="n">minz</span><span class="p">),</span><span class="bp">self</span><span class="p">[</span><span class="n">var</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()])</span>
+            <span class="n">crange</span> <span class="o">=</span> <span class="n">Normalize</span><span class="p">(</span><span class="n">vmin</span><span class="o">=-</span><span class="mf">1.</span><span class="o">*</span><span class="n">maxz</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="n">maxz</span><span class="p">)</span>
+            <span class="n">levs</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">1.</span><span class="o">*</span><span class="n">maxz</span><span class="p">,</span> <span class="n">maxz</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">maxz</span><span class="p">:</span>
+                <span class="n">maxz</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="n">var</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+            <span class="n">crange</span> <span class="o">=</span> <span class="n">Normalize</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="n">maxz</span><span class="p">)</span>
+            <span class="n">levs</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="n">maxz</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+
+        <span class="c1"># Get color map if not given:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">cmap</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="p">[</span><span class="n">var</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="mf">0.0</span><span class="p">:</span>
+                <span class="n">cmap</span><span class="o">=</span><span class="n">get_iono_cb</span><span class="p">(</span><span class="s1">&#39;wr&#39;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">cmap</span><span class="o">=</span><span class="n">get_iono_cb</span><span class="p">(</span><span class="s1">&#39;bwr&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Set the latitude based on hemisphere:</span>
+        <span class="n">theta</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="n">hemi</span><span class="o">+</span><span class="s1">&#39;theta&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">&#39;s_&#39;</span> <span class="ow">in</span> <span class="n">hemi</span><span class="p">:</span> <span class="n">theta</span> <span class="o">=</span> <span class="mi">180</span><span class="o">-</span><span class="bp">self</span><span class="p">[</span><span class="n">hemi</span><span class="o">+</span><span class="s1">&#39;theta&#39;</span><span class="p">]</span>
+
+        <span class="c1"># Create contour:</span>
+        <span class="n">cnt1</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="n">hemi</span><span class="o">+</span><span class="s1">&#39;psi&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.0</span><span class="o">+</span><span class="n">pi</span><span class="o">/</span><span class="mf">2.</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span>
+                           <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="n">var</span><span class="p">]),</span> <span class="n">levs</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">crange</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">,</span>
+                           <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="c1"># Set xtick label size, increase font of top label.</span>
+        <span class="n">labels</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_xticklabels</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">labels</span><span class="p">:</span> <span class="n">l</span><span class="o">.</span><span class="n">set_size</span><span class="p">(</span><span class="n">xticksize</span><span class="p">)</span>
+        <span class="n">labels</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_size</span><span class="p">(</span><span class="n">xticksize</span><span class="o">*</span><span class="mf">1.25</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">lines</span><span class="p">:</span>
+            <span class="n">nk</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="mf">3.0</span><span class="p">))</span>
+            <span class="n">cnt2</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="n">hemi</span><span class="o">+</span><span class="s1">&#39;psi&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.0</span><span class="o">+</span><span class="n">pi</span><span class="o">/</span><span class="mf">2.</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span>
+                              <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="n">var</span><span class="p">]),</span> <span class="n">nk</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+            <span class="c1">#clabel(cnt2,fmt=&#39;%3i&#39;,fontsize=10)</span>
+
+        <span class="k">if</span> <span class="n">add_cbar</span><span class="p">:</span>
+            <span class="n">cbarticks</span> <span class="o">=</span> <span class="n">MaxNLocator</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+            <span class="n">cbar</span> <span class="o">=</span> <span class="n">colorbar</span><span class="p">(</span><span class="n">cnt1</span><span class="p">,</span> <span class="n">ticks</span><span class="o">=</span><span class="n">cbarticks</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mf">0.08</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+            <span class="n">cbar</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="n">tex_label</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="n">var</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">cbar</span><span class="o">=</span><span class="kc">False</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">xticks</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">lt_labels</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">lct</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="n">max_colat</span><span class="p">])</span>
+
+        <span class="c1"># Use text function to manually add pretty ticks.</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="c1"># old ticks off.</span>
+        <span class="n">opts</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span><span class="n">yticksize</span><span class="p">,</span> <span class="s1">&#39;rotation&#39;</span><span class="p">:</span><span class="o">-</span><span class="mi">45</span><span class="p">,</span> <span class="s1">&#39;ha&#39;</span><span class="p">:</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="s1">&#39;va&#39;</span><span class="p">:</span><span class="s1">&#39;center&#39;</span><span class="p">}</span>
+        <span class="k">for</span> <span class="n">theta</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">80.</span><span class="p">,</span><span class="mf">70.</span><span class="p">,</span><span class="mf">60.</span><span class="p">]:</span>
+            <span class="n">txt</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{:02.0f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">+</span><span class="sa">r</span><span class="s1">&#39;$^{\circ}$&#39;</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">pi</span><span class="o">/</span><span class="mf">4.</span><span class="p">,</span> <span class="mf">90.</span><span class="o">-</span><span class="n">theta</span><span class="p">,</span> <span class="n">txt</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="s1">&#39;heavy&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">opts</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">pi</span><span class="o">/</span><span class="mf">4.</span><span class="p">,</span> <span class="mf">90.</span><span class="o">-</span><span class="n">theta</span><span class="p">,</span> <span class="n">txt</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="s1">&#39;light&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">opts</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">cnt1</span><span class="p">,</span> <span class="n">cbar</span></div>
+
+<div class="viewcode-block" id="OvalDebugFile"><a class="viewcode-back" href="../../../autosummary/spacepy.pybats.rim.OvalDebugFile.html#spacepy.pybats.rim.OvalDebugFile">[docs]</a><span class="k">class</span> <span class="nc">OvalDebugFile</span><span class="p">(</span><span class="n">PbData</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    The auroral oval calculations in RIM may spit out special debug files that</span>
+<span class="sd">    are extremely useful.  This class handles reading and plotting the data</span>
+<span class="sd">    contained within those files.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">infile</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">OvalDebugFile</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">infile</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_readascii</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_readascii</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Loads data &amp; populates object upon instantiation.</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+
+        <span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+        
+        <span class="c1"># Slurp in lines:</span>
+        <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">])</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+        <span class="c1"># Parse header to get longitude in radians:</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">lines</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;=&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span><span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">180.</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">lines</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="c1"># Some helper vars:</span>
+        <span class="n">nLons</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span>
+        <span class="n">nLine</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+    
+        <span class="c1"># Create container arrays:</span>
+        <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">nLine</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;oval&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span> <span class="p">(</span><span class="n">nLine</span><span class="p">,</span> <span class="n">nLons</span><span class="p">)</span> <span class="p">)</span>
+        
+        <span class="c1"># Parse rest of file:</span>
+        <span class="k">for</span> <span class="n">j</span><span class="p">,</span><span class="n">l</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lines</span><span class="p">):</span>
+            <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>   <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">l</span><span class="p">[:</span><span class="mi">19</span><span class="p">],</span> <span class="s1">&#39;%Y %m </span><span class="si">%d</span><span class="s1"> %H %M %S&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;oval&#39;</span><span class="p">][</span><span class="n">j</span><span class="p">,:]</span> <span class="o">=</span> <span class="n">l</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">7</span><span class="p">:]</span>
+
+
+    <span class="k">def</span> <span class="nf">get_oval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">interp</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Given a datetime, *time*, interpolate the oval position to that time.</span>
+<span class="sd">        If *time* is outside the range of self[&#39;time&#39;], an exception will be</span>
+<span class="sd">        raised.  Linear interpolation is used unless kwarg *interp* is False.</span>
+<span class="sd">        In that case, the value of the oval nearest to *time* will be used</span>
+<span class="sd">        without interpolation.</span>
+
+<span class="sd">         Parameters</span>
+<span class="sd">        ==========</span>
+<span class="sd">        time : datetime.datetime</span>
+<span class="sd">           The time at which the oval is requested.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        =======</span>
+<span class="sd">        oval : numpy.ndarray</span>
+<span class="sd">           Oval location at time *time* in radians.  Zero corresponds to local</span>
+<span class="sd">           noon.</span>
+
+<span class="sd">        Other Parameters</span>
+<span class="sd">        ================</span>
+<span class="sd">        interp : bool</span>
+<span class="sd">            Set interpolation behavior.  If **True**, linear interpolation is </span>
+<span class="sd">            used.  If **False**, the oval location nearest to *time* is used</span>
+<span class="sd">            without interpolation.</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        ========</span>
+<span class="sd">        &gt;&gt;&gt; </span>
+<span class="sd">        &#39;&#39;&#39;</span>
+
+        <span class="kn">from</span> <span class="nn">matplotlib.dates</span> <span class="kn">import</span> <span class="n">date2num</span>
+
+        <span class="c1"># If *time* is outside the bounds of self[&#39;time&#39;], raise exception</span>
+        <span class="c1"># to avoid extrapolation.</span>
+        <span class="k">if</span> <span class="n">time</span><span class="o">&lt;</span><span class="bp">self</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="ow">or</span> <span class="n">time</span><span class="o">&gt;</span><span class="bp">self</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Given time outside object range &#39;</span> <span class="o">+</span>
+                             <span class="s1">&#39;and requires extrapolation&#39;</span><span class="p">)</span>
+        
+        <span class="c1"># Turn datetimes into numbers.</span>
+        <span class="n">time</span>     <span class="o">=</span> <span class="n">date2num</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
+        <span class="n">ovaltime</span> <span class="o">=</span> <span class="n">date2num</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">])</span>
+        
+        <span class="c1"># Start by obtaining the indices of the time array that bound</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+        <span class="n">i1</span> <span class="o">=</span> <span class="n">index</span><span class="p">[</span><span class="n">time</span><span class="o">&gt;=</span><span class="n">ovaltime</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># Value before time</span>
+        <span class="n">i2</span> <span class="o">=</span> <span class="n">index</span><span class="p">[</span><span class="n">time</span><span class="o">&lt;=</span><span class="n">ovaltime</span><span class="p">][</span> <span class="mi">0</span><span class="p">]</span> <span class="c1"># Value after time</span>
+
+        <span class="c1"># Check for exact matches:</span>
+        <span class="n">dT1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">ovaltime</span><span class="p">[</span><span class="n">i1</span><span class="p">]</span><span class="o">-</span><span class="n">time</span><span class="p">)</span>
+        <span class="n">dT2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">ovaltime</span><span class="p">[</span><span class="n">i2</span><span class="p">]</span><span class="o">-</span><span class="n">time</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">dT1</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;oval&#39;</span><span class="p">][</span><span class="n">i1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">dT2</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span> <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;oval&#39;</span><span class="p">][</span><span class="n">i2</span><span class="p">]</span>
+        
+        <span class="c1"># If no interpolation, just send back nearest neighbor:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">interp</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">dT1</span><span class="o">&lt;</span><span class="n">dT2</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;oval&#39;</span><span class="p">][</span><span class="n">i1</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;oval&#39;</span><span class="p">][</span><span class="n">i2</span><span class="p">]</span>
+
+        <span class="c1"># If interpolation, get slope and y-intercept vectors:</span>
+        <span class="n">dT</span> <span class="o">=</span> <span class="n">ovaltime</span><span class="p">[</span><span class="n">i2</span><span class="p">]</span><span class="o">-</span><span class="n">ovaltime</span><span class="p">[</span><span class="n">i1</span><span class="p">]</span>
+        <span class="n">m</span>  <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="s1">&#39;oval&#39;</span><span class="p">][</span><span class="n">i2</span><span class="p">]</span><span class="o">-</span><span class="bp">self</span><span class="p">[</span><span class="s1">&#39;oval&#39;</span><span class="p">][</span><span class="n">i1</span><span class="p">])</span><span class="o">/</span><span class="n">dT</span>
+        <span class="n">b</span>  <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;oval&#39;</span><span class="p">][</span><span class="n">i2</span><span class="p">]</span> <span class="o">-</span> <span class="n">m</span><span class="o">*</span><span class="n">ovaltime</span><span class="p">[</span><span class="n">i2</span><span class="p">]</span>
+        
+        <span class="c1"># Interpolate and return:</span>
+        <span class="k">return</span> <span class="n">m</span><span class="o">*</span><span class="n">time</span> <span class="o">+</span> <span class="n">b</span>
+        
+            
+    <span class="k">def</span> <span class="nf">add_oval_line</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Adds the location of the auroral oval at time *time* as a line plot on to</span>
+<span class="sd">        *target*, which must be a Matplotlib figure/axes.  </span>
+
+<span class="sd">        If *target* not given, a new axes object is created.  If *target* is</span>
+<span class="sd">        not an existing axes object, a new axes object is created and customized</span>
+<span class="sd">        to be an ionosphere polar plot.</span>
+
+<span class="sd">        Extra arguments/kwargs are sent to :meth:`matplotlib.pyplot.plot`.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ==========</span>
+<span class="sd">        time : integer or datetime</span>
+<span class="sd">           Sets the time at which to plot the line.  If an integer is used,</span>
+<span class="sd">           the integer is used to index the internal array naively.  If a</span>
+<span class="sd">           datetime object is given and is within the bounds of self[&#39;time&#39;],</span>
+<span class="sd">           the oval location will be interpolated to *time*.  Control of the</span>
+<span class="sd">           interpolation happens via the *interp* keyword.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        =======</span>
+<span class="sd">        fig  : matplotlib figure object</span>
+<span class="sd">        ax   : matplotlib axes object</span>
+<span class="sd">        line : matplotlib line object</span>
+
+<span class="sd">        Other Parameters</span>
+<span class="sd">        ================</span>
+<span class="sd">        target : Figure or Axes</span>
+<span class="sd">            If None (default), a new figure is generated from scratch.</span>
+<span class="sd">            If a matplotlib Figure object, a new axis is created</span>
+<span class="sd">            to fill that figure.</span>
+<span class="sd">            If a matplotlib Axes object, the plot is placed</span>
+<span class="sd">            into that axis.</span>
+<span class="sd">        loc : int</span>
+<span class="sd">            Use to specify the subplot placement of the axis</span>
+<span class="sd">            (e.g. loc=212, etc.) Used if target is a Figure or None.</span>
+<span class="sd">            Default 111 (single plot).</span>
+<span class="sd">        interp : bool</span>
+<span class="sd">            Control the behavior of time interpolation when the *time* argument</span>
+<span class="sd">            is given as a datetime object.  Defaults to **True**, meaning that</span>
+<span class="sd">            oval location is interpolated in time.  </span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        ========</span>
+<span class="sd">        &gt;&gt;&gt; </span>
+<span class="sd">        &#39;&#39;&#39;</span>
+
+        <span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+
+        <span class="c1"># Handle kwargs not being handed to plot:</span>
+        <span class="n">target</span><span class="o">=</span><span class="kc">None</span><span class="p">;</span> <span class="n">loc</span><span class="o">=</span><span class="mi">111</span><span class="p">;</span> <span class="n">interp</span><span class="o">=</span><span class="kc">True</span>
+        <span class="k">if</span> <span class="s1">&#39;target&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span> <span class="n">target</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;target&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s1">&#39;interp&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span> <span class="n">interp</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;interp&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s1">&#39;loc&#39;</span>    <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span> <span class="n">loc</span><span class="o">=</span><span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;loc&#39;</span><span class="p">)</span>
+            
+        <span class="c1"># Set plot targets:</span>
+        <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">set_target</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">polar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">loc</span><span class="p">)</span>
+
+        <span class="c1"># Get oval interpolated in time:</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">time</span><span class="p">)</span> <span class="o">==</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">:</span>
+            <span class="n">oval</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_oval</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">interp</span><span class="o">=</span><span class="n">interp</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">time</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">:</span>
+            <span class="n">oval</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;oval&#39;</span><span class="p">][</span><span class="n">time</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;Unrecognized type for *time*:&#39;</span><span class="o">+</span><span class="nb">type</span><span class="p">(</span><span class="n">time</span><span class="p">))</span>
+
+        <span class="c1"># Plot oval:</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">2.</span><span class="p">,</span> <span class="n">oval</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">line</span></div>
+        
+</pre></div>
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../../../search.html">search</a>|&nbsp;</li>
+       <li><a href="../../../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../../index.html" >Module code</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../spacepy.html" >spacepy</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../pybats.html" >spacepy.pybats</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.pybats.rim</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

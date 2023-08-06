@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.pycdf.istp.format &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy.pycdf.istp.nanfill" href="spacepy.pycdf.istp.nanfill.html" />
+    <link rel="prev" title="spacepy.pycdf.istp.fillval" href="spacepy.pycdf.istp.fillval.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.pycdf.istp.nanfill.html" title="spacepy.pycdf.istp.nanfill"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.pycdf.istp.fillval.html" title="spacepy.pycdf.istp.fillval"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../pycdf.html" >pycdf - Python interface to CDF files</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="spacepy.pycdf.istp.html" accesskey="U">spacepy.pycdf.istp</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.pycdf.istp.format</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="spacepy.pycdf.istp.fillval.html"
+                          title="previous chapter">spacepy.pycdf.istp.fillval</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.pycdf.istp.nanfill.html"
+                          title="next chapter">spacepy.pycdf.istp.nanfill</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.pycdf.istp.format.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-pycdf-istp-format">
+<h1>spacepy.pycdf.istp.format<a class="headerlink" href="#spacepy-pycdf-istp-format" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.pycdf.istp.format">
+<span class="sig-prename descclassname"><span class="pre">spacepy.pycdf.istp.</span></span><span class="sig-name descname"><span class="pre">format</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_scaleminmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dryrun</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/pycdf/istp.html#format"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.pycdf.istp.format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set ISTP-compliant FORMAT on a variable</p>
+<p>Sets a CDF variable’s <a class="reference external" href="https://spdf.gsfc.nasa.gov/istp_guide/vattributes.html#FORMAT">FORMAT</a>
+attribute, which provides a Fortran-like format string that should
+be useable for printing any valid value in the variable. Sets
+according to the VALIDMIN/VALIDMAX attributes (or, optionally,
+SCALEMIN/SCALEMAX) if present, otherwise uses the full range of
+the type.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>v</strong><span class="classifier"><a class="reference internal" href="spacepy.pycdf.Var.html#spacepy.pycdf.Var" title="spacepy.pycdf.Var"><code class="xref py py-class docutils literal notranslate"><span class="pre">Var</span></code></a></span></dt><dd><p>Variable to update</p>
+</dd>
+<dt><strong>use_scaleminmax</strong><span class="classifier">bool, optional</span></dt><dd><p>Use SCALEMIN/MAX instead of VALIDMIN/MAX (default False).
+Note: istpchecks may complain about result.</p>
+</dd>
+<dt><strong>dryrun</strong><span class="classifier">bool, optional</span></dt><dd><p>Print the decided format to stdout instead of modifying
+the CDF (for use in command-line debugging) (default False).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.pycdf</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.pycdf.istp</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">f</span> <span class="o">=</span> <span class="n">spacepy</span><span class="o">.</span><span class="n">pycdf</span><span class="o">.</span><span class="n">CDF</span><span class="p">(</span><span class="s1">&#39;foo.cdf&#39;</span><span class="p">,</span> <span class="n">create</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">v</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;Var&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">spacepy</span><span class="o">.</span><span class="n">pycdf</span><span class="o">.</span><span class="n">istp</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">v</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;FORMAT&#39;</span><span class="p">]</span>
+<span class="go">&#39;I4&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.pycdf.istp.nanfill.html" title="spacepy.pycdf.istp.nanfill"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.pycdf.istp.fillval.html" title="spacepy.pycdf.istp.fillval"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../pycdf.html" >pycdf - Python interface to CDF files</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="spacepy.pycdf.istp.html" >spacepy.pycdf.istp</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.pycdf.istp.format</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

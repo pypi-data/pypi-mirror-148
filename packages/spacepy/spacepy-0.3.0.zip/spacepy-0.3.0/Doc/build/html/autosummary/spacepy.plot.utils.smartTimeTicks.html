@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.plot.utils.smartTimeTicks &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy.plot.utils.timestamp" href="spacepy.plot.utils.timestamp.html" />
+    <link rel="prev" title="spacepy.plot.utils.show_used" href="spacepy.plot.utils.show_used.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.plot.utils.timestamp.html" title="spacepy.plot.utils.timestamp"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.plot.utils.show_used.html" title="spacepy.plot.utils.show_used"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../plot.html" >plot - Plot, various specialized plotting functions and associated utilities</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="spacepy.plot.utils.html" accesskey="U">spacepy.plot.utils</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.plot.utils.smartTimeTicks</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="spacepy.plot.utils.show_used.html"
+                          title="previous chapter">spacepy.plot.utils.show_used</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.plot.utils.timestamp.html"
+                          title="next chapter">spacepy.plot.utils.timestamp</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.plot.utils.smartTimeTicks.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-plot-utils-smarttimeticks">
+<h1>spacepy.plot.utils.smartTimeTicks<a class="headerlink" href="#spacepy-plot-utils-smarttimeticks" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.plot.utils.smartTimeTicks">
+<span class="sig-prename descclassname"><span class="pre">spacepy.plot.utils.</span></span><span class="sig-name descname"><span class="pre">smartTimeTicks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/plot/utils.html#smartTimeTicks"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.plot.utils.smartTimeTicks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns major ticks, minor ticks and format for time-based plots</p>
+<p>smartTimeTicks takes a list of datetime objects and uses the range
+to calculate the best tick spacing and format.  Returned to the user
+is a tuple containing the major tick locator, minor tick locator, and
+a format string – all necessary to apply the ticks to an axis.</p>
+<p>It is suggested that, unless the user explicitly needs this info,
+to use the convenience function applySmartTimeTicks to place the
+ticks directly on a given axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>time</strong><span class="classifier">list</span></dt><dd><p>list of datetime objects</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">tuple</span></dt><dd><p>tuple of Mtick - major ticks, mtick - minor ticks, fmt - format</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="spacepy.plot.utils.applySmartTimeTicks.html#spacepy.plot.utils.applySmartTimeTicks" title="spacepy.plot.utils.applySmartTimeTicks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">applySmartTimeTicks</span></code></a></dt><dd></dd>
+</dl>
+</div>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.plot.utils.timestamp.html" title="spacepy.plot.utils.timestamp"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.plot.utils.show_used.html" title="spacepy.plot.utils.show_used"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../plot.html" >plot - Plot, various specialized plotting functions and associated utilities</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="spacepy.plot.utils.html" >spacepy.plot.utils</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.plot.utils.smartTimeTicks</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

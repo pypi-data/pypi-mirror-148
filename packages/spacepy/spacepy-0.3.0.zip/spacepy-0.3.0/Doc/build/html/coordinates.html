@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>coordinates - module for coordinate transforms &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="spacepy.coordinates.Coords" href="autosummary/spacepy.coordinates.Coords.html" />
+    <link rel="prev" title="spacepy.ae9ap9.parseHeader" href="autosummary/spacepy.ae9ap9.parseHeader.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="index.html"><img src="_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="autosummary/spacepy.coordinates.Coords.html" title="spacepy.coordinates.Coords"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="autosummary/spacepy.ae9ap9.parseHeader.html" title="spacepy.ae9ap9.parseHeader"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+       <li><a href="index.html">documentation </a> &raquo;</li>
+
+        <li class="nav-item nav-item-this"><a href="">coordinates - module for coordinate transforms</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">coordinates - module for coordinate transforms</a><ul>
+<li><a class="reference internal" href="#notes-on-differences-between-representations">Notes on differences between representations</a></li>
+<li><a class="reference internal" href="#setting-options-for-coordinate-transformation">Setting options for coordinate transformation</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="autosummary/spacepy.ae9ap9.parseHeader.html"
+                          title="previous chapter">spacepy.ae9ap9.parseHeader</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="autosummary/spacepy.coordinates.Coords.html"
+                          title="next chapter">spacepy.coordinates.Coords</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/coordinates.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-spacepy.coordinates">
+<span id="coordinates-module-for-coordinate-transforms"></span><h1>coordinates - module for coordinate transforms<a class="headerlink" href="#module-spacepy.coordinates" title="Permalink to this headline">¶</a></h1>
+<p>Implementation of Coords class functions for coordinate transformations</p>
+<p>The coordinate systems supported by this module cover the most commonly
+used geophysical and magnetospheric systems. The naming conventions can
+follow the names used by the popular IRBEM library, but for inertial
+systems we use a more consistent, fine-grained naming convention that
+clarifies the different systems.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>ECI2000</strong> Earth-centered Inertial, J2000 epoch</p></li>
+<li><p><strong>ECIMOD</strong> Earth-centered Inertial, mean-of-date</p></li>
+<li><p><strong>ECITOD</strong> Earth-centered Inertial, true-of-date</p></li>
+<li><p><strong>GEI</strong> Geocentric Equatorial Inertial (IRBEM approximation of TOD)</p></li>
+</ul>
+<ul class="simple">
+<li><p><strong>GSM</strong> Geocentric Solar Magnetospheric</p></li>
+<li><p><strong>GSE</strong> Geocentric Solar Ecliptic</p></li>
+<li><p><strong>SM</strong> Solar Magnetic</p></li>
+<li><p><strong>MAG</strong> Geomagnetic Coordinate System (aka CDMAG)</p></li>
+</ul>
+<ul class="simple">
+<li><p><strong>GEO</strong> Geocentric geographic, aka Earth-centered Earth-fixed</p></li>
+<li><p><strong>GDZ</strong> Geodetic coordinates</p></li>
+</ul>
+</div></blockquote>
+<p>By convention <em>all</em> systems are treated as natively Cartesian except
+geodetic (GDZ), which is defined in [altitude, latitude, longitude]
+where altitude is relative to a reference ellipsoid. Similarly, distance
+units are assumed to be Earth radii (Re) in all systems except GDZ, where
+altitude is given in km. Conversions to GDZ will output altitude in km
+regardless of the input distance units and conversions from GDZ will
+output in Re regardless of input units. In all other cases, the distance
+units will be preserved.</p>
+<blockquote>
+<div><div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 0.3.0.</span></p>
+</div>
+<p>The new CTrans backend was added, which includes support for the names
+<code class="docutils literal notranslate"><span class="pre">ECI2000</span></code>, <code class="docutils literal notranslate"><span class="pre">ECIMOD</span></code>, <code class="docutils literal notranslate"><span class="pre">ECITOD</span></code>, and <code class="docutils literal notranslate"><span class="pre">CDMAG</span></code>. With the exception
+of <code class="docutils literal notranslate"><span class="pre">ECIMOD</span></code>, these can be used with the existing IRBEM backend, and
+will be converted to their closest equivalents.</p>
+</div></blockquote>
+<section id="notes-on-differences-between-representations">
+<h2>Notes on differences between representations<a class="headerlink" href="#notes-on-differences-between-representations" title="Permalink to this headline">¶</a></h2>
+<p>IRBEM’s coordinate transformations are low-accuracy and were written for
+a library with a driving philosophy of speed and robustness as priorities.
+The coordinate transformations are therefore approximate. Further, most of
+the geophysical systems (e.g., GSE, SM) are derived from an inertial
+system. It is standard practice to use ECIMOD as this system. However,
+IRBEM does not currently make ECIMOD available as one of its inertial
+systems. IRBEM’s default inertial system (called GEI) is consistent with
+an approximation of ECITOD. Hence there will be small differences between
+IRBEM’s transformations and those using SpacePy’s CTrans backend.
+Further sources of difference include: IRBEM uses a low-order approximation
+to the sidereal time and other parameters; the calculation of the Earth-Sun
+vector differs between the representations; the definitions of an Earth
+radius differ (SpacePy = 6378.137km; IRBEM = 6371.2 km). SpacePy’s in-built
+representation is higher accuracy and is comprehensively tested, including
+tests for consistency with other high accuracy packages such as LANLGeoMag
+and AstroPy. However, for use cases where the required precision is of order
+1 percent the output can be considered equivalent.</p>
+</section>
+<section id="setting-options-for-coordinate-transformation">
+<h2>Setting options for coordinate transformation<a class="headerlink" href="#setting-options-for-coordinate-transformation" title="Permalink to this headline">¶</a></h2>
+<p>The backend for coordinate transformations can be provided at
+instantiation of a <a class="reference internal" href="autosummary/spacepy.coordinates.Coords.html#spacepy.coordinates.Coords" title="spacepy.coordinates.Coords"><code class="xref py py-class docutils literal notranslate"><span class="pre">Coords</span></code></a> object using a keyword
+argument. However, for convenience and flexibility the options can be
+set at the module level. Configurable options include the backend used
+(<a class="reference internal" href="irbempy.html#module-spacepy.irbempy" title="spacepy.irbempy"><code class="xref py py-mod docutils literal notranslate"><span class="pre">irbempy</span></code></a> or SpacePy’s <a class="reference internal" href="ctrans.html#module-spacepy.ctrans" title="spacepy.ctrans"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ctrans</span></code></a>) and the
+reference ellipsoid (only configurable for the SpacePy backend). A
+warning will be raised if the backend is not set (either through the
+defaults or the keyword argument). The final configurable option
+(<code class="docutils literal notranslate"><span class="pre">itol</span></code>) is the maximum separation, in seconds, for which the
+coordinate transformations will not be recalculated. To force all
+transformations to use an exact transform for the time, set <code class="docutils literal notranslate"><span class="pre">itol</span></code>
+to zero. Values between 10s and 60s are recommended for speed while
+also preserving accuracy, though different applications will require
+different accuracies.  For example, assuming this module has been
+imported as <code class="docutils literal notranslate"><span class="pre">spc</span></code>, to set the SpacePy backend as the default and set
+<code class="docutils literal notranslate"><span class="pre">itol</span></code> to 5 seconds:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">spc</span><span class="o">.</span><span class="n">DEFAULTS</span><span class="o">.</span><span class="n">set_values</span><span class="p">(</span><span class="n">use_irbem</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">itol</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Authors: Steven Morley and Josef Koller
+Institution: Los ALamos National Laboratory
+Contact: <a class="reference external" href="mailto:smorley&#37;&#52;&#48;lanl&#46;gov">smorley<span>&#64;</span>lanl<span>&#46;</span>gov</a></p>
+<p>Copyright 2010-2016 Los Alamos National Security, LLC.</p>
+</section>
+<p class="rubric">Classes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.coordinates.Coords.html#spacepy.coordinates.Coords" title="spacepy.coordinates.Coords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Coords</span></code></a>(data, dtype, carsph, [units, ticks, ...)</p></td>
+<td><p>A class holding spatial coordinates and enabling transformation between coordinate systems.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Functions</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.coordinates.car2sph.html#spacepy.coordinates.car2sph" title="spacepy.coordinates.car2sph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">car2sph</span></code></a>(car_in)</p></td>
+<td><p>Coordinate transformation from Cartesian to spherical</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.coordinates.sph2car.html#spacepy.coordinates.sph2car" title="spacepy.coordinates.sph2car"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sph2car</span></code></a>(sph_in)</p></td>
+<td><p>Coordinate transformation from spherical to Cartesian</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.coordinates.quaternionRotateVector.html#spacepy.coordinates.quaternionRotateVector" title="spacepy.coordinates.quaternionRotateVector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quaternionRotateVector</span></code></a>(Qin, Vin[, ...])</p></td>
+<td><p>Given quaternions and vectors, return the vectors rotated by the quaternions</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.coordinates.quaternionNormalize.html#spacepy.coordinates.quaternionNormalize" title="spacepy.coordinates.quaternionNormalize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quaternionNormalize</span></code></a>(Qin[, scalarPos])</p></td>
+<td><p>Given an input quaternion (or array of quaternions), return the unit quaternion</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.coordinates.quaternionMultiply.html#spacepy.coordinates.quaternionMultiply" title="spacepy.coordinates.quaternionMultiply"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quaternionMultiply</span></code></a>(Qin1, Qin2[, scalarPos])</p></td>
+<td><p>Given quaternions, return the product, i.e. Qin1*Qin2.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.coordinates.quaternionConjugate.html#spacepy.coordinates.quaternionConjugate" title="spacepy.coordinates.quaternionConjugate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quaternionConjugate</span></code></a>(Qin[, scalarPos])</p></td>
+<td><p>Given an input quaternion (or array of quaternions), return the conjugate</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.coordinates.quaternionFromMatrix.html#spacepy.coordinates.quaternionFromMatrix" title="spacepy.coordinates.quaternionFromMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quaternionFromMatrix</span></code></a>(matrix[, scalarPos])</p></td>
+<td><p>Given an input rotation matrix, return the equivalent quaternion</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.coordinates.quaternionToMatrix.html#spacepy.coordinates.quaternionToMatrix" title="spacepy.coordinates.quaternionToMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quaternionToMatrix</span></code></a>(Qin[, scalarPos, normalize])</p></td>
+<td><p>Given an input quaternion, return the equivalent rotation matrix.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="autosummary/spacepy.coordinates.Coords.html" title="spacepy.coordinates.Coords"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="autosummary/spacepy.ae9ap9.parseHeader.html" title="spacepy.ae9ap9.parseHeader"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+       <li><a href="index.html">documentation </a> &raquo;</li>
+
+        <li class="nav-item nav-item-this"><a href="">coordinates - module for coordinate transforms</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

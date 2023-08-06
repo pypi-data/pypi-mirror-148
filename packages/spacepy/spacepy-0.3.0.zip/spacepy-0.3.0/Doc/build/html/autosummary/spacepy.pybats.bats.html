@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.pybats.bats &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy.pybats.bats.BatsLog" href="spacepy.pybats.bats.BatsLog.html" />
+    <link rel="prev" title="PyBats - SWMF &amp; BATS-R-US Analysis Tools" href="../pybats.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.pybats.bats.BatsLog.html" title="spacepy.pybats.bats.BatsLog"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../pybats.html" title="PyBats - SWMF &amp; BATS-R-US Analysis Tools"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../pybats.html" accesskey="U">PyBats - SWMF &amp; BATS-R-US Analysis Tools</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.pybats.bats</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../pybats.html"
+                          title="previous chapter">PyBats - SWMF &amp; BATS-R-US Analysis Tools</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.pybats.bats.BatsLog.html"
+                          title="next chapter">spacepy.pybats.bats.BatsLog</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.pybats.bats.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-spacepy.pybats.bats">
+<span id="spacepy-pybats-bats"></span><h1>spacepy.pybats.bats<a class="headerlink" href="#module-spacepy.pybats.bats" title="Permalink to this headline">¶</a></h1>
+<p>A PyBats module for handling input, output, and visualization of 
+binary SWMF output files taylored to BATS-R-US-type data.</p>
+<p class="rubric">Classes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="spacepy.pybats.bats.BatsLog.html#spacepy.pybats.bats.BatsLog" title="spacepy.pybats.bats.BatsLog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BatsLog</span></code></a>(filename[, starttime, keep_case])</p></td>
+<td><p>A specialized version of <a class="reference internal" href="spacepy.pybats.LogFile.html#spacepy.pybats.LogFile" title="spacepy.pybats.LogFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">LogFile</span></code></a> that includes special methods for plotting common BATS-R-US log file values, such as D$_{ST}$.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="spacepy.pybats.bats.Stream.html#spacepy.pybats.bats.Stream" title="spacepy.pybats.bats.Stream"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Stream</span></code></a>(bats, xstart, ystart, xfield, yfield)</p></td>
+<td><p>A class for streamlines.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="spacepy.pybats.bats.Bats2d.html#spacepy.pybats.bats.Bats2d" title="spacepy.pybats.bats.Bats2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Bats2d</span></code></a>(filename, *args, **kwargs)</p></td>
+<td><p>A child class of <code class="xref py py-class docutils literal notranslate"><span class="pre">IdlFile</span></code> tailored to 2D BATS-R-US output.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="spacepy.pybats.bats.Mag.html#spacepy.pybats.bats.Mag" title="spacepy.pybats.bats.Mag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Mag</span></code></a>(nlines, time[, gmvars, ievars])</p></td>
+<td><p>A container for data from a single BATS-R-US virtual magnetometer.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="spacepy.pybats.bats.MagFile.html#spacepy.pybats.bats.MagFile" title="spacepy.pybats.bats.MagFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MagFile</span></code></a>(filename[, ie_name, find_ie])</p></td>
+<td><p>BATS-R-US magnetometer files are powerful tools for both research and operations.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="spacepy.pybats.bats.GeoIndexFile.html#spacepy.pybats.bats.GeoIndexFile" title="spacepy.pybats.bats.GeoIndexFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeoIndexFile</span></code></a>(filename[, keep_case])</p></td>
+<td><p>Geomagnetic Index files are a specialized BATS-R-US output that contain geomagnetic indices calculated from simulated ground-based magnetometers.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="spacepy.pybats.bats.VirtSat.html#spacepy.pybats.bats.VirtSat" title="spacepy.pybats.bats.VirtSat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VirtSat</span></code></a>(*args, **kwargs)</p></td>
+<td><p>A <a class="reference internal" href="spacepy.pybats.LogFile.html#spacepy.pybats.LogFile" title="spacepy.pybats.LogFile"><code class="xref py py-class docutils literal notranslate"><span class="pre">spacepy.pybats.LogFile</span></code></a> object tailored to virtual satellite output; includes special satellite-specific plotting methods.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.pybats.bats.BatsLog.html" title="spacepy.pybats.bats.BatsLog"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../pybats.html" title="PyBats - SWMF &amp; BATS-R-US Analysis Tools"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../pybats.html" >PyBats - SWMF &amp; BATS-R-US Analysis Tools</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.pybats.bats</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

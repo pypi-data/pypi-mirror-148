@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>PoPPy - Point Processes in Python &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="spacepy.poppy.PPro" href="autosummary/spacepy.poppy.PPro.html" />
+    <link rel="prev" title="spacepy.plot.utils.add_arrows" href="autosummary/spacepy.plot.utils.add_arrows.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="index.html"><img src="_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="autosummary/spacepy.poppy.PPro.html" title="spacepy.poppy.PPro"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="autosummary/spacepy.plot.utils.add_arrows.html" title="spacepy.plot.utils.add_arrows"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+       <li><a href="index.html">documentation </a> &raquo;</li>
+
+        <li class="nav-item nav-item-this"><a href="">PoPPy - Point Processes in Python</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="autosummary/spacepy.plot.utils.add_arrows.html"
+                          title="previous chapter">spacepy.plot.utils.add_arrows</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="autosummary/spacepy.poppy.PPro.html"
+                          title="next chapter">spacepy.poppy.PPro</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/poppy.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-spacepy.poppy">
+<span id="poppy-point-processes-in-python"></span><h1>PoPPy - Point Processes in Python<a class="headerlink" href="#module-spacepy.poppy" title="Permalink to this headline">¶</a></h1>
+<p>PoPPy – Point Processes in Python.</p>
+<p>This module contains point process class types and a variety of functions for
+association analysis. The routines given here grew from work presented by
+Morley and Freeman (Geophysical Research Letters, 34, L08104, doi:10.1029/
+2006GL028891, 2007), which were originally written in IDL. This module is
+intended for application to discrete time series of events to assess
+statistical association between the series and to calculate confidence limits.
+Any mis-application or mis-interpretation by the user is the user’s own fault.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.time</span> <span class="k">as</span> <span class="nn">spt</span>
+</pre></div>
+</div>
+<p>Since association analysis is rather computationally expensive, this example
+shows timing.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">t0</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">onsets</span> <span class="o">=</span> <span class="n">spt</span><span class="o">.</span><span class="n">Ticktock</span><span class="p">(</span><span class="n">onset_epochs</span><span class="p">,</span> <span class="s1">&#39;CDF&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ticksR1</span> <span class="o">=</span> <span class="n">spt</span><span class="o">.</span><span class="n">Ticktock</span><span class="p">(</span><span class="n">tr_list</span><span class="p">,</span> <span class="s1">&#39;CDF&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Each instance must be initialized</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lags</span> <span class="o">=</span> <span class="p">[</span><span class="n">dt</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">400</span><span class="p">,</span><span class="mi">401</span><span class="p">,</span><span class="mi">2</span><span class="p">)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">halfwindow</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pp1</span> <span class="o">=</span> <span class="n">poppy</span><span class="o">.</span><span class="n">PPro</span><span class="p">(</span><span class="n">onsets</span><span class="o">.</span><span class="n">UTC</span><span class="p">,</span> <span class="n">ticksR1</span><span class="o">.</span><span class="n">UTC</span><span class="p">,</span> <span class="n">lags</span><span class="p">,</span> <span class="n">halfwindow</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To perform association analysis</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pp1</span><span class="o">.</span><span class="n">assoc</span><span class="p">()</span>
+<span class="go">Starting association analysis</span>
+<span class="go">calculating association for series of length [3494, 1323] at 401 lags</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t1</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Elapsed:  &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">t1</span><span class="o">-</span><span class="n">t0</span><span class="p">))</span>
+<span class="go">Elapsed:  0:35:46.927138</span>
+</pre></div>
+</div>
+<p>Note that for calculating associations between long series at a large number of
+lags is SLOW!!</p>
+<p>To plot</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pp1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dpi</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>
+<span class="go">Error: No confidence intervals to plot - skipping</span>
+</pre></div>
+</div>
+<p>To add 95% confidence limits (using 4000 bootstrap samples)</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pp1</span><span class="o">.</span><span class="n">aa_ci</span><span class="p">(</span><span class="mi">95</span><span class="p">,</span> <span class="n">n_boots</span><span class="o">=</span><span class="mi">4000</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The plot method will then add the 95% confidence intervals as a semi-
+transparent patch.</p>
+<p>Authors: Steve Morley and Jon Niehof
+Institution: Los Alamos National Laboratory
+Contact: <a class="reference external" href="mailto:smorley&#37;&#52;&#48;lanl&#46;gov">smorley<span>&#64;</span>lanl<span>&#46;</span>gov</a>, <a class="reference external" href="mailto:jniehof&#37;&#52;&#48;lanl&#46;gov">jniehof<span>&#64;</span>lanl<span>&#46;</span>gov</a></p>
+<p>Copyright 2010 Los Alamos National Security, LLC.</p>
+<p class="rubric">Classes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.poppy.PPro.html#spacepy.poppy.PPro" title="spacepy.poppy.PPro"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PPro</span></code></a>(process1, process2[, lags, winhalf, ...])</p></td>
+<td><p>PoPPy point process object</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Functions</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.poppy.plot_two_ppro.html#spacepy.poppy.plot_two_ppro" title="spacepy.poppy.plot_two_ppro"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_two_ppro</span></code></a>(pprodata, pproref[, ratio, ...])</p></td>
+<td><p>Overplots two PPro objects</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.poppy.boots_ci.html#spacepy.poppy.boots_ci" title="spacepy.poppy.boots_ci"><code class="xref py py-obj docutils literal notranslate"><span class="pre">boots_ci</span></code></a>(data, n, inter, func[, seed, ...])</p></td>
+<td><p>Construct bootstrap confidence interval</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.poppy.value_percentile.html#spacepy.poppy.value_percentile" title="spacepy.poppy.value_percentile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">value_percentile</span></code></a>(sequence, target)</p></td>
+<td><p>Find the percentile of a particular value in a sequence</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="autosummary/spacepy.poppy.PPro.html" title="spacepy.poppy.PPro"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="autosummary/spacepy.plot.utils.add_arrows.html" title="spacepy.plot.utils.add_arrows"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+       <li><a href="index.html">documentation </a> &raquo;</li>
+
+        <li class="nav-item nav-item-this"><a href="">PoPPy - Point Processes in Python</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

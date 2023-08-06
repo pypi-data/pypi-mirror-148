@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.toolbox.geomspace &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy.toolbox.linspace" href="spacepy.toolbox.linspace.html" />
+    <link rel="prev" title="spacepy.toolbox.dist_to_list" href="spacepy.toolbox.dist_to_list.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.toolbox.linspace.html" title="spacepy.toolbox.linspace"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.toolbox.dist_to_list.html" title="spacepy.toolbox.dist_to_list"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../toolbox.html" accesskey="U">toolbox - Toolbox of various functions and generic utilities</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.toolbox.geomspace</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="spacepy.toolbox.dist_to_list.html"
+                          title="previous chapter">spacepy.toolbox.dist_to_list</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.toolbox.linspace.html"
+                          title="next chapter">spacepy.toolbox.linspace</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.toolbox.geomspace.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-toolbox-geomspace">
+<h1>spacepy.toolbox.geomspace<a class="headerlink" href="#spacepy-toolbox-geomspace" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.toolbox.geomspace">
+<span class="sig-prename descclassname"><span class="pre">spacepy.toolbox.</span></span><span class="sig-name descname"><span class="pre">geomspace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/toolbox.html#geomspace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.toolbox.geomspace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns geometrically spaced numbers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>start</strong><span class="classifier">float</span></dt><dd><p>The starting value of the sequence.</p>
+</dd>
+<dt><strong>ratio</strong><span class="classifier">float (optional)</span></dt><dd><p>The ratio between subsequent points</p>
+</dd>
+<dt><strong>stop</strong><span class="classifier">float (optional)</span></dt><dd><p>End value, if this is selected <cite>num</cite> is overridden</p>
+</dd>
+<dt><strong>num</strong><span class="classifier">int (optional)</span></dt><dd><p>Number of samples to generate. Default is 50.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>seq</strong><span class="classifier">array</span></dt><dd><p>geometrically spaced sequence</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="spacepy.toolbox.linspace.html#spacepy.toolbox.linspace" title="spacepy.toolbox.linspace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linspace</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="spacepy.toolbox.logspace.html#spacepy.toolbox.logspace" title="spacepy.toolbox.logspace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">logspace</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<p>To get a geometric progression between 0.01 and 3 in 10 steps</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.toolbox</span> <span class="k">as</span> <span class="nn">tb</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tb</span><span class="o">.</span><span class="n">geomspace</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="go">[0.01,</span>
+<span class="go"> 0.018846716378431192,</span>
+<span class="go"> 0.035519871824902655,</span>
+<span class="go"> 0.066943295008216955,</span>
+<span class="go"> 0.12616612944575134,</span>
+<span class="go"> 0.23778172582285118,</span>
+<span class="go"> 0.44814047465571644,</span>
+<span class="go"> 0.84459764235318191,</span>
+<span class="go"> 1.5917892219322083,</span>
+<span class="go"> 2.9999999999999996]</span>
+</pre></div>
+</div>
+<p>To get a geometric progression with a specified ratio, say 10</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.toolbox</span> <span class="k">as</span> <span class="nn">tb</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tb</span><span class="o">.</span><span class="n">geomspace</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">ratio</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="go">[0.01, 0.10000000000000001, 1.0, 10.0, 100.0]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.toolbox.linspace.html" title="spacepy.toolbox.linspace"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.toolbox.dist_to_list.html" title="spacepy.toolbox.dist_to_list"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../toolbox.html" >toolbox - Toolbox of various functions and generic utilities</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.toolbox.geomspace</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

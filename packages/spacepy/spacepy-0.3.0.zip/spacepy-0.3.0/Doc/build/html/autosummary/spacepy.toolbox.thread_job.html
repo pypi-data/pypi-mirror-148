@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.toolbox.thread_job &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy.toolbox.thread_map" href="spacepy.toolbox.thread_map.html" />
+    <link rel="prev" title="spacepy.toolbox.windowMean" href="spacepy.toolbox.windowMean.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.toolbox.thread_map.html" title="spacepy.toolbox.thread_map"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.toolbox.windowMean.html" title="spacepy.toolbox.windowMean"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../toolbox.html" accesskey="U">toolbox - Toolbox of various functions and generic utilities</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.toolbox.thread_job</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="spacepy.toolbox.windowMean.html"
+                          title="previous chapter">spacepy.toolbox.windowMean</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.toolbox.thread_map.html"
+                          title="next chapter">spacepy.toolbox.thread_map</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.toolbox.thread_job.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-toolbox-thread-job">
+<h1>spacepy.toolbox.thread_job<a class="headerlink" href="#spacepy-toolbox-thread-job" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.toolbox.thread_job">
+<span class="sig-prename descclassname"><span class="pre">spacepy.toolbox.</span></span><span class="sig-name descname"><span class="pre">thread_job</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">job_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thread_count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/toolbox.html#thread_job"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.toolbox.thread_job" title="Permalink to this definition">¶</a></dt>
+<dd><p>Split a job into subjobs and run a thread for each</p>
+<p>Each thread spawned will call L{target} to handle a slice of the job.</p>
+<dl class="simple">
+<dt>This is only useful if a job:</dt><dd><ol class="arabic simple">
+<li><p>Can be split into completely independent subjobs</p></li>
+<li><p>Relies heavily on code that does not use the Python GIL, e.g.
+numpy or ctypes code</p></li>
+<li><p>Does not return a value. Either pass in a list/array to hold the
+result, or see L{thread_map}</p></li>
+</ol>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>job_size</strong><span class="classifier">int</span></dt><dd><p>Total size of the job. Often this is an array size.</p>
+</dd>
+<dt><strong>thread_count</strong><span class="classifier">int</span></dt><dd><dl class="simple">
+<dt>Number of threads to spawn. If =0 or None, will</dt><dd><p>spawn as many threads as there are cores available on
+the system. (Each hyperthreading core counts as 2.)
+Generally this is the Right Thing to do.
+If NEGATIVE, will spawn abs(thread_count) threads,
+but will run them sequentially rather than in
+parallel; useful for debugging.</p>
+</dd>
+</dl>
+</dd>
+<dt><strong>target</strong><span class="classifier">callable</span></dt><dd><dl class="simple">
+<dt>Python callable (generally a function, may also be an</dt><dd><p>imported ctypes function) to run in each thread. The
+<em>last</em> two positional arguments passed in will be a
+“start” and a “subjob size,” respectively;
+frequently this will be the start index and the number
+of elements to process in an array.</p>
+</dd>
+</dl>
+</dd>
+<dt><strong>args</strong><span class="classifier">sequence</span></dt><dd><dl class="simple">
+<dt>Arguments to pass to L{target}. If L{target} is an instance</dt><dd><p>method, self must be explicitly passed in. start and
+subjob_size will be appended.</p>
+</dd>
+</dl>
+</dd>
+<dt><strong>kwargs</strong><span class="classifier">dict</span></dt><dd><p>keyword arguments to pass to L{target}.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>squaring 100 million numbers:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.toolbox</span> <span class="k">as</span> <span class="nn">tb</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">8675301</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="p">[</span><span class="mi">100000000</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">empty</span><span class="p">([</span><span class="mi">100000000</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int64&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">targ</span><span class="p">(</span><span class="n">in_array</span><span class="p">,</span> <span class="n">out_array</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">count</span><span class="p">):</span>              <span class="n">out_array</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">start</span> <span class="o">+</span> <span class="n">count</span><span class="p">]</span> <span class="o">=</span> <span class="n">in_array</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">start</span> <span class="o">+</span> <span class="n">count</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tb</span><span class="o">.</span><span class="n">thread_job</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="n">targ</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span>
+<span class="go">[2704 7225  196 1521   36]</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>This example:</dt><dd><ul class="simple">
+<li><p>Defines a target function, which will be called for each thread.
+It is usually necessary to define a simple “wrapper” function
+like this to provide the correct call signature.</p></li>
+<li><p>The target function receives inputs C{in_array} and C{out_array},
+which are not touched directly by C{thread_job} but are passed
+through in the call. In this case, C{a} gets passed as
+C{in_array} and C{b} as C{out_array}</p></li>
+<li><p>The target function also receives the start and number of elements
+it needs to process. For each thread where the target is called,
+these numbers are different.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.toolbox.thread_map.html" title="spacepy.toolbox.thread_map"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.toolbox.windowMean.html" title="spacepy.toolbox.windowMean"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../toolbox.html" >toolbox - Toolbox of various functions and generic utilities</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.toolbox.thread_job</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

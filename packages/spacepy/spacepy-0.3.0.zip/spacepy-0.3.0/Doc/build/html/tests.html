@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Unit tests &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="spacepy_testing.assertWarns" href="autosummary/spacepy_testing.assertWarns.html" />
+    <link rel="prev" title="Documentation Standard" href="doc_standard.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="index.html"><img src="_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="autosummary/spacepy_testing.assertWarns.html" title="spacepy_testing.assertWarns"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="doc_standard.html" title="Documentation Standard"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+       <li><a href="index.html">documentation </a> &raquo;</li>
+
+        <li class="nav-item nav-item-this"><a href="">Unit tests</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Unit tests</a><ul>
+<li><a class="reference internal" href="#module-spacepy_testing">The spacepy_testing module</a><ul>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+<li><a class="reference internal" href="#data">Data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="doc_standard.html"
+                          title="previous chapter">Documentation Standard</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="autosummary/spacepy_testing.assertWarns.html"
+                          title="next chapter">spacepy_testing.assertWarns</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/tests.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="unit-tests">
+<h1>Unit tests<a class="headerlink" href="#unit-tests" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#module-spacepy_testing" id="id2">The spacepy_testing module</a></p>
+<ul>
+<li><p><a class="reference internal" href="#classes" id="id3">Classes</a></p></li>
+<li><p><a class="reference internal" href="#functions" id="id4">Functions</a></p></li>
+<li><p><a class="reference internal" href="#data" id="id5">Data</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="module-spacepy_testing">
+<span id="the-spacepy-testing-module"></span><h2><a class="toc-backref" href="#id2">The spacepy_testing module</a><a class="headerlink" href="#module-spacepy_testing" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">spacepy_testing</span></code> module contains utilities for assistance with
+testing SpacePy. It is not installed as part of SpacePy and is thus
+only importable from the unit test scripts themselves (which are in the
+same directory). All unit test scripts import this module, and should
+do so before importing any spacepy modules to ensure pathing is correct.</p>
+<p>On import, <a class="reference internal" href="autosummary/spacepy_testing.add_build_to_path.html#spacepy_testing.add_build_to_path" title="spacepy_testing.add_build_to_path"><code class="xref py py-func docutils literal notranslate"><span class="pre">add_build_to_path()</span></code></a> is run so that
+the <code class="docutils literal notranslate"><span class="pre">build</span></code> directory is added to the Python search path. This means
+the tests run against the latest build, not the installed version. Remove
+the build directory to run against the installed version instead. The build
+directory does not completely separate out Python versions, so removing
+the build directory (and rebuilding) is recommended when switching Python
+versions.</p>
+<p>Build the package before running the tests:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">build</span>
+</pre></div>
+</div>
+<div class="contents local topic" id="id1">
+<ul class="simple">
+<li><p><a class="reference internal" href="#classes" id="id6">Classes</a></p></li>
+<li><p><a class="reference internal" href="#functions" id="id7">Functions</a></p></li>
+<li><p><a class="reference internal" href="#data" id="id8">Data</a></p></li>
+</ul>
+</div>
+<section id="classes">
+<h3><a class="toc-backref" href="#id6">Classes</a><a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy_testing.assertWarns.html#spacepy_testing.assertWarns" title="spacepy_testing.assertWarns"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertWarns</span></code></a>(test[, action, message, ...])</p></td>
+<td><p>Tests that a warning is raised.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy_testing.assertDoesntWarn.html#spacepy_testing.assertDoesntWarn" title="spacepy_testing.assertDoesntWarn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assertDoesntWarn</span></code></a>(test[, action, message, ...])</p></td>
+<td><p>Tests that a warning is not raised.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3><a class="toc-backref" href="#id7">Functions</a><a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy_testing.add_build_to_path.html#spacepy_testing.add_build_to_path" title="spacepy_testing.add_build_to_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_build_to_path</span></code></a>()</p></td>
+<td><p>Adds the python build directory to the search path.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="data">
+<h3><a class="toc-backref" href="#id8">Data</a><a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy_testing.datadir.html#spacepy_testing.datadir" title="spacepy_testing.datadir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datadir</span></code></a></p></td>
+<td><p>Directory containing unit test data</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy_testing.testsdir.html#spacepy_testing.testsdir" title="spacepy_testing.testsdir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">testsdir</span></code></a></p></td>
+<td><p>Directory containing the unit test scripts</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<dl class="field-list simple">
+<dt class="field-odd">Release</dt>
+<dd class="field-odd"><p>0.3.0</p>
+</dd>
+<dt class="field-even">Doc generation date</dt>
+<dd class="field-even"><p>Apr 27, 2022</p>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="autosummary/spacepy_testing.assertWarns.html" title="spacepy_testing.assertWarns"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="doc_standard.html" title="Documentation Standard"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+       <li><a href="index.html">documentation </a> &raquo;</li>
+
+        <li class="nav-item nav-item-this"><a href="">Unit tests</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

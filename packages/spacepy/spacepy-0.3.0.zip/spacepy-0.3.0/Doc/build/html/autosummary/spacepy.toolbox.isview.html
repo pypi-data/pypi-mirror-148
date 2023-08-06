@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.toolbox.isview &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy.toolbox.tCommon" href="spacepy.toolbox.tCommon.html" />
+    <link rel="prev" title="spacepy.toolbox.interweave" href="spacepy.toolbox.interweave.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.toolbox.tCommon.html" title="spacepy.toolbox.tCommon"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.toolbox.interweave.html" title="spacepy.toolbox.interweave"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../toolbox.html" accesskey="U">toolbox - Toolbox of various functions and generic utilities</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.toolbox.isview</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="spacepy.toolbox.interweave.html"
+                          title="previous chapter">spacepy.toolbox.interweave</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.toolbox.tCommon.html"
+                          title="next chapter">spacepy.toolbox.tCommon</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.toolbox.isview.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-toolbox-isview">
+<h1>spacepy.toolbox.isview<a class="headerlink" href="#spacepy-toolbox-isview" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.toolbox.isview">
+<span class="sig-prename descclassname"><span class="pre">spacepy.toolbox.</span></span><span class="sig-name descname"><span class="pre">isview</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">array2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/toolbox.html#isview"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.toolbox.isview" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns if an object is a view of another object.  More precisely if one array argument is specified
+True is returned is the arrays owns its data.  If two arrays arguments are specified a tuple is returned
+of if the first array owns its data and the the second if they point at the same memory location</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>array1</strong><span class="classifier">numpy.ndarray</span></dt><dd><p>array to query if it owns its data</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">bool or tuple</span></dt><dd><p>If one array is specified bool is returned, True is the array owns its data.  If two arrays
+are specified a tuple where the second element is a bool of if the array point at the same
+memory location</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Other Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>array2</strong><span class="classifier">object (optional)</span></dt><dd><p>array to query if array1 is a view of this object at the specified memory location</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>import numpy
+import spacepy.toolbox as tb
+a = numpy.arange(100)
+b = a[0:10]
+tb.isview(a)
+# False
+tb.isview(b)
+# True
+tb.isview(b, a)
+# (True, True)
+tb.isview(b, b)
+# (True, True)  # the conditions are met and numpy cannot tell this</p>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.toolbox.tCommon.html" title="spacepy.toolbox.tCommon"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.toolbox.interweave.html" title="spacepy.toolbox.interweave"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../toolbox.html" >toolbox - Toolbox of various functions and generic utilities</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.toolbox.isview</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

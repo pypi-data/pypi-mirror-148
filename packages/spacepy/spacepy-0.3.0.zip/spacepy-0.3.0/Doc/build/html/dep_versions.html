@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Dependency version support &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Documentation Standard" href="doc_standard.html" />
+    <link rel="prev" title="SpacePy Python Programming Tips" href="tips.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="index.html"><img src="_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="doc_standard.html" title="Documentation Standard"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="tips.html" title="SpacePy Python Programming Tips"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+       <li><a href="index.html">documentation </a> &raquo;</li>
+
+        <li class="nav-item nav-item-this"><a href="">Dependency version support</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="tips.html"
+                          title="previous chapter">SpacePy Python Programming Tips</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="doc_standard.html"
+                          title="next chapter">Documentation Standard</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/dep_versions.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="dependency-version-support">
+<h1>Dependency version support<a class="headerlink" href="#dependency-version-support" title="Permalink to this headline">¶</a></h1>
+<p>SpacePy will occasionally drop support for old versions of
+<a class="reference internal" href="dependencies.html"><span class="doc">dependencies</span></a>. Failures with older versions will
+not be treated as SpacePy bugs. Dependency support is based on these
+principles:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>SpacePy supports released versions of a dependency that meet a
+minimum version requirement; there is no maximum supported
+version.</p></li>
+<li><p>Support for old versions of dependencies will be dropped only for
+reason, e.g. if a new version is required to support a new feature
+or fix a bug. Maintenance of convoluted workarounds is included in
+this category.</p></li>
+<li><p>Support will be maintained for versions included in the
+second-most-recent Ubuntu Long Term Support (LTS) release,
+e.g. upon release of Ubuntu 20.04 LTS, support will be maintained
+for at least the versions in 18.04 LTS</p></li>
+<li><p>Support will also be maintained for Python and NumPy versions
+in the spirit of <a class="reference external" href="https://numpy.org/neps/nep-0029-deprecation_policy.html">NEP 29</a>.</p>
+<ol class="arabic simple">
+<li><p>A SpacePy release will support at least all minor versions of Python
+released in the prior 42 months, and at least the two latest minor
+versions.</p></li>
+<li><p>SpacePy will support all minor versions of NumPy and, where
+possible, other Python dependencies released in the prior 24 months,
+and at least the three latest minor versions.</p></li>
+<li><p>Non-Python dependencies that use a similar versioning system will
+be supported similarly where possible.</p></li>
+<li><p>This support is based on minor releases (x.y.0), not subsequent
+subminor releases (x.y.z for the same x.y). Where x.y.0 is supported,
+so is x.y.z for all z.</p></li>
+<li><p>All versions of all dependencies and all combinations thereof will
+<em>not</em> necessarily be tested in continuous integration.</p></li>
+</ol>
+</li>
+<li><p>No support will be provided for conflicting versions of
+dependencies. E.g. SciPy 1.4 requires NumPy 1.13. Although SpacePy
+supports SciPy 1.4 and Numpy 1.6, it contains no workarounds for
+using them in that combination.</p></li>
+<li><p>Support for a particular version of a dependency does not imply
+a commitment to work around bugs in that version.</p></li>
+<li><p>Support for even earlier versions will be maintained as necessary
+for Python 2 compatibility as long as <a class="reference internal" href="py2k_eol.html"><span class="doc">Python 2 support</span></a> is maintained.</p></li>
+<li><p>A release of SpacePy that requires new dependency versions will
+always have a subminor version of 0, e.g. if the release that
+follows 0.5.2 requires updated dependencies, it will be numbered
+0.6.0.</p></li>
+<li><p>The commit that requires a newer version of a dependency must also
+update the <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>, <a class="reference internal" href="dependencies.html"><span class="doc">SpacePy Dependencies</span></a>, and the
+table below. The commit message must include the reason for the
+dependency requirement.</p></li>
+</ol>
+</div></blockquote>
+<p>Regardless of minimum requirements, using the latest stable version of
+a package is generally preferred. The minimum supported version for
+SpacePy may not be recommended for other reasons (e.g. bug fixes or
+improved features elsewhere in the package.)</p>
+<p>This table summarizes the versions to be supported according to the
+above policy, as well as the minimum version currently supported by
+SpacePy. Where available, the dependency name links to its version
+history. The oldest version supported according to this policy is in
+<strong>bold</strong>.</p>
+<table class="colwidths-given docutils align-default" id="id1">
+<caption><span class="caption-text">SpacePy dependency versions (2021/9/16)</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Dependency</p></th>
+<th class="head"><p>Current Release</p></th>
+<th class="head"><p>Ubuntu 18.04LTS</p></th>
+<th class="head"><p>Ubuntu 20.04LTS</p></th>
+<th class="head"><p>NEP 29 (42/24 mo.)</p></th>
+<th class="head"><p>NEP 29 (2/3 minor versions)</p></th>
+<th class="head"><p>SpacePy current minimum</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.python.org/downloads/">CPython</a></p></td>
+<td><p>3.9.7 (2021/8/30)</p></td>
+<td><p><strong>3.6.5</strong> (2018/2/5)</p></td>
+<td><p>3.8.2 (2020/2/24)</p></td>
+<td><p>3.7.0 (2018/6/27)</p></td>
+<td><p>3.8.0 (2019/10/14)</p></td>
+<td><p>3.2.0 (2011/2/20) or 2.7.0 (2010/7/3)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://docs.astropy.org/en/stable/changelog.html#changelog">AstroPy</a></p></td>
+<td><p>4.3.1 (2021/8/11)</p></td>
+<td><p><strong>2.0.4</strong> (2018/2/6)</p></td>
+<td><p>4.0 (2019/2/16)</p></td>
+<td><p>3.2 (2019/6/14)</p></td>
+<td><p>4.1 (2020/10/21)</p></td>
+<td><p>1.0 (2015/2/18)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://spdf.gsfc.nasa.gov/pub/software/cdf/dist/latest-release/unix/CHANGES.txt">CDF</a></p></td>
+<td><p>3.8.0.1 (2020/7/7)</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>3.8.0 (2019/10/27)</p></td>
+<td><p><strong>3.6.0</strong> (2015/2/5)</p></td>
+<td><p>2.7.0 (1999/9/27)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/dateutil/dateutil/releases">dateutil</a></p></td>
+<td><p>2.8.2 (2021/7/8)</p></td>
+<td><p>2.6.1 (2017/7/10)</p></td>
+<td><p>2.7.3 (2018/5/9)</p></td>
+<td><p>2.8.0 (2019/2/5)</p></td>
+<td><p><strong>2.6.0</strong> (2016/11/8)</p></td>
+<td><p>tested from 1.4 (2008/2/27)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://github.com/h5py/h5py/releases">h5py</a></p></td>
+<td><p>3.4.0 (2021/8/3)</p></td>
+<td><p><strong>2.7.1</strong> (2017/9/1)</p></td>
+<td><p>2.10.0 (2019/9/6)</p></td>
+<td><p>3.0.0 (2020/10/30)</p></td>
+<td><p>3.2.0 (2021/3/3)</p></td>
+<td><p>tested from 2.6 (2017/3/18)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/matplotlib/matplotlib/releases">matplotlib</a></p></td>
+<td><p>3.4.3 (2021/8/12)</p></td>
+<td><p><strong>2.1.1</strong> (2017/12/9)</p></td>
+<td><p>3.1.2 (2019/12/4)</p></td>
+<td><p>3.2.0 (2020/3/3)</p></td>
+<td><p>3.2.0 (2020/3/3)</p></td>
+<td><p>1.5.0 (2015/10/29)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://github.com/numpy/numpy/releases">numpy</a></p></td>
+<td><p>1.21.2 (2021/8/15)</p></td>
+<td><p><strong>1.13.3</strong> (2017/7/6)</p></td>
+<td><p>1.16.5 (2019/8/27)</p></td>
+<td><p>1.18.0 (2019/12/22)</p></td>
+<td><p>1.19.0 (2020/1/20)</p></td>
+<td><p>1.10.0 (2015/10/5)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/scipy/scipy/releases">scipy</a></p></td>
+<td><p>1.7.1 (2021/8/1)</p></td>
+<td><p><strong>0.19.1</strong> (2017/6/23)</p></td>
+<td><p>1.3.3 (2019/11/23)</p></td>
+<td><p>1.4.0 (2019/12/16)</p></td>
+<td><p>1.5.0 (2020/6/21)</p></td>
+<td><p>0.11.0 (2012/9/24)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="doc_standard.html" title="Documentation Standard"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="tips.html" title="SpacePy Python Programming Tips"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+       <li><a href="index.html">documentation </a> &raquo;</li>
+
+        <li class="nav-item nav-item-this"><a href="">Dependency version support</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

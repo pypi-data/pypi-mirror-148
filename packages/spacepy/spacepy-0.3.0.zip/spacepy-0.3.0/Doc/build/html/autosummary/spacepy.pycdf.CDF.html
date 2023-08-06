@@ -1,0 +1,972 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.pycdf.CDF &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy.pycdf.Var" href="spacepy.pycdf.Var.html" />
+    <link rel="prev" title="pycdf - Python interface to CDF files" href="../pycdf.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.pycdf.Var.html" title="spacepy.pycdf.Var"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../pycdf.html" title="pycdf - Python interface to CDF files"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../pycdf.html" accesskey="U">pycdf - Python interface to CDF files</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.pycdf.CDF</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../pycdf.html"
+                          title="previous chapter">pycdf - Python interface to CDF files</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.pycdf.Var.html"
+                          title="next chapter">spacepy.pycdf.Var</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.pycdf.CDF.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-pycdf-cdf">
+<h1>spacepy.pycdf.CDF<a class="headerlink" href="#spacepy-pycdf-cdf" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="spacepy.pycdf.CDF">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">spacepy.pycdf.</span></span><span class="sig-name descname"><span class="pre">CDF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">masterpath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">create</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">readonly</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf-8'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/pycdf.html#CDF"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.pycdf.CDF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Python object representing a CDF file.</p>
+<p>Open or create a CDF file by creating an object of this class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>pathname</strong><span class="classifier">string</span></dt><dd><p>name of the file to open or create</p>
+</dd>
+<dt><strong>masterpath</strong><span class="classifier">string</span></dt><dd><p>name of the master CDF file to use in creating
+a new file. If not provided, an existing file is
+opened; if provided but evaluates to <code class="docutils literal notranslate"><span class="pre">False</span></code>
+(e.g., <code class="docutils literal notranslate"><span class="pre">''</span></code>), an empty new CDF is created.</p>
+</dd>
+<dt><strong>create</strong><span class="classifier">bool</span></dt><dd><p>Create a new CDF even if masterpath isn’t provided</p>
+</dd>
+<dt><strong>readonly</strong><span class="classifier">bool</span></dt><dd><p>Open the CDF read-only. Default True if opening an
+existing CDF; False if creating a new one. A readonly
+CDF with many variables may be slow to close on CDF library
+versions before 3.8.1. See <a class="reference internal" href="#spacepy.pycdf.CDF.readonly" title="spacepy.pycdf.CDF.readonly"><code class="xref py py-meth docutils literal notranslate"><span class="pre">readonly()</span></code></a>.</p>
+</dd>
+<dt><strong>encoding</strong><span class="classifier">str, optional</span></dt><dd><p>Text encoding to use when reading and writing strings. Default
+<code class="docutils literal notranslate"><span class="pre">'utf-8'</span></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><dl class="simple">
+<dt>CDFError</dt><dd><p>if CDF library reports an error</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Warns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>CDFWarning</dt><dd><p>if CDF library reports a warning and interpreter
+is set to error on warnings.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>Open a CDF by creating a CDF object, e.g.:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cdffile</span> <span class="o">=</span> <span class="n">pycdf</span><span class="o">.</span><span class="n">CDF</span><span class="p">(</span><span class="s1">&#39;cdf_filename.cdf&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Be sure to <a class="reference internal" href="#spacepy.pycdf.CDF.close" title="spacepy.pycdf.CDF.close"><code class="xref py py-meth docutils literal notranslate"><span class="pre">close()</span></code></a> or <a class="reference internal" href="#spacepy.pycdf.CDF.save" title="spacepy.pycdf.CDF.save"><code class="xref py py-meth docutils literal notranslate"><span class="pre">save()</span></code></a> when
+done.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Existing CDF files are opened read-only by default, see
+<a class="reference internal" href="#spacepy.pycdf.CDF.readonly" title="spacepy.pycdf.CDF.readonly"><code class="xref py py-meth docutils literal notranslate"><span class="pre">readonly()</span></code></a> to change.</p>
+</div>
+<p>CDF supports the <a class="reference external" href="http://docs.python.org/tutorial/inputoutput.html#methods-of-file-objects">with</a>
+keyword, like other file objects, so:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">pycdf</span><span class="o">.</span><span class="n">CDF</span><span class="p">(</span><span class="s1">&#39;cdf_filename.cdf&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">cdffile</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="c1">#do brilliant things with the CDF</span>
+</pre></div>
+</div>
+<p>will open the CDF, execute the indented statements, and close the CDF when
+finished or when an error occurs. The <a class="reference external" href="http://docs.python.org/reference/compound_stmts.html#with">python docs</a> include more
+detail on this ‘context manager’ ability.</p>
+<p>CDF objects behave like a python <a class="reference external" href="http://docs.python.org/tutorial/datastructures.html#dictionaries">dictionary</a>,
+where the keys are names of variables in the CDF, and the values,
+<a class="reference internal" href="spacepy.pycdf.Var.html#spacepy.pycdf.Var" title="spacepy.pycdf.Var"><code class="xref py py-class docutils literal notranslate"><span class="pre">Var</span></code></a> objects. As a dictionary, they are also <a class="reference external" href="http://docs.python.org/tutorial/classes.html#iterators">iterable</a> and it is easy
+to loop over all of the variables in a file. Some examples:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>List the names of all variables in the open CDF <code class="docutils literal notranslate"><span class="pre">cdffile</span></code>:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cdffile</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">cdffile</span><span class="p">:</span> <span class="c1">#Alternate</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Get a <a class="reference internal" href="spacepy.pycdf.Var.html#spacepy.pycdf.Var" title="spacepy.pycdf.Var"><code class="xref py py-class docutils literal notranslate"><span class="pre">Var</span></code></a> object for the variable named <code class="docutils literal notranslate"><span class="pre">Epoch</span></code>:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">epoch</span> <span class="o">=</span> <span class="n">cdffile</span><span class="p">[</span><span class="s1">&#39;Epoch&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p>Determine if a CDF contains a variable named <code class="docutils literal notranslate"><span class="pre">B_GSE</span></code>:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="s1">&#39;B_GSE&#39;</span> <span class="ow">in</span> <span class="n">cdffile</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;B_GSE is in the file&#39;</span><span class="p">)</span>
+<span class="gp">... </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;B_GSE is not in the file&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Find how many variables are in the file:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cdffile</span><span class="p">))</span>
+</pre></div>
+</div>
+</li>
+<li><p>Delete the variable <code class="docutils literal notranslate"><span class="pre">Epoch</span></code> from the open CDF file <code class="docutils literal notranslate"><span class="pre">cdffile</span></code>:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">del</span> <span class="n">cdffile</span><span class="p">[</span><span class="s1">&#39;Epoch&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p>Display a summary of variables and types in open CDF file <code class="docutils literal notranslate"><span class="pre">cdffile</span></code>:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">cdffile</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Open the CDF named <code class="docutils literal notranslate"><span class="pre">cdf_filename.cdf</span></code>, read <em>all</em> the data from
+all variables into dictionary <code class="docutils literal notranslate"><span class="pre">data</span></code>, and close it when done or
+if an error occurs:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">pycdf</span><span class="o">.</span><span class="n">CDF</span><span class="p">(</span><span class="s1">&#39;cdf_filename.cdf&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">cdffile</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">data</span> <span class="o">=</span> <span class="n">cdffile</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+<p>This last example can be very inefficient as it reads the entire CDF.
+Normally it’s better to treat the CDF as a dictionary and access only
+the data needed, which will be pulled transparently from disc. See
+<a class="reference internal" href="spacepy.pycdf.Var.html#spacepy.pycdf.Var" title="spacepy.pycdf.Var"><code class="xref py py-class docutils literal notranslate"><span class="pre">Var</span></code></a> for more subtle examples.</p>
+<p>Potentially useful dictionary methods and related functions:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="http://docs.python.org/reference/expressions.html#in">in</a></p></li>
+<li><p><a class="reference external" href="http://docs.python.org/tutorial/datastructures.html#dictionaries">keys</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#len" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">len()</span></code></a></p></li>
+<li><p><a class="reference external" href="http://docs.python.org/tutorial/datastructures.html#list-comprehensions">list comprehensions</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#sorted" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">sorted()</span></code></a></p></li>
+<li><p><a class="reference internal" href="spacepy.toolbox.dictree.html#spacepy.toolbox.dictree" title="spacepy.toolbox.dictree"><code class="xref py py-func docutils literal notranslate"><span class="pre">dictree()</span></code></a></p></li>
+</ul>
+</div></blockquote>
+<p>The CDF user’s guide section 2.2 has more background information on CDF
+files.</p>
+<p>The <a class="reference internal" href="#spacepy.pycdf.CDF.attrs" title="spacepy.pycdf.CDF.attrs"><code class="xref py py-attr docutils literal notranslate"><span class="pre">attrs</span></code></a> Python attribute acts as a dictionary
+referencing CDF attributes (do not confuse the two); all the
+dictionary methods above also work on the attribute dictionary.
+See <a class="reference internal" href="spacepy.pycdf.gAttrList.html#spacepy.pycdf.gAttrList" title="spacepy.pycdf.gAttrList"><code class="xref py py-class docutils literal notranslate"><span class="pre">gAttrList</span></code></a> for more on the dictionary of global
+attributes.</p>
+<p>Creating a new CDF from a master (skeleton) CDF has similar syntax to
+opening one:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cdffile</span> <span class="o">=</span> <span class="n">pycdf</span><span class="o">.</span><span class="n">CDF</span><span class="p">(</span><span class="s1">&#39;cdf_filename.cdf&#39;</span><span class="p">,</span> <span class="s1">&#39;master_cdf_filename.cdf&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This creates and opens <code class="docutils literal notranslate"><span class="pre">cdf_filename.cdf</span></code> as a copy of
+<code class="docutils literal notranslate"><span class="pre">master_cdf_filename.cdf</span></code>.</p>
+<p>Using a skeleton CDF is recommended over making a CDF entirely from
+scratch, but this is possible by specifying a blank master:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cdffile</span> <span class="o">=</span> <span class="n">pycdf</span><span class="o">.</span><span class="n">CDF</span><span class="p">(</span><span class="s1">&#39;cdf_filename.cdf&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>When CDFs are created in this way, they are opened read-write, see
+<a class="reference internal" href="#spacepy.pycdf.CDF.readonly" title="spacepy.pycdf.CDF.readonly"><code class="xref py py-meth docutils literal notranslate"><span class="pre">readonly()</span></code></a> to change.</p>
+<p>By default, new CDFs (without a master) are created in version 2
+(backward-compatible) format. To create a version 3 CDF, use
+<a class="reference internal" href="spacepy.pycdf.Library.html#spacepy.pycdf.Library.set_backward" title="spacepy.pycdf.Library.set_backward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Library.set_backward()</span></code></a>:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pycdf</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">set_backward</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cdffile</span> <span class="o">=</span> <span class="n">pycdf</span><span class="o">.</span><span class="n">CDF</span><span class="p">(</span><span class="s1">&#39;cdf_filename.cdf&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Add variables by direct assignment, which will automatically set type
+and dimension based on the data provided:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cdffile</span><span class="p">[</span><span class="s1">&#39;new_variable_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>or, if more control is needed over the type and dimensions, use
+<a class="reference internal" href="#spacepy.pycdf.CDF.new" title="spacepy.pycdf.CDF.new"><code class="xref py py-meth docutils literal notranslate"><span class="pre">new()</span></code></a>.</p>
+<p>Although it is supported to assign Var objects to Python variables
+for convenience, there are some minor pitfalls that can arise when
+changing a CDF that will not affect most users. This is only a
+concern when assigning a zVar object to a Python variable, changing the
+CDF through some other variable, and then trying to use the zVar
+object via the originally assigned variable.</p>
+<p>Deleting a variable:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">var</span> <span class="o">=</span> <span class="n">cdffile</span><span class="p">[</span><span class="s1">&#39;Var1&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">del</span> <span class="n">cdffile</span><span class="p">[</span><span class="s1">&#39;Var1&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">var</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#fail, no such variable</span>
+</pre></div>
+</div>
+<p>Renaming a variable:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">var</span> <span class="o">=</span> <span class="n">cdffile</span><span class="p">[</span><span class="s1">&#39;Var1&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cdffile</span><span class="p">[</span><span class="s1">&#39;Var1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;Var2&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">var</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#fail, no such variable</span>
+</pre></div>
+</div>
+<p>Renaming via the same variable works:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">var</span> <span class="o">=</span> <span class="n">cdffile</span><span class="p">[</span><span class="s1">&#39;Var1&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">var</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;Var2&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">var</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#succeeds, aware of new name</span>
+</pre></div>
+</div>
+<p>Deleting a variable and then creating another variable with the same name
+may lead to some surprises:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">var</span> <span class="o">=</span> <span class="n">cdffile</span><span class="p">[</span><span class="s1">&#39;Var1&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">var</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">del</span> <span class="n">cdffile</span><span class="p">[</span><span class="s1">&#39;Var1&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cdffile</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;Var1&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">var</span><span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="go">[5, 6, 7, 8]</span>
+</pre></div>
+</div>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.pycdf.CDF.attr_num" title="spacepy.pycdf.CDF.attr_num"><code class="xref py py-obj docutils literal notranslate"><span class="pre">attr_num</span></code></a>(attrname)</p></td>
+<td><p>Get the attribute number and scope by attribute name</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.pycdf.CDF.attrs" title="spacepy.pycdf.CDF.attrs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">attrs</span></code></a></p></td>
+<td><p>Global attributes for this CDF in a dict-like format.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.pycdf.CDF.add_attr_to_cache" title="spacepy.pycdf.CDF.add_attr_to_cache"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_attr_to_cache</span></code></a>(attrname, num, scope)</p></td>
+<td><p>Add an attribute to the name-to-number cache</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.pycdf.CDF.add_to_cache" title="spacepy.pycdf.CDF.add_to_cache"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_to_cache</span></code></a>(varname, num)</p></td>
+<td><p>Add a variable to the name-to-number cache</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.pycdf.CDF.checksum" title="spacepy.pycdf.CDF.checksum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">checksum</span></code></a>([new_val])</p></td>
+<td><p>Set or check the checksum status of this CDF.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.pycdf.CDF.clear_attr_from_cache" title="spacepy.pycdf.CDF.clear_attr_from_cache"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_attr_from_cache</span></code></a>(attrname)</p></td>
+<td><p>Mark an attribute deleted in the name-to-number cache</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.pycdf.CDF.clear_from_cache" title="spacepy.pycdf.CDF.clear_from_cache"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_from_cache</span></code></a>(varname)</p></td>
+<td><p>Mark a variable deleted in the name-to-number cache</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.pycdf.CDF.clone" title="spacepy.pycdf.CDF.clone"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clone</span></code></a>(zVar[, name, data])</p></td>
+<td><p>Clone a zVariable (from another CDF or this) into this CDF</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.pycdf.CDF.close" title="spacepy.pycdf.CDF.close"><code class="xref py py-obj docutils literal notranslate"><span class="pre">close</span></code></a>()</p></td>
+<td><p>Closes the CDF file</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.pycdf.CDF.col_major" title="spacepy.pycdf.CDF.col_major"><code class="xref py py-obj docutils literal notranslate"><span class="pre">col_major</span></code></a>([new_col])</p></td>
+<td><p>Finds the majority of this CDF file</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.pycdf.CDF.compress" title="spacepy.pycdf.CDF.compress"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compress</span></code></a>([comptype, param])</p></td>
+<td><p>Set or check the compression of this CDF</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.pycdf.CDF.copy" title="spacepy.pycdf.CDF.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>()</p></td>
+<td><p>Make a copy of all data and attributes in this CDF</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.pycdf.CDF.from_data" title="spacepy.pycdf.CDF.from_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_data</span></code></a>(filename, sd)</p></td>
+<td><p>Create a new CDF file from a SpaceData object or similar</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.pycdf.CDF.new" title="spacepy.pycdf.CDF.new"><code class="xref py py-obj docutils literal notranslate"><span class="pre">new</span></code></a>(name[, data, type, recVary, dimVarys, ...])</p></td>
+<td><p>Create a new zVariable in this CDF</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.pycdf.CDF.raw_var" title="spacepy.pycdf.CDF.raw_var"><code class="xref py py-obj docutils literal notranslate"><span class="pre">raw_var</span></code></a>(name)</p></td>
+<td><p>Get a &quot;raw&quot; <a class="reference internal" href="spacepy.pycdf.Var.html#spacepy.pycdf.Var" title="spacepy.pycdf.Var"><code class="xref py py-class docutils literal notranslate"><span class="pre">Var</span></code></a> object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.pycdf.CDF.readonly" title="spacepy.pycdf.CDF.readonly"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readonly</span></code></a>([ro])</p></td>
+<td><p>Sets or check the readonly status of this CDF</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.pycdf.CDF.save" title="spacepy.pycdf.CDF.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>()</p></td>
+<td><p>Saves the CDF file but leaves it open.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.pycdf.CDF.var_num" title="spacepy.pycdf.CDF.var_num"><code class="xref py py-obj docutils literal notranslate"><span class="pre">var_num</span></code></a>(varname)</p></td>
+<td><p>Get the variable number of a particular variable name</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.pycdf.CDF.version" title="spacepy.pycdf.CDF.version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">version</span></code></a>()</p></td>
+<td><p>Get version of library that created this CDF</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="spacepy.pycdf.CDF.attrs">
+<span class="sig-name descname"><span class="pre">attrs</span></span><a class="headerlink" href="#spacepy.pycdf.CDF.attrs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Global attributes for this CDF in a dict-like format.
+See <a class="reference internal" href="spacepy.pycdf.gAttrList.html#spacepy.pycdf.gAttrList" title="spacepy.pycdf.gAttrList"><code class="xref py py-class docutils literal notranslate"><span class="pre">gAttrList</span></code></a> for details.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="spacepy.pycdf.CDF.backward">
+<span class="sig-name descname"><span class="pre">backward</span></span><a class="headerlink" href="#spacepy.pycdf.CDF.backward" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if this CDF was created in backward-compatible mode
+(for opening with CDF library before 3.x)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.pycdf.CDF.add_to_cache">
+<span class="sig-name descname"><span class="pre">add_to_cache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">varname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/pycdf.html#CDF.add_to_cache"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.pycdf.CDF.add_to_cache" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a variable to the name-to-number cache</p>
+<p>This maintains a cache of name-to-number mappings for zVariables
+to keep from having to query the CDF library constantly. It’s mostly
+an internal function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>varname</strong><span class="classifier">bytes</span></dt><dd><p>name of the zVariable. Not this is NOT a string in Python 3!</p>
+</dd>
+<dt><strong>num</strong><span class="classifier">int</span></dt><dd><p>number of the variable</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.pycdf.CDF.add_attr_to_cache">
+<span class="sig-name descname"><span class="pre">add_attr_to_cache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scope</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/pycdf.html#CDF.add_attr_to_cache"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.pycdf.CDF.add_attr_to_cache" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an attribute to the name-to-number cache</p>
+<p>This maintains a cache of name-to-number mappings for attributes
+to keep from having to query the CDF library constantly. It’s mostly
+an internal function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>varname</strong><span class="classifier">bytes</span></dt><dd><p>name of the zVariable. Not this is NOT a string in Python 3!</p>
+</dd>
+<dt><strong>num</strong><span class="classifier">int</span></dt><dd><p>number of the variable</p>
+</dd>
+<dt><strong>scope</strong><span class="classifier">bool</span></dt><dd><p>True if global scope; False if variable scope.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.pycdf.CDF.attr_num">
+<span class="sig-name descname"><span class="pre">attr_num</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrname</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/pycdf.html#CDF.attr_num"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.pycdf.CDF.attr_num" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the attribute number and scope by attribute name</p>
+<p>This maintains a cache of name-to-number mappings for attributes
+to keep from having to query the CDF library constantly. It’s mostly
+an internal function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>attrname</strong><span class="classifier">bytes</span></dt><dd><p>name of the attribute. Not this is NOT a string in Python 3!</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">tuple</span></dt><dd><p>attribute number, scope (True for global) of this attribute</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>CDFError</strong><span class="classifier">if attribute is not found</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.pycdf.CDF.checksum">
+<span class="sig-name descname"><span class="pre">checksum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/pycdf.html#CDF.checksum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.pycdf.CDF.checksum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set or check the checksum status of this CDF. If checksums
+are enabled, the checksum will be verified every time the file
+is opened.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">boolean</span></dt><dd><p>True if the checksum is enabled or False if disabled</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Other Parameters</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>new_val</strong><span class="classifier">boolean</span></dt><dd><p>True to enable checksum, False to disable, or leave out
+to simply check.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.pycdf.CDF.clear_from_cache">
+<span class="sig-name descname"><span class="pre">clear_from_cache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">varname</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/pycdf.html#CDF.clear_from_cache"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.pycdf.CDF.clear_from_cache" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mark a variable deleted in the name-to-number cache</p>
+<p>Will remove a variable, and all variables with higher numbers,
+from the variable cache.</p>
+<p>Does NOT delete the variable!</p>
+<p>This maintains a cache of name-to-number mappings for zVariables
+to keep from having to query the CDF library constantly. It’s mostly
+an internal function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>varname</strong><span class="classifier">bytes</span></dt><dd><p>name of the zVariable. Not this is NOT a string in Python 3!</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.pycdf.CDF.clear_attr_from_cache">
+<span class="sig-name descname"><span class="pre">clear_attr_from_cache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrname</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/pycdf.html#CDF.clear_attr_from_cache"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.pycdf.CDF.clear_attr_from_cache" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mark an attribute deleted in the name-to-number cache</p>
+<p>Will remove an attribute, and all attributes with higher numbers,
+from the attribute cache.</p>
+<p>Does NOT delete the variable!</p>
+<p>This maintains a cache of name-to-number mappings for attributes
+to keep from having to query the CDF library constantly. It’s mostly
+an internal function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>attrname</strong><span class="classifier">bytes</span></dt><dd><p>name of the attribute. Not this is NOT a string in Python 3!</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.pycdf.CDF.clone">
+<span class="sig-name descname"><span class="pre">clone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zVar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/pycdf.html#CDF.clone"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.pycdf.CDF.clone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clone a zVariable (from another CDF or this) into this CDF</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>zVar</strong><span class="classifier"><a class="reference internal" href="spacepy.pycdf.Var.html#spacepy.pycdf.Var" title="spacepy.pycdf.Var"><code class="xref py py-class docutils literal notranslate"><span class="pre">Var</span></code></a></span></dt><dd><p>variable to clone</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl>
+<dt><strong>out</strong><span class="classifier"><a class="reference internal" href="spacepy.pycdf.Var.html#spacepy.pycdf.Var" title="spacepy.pycdf.Var"><code class="xref py py-class docutils literal notranslate"><span class="pre">Var</span></code></a></span></dt><dd><p>The newly-created zVar in this CDF</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Other Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong><span class="classifier">str</span></dt><dd><p>Name of the new variable (default: name of the original)</p>
+</dd>
+<dt><strong>data</strong><span class="classifier">boolean (optional)</span></dt><dd><p>Copy data, or only type, dimensions, variance, attributes?
+(default: True, copy data as well)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.pycdf.CDF.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/pycdf.html#CDF.close"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.pycdf.CDF.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Closes the CDF file</p>
+<p>Although called on object destruction (<code class="xref py py-meth docutils literal notranslate"><span class="pre">__del__()</span></code>),
+to ensure all data are saved, the user should explicitly call
+<a class="reference internal" href="#spacepy.pycdf.CDF.close" title="spacepy.pycdf.CDF.close"><code class="xref py py-meth docutils literal notranslate"><span class="pre">close()</span></code></a> or <a class="reference internal" href="#spacepy.pycdf.CDF.save" title="spacepy.pycdf.CDF.save"><code class="xref py py-meth docutils literal notranslate"><span class="pre">save()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>CDFError</strong><span class="classifier">if CDF library reports an error</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Warns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>CDFWarning</strong><span class="classifier">if CDF library reports a warning</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.pycdf.CDF.col_major">
+<span class="sig-name descname"><span class="pre">col_major</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/pycdf.html#CDF.col_major"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.pycdf.CDF.col_major" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds the majority of this CDF file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">boolean</span></dt><dd><p>True if column-major, false if row-major</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Other Parameters</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>new_col</strong><span class="classifier">boolean</span></dt><dd><p>Specify True to change to column-major, False to change to
+row major, or do not specify to check the majority
+rather than changing it.
+(default is check only)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.pycdf.CDF.compress">
+<span class="sig-name descname"><span class="pre">compress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">comptype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/pycdf.html#CDF.compress"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.pycdf.CDF.compress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set or check the compression of this CDF</p>
+<p>Sets compression on entire <em>file</em>, not per-variable.</p>
+<p>See section 2.6 of the CDF user’s guide for more information on
+compression.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">tuple</span></dt><dd><p>(comptype, param) currently in effect</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Other Parameters</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>comptype</strong><span class="classifier">ctypes.c_long</span></dt><dd><p>type of compression to change to, see CDF C reference manual
+section 4.10. Constants for this parameter are in
+<a class="reference internal" href="spacepy.pycdf.const.html#module-spacepy.pycdf.const" title="spacepy.pycdf.const"><code class="xref py py-mod docutils literal notranslate"><span class="pre">const</span></code></a>. If not specified, will not change
+compression.</p>
+</dd>
+<dt><strong>param</strong><span class="classifier">ctypes.c_long</span></dt><dd><p>Compression parameter, see CDF CRM 4.10 and
+<a class="reference internal" href="spacepy.pycdf.const.html#module-spacepy.pycdf.const" title="spacepy.pycdf.const"><code class="xref py py-mod docutils literal notranslate"><span class="pre">const</span></code></a>.
+If not specified, will choose reasonable default (5 for gzip;
+other types have only one possible parameter.)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="spacepy.pycdf.Var.html#spacepy.pycdf.Var.compress" title="spacepy.pycdf.Var.compress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Var.compress()</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<dl>
+<dt>Set file <code class="docutils literal notranslate"><span class="pre">cdffile</span></code> to gzip compression, compression level 9:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cdffile</span><span class="o">.</span><span class="n">compress</span><span class="p">(</span><span class="n">pycdf</span><span class="o">.</span><span class="n">const</span><span class="o">.</span><span class="n">GZIP_COMPRESSION</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.pycdf.CDF.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/pycdf.html#CDF.copy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.pycdf.CDF.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make a copy of all data and attributes in this CDF</p>
+<dl class="field-list">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl>
+<dt><strong>out</strong><span class="classifier"><a class="reference internal" href="spacepy.pycdf.CDFCopy.html#spacepy.pycdf.CDFCopy" title="spacepy.pycdf.CDFCopy"><code class="xref py py-class docutils literal notranslate"><span class="pre">CDFCopy</span></code></a></span></dt><dd><p><a class="reference internal" href="spacepy.datamodel.SpaceData.html#spacepy.datamodel.SpaceData" title="spacepy.datamodel.SpaceData"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceData</span></code></a>-like object of all data</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.pycdf.CDF.from_data">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sd</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/pycdf.html#CDF.from_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.pycdf.CDF.from_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new CDF file from a SpaceData object or similar</p>
+<p>The CDF named <code class="docutils literal notranslate"><span class="pre">filename</span></code> is created, opened, filled with the
+contents of <code class="docutils literal notranslate"><span class="pre">sd</span></code> (including attributes), and closed.</p>
+<p><code class="docutils literal notranslate"><span class="pre">sd</span></code> should be a dictionary-like object; each key will be made
+into a variable name. An attribute called <code class="docutils literal notranslate"><span class="pre">attrs</span></code>, if it exists,
+will be made into global attributes for the CDF.</p>
+<p>Each value of <code class="docutils literal notranslate"><span class="pre">sd</span></code> should be array-like and will be used as
+the contents of the variable; an attribute called <code class="docutils literal notranslate"><span class="pre">attrs</span></code>, if
+it exists, will be made into attributes for that variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>filename</strong><span class="classifier">string</span></dt><dd><p>name of the file to create</p>
+</dd>
+<dt><strong>sd</strong><span class="classifier">spacepy.datamodel.SpaceData</span></dt><dd><p>data to put in the CDF. This structure cannot be nested,
+i.e., it must contain only <a class="reference internal" href="spacepy.datamodel.dmarray.html#spacepy.datamodel.dmarray" title="spacepy.datamodel.dmarray"><code class="xref py py-class docutils literal notranslate"><span class="pre">dmarray</span></code></a>
+and no <code class="xref py py-class docutils literal notranslate"><span class="pre">Spacedata</span></code> objects.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.pycdf.CDF.new">
+<span class="sig-name descname"><span class="pre">new</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recVary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimVarys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dims</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_elements</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compress_param</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sparse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pad</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/pycdf.html#CDF.new"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.pycdf.CDF.new" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new zVariable in this CDF</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Either <code class="docutils literal notranslate"><span class="pre">data</span></code> or <code class="docutils literal notranslate"><span class="pre">type</span></code> must be specified. If type is not
+specified, it is guessed from <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p>
+</div>
+<p>This creates a new variable. If using a “master CDF” with
+existing variables and no records, simply assign the new data
+to the variable, or the “whole variable” slice:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cdf</span><span class="p">[</span><span class="s1">&#39;ExistingVariable&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cdf</span><span class="p">[</span><span class="s1">&#39;ExistingVariable&#39;</span><span class="p">][</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span>
+</pre></div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong><span class="classifier">str</span></dt><dd><p>name of the new variable</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl>
+<dt><strong>out</strong><span class="classifier"><a class="reference internal" href="spacepy.pycdf.Var.html#spacepy.pycdf.Var" title="spacepy.pycdf.Var"><code class="xref py py-class docutils literal notranslate"><span class="pre">Var</span></code></a></span></dt><dd><p>the newly-created zVariable</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Other Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>data</strong></dt><dd><p>data to store in the new variable. If this has a an
+<code class="docutils literal notranslate"><span class="pre">attrs</span></code> attribute (e.g.,
+<a class="reference internal" href="spacepy.datamodel.dmarray.html#spacepy.datamodel.dmarray" title="spacepy.datamodel.dmarray"><code class="xref py py-class docutils literal notranslate"><span class="pre">dmarray</span></code></a>), it will be used to
+populate attributes of the new variable. Similarly the CDF
+type, record variance, etc. will, by default, be taken
+from <cite>data</cite> if it is a
+<a class="reference internal" href="spacepy.pycdf.VarCopy.html#spacepy.pycdf.VarCopy" title="spacepy.pycdf.VarCopy"><code class="xref py py-class docutils literal notranslate"><span class="pre">VarCopy</span></code></a>. This can be overridden by
+specifying other keywords.</p>
+</dd>
+<dt><strong>type</strong><span class="classifier">ctypes.c_long</span></dt><dd><p>CDF type of the variable, from <a class="reference internal" href="spacepy.pycdf.const.html#module-spacepy.pycdf.const" title="spacepy.pycdf.const"><code class="xref py py-mod docutils literal notranslate"><span class="pre">const</span></code></a>.
+See section 2.5 of the CDF user’s guide for more information on
+CDF data types.</p>
+</dd>
+<dt><strong>recVary</strong><span class="classifier">boolean</span></dt><dd><p>record variance of the variable (default True)</p>
+</dd>
+<dt><strong>dimVarys</strong><span class="classifier">list of boolean</span></dt><dd><p>dimension variance of each dimension, default True for all
+dimensions.</p>
+</dd>
+<dt><strong>dims</strong><span class="classifier">list of int</span></dt><dd><p>size of each dimension of this variable, default zero-dimensional.
+Note this is the dimensionality as defined by CDF, i.e., for
+record-varying variables it excludes the leading record dimension.
+See <a class="reference internal" href="spacepy.pycdf.Var.html#spacepy.pycdf.Var" title="spacepy.pycdf.Var"><code class="xref py py-class docutils literal notranslate"><span class="pre">Var</span></code></a>.</p>
+</dd>
+<dt><strong>n_elements</strong><span class="classifier">int</span></dt><dd><p>number of elements, should be 1 except for CDF_CHAR,
+for which it’s the length of the string.</p>
+</dd>
+<dt><strong>compress</strong><span class="classifier">ctypes.c_long</span></dt><dd><p>Compression to apply to this variable, default None.
+See <a class="reference internal" href="spacepy.pycdf.Var.html#spacepy.pycdf.Var.compress" title="spacepy.pycdf.Var.compress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Var.compress()</span></code></a>.</p>
+</dd>
+<dt><strong>compress_param</strong><span class="classifier">ctypes.c_long</span></dt><dd><p>Compression parameter if compression used; reasonable default
+is chosen. See <a class="reference internal" href="spacepy.pycdf.Var.html#spacepy.pycdf.Var.compress" title="spacepy.pycdf.Var.compress"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Var.compress()</span></code></a>.</p>
+</dd>
+<dt><strong>sparse</strong><span class="classifier">ctypes.c_long</span></dt><dd><div class="versionadded">
+<p><span class="versionmodified added">New in version 0.2.3.</span></p>
+</div>
+<p>Sparse records type for this variable, default None (no sparse
+records). See <a class="reference internal" href="spacepy.pycdf.Var.html#spacepy.pycdf.Var.sparse" title="spacepy.pycdf.Var.sparse"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Var.sparse()</span></code></a>.</p>
+</dd>
+<dt><strong>pad</strong></dt><dd><div class="versionadded">
+<p><span class="versionmodified added">New in version 0.2.3.</span></p>
+</div>
+<p>Pad value for this variable, default None (do not set). See
+<a class="reference internal" href="spacepy.pycdf.Var.html#spacepy.pycdf.Var.pad" title="spacepy.pycdf.Var.pad"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Var.pad()</span></code></a>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>ValueError</strong><span class="classifier">if neither data nor sufficient typing information</span></dt><dd><p>is provided.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Warns</dt>
+<dd class="field-odd"><dl>
+<dt>DeprecationWarning</dt><dd><p>if no type is provided and data is datetime, warn
+that a default type was chosen (usually TIME_TT2000).</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 0.3.0: </span>Before 0.3.0 (when the default changed from EPOCH/EPOCH16
+to TIME_TT2000), this warned that the default would change.</p>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 0.2.3.</span></p>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Any given data may be representable by a range of CDF types; if
+the type is not specified, pycdf will guess which
+the CDF types which can represent this data. This breaks down to:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>If input data is a numpy array, match the type of that array</p></li>
+<li><p>Proper kind (numerical, string, time)</p></li>
+<li><p>Proper range (stores highest and lowest number provided)</p></li>
+<li><p>Sufficient resolution (EPOCH16 or TIME_TT2000 required if datetime
+has microseconds or below.)</p></li>
+</ol>
+</div></blockquote>
+<p>If more than one value satisfies the requirements, types are returned
+in preferred order:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Type that matches precision of data first, then</p></li>
+<li><p>integer type before float type, then</p></li>
+<li><p>Smallest type first, then</p></li>
+<li><p>signed type first, then</p></li>
+<li><p>specifically-named (CDF_BYTE) vs. generically named (CDF_INT1)</p></li>
+</ol>
+</div></blockquote>
+<p>TIME_TT2000 is always the preferred time type if it is available.
+Otherwise, EPOCH_16 is preferred over EPOCH if <code class="docutils literal notranslate"><span class="pre">data</span></code> specifies
+below the millisecond level (rule 1), but otherwise EPOCH is preferred
+(rule 2).</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 0.3.0: </span>Before 0.3.0, EPOCH or EPOCH_16 were used if not specified. Now
+TIME_TT2000 is always the preferred type.</p>
+</div>
+<p>For floats, four-byte is preferred unless eight-byte is required:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>absolute values between 0 and 3e-39</p></li>
+<li><p>absolute values greater than 1.7e38</p></li>
+</ol>
+</div></blockquote>
+<p>This will switch to an eight-byte double in some cases where four bytes
+would be sufficient for IEEE 754 encoding, but where DEC formats would
+require eight.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.pycdf.CDF.raw_var">
+<span class="sig-name descname"><span class="pre">raw_var</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/pycdf.html#CDF.raw_var"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.pycdf.CDF.raw_var" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a “raw” <a class="reference internal" href="spacepy.pycdf.Var.html#spacepy.pycdf.Var" title="spacepy.pycdf.Var"><code class="xref py py-class docutils literal notranslate"><span class="pre">Var</span></code></a> object.</p>
+<p>Normally a <a class="reference internal" href="spacepy.pycdf.Var.html#spacepy.pycdf.Var" title="spacepy.pycdf.Var"><code class="xref py py-class docutils literal notranslate"><span class="pre">Var</span></code></a> will perform translation of values for
+certain types (to/from Unicode for CHAR variables on Py3k,
+and to/from datetime for all time types). A “raw” object
+does not perform this translation, on read or write.</p>
+<p>This does <em>not</em> affect the data on disk, and in fact it
+is possible to maintain multiple Python objects with access
+to the same zVariable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong><span class="classifier">str</span></dt><dd><p>name or number of the zVariable</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.pycdf.CDF.readonly">
+<span class="sig-name descname"><span class="pre">readonly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ro</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/pycdf.html#CDF.readonly"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.pycdf.CDF.readonly" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets or check the readonly status of this CDF</p>
+<p>If the CDF has been changed since opening, setting readonly mode
+will have no effect.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Before version 3.8.1 of the NASA CDF library,
+closing a CDF that has been opened readonly, or setting readonly
+False, may take a substantial amount of time if there are many
+variables in the CDF, as a (potentially large) cache needs to
+be cleared. If upgrading to a newer CDF library is not possible,
+specifying <code class="docutils literal notranslate"><span class="pre">readonly=False</span></code> when opening the file is an option.
+However, this may make some reading operations slower.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">Boolean</span></dt><dd><p>True if CDF is read-only, else False</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Other Parameters</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>ro</strong><span class="classifier">Boolean</span></dt><dd><p>True to set the CDF readonly, False to set it read/write,
+or leave out to check only.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>CDFError</strong><span class="classifier">if bad mode is set</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.pycdf.CDF.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/pycdf.html#CDF.save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.pycdf.CDF.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves the CDF file but leaves it open.</p>
+<p>If closing the CDF, <a class="reference internal" href="#spacepy.pycdf.CDF.close" title="spacepy.pycdf.CDF.close"><code class="xref py py-meth docutils literal notranslate"><span class="pre">close()</span></code></a> is sufficient;
+there is no need to call
+<a class="reference internal" href="#spacepy.pycdf.CDF.save" title="spacepy.pycdf.CDF.save"><code class="xref py py-meth docutils literal notranslate"><span class="pre">save()</span></code></a> before <a class="reference internal" href="#spacepy.pycdf.CDF.close" title="spacepy.pycdf.CDF.close"><code class="xref py py-meth docutils literal notranslate"><span class="pre">close()</span></code></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Relies on an undocumented call of the CDF C library, which is
+also used in the Java interface.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>CDFError</strong><span class="classifier">if CDF library reports an error</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Warns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>CDFWarning</strong><span class="classifier">if CDF library reports a warning</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.pycdf.CDF.var_num">
+<span class="sig-name descname"><span class="pre">var_num</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">varname</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/pycdf.html#CDF.var_num"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.pycdf.CDF.var_num" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the variable number of a particular variable name</p>
+<p>This maintains a cache of name-to-number mappings for zVariables
+to keep from having to query the CDF library constantly. It’s mostly
+an internal function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>varname</strong><span class="classifier">bytes</span></dt><dd><p>name of the zVariable. Not this is NOT a string in Python 3!</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">int</span></dt><dd><p>Variable number of this zvariable.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>CDFError</strong><span class="classifier">if variable is not found</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.pycdf.CDF.version">
+<span class="sig-name descname"><span class="pre">version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/pycdf.html#CDF.version"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.pycdf.CDF.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get version of library that created this CDF</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">tuple</span></dt><dd><p>version of CDF library, in form (version, release, increment)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.pycdf.Var.html" title="spacepy.pycdf.Var"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../pycdf.html" title="pycdf - Python interface to CDF files"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../pycdf.html" >pycdf - Python interface to CDF files</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.pycdf.CDF</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.plot.spectrogram.Spectrogram &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="spacepy.plot.spectrogram.simpleSpectrogram" href="spacepy.plot.spectrogram.simpleSpectrogram.html" />
+    <link rel="prev" title="spacepy.plot.spectrogram" href="../spacepy.plot.spectrogram.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../index.html"><img src="../../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.plot.spectrogram.simpleSpectrogram.html" title="spacepy.plot.spectrogram.simpleSpectrogram"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../spacepy.plot.spectrogram.html" title="spacepy.plot.spectrogram"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../../search.html">search</a>|&nbsp;</li>
+       <li><a href="../../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../../plot.html" >plot - Plot, various specialized plotting functions and associated utilities</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../spacepy.plot.spectrogram.html" accesskey="U">spacepy.plot.spectrogram</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.plot.spectrogram.Spectrogram</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../spacepy.plot.spectrogram.html"
+                          title="previous chapter">spacepy.plot.spectrogram</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.plot.spectrogram.simpleSpectrogram.html"
+                          title="next chapter">spacepy.plot.spectrogram.simpleSpectrogram</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/autosummary/autosummary/spacepy.plot.spectrogram.Spectrogram.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-plot-spectrogram-spectrogram">
+<h1>spacepy.plot.spectrogram.Spectrogram<a class="headerlink" href="#spacepy-plot-spectrogram-spectrogram" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="spacepy.plot.spectrogram.Spectrogram">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">spacepy.plot.spectrogram.</span></span><span class="sig-name descname"><span class="pre">Spectrogram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/spacepy/plot/spectrogram.html#Spectrogram"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.plot.spectrogram.Spectrogram" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class rebins data to produce a 2D data map that can be plotted as a spectrogram</p>
+<p>It is meant to be used on arbitrary data series.  The first series “x” is
+plotted on the abscissa and second series “y” is plotted on the ordinate and
+the third series “z” is plotted in color.</p>
+<p>The series are not passed in independently but instead inside a
+<a class="reference internal" href="../spacepy.datamodel.SpaceData.html#spacepy.datamodel.SpaceData" title="spacepy.datamodel.SpaceData"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceData</span></code></a> container.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>data</strong><span class="classifier"><a class="reference internal" href="../spacepy.datamodel.SpaceData.html#spacepy.datamodel.SpaceData" title="spacepy.datamodel.SpaceData"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpaceData</span></code></a></span></dt><dd><p>The data for the spectrogram, the variables to be used default to
+“Epoch” for x, “Energy” for y, and “Flux” for z.  Other names are
+specified using the ‘variables’ keyword.  All keywords override .attrs
+contents.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Other Parameters</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>variables</strong><span class="classifier">list</span></dt><dd><p>keyword containing the names of the variables to use for the spectrogram
+the list is a list of the SpaceData keys in x, y, z, order</p>
+</dd>
+<dt><strong>bins</strong><span class="classifier">list</span></dt><dd><p>if the name “bins” is not specified in the .attrs of the dmarray variable
+this specifies the bins for each variable in a
+[[xbins], [ybins]] format</p>
+</dd>
+<dt><strong>xlim</strong><span class="classifier">list</span></dt><dd><p>if the name “lim” is not specified in the .attrs of the dmarray variable
+this specifies the limit for the x variable [xlow, xhigh]</p>
+</dd>
+<dt><strong>ylim</strong><span class="classifier">list</span></dt><dd><p>if the name “lim” is not specified in the .attrs of the dmarray variable
+this specifies the limit for the y variable [ylow, yhigh]</p>
+</dd>
+<dt><strong>zlim</strong><span class="classifier">list</span></dt><dd><p>if the name “lim” is not specified in the .attrs of the dmarray variable
+this specifies the limit for the z variable [zlow, zhigh]</p>
+</dd>
+<dt><strong>extended_out</strong><span class="classifier">bool (optional)</span></dt><dd><p>if this is True add more information to the output data model (default True)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Helper routines are planned to
+facilitate the creation of the SpaceData container if the data are not in the format.</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.datamodel</span> <span class="k">as</span> <span class="nn">dm</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.plot</span> <span class="k">as</span> <span class="nn">splot</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sd</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">SpaceData</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sd</span><span class="p">[</span><span class="s1">&#39;radius&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">dmarray</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">500</span><span class="p">))</span><span class="o">+</span><span class="mi">4</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;units&#39;</span><span class="p">:</span><span class="s1">&#39;km&#39;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sd</span><span class="p">[</span><span class="s1">&#39;day_of_year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">dmarray</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">74</span><span class="p">,</span><span class="mi">77</span><span class="p">,</span><span class="mi">500</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sd</span><span class="p">[</span><span class="s1">&#39;1D_dataset&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">dmarray</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">500</span><span class="p">)</span><span class="o">*</span><span class="n">sd</span><span class="p">[</span><span class="s1">&#39;radius&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">spec</span> <span class="o">=</span> <span class="n">splot</span><span class="o">.</span><span class="n">Spectrogram</span><span class="p">(</span><span class="n">sd</span><span class="p">,</span> <span class="n">variables</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;day_of_year&#39;</span><span class="p">,</span> <span class="s1">&#39;radius&#39;</span><span class="p">,</span> <span class="s1">&#39;1D_dataset&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ax</span> <span class="o">=</span> <span class="n">spec</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.plot.spectrogram.Spectrogram.plot" title="spacepy.plot.spectrogram.Spectrogram.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></a>([target, loc, figsize])</p></td>
+<td><p>Plot the spectrogram</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.plot.spectrogram.Spectrogram.plot">
+<span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">111</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/spacepy/plot/spectrogram.html#Spectrogram.plot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.plot.spectrogram.Spectrogram.plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot the spectrogram</p>
+<dl class="field-list simple">
+<dt class="field-odd">Other Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>title</strong><span class="classifier">str</span></dt><dd><p>plot title (default ‘’)</p>
+</dd>
+<dt><strong>xlabel</strong><span class="classifier">str</span></dt><dd><p>x axis label (default ‘’)</p>
+</dd>
+<dt><strong>ylabel</strong><span class="classifier">str</span></dt><dd><p>y axis label (default ‘’)</p>
+</dd>
+<dt><strong>colorbar_label</strong><span class="classifier">str</span></dt><dd><p>colorbar label (default ‘’)</p>
+</dd>
+<dt><strong>DateFormatter</strong><span class="classifier">matplotlib.dates.DateFormatter</span></dt><dd><p>The formatting to use on the dates on the x-axis (default matplotlib.dates.DateFormatter(“%d %b %Y”))</p>
+</dd>
+<dt><strong>zlog</strong><span class="classifier">bool</span></dt><dd><p>plot the z variable on a log scale (default True)</p>
+</dd>
+<dt><strong>cmap</strong><span class="classifier">matplotlib Colormap</span></dt><dd><p>colormap instance to use</p>
+</dd>
+<dt><strong>colorbar</strong><span class="classifier">bool</span></dt><dd><p>plot the colorbar (default True)</p>
+</dd>
+<dt><strong>axis</strong><span class="classifier">matplotlib axis object</span></dt><dd><p>axis to plot the spectrogram to</p>
+</dd>
+<dt><strong>zlim</strong><span class="classifier">np.array</span></dt><dd><p>array like 2 element that overrides (interior) the spectrogram zlim (default Spectrogram.specSettings[‘zlim’])</p>
+</dd>
+<dt><strong>figsize</strong><span class="classifier">tuple (optional)</span></dt><dd><p>tuple of size to pass to figure(), None does the default</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.plot.spectrogram.simpleSpectrogram.html" title="spacepy.plot.spectrogram.simpleSpectrogram"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../spacepy.plot.spectrogram.html" title="spacepy.plot.spectrogram"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../../search.html">search</a>|&nbsp;</li>
+       <li><a href="../../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../../plot.html" >plot - Plot, various specialized plotting functions and associated utilities</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../spacepy.plot.spectrogram.html" >spacepy.plot.spectrogram</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.plot.spectrogram.Spectrogram</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

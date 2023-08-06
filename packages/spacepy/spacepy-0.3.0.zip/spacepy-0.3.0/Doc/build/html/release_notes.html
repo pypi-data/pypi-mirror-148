@@ -1,0 +1,626 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Release Notes &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="SpacePy Case Studies" href="case_studies.html" />
+    <link rel="prev" title="SpacePy Capabilities" href="capabilities.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="index.html"><img src="_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="case_studies.html" title="SpacePy Case Studies"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="capabilities.html" title="SpacePy Capabilities"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+       <li><a href="index.html">documentation </a> &raquo;</li>
+
+        <li class="nav-item nav-item-this"><a href="">Release Notes</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Release Notes</a><ul>
+<li><a class="reference internal" href="#series">0.3 Series</a><ul>
+<li><a class="reference internal" href="#id1">0.3.0 (2022-04-27)</a><ul>
+<li><a class="reference internal" href="#new-features">New features</a></li>
+<li><a class="reference internal" href="#deprecations-and-removals">Deprecations and removals</a></li>
+<li><a class="reference internal" href="#dependency-requirements">Dependency requirements</a></li>
+<li><a class="reference internal" href="#other-changes">Other changes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id2">0.2 Series</a><ul>
+<li><a class="reference internal" href="#id3">0.2.3 (2021-10-30)</a><ul>
+<li><a class="reference internal" href="#id4">New features</a></li>
+<li><a class="reference internal" href="#id5">Deprecations and removals</a></li>
+<li><a class="reference internal" href="#major-bugfixes">Major bugfixes</a></li>
+<li><a class="reference internal" href="#id8">Other changes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id9">0.2.2 (2020-12-29)</a><ul>
+<li><a class="reference internal" href="#id10">New features</a></li>
+<li><a class="reference internal" href="#id11">Deprecations and removals</a></li>
+<li><a class="reference internal" href="#id12">Dependency requirements</a></li>
+<li><a class="reference internal" href="#id13">Major bugfixes</a></li>
+<li><a class="reference internal" href="#id14">Other changes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id15">0.2.1 (2019-10-02)</a><ul>
+<li><a class="reference internal" href="#id16">New features</a></li>
+<li><a class="reference internal" href="#id17">Deprecations and removals</a></li>
+<li><a class="reference internal" href="#id18">Dependency requirements</a></li>
+<li><a class="reference internal" href="#id19">Major bugfixes</a></li>
+<li><a class="reference internal" href="#id20">Other changes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id21">0.2.0 (2019-06-22)</a><ul>
+<li><a class="reference internal" href="#id22">New features</a></li>
+<li><a class="reference internal" href="#id23">Deprecations and removals</a></li>
+<li><a class="reference internal" href="#id24">Dependency requirements</a></li>
+<li><a class="reference internal" href="#id25">Major bugfixes</a></li>
+<li><a class="reference internal" href="#id26">Other changes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id27">0.1 Series</a><ul>
+<li><a class="reference internal" href="#id28">0.1.6 (2016-09-08)</a></li>
+<li><a class="reference internal" href="#id29">0.1.5 (2014-12-23)</a></li>
+<li><a class="reference internal" href="#id30">0.1.4 (2013-05-21)</a></li>
+<li><a class="reference internal" href="#id31">0.1.3 (2012-06-22)</a></li>
+<li><a class="reference internal" href="#id32">0.1.2 (2012-05-25)</a></li>
+<li><a class="reference internal" href="#id33">0.1.1 (2011-10-31)</a></li>
+<li><a class="reference internal" href="#id34">0.1 (2011-08-24)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="capabilities.html"
+                          title="previous chapter">SpacePy Capabilities</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="case_studies.html"
+                          title="next chapter">SpacePy Case Studies</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/release_notes.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="release-notes">
+<h1>Release Notes<a class="headerlink" href="#release-notes" title="Permalink to this headline">¶</a></h1>
+<p>This document presents user-visible changes in each release of SpacePy.</p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#series" id="id35">0.3 Series</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id1" id="id36">0.3.0 (2022-04-27)</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#id2" id="id37">0.2 Series</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id3" id="id38">0.2.3 (2021-10-30)</a></p></li>
+<li><p><a class="reference internal" href="#id9" id="id39">0.2.2 (2020-12-29)</a></p></li>
+<li><p><a class="reference internal" href="#id15" id="id40">0.2.1 (2019-10-02)</a></p></li>
+<li><p><a class="reference internal" href="#id21" id="id41">0.2.0 (2019-06-22)</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#id27" id="id42">0.1 Series</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id28" id="id43">0.1.6 (2016-09-08)</a></p></li>
+<li><p><a class="reference internal" href="#id29" id="id44">0.1.5 (2014-12-23)</a></p></li>
+<li><p><a class="reference internal" href="#id30" id="id45">0.1.4 (2013-05-21)</a></p></li>
+<li><p><a class="reference internal" href="#id31" id="id46">0.1.3 (2012-06-22)</a></p></li>
+<li><p><a class="reference internal" href="#id32" id="id47">0.1.2 (2012-05-25)</a></p></li>
+<li><p><a class="reference internal" href="#id33" id="id48">0.1.1 (2011-10-31)</a></p></li>
+<li><p><a class="reference internal" href="#id34" id="id49">0.1 (2011-08-24)</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="series">
+<h2><a class="toc-backref" href="#id35">0.3 Series</a><a class="headerlink" href="#series" title="Permalink to this headline">¶</a></h2>
+<section id="id1">
+<h3><a class="toc-backref" href="#id36">0.3.0 (2022-04-27)</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>This release continues the phaseout of <a class="reference internal" href="py2k_eol.html"><span class="doc">Python 2</span></a>
+support. No Python 2 binaries are provided, and 0.3.0 will not install
+on Python 2 with <code class="docutils literal notranslate"><span class="pre">pip</span></code>. Installation via <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> from a source
+distribution is still available.</p>
+<p>This is the last release with Python 2 bugfix support. SpacePy 0.4.0
+will make no attempt to maintain functionality for Python 2 and
+SpacePy 0.5.0 will not function without Python 3.</p>
+<p>Windows binaries are only provided as 64-bit wheels, installable with
+<code class="docutils literal notranslate"><span class="pre">pip</span></code>, for Python 3.6 and later. Windows executable installers and
+32-bit binaries are no longer provided.</p>
+<section id="new-features">
+<h4>New features<a class="headerlink" href="#new-features" title="Permalink to this headline">¶</a></h4>
+<p>The <a class="reference internal" href="coordinates.html#module-spacepy.coordinates" title="spacepy.coordinates"><code class="xref py py-mod docutils literal notranslate"><span class="pre">coordinates</span></code></a> module has been overhauled with a new,
+Python-based backend. This provides comparable performance to the
+existing <a class="reference internal" href="irbempy.html#module-spacepy.irbempy" title="spacepy.irbempy"><code class="xref py py-mod docutils literal notranslate"><span class="pre">irbempy</span></code></a> backend with higher precision and
+reduces the dependence on Fortran. By default, irbemlib will still be
+built at installation time. The default backend remains IRBEM; in
+0.4.0, this will switch to the new <a class="reference internal" href="ctrans.html#module-spacepy.ctrans" title="spacepy.ctrans"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ctrans</span></code></a> based
+backend. The new <a class="reference internal" href="igrf.html#module-spacepy.igrf" title="spacepy.igrf"><code class="xref py py-mod docutils literal notranslate"><span class="pre">igrf</span></code></a> module is part of this support
+but may be of interest on its own.</p>
+<p>In accordance with a change from NASA, <a class="reference internal" href="pycdf.html#module-spacepy.pycdf" title="spacepy.pycdf"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pycdf</span></code></a> now
+assumes strings in CDFs are UTF-8. It will no longer raise errors on
+reading non-ASCII data from a CDF. See <a class="reference internal" href="pycdf.html#pycdf-string-handling"><span class="std std-ref">String handling</span></a> in
+the pycdf documentation for details.</p>
+<p><a class="reference internal" href="ae9ap9.html#module-spacepy.ae9ap9" title="spacepy.ae9ap9"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ae9ap9</span></code></a> now supports the new ephem model file format
+(&gt;=1.50.001) via <a class="reference internal" href="autosummary/spacepy.ae9ap9.parseHeader.html#spacepy.ae9ap9.parseHeader" title="spacepy.ae9ap9.parseHeader"><code class="xref py py-func docutils literal notranslate"><span class="pre">parseHeader()</span></code></a>. The old file
+format is deprecated.</p>
+</section>
+<section id="deprecations-and-removals">
+<h4>Deprecations and removals<a class="headerlink" href="#deprecations-and-removals" title="Permalink to this headline">¶</a></h4>
+<p>HTML documentation is no longer installed with
+SpacePy. <a class="reference internal" href="spacepy.html#spacepy.help" title="spacepy.help"><code class="xref py py-func docutils literal notranslate"><span class="pre">help()</span></code></a> now opens the latest <a class="reference external" href="https://spacepy.github.io/">online
+documentation</a>. Offline documentation
+are available separately (files named like <code class="docutils literal notranslate"><span class="pre">spacepy-x.y.z-doc.zip</span></code>
+and <code class="docutils literal notranslate"><span class="pre">spacepy-x.y.z-doc.pdf</span></code>) and as part of the source distribution
+(<code class="docutils literal notranslate"><span class="pre">spacepy-x.y.z.tar.gz</span></code> or <code class="docutils literal notranslate"><span class="pre">spacepy-x.y.z.zip</span></code>). These files can
+be downloaded from SpacePy’s <a class="reference external" href="https://github.com/spacepy/spacepy/releases">releases on GitHub</a>; the source can also
+be found on <a class="reference external" href="https://pypi.org/project/spacepy/#files">PyPI</a>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">LANLstar</span></code> requires <a class="reference external" href="http://ffnet.sourceforge.net/">ffnet</a>, which
+does not install properly with current <a class="reference external" href="https://github.com/pypa/setuptools">setuptools</a> (version 58).  The SpacePy team
+is working on replacing this dependency, but in the meantime
+<code class="docutils literal notranslate"><span class="pre">LANLstar</span></code> is unsupported and will require manually installing
+<code class="docutils literal notranslate"><span class="pre">ffnet</span></code> and <a class="reference external" href="http://networkx.lanl.gov/">networkx</a>.</p>
+<p>As mentioned above, <a class="reference internal" href="ae9ap9.html#module-spacepy.ae9ap9" title="spacepy.ae9ap9"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ae9ap9</span></code></a> support for the old ephem
+model file format is deprecated.</p>
+<p>Colourmaps have been removed from <a class="reference internal" href="plot.html#module-spacepy.plot" title="spacepy.plot"><code class="xref py py-class docutils literal notranslate"><span class="pre">plot</span></code></a>. The same
+colourmaps (<code class="docutils literal notranslate"><span class="pre">plasma</span></code> and <code class="docutils literal notranslate"><span class="pre">viridis</span></code>) have been available in
+matplotlib since at least 1.5. (Deprecated in 0.2.3.)</p>
+<p>The old name <code class="docutils literal notranslate"><span class="pre">spectrogram</span></code> for <a class="reference internal" href="autosummary/spacepy.plot.Spectrogram.html#spacepy.plot.Spectrogram" title="spacepy.plot.Spectrogram"><code class="xref py py-class docutils literal notranslate"><span class="pre">Spectrogram</span></code></a>
+has been removed. (Deprecated in 0.2.2.)</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">read_ram_dst</span></code> function has been removed from
+<a class="reference internal" href="autosummary/spacepy.pybats.ram.html#module-spacepy.pybats.ram" title="spacepy.pybats.ram"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ram</span></code></a>, as it operates on files that are no longer
+written by RAM-SCB. (Deprecated in 0.1.6.)</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">fix_format</span></code> function has been removed from
+<a class="reference internal" href="autosummary/spacepy.pybats.rim.html#module-spacepy.pybats.rim" title="spacepy.pybats.rim"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rim</span></code></a>; <a class="reference internal" href="autosummary/spacepy.pybats.rim.Iono.html#spacepy.pybats.rim.Iono" title="spacepy.pybats.rim.Iono"><code class="xref py py-class docutils literal notranslate"><span class="pre">Iono</span></code></a> can now
+read these files directly. (Deprecated in 0.2.2.)</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">from_dict</span></code> method of CDF attribute lists
+(<a class="reference internal" href="autosummary/spacepy.pycdf.gAttrList.html#spacepy.pycdf.gAttrList" title="spacepy.pycdf.gAttrList"><code class="xref py py-meth docutils literal notranslate"><span class="pre">gAttrList()</span></code></a>, <a class="reference internal" href="autosummary/spacepy.pycdf.zAttrList.html#spacepy.pycdf.zAttrList" title="spacepy.pycdf.zAttrList"><code class="xref py py-meth docutils literal notranslate"><span class="pre">zAttrList()</span></code></a>)
+has been removed. Use <a class="reference internal" href="autosummary/spacepy.pycdf.AttrList.html#spacepy.pycdf.AttrList.clone" title="spacepy.pycdf.AttrList.clone"><code class="xref py py-meth docutils literal notranslate"><span class="pre">clone()</span></code></a>, which
+supports cloning from dictionaries. (Deprecated in 0.1.5.)</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">feq</span></code> function has been removed from <a class="reference internal" href="toolbox.html#module-spacepy.toolbox" title="spacepy.toolbox"><code class="xref py py-mod docutils literal notranslate"><span class="pre">toolbox</span></code></a>;
+use <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.isclose.html#numpy.isclose" title="(in NumPy v1.22)"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.isclose()</span></code></a>. (Deprecated in 0.2.2.)</p>
+<p>Quaternion math functions have been removed from
+<a class="reference internal" href="toolbox.html#module-spacepy.toolbox" title="spacepy.toolbox"><code class="xref py py-mod docutils literal notranslate"><span class="pre">toolbox</span></code></a>; they are available in
+<a class="reference internal" href="coordinates.html#module-spacepy.coordinates" title="spacepy.coordinates"><code class="xref py py-mod docutils literal notranslate"><span class="pre">coordinates</span></code></a>. (Deprecated in 0.2.2.)</p>
+</section>
+<section id="dependency-requirements">
+<h4>Dependency requirements<a class="headerlink" href="#dependency-requirements" title="Permalink to this headline">¶</a></h4>
+<p>Due to the new backend, scipy is now required for
+<a class="reference internal" href="coordinates.html#module-spacepy.coordinates" title="spacepy.coordinates"><code class="xref py py-mod docutils literal notranslate"><span class="pre">coordinates</span></code></a> (even if using the old backend). 0.11
+remains the minimum version.</p>
+<p>Since <code class="docutils literal notranslate"><span class="pre">LANLstar</span></code> is not currently supported, <code class="docutils literal notranslate"><span class="pre">ffnet</span></code> and
+<code class="docutils literal notranslate"><span class="pre">networkx</span></code> are no longer treated as SpacePy dependencies.</p>
+</section>
+<section id="other-changes">
+<h4>Other changes<a class="headerlink" href="#other-changes" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference internal" href="pycdf.html#module-spacepy.pycdf" title="spacepy.pycdf"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pycdf</span></code></a> now defaults to creating version 3 (not
+backward-compatible) CDFs if the backward compatible mode is not
+explicitly set (<a class="reference internal" href="autosummary/spacepy.pycdf.Library.html#spacepy.pycdf.Library.set_backward" title="spacepy.pycdf.Library.set_backward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_backward()</span></code></a>). It still
+issues a warning when creating a CDF if this is not set; this warning
+will be removed in 0.4.0. (Warning added in 0.2.2.)</p>
+<p>Similarly, <a class="reference internal" href="pycdf.html#module-spacepy.pycdf" title="spacepy.pycdf"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pycdf</span></code></a> defaults to TIME_TT2000 when creating
+a time variable or attribute without specifying a type (EPOCH or
+EPOCH16 are used if TT2000 isn’t available). A warning is issued when
+doing so; this warning will be removed in 0.4.0. (Warning added in 0.2.2.)</p>
+<p>On Windows, <a class="reference internal" href="pycdf.html#module-spacepy.pycdf" title="spacepy.pycdf"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pycdf</span></code></a> now looks in more locations for the
+NASA CDF library. Newer versions of the library by default install to
+a different location (<code class="docutils literal notranslate"><span class="pre">Program</span> <span class="pre">Files</span></code>). The DLL is also now placed
+in the <code class="docutils literal notranslate"><span class="pre">bin</span></code> directory instead of <code class="docutils literal notranslate"><span class="pre">lib</span></code>, so <code class="docutils literal notranslate"><span class="pre">bin</span></code> is searched
+and the value of environment variable <code class="docutils literal notranslate"><span class="pre">CDF_BIN</span></code> in addition to
+<code class="docutils literal notranslate"><span class="pre">lib</span></code> and <code class="docutils literal notranslate"><span class="pre">CDF_LIB</span></code>. The net effect should be to increase the
+chance of successfully loading the library, with a small chance of
+accidentally loading the wrong one.</p>
+<p>The default data source for leapsecond files has been reverted from
+NASA/MODIS to the USNO, as USNO data services are back online. If
+present, entries in the <a class="reference internal" href="configuration.html"><span class="doc">configuration file</span></a> will
+still be used instead of the default.</p>
+</section>
+</section>
+</section>
+<section id="id2">
+<h2><a class="toc-backref" href="#id37">0.2 Series</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<section id="id3">
+<h3><a class="toc-backref" href="#id38">0.2.3 (2021-10-30)</a><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>This is the last release of the 0.2 series and the last with full
+support for <a class="reference internal" href="py2k_eol.html"><span class="doc">Python 2</span></a>. Binary installers (including
+wheels) for <a class="reference internal" href="install_windows.html"><span class="doc">32-bit Windows</span></a> will also end
+after the 0.2 series, as will Windows installers. The only binaries
+for Windows will be 64-bit wheels, installable with <code class="docutils literal notranslate"><span class="pre">pip</span></code>.</p>
+<section id="id4">
+<h4>New features<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference internal" href="pycdf.html#module-spacepy.pycdf" title="spacepy.pycdf"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pycdf</span></code></a> now supports variables with sparse records, including
+enabling/disabling sparse records (<a class="reference internal" href="autosummary/spacepy.pycdf.Var.html#spacepy.pycdf.Var.sparse" title="spacepy.pycdf.Var.sparse"><code class="xref py py-meth docutils literal notranslate"><span class="pre">sparse()</span></code></a>) and
+setting the pad value (<a class="reference internal" href="autosummary/spacepy.pycdf.Var.html#spacepy.pycdf.Var.pad" title="spacepy.pycdf.Var.pad"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pad()</span></code></a>). Thanks Antoine Brunet.</p>
+</section>
+<section id="id5">
+<h4>Deprecations and removals<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<p>The colourmaps provided in the <a class="reference internal" href="plot.html#module-spacepy.plot" title="spacepy.plot"><code class="xref py py-mod docutils literal notranslate"><span class="pre">plot</span></code></a> module have been
+deprecated. The same colourmaps have been available in matplotlib since
+at least 1.5, and users who do not directly import the colourmaps should
+see no impact.</p>
+</section>
+<section id="major-bugfixes">
+<h4>Major bugfixes<a class="headerlink" href="#major-bugfixes" title="Permalink to this headline">¶</a></h4>
+<p>The passing of keyword arguments from <a class="reference internal" href="autosummary/spacepy.toolbox.bootHisto.html#spacepy.toolbox.bootHisto" title="spacepy.toolbox.bootHisto"><code class="xref py py-func docutils literal notranslate"><span class="pre">bootHisto()</span></code></a>
+to <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.histogram.html#numpy.histogram" title="(in NumPy v1.22)"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.histogram()</span></code></a> and <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.bar.html#matplotlib.pyplot.bar" title="(in Matplotlib v3.5.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">matplotlib.pyplot.bar()</span></code></a> has been fixed.</p>
+<p>The check for out-of-date leapseconds in <a class="reference internal" href="time.html#module-spacepy.time" title="spacepy.time"><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a> has been
+fixed (previously warned even when the file was up to date.)</p>
+<p>Fixed installation on new versions of setuptools, which removed
+<code class="docutils literal notranslate"><span class="pre">bdist_wininst</span></code> support (<a class="reference external" href="https://github.com/spacepy/spacepy/issues/530">#530</a>).</p>
+<p>The handling of library paths on Windows has been updated. This should
+fix situations where <a class="reference internal" href="irbempy.html#module-spacepy.irbempy" title="spacepy.irbempy"><code class="xref py py-mod docutils literal notranslate"><span class="pre">irbempy</span></code></a> would not import on
+Windows with Python 3.8 or later. This did not seem to be a problem
+with Anaconda, but would sometimes manifest with Python from the app
+store or from <a class="reference external" href="http://python.org/">http://python.org/</a> (<a class="reference external" href="https://github.com/spacepy/spacepy/issues/507">#507</a>)</p>
+</section>
+<section id="id8">
+<h4>Other changes<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<p>Modern leapsecond rules are applied from 1958-1972 rather than
+rounding fractional leapseconds. See <a class="reference internal" href="time.html#module-spacepy.time" title="spacepy.time"><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a> for full
+discussion of leap seconds and other conversion considerations.</p>
+<p>The handling of the <code class="docutils literal notranslate"><span class="pre">.spacepy</span></code> directory (see <a class="reference internal" href="configuration.html"><span class="doc">SpacePy Configuration</span></a>)
+has been improved. If the <code class="docutils literal notranslate"><span class="pre">SPACEPY</span></code> environment variable is used,
+the directory will be created. The import process also is less fragile
+in the case of a partially-created <code class="docutils literal notranslate"><span class="pre">.spacepy</span></code> directory or an
+invalid (e.g. empty) <code class="docutils literal notranslate"><span class="pre">spacepy.rc</span></code>.</p>
+</section>
+</section>
+<section id="id9">
+<h3><a class="toc-backref" href="#id39">0.2.2 (2020-12-29)</a><a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p>The 0.2 series will be the last with full support for <a class="reference internal" href="py2k_eol.html"><span class="doc">Python 2</span></a>; 0.2.3 will likely be the last release. Binary installers
+for <a class="reference internal" href="install_windows.html"><span class="doc">32-bit Windows</span></a> will also end after the 0.2
+series.</p>
+<section id="id10">
+<h4>New features<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference internal" href="irbempy.html#module-spacepy.irbempy" title="spacepy.irbempy"><code class="xref py py-mod docutils literal notranslate"><span class="pre">irbempy</span></code></a> incorporates upstream IRBEMlib rev620. This
+adds IGRF13 coefficients. <a class="reference internal" href="coordinates.html#module-spacepy.coordinates" title="spacepy.coordinates"><code class="xref py py-mod docutils literal notranslate"><span class="pre">coordinates</span></code></a> and
+<a class="reference internal" href="irbempy.html#module-spacepy.irbempy" title="spacepy.irbempy"><code class="xref py py-mod docutils literal notranslate"><span class="pre">irbempy</span></code></a> now also support using all supported
+coordinate systems as inputs to routines; if a routine does not
+support an input system, it will be automatically converted.</p>
+<p><a class="reference internal" href="autosummary/spacepy.time.Ticktock.html#spacepy.time.Ticktock" title="spacepy.time.Ticktock"><code class="xref py py-class docutils literal notranslate"><span class="pre">Ticktock</span></code></a> supports conversions to and from
+<a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.time.Time.html#astropy.time.Time" title="(in Astropy v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">astropy.time.Time</span></code></a>.</p>
+<p>The following classes, functions, and methods are new:</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.coordinates.quaternionFromMatrix.html#spacepy.coordinates.quaternionFromMatrix" title="spacepy.coordinates.quaternionFromMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quaternionFromMatrix</span></code></a>(matrix[, scalarPos])</p></td>
+<td><p>Given an input rotation matrix, return the equivalent quaternion</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.coordinates.quaternionToMatrix.html#spacepy.coordinates.quaternionToMatrix" title="spacepy.coordinates.quaternionToMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quaternionToMatrix</span></code></a>(Qin[, scalarPos, normalize])</p></td>
+<td><p>Given an input quaternion, return the equivalent rotation matrix.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="datamanager.html#spacepy.datamanager.rebin" title="spacepy.datamanager.rebin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rebin</span></code></a>(data, bindata, bins[, axis, bintype, ...])</p></td>
+<td><p>Rebin one axis of input data based on values of another array</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.plot.utils.add_arrows.html#spacepy.plot.utils.add_arrows" title="spacepy.plot.utils.add_arrows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_arrows</span></code></a>(lines[, n, size, style, ...])</p></td>
+<td><p>Add directional arrows along a plotted line.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.pycdf.concatCDF.html#spacepy.pycdf.concatCDF" title="spacepy.pycdf.concatCDF"><code class="xref py py-obj docutils literal notranslate"><span class="pre">concatCDF</span></code></a>(cdfs[, varnames, raw])</p></td>
+<td><p>Concatenate data from multiple CDFs</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.pycdf.istp.nanfill.html#spacepy.pycdf.istp.nanfill" title="spacepy.pycdf.istp.nanfill"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nanfill</span></code></a>(v)</p></td>
+<td><p>Set fill values to NaN</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.pycdf.istp.FileChecks.html#spacepy.pycdf.istp.FileChecks.empty_entry" title="spacepy.pycdf.istp.FileChecks.empty_entry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">empty_entry</span></code></a>(f)</p></td>
+<td><p>Check for attributes with empty string</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.pycdf.istp.VarBundle.html#spacepy.pycdf.istp.VarBundle" title="spacepy.pycdf.istp.VarBundle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VarBundle</span></code></a>(var)</p></td>
+<td><p>Collective handling of ISTP-compliant variable and its dependencies.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.pycdf.istp.VariableChecks.html#spacepy.pycdf.istp.VariableChecks.deltas" title="spacepy.pycdf.istp.VariableChecks.deltas"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deltas</span></code></a>(v)</p></td>
+<td><p>Check DELTA variables</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.pycdf.istp.VariableChecks.html#spacepy.pycdf.istp.VariableChecks.empty_entry" title="spacepy.pycdf.istp.VariableChecks.empty_entry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">empty_entry</span></code></a>(v)</p></td>
+<td><p>Check for attributes with empty string</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id11">
+<h4>Deprecations and removals<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference internal" href="pycdf.html#module-spacepy.pycdf" title="spacepy.pycdf"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pycdf</span></code></a> now warns if creating a new CDF file without
+explicitly setting backward compatible or not backward compatible
+(<a class="reference internal" href="autosummary/spacepy.pycdf.Library.html#spacepy.pycdf.Library.set_backward" title="spacepy.pycdf.Library.set_backward"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_backward()</span></code></a>). The default is
+still to make backward-compatible CDFs, but this will change in
+0.3.0. Similarly it now warns if creating a time variable without
+specifying a time type; the default is still to use EPOCH or
+EPOCH16, but this will change to TIME_TT2000 in 0.3.0.</p>
+<p><code class="xref py py-func docutils literal notranslate"><span class="pre">fix_format()</span></code> is now deprecated, as
+<a class="reference internal" href="autosummary/spacepy.pybats.rim.Iono.html#spacepy.pybats.rim.Iono" title="spacepy.pybats.rim.Iono"><code class="xref py py-class docutils literal notranslate"><span class="pre">Iono</span></code></a> can now read these files directly.</p>
+<p>Quaternion math functions have been moved to
+<a class="reference internal" href="coordinates.html#module-spacepy.coordinates" title="spacepy.coordinates"><code class="xref py py-mod docutils literal notranslate"><span class="pre">coordinates</span></code></a>; using the functions in
+<a class="reference internal" href="toolbox.html#module-spacepy.toolbox" title="spacepy.toolbox"><code class="xref py py-mod docutils literal notranslate"><span class="pre">toolbox</span></code></a> is deprecated.</p>
+<p><code class="xref py py-func docutils literal notranslate"><span class="pre">feq()</span></code> is deprecated; numpy 1.7 added the equivalent
+<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.isclose.html#numpy.isclose" title="(in NumPy v1.22)"><code class="xref py py-func docutils literal notranslate"><span class="pre">isclose()</span></code></a>.</p>
+<p>The <a class="reference internal" href="autosummary/spacepy.plot.spectrogram.html#module-spacepy.plot.spectrogram" title="spacepy.plot.spectrogram"><code class="xref py py-class docutils literal notranslate"><span class="pre">spectrogram</span></code></a> class is now capitalized
+(<a class="reference internal" href="autosummary/spacepy.plot.Spectrogram.html#spacepy.plot.Spectrogram" title="spacepy.plot.Spectrogram"><code class="xref py py-class docutils literal notranslate"><span class="pre">Spectrogram</span></code></a>); the old, lower-case variant is
+kept for compatibility but will be removed.</p>
+</section>
+<section id="id12">
+<h4>Dependency requirements<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<p>Not all dependencies are required for all functionality; see
+<a class="reference internal" href="dependencies.html"><span class="doc">SpacePy Dependencies</span></a> for full details, including what functionality is
+lost if a dependency is not installed.</p>
+<p>numpy 1.10 is now required. (Many functions erroneously required it from 0.2.1, but this was not adequately documented.)</p>
+<p>scipy 0.11 is now the minimum supported version of SciPy. (Again, this was erroneously required in 0.2.0 without appropriate documentation.)</p>
+<p>Several dependencies without an established minimum version were tested.</p>
+<dl class="simple">
+<dt>As of 0.2.2, minimum supported versions of dependencies are:</dt><dd><ul class="simple">
+<li><p>CPython 2 2.7 or CPython 3 3.2</p></li>
+<li><p>AstroPy 1.0</p></li>
+<li><p>CDF 2.7</p></li>
+<li><p>dateutil 1.4 (earlier may work)</p></li>
+<li><p>ffnet 0.7 (earlier may work)</p></li>
+<li><p>h5py 2.6 (earlier may work)</p></li>
+<li><p>matplotlib 1.5</p></li>
+<li><p>networkx 1.0 (earlier may work)</p></li>
+<li><p>numpy 1.10</p></li>
+<li><p>scipy 0.11</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="id13">
+<h4>Major bugfixes<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
+<p>Time conversions between time systems before 1961 now use the proper
+number of leapseconds (0).</p>
+<p>Many minor bugfixes.</p>
+</section>
+<section id="id14">
+<h4>Other changes<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
+<p>Data sources for leapsecond files and <a class="reference internal" href="omni.html#module-spacepy.omni" title="spacepy.omni"><code class="xref py py-mod docutils literal notranslate"><span class="pre">omni</span></code></a> Qin-Denton
+files have been updated to provide current sources. If present,
+entries in the <a class="reference internal" href="configuration.html"><span class="doc">configuration file</span></a> will still be
+used instead. A (configurable) warning is issued for out-of-date leapsecond
+files.</p>
+<p>The representation of leap second intervals in time systems which
+cannot directly represent them has been changed. Formerly times such
+as 2008-12-31T23:59:60 were represented in e.g. UTC datetime as the
+the beginning of the next day, e.g. 2009-01-01T00:00:00. They are
+now represented by the last possible moment of the same day, e.g.
+2008-12-31T23:59:59.999999. Fractional leapsecond counts are now rounded
+to the integer instead of truncated; this rounding is applied to the total
+TAI - UTC quantity not the individual increments of leap seconds. E.g
+successive 0.2, 0.2, 0.2 leap seconds will result in 0, 0, and 1 new
+leap seconds.</p>
+<p>Similarly, leap seconds are now included in the fractional day
+calculation of MJD, so MJD values around a leap second may be different
+than in previous versions of SpacePy.</p>
+<p>Most time systems are now converted to/from TAI rather than using
+datetime. This may cause small differences with previous versions of
+SpacePy, on order of a double precision. RDT and JD are particularly
+affected for dates in the modern era. Time conversions around
+leapseconds may also be different; in many cases they were undefined
+in previous versions.</p>
+<p><a class="reference internal" href="autosummary/spacepy.time.Ticktock.html#spacepy.time.Ticktock.now" title="spacepy.time.Ticktock.now"><code class="xref py py-meth docutils literal notranslate"><span class="pre">now()</span></code></a> and <a class="reference internal" href="autosummary/spacepy.time.Ticktock.html#spacepy.time.Ticktock.today" title="spacepy.time.Ticktock.today"><code class="xref py py-meth docutils literal notranslate"><span class="pre">today()</span></code></a>
+return times in UTC; in previous versions the value returned was local,
+but was treated as UTC for all conversions (and thus inaccurate.)</p>
+<p>See <a class="reference internal" href="time.html#module-spacepy.time" title="spacepy.time"><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a> for full discussion of leap seconds, time
+resolution, and other conversion considerations.</p>
+</section>
+</section>
+<section id="id15">
+<h3><a class="toc-backref" href="#id40">0.2.1 (2019-10-02)</a><a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<section id="id16">
+<h4>New features<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
+<p>The following module is new:</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.pycdf.istp.html#module-spacepy.pycdf.istp" title="spacepy.pycdf.istp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">istp</span></code></a></p></td>
+<td><p>Support for ISTP-compliant CDFs</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id17">
+<h4>Deprecations and removals<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
+<p>None</p>
+</section>
+<section id="id18">
+<h4>Dependency requirements<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
+<p>No changes to minimum dependency versions.</p>
+<dl class="simple">
+<dt>As of 0.2.1, the minimum versions of dependencies are:</dt><dd><ul class="simple">
+<li><p>CPython 2 2.7 or CPython 3 3.2</p></li>
+<li><p>CDF 2.7</p></li>
+<li><p>matplotlib 1.5</p></li>
+<li><p>numpy 1.4</p></li>
+<li><p>scipy 0.10</p></li>
+</ul>
+</dd>
+</dl>
+<p>Other dependencies have no established minimum. See
+<a class="reference internal" href="dependencies.html"><span class="doc">SpacePy Dependencies</span></a> for full details.</p>
+</section>
+<section id="id19">
+<h4>Major bugfixes<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h4>
+<p>Fixed compliation of <a class="reference internal" href="irbempy.html#module-spacepy.irbempy" title="spacepy.irbempy"><code class="xref py py-mod docutils literal notranslate"><span class="pre">irbempy</span></code></a> on several systems.</p>
+</section>
+<section id="id20">
+<h4>Other changes<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h4>
+<p>None of note.</p>
+</section>
+</section>
+<section id="id21">
+<h3><a class="toc-backref" href="#id41">0.2.0 (2019-06-22)</a><a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<section id="id22">
+<h4>New features<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id23">
+<h4>Deprecations and removals<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h4>
+<p>None</p>
+</section>
+<section id="id24">
+<h4>Dependency requirements<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h4>
+<p>Support for Python 2.6 was removed; 2.7 is the only supported version
+of Python 2.</p>
+<dl class="simple">
+<dt>As of 0.2.0, the minimum versions of dependencies are:</dt><dd><ul class="simple">
+<li><p>CPython 2 2.6 or CPython 3 3.2</p></li>
+<li><p>CDF 2.7</p></li>
+<li><p>matplotlib 1.5</p></li>
+<li><p>numpy 1.4</p></li>
+<li><p>scipy 0.10</p></li>
+</ul>
+</dd>
+</dl>
+<p>Other dependencies have no established minimum. See
+<a class="reference internal" href="dependencies.html"><span class="doc">SpacePy Dependencies</span></a> for full details.</p>
+</section>
+<section id="id25">
+<h4>Major bugfixes<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference internal" href="autosummary/spacepy.toolbox.human_sort.html#spacepy.toolbox.human_sort" title="spacepy.toolbox.human_sort"><code class="xref py py-meth docutils literal notranslate"><span class="pre">human_sort()</span></code></a> was fixed for non-numeric inputs
+(the normal case.) This had been broken since 0.1.6.</p>
+<p>Many minor bugfixes as well.</p>
+</section>
+<section id="id26">
+<h4>Other changes<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h4>
+<p>Many updates to improve ease of installation, including Windows binary wheels.</p>
+</section>
+</section>
+</section>
+<section id="id27">
+<h2><a class="toc-backref" href="#id42">0.1 Series</a><a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h2>
+<p>See the CHANGELOG file in the source distribution for changes in the 0.1
+release series.</p>
+<section id="id28">
+<h3><a class="toc-backref" href="#id43">0.1.6 (2016-09-08)</a><a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="id29">
+<h3><a class="toc-backref" href="#id44">0.1.5 (2014-12-23)</a><a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="id30">
+<h3><a class="toc-backref" href="#id45">0.1.4 (2013-05-21)</a><a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="id31">
+<h3><a class="toc-backref" href="#id46">0.1.3 (2012-06-22)</a><a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="id32">
+<h3><a class="toc-backref" href="#id47">0.1.2 (2012-05-25)</a><a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="id33">
+<h3><a class="toc-backref" href="#id48">0.1.1 (2011-10-31)</a><a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="id34">
+<h3><a class="toc-backref" href="#id49">0.1 (2011-08-24)</a><a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="case_studies.html" title="SpacePy Case Studies"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="capabilities.html" title="SpacePy Capabilities"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+       <li><a href="index.html">documentation </a> &raquo;</li>
+
+        <li class="nav-item nav-item-this"><a href="">Release Notes</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

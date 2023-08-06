@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>toolbox - Toolbox of various functions and generic utilities &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="spacepy.toolbox.arraybin" href="autosummary/spacepy.toolbox.arraybin.html" />
+    <link rel="prev" title="spacepy.time.tickrange" href="autosummary/spacepy.time.tickrange.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="index.html"><img src="_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="autosummary/spacepy.toolbox.arraybin.html" title="spacepy.toolbox.arraybin"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="autosummary/spacepy.time.tickrange.html" title="spacepy.time.tickrange"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+       <li><a href="index.html">documentation </a> &raquo;</li>
+
+        <li class="nav-item nav-item-this"><a href="">toolbox - Toolbox of various functions and generic utilities</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">toolbox - Toolbox of various functions and generic utilities</a><ul>
+<li><a class="reference internal" href="#array-binning">Array binning</a></li>
+<li><a class="reference internal" href="#array-creation">Array creation</a></li>
+<li><a class="reference internal" href="#array-searching-and-masking">Array searching and masking</a></li>
+<li><a class="reference internal" href="#other-functions">Other functions</a></li>
+<li><a class="reference internal" href="#multithreading-and-multiprocessing">Multithreading and multiprocessing</a></li>
+<li><a class="reference internal" href="#system-tools">System tools</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="autosummary/spacepy.time.tickrange.html"
+                          title="previous chapter">spacepy.time.tickrange</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="autosummary/spacepy.toolbox.arraybin.html"
+                          title="next chapter">spacepy.toolbox.arraybin</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/toolbox.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-spacepy.toolbox">
+<span id="toolbox-toolbox-of-various-functions-and-generic-utilities"></span><h1>toolbox - Toolbox of various functions and generic utilities<a class="headerlink" href="#module-spacepy.toolbox" title="Permalink to this headline">¶</a></h1>
+<p>Toolbox of various functions and generic utilities.</p>
+<p>Authors: Steve Morley, Jon Niehof, Brian Larsen, Josef Koller, Dan Welling
+Institution: Los Alamos National Laboratory
+Contact: <a class="reference external" href="mailto:smorley&#37;&#52;&#48;lanl&#46;gov">smorley<span>&#64;</span>lanl<span>&#46;</span>gov</a>, <a class="reference external" href="mailto:jniehof&#37;&#52;&#48;lanl&#46;gov">jniehof<span>&#64;</span>lanl<span>&#46;</span>gov</a>, <a class="reference external" href="mailto:balarsen&#37;&#52;&#48;lanl&#46;gov">balarsen<span>&#64;</span>lanl<span>&#46;</span>gov</a>, <a class="reference external" href="mailto:jkoller&#37;&#52;&#48;lanl&#46;gov">jkoller<span>&#64;</span>lanl<span>&#46;</span>gov</a>, <a class="reference external" href="mailto:dwelling&#37;&#52;&#48;lanl&#46;gov">dwelling<span>&#64;</span>lanl<span>&#46;</span>gov</a>
+Los Alamos National Laboratory</p>
+<p>Copyright 2010 Los Alamos National Security, LLC.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#array-binning">Array binning</a></p></li>
+<li><p><a class="reference internal" href="#array-creation">Array creation</a></p></li>
+<li><p><a class="reference internal" href="#array-searching-and-masking">Array searching and masking</a></p></li>
+<li><p><a class="reference internal" href="#other-functions">Other functions</a></p></li>
+<li><p><a class="reference internal" href="#multithreading-and-multiprocessing">Multithreading and multiprocessing</a></p></li>
+<li><p><a class="reference internal" href="#system-tools">System tools</a></p></li>
+</ul>
+<section id="array-binning">
+<h2>Array binning<a class="headerlink" href="#array-binning" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.arraybin.html#spacepy.toolbox.arraybin" title="spacepy.toolbox.arraybin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">arraybin</span></code></a>(array, bins)</p></td>
+<td><p>Split a sequence into subsequences based on value.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.bin_center_to_edges.html#spacepy.toolbox.bin_center_to_edges" title="spacepy.toolbox.bin_center_to_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bin_center_to_edges</span></code></a>(centers)</p></td>
+<td><p>Convert a list of bin centers to their edges</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.bin_edges_to_center.html#spacepy.toolbox.bin_edges_to_center" title="spacepy.toolbox.bin_edges_to_center"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bin_edges_to_center</span></code></a>(edges)</p></td>
+<td><p>Convert a list of bin edges to their centers</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.binHisto.html#spacepy.toolbox.binHisto" title="spacepy.toolbox.binHisto"><code class="xref py py-obj docutils literal notranslate"><span class="pre">binHisto</span></code></a>(data[, verbose])</p></td>
+<td><p>Calculates bin width and number of bins for histogram using Freedman-Diaconis rule, if rule fails, defaults to square-root method</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="array-creation">
+<h2>Array creation<a class="headerlink" href="#array-creation" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.dist_to_list.html#spacepy.toolbox.dist_to_list" title="spacepy.toolbox.dist_to_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dist_to_list</span></code></a>(func, length[, min, max])</p></td>
+<td><p>Convert a probability distribution function to a list of values</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.geomspace.html#spacepy.toolbox.geomspace" title="spacepy.toolbox.geomspace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geomspace</span></code></a>(start[, ratio, stop, num])</p></td>
+<td><p>Returns geometrically spaced numbers.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.linspace.html#spacepy.toolbox.linspace" title="spacepy.toolbox.linspace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">linspace</span></code></a>(min, max, num, **kwargs)</p></td>
+<td><p>Returns linear-spaced bins.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.logspace.html#spacepy.toolbox.logspace" title="spacepy.toolbox.logspace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">logspace</span></code></a>(min, max, num, **kwargs)</p></td>
+<td><p>Returns log-spaced bins.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="array-searching-and-masking">
+<h2>Array searching and masking<a class="headerlink" href="#array-searching-and-masking" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.interweave.html#spacepy.toolbox.interweave" title="spacepy.toolbox.interweave"><code class="xref py py-obj docutils literal notranslate"><span class="pre">interweave</span></code></a>(a, b)</p></td>
+<td><p>given two array-like variables interweave them together.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.isview.html#spacepy.toolbox.isview" title="spacepy.toolbox.isview"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isview</span></code></a>(array1[, array2])</p></td>
+<td><p>Returns if an object is a view of another object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.tCommon.html#spacepy.toolbox.tCommon" title="spacepy.toolbox.tCommon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tCommon</span></code></a>(ts1, ts2[, mask_only])</p></td>
+<td><p>Finds the elements in a list of datetime objects present in another</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.tOverlap.html#spacepy.toolbox.tOverlap" title="spacepy.toolbox.tOverlap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tOverlap</span></code></a>(ts1, ts2, *args, **kwargs)</p></td>
+<td><p>Finds the overlapping elements in two lists of datetime objects</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.tOverlapHalf.html#spacepy.toolbox.tOverlapHalf" title="spacepy.toolbox.tOverlapHalf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tOverlapHalf</span></code></a>(ts1, ts2[, presort])</p></td>
+<td><p>Find overlapping elements in two lists of datetime objects</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="other-functions">
+<h2>Other functions<a class="headerlink" href="#other-functions" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.assemble.html#spacepy.toolbox.assemble" title="spacepy.toolbox.assemble"><code class="xref py py-obj docutils literal notranslate"><span class="pre">assemble</span></code></a>(fln_pattern, outfln[, sortkey, verbose])</p></td>
+<td><p>assembles all pickled files matching fln_pattern into single file and save as outfln.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.bootHisto.html#spacepy.toolbox.bootHisto" title="spacepy.toolbox.bootHisto"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bootHisto</span></code></a>(data[, inter, n, seed, plot, ...])</p></td>
+<td><p>Bootstrap confidence intervals for a histogram.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.dictree.html#spacepy.toolbox.dictree" title="spacepy.toolbox.dictree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dictree</span></code></a>(in_dict[, verbose, spaces, levels, ...])</p></td>
+<td><p>pretty print a dictionary tree</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.eventTimer.html#spacepy.toolbox.eventTimer" title="spacepy.toolbox.eventTimer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">eventTimer</span></code></a>(Event, Time1)</p></td>
+<td><p>Times an event then prints out the time and the name of the event, nice for debugging and seeing that the code is progressing</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.getNamedPath.html#spacepy.toolbox.getNamedPath" title="spacepy.toolbox.getNamedPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getNamedPath</span></code></a>(name)</p></td>
+<td><p>Return the full path of a parent directory with name as the leaf</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.human_sort.html#spacepy.toolbox.human_sort" title="spacepy.toolbox.human_sort"><code class="xref py py-obj docutils literal notranslate"><span class="pre">human_sort</span></code></a>(l)</p></td>
+<td><p>Sort the given list in the way that humans expect.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.hypot.html#spacepy.toolbox.hypot" title="spacepy.toolbox.hypot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hypot</span></code></a>(*args)</p></td>
+<td><p>compute the N-dimensional hypot of an iterable or many arguments</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.indsFromXrange.html#spacepy.toolbox.indsFromXrange" title="spacepy.toolbox.indsFromXrange"><code class="xref py py-obj docutils literal notranslate"><span class="pre">indsFromXrange</span></code></a>(inxrange)</p></td>
+<td><p>return the start and end indices implied by an xrange, useful when xrange is zero-length</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.interpol.html#spacepy.toolbox.interpol" title="spacepy.toolbox.interpol"><code class="xref py py-obj docutils literal notranslate"><span class="pre">interpol</span></code></a>(newx, x, y[, wrap])</p></td>
+<td><p>1-D linear interpolation with interpolation of hours/longitude</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.intsolve.html#spacepy.toolbox.intsolve" title="spacepy.toolbox.intsolve"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intsolve</span></code></a>(func, value[, start, stop, maxit])</p></td>
+<td><p>Find the function input such that definite integral is desired value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.medAbsDev.html#spacepy.toolbox.medAbsDev" title="spacepy.toolbox.medAbsDev"><code class="xref py py-obj docutils literal notranslate"><span class="pre">medAbsDev</span></code></a>(series[, scale])</p></td>
+<td><p>Calculate median absolute deviation of a given input series</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.mlt2rad.html#spacepy.toolbox.mlt2rad" title="spacepy.toolbox.mlt2rad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mlt2rad</span></code></a>(mlt[, midnight])</p></td>
+<td><p>Convert mlt values to radians for polar plotting transform mlt angles to radians from -pi to pi referenced from noon by default</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.normalize.html#spacepy.toolbox.normalize" title="spacepy.toolbox.normalize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize</span></code></a>(vec[, low, high])</p></td>
+<td><p>Given an input vector normalize the vector to a given range</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.pmm.html#spacepy.toolbox.pmm" title="spacepy.toolbox.pmm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pmm</span></code></a>(*args)</p></td>
+<td><p>print min and max of input arrays</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.poisson_fit.html#spacepy.toolbox.poisson_fit" title="spacepy.toolbox.poisson_fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">poisson_fit</span></code></a>(data[, initial, method])</p></td>
+<td><p>Fit a Poisson distribution to data using the method and initial guess provided.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.rad2mlt.html#spacepy.toolbox.rad2mlt" title="spacepy.toolbox.rad2mlt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rad2mlt</span></code></a>(rad[, midnight])</p></td>
+<td><p>Convert radians values to mlt transform radians from -pi to pi to mlt referenced from noon by default</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.windowMean.html#spacepy.toolbox.windowMean" title="spacepy.toolbox.windowMean"><code class="xref py py-obj docutils literal notranslate"><span class="pre">windowMean</span></code></a>(data[, time, winsize, overlap, ...])</p></td>
+<td><p>Windowing mean function, window overlap is user defined</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="multithreading-and-multiprocessing">
+<h2>Multithreading and multiprocessing<a class="headerlink" href="#multithreading-and-multiprocessing" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.thread_job.html#spacepy.toolbox.thread_job" title="spacepy.toolbox.thread_job"><code class="xref py py-obj docutils literal notranslate"><span class="pre">thread_job</span></code></a>(job_size, thread_count, target, ...)</p></td>
+<td><p>Split a job into subjobs and run a thread for each</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.thread_map.html#spacepy.toolbox.thread_map" title="spacepy.toolbox.thread_map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">thread_map</span></code></a>(target, iterable[, thread_count])</p></td>
+<td><p>Apply a function to every element of a list, in separate threads</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="system-tools">
+<h2>System tools<a class="headerlink" href="#system-tools" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.do_with_timeout.html#spacepy.toolbox.do_with_timeout" title="spacepy.toolbox.do_with_timeout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">do_with_timeout</span></code></a>(timeout, target, *args, **kwargs)</p></td>
+<td><p>Execute a function (or method) with a timeout.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.get_url.html#spacepy.toolbox.get_url" title="spacepy.toolbox.get_url"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_url</span></code></a>(url[, outfile, reporthook, cached, ...])</p></td>
+<td><p>Read data from a URL</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.loadpickle.html#spacepy.toolbox.loadpickle" title="spacepy.toolbox.loadpickle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">loadpickle</span></code></a>(fln)</p></td>
+<td><p>load a pickle and return content as dictionary</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.progressbar.html#spacepy.toolbox.progressbar" title="spacepy.toolbox.progressbar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">progressbar</span></code></a>(count, blocksize, totalsize[, text])</p></td>
+<td><p>print a progress bar with urllib.urlretrieve reporthook functionality</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.query_yes_no.html#spacepy.toolbox.query_yes_no" title="spacepy.toolbox.query_yes_no"><code class="xref py py-obj docutils literal notranslate"><span class="pre">query_yes_no</span></code></a>(question[, default])</p></td>
+<td><p>Ask a yes/no question via raw_input() and return their answer.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.savepickle.html#spacepy.toolbox.savepickle" title="spacepy.toolbox.savepickle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">savepickle</span></code></a>(fln, dict[, compress])</p></td>
+<td><p>save dictionary variable dict to a pickle with filename fln</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.timeout_check_call.html#spacepy.toolbox.timeout_check_call" title="spacepy.toolbox.timeout_check_call"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timeout_check_call</span></code></a>(timeout, *args, **kwargs)</p></td>
+<td><p>Call a subprocess with a timeout.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.TimeoutError.html#spacepy.toolbox.TimeoutError" title="spacepy.toolbox.TimeoutError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TimeoutError</span></code></a></p></td>
+<td><p>Raised when a time-limited process times out</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.toolbox.update.html#spacepy.toolbox.update" title="spacepy.toolbox.update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update</span></code></a>([all, QDomni, omni, omni2, leapsecs, ...])</p></td>
+<td><p>Download and update local database for omni, leapsecs etc</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="autosummary/spacepy.toolbox.arraybin.html" title="spacepy.toolbox.arraybin"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="autosummary/spacepy.time.tickrange.html" title="spacepy.time.tickrange"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+       <li><a href="index.html">documentation </a> &raquo;</li>
+
+        <li class="nav-item nav-item-this"><a href="">toolbox - Toolbox of various functions and generic utilities</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.irbempy.get_AEP8 &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy.irbempy.get_Bfield" href="spacepy.irbempy.get_Bfield.html" />
+    <link rel="prev" title="irbempy - Python interface to irbem/ONERA library" href="../irbempy.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.irbempy.get_Bfield.html" title="spacepy.irbempy.get_Bfield"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../irbempy.html" title="irbempy - Python interface to irbem/ONERA library"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../irbempy.html" accesskey="U">irbempy - Python interface to irbem/ONERA library</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.irbempy.get_AEP8</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../irbempy.html"
+                          title="previous chapter">irbempy - Python interface to irbem/ONERA library</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.irbempy.get_Bfield.html"
+                          title="next chapter">spacepy.irbempy.get_Bfield</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.irbempy.get_AEP8.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-irbempy-get-aep8">
+<h1>spacepy.irbempy.get_AEP8<a class="headerlink" href="#spacepy-irbempy-get-aep8" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.irbempy.get_AEP8">
+<span class="sig-prename descclassname"><span class="pre">spacepy.irbempy.</span></span><span class="sig-name descname"><span class="pre">get_AEP8</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">energy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loci</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'min'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fluxtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'diff'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">particles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'e'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/irbempy/irbempy.html#get_AEP8"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.irbempy.get_AEP8" title="Permalink to this definition">¶</a></dt>
+<dd><p>will return the flux from the AE8-AP8 model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>- energy (float)</strong><span class="classifier">center energy in MeV; if fluxtype=RANGE, then needs to be a list [Emin, Emax]</span></dt><dd></dd>
+<dt><strong>- loci (Coords)</strong><span class="classifier">a Coords instance with the location inside the magnetosphere</span></dt><dd><p>optional      instead of a Coords instance, one can also provide a list with [BBo, L] combination</p>
+</dd>
+<dt><strong>- model (str)</strong><span class="classifier">MIN or MAX for solar cycle dependence</span></dt><dd></dd>
+<dt><strong>- fluxtype (str)</strong><span class="classifier">DIFF, RANGE, INT are possible types</span></dt><dd></dd>
+<dt><strong>- particles (str): e or p or electrons or protons</strong></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>- float</strong><span class="classifier">flux from AE8/AP8 model</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">spacepy</span><span class="o">.</span><span class="n">irbempy</span><span class="o">.</span><span class="n">get_aep8</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.time</span> <span class="k">as</span> <span class="nn">spt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.coordinates</span> <span class="k">as</span> <span class="nn">spc</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.irbempy</span> <span class="k">as</span> <span class="nn">ib</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">spt</span><span class="o">.</span><span class="n">Ticktock</span><span class="p">([</span><span class="s1">&#39;2017-02-02T12:00:00&#39;</span><span class="p">],</span> <span class="s1">&#39;ISO&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">spc</span><span class="o">.</span><span class="n">Coords</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;GEO&#39;</span><span class="p">,</span> <span class="s1">&#39;car&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span><span class="o">.</span><span class="n">ticks</span> <span class="o">=</span> <span class="n">t</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">energy</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="c1">#MeV</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ib</span><span class="o">.</span><span class="n">get_AEP8</span><span class="p">(</span><span class="n">energy</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s1">&#39;max&#39;</span><span class="p">)</span>
+<span class="go">1932209.4427359989</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.irbempy.get_Bfield.html" title="spacepy.irbempy.get_Bfield"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../irbempy.html" title="irbempy - Python interface to irbem/ONERA library"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../irbempy.html" >irbempy - Python interface to irbem/ONERA library</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.irbempy.get_AEP8</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

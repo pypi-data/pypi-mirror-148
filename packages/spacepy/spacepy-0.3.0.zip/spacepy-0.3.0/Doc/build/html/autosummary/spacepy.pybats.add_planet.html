@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.pybats.add_planet &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy.pybats.parse_tecvars" href="spacepy.pybats.parse_tecvars.html" />
+    <link rel="prev" title="spacepy.pybats.add_body" href="spacepy.pybats.add_body.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.pybats.parse_tecvars.html" title="spacepy.pybats.parse_tecvars"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.pybats.add_body.html" title="spacepy.pybats.add_body"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../pybats.html" accesskey="U">PyBats - SWMF &amp; BATS-R-US Analysis Tools</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.pybats.add_planet</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="spacepy.pybats.add_body.html"
+                          title="previous chapter">spacepy.pybats.add_body</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.pybats.parse_tecvars.html"
+                          title="next chapter">spacepy.pybats.parse_tecvars</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.pybats.add_planet.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-pybats-add-planet">
+<h1>spacepy.pybats.add_planet<a class="headerlink" href="#spacepy-pybats-add-planet" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.pybats.add_planet">
+<span class="sig-prename descclassname"><span class="pre">spacepy.pybats.</span></span><span class="sig-name descname"><span class="pre">add_planet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rad</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ang</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_night</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zorder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extra_kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/pybats.html#add_planet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.pybats.add_planet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a circle of <code class="docutils literal notranslate"><span class="pre">radius=self.para['rbody']</span></code> and returns the
+MatPlotLib Ellipse patch object for plotting.  If an axis is specified
+using the <em>ax</em> keyword, the patch is added to the plot.</p>
+<p>Unlike the add_body method, the circle is colored half white (dayside)
+and half black (nightside) to coincide with the direction of the
+sun. Additionally, because the size of the planet is not intrinsically
+known to the MHD file, the kwarg “rad”, defaulting to 1.0, sets the
+size of the planet.  <em>add_night</em> can turn off this behavior.</p>
+<p>Extra keywords are handed to the Ellipse generator function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>ax</strong><span class="classifier">Matplotlib Axes object</span></dt><dd><p>Set the axes on which to place planet.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Other Parameters</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>rad</strong><span class="classifier">float</span></dt><dd><p>Set radius of planet.  Defaults to 1.</p>
+</dd>
+<dt><strong>ang</strong><span class="classifier">float</span></dt><dd><p>Set the rotation of the day-night terminator from the y-axis, in degrees.
+Defaults to zero (terminator is aligned with Y-axis.)</p>
+</dd>
+<dt><strong>add_night</strong><span class="classifier">boolean</span></dt><dd><p>Add night hemisphere.  Defaults to <strong>True</strong></p>
+</dd>
+<dt><strong>zorder</strong><span class="classifier">int</span></dt><dd><p>Set the matplotlib zorder of the patch to set how other plot
+elements order with the inner boundary patch. Defaults to 1000,
+nightside patch is given zorder of <em>zorder+5</em>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.pybats.parse_tecvars.html" title="spacepy.pybats.parse_tecvars"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.pybats.add_body.html" title="spacepy.pybats.add_body"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../pybats.html" >PyBats - SWMF &amp; BATS-R-US Analysis Tools</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.pybats.add_planet</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

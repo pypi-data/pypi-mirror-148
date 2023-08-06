@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.empiricals.getMagnetopause &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy.empiricals.getMPstandoff" href="spacepy.empiricals.getMPstandoff.html" />
+    <link rel="prev" title="spacepy.empiricals.getLmax" href="spacepy.empiricals.getLmax.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.empiricals.getMPstandoff.html" title="spacepy.empiricals.getMPstandoff"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.empiricals.getLmax.html" title="spacepy.empiricals.getLmax"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../empiricals.html" accesskey="U">empiricals - module with heliospheric empirical modules</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.empiricals.getMagnetopause</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="spacepy.empiricals.getLmax.html"
+                          title="previous chapter">spacepy.empiricals.getLmax</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.empiricals.getMPstandoff.html"
+                          title="next chapter">spacepy.empiricals.getMPstandoff</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.empiricals.getMagnetopause.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-empiricals-getmagnetopause">
+<h1>spacepy.empiricals.getMagnetopause<a class="headerlink" href="#spacepy-empiricals-getmagnetopause" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.empiricals.getMagnetopause">
+<span class="sig-prename descclassname"><span class="pre">spacepy.empiricals.</span></span><span class="sig-name descname"><span class="pre">getMagnetopause</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">LTs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dbase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'QDhourly'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/empiricals.html#getMagnetopause"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.empiricals.getMagnetopause" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the Shue et al. (1997) position in equatorial plane</p>
+<p>Shue et al. (1997), A new functional form to study the solar wind 
+control of the magnetopause size and shape, J. Geophys. Res., 102(A5), 
+9497–9511, doi:10.1029/97JA00196.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>ticks</strong><span class="classifier">spacepy.time.Ticktock</span></dt><dd><p>TickTock object of desired times (will be interpolated from hourly OMNI data)
+OR dictionary of form {‘P’: [], ‘Bz’: []}
+Where P is SW ram pressure [nPa] and Bz is IMF Bz (GSM) [nT]</p>
+</dd>
+<dt><strong>LTs</strong><span class="classifier">array-like</span></dt><dd><p>Array-like of local times for evaluating the magnetopause model. Default is
+6 LT to 18 LT in steps of 20 minutes.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">array</span></dt><dd><p>NxMx2 array of magnetopause positions [Re]
+N is number of timesteps, M is number of local times. The 2 positions
+are the X_GSE and Y_GSE positions of the magnetopause</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.time</span> <span class="k">as</span> <span class="nn">spt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.empiricals</span> <span class="k">as</span> <span class="nn">emp</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ticks</span> <span class="o">=</span> <span class="n">spt</span><span class="o">.</span><span class="n">Ticktock</span><span class="p">([</span><span class="s1">&#39;2002-01-01T12:00:00&#39;</span><span class="p">,</span><span class="s1">&#39;2002-01-04T00:00:00&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">localtimes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">13</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">11</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">emp</span><span class="o">.</span><span class="n">getMagnetopause</span><span class="p">(</span><span class="n">ticks</span><span class="p">,</span> <span class="n">LTs</span><span class="o">=</span><span class="n">localtimes</span><span class="p">)</span>
+<span class="go">array([[[ 10.27674331,  -2.75364507],</span>
+<span class="go">    [ 10.52909163,   0.        ],</span>
+<span class="go">    [ 10.27674331,   2.75364507]],</span>
+<span class="go">   [[ 10.91791834,  -2.9254474 ],</span>
+<span class="go">    [ 11.18712131,   0.        ],</span>
+<span class="go">    [ 10.91791834,   2.9254474 ]]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">emp</span><span class="o">.</span><span class="n">getMPstandoff</span><span class="p">(</span><span class="n">ticks</span><span class="p">)</span> <span class="c1">#should give same result as getMagnetopause for 12LT</span>
+<span class="go">array([ 10.52909163,  11.18712131])</span>
+</pre></div>
+</div>
+<p>To plot the magnetopause:
+&gt;&gt;&gt; import numpy as np
+&gt;&gt;&gt; import spacepy.plot as splot
+&gt;&gt;&gt; import matplotlib.pyplot as plt
+&gt;&gt;&gt; localtimes = np.arange(5, 19.1, 0.5)
+&gt;&gt;&gt; mp_pos = emp.getMagnetopause(ticks, localtimes)
+&gt;&gt;&gt; plt.plot(mp_pos[0,:,0], mp_pos[0,:,1])
+&gt;&gt;&gt; ax1 = plt.gca()
+&gt;&gt;&gt; ax1.set_xlim([-5,20])
+&gt;&gt;&gt; ax1.set_xlabel(‘X$_{GSE}$ [R$_E$]’)
+&gt;&gt;&gt; ax1.set_ylabel(‘Y$_{GSE}$ [R$_E$]’)
+&gt;&gt;&gt; splot.dual_half_circle(ax=ax1)
+&gt;&gt;&gt; ax1.axes.set_aspect(‘equal’)</p>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.empiricals.getMPstandoff.html" title="spacepy.empiricals.getMPstandoff"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.empiricals.getLmax.html" title="spacepy.empiricals.getLmax"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../empiricals.html" >empiricals - module with heliospheric empirical modules</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.empiricals.getMagnetopause</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

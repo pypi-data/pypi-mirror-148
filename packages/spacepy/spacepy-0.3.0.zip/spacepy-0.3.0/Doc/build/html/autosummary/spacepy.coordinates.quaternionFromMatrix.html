@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.coordinates.quaternionFromMatrix &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy.coordinates.quaternionToMatrix" href="spacepy.coordinates.quaternionToMatrix.html" />
+    <link rel="prev" title="spacepy.coordinates.quaternionConjugate" href="spacepy.coordinates.quaternionConjugate.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.coordinates.quaternionToMatrix.html" title="spacepy.coordinates.quaternionToMatrix"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.coordinates.quaternionConjugate.html" title="spacepy.coordinates.quaternionConjugate"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../coordinates.html" accesskey="U">coordinates - module for coordinate transforms</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.coordinates.quaternionFromMatrix</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="spacepy.coordinates.quaternionConjugate.html"
+                          title="previous chapter">spacepy.coordinates.quaternionConjugate</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.coordinates.quaternionToMatrix.html"
+                          title="next chapter">spacepy.coordinates.quaternionToMatrix</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.coordinates.quaternionFromMatrix.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-coordinates-quaternionfrommatrix">
+<h1>spacepy.coordinates.quaternionFromMatrix<a class="headerlink" href="#spacepy-coordinates-quaternionfrommatrix" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.coordinates.quaternionFromMatrix">
+<span class="sig-prename descclassname"><span class="pre">spacepy.coordinates.</span></span><span class="sig-name descname"><span class="pre">quaternionFromMatrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scalarPos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'last'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/coordinates.html#quaternionFromMatrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.coordinates.quaternionFromMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given an input rotation matrix, return the equivalent quaternion</p>
+<p>The output has one fewer axis than the input (the last axis) and the
+shape is otherwise unchanged, allowing multi-dimensional matrix input.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>matrix</strong><span class="classifier">array_like</span></dt><dd><p>input rotation matrix or array of matrices</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">array_like</span></dt><dd><p>Quaternions representing the same rotation as the input rotation
+matrices.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Other Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>scalarPos</strong><span class="classifier">str</span></dt><dd><p>Location of the scalar component of the output quaternion, either
+‘last’ (default) or ‘first’.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><dl class="simple">
+<dt>NotImplementedError</dt><dd><p>for invalid values of <code class="docutils literal notranslate"><span class="pre">scalarPos</span></code></p>
+</dd>
+<dt>ValueError</dt><dd><p>for inputs which are obviously not valid 3D rotation matrices or
+arrays thereof: if the size doesn’t end in (3, 3), if the matrix is
+not orthogonal, or not a proper rotation.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="spacepy.coordinates.quaternionToMatrix.html#spacepy.coordinates.quaternionToMatrix" title="spacepy.coordinates.quaternionToMatrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quaternionToMatrix</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 0.2.2.</span></p>
+</div>
+<p>No attempt is made to resolve the sign ambiguity; in particular,
+conversions of very similar matrices may result in equivalent quaternions
+with the opposite sign. This may have implications for interpolating a
+sequence of quaternions.</p>
+<p>The conversion of a rotation matrix to a quaternion suffers from some
+of the same disadvantages inherent to rotation matrices, such as potential
+numerical instabilities. Working in quaternion space as much as possible
+is recommended.</p>
+<p>There are several algorithms; the most well-known algorithm for this
+conversion is Shepperd’s <a class="footnote-reference brackets" href="#shepperd" id="id1">1</a>, although the many “rediscoveries”
+indicate
+it is not sufficiently well-known. This function uses the method of
+Bar-Itzhack <a class="footnote-reference brackets" href="#baritzhack" id="id2">2</a> (version 3), which should be resistant to small
+errors in the rotation matrix. As a result, the input checking is quite
+coarse and will likely accept many matrices that do not represent valid
+rotations.</p>
+<p>Also potentially of interest, although not implemented here, is Sarabandi
+and Thomas <a class="footnote-reference brackets" href="#sarabandi" id="id3">3</a>.</p>
+<p class="rubric">References</p>
+<dl class="footnote brackets">
+<dt class="label" id="shepperd"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>S.W. Shepperd, “Quaternion from rotation matrix,” Journal of
+Guidance and Control, Vol. 1, No. 3, pp. 223-224, 1978,
+<a class="reference external" href="https://doi.org/10.2514/3.55767b">doi:10.2514/3.55767b</a></p>
+</dd>
+<dt class="label" id="baritzhack"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>I. Y. Bar-Itzhack, “New method for extracting the
+quaternion from a rotation matrix”, AIAA Journal of Guidance,
+Control and Dynamics, 23 (6): 1085–1087,
+<a class="reference external" href="https://doi.org/10.2514/2.4654">doi:10.2514/2.4654</a></p>
+</dd>
+<dt class="label" id="sarabandi"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>S. Sarabandi and F. Thomas, “Accurate Computation of
+Quaternions from Rotation Matrices”, In: Lenarcic J.,
+Parenti-Castelli V. (eds) Advances in Robot Kinematics 2018,
+Springer.
+<a class="reference external" href="https://doi.org/10.1007/978-3-319-93188-3_5">doi:10.1007/978-3-319-93188-3_5</a></p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.coordinates</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">spacepy</span><span class="o">.</span><span class="n">coordinates</span><span class="o">.</span><span class="n">quaternionFromMatrix</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="p">[[</span> <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">],</span>
+<span class="gp">... </span>     <span class="p">[</span> <span class="mf">1.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">],</span>
+<span class="gp">... </span>     <span class="p">[</span> <span class="mf">0.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">0.</span><span class="p">]])</span>
+<span class="go">array([0.5, 0.5, 0.5, 0.5])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.coordinates.quaternionToMatrix.html" title="spacepy.coordinates.quaternionToMatrix"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.coordinates.quaternionConjugate.html" title="spacepy.coordinates.quaternionConjugate"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../coordinates.html" >coordinates - module for coordinate transforms</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.coordinates.quaternionFromMatrix</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.omni.get_omni &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy.omni.omnirange" href="spacepy.omni.omnirange.html" />
+    <link rel="prev" title="omni - module to read and process NASA OMNIWEB data" href="../omni.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.omni.omnirange.html" title="spacepy.omni.omnirange"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../omni.html" title="omni - module to read and process NASA OMNIWEB data"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../omni.html" accesskey="U">omni - module to read and process NASA OMNIWEB data</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.omni.get_omni</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../omni.html"
+                          title="previous chapter">omni - module to read and process NASA OMNIWEB data</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.omni.omnirange.html"
+                          title="next chapter">spacepy.omni.omnirange</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.omni.get_omni.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-omni-get-omni">
+<h1>spacepy.omni.get_omni<a class="headerlink" href="#spacepy-omni-get-omni" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.omni.get_omni">
+<span class="sig-prename descclassname"><span class="pre">spacepy.omni.</span></span><span class="sig-name descname"><span class="pre">get_omni</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dbase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'QDhourly'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/omni.html#get_omni"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.omni.get_omni" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Qin-Denton OMNI values, interpolated to any time-base from a default hourly resolution</p>
+<p>The update function in toolbox retrieves all available hourly Qin-Denton data, 
+and this function accesses that and interpolates to the given times,
+returning the OMNI values as a SpaceData (dict-like) with
+Kp, Dst, dens, velo, Pdyn, ByIMF, BzIMF, G1, G2, G3, etc.
+(see also <a class="reference external" href="http://www.dartmouth.edu/~rdenton/magpar/index.html">http://www.dartmouth.edu/~rdenton/magpar/index.html</a> and
+<a class="reference external" href="http://www.agu.org/pubs/crossref/2007/2006SW000296.shtml">http://www.agu.org/pubs/crossref/2007/2006SW000296.shtml</a> )</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>ticks</strong><span class="classifier">Ticktock class or array-like of datetimes</span></dt><dd><p>time values for desired output</p>
+</dd>
+<dt><strong>dbase</strong><span class="classifier">str (optional)</span></dt><dd><p>Select data source, options are ‘QDhourly’, ‘OMNI2hourly’, ‘Mergedhourly’
+Note - Custom data sources can be specified in the spacepy config file
+as described in the module documentation.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">spacepy.datamodel.SpaceData</span></dt><dd><p>containing all Qin-Denton values at times given by ticks</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Note about Qbits: If the status variable is 2, the quantity you are using is fairly well
+determined. If it is 1, the value has some connection to measured values, but is not directly
+measured. These values are still better than just using an average value, but not as good
+as those with the status variable equal to 2. If the status variable is 0, the quantity is
+based on average quantities, and the values listed are no better than an average value. The
+lower the status variable, the less confident you should be in the value.</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.time</span> <span class="k">as</span> <span class="nn">spt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.omni</span> <span class="k">as</span> <span class="nn">om</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ticks</span> <span class="o">=</span> <span class="n">spt</span><span class="o">.</span><span class="n">Ticktock</span><span class="p">([</span><span class="s1">&#39;2002-02-02T12:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;2002-02-02T12:10:00&#39;</span><span class="p">],</span> <span class="s1">&#39;ISO&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">om</span><span class="o">.</span><span class="n">get_omni</span><span class="p">(</span><span class="n">ticks</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="o">.</span><span class="n">tree</span><span class="p">(</span><span class="n">levels</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">+</span>
+<span class="go">|____ByIMF</span>
+<span class="go">|____Bz1</span>
+<span class="go">|____Bz2</span>
+<span class="go">|____Bz3</span>
+<span class="go">|____Bz4</span>
+<span class="go">|____Bz5</span>
+<span class="go">|____Bz6</span>
+<span class="go">|____BzIMF</span>
+<span class="go">|____DOY</span>
+<span class="go">|____Dst</span>
+<span class="go">|____G1</span>
+<span class="go">|____G2</span>
+<span class="go">|____G3</span>
+<span class="go">|____Hr</span>
+<span class="go">|____Kp</span>
+<span class="go">|____Pdyn</span>
+<span class="go">|____Qbits</span>
+<span class="go">|____RDT</span>
+<span class="go">|____UTC</span>
+<span class="go">|____W1</span>
+<span class="go">|____W2</span>
+<span class="go">|____W3</span>
+<span class="go">|____W4</span>
+<span class="go">|____W5</span>
+<span class="go">|____W6</span>
+<span class="go">|____Year</span>
+<span class="go">|____akp3</span>
+<span class="go">|____dens</span>
+<span class="go">|____ticks</span>
+<span class="go">|____velo</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.omni.omnirange.html" title="spacepy.omni.omnirange"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../omni.html" title="omni - module to read and process NASA OMNIWEB data"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../omni.html" >omni - module to read and process NASA OMNIWEB data</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.omni.get_omni</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

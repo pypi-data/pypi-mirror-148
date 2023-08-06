@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.toolbox.tCommon &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy.toolbox.tOverlap" href="spacepy.toolbox.tOverlap.html" />
+    <link rel="prev" title="spacepy.toolbox.isview" href="spacepy.toolbox.isview.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.toolbox.tOverlap.html" title="spacepy.toolbox.tOverlap"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.toolbox.isview.html" title="spacepy.toolbox.isview"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../toolbox.html" accesskey="U">toolbox - Toolbox of various functions and generic utilities</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.toolbox.tCommon</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="spacepy.toolbox.isview.html"
+                          title="previous chapter">spacepy.toolbox.isview</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.toolbox.tOverlap.html"
+                          title="next chapter">spacepy.toolbox.tOverlap</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.toolbox.tCommon.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-toolbox-tcommon">
+<h1>spacepy.toolbox.tCommon<a class="headerlink" href="#spacepy-toolbox-tcommon" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.toolbox.tCommon">
+<span class="sig-prename descclassname"><span class="pre">spacepy.toolbox.</span></span><span class="sig-name descname"><span class="pre">tCommon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ts1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ts2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask_only</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/toolbox.html#tCommon"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.toolbox.tCommon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds the elements in a list of datetime objects present in another</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>ts1</strong><span class="classifier">list or array-like</span></dt><dd><p>first set of datetime objects</p>
+</dd>
+<dt><strong>ts2</strong><span class="classifier">list or array-like</span></dt><dd><p>second set of datetime objects</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">tuple</span></dt><dd><p>Two element tuple of truth tables (of 1 present in 2, &amp; vice versa)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="spacepy.toolbox.tOverlapHalf.html#spacepy.toolbox.tOverlapHalf" title="spacepy.toolbox.tOverlapHalf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tOverlapHalf</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="spacepy.toolbox.tOverlap.html#spacepy.toolbox.tOverlap" title="spacepy.toolbox.tOverlap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tOverlap</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.toolbox</span> <span class="k">as</span> <span class="nn">tb</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ts1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2001</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span><span class="o">+</span><span class="n">dt</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="n">a</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">)])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ts2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2001</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="n">dt</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="n">a</span><span class="o">*</span><span class="mf">0.5</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">)])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">common_inds</span> <span class="o">=</span> <span class="n">tb</span><span class="o">.</span><span class="n">tCommon</span><span class="p">(</span><span class="n">ts1</span><span class="p">,</span> <span class="n">ts2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">common_inds</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#mask of values in ts1 common with ts2</span>
+<span class="go">array([False, False,  True,  True,  True,  True,  True,  True,  True,</span>
+<span class="go">        True,  True,  True, False, False, False, False, False, False,</span>
+<span class="go">       False, False], dtype=bool)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ts2</span><span class="p">[</span><span class="n">common_inds</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="c1">#values of ts2 also in ts1</span>
+</pre></div>
+</div>
+<p>The latter can be found more simply by setting the mask_only keyword to False</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">common_vals</span> <span class="o">=</span> <span class="n">tb</span><span class="o">.</span><span class="n">tCommon</span><span class="p">(</span><span class="n">ts1</span><span class="p">,</span> <span class="n">ts2</span><span class="p">,</span> <span class="n">mask_only</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">common_vals</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">array([2001-03-10 02:00:00, 2001-03-10 03:00:00, 2001-03-10 04:00:00,</span>
+<span class="go">       2001-03-10 05:00:00, 2001-03-10 06:00:00, 2001-03-10 07:00:00,</span>
+<span class="go">       2001-03-10 08:00:00, 2001-03-10 09:00:00, 2001-03-10 10:00:00,</span>
+<span class="go">       2001-03-10 11:00:00], dtype=object)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.toolbox.tOverlap.html" title="spacepy.toolbox.tOverlap"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.toolbox.isview.html" title="spacepy.toolbox.isview"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../toolbox.html" >toolbox - Toolbox of various functions and generic utilities</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.toolbox.tCommon</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

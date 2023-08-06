@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.datamodel.SpaceData &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy.datamodel.dmarray" href="spacepy.datamodel.dmarray.html" />
+    <link rel="prev" title="datamodel - easy to use general data model" href="../datamodel.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.datamodel.dmarray.html" title="spacepy.datamodel.dmarray"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../datamodel.html" title="datamodel - easy to use general data model"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../datamodel.html" accesskey="U">datamodel - easy to use general data model</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.datamodel.SpaceData</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../datamodel.html"
+                          title="previous chapter">datamodel - easy to use general data model</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.datamodel.dmarray.html"
+                          title="next chapter">spacepy.datamodel.dmarray</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.datamodel.SpaceData.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-datamodel-spacedata">
+<h1>spacepy.datamodel.SpaceData<a class="headerlink" href="#spacepy-datamodel-spacedata" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="spacepy.datamodel.SpaceData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">spacepy.datamodel.</span></span><span class="sig-name descname"><span class="pre">SpaceData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/datamodel.html#SpaceData"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.datamodel.SpaceData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Datamodel class extending dict by adding attributes.</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.datamodel.SpaceData.flatten" title="spacepy.datamodel.SpaceData.flatten"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flatten</span></code></a>()</p></td>
+<td><p>Method to collapse datamodel to one level deep</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.datamodel.SpaceData.tree" title="spacepy.datamodel.SpaceData.tree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tree</span></code></a>(**kwargs)</p></td>
+<td><p>Print the contents of the SpaceData object in a visual tree</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.datamodel.SpaceData.flatten">
+<span class="sig-name descname"><span class="pre">flatten</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/datamodel.html#SpaceData.flatten"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.datamodel.SpaceData.flatten" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to collapse datamodel to one level deep</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.datamodel</span> <span class="k">as</span> <span class="nn">dm</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.toolbox</span> <span class="k">as</span> <span class="nn">tb</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">SpaceData</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">SpaceData</span><span class="p">(</span><span class="n">dog</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">pig</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">SpaceData</span><span class="p">(</span><span class="n">fish</span><span class="o">=</span><span class="n">dm</span><span class="o">.</span><span class="n">SpaceData</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="s1">&#39;carp&#39;</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="s1">&#39;perch&#39;</span><span class="p">)))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;4&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">SpaceData</span><span class="p">(</span><span class="n">cat</span> <span class="o">=</span> <span class="s1">&#39;kitty&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;5&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">tree</span><span class="p">()</span>
+<span class="go">+</span>
+<span class="go">|____1</span>
+<span class="go">     |____dog</span>
+<span class="go">     |____pig</span>
+<span class="go">          |____fish</span>
+<span class="go">               |____a</span>
+<span class="go">               |____b</span>
+<span class="go">|____4</span>
+<span class="go">     |____cat</span>
+<span class="go">|____5</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="o">.</span><span class="n">tree</span><span class="p">()</span>
+<span class="go">+</span>
+<span class="go">|____1&lt;--dog</span>
+<span class="go">|____1&lt;--pig&lt;--fish&lt;--a</span>
+<span class="go">|____1&lt;--pig&lt;--fish&lt;--b</span>
+<span class="go">|____4&lt;--cat</span>
+<span class="go">|____5</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">tree</span><span class="p">()</span>
+<span class="go">+</span>
+<span class="go">|____1&lt;--dog</span>
+<span class="go">|____1&lt;--pig&lt;--fish&lt;--a</span>
+<span class="go">|____1&lt;--pig&lt;--fish&lt;--b</span>
+<span class="go">|____4&lt;--cat</span>
+<span class="go">|____5</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.datamodel.SpaceData.tree">
+<span class="sig-name descname"><span class="pre">tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/datamodel.html#SpaceData.tree"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.datamodel.SpaceData.tree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the contents of the SpaceData object in a visual tree</p>
+<dl class="field-list simple">
+<dt class="field-odd">Other Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>verbose</strong><span class="classifier">boolean (optional)</span></dt><dd><p>print more info</p>
+</dd>
+<dt><strong>spaces</strong><span class="classifier">string (optional)</span></dt><dd><p>string will added for every line</p>
+</dd>
+<dt><strong>levels</strong><span class="classifier">integer (optional)</span></dt><dd><p>number of levels to recurse through (True means all)</p>
+</dd>
+<dt><strong>attrs</strong><span class="classifier">boolean (optional)</span></dt><dd><p>display information for attributes</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">toolbox.dictree</span></code></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.datamodel</span> <span class="k">as</span> <span class="nn">dm</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.toolbox</span> <span class="k">as</span> <span class="nn">tb</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">SpaceData</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">SpaceData</span><span class="p">(</span><span class="n">dog</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;4&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">SpaceData</span><span class="p">(</span><span class="n">cat</span> <span class="o">=</span> <span class="s1">&#39;kitty&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;5&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">tree</span><span class="p">()</span>
+<span class="go">+</span>
+<span class="go">|____1</span>
+<span class="go">     |____dog</span>
+<span class="go">|____4</span>
+<span class="go">     |____cat</span>
+<span class="go">|____5</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.datamodel.dmarray.html" title="spacepy.datamodel.dmarray"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../datamodel.html" title="datamodel - easy to use general data model"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../datamodel.html" >datamodel - easy to use general data model</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.datamodel.SpaceData</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

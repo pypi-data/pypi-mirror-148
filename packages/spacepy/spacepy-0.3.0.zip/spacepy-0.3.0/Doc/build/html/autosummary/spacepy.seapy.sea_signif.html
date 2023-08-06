@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.seapy.sea_signif &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="time - Time conversion, manipulation and implementation of Ticktock class" href="../time.html" />
+    <link rel="prev" title="spacepy.seapy.readepochs" href="spacepy.seapy.readepochs.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../time.html" title="time - Time conversion, manipulation and implementation of Ticktock class"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.seapy.readepochs.html" title="spacepy.seapy.readepochs"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../seapy.html" accesskey="U">SeaPy - Superposed Epoch in Python</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.seapy.sea_signif</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="spacepy.seapy.readepochs.html"
+                          title="previous chapter">spacepy.seapy.readepochs</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../time.html"
+                          title="next chapter">time - Time conversion, manipulation and implementation of Ticktock class</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.seapy.sea_signif.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-seapy-sea-signif">
+<h1>spacepy.seapy.sea_signif<a class="headerlink" href="#spacepy-seapy-sea-signif" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.seapy.sea_signif">
+<span class="sig-prename descclassname"><span class="pre">spacepy.seapy.</span></span><span class="sig-name descname"><span class="pre">sea_signif</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'KS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xquan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Time</span> <span class="pre">Since</span> <span class="pre">Epoch'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yquan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xunits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yunits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epochline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">usrlimy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/seapy.html#sea_signif"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.seapy.sea_signif" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test for similarity between distributions at each lag in two 1-D SEAs</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>obj1</strong><span class="classifier">Sea</span></dt><dd><p>First instance for comparison</p>
+</dd>
+<dt><strong>obj2</strong><span class="classifier">Sea</span></dt><dd><p>Second instance for comparison</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Other Parameters</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>test</strong></dt><dd><p>(default = ‘KS’) Test to apply at each lag:
+KS is 2-smaple Kolmogorov-Smirnov; U is Mann-Whitney U-test</p>
+</dd>
+<dt><strong>show</strong></dt><dd><p>(default = True)</p>
+</dd>
+<dt><strong>xquan</strong></dt><dd><p>(default = ‘Time since epoch’ (None)) - x-axis label.</p>
+</dd>
+<dt><strong>yquan</strong></dt><dd><p>(default = ‘Time since epoch’ (None)) - y-axis label.</p>
+</dd>
+<dt><strong>xunits</strong></dt><dd><p>(default = None (None)) - x-axis units.</p>
+</dd>
+<dt><strong>yunits</strong></dt><dd><p>(default = None (None)) - y-axis units.</p>
+</dd>
+<dt><strong>epochline</strong></dt><dd><p>(default = True) - put vertical line at zero epoch.</p>
+</dd>
+<dt><strong>usrlimy</strong></dt><dd><p>(default = []) - override automatic y-limits on plot.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">obj1</span> <span class="o">=</span> <span class="n">seapy</span><span class="o">.</span><span class="n">Sea</span><span class="p">(</span><span class="n">data1</span><span class="p">,</span> <span class="n">times1</span><span class="p">,</span> <span class="n">epochs1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">obj2</span> <span class="o">=</span> <span class="n">seapy</span><span class="o">.</span><span class="n">Sea</span><span class="p">(</span><span class="n">data2</span><span class="p">,</span> <span class="n">times2</span><span class="p">,</span> <span class="n">epochs2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">obj1</span><span class="o">.</span><span class="n">sea</span><span class="p">(</span><span class="n">storedata</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">obj2</span><span class="o">.</span><span class="n">sea</span><span class="p">(</span><span class="n">storedata</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">seapy</span><span class="o">.</span><span class="n">sea_signif</span><span class="p">(</span><span class="n">obj1</span><span class="p">,</span> <span class="n">obj2</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../time.html" title="time - Time conversion, manipulation and implementation of Ticktock class"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.seapy.readepochs.html" title="spacepy.seapy.readepochs"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../seapy.html" >SeaPy - Superposed Epoch in Python</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.seapy.sea_signif</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

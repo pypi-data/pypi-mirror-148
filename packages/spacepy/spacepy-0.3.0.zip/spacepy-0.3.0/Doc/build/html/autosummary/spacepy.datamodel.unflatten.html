@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.datamodel.unflatten &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy.datamodel.readJSONMetadata" href="spacepy.datamodel.readJSONMetadata.html" />
+    <link rel="prev" title="spacepy.datamodel.toRecArray" href="spacepy.datamodel.toRecArray.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.datamodel.readJSONMetadata.html" title="spacepy.datamodel.readJSONMetadata"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.datamodel.toRecArray.html" title="spacepy.datamodel.toRecArray"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../datamodel.html" accesskey="U">datamodel - easy to use general data model</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.datamodel.unflatten</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="spacepy.datamodel.toRecArray.html"
+                          title="previous chapter">spacepy.datamodel.toRecArray</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.datamodel.readJSONMetadata.html"
+                          title="next chapter">spacepy.datamodel.readJSONMetadata</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.datamodel.unflatten.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-datamodel-unflatten">
+<h1>spacepy.datamodel.unflatten<a class="headerlink" href="#spacepy-datamodel-unflatten" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.datamodel.unflatten">
+<span class="sig-prename descclassname"><span class="pre">spacepy.datamodel.</span></span><span class="sig-name descname"><span class="pre">unflatten</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dobj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">marker</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'&lt;--'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/datamodel.html#unflatten"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.datamodel.unflatten" title="Permalink to this definition">¶</a></dt>
+<dd><p>Collapse datamodel to one level deep</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.datamodel</span> <span class="k">as</span> <span class="nn">dm</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.toolbox</span> <span class="k">as</span> <span class="nn">tb</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">SpaceData</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">SpaceData</span><span class="p">(</span><span class="n">dog</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">pig</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">SpaceData</span><span class="p">(</span><span class="n">fish</span><span class="o">=</span><span class="n">dm</span><span class="o">.</span><span class="n">SpaceData</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="s1">&#39;carp&#39;</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="s1">&#39;perch&#39;</span><span class="p">)))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;4&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">SpaceData</span><span class="p">(</span><span class="n">cat</span> <span class="o">=</span> <span class="s1">&#39;kitty&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;5&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">tree</span><span class="p">()</span>
+<span class="go">+</span>
+<span class="go">|____1</span>
+<span class="go">     |____dog</span>
+<span class="go">     |____pig</span>
+<span class="go">          |____fish</span>
+<span class="go">               |____a</span>
+<span class="go">               |____b</span>
+<span class="go">|____4</span>
+<span class="go">     |____cat</span>
+<span class="go">|____5</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="o">.</span><span class="n">tree</span><span class="p">()</span>
+<span class="go">+</span>
+<span class="go">|____1&lt;--dog</span>
+<span class="go">|____1&lt;--pig&lt;--fish&lt;--a</span>
+<span class="go">|____1&lt;--pig&lt;--fish&lt;--b</span>
+<span class="go">|____4&lt;--cat</span>
+<span class="go">|____5</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">dm</span><span class="o">.</span><span class="n">unflatten</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="o">.</span><span class="n">tree</span><span class="p">()</span>
+<span class="go">+</span>
+<span class="go">|____1</span>
+<span class="go">     |____dog</span>
+<span class="go">     |____pig</span>
+<span class="go">          |____fish</span>
+<span class="go">               |____a</span>
+<span class="go">               |____b</span>
+<span class="go">|____4</span>
+<span class="go">     |____cat</span>
+<span class="go">|____5</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.datamodel.readJSONMetadata.html" title="spacepy.datamodel.readJSONMetadata"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.datamodel.toRecArray.html" title="spacepy.datamodel.toRecArray"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../datamodel.html" >datamodel - easy to use general data model</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.datamodel.unflatten</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

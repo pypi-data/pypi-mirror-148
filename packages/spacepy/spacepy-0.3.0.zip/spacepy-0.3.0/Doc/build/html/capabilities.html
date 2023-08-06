@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>SpacePy Capabilities &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Release Notes" href="release_notes.html" />
+    <link rel="prev" title="SpacePy Help" href="help.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="index.html"><img src="_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="release_notes.html" title="Release Notes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="help.html" title="SpacePy Help"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+       <li><a href="index.html">documentation </a> &raquo;</li>
+
+        <li class="nav-item nav-item-this"><a href="">SpacePy Capabilities</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">SpacePy Capabilities</a><ul>
+<li><a class="reference internal" href="#array-manipulation">Array manipulation</a></li>
+<li><a class="reference internal" href="#coordinate-transforms">Coordinate Transforms</a></li>
+<li><a class="reference internal" href="#file-i-o">File I/O</a></li>
+<li><a class="reference internal" href="#modeling">Modeling</a></li>
+<li><a class="reference internal" href="#statistics">Statistics</a></li>
+<li><a class="reference internal" href="#time-conversions">Time conversions</a></li>
+<li><a class="reference internal" href="#time-series-analysis-and-correlations">Time series analysis and correlations</a></li>
+<li><a class="reference internal" href="#visualization">Visualization</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="help.html"
+                          title="previous chapter">SpacePy Help</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="release_notes.html"
+                          title="next chapter">Release Notes</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/capabilities.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-capabilities">
+<h1>SpacePy Capabilities<a class="headerlink" href="#spacepy-capabilities" title="Permalink to this headline">¶</a></h1>
+<p>This page lists some capabilities of SpacePy and, in some cases, of
+other packages that might be of interest to SpacePy users. It is
+organized by topic; searching within this page is recommended. See the
+<a class="reference internal" href="index.html#module-reference"><span class="std std-ref">module reference</span></a> for every class/function
+available in SpacePy, organized by module.</p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#array-manipulation" id="id1">Array manipulation</a></p></li>
+<li><p><a class="reference internal" href="#coordinate-transforms" id="id2">Coordinate Transforms</a></p></li>
+<li><p><a class="reference internal" href="#file-i-o" id="id3">File I/O</a></p></li>
+<li><p><a class="reference internal" href="#modeling" id="id4">Modeling</a></p></li>
+<li><p><a class="reference internal" href="#statistics" id="id5">Statistics</a></p></li>
+<li><p><a class="reference internal" href="#time-conversions" id="id6">Time conversions</a></p></li>
+<li><p><a class="reference internal" href="#time-series-analysis-and-correlations" id="id7">Time series analysis and correlations</a></p></li>
+<li><p><a class="reference internal" href="#visualization" id="id8">Visualization</a></p></li>
+</ul>
+</div>
+<section id="array-manipulation">
+<h2><a class="toc-backref" href="#id1">Array manipulation</a><a class="headerlink" href="#array-manipulation" title="Permalink to this headline">¶</a></h2>
+<p>Various <a class="reference internal" href="toolbox.html#module-spacepy.toolbox" title="spacepy.toolbox"><code class="xref py py-mod docutils literal notranslate"><span class="pre">toolbox</span></code></a> functions are useful in manipulating
+NumPy arrays. <a class="reference internal" href="datamanager.html#module-spacepy.datamanager" title="spacepy.datamanager"><code class="xref py py-mod docutils literal notranslate"><span class="pre">datamanager</span></code></a> also contains many functions
+for indexing arrays and manipulating them in ways that do not depend
+on the interpretation of their contents.</p>
+</section>
+<section id="coordinate-transforms">
+<h2><a class="toc-backref" href="#id2">Coordinate Transforms</a><a class="headerlink" href="#coordinate-transforms" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="coordinates.html#module-spacepy.coordinates" title="spacepy.coordinates"><code class="xref py py-mod docutils literal notranslate"><span class="pre">coordinates</span></code></a> provides a class for transforming among
+most coordinate systems used in Earth magnetospheric and
+ionospheric physics.</p>
+<p>It also provides generalized coordinate transforms via quaternions.</p>
+</section>
+<section id="file-i-o">
+<h2><a class="toc-backref" href="#id3">File I/O</a><a class="headerlink" href="#file-i-o" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="pycdf.html#module-spacepy.pycdf" title="spacepy.pycdf"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pycdf</span></code></a> provides reading and writing of NASA CDF files,
+with additional functionality for those with ISTP-compliant metadata.</p>
+<p><a class="reference internal" href="datamodel.html#module-spacepy.datamodel" title="spacepy.datamodel"><code class="xref py py-mod docutils literal notranslate"><span class="pre">datamodel</span></code></a> provides easy reading and writing of HDF5
+and most netCDF files. It also supports reading and writing ASCII-based
+data files with rich JSON metadata, supported by tools such as
+<a class="reference external" href="http://autoplot.org">Autoplot</a>.</p>
+<p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html#numpy.loadtxt" title="(in NumPy v1.22)"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.loadtxt()</span></code></a> and related functions are helpful for reading
+various “plain-text” files into numerical arrays.</p>
+<p><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.io.readsav.html#scipy.io.readsav" title="(in SciPy v1.8.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">scipy.io.readsav()</span></code></a> reads IDL savesets.</p>
+<p><a class="reference external" href="https://docs.astropy.org/en/stable/io/fits/index.html#module-astropy.io.fits" title="(in Astropy v5.0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">astropy.io.fits</span></code></a> supports FITS files.</p>
+</section>
+<section id="modeling">
+<h2><a class="toc-backref" href="#id4">Modeling</a><a class="headerlink" href="#modeling" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="ae9ap9.html#module-spacepy.ae9ap9" title="spacepy.ae9ap9"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ae9ap9</span></code></a> supports import and visualization of data from
+the AE9/AP9 empirical radiation belt model.</p>
+<p><a class="reference internal" href="empiricals.html#module-spacepy.empiricals" title="spacepy.empiricals"><code class="xref py py-mod docutils literal notranslate"><span class="pre">empiricals</span></code></a> implements several simple empirical and/or
+analytic models for magnetospheric and solar wind phenomena, including
+the plasmapause location, the Shue magnetopause model, and solar wind
+temperature.</p>
+<p><a class="reference internal" href="pybats.html#module-spacepy.pybats" title="spacepy.pybats"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pybats</span></code></a> supports output analysis and visualization of
+many models compatible with the Space Weather Modeling Framework,
+including the BATS-R-US global MHD model and the RAM-SCB ring current
+model.</p>
+<p><a class="reference internal" href="omni.html#module-spacepy.omni" title="spacepy.omni"><code class="xref py py-mod docutils literal notranslate"><span class="pre">omni</span></code></a> provides ready access to the <a class="reference external" href="https://omniweb.gsfc.nasa.gov/">OMNI</a> near-Earth solar wind dataset,
+useful for model inputs.</p>
+</section>
+<section id="statistics">
+<h2><a class="toc-backref" href="#id5">Statistics</a><a class="headerlink" href="#statistics" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference internal" href="poppy.html#module-spacepy.poppy" title="spacepy.poppy"><code class="xref py py-mod docutils literal notranslate"><span class="pre">poppy</span></code></a> supports determining confidence intervals on</dt><dd><p>population metrics using the non-parametric bootstrap method.</p>
+</dd>
+</dl>
+</section>
+<section id="time-conversions">
+<h2><a class="toc-backref" href="#id6">Time conversions</a><a class="headerlink" href="#time-conversions" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="time.html#module-spacepy.time" title="spacepy.time"><code class="xref py py-mod docutils literal notranslate"><span class="pre">time</span></code></a> contains a class that easily allows time to be
+represented in, and converted among, many representations, including
+Python datetimes, ISO time strings, GPS time, TAI, etc.</p>
+</section>
+<section id="time-series-analysis-and-correlations">
+<h2><a class="toc-backref" href="#id7">Time series analysis and correlations</a><a class="headerlink" href="#time-series-analysis-and-correlations" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="poppy.html#module-spacepy.poppy" title="spacepy.poppy"><code class="xref py py-mod docutils literal notranslate"><span class="pre">poppy</span></code></a> implements association analysis to determine the
+relationship between point-in-time events.</p>
+<p><a class="reference internal" href="seapy.html#module-spacepy.seapy" title="spacepy.seapy"><code class="xref py py-mod docutils literal notranslate"><span class="pre">seapy</span></code></a> implements superposed epoch analysis, the
+statistical evaluation of the time evolution of a system relative
+to a set of starting epochs.</p>
+</section>
+<section id="visualization">
+<h2><a class="toc-backref" href="#id8">Visualization</a><a class="headerlink" href="#visualization" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="plot.html#module-spacepy.plot" title="spacepy.plot"><code class="xref py py-mod docutils literal notranslate"><span class="pre">plot</span></code></a> provides tools useful in making
+publication-quality plots with the <a class="reference external" href="https://matplotlib.org/">matplotlib</a> toolkit.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="release_notes.html" title="Release Notes"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="help.html" title="SpacePy Help"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+       <li><a href="index.html">documentation </a> &raquo;</li>
+
+        <li class="nav-item nav-item-this"><a href="">SpacePy Capabilities</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

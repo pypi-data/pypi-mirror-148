@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>ae9ap9 - Handle AE9/AP9 data files &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="spacepy.ae9ap9.Ae9Data" href="autosummary/spacepy.ae9ap9.Ae9Data.html" />
+    <link rel="prev" title="spacepy - main SpacePy module" href="spacepy.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="index.html"><img src="_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="autosummary/spacepy.ae9ap9.Ae9Data.html" title="spacepy.ae9ap9.Ae9Data"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.html" title="spacepy - main SpacePy module"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+       <li><a href="index.html">documentation </a> &raquo;</li>
+
+        <li class="nav-item nav-item-this"><a href="">ae9ap9 - Handle AE9/AP9 data files</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="spacepy.html"
+                          title="previous chapter">spacepy - main SpacePy module</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="autosummary/spacepy.ae9ap9.Ae9Data.html"
+                          title="next chapter">spacepy.ae9ap9.Ae9Data</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/ae9ap9.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-spacepy.ae9ap9">
+<span id="ae9ap9-handle-ae9-ap9-data-files"></span><h1>ae9ap9 - Handle AE9/AP9 data files<a class="headerlink" href="#module-spacepy.ae9ap9" title="Permalink to this headline">¶</a></h1>
+<p>Module for reading and dealing with AE9AP9 data files.</p>
+<p>See <a class="reference external" href="https://www.vdl.afrl.af.mil/programs/ae9ap9/">https://www.vdl.afrl.af.mil/programs/ae9ap9/</a> to download the model.
+This is not a AE9AP9 runner.</p>
+<p>Authors: Brian Larsen, Steve Morley
+Institution: Los Alamos National Laboratory
+Contact: <a class="reference external" href="mailto:balarsen&#37;&#52;&#48;lanl&#46;gov">balarsen<span>&#64;</span>lanl<span>&#46;</span>gov</a></p>
+<p>Copyright 2015 Los Alamos National Security, LLC.</p>
+<p>This module provides a convenient class for handling data from
+AE9/AP9 (and legacy models provided by the software).</p>
+<p class="rubric">Class</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.ae9ap9.Ae9Data.html#spacepy.ae9ap9.Ae9Data" title="spacepy.ae9ap9.Ae9Data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Ae9Data</span></code></a>(*args, **kwargs)</p></td>
+<td><p>Dictionary-like container for AE9/AP9/SPM data, derived from SpacePy's datamodel</p></td>
+</tr>
+</tbody>
+</table>
+<p>Though the class is derived from SpacePy’s SpaceData, the class also provides several methods
+targeted at the AE9/AP9 output. Additional functions for working with the data are provided.</p>
+<p class="rubric">Functions</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="autosummary/spacepy.ae9ap9.readFile.html#spacepy.ae9ap9.readFile" title="spacepy.ae9ap9.readFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readFile</span></code></a>(fname[, comments])</p></td>
+<td><p>read a model generated file into a datamodel.SpaceData object</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="autosummary/spacepy.ae9ap9.parseHeader.html#spacepy.ae9ap9.parseHeader" title="spacepy.ae9ap9.parseHeader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parseHeader</span></code></a>(fname)</p></td>
+<td><p>given an AE9AP9 output test file parse the header and return the information in a dictionary</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="autosummary/spacepy.ae9ap9.Ae9Data.html" title="spacepy.ae9ap9.Ae9Data"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.html" title="spacepy - main SpacePy module"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+       <li><a href="index.html">documentation </a> &raquo;</li>
+
+        <li class="nav-item nav-item-this"><a href="">ae9ap9 - Handle AE9/AP9 data files</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

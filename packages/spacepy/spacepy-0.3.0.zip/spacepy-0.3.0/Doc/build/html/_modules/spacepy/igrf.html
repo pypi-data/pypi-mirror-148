@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>spacepy.igrf &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../index.html"><img src="../../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../../search.html">search</a>|&nbsp;</li>
+       <li><a href="../../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../spacepy.html" accesskey="U">spacepy</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.igrf</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+            </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for spacepy.igrf</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;International Geomagnetic Reference Field model</span>
+
+<span class="sd">This module is intended primarily to support :mod:`~spacepy.coordinates`</span>
+<span class="sd">rather than for direct end use, and the interface is subject to change.</span>
+
+<span class="sd">Classes</span>
+<span class="sd">-------</span>
+<span class="sd">.. autosummary::</span>
+<span class="sd">    :template: clean_class.rst</span>
+<span class="sd">    :toctree: autosummary</span>
+
+<span class="sd">    IGRFCoefficients</span>
+<span class="sd">    IGRF</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<span class="c1"># std. lib.</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="c1"># scientific stack</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># third-party or current</span>
+<span class="kn">from</span> <span class="nn">spacepy</span> <span class="kn">import</span> <span class="n">__path__</span> <span class="k">as</span> <span class="n">basepath</span>
+<span class="kn">from</span> <span class="nn">spacepy</span> <span class="kn">import</span> <span class="n">DOT_FLN</span>
+<span class="kn">import</span> <span class="nn">spacepy.time</span> <span class="k">as</span> <span class="nn">spt</span>
+
+
+<div class="viewcode-block" id="IGRFCoefficients"><a class="viewcode-back" href="../../autosummary/spacepy.igrf.IGRFCoefficients.html#spacepy.igrf.IGRFCoefficients">[docs]</a><span class="k">class</span> <span class="nc">IGRFCoefficients</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Read and store IGRF coefficients from data file</span>
+
+<span class="sd">    Other Parameters</span>
+<span class="sd">    ----------------</span>
+<span class="sd">    fname : str, optional</span>
+<span class="sd">        Filename to read from; defaults from the .spacepy data directory.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fname</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># Store coefficients and SV in nested arrays</span>
+        <span class="c1"># This is triangular, e.g.,</span>
+        <span class="c1"># g[2] has 3 elements (g[2][0:2])</span>
+        <span class="c1"># h[5] has 5 elements (h[5][0:5])</span>
+        <span class="c1"># Store top level as object arrays so the arrays inside</span>
+        <span class="c1"># can have staggered lengths</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">coeffs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;g&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">),</span>
+                       <span class="s1">&#39;h&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">),</span>
+                       <span class="s1">&#39;g_SV&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">),</span>
+                       <span class="s1">&#39;h_SV&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">),</span>
+                       <span class="p">}</span>
+
+        <span class="c1"># Open IGRF coefficients file...</span>
+        <span class="k">if</span> <span class="n">fname</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># Updates shoud be downloaded by toolbox.update and</span>
+            <span class="c1"># put in the .spacepy/data directory</span>
+            <span class="c1"># TODO: write getter for toolbox.update</span>
+            <span class="n">fname</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">DOT_FLN</span><span class="p">,</span> <span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;igrfcoeffs.txt&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
+                <span class="c1"># Fall back to IGRF13 coefficients</span>
+                <span class="n">fname</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">basepath</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;igrf13coeffs.txt&#39;</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
+            <span class="n">header</span> <span class="o">=</span> <span class="p">[</span><span class="n">fh</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)]</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">fh</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+        <span class="n">epochs</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">yy</span><span class="p">)</span> <span class="k">for</span> <span class="n">yy</span> <span class="ow">in</span> <span class="n">header</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">3</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">epochs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">epochs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">datelow</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">epochs</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lastepoch</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">epochs</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]),</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">datehigh</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">epochs</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">n_epochs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">epochs</span><span class="p">)</span>
+
+        <span class="c1"># Now we know how many epochs are in the current IGRF file,</span>
+        <span class="c1"># we can construct the arrays to store the coefficients</span>
+        <span class="k">for</span> <span class="n">n_idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">14</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">coeffs</span><span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">][</span><span class="n">n_idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">n_idx</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_epochs</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">coeffs</span><span class="p">[</span><span class="s1">&#39;h&#39;</span><span class="p">][</span><span class="n">n_idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">n_idx</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_epochs</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">coeffs</span><span class="p">[</span><span class="s1">&#39;g_SV&#39;</span><span class="p">][</span><span class="n">n_idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">n_idx</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">coeffs</span><span class="p">[</span><span class="s1">&#39;h_SV&#39;</span><span class="p">][</span><span class="n">n_idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">n_idx</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+
+        <span class="c1"># Parse the file and populat the coefficient arrays</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+            <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+            <span class="c1"># Read g and h coefficients into tables</span>
+            <span class="n">vals</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">line</span><span class="p">[</span><span class="mi">3</span><span class="p">:]]</span>
+            <span class="n">n_idx</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+            <span class="n">m_idx</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">coeffs</span><span class="p">[</span><span class="n">line</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">n_idx</span><span class="p">][</span><span class="n">m_idx</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="n">vals</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">svtag</span> <span class="o">=</span> <span class="s1">&#39;g_SV&#39;</span> <span class="k">if</span> <span class="n">line</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;g&#39;</span> <span class="k">else</span> <span class="s1">&#39;h_SV&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">coeffs</span><span class="p">[</span><span class="n">svtag</span><span class="p">][</span><span class="n">n_idx</span><span class="p">][</span><span class="n">m_idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">vals</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="c1"># set arrays to read only</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;g_SV&#39;</span><span class="p">,</span> <span class="s1">&#39;h_SV&#39;</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">arr</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">coeffs</span><span class="p">[</span><span class="n">key</span><span class="p">]:</span>
+                <span class="n">arr</span><span class="o">.</span><span class="n">setflags</span><span class="p">(</span><span class="n">write</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></div>
+
+
+<span class="c1"># load coefficients so it doesn&#39;t get done on instantiation of IGRF class</span>
+<span class="n">igrfcoeffs</span> <span class="o">=</span> <span class="n">IGRFCoefficients</span><span class="p">()</span>
+
+
+<div class="viewcode-block" id="IGRF"><a class="viewcode-back" href="../../autosummary/spacepy.igrf.IGRF.html#spacepy.igrf.IGRF">[docs]</a><span class="k">class</span> <span class="nc">IGRF</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;International Geomagnetic Reference Field model</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+
+<span class="sd">    .. versionadded:: 0.3.0</span>
+
+<span class="sd">    .. rubric:: Methods</span>
+
+<span class="sd">    .. autosummary::</span>
+
+<span class="sd">        ~IGRF.calcDipoleAxis</span>
+<span class="sd">        ~IGRF.initialize</span>
+
+<span class="sd">    .. rubric:: Data</span>
+
+<span class="sd">    .. autosummary::</span>
+
+<span class="sd">        dipole</span>
+<span class="sd">        moment</span>
+
+<span class="sd">    .. automethod:: calcDipoleAxis</span>
+<span class="sd">    .. automethod:: initialize</span>
+
+<span class="sd">    .. attribute:: dipole</span>
+
+<span class="sd">        Characteristics of dipole (:class:`dict`).</span>
+
+<span class="sd">    .. attribute:: moment</span>
+
+<span class="sd">        Dipole moments (:class:`dict`).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__status</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;coeffs&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                         <span class="s1">&#39;init&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                         <span class="s1">&#39;time_set&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+                         <span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__coeffs</span> <span class="o">=</span> <span class="n">igrfcoeffs</span><span class="o">.</span><span class="n">coeffs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__status</span><span class="p">[</span><span class="s1">&#39;coeffs&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+
+<div class="viewcode-block" id="IGRF.initialize"><a class="viewcode-back" href="../../autosummary/spacepy.igrf.IGRF.html#spacepy.igrf.IGRF.initialize">[docs]</a>    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">limits</span><span class="o">=</span><span class="s1">&#39;warn&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize model state to a particular time.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        time : :class:`~datetime.datetime`</span>
+<span class="sd">            Time for which to initialize the model</span>
+
+<span class="sd">        Other Parameters</span>
+<span class="sd">        ----------------</span>
+<span class="sd">        limits : :class:`str`, optional</span>
+<span class="sd">            Set to ``warn`` to warn about out-of-range times (default);</span>
+<span class="sd">            any other value to error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">errmsg</span> <span class="o">=</span> <span class="s1">&#39;IGRF: Requested time is outside valid range.</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="n">errmsg</span> <span class="o">+=</span> <span class="s1">&#39;Valid range is [</span><span class="si">{0}</span><span class="s1">, </span><span class="si">{1}</span><span class="s1">]&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">igrfcoeffs</span><span class="o">.</span><span class="n">datelow</span><span class="p">,</span> <span class="n">igrfcoeffs</span><span class="o">.</span><span class="n">datehigh</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">time</span> <span class="o">=</span> <span class="n">time</span>
+        <span class="k">if</span> <span class="n">time</span> <span class="o">&lt;</span> <span class="n">igrfcoeffs</span><span class="o">.</span><span class="n">datelow</span> <span class="ow">or</span> <span class="n">time</span> <span class="o">&gt;</span> <span class="n">igrfcoeffs</span><span class="o">.</span><span class="n">datehigh</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">limits</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;warn&#39;</span><span class="p">:</span>
+                <span class="n">errmsg</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Proceeding using effective date </span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">igrfcoeffs</span><span class="o">.</span><span class="n">datehigh</span><span class="p">)</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">errmsg</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">time</span> <span class="o">=</span> <span class="n">igrfcoeffs</span><span class="o">.</span><span class="n">datehigh</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">errmsg</span> <span class="o">+=</span> <span class="s1">&#39;&#39;&#39;</span><span class="se">\n</span><span class="s1">Use &quot;limits=&#39;warn&#39;&quot; to force out-of-range times &#39;&#39;&#39;</span>
+                <span class="n">errmsg</span> <span class="o">+=</span> <span class="s1">&#39;to use the nearest valid endpoint.&#39;</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">errmsg</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__valid_extrap</span> <span class="o">=</span> <span class="kc">True</span> <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">time</span> <span class="o">&lt;=</span> <span class="n">igrfcoeffs</span><span class="o">.</span><span class="n">datehigh</span>
+                                       <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">time</span> <span class="o">&gt;</span> <span class="n">igrfcoeffs</span><span class="o">.</span><span class="n">lastepoch</span><span class="p">)</span> <span class="k">else</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__status</span><span class="p">[</span><span class="s1">&#39;time_set&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__status</span><span class="p">[</span><span class="s1">&#39;init&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">calcDipoleAxis</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__status</span><span class="p">[</span><span class="s1">&#39;time_set&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="IGRF.calcDipoleAxis"><a class="viewcode-back" href="../../autosummary/spacepy.igrf.IGRF.html#spacepy.igrf.IGRF.calcDipoleAxis">[docs]</a>    <span class="k">def</span> <span class="nf">calcDipoleAxis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Calculates dipole axis for initialized time.</span>
+
+<span class="sd">        Populates :data:`moment` and :data:`dipole`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__status</span><span class="p">[</span><span class="s1">&#39;time_set&#39;</span><span class="p">]:</span>
+            <span class="k">return</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">__status</span><span class="p">[</span><span class="s1">&#39;init&#39;</span><span class="p">]:</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;IGRF: Initialize for a time before invoking this method.&#39;</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="c1"># Find the indices for the epochs surrounding input time</span>
+        <span class="n">utc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">time</span>
+        <span class="n">tstamp</span> <span class="o">=</span> <span class="n">spt</span><span class="o">.</span><span class="n">Ticktock</span><span class="p">(</span><span class="n">utc</span><span class="p">,</span> <span class="s1">&#39;UTC&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">MJD</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="c1"># Compute the various IGRF dependent things like position of CD</span>
+        <span class="c1"># TODO: So that full IGRF can be used eventually, for each in</span>
+        <span class="c1"># __coeffs, interp to time and save as &#39;[g|h][n][m]&#39; e.g., &#39;h32&#39; (entries in self.coeffs)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">__valid_extrap</span><span class="p">:</span>
+            <span class="c1"># Interpolate coefficients linearly</span>
+            <span class="n">numepochs</span> <span class="o">=</span> <span class="p">[</span><span class="n">spt</span><span class="o">.</span><span class="n">Ticktock</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">val</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">MJD</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">igrfcoeffs</span><span class="o">.</span><span class="n">epochs</span><span class="p">]</span>
+            <span class="n">g10</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">tstamp</span><span class="p">,</span> <span class="n">numepochs</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__coeffs</span><span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">g11</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">tstamp</span><span class="p">,</span> <span class="n">numepochs</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__coeffs</span><span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+            <span class="n">h11</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">tstamp</span><span class="p">,</span> <span class="n">numepochs</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__coeffs</span><span class="p">[</span><span class="s1">&#39;h&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Extrapolate using secular variation</span>
+            <span class="n">ref_ep</span> <span class="o">=</span> <span class="n">spt</span><span class="o">.</span><span class="n">Ticktock</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">igrfcoeffs</span><span class="o">.</span><span class="n">epochs</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]),</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">MJD</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">diff_years</span> <span class="o">=</span> <span class="p">((</span><span class="n">tstamp</span> <span class="o">%</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">tstamp</span><span class="o">//</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">ref_ep</span> <span class="o">%</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">ref_ep</span><span class="o">//</span><span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="mf">365.25</span> <span class="c1"># in years</span>
+            <span class="n">g10</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__coeffs</span><span class="p">[</span><span class="s1">&#39;g_SV&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">diff_years</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">__coeffs</span><span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">g11</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__coeffs</span><span class="p">[</span><span class="s1">&#39;g_SV&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">diff_years</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">__coeffs</span><span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">h11</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__coeffs</span><span class="p">[</span><span class="s1">&#39;h_SV&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">diff_years</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">__coeffs</span><span class="p">[</span><span class="s1">&#39;h&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="n">mom_sq</span> <span class="o">=</span> <span class="n">g10</span><span class="o">*</span><span class="n">g10</span> <span class="o">+</span> <span class="n">g11</span><span class="o">*</span><span class="n">g11</span> <span class="o">+</span> <span class="n">h11</span><span class="o">*</span><span class="n">h11</span>
+        <span class="n">mom</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mom_sq</span><span class="p">)</span>
+
+        <span class="c1"># Compute dipole moments.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">moment</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;cd&#39;</span><span class="p">:</span> <span class="n">mom</span><span class="p">,</span>
+                       <span class="s1">&#39;cd_McIlwain&#39;</span><span class="p">:</span> <span class="mf">31165.3</span><span class="p">,</span>
+                       <span class="s1">&#39;cd_2010&#39;</span><span class="p">:</span> <span class="mf">29950.126496</span><span class="p">,</span>
+                       <span class="p">}</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">dipole</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dipole</span><span class="p">[</span><span class="s1">&#39;cd_gcolat_rad&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="n">g10</span><span class="o">/</span><span class="n">mom</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dipole</span><span class="p">[</span><span class="s1">&#39;cd_glon_rad&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">(</span><span class="n">h11</span><span class="o">/</span><span class="n">g11</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dipole</span><span class="p">[</span><span class="s1">&#39;cd_gcolat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dipole</span><span class="p">[</span><span class="s1">&#39;cd_gcolat_rad&#39;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dipole</span><span class="p">[</span><span class="s1">&#39;cd_glon&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dipole</span><span class="p">[</span><span class="s1">&#39;cd_glon_rad&#39;</span><span class="p">])</span></div></div>
+</pre></div>
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../../search.html">search</a>|&nbsp;</li>
+       <li><a href="../../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../spacepy.html" >spacepy</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.igrf</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

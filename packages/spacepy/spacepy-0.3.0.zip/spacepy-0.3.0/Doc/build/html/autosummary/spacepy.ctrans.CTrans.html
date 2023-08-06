@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.ctrans.CTrans &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy.ctrans.Ellipsoid" href="spacepy.ctrans.Ellipsoid.html" />
+    <link rel="prev" title="ctrans - Coordinate transformation backend" href="../ctrans.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.ctrans.Ellipsoid.html" title="spacepy.ctrans.Ellipsoid"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../ctrans.html" title="ctrans - Coordinate transformation backend"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../ctrans.html" accesskey="U">ctrans - Coordinate transformation backend</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.ctrans.CTrans</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../ctrans.html"
+                          title="previous chapter">ctrans - Coordinate transformation backend</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.ctrans.Ellipsoid.html"
+                          title="next chapter">spacepy.ctrans.Ellipsoid</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.ctrans.CTrans.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-ctrans-ctrans">
+<h1>spacepy.ctrans.CTrans<a class="headerlink" href="#spacepy-ctrans-ctrans" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="spacepy.ctrans.CTrans">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">spacepy.ctrans.</span></span><span class="sig-name descname"><span class="pre">CTrans</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ephmodel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pnmodel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/ctrans.html#CTrans"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.ctrans.CTrans" title="Permalink to this definition">¶</a></dt>
+<dd><p>Coordinate transformation class for a single instance in time</p>
+<p>A general coordinate conversion routine, which takes a numpy array (Nx3)
+of Cartesian vectors along with the names of the input and output
+coordinate systems and returns an array of the converted coordinates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>ctime</strong><span class="classifier">(spacepy.time.Ticktock, datetime, float, string)</span></dt><dd><p>Input time stamp. Must have one time only. Accepted input formats</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">CTrans</span></dt><dd><p>instance with self.convert, etc.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Other Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>ephmodel</strong><span class="classifier">str, optional</span></dt><dd><p>Select ephemerides model (e.g., for determining Sun direction).
+Currently only ‘LGMDEFAULT’ is supported, for consistency with
+LANLGeoMag implementation.</p>
+</dd>
+<dt><strong>pnmodel</strong><span class="classifier">str, optional</span></dt><dd><p>Select precession/nutation model set. Options are: ‘IAU82’ (default),
+and ‘IAU00’.</p>
+</dd>
+<dt><strong>eop</strong><span class="classifier">bool, optional</span></dt><dd><p>Use Earth Orientation Parameters</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="spacepy.coordinates.Coords.html#spacepy.coordinates.Coords" title="spacepy.coordinates.Coords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">spacepy.coordinates.Coords</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 0.3.0.</span></p>
+</div>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.ctrans.CTrans.calcTimes" title="spacepy.ctrans.CTrans.calcTimes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calcTimes</span></code></a>([recalc])</p></td>
+<td><p>Calculate time in systems required to set up coordinate transforms</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.ctrans.CTrans.calcOrbitParams" title="spacepy.ctrans.CTrans.calcOrbitParams"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calcOrbitParams</span></code></a>([recalc])</p></td>
+<td><p>Calculate Earth orbit parameters needed for coordinate transforms</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.ctrans.CTrans.calcCoreTransforms" title="spacepy.ctrans.CTrans.calcCoreTransforms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calcCoreTransforms</span></code></a>([recalc])</p></td>
+<td><p>Calculate core coordinate transform matrices</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.ctrans.CTrans.calcMagTransforms" title="spacepy.ctrans.CTrans.calcMagTransforms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calcMagTransforms</span></code></a>([recalc])</p></td>
+<td><p>Calculate geophysical coordinate systems</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.ctrans.CTrans.convert" title="spacepy.ctrans.CTrans.convert"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert</span></code></a>(vec, sys_in, sys_out[, defaults])</p></td>
+<td><p>Convert an input vector between two coordinate systems</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.ctrans.CTrans.getEOP" title="spacepy.ctrans.CTrans.getEOP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getEOP</span></code></a>([useEOP])</p></td>
+<td><p>Get/set Earth Orientation Parameters</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.ctrans.CTrans.gmst" title="spacepy.ctrans.CTrans.gmst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gmst</span></code></a>()</p></td>
+<td><p>Calculate Greenwich Mean Sidereal Time</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.ctrans.CTrans.calcTimes">
+<span class="sig-name descname"><span class="pre">calcTimes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">recalc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/ctrans.html#CTrans.calcTimes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.ctrans.CTrans.calcTimes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate time in systems required to set up coordinate transforms</p>
+<p>Sets Julian Date and Julian centuries in UTC, TAI, UT1, and TT systems.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>recalc</strong><span class="classifier">bool, optional</span></dt><dd><p>If True, recalculate the times for coordinate transformation. Default
+is False.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.ctrans.CTrans.calcOrbitParams">
+<span class="sig-name descname"><span class="pre">calcOrbitParams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">recalc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/ctrans.html#CTrans.calcOrbitParams"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.ctrans.CTrans.calcOrbitParams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate Earth orbit parameters needed for coordinate transforms</p>
+<p>Calculates  Earth’s orbital parameters required for defining coordinate
+system transformations, such as orbital eccentricity, the obliquity of
+the ecliptic, anomalies, and precession angles.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>recalc</strong><span class="classifier">bool, optional</span></dt><dd><p>If True, recalculate the orbital parameters for coordinate transformation.
+Default is False.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.ctrans.CTrans.calcCoreTransforms">
+<span class="sig-name descname"><span class="pre">calcCoreTransforms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">recalc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/ctrans.html#CTrans.calcCoreTransforms"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.ctrans.CTrans.calcCoreTransforms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate core coordinate transform matrices</p>
+<p>These coordinate systems do not require information about
+Earth’s magnetic field.
+The systems are:
+Earth-Centered Inertial, J2000 (ECI2000)
+Earth-Centered Inertial, Mean-of-date (ECIMOD)
+Earth-Centered Inertial, True-of-date (ECITOD)
+Geocentric Solar Ecliptic (GSE)
+Geocentric Geographic (GEO)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>recalc</strong><span class="classifier">bool, optional</span></dt><dd><p>If True, recalculate the core (non-magnetic) coordinate transformations.
+Default is False.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.ctrans.CTrans.calcMagTransforms">
+<span class="sig-name descname"><span class="pre">calcMagTransforms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">recalc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/ctrans.html#CTrans.calcMagTransforms"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.ctrans.CTrans.calcMagTransforms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate geophysical coordinate systems</p>
+<p>Calculate transforms for coordinate systems requiring magnetic field
+information.</p>
+<p>These are:
+Solar Magnetic (SM)
+Geocentric Solar Magnetospheric (GSM)
+Geomagnetic, centered dipole (CDMAG)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>recalc</strong><span class="classifier">bool, optional</span></dt><dd><p>If True, recalculate the core (non-magnetic) coordinate transformations.
+Default is False.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.ctrans.CTrans.convert">
+<span class="sig-name descname"><span class="pre">convert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sys_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sys_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/ctrans.html#CTrans.convert"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.ctrans.CTrans.convert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert an input vector between two coordinate systems</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>vec</strong><span class="classifier">array-like</span></dt><dd><p>Input 3-vector (can be an array of input 3-vectors) to convert.
+E.g., for 2D input the array must be like [[x1, y1, z1], [x2, y2, z2]]</p>
+</dd>
+<dt><strong>sys_in</strong><span class="classifier">str</span></dt><dd><p>String name for initial coordinate system. For supported systems,
+see module level documentation.</p>
+</dd>
+<dt><strong>sys_out</strong><span class="classifier">str</span></dt><dd><p>String name for target coordinate system. For supported systems,
+see module level documentation.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Other Parameters</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>defaults</strong><span class="classifier">namedtuple or None</span></dt><dd><p>Named tuple containing default settings passed from Coordinates module</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.ctrans.CTrans.getEOP">
+<span class="sig-name descname"><span class="pre">getEOP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">useEOP</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/ctrans.html#CTrans.getEOP"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.ctrans.CTrans.getEOP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get/set Earth Orientation Parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>useEOP</strong><span class="classifier">bool</span></dt><dd><p>If True, use Earth Orientation Parameters. Default False.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Currently Earth Orientation Parameters are all set to zero.
+Use is not yet supported.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.ctrans.CTrans.gmst">
+<span class="sig-name descname"><span class="pre">gmst</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/ctrans.html#CTrans.gmst"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.ctrans.CTrans.gmst" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate Greenwich Mean Sidereal Time</p>
+<p class="rubric">Notes</p>
+<p>The formulation used to calculate GMST is selected using the
+status of the ‘pnmodel’ variable in the CTrans object attributes.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.ctrans.Ellipsoid.html" title="spacepy.ctrans.Ellipsoid"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../ctrans.html" title="ctrans - Coordinate transformation backend"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../ctrans.html" >ctrans - Coordinate transformation backend</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.ctrans.CTrans</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

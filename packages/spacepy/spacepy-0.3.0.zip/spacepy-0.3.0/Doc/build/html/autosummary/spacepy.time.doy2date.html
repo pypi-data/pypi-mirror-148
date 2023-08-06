@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.time.doy2date &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy.time.leapyear" href="spacepy.time.leapyear.html" />
+    <link rel="prev" title="spacepy.time.dtstr2iso" href="spacepy.time.dtstr2iso.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.time.leapyear.html" title="spacepy.time.leapyear"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.time.dtstr2iso.html" title="spacepy.time.dtstr2iso"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../time.html" accesskey="U">time - Time conversion, manipulation and implementation of Ticktock class</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.time.doy2date</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="spacepy.time.dtstr2iso.html"
+                          title="previous chapter">spacepy.time.dtstr2iso</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.time.leapyear.html"
+                          title="next chapter">spacepy.time.leapyear</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.time.doy2date.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-time-doy2date">
+<h1>spacepy.time.doy2date<a class="headerlink" href="#spacepy-time-doy2date" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.time.doy2date">
+<span class="sig-prename descclassname"><span class="pre">spacepy.time.</span></span><span class="sig-name descname"><span class="pre">doy2date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">year</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtobj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flAns</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/time.html#doy2date"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.time.doy2date" title="Permalink to this definition">¶</a></dt>
+<dd><p>convert integer day-of-year doy into a month and day
+after <a class="reference external" href="http://pleac.sourceforge.net/pleac_python/datesandtimes.html">http://pleac.sourceforge.net/pleac_python/datesandtimes.html</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>year</strong><span class="classifier">int or array of int</span></dt><dd><p>year</p>
+</dd>
+<dt><strong>doy</strong><span class="classifier">int or array of int</span></dt><dd><p>day of year</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>month</strong><span class="classifier">int or array of int</span></dt><dd><p>month as integer number</p>
+</dd>
+<dt><strong>day</strong><span class="classifier">int or array of int</span></dt><dd><p>as integer number</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="spacepy.time.Ticktock.html#spacepy.time.Ticktock.getDOY" title="spacepy.time.Ticktock.getDOY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Ticktock.getDOY</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">month</span><span class="p">,</span> <span class="n">day</span> <span class="o">=</span> <span class="n">doy2date</span><span class="p">(</span><span class="mi">2002</span><span class="p">,</span> <span class="mi">186</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dts</span> <span class="o">=</span> <span class="n">doy2date</span><span class="p">([</span><span class="mi">2002</span><span class="p">]</span><span class="o">*</span><span class="mi">4</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">186</span><span class="p">,</span><span class="mi">190</span><span class="p">),</span> <span class="n">dtobj</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.time.leapyear.html" title="spacepy.time.leapyear"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.time.dtstr2iso.html" title="spacepy.time.dtstr2iso"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../time.html" >time - Time conversion, manipulation and implementation of Ticktock class</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.time.doy2date</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

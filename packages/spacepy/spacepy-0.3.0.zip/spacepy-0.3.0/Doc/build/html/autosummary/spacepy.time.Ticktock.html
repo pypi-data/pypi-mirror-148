@@ -1,0 +1,1032 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.time.Ticktock &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy.time.dtstr2iso" href="spacepy.time.dtstr2iso.html" />
+    <link rel="prev" title="time - Time conversion, manipulation and implementation of Ticktock class" href="../time.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.time.dtstr2iso.html" title="spacepy.time.dtstr2iso"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../time.html" title="time - Time conversion, manipulation and implementation of Ticktock class"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../time.html" accesskey="U">time - Time conversion, manipulation and implementation of Ticktock class</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.time.Ticktock</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../time.html"
+                          title="previous chapter">time - Time conversion, manipulation and implementation of Ticktock class</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.time.dtstr2iso.html"
+                          title="next chapter">spacepy.time.dtstr2iso</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.time.Ticktock.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-time-ticktock">
+<h1>spacepy.time.Ticktock<a class="headerlink" href="#spacepy-time-ticktock" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="spacepy.time.Ticktock">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">spacepy.time.</span></span><span class="sig-name descname"><span class="pre">Ticktock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/time.html#Ticktock"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.time.Ticktock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ticktock class holding various time coordinate systems
+(TAI, UTC, ISO, JD, MJD, UNX, RDT, CDF, DOY, eDOY, APT)</p>
+<p>Possible input data types:</p>
+<dl class="simple">
+<dt>ISO</dt><dd><p>ISO standard format like ‘2002-02-25T12:20:30’</p>
+</dd>
+<dt>UTC</dt><dd><p>datetime object with UTC time</p>
+</dd>
+<dt>TAI</dt><dd><p>Elapsed seconds since 1958-1-1 (includes leap seconds)</p>
+</dd>
+<dt>UNX</dt><dd><p>Elapsed seconds since 1970-1-1 ignoring leapseconds (all days have
+86400 secs).</p>
+</dd>
+<dt>JD</dt><dd><p>Julian days elapsed</p>
+</dd>
+<dt>MJD</dt><dd><p>Modified Julian days</p>
+</dd>
+<dt>RDT</dt><dd><p>Rata Die days elapsed since 0001-1-1</p>
+</dd>
+<dt>CDF</dt><dd><p>CDF Epoch type: float milliseconds since 0000-1-1 ignoring leapseconds</p>
+</dd>
+<dt>APT</dt><dd><p>AstroPy <a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.time.Time.html#astropy.time.Time" title="(in Astropy v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a>. Requires AstroPy 1.0.
+(New in version 0.2.2.)</p>
+</dd>
+</dl>
+<p>Possible output data types: All those listed above, plus:</p>
+<dl class="simple">
+<dt>DOY</dt><dd><p>Integer day of year, starts with day 1</p>
+</dd>
+<dt>eDOY</dt><dd><p>Fractional day of year, starts at day 0</p>
+</dd>
+</dl>
+<p>It is strongly recommended to access various time systems via the
+attributes listed above, as in the examples. They will be calculated
+automatically if necessary. Using the <code class="docutils literal notranslate"><span class="pre">get</span></code> methods will force a
+recalculation.</p>
+<p>The original input data will always be available as the <code class="docutils literal notranslate"><span class="pre">data</span></code>
+attribute.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 0.2.2: </span>In earlier versions of SpacePy, most values were derived from the
+<code class="docutils literal notranslate"><span class="pre">datetime</span></code>-based <code class="docutils literal notranslate"><span class="pre">UTC</span></code> representation. This did not properly
+handle leap seconds in many cases. Now most are derived from <code class="docutils literal notranslate"><span class="pre">TAI</span></code>
+(exceptions being <code class="docutils literal notranslate"><span class="pre">DOY</span></code> and <code class="docutils literal notranslate"><span class="pre">eDOY</span></code>). In addition to differences
+around actual leap seconds, this may result in small differences
+between versions of SpacePy, with relative magnitude on the order of the
+resolution of a 64-bit float (2e-16). For times in the modern era, this
+is about 50 microseconds (us) for <code class="docutils literal notranslate"><span class="pre">JD</span></code>, 15 us for <code class="docutils literal notranslate"><span class="pre">CDF</span></code>, 1.5 us
+for <code class="docutils literal notranslate"><span class="pre">RDT</span></code>, 1 us for <code class="docutils literal notranslate"><span class="pre">MJD</span></code>, and 360 <em>nanoseconds</em> for <code class="docutils literal notranslate"><span class="pre">TAI</span></code>.</p>
+</div>
+<p>The relationships between parameters and how they are calculated are
+listed in the <code class="docutils literal notranslate"><span class="pre">get</span></code> methods and illustrated below.</p>
+<a class="reference external image-reference" href="../_images/ticktock_relationships.svg"><img alt="../_images/ticktock_relationships.svg" src="../_images/ticktock_relationships.svg" /></a>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>data</strong><span class="classifier">array_like (int, datetime, float, string)</span></dt><dd><p>time stamp</p>
+</dd>
+<dt><strong>dtype</strong><span class="classifier">string {<cite>CDF</cite>, <cite>ISO</cite>, <cite>UTC</cite>, <cite>TAI</cite>, <cite>UNX</cite>, <cite>JD</cite>, <cite>MJD</cite>, <cite>RDT</cite>, <cite>APT</cite>} or function</span></dt><dd><p>data type for data, if a function it must convert input time format to Python datetime</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">Ticktock</span></dt><dd><p>instance with self.data, self.dtype, self.UTC etc</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Other Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>isoformat</strong><span class="classifier">str, optional</span></dt><dd><div class="versionadded">
+<p><span class="versionmodified added">New in version 0.2.2.</span></p>
+</div>
+<p>Format string used for parsing and outputting ISO format. Input is
+not forced to be in this format; it is tried first, and other
+common formats tried if parsing fails. Because of this, if ISO input
+is in a consistent format, specifying this can speed up the input
+parsing. Can be changed on existing <code class="docutils literal notranslate"><span class="pre">Ticktock</span></code> with <a class="reference internal" href="#spacepy.time.Ticktock.isoformat" title="spacepy.time.Ticktock.isoformat"><code class="xref py py-meth docutils literal notranslate"><span class="pre">isoformat()</span></code></a>
+method. Default <code class="docutils literal notranslate"><span class="pre">'%Y-%m-%dT%H:%M:%S'</span></code>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime.strptime" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime.datetime.strptime</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.isoformat" title="spacepy.time.Ticktock.isoformat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isoformat</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<p>UTC data type is implemented as Python datetime, which cannot represent
+leap seconds. The time within a leap second is regarded as not happening.</p>
+<p>The CDF data type is the older CDF_EPOCH time type, not the newer
+CDF_TIME_TT2000. It similarly cannot represent leap seconds. Year
+0 is considered a leap year.</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">Ticktock</span><span class="p">([</span><span class="mf">2452331.0142361112</span><span class="p">,</span> <span class="mf">2452332.0142361112</span><span class="p">],</span> <span class="s1">&#39;JD&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="o">.</span><span class="n">ISO</span>
+<span class="go">dmarray([&#39;2002-02-25T12:20:30&#39;, &#39;2002-02-26T12:20:30&#39;], dtype=&#39;|S19&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="o">.</span><span class="n">DOY</span> <span class="c1"># Day of year</span>
+<span class="go">dmarray([ 56.,  57.])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">Ticktock</span><span class="p">([</span><span class="s1">&#39;01-01-2013&#39;</span><span class="p">,</span> <span class="s1">&#39;20-03-2013&#39;</span><span class="p">],</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">-%m-%Y&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span><span class="o">.</span><span class="n">UTC</span>
+<span class="go">dmarray([2013-01-01 00:00:00, 2013-03-20 00:00:00], dtype=object)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span><span class="o">.</span><span class="n">DOY</span> <span class="c1"># Day of year</span>
+<span class="go">dmarray([  1.,  79.])</span>
+</pre></div>
+</div>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.time.Ticktock.append" title="spacepy.time.Ticktock.append"><code class="xref py py-obj docutils literal notranslate"><span class="pre">append</span></code></a>(other)</p></td>
+<td><p>Will be called when another Ticktock instance has to be appended to the current one</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.time.Ticktock.argsort" title="spacepy.time.Ticktock.argsort"><code class="xref py py-obj docutils literal notranslate"><span class="pre">argsort</span></code></a>()</p></td>
+<td><p>This will return the indices that would sort the Ticktock values</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.time.Ticktock.convert" title="spacepy.time.Ticktock.convert"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert</span></code></a>(dtype)</p></td>
+<td><p>convert a Ticktock instance into a new time coordinate system provided in dtype</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.time.Ticktock.getAPT" title="spacepy.time.Ticktock.getAPT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAPT</span></code></a>()</p></td>
+<td><p>a.APT or a.getAPT()</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.time.Ticktock.getCDF" title="spacepy.time.Ticktock.getCDF"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCDF</span></code></a>()</p></td>
+<td><p>a.getCDF() or a.CDF</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.time.Ticktock.getDOY" title="spacepy.time.Ticktock.getDOY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDOY</span></code></a>()</p></td>
+<td><p>a.DOY or a.getDOY()</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.time.Ticktock.getGPS" title="spacepy.time.Ticktock.getGPS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getGPS</span></code></a>()</p></td>
+<td><p>a.GPS or a.getGPS()</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.time.Ticktock.getISO" title="spacepy.time.Ticktock.getISO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getISO</span></code></a>()</p></td>
+<td><p>a.ISO or a.getISO()</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.time.Ticktock.getJD" title="spacepy.time.Ticktock.getJD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getJD</span></code></a>()</p></td>
+<td><p>a.JD or a.getJD()</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.time.Ticktock.getMJD" title="spacepy.time.Ticktock.getMJD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMJD</span></code></a>()</p></td>
+<td><p>a.MJD or a.getMJD()</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.time.Ticktock.getRDT" title="spacepy.time.Ticktock.getRDT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRDT</span></code></a>()</p></td>
+<td><p>a.RDT or a.RDT()</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.time.Ticktock.getTAI" title="spacepy.time.Ticktock.getTAI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTAI</span></code></a>()</p></td>
+<td><p>a.TAI or a.getTAI()</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.time.Ticktock.getUNX" title="spacepy.time.Ticktock.getUNX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUNX</span></code></a>()</p></td>
+<td><p>a.UNX or a.getUNX()</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.time.Ticktock.getUTC" title="spacepy.time.Ticktock.getUTC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUTC</span></code></a>()</p></td>
+<td><p>a.UTC or a.getUTC()</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.time.Ticktock.geteDOY" title="spacepy.time.Ticktock.geteDOY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geteDOY</span></code></a>()</p></td>
+<td><p>a.eDOY or a.geteDOY()</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.time.Ticktock.getleapsecs" title="spacepy.time.Ticktock.getleapsecs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getleapsecs</span></code></a>()</p></td>
+<td><p>a.leaps or a.getleapsecs()</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.time.Ticktock.isoformat" title="spacepy.time.Ticktock.isoformat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isoformat</span></code></a>(b, attrib)</p></td>
+<td><p>This changes the self._isofmt attribute by and subsequently this function will update the ISO attribute.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.time.Ticktock.now" title="spacepy.time.Ticktock.now"><code class="xref py py-obj docutils literal notranslate"><span class="pre">now</span></code></a>()</p></td>
+<td><p>Create Ticktock with the current UTC time.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.time.Ticktock.sort" title="spacepy.time.Ticktock.sort"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sort</span></code></a>()</p></td>
+<td><p>This will sort the Ticktock values in place based on the values in <cite>data</cite>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.time.Ticktock.today" title="spacepy.time.Ticktock.today"><code class="xref py py-obj docutils literal notranslate"><span class="pre">today</span></code></a>()</p></td>
+<td><p>Create Ticktock with the current UTC date and time set to 00:00:00</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.time.Ticktock.update_items" title="spacepy.time.Ticktock.update_items"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_items</span></code></a>(attrib)</p></td>
+<td><p>After changing the self.data attribute by either __setitem__ or __add__ etc this function will update all other attributes.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.time.Ticktock.append">
+<span class="sig-name descname"><span class="pre">append</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/time.html#Ticktock.append"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.time.Ticktock.append" title="Permalink to this definition">¶</a></dt>
+<dd><p>Will be called when another Ticktock instance has to be appended to the current one</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>other</strong><span class="classifier">Ticktock</span></dt><dd><p>other (Ticktock instance)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.time.Ticktock.argsort">
+<span class="sig-name descname"><span class="pre">argsort</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/time.html#Ticktock.argsort"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.time.Ticktock.argsort" title="Permalink to this definition">¶</a></dt>
+<dd><p>This will return the indices that would sort the Ticktock values</p>
+<dl class="field-list">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">list</span></dt><dd><p>indices that would sort the Ticktock values</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Other Parameters</dt>
+<dd class="field-even"><dl>
+<dt><strong>kind</strong><span class="classifier">str, optional</span></dt><dd><p>Sort algorithm to use, default ‘quicksort’.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 0.2.2: </span>Default is now ‘quicksort’ to match numpy default;
+previously was ‘mergesort’.</p>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.argsort" title="spacepy.time.Ticktock.argsort"><code class="xref py py-obj docutils literal notranslate"><span class="pre">argsort</span></code></a>, <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.argsort.html#numpy.argsort" title="(in NumPy v1.22)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.argsort</span></code></a></dt><dd></dd>
+</dl>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.time.Ticktock.convert">
+<span class="sig-name descname"><span class="pre">convert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtype</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/time.html#Ticktock.convert"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.time.Ticktock.convert" title="Permalink to this definition">¶</a></dt>
+<dd><p>convert a Ticktock instance into a new time coordinate system provided in dtype</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>dtype</strong><span class="classifier">string</span></dt><dd><p>data type for new system, possible values are {<cite>CDF</cite>, <cite>ISO</cite>, <cite>UTC</cite>, <cite>TAI</cite>, <cite>UNX</cite>, <cite>JD</cite>, <cite>MJD</cite>, <cite>RDT</cite>}</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">Ticktock</span></dt><dd><p>Ticktock instance with new time coordinates</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">CDF</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">ISO</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">UTC</span></code></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">Ticktock</span><span class="p">([</span><span class="s1">&#39;2002-02-02T12:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;2002-02-02T12:00:00&#39;</span><span class="p">],</span> <span class="s1">&#39;ISO&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s1">&#39;TAI&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="go">&lt;class &#39;time.Ticktock&#39;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span>
+<span class="go">Ticktock( [1391342432 1391342432] ), dtype=TAI</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.time.Ticktock.getAPT">
+<span class="sig-name descname"><span class="pre">getAPT</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/time.html#Ticktock.getAPT"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.time.Ticktock.getAPT" title="Permalink to this definition">¶</a></dt>
+<dd><p>a.APT or a.getAPT()</p>
+<p>Return AstroPy time object.</p>
+<p>Always recalculates from the current value of <code class="docutils literal notranslate"><span class="pre">TAI</span></code>, which
+will be created if necessary.</p>
+<p>Updates the <code class="docutils literal notranslate"><span class="pre">APT</span></code> attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">astropy.time.Time</span></dt><dd><p>AstroPy Time object</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getUTC" title="spacepy.time.Ticktock.getUTC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUTC</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getUNX" title="spacepy.time.Ticktock.getUNX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUNX</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getRDT" title="spacepy.time.Ticktock.getRDT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRDT</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getJD" title="spacepy.time.Ticktock.getJD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getJD</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getMJD" title="spacepy.time.Ticktock.getMJD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMJD</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getCDF" title="spacepy.time.Ticktock.getCDF"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCDF</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getISO" title="spacepy.time.Ticktock.getISO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getISO</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getDOY" title="spacepy.time.Ticktock.getDOY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDOY</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.geteDOY" title="spacepy.time.Ticktock.geteDOY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geteDOY</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getGPS" title="spacepy.time.Ticktock.getGPS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getGPS</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 0.2.2.</span></p>
+</div>
+<p>Requires AstroPy 1.0. The returned value will be on the <code class="docutils literal notranslate"><span class="pre">tai</span></code>
+scale in <code class="docutils literal notranslate"><span class="pre">gps</span></code> format (unless the <a class="reference internal" href="#spacepy.time.Ticktock" title="spacepy.time.Ticktock"><code class="xref py py-class docutils literal notranslate"><span class="pre">Ticktock</span></code></a> was created
+from a <a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.time.Time.html#astropy.time.Time" title="(in Astropy v5.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a> object, in which case it will
+be the original input.) See the <a class="reference external" href="https://docs.astropy.org/en/stable/time/index.html#module-astropy.time" title="(in Astropy v5.0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">astropy.time</span></code></a> docs for
+conversion to other scales and formats.</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">Ticktock</span><span class="p">(</span><span class="s1">&#39;2002-02-02T12:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;ISO&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">APT</span>
+<span class="go">&lt;Time object: scale=&#39;tai&#39; format=&#39;gps&#39; value=696686413.0&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.time.Ticktock.getCDF">
+<span class="sig-name descname"><span class="pre">getCDF</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/time.html#Ticktock.getCDF"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.time.Ticktock.getCDF" title="Permalink to this definition">¶</a></dt>
+<dd><p>a.getCDF() or a.CDF</p>
+<p>Return CDF Epoch time which is milliseconds since 0000-1-1 at
+00:00:00.000. “Year zero” is a convention chosen by NSSDC to measure
+epoch values. This date is more commonly referred to as 1 BC and is
+considered a leap year.</p>
+<p>The CDF date/time calculations do not take into account the change
+to the Gregorian calendar or leap seconds, and cannot be directly
+converted into Julian date/times.</p>
+<p>Returns <code class="docutils literal notranslate"><span class="pre">data</span></code> if it was provided in CDF; otherwise always
+recalculates from the current value of <code class="docutils literal notranslate"><span class="pre">TAI</span></code>, which will be
+created if necessary.</p>
+<p>Updates the <code class="docutils literal notranslate"><span class="pre">CDF</span></code> attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">numpy array</span></dt><dd><p>milliseconds since 0000-01-01T00:00:00 assuming no discontinuities.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getUTC" title="spacepy.time.Ticktock.getUTC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUTC</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getUNX" title="spacepy.time.Ticktock.getUNX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUNX</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getRDT" title="spacepy.time.Ticktock.getRDT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRDT</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getJD" title="spacepy.time.Ticktock.getJD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getJD</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getMJD" title="spacepy.time.Ticktock.getMJD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMJD</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getISO" title="spacepy.time.Ticktock.getISO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getISO</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getTAI" title="spacepy.time.Ticktock.getTAI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTAI</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getDOY" title="spacepy.time.Ticktock.getDOY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDOY</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.geteDOY" title="spacepy.time.Ticktock.geteDOY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geteDOY</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getAPT" title="spacepy.time.Ticktock.getAPT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAPT</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">Ticktock</span><span class="p">(</span><span class="s1">&#39;2002-02-02T12:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;ISO&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">CDF</span>
+<span class="go">array([  6.31798704e+13])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.time.Ticktock.getDOY">
+<span class="sig-name descname"><span class="pre">getDOY</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/time.html#Ticktock.getDOY"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.time.Ticktock.getDOY" title="Permalink to this definition">¶</a></dt>
+<dd><p>a.DOY or a.getDOY()</p>
+<p>extract DOY (days since January 1st of given year)</p>
+<p>Always recalculates from the current value of <code class="docutils literal notranslate"><span class="pre">UTC</span></code>, which will
+be created if necessary.</p>
+<p>Updates the <code class="docutils literal notranslate"><span class="pre">DOY</span></code> attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">numpy array</span></dt><dd><p>day of the year</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getUTC" title="spacepy.time.Ticktock.getUTC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUTC</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getUNX" title="spacepy.time.Ticktock.getUNX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUNX</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getRDT" title="spacepy.time.Ticktock.getRDT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRDT</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getJD" title="spacepy.time.Ticktock.getJD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getJD</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getMJD" title="spacepy.time.Ticktock.getMJD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMJD</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getISO" title="spacepy.time.Ticktock.getISO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getISO</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getTAI" title="spacepy.time.Ticktock.getTAI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTAI</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getDOY" title="spacepy.time.Ticktock.getDOY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDOY</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.geteDOY" title="spacepy.time.Ticktock.geteDOY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geteDOY</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getAPT" title="spacepy.time.Ticktock.getAPT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAPT</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">Ticktock</span><span class="p">(</span><span class="s1">&#39;2002-02-02T12:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;ISO&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">DOY</span>
+<span class="go">array([ 33])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.time.Ticktock.getGPS">
+<span class="sig-name descname"><span class="pre">getGPS</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/time.html#Ticktock.getGPS"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.time.Ticktock.getGPS" title="Permalink to this definition">¶</a></dt>
+<dd><p>a.GPS or a.getGPS()</p>
+<p>Return seconds since the GPS epoch (1980-1-6T00:00 UT)</p>
+<p>Always recalculates from the current value of <code class="docutils literal notranslate"><span class="pre">TAI</span></code>, which
+will be created if necessary.</p>
+<p>Updates the <code class="docutils literal notranslate"><span class="pre">GPS</span></code> attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">numpy array</span></dt><dd><p>elapsed secs since 1980-1-6. Leap seconds are counted;
+i.e. there are no discontinuities.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getUTC" title="spacepy.time.Ticktock.getUTC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUTC</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getUNX" title="spacepy.time.Ticktock.getUNX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUNX</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getRDT" title="spacepy.time.Ticktock.getRDT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRDT</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getJD" title="spacepy.time.Ticktock.getJD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getJD</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getMJD" title="spacepy.time.Ticktock.getMJD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMJD</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getCDF" title="spacepy.time.Ticktock.getCDF"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCDF</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getISO" title="spacepy.time.Ticktock.getISO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getISO</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getDOY" title="spacepy.time.Ticktock.getDOY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDOY</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.geteDOY" title="spacepy.time.Ticktock.geteDOY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geteDOY</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getAPT" title="spacepy.time.Ticktock.getAPT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAPT</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">Ticktock</span><span class="p">(</span><span class="s1">&#39;2002-02-02T12:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;ISO&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">GPS</span>
+<span class="go">dmarray([6.96686413e+08])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.time.Ticktock.getISO">
+<span class="sig-name descname"><span class="pre">getISO</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/time.html#Ticktock.getISO"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.time.Ticktock.getISO" title="Permalink to this definition">¶</a></dt>
+<dd><p>a.ISO or a.getISO()</p>
+<p>convert dtype data into ISO string</p>
+<p>Always recalculates from the current value of <code class="docutils literal notranslate"><span class="pre">UTC</span></code>, which
+will be created if necessary. Applies leapsecond correction
+based on <code class="docutils literal notranslate"><span class="pre">TAI</span></code>, also created as necessary.</p>
+<p>Updates the <code class="docutils literal notranslate"><span class="pre">ISO</span></code> attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">list of strings</span></dt><dd><p>date in ISO format</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getUTC" title="spacepy.time.Ticktock.getUTC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUTC</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getUNX" title="spacepy.time.Ticktock.getUNX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUNX</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getRDT" title="spacepy.time.Ticktock.getRDT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRDT</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getJD" title="spacepy.time.Ticktock.getJD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getJD</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getMJD" title="spacepy.time.Ticktock.getMJD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMJD</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getCDF" title="spacepy.time.Ticktock.getCDF"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCDF</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getTAI" title="spacepy.time.Ticktock.getTAI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTAI</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getDOY" title="spacepy.time.Ticktock.getDOY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDOY</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.geteDOY" title="spacepy.time.Ticktock.geteDOY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geteDOY</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getAPT" title="spacepy.time.Ticktock.getAPT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAPT</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">Ticktock</span><span class="p">(</span><span class="s1">&#39;2002-02-02T12:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;ISO&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">ISO</span>
+<span class="go">dmarray([&#39;2002-02-02T12:00:00&#39;])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.time.Ticktock.getJD">
+<span class="sig-name descname"><span class="pre">getJD</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/time.html#Ticktock.getJD"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.time.Ticktock.getJD" title="Permalink to this definition">¶</a></dt>
+<dd><p>a.JD or a.getJD()</p>
+<p>convert dtype data into Julian Date (JD)</p>
+<p>Returns <code class="docutils literal notranslate"><span class="pre">data</span></code> if it was provided in JD; otherwise always
+recalculates from the current value of <code class="docutils literal notranslate"><span class="pre">TAI</span></code>, which will be
+created if necessary.</p>
+<p>Updates the <code class="docutils literal notranslate"><span class="pre">JD</span></code> attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">numpy array</span></dt><dd><p>elapsed days since 4713 BCE 01-01T12:00</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getUTC" title="spacepy.time.Ticktock.getUTC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUTC</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getUNX" title="spacepy.time.Ticktock.getUNX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUNX</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getRDT" title="spacepy.time.Ticktock.getRDT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRDT</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getJD" title="spacepy.time.Ticktock.getJD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getJD</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getMJD" title="spacepy.time.Ticktock.getMJD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMJD</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getISO" title="spacepy.time.Ticktock.getISO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getISO</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getTAI" title="spacepy.time.Ticktock.getTAI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTAI</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getDOY" title="spacepy.time.Ticktock.getDOY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDOY</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.geteDOY" title="spacepy.time.Ticktock.geteDOY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geteDOY</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getAPT" title="spacepy.time.Ticktock.getAPT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAPT</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<p>This is based on the UTC day, defined as JD(UTC),
+per the recommendation
+of <a class="reference external" href="https://www.iers.org/IERS/EN/Science/Recommendations/resolutionB1.html">IAU General Assembly XXIII resolution B1</a>.
+Julian days with leapseconds are 86401 seconds long and each second
+is a smaller fraction of the day. Note this “stretching” is across
+the <em>Julian</em> Day, noon to noon.</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">Ticktock</span><span class="p">(</span><span class="s1">&#39;2002-02-02T12:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;ISO&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">JD</span>
+<span class="go">array([ 2452308.])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.time.Ticktock.getMJD">
+<span class="sig-name descname"><span class="pre">getMJD</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/time.html#Ticktock.getMJD"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.time.Ticktock.getMJD" title="Permalink to this definition">¶</a></dt>
+<dd><p>a.MJD or a.getMJD()</p>
+<p>convert dtype data into MJD (modified Julian date)</p>
+<p>Returns <code class="docutils literal notranslate"><span class="pre">data</span></code> if it was provided in MJD; otherwise always
+recalculates from the current value of <code class="docutils literal notranslate"><span class="pre">TAI</span></code> which will be
+created if necessary.</p>
+<p>Updates the <code class="docutils literal notranslate"><span class="pre">MJD</span></code> attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">numpy array</span></dt><dd><p>elapsed days since 1858-11-17T00:00
+(Julian date of 1858-11-17T12:00 was 2 400 000)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getUTC" title="spacepy.time.Ticktock.getUTC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUTC</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getUNX" title="spacepy.time.Ticktock.getUNX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUNX</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getRDT" title="spacepy.time.Ticktock.getRDT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRDT</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getJD" title="spacepy.time.Ticktock.getJD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getJD</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getISO" title="spacepy.time.Ticktock.getISO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getISO</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getCDF" title="spacepy.time.Ticktock.getCDF"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCDF</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getTAI" title="spacepy.time.Ticktock.getTAI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTAI</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getDOY" title="spacepy.time.Ticktock.getDOY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDOY</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.geteDOY" title="spacepy.time.Ticktock.geteDOY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geteDOY</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getAPT" title="spacepy.time.Ticktock.getAPT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAPT</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<p>This is based on the UTC day, defined as JD(UTC) - 2 400 000.5,
+per the recommendation
+of <a class="reference external" href="https://www.iers.org/IERS/EN/Science/Recommendations/resolutionB1.html">IAU General Assembly XXIII resolution B1</a>.
+Julian days with leapseconds are 86401 seconds long and each second
+is a smaller fraction of the day. Note this “stretching” is across
+the <em>Julian</em> Day not the MJD, so it will affect the last half of
+the MJD before the leap second and the first half of the following
+MJD, so that MJD is always JD - 2 400 000.5 This also means that
+the MJD following a leap second does not begin exactly at midnight.</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">Ticktock</span><span class="p">(</span><span class="s1">&#39;2002-02-02T12:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;ISO&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">MJD</span>
+<span class="go">array([ 52307.5])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">Ticktock</span><span class="p">(</span><span class="s1">&#39;2009-01-01T00:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;ISO&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">MJD</span>
+<span class="go">array([ 54832.00000579])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.time.Ticktock.getRDT">
+<span class="sig-name descname"><span class="pre">getRDT</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/time.html#Ticktock.getRDT"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.time.Ticktock.getRDT" title="Permalink to this definition">¶</a></dt>
+<dd><p>a.RDT or a.RDT()</p>
+<p>convert dtype data into Rata Die (lat.) Time, or elapsed days
+counting 0001-01-01 as day 1. This is a naive conversion: it
+ignores the existence of leapseconds for fractional days and
+ignores the conversion from Julian to Gregorian calendar, i.e.
+it assumes Gregorian calendar infinitely into the past.</p>
+<p>Returns <code class="docutils literal notranslate"><span class="pre">data</span></code> if it was provided in RDT; otherwise always
+recalculates from the current value of <code class="docutils literal notranslate"><span class="pre">TAI</span></code>, which will be
+created if necessary.</p>
+<p>Updates the <code class="docutils literal notranslate"><span class="pre">RDT</span></code> attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">numpy array</span></dt><dd><p>elapsed days counting 1/1/1 as day 1.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getUTC" title="spacepy.time.Ticktock.getUTC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUTC</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getUNX" title="spacepy.time.Ticktock.getUNX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUNX</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getISO" title="spacepy.time.Ticktock.getISO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getISO</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getJD" title="spacepy.time.Ticktock.getJD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getJD</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getMJD" title="spacepy.time.Ticktock.getMJD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMJD</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getCDF" title="spacepy.time.Ticktock.getCDF"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCDF</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getTAI" title="spacepy.time.Ticktock.getTAI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTAI</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getDOY" title="spacepy.time.Ticktock.getDOY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDOY</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.geteDOY" title="spacepy.time.Ticktock.geteDOY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geteDOY</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getAPT" title="spacepy.time.Ticktock.getAPT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAPT</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">Ticktock</span><span class="p">(</span><span class="s1">&#39;2002-02-02T12:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;ISO&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">RDT</span>
+<span class="go">array([ 730883.5])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.time.Ticktock.getTAI">
+<span class="sig-name descname"><span class="pre">getTAI</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/time.html#Ticktock.getTAI"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.time.Ticktock.getTAI" title="Permalink to this definition">¶</a></dt>
+<dd><p>a.TAI or a.getTAI()</p>
+<p>return TAI (International Atomic Time), elapsed secs since 1958-1-1
+(leap seconds are counted.) Ticktock’s handling of TAI and UTC
+conversions treats the UTC second as always equal in length to the SI
+second (and thus TAI), ignoring frequency changes and fractional
+leap seconds from 1958 through 1972, i.e. the UTC to TAI offset
+is always treated as an integer, truncated (not rounded) from the
+value at the most recent leap second (or fraction thereof).</p>
+<p>Return value comes from (in priority order):</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>If <code class="docutils literal notranslate"><span class="pre">data</span></code> was provided in TAI, returns <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p></li>
+<li><p>Else recalculates directly from <code class="docutils literal notranslate"><span class="pre">data</span></code> if it was
+provided in APT, CDF, GPS, ISO, JD, MJD, RDT, or UNX.</p></li>
+<li><p>Else calculates from current value of <code class="docutils literal notranslate"><span class="pre">UTC</span></code>, which
+will be created if necessary.</p></li>
+</ol>
+</div></blockquote>
+<p>Updates the <code class="docutils literal notranslate"><span class="pre">TAI</span></code> attribute; will also create the <code class="docutils literal notranslate"><span class="pre">UTC</span></code>
+and <code class="docutils literal notranslate"><span class="pre">ISO</span></code> attributes from <code class="docutils literal notranslate"><span class="pre">data</span></code> if input is in <code class="docutils literal notranslate"><span class="pre">ISO</span></code>
+(but will not overwrite an existing <code class="docutils literal notranslate"><span class="pre">ISO</span></code> or <code class="docutils literal notranslate"><span class="pre">UTC</span></code>). This is
+for efficiency, as computation from ISO requires calculating UTC
+and makes creating a formatted ISO string easy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">numpy array</span></dt><dd><p>TAI as seconds since 1958-1-1.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getUTC" title="spacepy.time.Ticktock.getUTC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUTC</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getUNX" title="spacepy.time.Ticktock.getUNX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUNX</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getRDT" title="spacepy.time.Ticktock.getRDT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRDT</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getJD" title="spacepy.time.Ticktock.getJD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getJD</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getMJD" title="spacepy.time.Ticktock.getMJD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMJD</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getCDF" title="spacepy.time.Ticktock.getCDF"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCDF</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getISO" title="spacepy.time.Ticktock.getISO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getISO</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getDOY" title="spacepy.time.Ticktock.getDOY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDOY</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.geteDOY" title="spacepy.time.Ticktock.geteDOY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geteDOY</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getAPT" title="spacepy.time.Ticktock.getAPT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAPT</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">Ticktock</span><span class="p">(</span><span class="s1">&#39;2002-02-02T12:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;ISO&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">TAI</span>
+<span class="go">array([1391342432])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.time.Ticktock.getUNX">
+<span class="sig-name descname"><span class="pre">getUNX</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/time.html#Ticktock.getUNX"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.time.Ticktock.getUNX" title="Permalink to this definition">¶</a></dt>
+<dd><p>a.UNX or a.getUNX()</p>
+<p>convert dtype data into Unix Time (Posix Time)
+seconds since 1970-1-1 (not counting leap seconds)</p>
+<p>Returns <code class="docutils literal notranslate"><span class="pre">data</span></code> if it was provided in UNX; otherwise always
+recalculates from the current value of <code class="docutils literal notranslate"><span class="pre">TAI</span></code>, which will be
+created if necessary.</p>
+<p>Updates the <code class="docutils literal notranslate"><span class="pre">UNX</span></code> attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">numpy array</span></dt><dd><p>elapsed secs since 1970-1-1 (not counting leap secs)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getUTC" title="spacepy.time.Ticktock.getUTC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUTC</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getISO" title="spacepy.time.Ticktock.getISO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getISO</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getRDT" title="spacepy.time.Ticktock.getRDT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRDT</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getJD" title="spacepy.time.Ticktock.getJD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getJD</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getMJD" title="spacepy.time.Ticktock.getMJD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMJD</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getCDF" title="spacepy.time.Ticktock.getCDF"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCDF</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getTAI" title="spacepy.time.Ticktock.getTAI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTAI</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getDOY" title="spacepy.time.Ticktock.getDOY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDOY</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.geteDOY" title="spacepy.time.Ticktock.geteDOY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geteDOY</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getAPT" title="spacepy.time.Ticktock.getAPT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAPT</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">Ticktock</span><span class="p">(</span><span class="s1">&#39;2002-02-02T12:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;ISO&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">UNX</span>
+<span class="go">array([  1.01265120e+09])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.time.Ticktock.getUTC">
+<span class="sig-name descname"><span class="pre">getUTC</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/time.html#Ticktock.getUTC"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.time.Ticktock.getUTC" title="Permalink to this definition">¶</a></dt>
+<dd><p>a.UTC or a.getUTC()</p>
+<p>convert dtype data into UTC object a la datetime()</p>
+<p>Return value comes from (in priority order):</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>If <code class="docutils literal notranslate"><span class="pre">data</span></code> was provided in UTC, returns <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p></li>
+<li><p>Else recalculates directly from <code class="docutils literal notranslate"><span class="pre">data</span></code> if it was
+provided in ISO.</p></li>
+<li><p>Else calculates from current value of <code class="docutils literal notranslate"><span class="pre">TAI</span></code>, which
+will be created if necessary. (<code class="docutils literal notranslate"><span class="pre">data</span></code> is TAI, GPS,
+JD, MJD, RDT, CDF, UNX)).</p></li>
+</ol>
+</div></blockquote>
+<p>Updates the <code class="docutils literal notranslate"><span class="pre">UTC</span></code> attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">list of datetime objects</span></dt><dd><p>datetime object in UTC time</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getISO" title="spacepy.time.Ticktock.getISO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getISO</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getUNX" title="spacepy.time.Ticktock.getUNX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUNX</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getRDT" title="spacepy.time.Ticktock.getRDT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRDT</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getJD" title="spacepy.time.Ticktock.getJD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getJD</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getMJD" title="spacepy.time.Ticktock.getMJD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMJD</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getCDF" title="spacepy.time.Ticktock.getCDF"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCDF</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getTAI" title="spacepy.time.Ticktock.getTAI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTAI</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.getDOY" title="spacepy.time.Ticktock.getDOY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDOY</span></code></a>, <a class="reference internal" href="#spacepy.time.Ticktock.geteDOY" title="spacepy.time.Ticktock.geteDOY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geteDOY</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getAPT" title="spacepy.time.Ticktock.getAPT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAPT</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">Ticktock</span><span class="p">(</span><span class="s1">&#39;2002-02-02T12:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;ISO&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">UTC</span>
+<span class="go">[datetime.datetime(2002, 2, 2, 12, 0)]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.time.Ticktock.geteDOY">
+<span class="sig-name descname"><span class="pre">geteDOY</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/time.html#Ticktock.geteDOY"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.time.Ticktock.geteDOY" title="Permalink to this definition">¶</a></dt>
+<dd><p>a.eDOY or a.geteDOY()</p>
+<p>extract eDOY (elapsed days since midnight January 1st of given year)</p>
+<p>Always recalculates from the current value of <code class="docutils literal notranslate"><span class="pre">UTC</span></code>, which will
+be created if necessary.</p>
+<p>Updates the <code class="docutils literal notranslate"><span class="pre">eDOY</span></code> attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">numpy array</span></dt><dd><p>days elapsed since midnight bbedJan. 1st</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getUTC" title="spacepy.time.Ticktock.getUTC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUTC</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getUNX" title="spacepy.time.Ticktock.getUNX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUNX</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getRDT" title="spacepy.time.Ticktock.getRDT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRDT</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getJD" title="spacepy.time.Ticktock.getJD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getJD</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getMJD" title="spacepy.time.Ticktock.getMJD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMJD</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getISO" title="spacepy.time.Ticktock.getISO"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getISO</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getTAI" title="spacepy.time.Ticktock.getTAI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTAI</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getDOY" title="spacepy.time.Ticktock.getDOY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDOY</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.geteDOY" title="spacepy.time.Ticktock.geteDOY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geteDOY</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getAPT" title="spacepy.time.Ticktock.getAPT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAPT</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">Ticktock</span><span class="p">(</span><span class="s1">&#39;2002-02-02T12:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;ISO&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">eDOY</span>
+<span class="go">array([ 32.5])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.time.Ticktock.getleapsecs">
+<span class="sig-name descname"><span class="pre">getleapsecs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/time.html#Ticktock.getleapsecs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.time.Ticktock.getleapsecs" title="Permalink to this definition">¶</a></dt>
+<dd><p>a.leaps or a.getleapsecs()</p>
+<p>retrieve leapseconds from lookup table, used in getTAI</p>
+<p>Always recalculates from current value of <code class="docutils literal notranslate"><span class="pre">TAI</span></code> if <code class="docutils literal notranslate"><span class="pre">data</span></code>
+is dtype <code class="docutils literal notranslate"><span class="pre">TAI</span></code>, otherwise from the current value of <code class="docutils literal notranslate"><span class="pre">UTC</span></code>,
+which will be created if necessary.</p>
+<p>Updates the <code class="docutils literal notranslate"><span class="pre">leaps</span></code> attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">numpy array</span></dt><dd><p>leap seconds</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.getTAI" title="spacepy.time.Ticktock.getTAI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTAI</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">Ticktock</span><span class="p">(</span><span class="s1">&#39;2002-02-02T12:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;ISO&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">leaps</span>
+<span class="go">array([32])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.time.Ticktock.isoformat">
+<span class="sig-name descname"><span class="pre">isoformat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attrib</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/time.html#Ticktock.isoformat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.time.Ticktock.isoformat" title="Permalink to this definition">¶</a></dt>
+<dd><p>This changes the self._isofmt attribute by and subsequently this
+function will update the ISO attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fmt</strong><span class="classifier">string, optional</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.time.Ticktock.now">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">now</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/time.html#Ticktock.now"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.time.Ticktock.now" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create Ticktock with the current UTC time.</p>
+<p>Equivalent to datetime.utcnow()</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 0.2.2: </span>This now returns a UTC time; previously it returned a Ticktock
+UTC object, but in the local timezone, which made all conversions
+incorrect.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">ticktock</span></dt><dd><p>Ticktock object with the current time, equivalent to datetime.utcnow()</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime.now" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime.datetime.now</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime.utcnow" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime.datetime.utcnow</span></code></a></dt><dd></dd>
+</dl>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.time.Ticktock.sort">
+<span class="sig-name descname"><span class="pre">sort</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/time.html#Ticktock.sort"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.time.Ticktock.sort" title="Permalink to this definition">¶</a></dt>
+<dd><p>This will sort the Ticktock values in place based on the values
+in <cite>data</cite>. If you need a stable sort use kind=’mergesort’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Other Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>kind</strong><span class="classifier">str</span></dt><dd><p>Sort algorithm to use, default ‘quicksort’.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#spacepy.time.Ticktock.argsort" title="spacepy.time.Ticktock.argsort"><code class="xref py py-obj docutils literal notranslate"><span class="pre">argsort</span></code></a>, <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.argsort.html#numpy.argsort" title="(in NumPy v1.22)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.argsort</span></code></a></dt><dd></dd>
+</dl>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.time.Ticktock.today">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">today</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/time.html#Ticktock.today"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.time.Ticktock.today" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create Ticktock with the current UTC date and time set to 00:00:00</p>
+<p>Similar to date.today() with time included but in UTC and with the
+time included (zero hours, minutes, seconds)</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 0.2.2: </span>This now returns the UTC day; previously it returned a Ticktock
+UTC object, but in the local timezone, which made all conversions
+incorrect.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">ticktock</span></dt><dd><p>Ticktock object with the current UTC day</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.date.today" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime.date.today</span></code></a></dt><dd></dd>
+</dl>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.time.Ticktock.update_items">
+<span class="sig-name descname"><span class="pre">update_items</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrib</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/time.html#Ticktock.update_items"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.time.Ticktock.update_items" title="Permalink to this definition">¶</a></dt>
+<dd><p>After changing the self.data attribute by either __setitem__ or __add__ etc
+this function will update all other attributes. This function is
+called automatically in __add__, __init__, and __setitem__.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>attrib</strong><span class="classifier">str</span></dt><dd><p>attribute that was updated; update others from this</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Other Parameters</dt>
+<dd class="field-even"><dl>
+<dt><strong>cls</strong><span class="classifier">type</span></dt><dd><div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.2.2: </span>Class is now taken from the <code class="docutils literal notranslate"><span class="pre">self</span></code> of the bound instance.</p>
+</div>
+<p>Class to use for finding possible attributes; now ignored.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">spacepy.Ticktock.__setitem__</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">spacepy.Ticktock.__add__</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">spacepy.Ticktock.__sub__</span></code></dt><dd></dd>
+</dl>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.time.dtstr2iso.html" title="spacepy.time.dtstr2iso"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../time.html" title="time - Time conversion, manipulation and implementation of Ticktock class"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../time.html" >time - Time conversion, manipulation and implementation of Ticktock class</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.time.Ticktock</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

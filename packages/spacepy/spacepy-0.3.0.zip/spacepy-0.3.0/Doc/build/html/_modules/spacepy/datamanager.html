@@ -1,0 +1,1232 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>spacepy.datamanager &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../index.html"><img src="../../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../../search.html">search</a>|&nbsp;</li>
+       <li><a href="../../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../spacepy.html" accesskey="U">spacepy</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.datamanager</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+            </a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for spacepy.datamanager</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">The datamanager classes and functions are useful for locating the correct</span>
+<span class="sd">data file for a particular day and manipulating data and subsets in a generic</span>
+<span class="sd">way.</span>
+
+<span class="sd">Authors: Jon Niehof</span>
+
+<span class="sd">Institution: University of New Hampshire</span>
+
+<span class="sd">Contact: Jonathan.Niehof@unh.edu</span>
+
+<span class="sd">Copyright 2015-2020 contributors</span>
+
+
+<span class="sd">About datamanager</span>
+<span class="sd">-----------------</span>
+
+
+<span class="sd">Examples</span>
+<span class="sd">--------</span>
+<span class="sd">Examples go here</span>
+
+<span class="sd">.. currentmodule:: spacepy.datamanager</span>
+
+<span class="sd">.. rubric:: Classes</span>
+
+<span class="sd">.. autosummary::</span>
+<span class="sd">    :template: clean_class.rst</span>
+
+<span class="sd">    DataManager</span>
+
+<span class="sd">.. rubric:: Functions</span>
+
+<span class="sd">.. autosummary::</span>
+
+<span class="sd">    apply_index</span>
+<span class="sd">    array_interleave</span>
+<span class="sd">    axis_index</span>
+<span class="sd">    flatten_idx</span>
+<span class="sd">    insert_fill</span>
+<span class="sd">    rebin</span>
+<span class="sd">    rev_index</span>
+<span class="sd">    values_to_steps</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;DataManager&quot;</span><span class="p">,</span> <span class="s2">&quot;apply_index&quot;</span><span class="p">,</span> <span class="s2">&quot;array_interleave&quot;</span><span class="p">,</span> <span class="s2">&quot;axis_index&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;flatten_idx&quot;</span><span class="p">,</span> <span class="s2">&quot;insert_fill&quot;</span><span class="p">,</span> <span class="s2">&quot;rebin&quot;</span><span class="p">,</span> <span class="s2">&quot;rev_index&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;values_to_steps&quot;</span><span class="p">]</span>
+
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">operator</span>
+<span class="kn">import</span> <span class="nn">os.path</span>
+<span class="kn">import</span> <span class="nn">posixpath</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span>
+
+
+<div class="viewcode-block" id="DataManager"><a class="viewcode-back" href="../../datamanager.html#spacepy.datamanager.DataManager">[docs]</a><span class="k">class</span> <span class="nc">DataManager</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    THIS CLASS IS NOT YET COMPLETE, doesn&#39;t do much useful.</span>
+
+<span class="sd">    Will have to do something that allows the config file to specify regex</span>
+<span class="sd">    and other things, and then just the directory to be changed (since</span>
+<span class="sd">    regex, etc. </span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ==========</span>
+<span class="sd">    directories : list</span>
+<span class="sd">        A list of directories that might contain the data</span>
+<span class="sd">    file_fmt : string</span>
+<span class="sd">        Regular expression that matches the files desired. Will also recognize</span>
+<span class="sd">        strftime parameters %w %d %m %y %Y %H %M %s %j %U %W, all zero-pad.</span>
+<span class="sd">        https://docs.python.org/2/library/datetime.html#strftime-strptime-behavior</span>
+<span class="sd">        Can have subdirectory reference, but separator should be unix-style,</span>
+<span class="sd">        with no leading slash.</span>
+
+<span class="sd">    period : string</span>
+<span class="sd">        Size of file; can be a number followed by one of d, m, y, H, M, s.</span>
+<span class="sd">        Anything else is assumed to be &quot;irregular&quot; and files treated</span>
+<span class="sd">        as if there are neither gaps nor overlaps in the sequence.</span>
+<span class="sd">        If not specified, will be assumed to match one count of the</span>
+<span class="sd">        smallest unit in the format string.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    ========</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">directories</span><span class="p">,</span> <span class="n">file_fmt</span><span class="p">,</span> <span class="n">descend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">period</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1">#Duplicate from class docstring. Consider autoclass_content = &quot;both&quot;</span>
+        <span class="c1">#Convert to system path format</span>
+        <span class="n">directories</span> <span class="o">=</span> <span class="p">[</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expandvars</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">d</span><span class="p">)))</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">directories</span><span class="p">]</span>
+        <span class="n">file_fmt</span> <span class="o">=</span> <span class="n">posixpath</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">file_fmt</span><span class="p">)</span>
+        <span class="c1">#The period matching might go into RePath</span>
+        <span class="k">if</span> <span class="n">period</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">period</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span>
+                <span class="p">(</span><span class="s1">&#39;1</span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="s1">&#39;sMHdmyY&#39;</span> <span class="k">if</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">file_fmt</span><span class="p">),</span>
+                <span class="kc">None</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^\d+[yYmdHMs]$&#39;</span><span class="p">,</span> <span class="n">period</span><span class="p">):</span>
+            <span class="n">period</span> <span class="o">=</span> <span class="kc">None</span> <span class="c1">#irregular, fun!</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">directories</span> <span class="o">=</span> <span class="n">directories</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">descend</span> <span class="o">=</span> <span class="n">descend</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">period</span> <span class="o">=</span> <span class="n">period</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_fmt</span> <span class="o">=</span> <span class="n">RePath</span><span class="p">(</span><span class="n">file_fmt</span><span class="p">)</span>
+
+<div class="viewcode-block" id="DataManager.get_filename"><a class="viewcode-back" href="../../datamanager.html#spacepy.datamanager.DataManager.get_filename">[docs]</a>    <span class="k">def</span> <span class="nf">get_filename</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dt</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the filename corresponding to a particular point in time</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">period</span><span class="p">:</span>
+            <span class="n">flist</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">files_matching</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+        <span class="c1">#Now figure out the priority..</span>
+
+<div class="viewcode-block" id="DataManager.files_matching"><a class="viewcode-back" href="../../datamanager.html#spacepy.datamanager.DataManager.files_matching">[docs]</a>    <span class="k">def</span> <span class="nf">files_matching</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dt</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return all the files matching this file format</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ==========</span>
+<span class="sd">        dt : datetime</span>
+<span class="sd">            Optional; if specified, match only files for this date.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        =======</span>
+<span class="sd">        out : generator</span>
+<span class="sd">            Iterates over every file matching the format specified at</span>
+<span class="sd">            creation. Note this is specified in native path format!</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1">#Use os.walk. If descend is False, only continue for matching</span>
+        <span class="c1">#the re to this point. If True, compare branch to entire re but</span>
+        <span class="c1">#walk everything</span>
+        <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">directories</span><span class="p">:</span>
+            <span class="n">native_d</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="c1">#Do the walk in native paths</span>
+            <span class="k">for</span> <span class="p">(</span><span class="n">dirpath</span><span class="p">,</span> <span class="n">dirnames</span><span class="p">,</span> <span class="n">filenames</span><span class="p">)</span> <span class="ow">in</span> \
+                <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">native_d</span><span class="p">,</span> <span class="n">topdown</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">followlinks</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+                <span class="c1">#dirpath is FULL DIRECTORY to this point, make relative</span>
+                <span class="n">relpath</span> <span class="o">=</span> <span class="n">dirpath</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">native_d</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:]</span>
+                <span class="c1">#Convert to POSIX for comparisons</span>
+                <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">sep</span> <span class="o">!=</span> <span class="n">posixpath</span><span class="o">.</span><span class="n">sep</span> <span class="ow">and</span> <span class="n">relpath</span><span class="p">:</span>
+                    <span class="n">relpath</span> <span class="o">=</span> <span class="n">posixpath</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="o">*</span><span class="n">RePath</span><span class="o">.</span><span class="n">path_split</span><span class="p">(</span>
+                        <span class="n">relpath</span><span class="p">,</span> <span class="n">native</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">descend</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">relpath</span> <span class="ow">and</span> <span class="ow">not</span> \
+                       <span class="bp">self</span><span class="o">.</span><span class="n">file_fmt</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">relpath</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="s1">&#39;start&#39;</span><span class="p">):</span>
+                        <span class="k">continue</span>
+                    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">dirnames</span><span class="p">),</span> <span class="mi">0</span><span class="p">):</span>
+                        <span class="n">dirname</span> <span class="o">=</span> <span class="n">dirnames</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">sep</span> <span class="o">!=</span> <span class="n">posixpath</span><span class="o">.</span><span class="n">sep</span> <span class="ow">and</span> <span class="n">dirname</span><span class="p">:</span>
+                            <span class="n">dirname</span> <span class="o">=</span> <span class="n">posixpath</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="o">*</span><span class="n">RePath</span><span class="o">.</span><span class="n">path_split</span><span class="p">(</span>
+                                <span class="n">dirname</span><span class="p">,</span> <span class="n">native</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+                        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_fmt</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">posixpath</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                                <span class="n">relpath</span><span class="p">,</span> <span class="n">dirname</span><span class="p">),</span> <span class="n">dt</span><span class="p">,</span> <span class="s1">&#39;start&#39;</span><span class="p">):</span>
+                            <span class="k">del</span> <span class="n">dirnames</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">filenames</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_fmt</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">posixpath</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">relpath</span><span class="p">,</span> <span class="n">f</span><span class="p">),</span> <span class="n">dt</span><span class="p">,</span>
+                                           <span class="s1">&#39;end&#39;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">descend</span> <span class="k">else</span> <span class="kc">None</span><span class="p">):</span>
+                        <span class="k">yield</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dirpath</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span></div></div>
+
+
+<span class="k">class</span> <span class="nc">RePath</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A path based on a regular expression + time format</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ==========</span>
+<span class="sd">    expression : string</span>
+<span class="sd">        Regular expression that matches the files desired. Will also recognize</span>
+<span class="sd">        strftime parameters %w %d %m %y %Y %H %M %s %j %U %W, all zero-pad.</span>
+<span class="sd">        https://docs.python.org/2/library/datetime.html#strftime-strptime-behavior</span>
+<span class="sd">        Can have subdirectory reference, but separator should be unix-style,</span>
+<span class="sd">        with no leading slash.</span>
+<span class="sd">        Matching is normally done against entire string, anchors should NOT</span>
+<span class="sd">        be included.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">fmt_to_re</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;[0-3]\d&#39;</span><span class="p">,</span> <span class="s1">&#39;m&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;[0-2]\d&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;\d\d&#39;</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;\d</span><span class="si">{4}</span><span class="s1">&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;H&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;[0-5]\d&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;[0-5]\d&#39;</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;[0-6]\d&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;j&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;[0-3]\d\d&#39;</span><span class="p">,</span> <span class="s1">&#39;U&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;[0-5]\d&#39;</span><span class="p">,</span> <span class="s1">&#39;W&#39;</span><span class="p">:</span> <span class="sa">r</span><span class="s1">&#39;[0-5]\d&#39;</span>
+                  <span class="p">}</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">expression</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_fmt</span> <span class="o">=</span> <span class="n">expression</span>
+        <span class="c1">#This should have backrefs where the same format occurs twice</span>
+        <span class="c1">#(year in both directory and file, for example)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_re</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(?!(?:</span><span class="si">%%</span><span class="s1">)+)%([wdmyYHMsjUW])&#39;</span><span class="p">,</span>
+                             <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">fmt_to_re</span><span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)],</span>
+                              <span class="n">expression</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_fmt_split</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">path_split</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_fmt</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_re_split</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">path_split</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_re</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">match</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">string</span><span class="p">,</span> <span class="n">dt</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Matches a string against a path or part thereof, optionally anchored</span>
+<span class="sd">        at a particular date/time</span>
+
+<span class="sd">        Other Parameters</span>
+<span class="sd">        ================</span>
+<span class="sd">        dt : datetime.datetime</span>
+<span class="sd">            The time to specifically match; otherwise matches all files.</span>
+<span class="sd">        where : str</span>
+<span class="sd">            Where to match: None to match the string to the entire path</span>
+<span class="sd">            (default); ``&#39;start&#39;`` to match entire string against the start</span>
+<span class="sd">            of the path; ``&#39;end&#39;`` to match entire path against end of string.</span>
+<span class="sd">            Note this matches the last elements of the string, not just</span>
+<span class="sd">            the last characters, i.e., ``oo/bar`` will not match ``foo/bar``.</span>
+<span class="sd">            Similarly, ``&#39;start&#39;`` matches the first elements of the path,</span>
+<span class="sd">            i.e., ``foo/ba`` will not match ``foo/bar``</span>
+<span class="sd">            ``start`` matches subset of path, i.e., the string is a directory</span>
+<span class="sd">            that may contain full matches further down the tree. ``end``</span>
+<span class="sd">            matches a subset of the string, i.e, the string is a</span>
+<span class="sd">            path to a file that would be a complete match except it has</span>
+<span class="sd">            additional path elements leading. This is the order that tends to</span>
+<span class="sd">            be useful.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        =======</span>
+<span class="sd">        out : re.MatchObject</span>
+<span class="sd">            The result of the match.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">datestr</span> <span class="o">=</span> <span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="n">dt</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_fmt</span><span class="p">)</span>
+                   <span class="k">if</span> <span class="n">dt</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_re</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">where</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">pat</span> <span class="o">=</span> <span class="n">datestr</span>
+        <span class="k">elif</span> <span class="n">where</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;end&#39;</span><span class="p">:</span> <span class="c1">#Cut down string to match path pattern</span>
+            <span class="n">pat</span> <span class="o">=</span> <span class="n">datestr</span>
+            <span class="n">string</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">path_slice</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_re_split</span><span class="p">),</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">where</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;start&#39;</span><span class="p">:</span> <span class="c1">#Does path pattern start like string?</span>
+            <span class="n">pat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">path_slice</span><span class="p">(</span><span class="n">datestr</span><span class="p">,</span>
+                                  <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path_split</span><span class="p">(</span><span class="n">string</span><span class="p">)))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;where must be &#39;start&#39;, &#39;stop&#39;, or None, not </span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span>
+                             <span class="nb">format</span><span class="p">(</span><span class="n">where</span><span class="p">)))</span>
+        <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">&#39;^&#39;</span> <span class="o">+</span> <span class="n">pat</span> <span class="o">+</span> <span class="s1">&#39;$&#39;</span><span class="p">,</span> <span class="n">string</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">path_split</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">native</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Break a path apart into a list for each path element.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ==========</span>
+<span class="sd">        path : str</span>
+<span class="sd">            Path to split</span>
+<span class="sd">        native : bool</span>
+<span class="sd">            Is this a native path or UNIX-style? (default False, UNIX)</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        =======</span>
+<span class="sd">        out : list of str</span>
+<span class="sd">            One path element (directory or file) per item</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">split</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span> <span class="k">if</span> <span class="n">native</span> <span class="k">else</span> <span class="n">posixpath</span><span class="o">.</span><span class="n">split</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">while</span> <span class="n">path</span><span class="p">:</span>
+            <span class="n">base</span><span class="p">,</span> <span class="n">tail</span> <span class="o">=</span> <span class="n">split</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">base</span> <span class="o">==</span> <span class="n">path</span><span class="p">:</span> <span class="c1">#No further splitting</span>
+                <span class="n">res</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+                <span class="k">break</span>
+            <span class="n">res</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">tail</span><span class="p">)</span>
+            <span class="n">path</span> <span class="o">=</span> <span class="n">base</span>
+        <span class="k">return</span> <span class="n">res</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">path_slice</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">native</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Slice a path by elements, as in getitem or []</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ==========</span>
+<span class="sd">        path : str</span>
+<span class="sd">            Path to slice</span>
+<span class="sd">        start : int</span>
+<span class="sd">            First path element to return, or the only element if</span>
+<span class="sd">            stop and step are not specified.</span>
+
+<span class="sd">        Other Parameters</span>
+<span class="sd">        ================</span>
+<span class="sd">        stop : int</span>
+<span class="sd">            First path element to NOT return, i.e., one past the last.</span>
+<span class="sd">            If ``stop`` is not specified but ``step`` is, return to end.</span>
+<span class="sd">        step : int</span>
+<span class="sd">            Increment between each.</span>
+<span class="sd">        native : bool</span>
+<span class="sd">            Is this a native path or UNIX-style? (default False, UNIX)</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        =======</span>
+<span class="sd">        out : str</span>
+<span class="sd">            Selection of the path</span>
+
+<span class="sd">        Examples</span>
+<span class="sd">        ========</span>
+<span class="sd">        &gt;&gt;&gt; path = &quot;foo/bar/baz&quot;</span>
+<span class="sd">        &gt;&gt;&gt; spacepy.datamanager.DataManager.path_slice(path, 1)</span>
+<span class="sd">        &quot;bar&quot;</span>
+<span class="sd">        &gt;&gt;&gt; spacepy.datamanager.DataManager.path_slice(path, 0, step=2)</span>
+<span class="sd">        &quot;foo/baz&quot;</span>
+<span class="sd">        &gt;&gt;&gt; spacepy.datamanager.DataManager.path_slice(path, 1, 3)</span>
+<span class="sd">        &quot;bar/baz&quot;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">stop</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">step</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">RePath</span><span class="o">.</span><span class="n">path_split</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">native</span><span class="o">=</span><span class="n">native</span><span class="p">)[</span><span class="n">start</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">join</span> <span class="o">=</span> <span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span> <span class="k">if</span> <span class="n">native</span> <span class="k">else</span> <span class="n">posixpath</span><span class="p">)</span><span class="o">.</span><span class="n">join</span>
+            <span class="k">return</span> <span class="n">join</span><span class="p">(</span><span class="o">*</span><span class="n">RePath</span><span class="o">.</span><span class="n">path_split</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">native</span><span class="o">=</span><span class="n">native</span><span class="p">)</span>
+                        <span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">stop</span><span class="p">:</span><span class="n">step</span><span class="p">])</span>
+
+
+<div class="viewcode-block" id="insert_fill"><a class="viewcode-back" href="../../datamanager.html#spacepy.datamanager.insert_fill">[docs]</a><span class="k">def</span> <span class="nf">insert_fill</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">fillval</span><span class="o">=</span><span class="n">numpy</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">absolute</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">doTimes</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Populate gaps in data with fill.</span>
+
+<span class="sd">    Continuous data are often treated differently from discontinuous data,</span>
+<span class="sd">    e.g., matplotlib will draw lines connecting data points but break the line</span>
+<span class="sd">    at fill. Often data will be irregularly sampled but also contain large</span>
+<span class="sd">    gaps that are not explicitly marked as fill. This function adds a single</span>
+<span class="sd">    record of explicit fill to each gap, defined as places where the spacing</span>
+<span class="sd">    between input times is a certain multiple of the median spacing.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ==========</span>
+<span class="sd">    times : sequence</span>
+<span class="sd">        Values representing when the data were taken. Must be one-dimensional,</span>
+<span class="sd">        i.e., each value must be scalar. Not modified </span>
+<span class="sd">    data : sequence</span>
+<span class="sd">        Input data.</span>
+
+<span class="sd">    Other Parameters</span>
+<span class="sd">    ================</span>
+<span class="sd">    fillval :</span>
+<span class="sd">        Fill value, same type as ``data``. Default is ``numpy.nan``. If scalar,</span>
+<span class="sd">        will be repeated to match the shape of ``data`` (minus the time axis).</span>
+
+<span class="sd">        .. note::</span>
+<span class="sd">            The default value of ``nan`` will not produce good results with</span>
+<span class="sd">            integer input.</span>
+
+<span class="sd">    tol : float</span>
+<span class="sd">        Tolerance. A single fill value is inserted between adjacent</span>
+<span class="sd">        values where the spacing in ``times`` is strictly greater than</span>
+<span class="sd">        ``tol`` times the median of the spacing across all</span>
+<span class="sd">        ``times``. The inserted time for fill is halfway between the</span>
+<span class="sd">        time on each side. (Default 1.5)</span>
+<span class="sd">    absolute :</span>
+<span class="sd">        An absolute value for maximum spacing, of a type that would result from</span>
+<span class="sd">        a difference in ``times``. If specified, ``tol`` is ignored and any gap</span>
+<span class="sd">        strictly larger than ``absolute`` will have fill inserted.</span>
+<span class="sd">    doTimes : boolean</span>
+<span class="sd">        If True (default), will return a tuple of the times (with new values</span>
+<span class="sd">        inserted for the fill records) and the data with new fill values.</span>
+<span class="sd">        If False, will only return the data -- useful for applying fill to</span>
+<span class="sd">        multiple arrays of data on the same timebase.</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ======</span>
+<span class="sd">    ValueError : if can&#39;t identify the time axis of data</span>
+<span class="sd">        Try using :func:`numpy.rollaxis` to put the time axis first in both</span>
+<span class="sd">        ``data`` and ``times``.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    =======</span>
+<span class="sd">    times, data : tuple of sequence</span>
+<span class="sd">        Copies of input times and data, fill added in gaps (``doTimes`` True)</span>
+<span class="sd">    data : sequence</span>
+<span class="sd">        Copy of input data, with fill added in gaps (``doTimes`` False)</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    ========</span>
+<span class="sd">    This example shows simple hourly data with a gap, populated with fill.</span>
+<span class="sd">    Note that only a single fill value is inserted, to break the sequence</span>
+<span class="sd">    of valid data rather than trying to match the existing cadence.</span>
+
+<span class="sd">    &gt;&gt;&gt; import datetime</span>
+<span class="sd">    &gt;&gt;&gt; import numpy</span>
+<span class="sd">    &gt;&gt;&gt; import spacepy.datamanager</span>
+<span class="sd">    &gt;&gt;&gt; t = [datetime.datetime(2012, 1, 1, 0),</span>
+<span class="sd">             datetime.datetime(2012, 1, 1, 1),</span>
+<span class="sd">             datetime.datetime(2012, 1, 1, 2),</span>
+<span class="sd">             datetime.datetime(2012, 1, 1, 5),</span>
+<span class="sd">             datetime.datetime(2012, 1, 1, 6)]</span>
+<span class="sd">    &gt;&gt;&gt; temp = [30.0, 28, 27, 32, 35]</span>
+<span class="sd">    &gt;&gt;&gt; filled_t, filled_temp = spacepy.datamanager.insert_fill(t, temp)</span>
+<span class="sd">    &gt;&gt;&gt; filled_t</span>
+<span class="sd">    array([datetime.datetime(2012, 1, 1, 0, 0),</span>
+<span class="sd">           datetime.datetime(2012, 1, 1, 1, 0),</span>
+<span class="sd">           datetime.datetime(2012, 1, 1, 2, 0),</span>
+<span class="sd">           datetime.datetime(2012, 1, 1, 3, 30),</span>
+<span class="sd">           datetime.datetime(2012, 1, 1, 5, 0),</span>
+<span class="sd">           datetime.datetime(2012, 1, 1, 6, 0)], dtype=object)</span>
+<span class="sd">    &gt;&gt;&gt; filled_temp</span>
+<span class="sd">    array([ 30.,  28.,  27.,  nan,  32.,  35.])</span>
+
+<span class="sd">    .. plot::</span>
+<span class="sd">       :include-source:</span>
+
+<span class="sd">       This example plots &quot;gappy&quot; data with and without explicit fill values.</span>
+
+<span class="sd">       &gt;&gt;&gt; import matplotlib.pyplot as plt</span>
+<span class="sd">       &gt;&gt;&gt; import numpy</span>
+<span class="sd">       &gt;&gt;&gt; import spacepy.datamanager</span>
+<span class="sd">       &gt;&gt;&gt; x = numpy.append(numpy.arange(0, 6, 0.1), numpy.arange(12, 18, 0.1))</span>
+<span class="sd">       &gt;&gt;&gt; y = numpy.sin(x)</span>
+<span class="sd">       &gt;&gt;&gt; xf, yf = spacepy.datamanager.insert_fill(x, y)</span>
+<span class="sd">       &gt;&gt;&gt; fig = plt.figure()</span>
+<span class="sd">       &gt;&gt;&gt; ax0 = fig.add_subplot(211)</span>
+<span class="sd">       &gt;&gt;&gt; ax0.plot(x, y)</span>
+<span class="sd">       &gt;&gt;&gt; ax1 = fig.add_subplot(212)</span>
+<span class="sd">       &gt;&gt;&gt; ax1.plot(xf, yf)</span>
+<span class="sd">       &gt;&gt;&gt; plt.show()</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">times</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span><span class="n">times</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="k">assert</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">times</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">times</span><span class="p">)</span> <span class="o">==</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+        <span class="n">timeaxis</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">matches</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">nonzero</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">times</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">matches</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;Unable to uniquely match shape of data to count of times.&quot;</span><span class="p">)</span>
+        <span class="n">timeaxis</span> <span class="o">=</span> <span class="n">matches</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">fillshape</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">timeaxis</span><span class="p">)</span> <span class="c1">#shape of data w/o time axis</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">fillval</span><span class="p">)</span> <span class="o">!=</span> <span class="n">fillshape</span><span class="p">)</span><span class="o">.</span><span class="n">any</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">numpy</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">fillval</span><span class="p">)</span> <span class="o">==</span> <span class="p">():</span>
+            <span class="n">fillval</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">fillval</span><span class="p">,</span> <span class="n">fillshape</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Cannot match shape of fill to shape of data&quot;</span><span class="p">)</span>
+    <span class="n">diff</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">times</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">diff</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;seconds&#39;</span><span class="p">):</span> <span class="c1">#datetime</span>
+        <span class="n">diff</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">vectorize</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">days</span> <span class="o">*</span> <span class="mf">86400.0</span> <span class="o">+</span> <span class="n">x</span><span class="o">.</span><span class="n">seconds</span> <span class="o">+</span>
+                               <span class="n">x</span><span class="o">.</span><span class="n">microseconds</span> <span class="o">/</span> <span class="mf">1.0e6</span><span class="p">)(</span><span class="n">diff</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">absolute</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">absolute</span> <span class="o">=</span> <span class="n">absolute</span><span class="o">.</span><span class="n">days</span> <span class="o">*</span> <span class="mf">86400.0</span> <span class="o">+</span> <span class="n">absolute</span><span class="o">.</span><span class="n">seconds</span> <span class="o">+</span> \
+                       <span class="n">absolute</span><span class="o">.</span><span class="n">microseconds</span> <span class="o">/</span> <span class="mf">1.0e6</span>
+    <span class="k">if</span> <span class="n">absolute</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">idx</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">nonzero</span><span class="p">(</span><span class="n">diff</span> <span class="o">&gt;</span> <span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span> <span class="o">*</span> <span class="n">tol</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">idx</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">nonzero</span><span class="p">(</span><span class="n">diff</span> <span class="o">&gt;</span> <span class="n">absolute</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">fillval</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">idx</span><span class="p">)),</span>
+                        <span class="n">axis</span><span class="o">=</span><span class="n">timeaxis</span><span class="p">)</span> <span class="c1">#NOOP if no fill</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">doTimes</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">data</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">filltimes</span> <span class="o">=</span> <span class="p">(</span><span class="n">times</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">+</span> <span class="n">times</span><span class="p">[</span><span class="n">idx</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="mf">2.0</span>
+    <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+        <span class="n">filltimes</span> <span class="o">=</span> <span class="n">times</span><span class="p">[</span><span class="n">idx</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">numpy</span><span class="o">.</span><span class="n">vectorize</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="n">x</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">))(</span><span class="n">diff</span><span class="p">[</span><span class="n">idx</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span>
+    <span class="n">times</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">filltimes</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">times</span><span class="p">,</span> <span class="n">data</span></div>
+
+
+<div class="viewcode-block" id="apply_index"><a class="viewcode-back" href="../../datamanager.html#spacepy.datamanager.apply_index">[docs]</a><span class="k">def</span> <span class="nf">apply_index</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Apply an array of indices to data.</span>
+
+<span class="sd">    Most useful in dealing with the output from :func:`numpy.argsort`, and</span>
+<span class="sd">    best explained by the example.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ==========</span>
+<span class="sd">    data : array</span>
+<span class="sd">        Input data, at least two dimensional. The 0th dimension is treated as</span>
+<span class="sd">        a &quot;time&quot; or &quot;record&quot; dimension.</span>
+<span class="sd">    idx : sequence</span>
+<span class="sd">        2D index to apply to the import data. The 0th dimension must be the </span>
+<span class="sd">        same size as ``data``&#39;s 0th dimension. Dimension 1 must be the same</span>
+<span class="sd">        size as one other dimension in data (the first match found is used);</span>
+<span class="sd">        this is referred to as the &quot;index dimension.&quot;</span>
+
+<span class="sd">    Raises</span>
+<span class="sd">    ======</span>
+<span class="sd">    ValueError : if can&#39;t match the shape of data and indices</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    =======</span>
+<span class="sd">    data : sequence</span>
+<span class="sd">        View of ``data``, with index applied. For each index of the 0th</span>
+<span class="sd">        dimension, the values along the index dimension are obtained by applying</span>
+<span class="sd">        the value of ``idx`` at the same index in the 0th dimension. This is</span>
+<span class="sd">        repeated across any other dimensions in ``data``.</span>
+
+<span class="sd">        .. warning::</span>
+<span class="sd">            No guarantee is made whether the returned data is a copy</span>
+<span class="sd">            of the input data. Modifying values in the input may change</span>
+<span class="sd">            the values of the input. Call :meth:`~numpy.ndarray.copy` if</span>
+<span class="sd">            a copy is required.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    ========</span>
+<span class="sd">    Assume ``flux`` is a 3D array of fluxes, with a value for each of</span>
+<span class="sd">    time, pitch angle, and energy. Assume energy is not necessarily </span>
+<span class="sd">    constant in time, nor is ordered in the energy dimension. If</span>
+<span class="sd">    ``energy`` is a 2D array of the energies as a function of energy</span>
+<span class="sd">    step for each time, then the following will sort the flux at each</span>
+<span class="sd">    time and pitch angle in energy order.</span>
+
+<span class="sd">    &gt;&gt;&gt; idx = numpy.argsort(energy, axis=1)</span>
+<span class="sd">    &gt;&gt;&gt; flux_sorted = spacepy.datamanager.apply_index(flux, idx)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">idx</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;idx must have dimensions 2, not </span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="nb">len</span><span class="p">(</span><span class="n">idx</span><span class="o">.</span><span class="n">shape</span><span class="p">)))</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;data must have at least dimensions 2&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">idx</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;data and idx must have same size in &quot;</span>
+                         <span class="s2">&quot;0th dimension&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">idx</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Size of idx dimension 1 must match a dimension in &quot;</span>
+                         <span class="s2">&quot;data&quot;</span><span class="p">)</span>
+    <span class="n">idx_dim</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">idx</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">numpy</span><span class="o">.</span><span class="n">rollaxis</span><span class="p">(</span>
+        <span class="n">numpy</span><span class="o">.</span><span class="n">rollaxis</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">idx_dim</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">#make time and index dim adjacent</span>
+        <span class="c1">#get a 2d array where every element matches index of first axis</span>
+        <span class="p">[</span><span class="n">numpy</span><span class="o">.</span><span class="n">mgrid</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">idx</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">slice</span><span class="p">(</span><span class="n">idx</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])][</span><span class="mi">0</span><span class="p">],</span>
+         <span class="n">idx</span><span class="p">,</span> <span class="c1">#2d array, every element is desired index of second axis</span>
+         <span class="o">...</span><span class="p">]</span> <span class="c1">#and the other axes come along for the ride</span>
+        <span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">idx_dim</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">#and put index dim back in place</span></div>
+
+
+<div class="viewcode-block" id="array_interleave"><a class="viewcode-back" href="../../datamanager.html#spacepy.datamanager.array_interleave">[docs]</a><span class="k">def</span> <span class="nf">array_interleave</span><span class="p">(</span><span class="n">array1</span><span class="p">,</span> <span class="n">array2</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Create an array containing all elements of both array1 and array2</span>
+
+<span class="sd">    ``idx`` is an index on the output array which indicates which elements will</span>
+<span class="sd">    be populated from ``array1``, i.e., ``out[idx] == array1`` (in order.)</span>
+<span class="sd">    The other elements of ``out`` will be filled, in order, from ``array2``.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ==========</span>
+<span class="sd">    array1 : array</span>
+<span class="sd">        Input data.</span>
+<span class="sd">    array2 : array</span>
+<span class="sd">        Input data. Must have same number of dimensions as ``array1``, and all</span>
+<span class="sd">        dimensions except the zeroth must also have the same length.</span>
+<span class="sd">    idx : array</span>
+<span class="sd">        A 1D array of indices on the zeroth dimension of the output array. Must</span>
+<span class="sd">        have the same length as the zeroth dimension of ``array1``.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    =======</span>
+<span class="sd">    out : array</span>
+<span class="sd">        All elements from ``array1`` and ``array2``, interleaved according</span>
+<span class="sd">        to ``idx``.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    ========</span>
+<span class="sd">    &gt;&gt;&gt; import numpy</span>
+<span class="sd">    &gt;&gt;&gt; import spacepy.datamanager</span>
+<span class="sd">    &gt;&gt;&gt; a = numpy.array([10, 20, 30])</span>
+<span class="sd">    &gt;&gt;&gt; b = numpy.array([1, 2])</span>
+<span class="sd">    &gt;&gt;&gt; idx = numpy.array([1, 2, 4])</span>
+<span class="sd">    &gt;&gt;&gt; spacepy.datamanager.array_interleave(a, b, idx)</span>
+<span class="sd">    array([ 1, 10, 20,  2, 30])</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">array1</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span><span class="n">array1</span><span class="p">)</span>
+    <span class="n">array2</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span><span class="n">array2</span><span class="p">)</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
+    <span class="k">assert</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">array1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">array2</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+    <span class="k">assert</span><span class="p">(</span><span class="n">array1</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">==</span> <span class="n">array2</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+    <span class="k">assert</span><span class="p">(</span><span class="n">array1</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="n">array2</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="n">outarray</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">array1</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span>
+        <span class="n">shape</span><span class="o">=</span><span class="p">((</span><span class="n">array1</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">array2</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],)</span> <span class="o">+</span> <span class="n">array1</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">:]))</span>
+    <span class="n">outarray</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="n">array1</span>
+    <span class="n">idx_comp</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">outarray</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">numpy</span><span class="o">.</span><span class="n">bool</span><span class="p">)</span>
+    <span class="n">idx_comp</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">outarray</span><span class="p">[</span><span class="n">idx_comp</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="n">array2</span>
+    <span class="k">return</span> <span class="n">outarray</span></div>
+
+
+<div class="viewcode-block" id="values_to_steps"><a class="viewcode-back" href="../../datamanager.html#spacepy.datamanager.values_to_steps">[docs]</a><span class="k">def</span> <span class="nf">values_to_steps</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Transform values along an axis to their order in a unique sequence.</span>
+
+<span class="sd">    Useful in, e.g., converting a list of energies to their steps.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ==========</span>
+<span class="sd">    array : array</span>
+<span class="sd">        Input data.</span>
+
+<span class="sd">    Other Parameters</span>
+<span class="sd">    ================</span>
+<span class="sd">    axis : int</span>
+<span class="sd">        Axis along which to find the steps.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    =======</span>
+<span class="sd">    steps : array</span>
+<span class="sd">        An array, the same size as ``array``, with values along ``axis``</span>
+<span class="sd">        corresponding to the position of the value in ``array`` in a unique,</span>
+<span class="sd">        sorted, set of the values in ``array`` along that axis. Differs from</span>
+<span class="sd">        :func:`~numpy.argsort` in that identical values will have identical</span>
+<span class="sd">        step numbers in the output.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    ========</span>
+<span class="sd">    &gt;&gt;&gt; import numpy</span>
+<span class="sd">    &gt;&gt;&gt; import spacepy.datamanager</span>
+<span class="sd">    &gt;&gt;&gt; data = [[10., 12., 11., 9., 10., 12., 11., 9.],</span>
+<span class="sd">                [10., 12., 11., 9., 14., 16., 15., 13.]]</span>
+<span class="sd">    &gt;&gt;&gt; spacepy.datamanager.values_to_steps(data)</span>
+<span class="sd">    array([[1, 3, 2, 0, 1, 3, 2, 0],</span>
+<span class="sd">           [1, 3, 2, 0, 5, 7, 6, 4]])</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">array</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
+    <span class="n">sortidx</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">)</span>
+    <span class="n">steps</span> <span class="o">=</span> <span class="n">rev_index</span><span class="p">(</span><span class="n">sortidx</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">apply_index</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">sortidx</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">)</span>
+    <span class="c1">#Everywhere in SORTED array that the VALUE is same as one before</span>
+    <span class="n">same</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">d</span><span class="o">==</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">)</span>
+    <span class="c1">#Number of duplicate indices BEFORE current index, in SORTED array</span>
+    <span class="n">delta</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">same</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="c1">#Get delta into the unsorted frame, and correct for uniqueness</span>
+    <span class="k">return</span> <span class="n">steps</span> <span class="o">-</span> <span class="n">delta</span><span class="o">.</span><span class="n">ravel</span><span class="p">()[</span>
+        <span class="n">flatten_idx</span><span class="p">(</span><span class="n">rev_index</span><span class="p">(</span><span class="n">sortidx</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">)]</span>\
+        <span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">steps</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="flatten_idx"><a class="viewcode-back" href="../../datamanager.html#spacepy.datamanager.flatten_idx">[docs]</a><span class="k">def</span> <span class="nf">flatten_idx</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Convert multidimensional index into index on flattened array.</span>
+
+<span class="sd">    Convert a multidimensional index, that is values along a particular axis,</span>
+<span class="sd">    so that it can derefence the flattened array properly. Note this is not</span>
+<span class="sd">    the same as :func:`~numpy.ravel_multi_index`.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ==========</span>
+<span class="sd">    idx : array</span>
+<span class="sd">        Input index, i.e. a list of elements along a particular axis,</span>
+<span class="sd">        in the style of :func:`~numpy.argsort`.</span>
+
+<span class="sd">    Other Parameters</span>
+<span class="sd">    ================</span>
+<span class="sd">    axis : int</span>
+<span class="sd">        Axis along which ``idx`` operates, defaults to the last axis.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    =======</span>
+<span class="sd">    flat : array</span>
+<span class="sd">        A 1D array of indices suitable for indexing the flat version of the</span>
+<span class="sd">        array </span>
+
+<span class="sd">    See Also</span>
+<span class="sd">    ========</span>
+<span class="sd">    apply_index</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    ========</span>
+<span class="sd">    &gt;&gt;&gt; import numpy</span>
+<span class="sd">    &gt;&gt;&gt; import spacepy.datamanager</span>
+<span class="sd">    &gt;&gt;&gt; data = numpy.array([[3, 1, 2], [3, 2, 1]])</span>
+<span class="sd">    &gt;&gt;&gt; idx = numpy.argsort(data, -1)</span>
+<span class="sd">    &gt;&gt;&gt; idx_flat = spacepy.datamanager.flatten_idx(idx)</span>
+<span class="sd">    &gt;&gt;&gt; data.ravel() #flat array</span>
+<span class="sd">    array([3, 1, 2, 3, 2, 1])</span>
+<span class="sd">    &gt;&gt;&gt; idx_flat #indices into the flat array</span>
+<span class="sd">    array([1, 2, 0, 5, 4, 3])</span>
+<span class="sd">    &gt;&gt;&gt; data.ravel()[idx_flat] #index applied to the flat array</span>
+<span class="sd">    array([1, 2, 3, 1, 2, 3])</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">idx</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">kind</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;u&#39;</span><span class="p">):</span>
+        <span class="n">idx</span> <span class="o">=</span> <span class="n">idx</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+    <span class="n">preshape</span> <span class="o">=</span> <span class="n">idx</span><span class="o">.</span><span class="n">shape</span><span class="p">[:</span><span class="n">axis</span><span class="p">]</span>
+    <span class="n">postshape</span> <span class="o">=</span> <span class="n">idx</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="n">axis</span><span class="p">:]</span>
+    <span class="n">stride</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">postshape</span><span class="p">[</span><span class="mi">1</span><span class="p">:]))</span> <span class="c1">#1 if applied to empty</span>
+    <span class="c1">#The index on this axis moves stride elements in flat</span>
+    <span class="n">outidx</span> <span class="o">=</span> <span class="n">idx</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span> <span class="o">*</span> <span class="n">stride</span> <span class="c1">#makes a copy</span>
+    <span class="c1">#First add the offsets to get us to [..., idx @ axis = 0, 0...)</span>
+    <span class="n">outidx</span> <span class="o">+=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span>
+        <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">outidx</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">postshape</span><span class="p">)),</span>
+                     <span class="n">dtype</span><span class="o">=</span><span class="n">idx</span><span class="o">.</span><span class="n">dtype</span><span class="p">),</span>
+        <span class="n">numpy</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">postshape</span><span class="p">))</span>
+    <span class="c1">#Now offsets for non-zero on the trailing axes [0, 0, ... 0@axis, ...]</span>
+    <span class="n">outidx</span> <span class="o">+=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">stride</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">idx</span><span class="o">.</span><span class="n">dtype</span><span class="p">),</span>
+                           <span class="nb">int</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">preshape</span><span class="p">))</span> <span class="o">*</span> <span class="n">idx</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="n">axis</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">outidx</span></div>
+
+
+<div class="viewcode-block" id="axis_index"><a class="viewcode-back" href="../../datamanager.html#spacepy.datamanager.axis_index">[docs]</a><span class="k">def</span> <span class="nf">axis_index</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns array of indices along axis, for all other axes</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ==========</span>
+<span class="sd">    shape : tuple</span>
+<span class="sd">        Shape of the output array</span>
+
+<span class="sd">    Other Parameters</span>
+<span class="sd">    ================</span>
+<span class="sd">    axis : int</span>
+<span class="sd">        Axis along which to return indices, defaults to the last axis.</span>
+<span class="sd">       </span>
+<span class="sd">    Returns</span>
+<span class="sd">    =======</span>
+<span class="sd">    idx : array</span>
+<span class="sd">        An array of indices. The value of each element is that element&#39;s index</span>
+<span class="sd">        along ``axis``.</span>
+
+<span class="sd">    See Also</span>
+<span class="sd">    ========</span>
+<span class="sd">    numpy.mgrid : This function is a special case</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    ========</span>
+<span class="sd">    For a shape of ``(i, j, k, l)`` and ``axis`` = -1,</span>
+<span class="sd">    ``idx[i, j, k, :] = range(l)`` for all ``i``, ``j``, ``k``.</span>
+
+<span class="sd">    Similarly, for the same shape and ``axis = 1``,</span>
+<span class="sd">    ``idx[i, :, k, l] = range(j)`` for all ``i``, ``k``, ``l``.</span>
+
+<span class="sd">    &gt;&gt;&gt; import numpy</span>
+<span class="sd">    &gt;&gt;&gt; import spacepy.datamanager</span>
+<span class="sd">    &gt;&gt;&gt; spacepy.datamanager.axis_index((5, 3))</span>
+<span class="sd">    array([[0, 1, 2],</span>
+<span class="sd">           [0, 1, 2],</span>
+<span class="sd">           [0, 1, 2],</span>
+<span class="sd">           [0, 1, 2],</span>
+<span class="sd">           [0, 1, 2]])</span>
+<span class="sd">    &gt;&gt;&gt; spacepy.datamanager.axis_index((5, 3), 0)</span>
+<span class="sd">        array([[0, 0, 0],</span>
+<span class="sd">               [1, 1, 1],</span>
+<span class="sd">               [2, 2, 2],</span>
+<span class="sd">               [3, 3, 3],</span>
+<span class="sd">               [4, 4, 4]])</span>
+<span class="sd">&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">operator</span><span class="o">.</span><span class="n">getitem</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">mgrid</span><span class="p">,</span> <span class="p">[</span><span class="nb">slice</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">shape</span><span class="p">])[</span><span class="n">axis</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="rev_index"><a class="viewcode-back" href="../../datamanager.html#spacepy.datamanager.rev_index">[docs]</a><span class="k">def</span> <span class="nf">rev_index</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;From an index, return an index that reverses the action of that index</span>
+
+<span class="sd">    Essentially, ``a[idx][rev_index(idx)] == a``</span>
+
+<span class="sd">    .. note::</span>
+<span class="sd">        This becomes more complicated in multiple dimensions, due to the</span>
+<span class="sd">        vagaries of applying a multidimensional index.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ==========</span>
+<span class="sd">    idx : array</span>
+<span class="sd">        Indices onto an array, often the output of :func:`~numpy.argsort`.</span>
+
+<span class="sd">    Other Parameters</span>
+<span class="sd">    ================</span>
+<span class="sd">    axis : int</span>
+<span class="sd">        Axis along which to return indices, defaults to the last axis.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    =======</span>
+<span class="sd">    rev_idx : array</span>
+<span class="sd">        Indices that, when applied to an array after ``idx``, will return</span>
+<span class="sd">        the original array (before the application of ``idx``).</span>
+<span class="sd"> </span>
+<span class="sd">    See Also</span>
+<span class="sd">    ========</span>
+<span class="sd">    apply_index</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    ========</span>
+<span class="sd">    &gt;&gt;&gt; import numpy</span>
+<span class="sd">    &gt;&gt;&gt; import spacepy.datamanager</span>
+<span class="sd">    &gt;&gt;&gt; data = numpy.array([7, 2, 4, 6, 3])</span>
+<span class="sd">    &gt;&gt;&gt; idx = numpy.argsort(data)</span>
+<span class="sd">    &gt;&gt;&gt; data[idx] #sorted</span>
+<span class="sd">    array([2, 3, 4, 6, 7])</span>
+<span class="sd">    &gt;&gt;&gt; data[idx][spacepy.datamanager.rev_index(idx)] #original</span>
+<span class="sd">    array([7, 2, 4, 6, 3])</span>
+<span class="sd">&quot;&quot;&quot;</span>
+    <span class="c1">#Want an idx2 such that x[idx][idx2] == x</span>
+    <span class="c1">#idx is position to value map</span>
+    <span class="c1">#Populate every POSITION in idx2 with the POSITION in idx that</span>
+    <span class="c1">#has the VALUE of the idx2 position</span>
+    <span class="c1">#searchsorted on range?</span>
+    <span class="n">idx_out</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">empty_like</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+    <span class="n">idx_out</span><span class="p">[</span><span class="n">flatten_idx</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">axis</span><span class="p">)]</span> <span class="o">=</span> <span class="n">axis_index</span><span class="p">(</span><span class="n">idx</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">axis</span><span class="p">)</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">idx_out</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">idx</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span></div>
+
+
+<span class="k">def</span> <span class="nf">_find_shape</span><span class="p">(</span><span class="n">bigshape</span><span class="p">,</span> <span class="n">littleshape</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Increase dimensionality of small array to match larger</span>
+
+<span class="sd">    Add degenerate dimensions to a lesser-dimensioned array to match a</span>
+<span class="sd">    larger-dimensioned array.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ==========</span>
+<span class="sd">    bigshape : tuple</span>
+<span class="sd">        The shape of the larger-dimmed array</span>
+<span class="sd">    littleshape : tuple</span>
+<span class="sd">        The shape of the smaller-dimmed array</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    =======</span>
+<span class="sd">    tuple</span>
+<span class="sd">        A shape of the same length/dimensions of ``bigshape`` with</span>
+<span class="sd">        dimension sizes taken from ``littleshape`` or of size 1. Suitable</span>
+<span class="sd">        for calling :func:`numpy.reshape` on array of shape ``littleshape``.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">newshape</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">littleidx</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">size</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">bigshape</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">littleidx</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">littleshape</span><span class="p">):</span> <span class="c1"># Still have &quot;little&quot; to consume</span>
+            <span class="k">if</span> <span class="n">size</span> <span class="o">==</span> <span class="n">littleshape</span><span class="p">[</span><span class="n">littleidx</span><span class="p">]:</span> <span class="c1"># Match, just move along</span>
+                <span class="n">newshape</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+                <span class="n">littleidx</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="n">littleshape</span><span class="p">[</span><span class="n">littleidx</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="c1"># Consume degenerate dim</span>
+                <span class="n">littleidx</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">newshape</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># Add a degenerate dim</span>
+    <span class="k">if</span> <span class="n">littleidx</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">littleshape</span><span class="p">):</span> <span class="c1"># Didn&#39;t consume them all</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Unable to make shape </span><span class="si">{}</span><span class="s1"> compatible with shape </span><span class="si">{}</span><span class="s1">&#39;</span>
+                         <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">littleshape</span><span class="p">,</span> <span class="n">bigshape</span><span class="p">))</span>
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">newshape</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="rebin"><a class="viewcode-back" href="../../datamanager.html#spacepy.datamanager.rebin">[docs]</a><span class="k">def</span> <span class="nf">rebin</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">bindata</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">bintype</span><span class="o">=</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span>
+          <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">clip</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">bindatadelta</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Rebin one axis of input data based on values of another array</span>
+
+<span class="sd">    This is clearest with an example. Consider a flux as a function of time,</span>
+<span class="sd">    energy, and the look direction of a detector (could be multiple detectors,</span>
+<span class="sd">    or spin sectors.) The flux is then 3-D, dimensioned Nt x Ne x Nl. Now</span>
+<span class="sd">    consider that each look direction has an associated pitch angle that is</span>
+<span class="sd">    a function of time and thus stored in an array Nt x Nl. Then this function</span>
+<span class="sd">    will redimension the flux into pitch angle bins (rather than tags.)</span>
+
+<span class="sd">    So consider the PA bins to have dimension Np + 1 (because it represents</span>
+<span class="sd">    the edges, the number of bins is one less than the dimension.) Then</span>
+<span class="sd">    the output will be dimensioned Nt x Ne x Np.</span>
+
+<span class="sd">    ``bindata`` must be same or lesser dimensionality than ``data``. Any</span>
+<span class="sd">    axes which are present must be either of size 1, or the same size as</span>
+<span class="sd">    ``data``. So for ``data`` 100x5x20, ``bindata`` may be 100x5x20, or</span>
+<span class="sd">    100, or 100x1x20, but not 100x20x5. This function will insert axes of</span>
+<span class="sd">    size 1 as needed to match dimensionality.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ==========</span>
+<span class="sd">    data : :class:`~numpy.ndarray`</span>
+<span class="sd">        N-dimensional array of data to be rebinned. :class:`~numpy.nan`</span>
+<span class="sd">        are ignored.</span>
+<span class="sd">    bindata : :class:`~numpy.ndarray`</span>
+<span class="sd">        M-dimensional (M&lt;=N) array of values to be compared to the bins.</span>
+<span class="sd">    bins : :class:`~numpy.ndarray`</span>
+<span class="sd">        1-D array of bin edges. Output dimension will be this size</span>
+<span class="sd">        minus 1. Any values in ``bindata`` that don&#39;t fall in the</span>
+<span class="sd">        bins will be omitted from the output. (See ``clip`` to change</span>
+<span class="sd">        this behavior).</span>
+
+<span class="sd">    Other Parameters</span>
+<span class="sd">    ================</span>
+<span class="sd">    axis : int</span>
+<span class="sd">        Axis of `data` to rebin. This axis will disappear in the</span>
+<span class="sd">        output and be replaced with an axis of the size of</span>
+<span class="sd">        ``bins`` less one. (Default -1, last axis)</span>
+<span class="sd">    bintype : str</span>
+<span class="sd">        Type of rebinning to perform:</span>
+<span class="sd">            mean</span>
+<span class="sd">                Return the mean of all values in the bin (default)</span>
+<span class="sd">            unc</span>
+<span class="sd">                Return the quadrature mean of all values in the bin,</span>
+<span class="sd">                for propagating uncertainty</span>
+<span class="sd">            count</span>
+<span class="sd">                Return the count of values that fall in each bin.</span>
+<span class="sd">    weights : :class:`~numpy.ndarray`</span>
+<span class="sd">        Relative weight of each sample in ``bindata``. Must be same</span>
+<span class="sd">        shape as ``bindata``. Purely relative, i.e. the output is</span>
+<span class="sd">        only affected based on the total of ``weights`` if ``bintype``</span>
+<span class="sd">        is ``count``. Note if ``weights`` is specified, ``count`` returns</span>
+<span class="sd">        the sum of the weights, not the count of individual samples.</span>
+<span class="sd">    clip : boolean</span>
+<span class="sd">        Clip data to the bins. If true, all input data will be assigned</span>
+<span class="sd">        a bin and data outside the range of the bin edges will be assigned</span>
+<span class="sd">        to the extreme bins. If false (default), input data outside the bin</span>
+<span class="sd">        ranges will be ignored.</span>
+<span class="sd">    bindatadelta : :class:`~numpy.ndarray`</span>
+<span class="sd">        By default, the ``bindata`` are treated as point values. If</span>
+<span class="sd">        ``bindatadelta`` is specified, it is treated as the half-width of</span>
+<span class="sd">        the ``bindata``, allowing a single input value to be split between</span>
+<span class="sd">        output bins. Must be scalar, or same shape as `bindata`. Note that</span>
+<span class="sd">        input values are not weighted by the bin width, but by number of</span>
+<span class="sd">        input values or by ``weights``. (Combining ``weights`` with</span>
+<span class="sd">        ``bindatadelta`` is not comprehensively tested.)</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    =======</span>
+<span class="sd">    :class:`~numpy.ndarray`</span>
+<span class="sd">        ``data`` with one axis redimensioned, from its original</span>
+<span class="sd">        dimension to the bin dimension.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    ========</span>
+<span class="sd">    Consider a particle flux distribution that&#39;s a function of energy and</span>
+<span class="sd">    pitch angle. For simplicity, assume that the energy dependence is a</span>
+<span class="sd">    simple power law and the pitch angle dependence is Gaussian, with a peak</span>
+<span class="sd">    whose position oscillates in time over a period of about one hour. This is</span>
+<span class="sd">    fairly non-physical but illustrative.</span>
+
+<span class="sd">    First making the relevant imports::</span>
+
+<span class="sd">        &gt;&gt;&gt; import matplotlib.pyplot</span>
+<span class="sd">        &gt;&gt;&gt; import numpy</span>
+<span class="sd">        &gt;&gt;&gt; import spacepy.datamanager</span>
+<span class="sd">        &gt;&gt;&gt; import spacepy.plot</span>
+
+<span class="sd">    The functional form of the flux is then::</span>
+
+<span class="sd">        &gt;&gt;&gt; def j(e, t, a):</span>
+<span class="sd">        ...     return e ** -2 * (1 / (90 * numpy.sqrt(2 * numpy.pi))) \\</span>
+<span class="sd">        ...     * numpy.exp(</span>
+<span class="sd">        ...         -0.5 * ((a - 90 + 90 * numpy.sin(t / 573.)) / 90.) ** 2)</span>
+
+<span class="sd">    Illustrating the flux at one energy as a function of pitch angle::</span>
+
+<span class="sd">        &gt;&gt;&gt; times = numpy.arange(0., 7200, 5)</span>
+<span class="sd">        &gt;&gt;&gt; alpha = numpy.arange(0, 181., 2)</span>
+<span class="sd">        # Add a dimension so the flux is a 2D array</span>
+<span class="sd">        &gt;&gt;&gt; flux = j(1., numpy.expand_dims(times, 1),</span>
+<span class="sd">        ...          numpy.expand_dims(alpha, 0))</span>
+<span class="sd">        &gt;&gt;&gt; spacepy.plot.simpleSpectrogram(times, alpha, flux, cb=False,</span>
+<span class="sd">        ...                                ylog=False)</span>
+<span class="sd">        &gt;&gt;&gt; matplotlib.pyplot.ylabel(&#39;Pitch angle (deg)&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; matplotlib.pyplot.xlabel(&#39;Time (sec)&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; matplotlib.pyplot.title(&#39;Flux at 1 MeV&#39;)</span>
+
+<span class="sd">    .. plot:: pyplots/datamanager_rebin_1.py</span>
+
+<span class="sd">    Or the flux at one pitch angle as a function of energy::</span>
+
+<span class="sd">        &gt;&gt;&gt; energies = numpy.logspace(0, 3, 50)</span>
+<span class="sd">        &gt;&gt;&gt; flux = j(numpy.expand_dims(energies, 0),</span>
+<span class="sd">        ...          numpy.expand_dims(times, 1), 90.)</span>
+<span class="sd">        &gt;&gt;&gt; spacepy.plot.simpleSpectrogram(times, energies, flux, cb=False)</span>
+<span class="sd">        &gt;&gt;&gt; matplotlib.pyplot.ylabel(&#39;Energy (MeV)&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; matplotlib.pyplot.xlabel(&#39;Time (sec)&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; matplotlib.pyplot.title(&#39;Flux at 90 degrees&#39;)</span>
+
+<span class="sd">    .. plot:: pyplots/datamanager_rebin_2.py</span>
+
+<span class="sd">    The measurement is usually not aligned with a pitch angle grid, and</span>
+<span class="sd">    the detector pointing in pitch angle space usually varies with time.</span>
+<span class="sd">    Taking a very simple case of eight detectors that sweep through pitch</span>
+<span class="sd">    angle space in an organized fashion at ten degrees per minute, the</span>
+<span class="sd">    measured pitch angle as a function of detector and time is::</span>
+
+<span class="sd">        &gt;&gt;&gt; def pa(d, t):</span>
+<span class="sd">        ...     return (d * 22.5 + t * (2 * (d % 2) - 1)) % 180</span>
+<span class="sd">        &gt;&gt;&gt; lines = matplotlib.pyplot.plot(</span>
+<span class="sd">        ...     times, pa(numpy.arange(8).reshape(1, -1), times.reshape(-1, 1)),</span>
+<span class="sd">        ...     marker=&#39;o&#39;, ms=1, linestyle=&#39;&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; matplotlib.pyplot.legend(lines,</span>
+<span class="sd">        ...     [&#39;Detector {}&#39;.format(i) for i in range(4)], loc=&#39;best&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; matplotlib.pyplot.xlabel(&#39;Time (sec)&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; matplotlib.pyplot.ylabel(&#39;Pitch angle (deg)&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; matplotlib.pyplot.title(&#39;Measured pitch angle by detector&#39;)</span>
+
+<span class="sd">    .. plot:: pyplots/datamanager_rebin_3.py</span>
+
+<span class="sd">    Assuming a coarser measurement in time and energy than used to illustrate</span>
+<span class="sd">    the distribution above, the measured flux as a function of time, detector,</span>
+<span class="sd">    and energy is constructed::</span>
+
+<span class="sd">        &gt;&gt;&gt; times = numpy.arange(0., 7200, 300) #5 min cadence</span>
+<span class="sd">        &gt;&gt;&gt; alpha = pa(numpy.arange(8).reshape(1, -1), times.reshape(-1, 1))</span>
+<span class="sd">        &gt;&gt;&gt; energies = numpy.logspace(0, 3, 10) #10 energy channels (3/decade)</span>
+<span class="sd">        # Every dimension (t, detector, e) gets its own numpy axis</span>
+<span class="sd">        &gt;&gt;&gt; flux = j(numpy.reshape(energies, (1, 1, -1)),</span>
+<span class="sd">                     numpy.reshape(times, (-1, 1, 1)),</span>
+<span class="sd">                     numpy.expand_dims(alpha, -1))</span>
+<span class="sd">        &gt;&gt;&gt; flux.shape</span>
+<span class="sd">        (24, 8, 10)</span>
+
+<span class="sd">    The flux at an energy as a function of detector is not very useful::</span>
+
+<span class="sd">        &gt;&gt;&gt; spacepy.plot.simpleSpectrogram(times, numpy.arange(8),</span>
+<span class="sd">        ...                                flux[..., 0], cb=False, ylog=False)</span>
+<span class="sd">        &gt;&gt;&gt; matplotlib.pyplot.ylabel(&#39;Detector&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; matplotlib.pyplot.xlabel(&#39;Time (sec)&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; matplotlib.pyplot.title(&#39;Flux at 1 MeV&#39;)</span>
+
+<span class="sd">    .. plot:: pyplots/datamanager_rebin_4.py</span>
+
+<span class="sd">    As a function of energy for one detector, the energy dependence is</span>
+<span class="sd">    apparent but time and pitch angle effects are confounded::</span>
+
+<span class="sd">        &gt;&gt;&gt; spacepy.plot.simpleSpectrogram(times, energies, flux[:, 0, :],</span>
+<span class="sd">        ...                                cb=False)</span>
+<span class="sd">        &gt;&gt;&gt; matplotlib.pyplot.ylabel(&#39;Energy (MeV)&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; matplotlib.pyplot.xlabel(&#39;Time (sec)&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; matplotlib.pyplot.title(&#39;Flux in detector 0&#39;)</span>
+
+<span class="sd">    .. plot:: pyplots/datamanager_rebin_5.py</span>
+
+<span class="sd">    What is needed is to recover the array of flux dimensioned by</span>
+<span class="sd">    time, pitch angle, and energy, with appropriate pitch angle bins.</span>
+<span class="sd">    The assumption is that the pitch angle as a function of time and</span>
+<span class="sd">    detector is measured and thus the ``alpha`` array is available.</span>
+<span class="sd">    Using that array, ``rebin`` can change flux from time, detector,</span>
+<span class="sd">    energy bins to time, pitch angle, energy bins. The axis 1 changes</span>
+<span class="sd">    from a detector dimension to pitch angle::</span>
+
+<span class="sd">        &gt;&gt;&gt; pa_bins = numpy.arange(0, 181, 36)</span>
+<span class="sd">        &gt;&gt;&gt; flux_by_pa = spacepy.datamanager.rebin(</span>
+<span class="sd">        ...     flux, alpha, pa_bins, axis=1)</span>
+<span class="sd">        &gt;&gt;&gt; flux_by_pa.shape</span>
+<span class="sd">        (24, 6, 10)</span>
+
+<span class="sd">    This can then be visualized. The pitch angle coverage is not perfect,</span>
+<span class="sd">    but the original shape of the distribution is apparent, and further</span>
+<span class="sd">    analysis can be performed on the regular pitch angle grid::</span>
+
+<span class="sd">        &gt;&gt;&gt; spacepy.plot.simpleSpectrogram(times, pa_bins, flux_by_pa[..., 0],</span>
+<span class="sd">        ...                                cb=False, ylog=False)</span>
+<span class="sd">        &gt;&gt;&gt; matplotlib.pyplot.ylabel(&#39;Pitch angle (deg)&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; matplotlib.pyplot.xlabel(&#39;Time (sec)&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; matplotlib.pyplot.title(&#39;Flux at 1MeV&#39;)</span>
+
+<span class="sd">    .. plot:: pyplots/datamanager_rebin_6.py</span>
+
+<span class="sd">    Or by energy::</span>
+
+<span class="sd">        &gt;&gt;&gt; spacepy.plot.simpleSpectrogram(times, energies, flux_by_pa[:, 2, :],</span>
+<span class="sd">        ...                                cb=False)</span>
+<span class="sd">        &gt;&gt;&gt; matplotlib.pyplot.ylabel(&#39;Energy (MeV)&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; matplotlib.pyplot.xlabel(&#39;Time (sec)&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; matplotlib.pyplot.title(&#39;Flux at 90 degrees&#39;)</span>
+
+<span class="sd">    .. plot:: pyplots/datamanager_rebin_7.py    </span>
+
+<span class="sd">    ``rebin`` can be used for higher dimension data, if the pitch angle</span>
+<span class="sd">    itself depends on energy (e.g. if an energy sweep takes substantial</span>
+<span class="sd">    time), and to propagate uncertainties through the rebinning. It can</span>
+<span class="sd">    also be used to rebin on the time axis, e.g. for transforming time</span>
+<span class="sd">    base.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">makefloat</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span>\
+                <span class="ow">and</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">floating</span><span class="p">)</span>\
+                <span class="k">else</span> <span class="n">numpy</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">numpy</span><span class="o">.</span><span class="n">float_</span><span class="p">)</span>
+    <span class="n">bintype</span> <span class="o">=</span> <span class="n">bintype</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="k">assert</span> <span class="n">bintype</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="s1">&#39;count&#39;</span><span class="p">,</span> <span class="s1">&#39;unc&#39;</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">makefloat</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">bindata</span> <span class="o">=</span> <span class="n">makefloat</span><span class="p">(</span><span class="n">bindata</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">axis</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">axis</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">+</span> <span class="n">axis</span>
+    <span class="n">binnedshape</span> <span class="o">=</span> <span class="n">_find_shape</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">bindata</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">weights</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">weights</span> <span class="o">=</span> <span class="n">makefloat</span><span class="p">(</span><span class="n">weights</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">weights</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="n">bindata</span><span class="o">.</span><span class="n">shape</span>
+        <span class="n">weights</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">weights</span><span class="p">,</span> <span class="n">binnedshape</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">bindatadelta</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">numpy</span><span class="o">.</span><span class="n">isscalar</span><span class="p">(</span><span class="n">bindatadelta</span><span class="p">):</span>
+            <span class="n">bindatadelta</span> <span class="o">=</span> <span class="n">makefloat</span><span class="p">(</span><span class="n">bindatadelta</span><span class="p">)</span>
+            <span class="k">assert</span> <span class="n">bindata</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="n">bindatadelta</span><span class="o">.</span><span class="n">shape</span>
+            <span class="n">bindatadelta</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">bindatadelta</span><span class="p">,</span> <span class="n">binnedshape</span><span class="p">)</span>
+            <span class="n">bindatadelta</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">rollaxis</span><span class="p">(</span>
+                <span class="n">bindatadelta</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+    <span class="c1"># Add axes to match shapes. Move the axis to rebin to the end of the line.</span>
+    <span class="n">bindata</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">bindata</span><span class="p">,</span> <span class="n">binnedshape</span><span class="p">)</span>
+    <span class="n">indata</span> <span class="o">=</span> <span class="n">data</span> <span class="c1"># Holding a reference without transformations</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">rollaxis</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+    <span class="n">bindata</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">rollaxis</span><span class="p">(</span><span class="n">bindata</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
+    <span class="n">nbins</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">bins</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="c1"># Get an array, last two axes of which are a matrix of</span>
+    <span class="c1"># (newbin, oldbin) that is the fraction of oldbin (the input bin) that</span>
+    <span class="c1"># falls within newbin</span>
+    <span class="c1"># Special case if bindata is point: 1 where oldbin is in newbin, else 0</span>
+    <span class="c1"># This involves adding a newbin axis to the old bins, and an oldbin axis</span>
+    <span class="c1"># to the (end of) the bins</span>
+    <span class="n">outbin_shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,)</span> <span class="o">*</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">bindatadelta</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># What bin is every data point of the binned data in</span>
+        <span class="n">whichbin</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">digitize</span><span class="p">(</span><span class="n">bindata</span><span class="p">,</span> <span class="n">bins</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">clip</span><span class="p">:</span>
+            <span class="n">whichbin</span><span class="p">[</span><span class="n">whichbin</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">whichbin</span><span class="p">[</span><span class="n">whichbin</span> <span class="o">&gt;=</span> <span class="n">nbins</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">nbins</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">select</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">require</span><span class="p">(</span>
+            <span class="n">numpy</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">whichbin</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">2</span><span class="p">)</span>
+            <span class="o">==</span> <span class="n">numpy</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span>
+                <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">nbins</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">),</span> <span class="n">outbin_shape</span><span class="p">),</span>
+            <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">bindatamin</span> <span class="o">=</span> <span class="n">bindata</span> <span class="o">-</span> <span class="n">bindatadelta</span>
+        <span class="n">bindatamax</span> <span class="o">=</span> <span class="n">bindata</span> <span class="o">+</span> <span class="n">bindatadelta</span>
+        <span class="k">if</span> <span class="n">clip</span><span class="p">:</span>
+            <span class="n">bindatamin</span><span class="p">[</span><span class="n">bindatamin</span> <span class="o">&lt;</span> <span class="n">bins</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">bins</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">bindatamax</span><span class="p">[</span><span class="n">bindatamax</span> <span class="o">&gt;</span> <span class="n">bins</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="n">bins</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="c1"># The edges of the output and input bins, on a common shape</span>
+        <span class="c1"># that ends with (outputbins, inputbins)</span>
+        <span class="n">bindatamin</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">bindatamin</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">bindatamax</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">bindatamax</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">binmin</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">bins</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">outbin_shape</span><span class="p">)</span>
+        <span class="n">binmax</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">bins</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">outbin_shape</span><span class="p">)</span>
+        <span class="c1"># Overlap of input/output bins, if it exists,  ends when either does</span>
+        <span class="n">overlap_top</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">minimum</span><span class="p">(</span><span class="n">bindatamax</span><span class="p">,</span> <span class="n">binmax</span><span class="p">)</span>
+        <span class="c1"># And it start at the higher of the two</span>
+        <span class="n">overlap_bottom</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">bindatamin</span><span class="p">,</span> <span class="n">binmin</span><span class="p">)</span>
+        <span class="c1"># No overlap if top &lt; bottom</span>
+        <span class="n">overlap</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">overlap_top</span> <span class="o">-</span> <span class="n">overlap_bottom</span> <span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="c1"># Normalize the overlap to fraction of the input bin</span>
+        <span class="n">select</span> <span class="o">=</span> <span class="n">overlap</span> <span class="o">/</span> <span class="p">(</span><span class="n">bindatamax</span> <span class="o">-</span> <span class="n">bindatamin</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">weights</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span> <span class="c1"># Apply weights to the inputs</span>
+        <span class="n">select</span> <span class="o">=</span> <span class="n">select</span> <span class="o">*</span> <span class="n">numpy</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">weights</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">2</span><span class="p">)</span>
+    <span class="c1"># Add a degenerate dimension to the end of data, so now</span>
+    <span class="c1"># the data end in dims (oldbin, newbin)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">counts</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">select</span><span class="p">,</span> <span class="o">~</span><span class="n">idx</span><span class="p">)[</span><span class="o">...</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">bintype</span> <span class="o">==</span> <span class="s1">&#39;count&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">numpy</span><span class="o">.</span><span class="n">rollaxis</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="n">axis</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">bintype</span> <span class="o">==</span> <span class="s1">&#39;unc&#39;</span><span class="p">:</span> <span class="c1"># Square what we&#39;re summing over</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">data</span> <span class="o">**</span> <span class="mi">2</span>
+        <span class="n">select</span> <span class="o">=</span> <span class="n">select</span> <span class="o">**</span> <span class="mi">2</span>
+    <span class="k">if</span> <span class="n">numpy</span><span class="o">.</span><span class="n">may_share_memory</span><span class="p">(</span><span class="n">indata</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span> <span class="c1"># Don&#39;t overwrite input</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">data</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">data_sum</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">select</span><span class="p">,</span> <span class="n">data</span><span class="p">)[</span><span class="o">...</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="n">data_sum</span><span class="p">[</span><span class="n">counts</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">nan</span>
+    <span class="n">counts</span><span class="p">[</span><span class="n">counts</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># Suppress error when nan/0</span>
+    <span class="k">if</span> <span class="n">bintype</span> <span class="o">==</span> <span class="s1">&#39;unc&#39;</span><span class="p">:</span>
+        <span class="n">data_sum</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">data_sum</span><span class="p">)</span>
+    <span class="n">avg</span> <span class="o">=</span> <span class="n">data_sum</span> <span class="o">/</span> <span class="n">counts</span>
+    <span class="c1"># Put the binned axis back in place</span>
+    <span class="n">avg</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">rollaxis</span><span class="p">(</span><span class="n">avg</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="n">axis</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">avg</span></div>
+</pre></div>
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../../search.html">search</a>|&nbsp;</li>
+       <li><a href="../../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../spacepy.html" >spacepy</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.datamanager</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

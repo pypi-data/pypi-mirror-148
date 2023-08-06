@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.plot.spectrogram.simpleSpectrogram &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="spacepy.plot.utils" href="../spacepy.plot.utils.html" />
+    <link rel="prev" title="spacepy.plot.spectrogram.Spectrogram" href="spacepy.plot.spectrogram.Spectrogram.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../index.html"><img src="../../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../spacepy.plot.utils.html" title="spacepy.plot.utils"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.plot.spectrogram.Spectrogram.html" title="spacepy.plot.spectrogram.Spectrogram"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../../search.html">search</a>|&nbsp;</li>
+       <li><a href="../../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../../plot.html" >plot - Plot, various specialized plotting functions and associated utilities</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../spacepy.plot.spectrogram.html" accesskey="U">spacepy.plot.spectrogram</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.plot.spectrogram.simpleSpectrogram</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="spacepy.plot.spectrogram.Spectrogram.html"
+                          title="previous chapter">spacepy.plot.spectrogram.Spectrogram</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../spacepy.plot.utils.html"
+                          title="next chapter">spacepy.plot.utils</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/autosummary/autosummary/spacepy.plot.spectrogram.simpleSpectrogram.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-plot-spectrogram-simplespectrogram">
+<h1>spacepy.plot.spectrogram.simpleSpectrogram<a class="headerlink" href="#spacepy-plot-spectrogram-simplespectrogram" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.plot.spectrogram.simpleSpectrogram">
+<span class="sig-prename descclassname"><span class="pre">spacepy.plot.spectrogram.</span></span><span class="sig-name descname"><span class="pre">simpleSpectrogram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/spacepy/plot/spectrogram.html#simpleSpectrogram"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.plot.spectrogram.simpleSpectrogram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot a spectrogram given Z or X,Y,Z. This is a wrapper around pcolormesh()
+that can handle Y being a 2d array of time dependent bins. Like in the
+Van Allen Probes HOPE and MagEIS data files.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>*args</strong><span class="classifier">1 or 3 arraylike</span></dt><dd><p>Call Signatures:</p>
+<p>simpleSpectrogram(Z, <a href="#id1"><span class="problematic" id="id2">**</span></a>kwargs)
+simpleSpectrogram(X, Y, Z, <a href="#id3"><span class="problematic" id="id4">**</span></a>kwargs)</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>ax</strong><span class="classifier">matplotlib.axes._subplots.AxesSubplot</span></dt><dd><p>Matplotlib axes object that the plot is on</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Other Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>zlog</strong><span class="classifier">bool</span></dt><dd><p>Plot the color with a log colorbar (default: True)</p>
+</dd>
+<dt><strong>ylog</strong><span class="classifier">bool</span></dt><dd><p>Plot the Y axis with a log scale (default: True)</p>
+</dd>
+<dt><strong>alpha</strong><span class="classifier">scalar (0-1)</span></dt><dd><p>The alpha blending value (default: None)</p>
+</dd>
+<dt><strong>cmap</strong><span class="classifier">string</span></dt><dd><p>The name of the colormap to use (default: system default)</p>
+</dd>
+<dt><strong>vmin</strong><span class="classifier">float</span></dt><dd><p>Minimum color value (default: Z.min(), if log non-zero min)</p>
+</dd>
+<dt><strong>vmax</strong><span class="classifier">float</span></dt><dd><p>Maximum color value (default: Z.max())</p>
+</dd>
+<dt><strong>ax</strong><span class="classifier">matplotlib.axes</span></dt><dd><p>Axes to plot the spectrogram on (default: None - new axes)</p>
+</dd>
+<dt><strong>cb</strong><span class="classifier">bool</span></dt><dd><p>Plot a colorbar (default: True)</p>
+</dd>
+<dt><strong>cbtitle</strong><span class="classifier">string</span></dt><dd><p>Label to go on the colorbar (default: None)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../spacepy.plot.utils.html" title="spacepy.plot.utils"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.plot.spectrogram.Spectrogram.html" title="spacepy.plot.spectrogram.Spectrogram"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../../search.html">search</a>|&nbsp;</li>
+       <li><a href="../../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../../plot.html" >plot - Plot, various specialized plotting functions and associated utilities</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../spacepy.plot.spectrogram.html" >spacepy.plot.spectrogram</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.plot.spectrogram.simpleSpectrogram</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

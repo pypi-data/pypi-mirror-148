@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.coordinates.quaternionMultiply &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy.coordinates.quaternionConjugate" href="spacepy.coordinates.quaternionConjugate.html" />
+    <link rel="prev" title="spacepy.coordinates.quaternionNormalize" href="spacepy.coordinates.quaternionNormalize.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.coordinates.quaternionConjugate.html" title="spacepy.coordinates.quaternionConjugate"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.coordinates.quaternionNormalize.html" title="spacepy.coordinates.quaternionNormalize"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../coordinates.html" accesskey="U">coordinates - module for coordinate transforms</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.coordinates.quaternionMultiply</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="spacepy.coordinates.quaternionNormalize.html"
+                          title="previous chapter">spacepy.coordinates.quaternionNormalize</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.coordinates.quaternionConjugate.html"
+                          title="next chapter">spacepy.coordinates.quaternionConjugate</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.coordinates.quaternionMultiply.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-coordinates-quaternionmultiply">
+<h1>spacepy.coordinates.quaternionMultiply<a class="headerlink" href="#spacepy-coordinates-quaternionmultiply" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.coordinates.quaternionMultiply">
+<span class="sig-prename descclassname"><span class="pre">spacepy.coordinates.</span></span><span class="sig-name descname"><span class="pre">quaternionMultiply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Qin1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Qin2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scalarPos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'last'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/coordinates.html#quaternionMultiply"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.coordinates.quaternionMultiply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given quaternions, return the product, i.e. Qin1*Qin2</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>Qin1</strong><span class="classifier">array_like</span></dt><dd><p>input quaternion, first position</p>
+</dd>
+<dt><strong>Qin2</strong><span class="classifier">array-like</span></dt><dd><p>input quaternion, second position</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">array_like</span></dt><dd><p>quaternion product</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.coordinates</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">vecX</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="c1">#shared X-axis</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">vecZ</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="c1">#unshared, but similar, Z-axis</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">quat_eci_to_gsm</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.05395384</span><span class="p">,</span>  <span class="mf">0.07589845</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.15172533</span><span class="p">,</span>  <span class="mf">0.98402634</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">quat_eci_to_gse</span> <span class="o">=</span> <span class="p">[</span> <span class="mf">0.20016056</span><span class="p">,</span>  <span class="mf">0.03445775</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.16611386</span><span class="p">,</span>  <span class="mf">0.96496352</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">quat_gsm_to_eci</span> <span class="o">=</span> <span class="n">spacepy</span><span class="o">.</span><span class="n">coordinates</span><span class="o">.</span><span class="n">quaternionConjugate</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">quat_eci_to_gsm</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">quat_gse_to_gsm</span> <span class="o">=</span> <span class="n">spacepy</span><span class="o">.</span><span class="n">coordinates</span><span class="o">.</span><span class="n">quaternionMultiply</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">quat_gsm_to_eci</span><span class="p">,</span> <span class="n">quat_eci_to_gse</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">spacepy</span><span class="o">.</span><span class="n">coordinates</span><span class="o">.</span><span class="n">quaternionRotateVector</span><span class="p">(</span><span class="n">quat_gse_to_gsm</span><span class="p">,</span> <span class="n">vecX</span><span class="p">)</span>
+<span class="go">array([  1.00000000e+00,   1.06536725e-09,  -1.16892107e-08])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">spacepy</span><span class="o">.</span><span class="n">coordinates</span><span class="o">.</span><span class="n">quaternionRotateVector</span><span class="p">(</span><span class="n">quat_gse_to_gsm</span><span class="p">,</span> <span class="n">vecZ</span><span class="p">)</span>
+<span class="go">array([  1.06802834e-08,  -4.95669027e-01,   8.68511494e-01])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.coordinates.quaternionConjugate.html" title="spacepy.coordinates.quaternionConjugate"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.coordinates.quaternionNormalize.html" title="spacepy.coordinates.quaternionNormalize"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../coordinates.html" >coordinates - module for coordinate transforms</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.coordinates.quaternionMultiply</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

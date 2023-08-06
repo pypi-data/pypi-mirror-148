@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.poppy.boots_ci &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy.poppy.value_percentile" href="spacepy.poppy.value_percentile.html" />
+    <link rel="prev" title="spacepy.poppy.plot_two_ppro" href="spacepy.poppy.plot_two_ppro.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.poppy.value_percentile.html" title="spacepy.poppy.value_percentile"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.poppy.plot_two_ppro.html" title="spacepy.poppy.plot_two_ppro"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../poppy.html" accesskey="U">PoPPy - Point Processes in Python</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.poppy.boots_ci</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="spacepy.poppy.plot_two_ppro.html"
+                          title="previous chapter">spacepy.poppy.plot_two_ppro</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.poppy.value_percentile.html"
+                          title="next chapter">spacepy.poppy.value_percentile</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.poppy.boots_ci.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-poppy-boots-ci">
+<h1>spacepy.poppy.boots_ci<a class="headerlink" href="#spacepy-poppy-boots-ci" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.poppy.boots_ci">
+<span class="sig-prename descclassname"><span class="pre">spacepy.poppy.</span></span><span class="sig-name descname"><span class="pre">boots_ci</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">usepy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nretvals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/poppy.html#boots_ci"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.poppy.boots_ci" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct bootstrap confidence interval</p>
+<p>The bootstrap is a statistical tool that uses multiple samples derived from
+the original data (called surrogates) to estimate a parameter of the
+population from which the sample was drawn. This assumes that the sample is
+randomly drawn and hence is representative of the underlying distribution.
+The benefit of the bootstrap is that it is non-parametric and can be
+applied in situations where there is reasonable doubt about the
+characteristics of the underlying distribution. This routine uses the boot-
+strap for its most common application - the estimation of confidence
+intervals.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>data</strong><span class="classifier">array like</span></dt><dd><p>data to bootstrap</p>
+</dd>
+<dt><strong>n</strong><span class="classifier">int</span></dt><dd><p>number of surrogate series to select, i.e. number of bootstrap iterations.</p>
+</dd>
+<dt><strong>inter</strong><span class="classifier">numerical</span></dt><dd><p>desired percentage confidence interval</p>
+</dd>
+<dt><strong>func</strong><span class="classifier">callable</span></dt><dd><p>Function to apply to each surrogate series</p>
+</dd>
+<dt><strong>sample_size</strong><span class="classifier">int</span></dt><dd><p>number of samples in the surrogate series, default
+length of L{data}. This will change the statistical
+properties of the bootstrap and should only be used
+for good reason!</p>
+</dd>
+<dt><strong>seed</strong><span class="classifier">int</span></dt><dd><p>Optional seed for the random number generator. If not
+specified, numpy generator will not be reseeded;
+C generator will be seeded from the clock.</p>
+</dd>
+<dt><strong>target</strong><span class="classifier">same as data</span></dt><dd><p>a ‘target’ value. If specified, will also calculate
+percentage confidence of being at or above this value.</p>
+</dd>
+<dt><strong>nretvals</strong><span class="classifier">int</span></dt><dd><p>number of return values from input function</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">sequence of float</span></dt><dd><p>inter percent confidence interval on value derived from
+func applied to the population sampled by data.
+If target is specified, also the percentage confidence of
+being above that value.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">lognormal</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="mf">5.1</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">3000</span><span class="p">),</span> <span class="mf">4000.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">myfunc</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">numpy</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ci_low</span><span class="p">,</span> <span class="n">ci_high</span> <span class="o">=</span> <span class="n">poppy</span><span class="o">.</span><span class="n">boots_ci</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="n">myfunc</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ci_low</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">ci_high</span>
+<span class="go">(163.96354196633686, 165.2393331896551, 166.60491435416566) iter. 1</span>
+<span class="gp">... </span><span class="n">repeat</span>
+<span class="go">(162.50379144492726, 164.15218265100233, 165.42840588032755) iter. 2</span>
+</pre></div>
+</div>
+<p>For comparison</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">lognormal</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="mf">5.1</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">90000</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">numpy</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="go">163.83888237895815</span>
+</pre></div>
+</div>
+<p>Note that the true value of the desired quantity may lie outside the
+95% confidence interval one time in 20 realizations. This occurred
+for the first iteration here.</p>
+<p>For the lognormal distribution, the median is found exactly by taking
+the exponential of the “mean” parameter. Thus here, the theoretical
+median is 164.022 (6 s.f.) and this is well captured by the above
+bootstrap confidence interval.</p>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.poppy.value_percentile.html" title="spacepy.poppy.value_percentile"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.poppy.plot_two_ppro.html" title="spacepy.poppy.plot_two_ppro"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../poppy.html" >PoPPy - Point Processes in Python</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.poppy.boots_ci</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

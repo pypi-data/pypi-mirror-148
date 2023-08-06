@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.plot.add_arrows &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy.plot.carrington" href="spacepy.plot.carrington.html" />
+    <link rel="prev" title="spacepy.plot.timestamp" href="spacepy.plot.timestamp.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.plot.carrington.html" title="spacepy.plot.carrington"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.plot.timestamp.html" title="spacepy.plot.timestamp"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../plot.html" accesskey="U">plot - Plot, various specialized plotting functions and associated utilities</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.plot.add_arrows</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="spacepy.plot.timestamp.html"
+                          title="previous chapter">spacepy.plot.timestamp</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.plot.carrington.html"
+                          title="next chapter">spacepy.plot.carrington</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.plot.add_arrows.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-plot-add-arrows">
+<h1>spacepy.plot.add_arrows<a class="headerlink" href="#spacepy-plot-add-arrows" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.plot.add_arrows">
+<span class="sig-prename descclassname"><span class="pre">spacepy.plot.</span></span><span class="sig-name descname"><span class="pre">add_arrows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lines</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">12</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'-&gt;'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dorestrict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">positions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/plot/utils.html#add_arrows"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.plot.add_arrows" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add directional arrows along a plotted line.  Useful for plotting flow
+lines, magnetic field lines, or other directional traces.</p>
+<p><em>lines</em> can be either <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D" title="(in Matplotlib v3.5.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Line2D</span></code></a>, a list or tuple
+of lines, or a <a class="reference external" href="https://matplotlib.org/stable/api/collections_api.html#matplotlib.collections.LineCollection" title="(in Matplotlib v3.5.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">LineCollection</span></code></a> object.</p>
+<p>For each line, arrows will be added using 
+<a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.annotate.html#matplotlib.axes.Axes.annotate" title="(in Matplotlib v3.5.1)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">annotate()</span></code></a>.  Arrows will be spread evenly
+over the line using the number of points in the line as the metric for
+spacing.  For example, if a line has 120 points and 3 arrows are requested,
+an arrow will be added at point number 30, 60, and 90.
+Arrow color and alpha is obtained from the parent line.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>lines</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D" title="(in Matplotlib v3.5.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Line2D</span></code></a>, a list/tuple, or <a class="reference external" href="https://matplotlib.org/stable/api/collections_api.html#matplotlib.collections.LineCollection" title="(in Matplotlib v3.5.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">LineCollection</span></code></a></span></dt><dd><p>A single line or group of lines on which to place the arrows.
+Arrows inherent color and transparency (alpha) from the line on which
+they are placed.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>None</dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-odd">Other Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>n</strong><span class="classifier">integer</span></dt><dd><p>Number of arrows to add to each line; defaults to 3.</p>
+</dd>
+<dt><strong>size</strong><span class="classifier">integer</span></dt><dd><p>The size of the arrows in points.  Defaults to 12.</p>
+</dd>
+<dt><strong>style</strong><span class="classifier">string</span></dt><dd><p>Set the style of the arrow via <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.patches.ArrowStyle.html#matplotlib.patches.ArrowStyle" title="(in Matplotlib v3.5.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ArrowStyle</span></code></a>,
+e.g. ‘-&gt;’ (default) or ‘-<a href="#id1"><span class="problematic" id="id2">|</span></a>&gt;’</p>
+</dd>
+<dt><strong>dorestrict</strong><span class="classifier">boolean</span></dt><dd><p>If True (default), only points along the line within the current
+limits of the axes will be considered when distributing arrows.</p>
+</dd>
+<dt><strong>positions</strong><span class="classifier">Nx2 array</span></dt><dd><p>N must be the number of lines provided via the argument <em>lines</em>.
+If provided, only one arrow will be placed per line.
+<em>positions</em> sets the explicit location of each arrow for each line as
+X-Y space in Axes coordinates.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The algorithm works by dividing the line in to <em>n*+1 segments and 
+placing an arrow between each segment, endpoints excluded.  Arrows span
+the shortest distance possible, i.e., two adjacent points along a line.
+For lines that are long spatially but sparse in points, the arrows will
+have long tails that may extend beyond axes bounds.  For explicit positions,
+the arrow is placed at the point on the curve closest to that position
+and the exact position is not always attainable.  A maximum number of arrows
+equal to one-half of the number of points in a line per line will be
+created, so not all lines will receive *n</em> arrows.</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">.01</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">line</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">add_arrows</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;-|&gt;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.plot.carrington.html" title="spacepy.plot.carrington"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.plot.timestamp.html" title="spacepy.plot.timestamp"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../plot.html" >plot - Plot, various specialized plotting functions and associated utilities</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.plot.add_arrows</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.poppy.plot_two_ppro &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy.poppy.boots_ci" href="spacepy.poppy.boots_ci.html" />
+    <link rel="prev" title="spacepy.poppy.PPro" href="spacepy.poppy.PPro.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.poppy.boots_ci.html" title="spacepy.poppy.boots_ci"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.poppy.PPro.html" title="spacepy.poppy.PPro"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../poppy.html" accesskey="U">PoPPy - Point Processes in Python</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.poppy.plot_two_ppro</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="spacepy.poppy.PPro.html"
+                          title="previous chapter">spacepy.poppy.PPro</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.poppy.boots_ci.html"
+                          title="next chapter">spacepy.poppy.boots_ci</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.poppy.plot_two_ppro.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-poppy-plot-two-ppro">
+<h1>spacepy.poppy.plot_two_ppro<a class="headerlink" href="#spacepy-poppy-plot-two-ppro" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.poppy.plot_two_ppro">
+<span class="sig-prename descclassname"><span class="pre">spacepy.poppy.</span></span><span class="sig-name descname"><span class="pre">plot_two_ppro</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pprodata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pproref</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xscale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">80</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[None,</span> <span class="pre">None]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xticks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yticks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/poppy.html#plot_two_ppro"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.poppy.plot_two_ppro" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overplots two PPro objects</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>pprodata</strong><span class="classifier">PPro</span></dt><dd><p>first point process to plot (in blue)</p>
+</dd>
+<dt><strong>pproref</strong><span class="classifier">PPro</span></dt><dd><p>second process to plot (in red)</p>
+</dd>
+<dt><strong>ratio</strong><span class="classifier">float</span></dt><dd><p>multiply L{pprodata} by this ratio before plotting,
+useful for comparing processes of different magnitude</p>
+</dd>
+<dt><strong>norm</strong><span class="classifier">boolean</span></dt><dd><p>normalize everything to L{pproref}, i.e. the association
+number for L{pproref} will always plot as 1.</p>
+</dd>
+<dt><strong>title</strong><span class="classifier">string</span></dt><dd><p>title to put on the plot</p>
+</dd>
+<dt><strong>xscale</strong><span class="classifier">float</span></dt><dd><p>scale x-axis by this factor (e.g. 60.0 to convert
+seconds to minutes)</p>
+</dd>
+<dt><strong>figsize</strong></dt><dd><p>passed through to matplotlib.pyplot.figure</p>
+</dd>
+<dt><strong>dpi</strong><span class="classifier">int</span></dt><dd><p>passed through to matplotlib.pyplot.figure</p>
+</dd>
+<dt><strong>ylim</strong><span class="classifier">list</span></dt><dd><p>[minimum, maximum] values of y for the axis</p>
+</dd>
+<dt><strong>log</strong><span class="classifier">bollean</span></dt><dd><p>True for a log plot</p>
+</dd>
+<dt><strong>xticks</strong><span class="classifier">sequence or float</span></dt><dd><p>if provided, a list of tickmarks for the X axis</p>
+</dd>
+<dt><strong>yticks</strong><span class="classifier">sequance or float</span></dt><dd><p>if provided, a list of tickmarks for the Y axis</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.poppy.boots_ci.html" title="spacepy.poppy.boots_ci"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.poppy.PPro.html" title="spacepy.poppy.PPro"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../poppy.html" >PoPPy - Point Processes in Python</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.poppy.plot_two_ppro</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

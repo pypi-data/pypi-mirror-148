@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.empiricals.getPlasmaPause &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy.empiricals.getSolarProtonSpectra" href="spacepy.empiricals.getSolarProtonSpectra.html" />
+    <link rel="prev" title="spacepy.empiricals.getMPstandoff" href="spacepy.empiricals.getMPstandoff.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.empiricals.getSolarProtonSpectra.html" title="spacepy.empiricals.getSolarProtonSpectra"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.empiricals.getMPstandoff.html" title="spacepy.empiricals.getMPstandoff"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../empiricals.html" accesskey="U">empiricals - module with heliospheric empirical modules</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.empiricals.getPlasmaPause</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="spacepy.empiricals.getMPstandoff.html"
+                          title="previous chapter">spacepy.empiricals.getMPstandoff</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.empiricals.getSolarProtonSpectra.html"
+                          title="next chapter">spacepy.empiricals.getSolarProtonSpectra</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.empiricals.getPlasmaPause.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-empiricals-getplasmapause">
+<h1>spacepy.empiricals.getPlasmaPause<a class="headerlink" href="#spacepy-empiricals-getplasmapause" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.empiricals.getPlasmaPause">
+<span class="sig-prename descclassname"><span class="pre">spacepy.empiricals.</span></span><span class="sig-name descname"><span class="pre">getPlasmaPause</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'M2002'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">LT</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omnivals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/empiricals.html#getPlasmaPause"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.empiricals.getPlasmaPause" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plasmapause location model(s)</p>
+<p>CA1992 – Carpenter, D. L., and R. R. Anderson, An ISEE/whistler
+model of equatorial electron density in the magnetosphere,
+J. Geophys. Res., 97, 1097, 1992.
+M2002 – Moldwin, M. B., L. Downward, H. K. Rassoul, R. Amin,
+and R. R. Anderson, A new model of the location of the plasmapause:
+CRRES results, J. Geophys. Res., 107(A11), 1339,
+doi:10.1029/2001JA009211, 2002.
+RT1970 – Rycroft, M. J., and J. O. Thomas, The magnetospheric
+plasmapause and the electron density trough at the alouette i
+orbit, Planetary and Space Science, 18(1), 65-80, 1970</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>ticks</strong><span class="classifier">spacepy.time.Ticktock</span></dt><dd><p>TickTock object of desired times</p>
+</dd>
+<dt><strong>Lpp_model</strong><span class="classifier">string, optional</span></dt><dd><p>‘CA1992’ or ‘M2002’ (default)
+CA1992 returns the Carpenter and Anderson model,
+M2002 returns the Moldwin et al. model</p>
+</dd>
+<dt><strong>LT</strong><span class="classifier">int, float</span></dt><dd><p>requested local time sector, ‘all’ is valid option</p>
+</dd>
+<dt><strong>omnivals</strong><span class="classifier">spacepy.datamodel.SpaceData, dict</span></dt><dd><p>dict-like containing UTC (datetimes) and Kp keys</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">float</span></dt><dd><p>Plasmapause radius in Earth radii</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Warns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>RuntimeWarning</dt><dd><p>If the CA1992 model is called with LT as it is not implemented</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.time</span> <span class="k">as</span> <span class="nn">spt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.empiricals</span> <span class="k">as</span> <span class="nn">emp</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ticks</span> <span class="o">=</span> <span class="n">spt</span><span class="o">.</span><span class="n">tickrange</span><span class="p">(</span><span class="s1">&#39;2002-01-01T12:00:00&#39;</span><span class="p">,</span><span class="s1">&#39;2002-01-04T00:00:00&#39;</span><span class="p">,</span><span class="mf">.25</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">emp</span><span class="o">.</span><span class="n">getPlasmaPause</span><span class="p">(</span><span class="n">ticks</span><span class="p">)</span>
+<span class="go">array([ 6.42140002,  6.42140002,  6.42140002,  6.42140002,  6.42140002,</span>
+<span class="go">    6.42140002,  6.42140002,  6.26859998,  5.772     ,  5.6574    ,</span>
+<span class="go">    5.6574    ])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.empiricals.getSolarProtonSpectra.html" title="spacepy.empiricals.getSolarProtonSpectra"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.empiricals.getMPstandoff.html" title="spacepy.empiricals.getMPstandoff"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../empiricals.html" >empiricals - module with heliospheric empirical modules</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.empiricals.getPlasmaPause</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

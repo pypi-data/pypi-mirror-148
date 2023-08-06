@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy_testing.assertDoesntWarn &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy_testing.add_build_to_path" href="spacepy_testing.add_build_to_path.html" />
+    <link rel="prev" title="spacepy_testing.assertWarns" href="spacepy_testing.assertWarns.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy_testing.add_build_to_path.html" title="spacepy_testing.add_build_to_path"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spacepy_testing.assertWarns.html" title="spacepy_testing.assertWarns"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../tests.html" accesskey="U">Unit tests</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy_testing.assertDoesntWarn</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="spacepy_testing.assertWarns.html"
+                          title="previous chapter">spacepy_testing.assertWarns</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy_testing.add_build_to_path.html"
+                          title="next chapter">spacepy_testing.add_build_to_path</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy_testing.assertDoesntWarn.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-testing-assertdoesntwarn">
+<h1>spacepy_testing.assertDoesntWarn<a class="headerlink" href="#spacepy-testing-assertdoesntwarn" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="spacepy_testing.assertDoesntWarn">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">spacepy_testing.</span></span><span class="sig-name descname"><span class="pre">assertDoesntWarn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action='always'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category=&lt;class</span> <span class="pre">'Warning'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lineno=0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy_testing.html#assertDoesntWarn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy_testing.assertDoesntWarn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that a warning is not raised.</p>
+<p>Use as a context manager.  Code within the context manager block
+will be executed and, on exit from the block, all warnings issued
+during execution of the block will be checked to see if the warning
+specified was issued.</p>
+<p><a class="reference internal" href="spacepy_testing.assertWarns.html#spacepy_testing.assertWarns" title="spacepy_testing.assertWarns"><code class="xref py py-class docutils literal notranslate"><span class="pre">assertWarns</span></code></a> requires that the matched warning be issued <em>exactly
+once</em> within the context manager, or the test function will fail (whether
+the warning was issued not at all, or multiple times).
+<a class="reference internal" href="#spacepy_testing.assertDoesntWarn" title="spacepy_testing.assertDoesntWarn"><code class="xref py py-class docutils literal notranslate"><span class="pre">assertDoesntWarn</span></code></a> requires that matched warnings are not issued
+at all.</p>
+<p>All other warnings are issued as normal, although the warning will not
+be shown (e.g. printed) until the exit of the context manager. If
+code within the context manager issues an exception, the test for
+warnings will be skipped (test failure will not be issued), and all
+warnings shown before the exception propagates up the stack.</p>
+<p>The parameters determining which warning to match are for the code
+referenced in the warning, not necessarily the code being warned.
+E.g. if code calls a deprecated function, and the deprecated function
+issues a <code class="docutils literal notranslate"><span class="pre">DeprecationWarning</span></code>, what is matched may be the code in the
+deprecated function, not the caller; see the <code class="docutils literal notranslate"><span class="pre">stacklevel</span></code> parameter
+to <a class="reference external" href="https://docs.python.org/3/library/warnings.html#warnings.warn" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">warn()</span></code></a> for how this may be changed.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>test</strong><span class="classifier">unittest.TestCase</span></dt><dd><p>The test case from which this is being called, almost always
+<code class="docutils literal notranslate"><span class="pre">self</span></code> (so the <a class="reference external" href="https://docs.python.org/3/library/unittest.html#unittest.TestCase.fail" title="(in Python v3.10)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fail()</span></code></a> method is available).</p>
+</dd>
+<dt><strong>action</strong><span class="classifier">{‘always’, <code class="docutils literal notranslate"><span class="pre">None</span></code>, ‘default’, ‘error’, ‘ignore’, ‘module’,</span></dt><dd><blockquote>
+<div><p>‘once’}</p>
+</div></blockquote>
+<p>Unless <code class="docutils literal notranslate"><span class="pre">None</span></code>, a warning filter matching the specified warning will
+be added to the filter before executing the block. ‘always’
+(default) is generally recommended to make sure the tested
+warning will be raised. If ‘always’ is specified, on Python 2 the log
+of previously-issued warnings will be edited to work around a
+<a class="reference external" href="https://stackoverflow.com/questions/56821539/">Python bug</a>. In this
+case using <code class="docutils literal notranslate"><span class="pre">module</span></code> is strongly recommended to minimize the impact
+of this editing. This filter will be removed on completion of the
+block.</p>
+</dd>
+<dt><strong>message</strong><span class="classifier">str, optional</span></dt><dd><p>Regular expression to match the start of warning message. Default
+is to match all.</p>
+</dd>
+<dt><strong>category</strong><span class="classifier">type, optional</span></dt><dd><p>Matches if the warning is an instance of this type or a subclass.
+Default is the base <cite>Warning</cite> type (matches all warnings).</p>
+</dd>
+<dt><strong>module</strong><span class="classifier">str, optional</span></dt><dd><p>Regular expression to match the start of the name of the module
+from which the warning is issued. This is primarily used in setting
+up the warnings filter; matching the module to determine if the
+desired warning was issued is based on filename and may not work
+for modules built into the interpreter. Default is to match all.</p>
+</dd>
+<dt><strong>lineno</strong><span class="classifier">int, optional</span></dt><dd><p>Line number from which the warning was issued. This is rarely
+useful since it will change from version to version. Default (0) will
+match all lines.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference external" href="https://docs.python.org/3/library/warnings.html#warnings.filterwarnings" title="(in Python v3.10)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">warnings.filterwarnings</span></code></a></dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">action</span></code>, <code class="docutils literal notranslate"><span class="pre">message</span></code>, <code class="docutils literal notranslate"><span class="pre">category</span></code>, <code class="docutils literal notranslate"><span class="pre">module</span></code>, and <code class="docutils literal notranslate"><span class="pre">lineno</span></code> parameters are based on the filter specifications.</p>
+</dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<p>This class is primarily useful as part of a test suite, and cannot
+be easily demonstrated through interactive examples. See the tests
+of it in <code class="docutils literal notranslate"><span class="pre">test_testing.py</span></code> and its usage throughout the test suite.</p>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy_testing.add_build_to_path.html" title="spacepy_testing.add_build_to_path"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spacepy_testing.assertWarns.html" title="spacepy_testing.assertWarns"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../tests.html" >Unit tests</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy_testing.assertDoesntWarn</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.empiricals.getLmax &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy.empiricals.getMagnetopause" href="spacepy.empiricals.getMagnetopause.html" />
+    <link rel="prev" title="spacepy.empiricals.getExpectedSWTemp" href="spacepy.empiricals.getExpectedSWTemp.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.empiricals.getMagnetopause.html" title="spacepy.empiricals.getMagnetopause"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.empiricals.getExpectedSWTemp.html" title="spacepy.empiricals.getExpectedSWTemp"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../empiricals.html" accesskey="U">empiricals - module with heliospheric empirical modules</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.empiricals.getLmax</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="spacepy.empiricals.getExpectedSWTemp.html"
+                          title="previous chapter">spacepy.empiricals.getExpectedSWTemp</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.empiricals.getMagnetopause.html"
+                          title="next chapter">spacepy.empiricals.getMagnetopause</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.empiricals.getLmax.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-empiricals-getlmax">
+<h1>spacepy.empiricals.getLmax<a class="headerlink" href="#spacepy-empiricals-getlmax" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.empiricals.getLmax">
+<span class="sig-prename descclassname"><span class="pre">spacepy.empiricals.</span></span><span class="sig-name descname"><span class="pre">getLmax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'JKemp'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dbase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'QDhourly'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/empiricals.html#getLmax"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.empiricals.getLmax" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculate a simple empirical model for Lmax - last closed drift-shell</p>
+<p>Uses the parametrized Lmax from:
+Koller and Morley (2010)
+‘Magnetopause shadowing effects for radiation belt models during high-speed solar wind streams’
+American Geophysical Union, Fall Meeting 2010, abstract #SM13A-1787</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>ticks</strong><span class="classifier">spacepy.time.Ticktock</span></dt><dd><p>Ticktock object of desired times</p>
+</dd>
+<dt><strong>model</strong><span class="classifier">string, optional</span></dt><dd><p>‘JKemp’ (default - empirical model of J. Koller)</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">np.ndarray</span></dt><dd><p>Lmax - L* of last closed drift shell</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">spacepy.empiricals</span> <span class="kn">import</span> <span class="n">getLmax</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.time</span> <span class="k">as</span> <span class="nn">st</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">datetime</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ticks</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">tickrange</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">deltadays</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">array([ 7.4928412,  8.3585632,  8.6463423])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.empiricals.getMagnetopause.html" title="spacepy.empiricals.getMagnetopause"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.empiricals.getExpectedSWTemp.html" title="spacepy.empiricals.getExpectedSWTemp"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../empiricals.html" >empiricals - module with heliospheric empirical modules</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.empiricals.getLmax</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

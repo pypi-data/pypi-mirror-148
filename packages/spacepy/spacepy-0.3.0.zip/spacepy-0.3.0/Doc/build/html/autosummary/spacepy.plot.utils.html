@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.plot.utils &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy.plot.utils.EventClicker" href="spacepy.plot.utils.EventClicker.html" />
+    <link rel="prev" title="spacepy.plot.spectrogram.simpleSpectrogram" href="autosummary/spacepy.plot.spectrogram.simpleSpectrogram.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.plot.utils.EventClicker.html" title="spacepy.plot.utils.EventClicker"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="autosummary/spacepy.plot.spectrogram.simpleSpectrogram.html" title="spacepy.plot.spectrogram.simpleSpectrogram"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../plot.html" accesskey="U">plot - Plot, various specialized plotting functions and associated utilities</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.plot.utils</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">spacepy.plot.utils</a><ul>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="autosummary/spacepy.plot.spectrogram.simpleSpectrogram.html"
+                          title="previous chapter">spacepy.plot.spectrogram.simpleSpectrogram</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.plot.utils.EventClicker.html"
+                          title="next chapter">spacepy.plot.utils.EventClicker</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.plot.utils.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-spacepy.plot.utils">
+<span id="spacepy-plot-utils"></span><h1>spacepy.plot.utils<a class="headerlink" href="#module-spacepy.plot.utils" title="Permalink to this headline">¶</a></h1>
+<p>Utility routines for plotting and related activities</p>
+<p>Authors: Jonathan Niehof, Steven Morley, Daniel Welling</p>
+<p>Institution: Los Alamos National Laboratory</p>
+<p>Contact: <a class="reference external" href="mailto:jniehof&#37;&#52;&#48;lanl&#46;gov">jniehof<span>&#64;</span>lanl<span>&#46;</span>gov</a></p>
+<p>Copyright 2012-2014 Los Alamos National Security, LLC.</p>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="spacepy.plot.utils.EventClicker.html#spacepy.plot.utils.EventClicker" title="spacepy.plot.utils.EventClicker"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EventClicker</span></code></a>([ax, n_phases, interval, ...])</p></td>
+<td><p>Presents a provided figure (normally a time series) and provides an interface to mark events shown in the plot.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="spacepy.plot.utils.add_logo.html#spacepy.plot.utils.add_logo" title="spacepy.plot.utils.add_logo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_logo</span></code></a>(img[, fig, pos, margin])</p></td>
+<td><p>Add an image (logo) to one corner of a plot.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="spacepy.plot.utils.annotate_xaxis.html#spacepy.plot.utils.annotate_xaxis" title="spacepy.plot.utils.annotate_xaxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">annotate_xaxis</span></code></a>(txt[, ax])</p></td>
+<td><p>Write text in-line and to the right of the x-axis tick labels</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="spacepy.plot.utils.applySmartTimeTicks.html#spacepy.plot.utils.applySmartTimeTicks" title="spacepy.plot.utils.applySmartTimeTicks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">applySmartTimeTicks</span></code></a>(ax, time[, dolimit, dolabel])</p></td>
+<td><p>Given an axis <em>ax</em> and a list/array of datetime objects, <em>time</em>, use the smartTimeTicks function to build smart time ticks and then immediately apply them to the given axis.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="spacepy.plot.utils.collapse_vertical.html#spacepy.plot.utils.collapse_vertical" title="spacepy.plot.utils.collapse_vertical"><code class="xref py py-obj docutils literal notranslate"><span class="pre">collapse_vertical</span></code></a>(combine[, others, leave_axis])</p></td>
+<td><p>Collapse the vertical spacing between two or more subplots.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="spacepy.plot.utils.printfig.html#spacepy.plot.utils.printfig" title="spacepy.plot.utils.printfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">printfig</span></code></a>(fignum[, saveonly, pngonly, clean, ...])</p></td>
+<td><p>save current figure to file and call lpr (print).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="spacepy.plot.utils.set_target.html#spacepy.plot.utils.set_target" title="spacepy.plot.utils.set_target"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_target</span></code></a>(target[, figsize, loc, polar])</p></td>
+<td><p>Given a <em>target</em> on which to plot a figure, determine if that <em>target</em> is <strong>None</strong> or a matplotlib figure or axes object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="spacepy.plot.utils.shared_ylabel.html#spacepy.plot.utils.shared_ylabel" title="spacepy.plot.utils.shared_ylabel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">shared_ylabel</span></code></a>(axes, txt, *args, **kwargs)</p></td>
+<td><p>Create a ylabel that spans several subplots</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="spacepy.plot.utils.show_used.html#spacepy.plot.utils.show_used" title="spacepy.plot.utils.show_used"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_used</span></code></a>([fig])</p></td>
+<td><p>Show the areas of a figure which are used/occupied by plot elements.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="spacepy.plot.utils.smartTimeTicks.html#spacepy.plot.utils.smartTimeTicks" title="spacepy.plot.utils.smartTimeTicks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smartTimeTicks</span></code></a>(time)</p></td>
+<td><p>Returns major ticks, minor ticks and format for time-based plots</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="spacepy.plot.utils.timestamp.html#spacepy.plot.utils.timestamp" title="spacepy.plot.utils.timestamp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timestamp</span></code></a>([position, size, draw, strnow, ...])</p></td>
+<td><p>print a timestamp on the current plot, vertical lower right</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="spacepy.plot.utils.add_arrows.html#spacepy.plot.utils.add_arrows" title="spacepy.plot.utils.add_arrows"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_arrows</span></code></a>(lines[, n, size, style, ...])</p></td>
+<td><p>Add directional arrows along a plotted line.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.plot.utils.EventClicker.html" title="spacepy.plot.utils.EventClicker"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="autosummary/spacepy.plot.spectrogram.simpleSpectrogram.html" title="spacepy.plot.spectrogram.simpleSpectrogram"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../plot.html" >plot - Plot, various specialized plotting functions and associated utilities</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.plot.utils</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

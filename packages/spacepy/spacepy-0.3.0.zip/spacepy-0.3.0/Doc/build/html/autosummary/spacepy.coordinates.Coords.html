@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.coordinates.Coords &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy.coordinates.car2sph" href="spacepy.coordinates.car2sph.html" />
+    <link rel="prev" title="coordinates - module for coordinate transforms" href="../coordinates.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.coordinates.car2sph.html" title="spacepy.coordinates.car2sph"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../coordinates.html" title="coordinates - module for coordinate transforms"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../coordinates.html" accesskey="U">coordinates - module for coordinate transforms</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.coordinates.Coords</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../coordinates.html"
+                          title="previous chapter">coordinates - module for coordinate transforms</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.coordinates.car2sph.html"
+                          title="next chapter">spacepy.coordinates.car2sph</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.coordinates.Coords.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-coordinates-coords">
+<h1>spacepy.coordinates.Coords<a class="headerlink" href="#spacepy-coordinates-coords" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="spacepy.coordinates.Coords">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">spacepy.coordinates.</span></span><span class="sig-name descname"><span class="pre">Coords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">carsph</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">units</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ticks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_irbem</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/coordinates.html#Coords"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.coordinates.Coords" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class holding spatial coordinates and enabling transformation between
+coordinate systems. Coordinates can be stored as Cartesian or spherical
+and units are assumed to be Re (distance) and degrees (angle)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although other units may be specified and will be carried
+through, most functions throughout SpacePy assume distances
+in Re and angles in degrees, regardless of specified units.</p>
+</div>
+<p>By default, coordinate transforms are based on the IRBEM library; <a class="reference external" href="http://svn.code.sf.net/p/irbem/code/trunk/manual/user_guide.html">its
+manual</a>
+may prove useful. SpacePy also provides a framework for accurate coordinate
+transformations. This can be used by setting the <cite>use_irbem</cite> flag to False.
+In a future release of SpacePy this will become the default method.
+For a good reference on heliospheric and magnetospheric
+coordinate systems, see Franz &amp; Harper, “Heliospheric Coordinate Systems”,
+Planet. Space Sci., 50, pp 217-233, 2002
+(<a class="reference external" href="https://doi.org/10.1016/S0032-0633(01)00119-2">https://doi.org/10.1016/S0032-0633(01)00119-2</a>).</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>data</strong><span class="classifier">list or ndarray, dim = (n,3)</span></dt><dd><p>coordinate points [X,Y,Z] or [rad, lat, lon]</p>
+</dd>
+<dt><strong>dtype</strong><span class="classifier">string</span></dt><dd><p>coordinate system; supported systems are defined in
+module-level documentation. Common systems include
+GEO, GSE, GSM, SM, MAG, ECIMOD</p>
+</dd>
+<dt><strong>carsph</strong><span class="classifier">string</span></dt><dd><p>Cartesian or spherical, ‘car’ or ‘sph’</p>
+</dd>
+<dt><strong>units</strong><span class="classifier">list of strings, optional</span></dt><dd><p>standard are  [‘Re’, ‘Re’, ‘Re’] or [‘Re’, ‘deg’, ‘deg’] depending
+on the carsph content. See note.</p>
+</dd>
+<dt><strong>ticks</strong><span class="classifier">Ticktock instance, optional</span></dt><dd><p>used for coordinate transformations (see a.convert)</p>
+</dd>
+<dt><strong>use_irbem</strong><span class="classifier">bool</span></dt><dd><div class="versionadded">
+<p><span class="versionmodified added">New in version 0.3.0.</span></p>
+</div>
+<p>Set to True to use IRBEM for coordinate transforms (current default).
+Otherwise use SpacePy’s coordinate transform library.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">Coords instance</span></dt><dd><p>instance with a.data, a.carsph, etc.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">spacepy.coordinates.DEFAULTS</span></code></dt><dd></dd>
+<dt><a class="reference internal" href="spacepy.time.Ticktock.html#spacepy.time.Ticktock" title="spacepy.time.Ticktock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">spacepy.time.Ticktock</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">spacepy</span> <span class="kn">import</span> <span class="n">coordinates</span> <span class="k">as</span> <span class="n">coord</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cvals</span> <span class="o">=</span> <span class="n">coord</span><span class="o">.</span><span class="n">Coords</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]],</span> <span class="s1">&#39;GEO&#39;</span><span class="p">,</span> <span class="s1">&#39;car&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cvals</span><span class="o">.</span><span class="n">x</span>  <span class="c1"># returns all x coordinates</span>
+<span class="go">array([1, 1])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">spacepy.time</span> <span class="kn">import</span> <span class="n">Ticktock</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cvals</span><span class="o">.</span><span class="n">ticks</span> <span class="o">=</span> <span class="n">Ticktock</span><span class="p">([</span><span class="s1">&#39;2002-02-02T12:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;2002-02-02T12:00:00&#39;</span><span class="p">],</span> <span class="s1">&#39;ISO&#39;</span><span class="p">)</span> <span class="c1"># add ticks</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">newcoord</span> <span class="o">=</span> <span class="n">cvals</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s1">&#39;GSM&#39;</span><span class="p">,</span> <span class="s1">&#39;sph&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">newcoord</span>
+</pre></div>
+</div>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.coordinates.Coords.append" title="spacepy.coordinates.Coords.append"><code class="xref py py-obj docutils literal notranslate"><span class="pre">append</span></code></a>(other)</p></td>
+<td><p>Append another Coords instance to the current one</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.coordinates.Coords.convert" title="spacepy.coordinates.Coords.convert"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert</span></code></a>(returntype, returncarsph)</p></td>
+<td><p>Create a new Coords instance with new coordinate types</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.coordinates.Coords.from_skycoord" title="spacepy.coordinates.Coords.from_skycoord"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_skycoord</span></code></a>(skycoord[, use_irbem])</p></td>
+<td><p>Create a Coords instance from an Astropy SkyCoord instance</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.coordinates.Coords.append">
+<span class="sig-name descname"><span class="pre">append</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/coordinates.html#Coords.append"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.coordinates.Coords.append" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append another Coords instance to the current one</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>other</strong><span class="classifier">Coords instance</span></dt><dd><p>Coords instance to append</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.coordinates.Coords.convert">
+<span class="sig-name descname"><span class="pre">convert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">returntype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">returncarsph</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/coordinates.html#Coords.convert"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.coordinates.Coords.convert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new Coords instance with new coordinate types</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>returntype</strong><span class="classifier">string</span></dt><dd><p>coordinate system, see module level documentation for
+supported systems</p>
+</dd>
+<dt><strong>returncarsph</strong><span class="classifier">string</span></dt><dd><p>coordinate type, possible ‘car’ for Cartesian and ‘sph’ for spherical</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">Coords object</span></dt><dd><p>Coords object in the new coordinate system</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">spacepy.coordinates</span> <span class="kn">import</span> <span class="n">Coords</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">Coords</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]],</span> <span class="s1">&#39;GEO&#39;</span><span class="p">,</span> <span class="s1">&#39;car&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">spacepy.time</span> <span class="kn">import</span> <span class="n">Ticktock</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span><span class="o">.</span><span class="n">ticks</span> <span class="o">=</span> <span class="n">Ticktock</span><span class="p">([</span><span class="s1">&#39;2002-02-02T12:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;2002-02-02T12:00:00&#39;</span><span class="p">],</span> <span class="s1">&#39;ISO&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s1">&#39;SM&#39;</span><span class="p">,</span><span class="s1">&#39;car&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span>
+<span class="go">Coords( [[ 0.81134097  2.6493305   3.6500375 ]</span>
+<span class="go"> [ 0.92060408  2.30678864  1.68262126]] ), dtype=SM,car, units=[&#39;Re&#39;, &#39;Re&#39;, &#39;Re&#39;]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.coordinates.Coords.from_skycoord">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_skycoord</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skycoord</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_irbem</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/coordinates.html#Coords.from_skycoord"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.coordinates.Coords.from_skycoord" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Coords instance from an Astropy SkyCoord instance</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>skycoord</strong><span class="classifier"><cite>astropy.coordinates.SkyCoord</cite></span></dt><dd><p>The coordinate to be converted</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">Coords instance</span></dt><dd><p>The converted coordinate</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This method requires Astropy to be installed.</p>
+<p>This method uses the GEO coordinate frame as the common frame between the two libraries.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.coordinates.Coords.to_skycoord">
+<span class="sig-name descname"><span class="pre">to_skycoord</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/coordinates.html#Coords.to_skycoord"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.coordinates.Coords.to_skycoord" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an Astropy SkyCoord instance based on this instance</p>
+<dl class="field-list">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl>
+<dt><strong>out</strong><span class="classifier"><cite>astropy.coordinates.SkyCoord</cite></span></dt><dd><p>This coordinate as an Astropy SkyCoord</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This method requires Astropy to be installed.</p>
+<p>This method uses the GEO coordinate frame as the common frame between the two libraries.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.coordinates.car2sph.html" title="spacepy.coordinates.car2sph"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../coordinates.html" title="coordinates - module for coordinate transforms"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../coordinates.html" >coordinates - module for coordinate transforms</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.coordinates.Coords</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

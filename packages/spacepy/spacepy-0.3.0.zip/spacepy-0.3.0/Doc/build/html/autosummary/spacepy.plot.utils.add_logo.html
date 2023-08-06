@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.plot.utils.add_logo &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy.plot.utils.annotate_xaxis" href="spacepy.plot.utils.annotate_xaxis.html" />
+    <link rel="prev" title="spacepy.plot.utils.EventClicker" href="spacepy.plot.utils.EventClicker.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.plot.utils.annotate_xaxis.html" title="spacepy.plot.utils.annotate_xaxis"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.plot.utils.EventClicker.html" title="spacepy.plot.utils.EventClicker"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../plot.html" >plot - Plot, various specialized plotting functions and associated utilities</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="spacepy.plot.utils.html" accesskey="U">spacepy.plot.utils</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.plot.utils.add_logo</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="spacepy.plot.utils.EventClicker.html"
+                          title="previous chapter">spacepy.plot.utils.EventClicker</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.plot.utils.annotate_xaxis.html"
+                          title="next chapter">spacepy.plot.utils.annotate_xaxis</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.plot.utils.add_logo.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-plot-utils-add-logo">
+<h1>spacepy.plot.utils.add_logo<a class="headerlink" href="#spacepy-plot-utils-add-logo" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.plot.utils.add_logo">
+<span class="sig-prename descclassname"><span class="pre">spacepy.plot.utils.</span></span><span class="sig-name descname"><span class="pre">add_logo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'br'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">margin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/plot/utils.html#add_logo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.plot.utils.add_logo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an image (logo) to one corner of a plot.</p>
+<p>The provided image will be placed in a corner of the plot and sized
+to maintain its aspect ratio and be as large as possible without
+overlapping any existing elements of the figure. Thus this should
+be the last call in constructing a figure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>img</strong><span class="classifier">str or numpy.ndarray</span></dt><dd><p>The image to place on the figure. If a string, assumed to be a
+filename to be read with <a class="reference external" href="https://matplotlib.org/stable/api/image_api.html#matplotlib.image.imread" title="(in Matplotlib v3.5.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">imread()</span></code></a>; if
+a numpy array, assumed to be the image itself
+(in a simliar format).</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>(axes, axesimg)</strong><span class="classifier">tuple of Axes and AxesImage</span></dt><dd><p>The <a class="reference external" href="https://matplotlib.org/stable/api/axes_api.html#matplotlib.axes.Axes" title="(in Matplotlib v3.5.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Axes</span></code></a> object created to hold the iamge,
+and the <a class="reference external" href="https://matplotlib.org/stable/api/image_api.html#matplotlib.image.AxesImage" title="(in Matplotlib v3.5.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">AxesImage</span></code></a> object for the image
+itself.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Other Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fig</strong><span class="classifier">matplotlib.figure.Figure</span></dt><dd><p>The figure on which to place the logo; if not specified, the
+<a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.gcf.html#matplotlib.pyplot.gcf" title="(in Matplotlib v3.5.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">gcf()</span></code></a> function will be used.</p>
+</dd>
+<dt><strong>pos</strong><span class="classifier">str</span></dt><dd><p>The position to place the logo.
+br: bottom right;
+bl: bottom left;
+tl: top left;
+tr: top right</p>
+</dd>
+<dt><strong>margin</strong><span class="classifier">float</span></dt><dd><p>Margin to include on each side of figure, as a fraction of the larger
+dimension of the figure (width or height). Default is 0.05 (5%).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Calls <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.draw.html#matplotlib.pyplot.draw" title="(in Matplotlib v3.5.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">draw()</span></code></a> to ensure locations are
+up to date.</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.plot.utils</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ax0</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">211</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ax0</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="go">[&lt;matplotlib.lines.Line2D at 0x00000000&gt;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ax1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">212</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="go">[&lt;matplotlib.lines.Line2D at 0x00000000&gt;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">spacepy</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">add_logo</span><span class="p">(</span><span class="s1">&#39;logo.png&#39;</span><span class="p">,</span> <span class="n">fig</span><span class="p">)</span>
+<span class="go">(&lt;matplotlib.axes.Axes at 0x00000000&gt;,</span>
+<span class="go"> &lt;matplotlib.image.AxesImage at 0x00000000&gt;)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.plot.utils.annotate_xaxis.html" title="spacepy.plot.utils.annotate_xaxis"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.plot.utils.EventClicker.html" title="spacepy.plot.utils.EventClicker"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../plot.html" >plot - Plot, various specialized plotting functions and associated utilities</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="spacepy.plot.utils.html" >spacepy.plot.utils</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.plot.utils.add_logo</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

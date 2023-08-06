@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Installing SpacePy &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="SpacePy Dependencies" href="dependencies.html" />
+    <link rel="prev" title="SpacePy 0.3.0 documentation" href="index.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="index.html"><img src="_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="dependencies.html" title="SpacePy Dependencies"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="SpacePy 0.3.0 documentation"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+       <li><a href="index.html">documentation </a> &raquo;</li>
+
+        <li class="nav-item nav-item-this"><a href="">Installing SpacePy</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="index.html"
+                          title="previous chapter">SpacePy 0.3.0 documentation</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="dependencies.html"
+                          title="next chapter">SpacePy Dependencies</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/install.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="installing-spacepy">
+<h1>Installing SpacePy<a class="headerlink" href="#installing-spacepy" title="Permalink to this headline">¶</a></h1>
+<p>The simplest way from zero (no Python) to a working SpacePy setup is:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Install the <a class="reference external" href="https://docs.anaconda.com/anaconda/">Anaconda</a> Python
+environment. Python 3 is strongly recommended (64-bit is recommended).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">spacepy</span></code></p></li>
+</ol>
+</div></blockquote>
+<p>If you already have a working Python setup, install SpacePy by:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">numpy</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">spacepy</span></code></p></li>
+</ol>
+</div></blockquote>
+<p>This will install a binary build of SpacePy if available (currently
+only on Windows), otherwise it will attempt to compile. It will also
+install most dependencies.</p>
+<p><code class="docutils literal notranslate"><span class="pre">numpy</span></code> must be installed first as it’s required for the SpacePy
+build. See <a class="reference internal" href="install_windows.html"><span class="doc">Windows Installation</span></a> for important notes regarding numpy
+on Windows.</p>
+<p>If you are familiar with installing Python packages, have particular
+preferences for managing an installation, or if the above doesn’t
+work, refer to platform-specific instructions and the details
+below.</p>
+<p>For installing the NASA CDF library to support <a class="reference internal" href="pycdf.html#module-spacepy.pycdf" title="spacepy.pycdf"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pycdf</span></code></a>,
+see the platform-specific instructions linked below.</p>
+<p>The first time a user imports SpacePy, it automatically creates the
+<a class="reference internal" href="configuration.html"><span class="doc">configuration directory</span></a>.</p>
+<p>If you need further assistance, you can <a class="reference external" href="https://github.com/spacepy/spacepy/issues">open an issue</a>.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dependencies.html">SpacePy Dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install_linux.html">Linux Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install_mac.html">MacOS Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install_windows.html">Windows Installation</a></li>
+</ul>
+</div>
+<p>SpacePy installs with the common Python distutils and pip.</p>
+<p>The latest stable release is provided via <a class="reference external" href="https://pypi.org/project/SpacePy/">PyPI</a> To install from PyPI, make sure
+you have pip installed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">spacepy</span>
+</pre></div>
+</div>
+<p>If you are installing for a single user, and are not working in a
+virtual environment, add the <code class="docutils literal notranslate"><span class="pre">--user</span></code> flag when installing with pip.</p>
+<p>Source releases are available from <a class="reference external" href="https://pypi.org/project/SpacePy/#files">PyPI</a> and <a class="reference external" href="https://github.com/spacepy/spacepy/releases">our github</a>. Development versions
+are on <a class="reference external" href="https://github.com/spacepy/spacepy">github</a>.</p>
+<p>After downloading and
+unpacking, run (a virtual environment, such as a conda environment, is
+recommended):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
+</pre></div>
+</div>
+<p>or, to install for all users (not in a virtual environment):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
+</pre></div>
+</div>
+<p>or, to install for a single user (not in a virtual environment):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span>
+</pre></div>
+</div>
+<p>If you do not have administrative privileges, or you will be
+developing for SpacePy, we strongly recommend using virtual
+environments.</p>
+<p>To install in custom location, e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span> <span class="o">--</span><span class="n">home</span><span class="o">=/</span><span class="n">n</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python</span>
+</pre></div>
+</div>
+<p>Installs using <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> do not require setuptools.</p>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="dependencies.html" title="SpacePy Dependencies"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="SpacePy 0.3.0 documentation"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+       <li><a href="index.html">documentation </a> &raquo;</li>
+
+        <li class="nav-item nav-item-this"><a href="">Installing SpacePy</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

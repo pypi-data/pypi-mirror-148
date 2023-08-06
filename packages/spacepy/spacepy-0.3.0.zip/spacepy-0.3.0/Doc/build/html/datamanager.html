@@ -1,0 +1,900 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>datamanager - easy access to and manipulation of data &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="datamodel - easy to use general data model" href="datamodel.html" />
+    <link rel="prev" title="spacepy.ctrans.iau80n.coeff80" href="autosummary/spacepy.ctrans.iau80n.coeff80.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="index.html"><img src="_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="datamodel.html" title="datamodel - easy to use general data model"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="autosummary/spacepy.ctrans.iau80n.coeff80.html" title="spacepy.ctrans.iau80n.coeff80"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+       <li><a href="index.html">documentation </a> &raquo;</li>
+
+        <li class="nav-item nav-item-this"><a href="">datamanager - easy access to and manipulation of data</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">datamanager - easy access to and manipulation of data</a><ul>
+<li><a class="reference internal" href="#about-datamanager">About datamanager</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="autosummary/spacepy.ctrans.iau80n.coeff80.html"
+                          title="previous chapter">spacepy.ctrans.iau80n.coeff80</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="datamodel.html"
+                          title="next chapter">datamodel - easy to use general data model</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/datamanager.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-spacepy.datamanager">
+<span id="datamanager-easy-access-to-and-manipulation-of-data"></span><h1>datamanager - easy access to and manipulation of data<a class="headerlink" href="#module-spacepy.datamanager" title="Permalink to this headline">¶</a></h1>
+<p>The datamanager classes and functions are useful for locating the correct
+data file for a particular day and manipulating data and subsets in a generic
+way.</p>
+<p>Authors: Jon Niehof</p>
+<p>Institution: University of New Hampshire</p>
+<p>Contact: <a class="reference external" href="mailto:Jonathan&#46;Niehof&#37;&#52;&#48;unh&#46;edu">Jonathan<span>&#46;</span>Niehof<span>&#64;</span>unh<span>&#46;</span>edu</a></p>
+<p>Copyright 2015-2020 contributors</p>
+<section id="about-datamanager">
+<h2>About datamanager<a class="headerlink" href="#about-datamanager" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>Examples go here</p>
+<p class="rubric">Classes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.datamanager.DataManager" title="spacepy.datamanager.DataManager"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataManager</span></code></a>(directories, file_fmt[, ...])</p></td>
+<td><p>THIS CLASS IS NOT YET COMPLETE, doesn't do much useful.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Functions</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.datamanager.apply_index" title="spacepy.datamanager.apply_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_index</span></code></a>(data, idx)</p></td>
+<td><p>Apply an array of indices to data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.datamanager.array_interleave" title="spacepy.datamanager.array_interleave"><code class="xref py py-obj docutils literal notranslate"><span class="pre">array_interleave</span></code></a>(array1, array2, idx)</p></td>
+<td><p>Create an array containing all elements of both array1 and array2</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.datamanager.axis_index" title="spacepy.datamanager.axis_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">axis_index</span></code></a>(shape[, axis])</p></td>
+<td><p>Returns array of indices along axis, for all other axes</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.datamanager.flatten_idx" title="spacepy.datamanager.flatten_idx"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flatten_idx</span></code></a>(idx[, axis])</p></td>
+<td><p>Convert multidimensional index into index on flattened array.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.datamanager.insert_fill" title="spacepy.datamanager.insert_fill"><code class="xref py py-obj docutils literal notranslate"><span class="pre">insert_fill</span></code></a>(times, data[, fillval, tol, ...])</p></td>
+<td><p>Populate gaps in data with fill.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.datamanager.rebin" title="spacepy.datamanager.rebin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rebin</span></code></a>(data, bindata, bins[, axis, bintype, ...])</p></td>
+<td><p>Rebin one axis of input data based on values of another array</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#spacepy.datamanager.rev_index" title="spacepy.datamanager.rev_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rev_index</span></code></a>(idx[, axis])</p></td>
+<td><p>From an index, return an index that reverses the action of that index</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#spacepy.datamanager.values_to_steps" title="spacepy.datamanager.values_to_steps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">values_to_steps</span></code></a>(array[, axis])</p></td>
+<td><p>Transform values along an axis to their order in a unique sequence.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="spacepy.datamanager.DataManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">spacepy.datamanager.</span></span><span class="sig-name descname"><span class="pre">DataManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">directories</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_fmt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">descend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spacepy/datamanager.html#DataManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.datamanager.DataManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>THIS CLASS IS NOT YET COMPLETE, doesn’t do much useful.</p>
+<p>Will have to do something that allows the config file to specify regex
+and other things, and then just the directory to be changed (since
+regex, etc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>directories</strong><span class="classifier">list</span></dt><dd><p>A list of directories that might contain the data</p>
+</dd>
+<dt><strong>file_fmt</strong><span class="classifier">string</span></dt><dd><p>Regular expression that matches the files desired. Will also recognize
+strftime parameters %w %d %m %y %Y %H %M %s %j %U %W, all zero-pad.
+<a class="reference external" href="https://docs.python.org/2/library/datetime.html#strftime-strptime-behavior">https://docs.python.org/2/library/datetime.html#strftime-strptime-behavior</a>
+Can have subdirectory reference, but separator should be unix-style,
+with no leading slash.</p>
+</dd>
+<dt><strong>period</strong><span class="classifier">string</span></dt><dd><p>Size of file; can be a number followed by one of d, m, y, H, M, s.
+Anything else is assumed to be “irregular” and files treated
+as if there are neither gaps nor overlaps in the sequence.
+If not specified, will be assumed to match one count of the
+smallest unit in the format string.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.datamanager.DataManager.files_matching">
+<span class="sig-name descname"><span class="pre">files_matching</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spacepy/datamanager.html#DataManager.files_matching"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.datamanager.DataManager.files_matching" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all the files matching this file format</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>dt</strong><span class="classifier">datetime</span></dt><dd><p>Optional; if specified, match only files for this date.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">generator</span></dt><dd><p>Iterates over every file matching the format specified at
+creation. Note this is specified in native path format!</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="spacepy.datamanager.DataManager.get_filename">
+<span class="sig-name descname"><span class="pre">get_filename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dt</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spacepy/datamanager.html#DataManager.get_filename"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.datamanager.DataManager.get_filename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the filename corresponding to a particular point in time</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.datamanager.apply_index">
+<span class="sig-prename descclassname"><span class="pre">spacepy.datamanager.</span></span><span class="sig-name descname"><span class="pre">apply_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spacepy/datamanager.html#apply_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.datamanager.apply_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply an array of indices to data.</p>
+<p>Most useful in dealing with the output from <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.argsort.html#numpy.argsort" title="(in NumPy v1.22)"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.argsort()</span></code></a>, and
+best explained by the example.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>data</strong><span class="classifier">array</span></dt><dd><p>Input data, at least two dimensional. The 0th dimension is treated as
+a “time” or “record” dimension.</p>
+</dd>
+<dt><strong>idx</strong><span class="classifier">sequence</span></dt><dd><p>2D index to apply to the import data. The 0th dimension must be the 
+same size as <code class="docutils literal notranslate"><span class="pre">data</span></code>’s 0th dimension. Dimension 1 must be the same
+size as one other dimension in data (the first match found is used);
+this is referred to as the “index dimension.”</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl>
+<dt><strong>data</strong><span class="classifier">sequence</span></dt><dd><p>View of <code class="docutils literal notranslate"><span class="pre">data</span></code>, with index applied. For each index of the 0th
+dimension, the values along the index dimension are obtained by applying
+the value of <code class="docutils literal notranslate"><span class="pre">idx</span></code> at the same index in the 0th dimension. This is
+repeated across any other dimensions in <code class="docutils literal notranslate"><span class="pre">data</span></code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>No guarantee is made whether the returned data is a copy
+of the input data. Modifying values in the input may change
+the values of the input. Call <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.copy.html#numpy.ndarray.copy" title="(in NumPy v1.22)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">copy()</span></code></a> if
+a copy is required.</p>
+</div>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>ValueError</strong><span class="classifier">if can’t match the shape of data and indices</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>Assume <code class="docutils literal notranslate"><span class="pre">flux</span></code> is a 3D array of fluxes, with a value for each of
+time, pitch angle, and energy. Assume energy is not necessarily 
+constant in time, nor is ordered in the energy dimension. If
+<code class="docutils literal notranslate"><span class="pre">energy</span></code> is a 2D array of the energies as a function of energy
+step for each time, then the following will sort the flux at each
+time and pitch angle in energy order.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">idx</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">energy</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">flux_sorted</span> <span class="o">=</span> <span class="n">spacepy</span><span class="o">.</span><span class="n">datamanager</span><span class="o">.</span><span class="n">apply_index</span><span class="p">(</span><span class="n">flux</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.datamanager.array_interleave">
+<span class="sig-prename descclassname"><span class="pre">spacepy.datamanager.</span></span><span class="sig-name descname"><span class="pre">array_interleave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">array2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idx</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spacepy/datamanager.html#array_interleave"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.datamanager.array_interleave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an array containing all elements of both array1 and array2</p>
+<p><code class="docutils literal notranslate"><span class="pre">idx</span></code> is an index on the output array which indicates which elements will
+be populated from <code class="docutils literal notranslate"><span class="pre">array1</span></code>, i.e., <code class="docutils literal notranslate"><span class="pre">out[idx]</span> <span class="pre">==</span> <span class="pre">array1</span></code> (in order.)
+The other elements of <code class="docutils literal notranslate"><span class="pre">out</span></code> will be filled, in order, from <code class="docutils literal notranslate"><span class="pre">array2</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>array1</strong><span class="classifier">array</span></dt><dd><p>Input data.</p>
+</dd>
+<dt><strong>array2</strong><span class="classifier">array</span></dt><dd><p>Input data. Must have same number of dimensions as <code class="docutils literal notranslate"><span class="pre">array1</span></code>, and all
+dimensions except the zeroth must also have the same length.</p>
+</dd>
+<dt><strong>idx</strong><span class="classifier">array</span></dt><dd><p>A 1D array of indices on the zeroth dimension of the output array. Must
+have the same length as the zeroth dimension of <code class="docutils literal notranslate"><span class="pre">array1</span></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">array</span></dt><dd><p>All elements from <code class="docutils literal notranslate"><span class="pre">array1</span></code> and <code class="docutils literal notranslate"><span class="pre">array2</span></code>, interleaved according
+to <code class="docutils literal notranslate"><span class="pre">idx</span></code>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.datamanager</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">idx</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">spacepy</span><span class="o">.</span><span class="n">datamanager</span><span class="o">.</span><span class="n">array_interleave</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span>
+<span class="go">array([ 1, 10, 20,  2, 30])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.datamanager.axis_index">
+<span class="sig-prename descclassname"><span class="pre">spacepy.datamanager.</span></span><span class="sig-name descname"><span class="pre">axis_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spacepy/datamanager.html#axis_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.datamanager.axis_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns array of indices along axis, for all other axes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>shape</strong><span class="classifier">tuple</span></dt><dd><p>Shape of the output array</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>idx</strong><span class="classifier">array</span></dt><dd><p>An array of indices. The value of each element is that element’s index
+along <code class="docutils literal notranslate"><span class="pre">axis</span></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Other Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>axis</strong><span class="classifier">int</span></dt><dd><p>Axis along which to return indices, defaults to the last axis.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.mgrid.html#numpy.mgrid" title="(in NumPy v1.22)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.mgrid</span></code></a></dt><dd><p>This function is a special case</p>
+</dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<p>For a shape of <code class="docutils literal notranslate"><span class="pre">(i,</span> <span class="pre">j,</span> <span class="pre">k,</span> <span class="pre">l)</span></code> and <code class="docutils literal notranslate"><span class="pre">axis</span></code> = -1,
+<code class="docutils literal notranslate"><span class="pre">idx[i,</span> <span class="pre">j,</span> <span class="pre">k,</span> <span class="pre">:]</span> <span class="pre">=</span> <span class="pre">range(l)</span></code> for all <code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">j</span></code>, <code class="docutils literal notranslate"><span class="pre">k</span></code>.</p>
+<p>Similarly, for the same shape and <code class="docutils literal notranslate"><span class="pre">axis</span> <span class="pre">=</span> <span class="pre">1</span></code>,
+<code class="docutils literal notranslate"><span class="pre">idx[i,</span> <span class="pre">:,</span> <span class="pre">k,</span> <span class="pre">l]</span> <span class="pre">=</span> <span class="pre">range(j)</span></code> for all <code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">k</span></code>, <code class="docutils literal notranslate"><span class="pre">l</span></code>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.datamanager</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">spacepy</span><span class="o">.</span><span class="n">datamanager</span><span class="o">.</span><span class="n">axis_index</span><span class="p">((</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="go">array([[0, 1, 2],</span>
+<span class="go">       [0, 1, 2],</span>
+<span class="go">       [0, 1, 2],</span>
+<span class="go">       [0, 1, 2],</span>
+<span class="go">       [0, 1, 2]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">spacepy</span><span class="o">.</span><span class="n">datamanager</span><span class="o">.</span><span class="n">axis_index</span><span class="p">((</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
+<span class="go">    array([[0, 0, 0],</span>
+<span class="go">           [1, 1, 1],</span>
+<span class="go">           [2, 2, 2],</span>
+<span class="go">           [3, 3, 3],</span>
+<span class="go">           [4, 4, 4]])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.datamanager.flatten_idx">
+<span class="sig-prename descclassname"><span class="pre">spacepy.datamanager.</span></span><span class="sig-name descname"><span class="pre">flatten_idx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spacepy/datamanager.html#flatten_idx"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.datamanager.flatten_idx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert multidimensional index into index on flattened array.</p>
+<p>Convert a multidimensional index, that is values along a particular axis,
+so that it can derefence the flattened array properly. Note this is not
+the same as <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ravel_multi_index.html#numpy.ravel_multi_index" title="(in NumPy v1.22)"><code class="xref py py-func docutils literal notranslate"><span class="pre">ravel_multi_index()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>idx</strong><span class="classifier">array</span></dt><dd><p>Input index, i.e. a list of elements along a particular axis,
+in the style of <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.argsort.html#numpy.argsort" title="(in NumPy v1.22)"><code class="xref py py-func docutils literal notranslate"><span class="pre">argsort()</span></code></a>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>flat</strong><span class="classifier">array</span></dt><dd><p>A 1D array of indices suitable for indexing the flat version of the
+array</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Other Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>axis</strong><span class="classifier">int</span></dt><dd><p>Axis along which <code class="docutils literal notranslate"><span class="pre">idx</span></code> operates, defaults to the last axis.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#spacepy.datamanager.apply_index" title="spacepy.datamanager.apply_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_index</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.datamanager</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">idx</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">idx_flat</span> <span class="o">=</span> <span class="n">spacepy</span><span class="o">.</span><span class="n">datamanager</span><span class="o">.</span><span class="n">flatten_idx</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span> <span class="c1">#flat array</span>
+<span class="go">array([3, 1, 2, 3, 2, 1])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">idx_flat</span> <span class="c1">#indices into the flat array</span>
+<span class="go">array([1, 2, 0, 5, 4, 3])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span><span class="o">.</span><span class="n">ravel</span><span class="p">()[</span><span class="n">idx_flat</span><span class="p">]</span> <span class="c1">#index applied to the flat array</span>
+<span class="go">array([1, 2, 3, 1, 2, 3])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.datamanager.insert_fill">
+<span class="sig-prename descclassname"><span class="pre">spacepy.datamanager.</span></span><span class="sig-name descname"><span class="pre">insert_fill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">times</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fillval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">nan</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absolute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doTimes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spacepy/datamanager.html#insert_fill"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.datamanager.insert_fill" title="Permalink to this definition">¶</a></dt>
+<dd><p>Populate gaps in data with fill.</p>
+<p>Continuous data are often treated differently from discontinuous data,
+e.g., matplotlib will draw lines connecting data points but break the line
+at fill. Often data will be irregularly sampled but also contain large
+gaps that are not explicitly marked as fill. This function adds a single
+record of explicit fill to each gap, defined as places where the spacing
+between input times is a certain multiple of the median spacing.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>times</strong><span class="classifier">sequence</span></dt><dd><p>Values representing when the data were taken. Must be one-dimensional,
+i.e., each value must be scalar. Not modified</p>
+</dd>
+<dt><strong>data</strong><span class="classifier">sequence</span></dt><dd><p>Input data.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>times, data</strong><span class="classifier">tuple of sequence</span></dt><dd><p>Copies of input times and data, fill added in gaps (<code class="docutils literal notranslate"><span class="pre">doTimes</span></code> True)</p>
+</dd>
+<dt><strong>data</strong><span class="classifier">sequence</span></dt><dd><p>Copy of input data, with fill added in gaps (<code class="docutils literal notranslate"><span class="pre">doTimes</span></code> False)</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Other Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>fillval</strong></dt><dd><p>Fill value, same type as <code class="docutils literal notranslate"><span class="pre">data</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">numpy.nan</span></code>. If scalar,
+will be repeated to match the shape of <code class="docutils literal notranslate"><span class="pre">data</span></code> (minus the time axis).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default value of <code class="docutils literal notranslate"><span class="pre">nan</span></code> will not produce good results with
+integer input.</p>
+</div>
+</dd>
+<dt><strong>tol</strong><span class="classifier">float</span></dt><dd><p>Tolerance. A single fill value is inserted between adjacent
+values where the spacing in <code class="docutils literal notranslate"><span class="pre">times</span></code> is strictly greater than
+<code class="docutils literal notranslate"><span class="pre">tol</span></code> times the median of the spacing across all
+<code class="docutils literal notranslate"><span class="pre">times</span></code>. The inserted time for fill is halfway between the
+time on each side. (Default 1.5)</p>
+</dd>
+<dt><strong>absolute</strong></dt><dd><p>An absolute value for maximum spacing, of a type that would result from
+a difference in <code class="docutils literal notranslate"><span class="pre">times</span></code>. If specified, <code class="docutils literal notranslate"><span class="pre">tol</span></code> is ignored and any gap
+strictly larger than <code class="docutils literal notranslate"><span class="pre">absolute</span></code> will have fill inserted.</p>
+</dd>
+<dt><strong>doTimes</strong><span class="classifier">boolean</span></dt><dd><p>If True (default), will return a tuple of the times (with new values
+inserted for the fill records) and the data with new fill values.
+If False, will only return the data – useful for applying fill to
+multiple arrays of data on the same timebase.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>ValueError</strong><span class="classifier">if can’t identify the time axis of data</span></dt><dd><p>Try using <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.rollaxis.html#numpy.rollaxis" title="(in NumPy v1.22)"><code class="xref py py-func docutils literal notranslate"><span class="pre">numpy.rollaxis()</span></code></a> to put the time axis first in both
+<code class="docutils literal notranslate"><span class="pre">data</span></code> and <code class="docutils literal notranslate"><span class="pre">times</span></code>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>This example shows simple hourly data with a gap, populated with fill.
+Note that only a single fill value is inserted, to break the sequence
+of valid data rather than trying to match the existing cadence.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">datetime</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.datamanager</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2012</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+<span class="go">         datetime.datetime(2012, 1, 1, 1),</span>
+<span class="go">         datetime.datetime(2012, 1, 1, 2),</span>
+<span class="go">         datetime.datetime(2012, 1, 1, 5),</span>
+<span class="go">         datetime.datetime(2012, 1, 1, 6)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">temp</span> <span class="o">=</span> <span class="p">[</span><span class="mf">30.0</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">35</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filled_t</span><span class="p">,</span> <span class="n">filled_temp</span> <span class="o">=</span> <span class="n">spacepy</span><span class="o">.</span><span class="n">datamanager</span><span class="o">.</span><span class="n">insert_fill</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">temp</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filled_t</span>
+<span class="go">array([datetime.datetime(2012, 1, 1, 0, 0),</span>
+<span class="go">       datetime.datetime(2012, 1, 1, 1, 0),</span>
+<span class="go">       datetime.datetime(2012, 1, 1, 2, 0),</span>
+<span class="go">       datetime.datetime(2012, 1, 1, 3, 30),</span>
+<span class="go">       datetime.datetime(2012, 1, 1, 5, 0),</span>
+<span class="go">       datetime.datetime(2012, 1, 1, 6, 0)], dtype=object)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filled_temp</span>
+<span class="go">array([ 30.,  28.,  27.,  nan,  32.,  35.])</span>
+</pre></div>
+</div>
+<p>This example plots “gappy” data with and without explicit fill values.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.datamanager</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">),</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">xf</span><span class="p">,</span> <span class="n">yf</span> <span class="o">=</span> <span class="n">spacepy</span><span class="o">.</span><span class="n">datamanager</span><span class="o">.</span><span class="n">insert_fill</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ax0</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">211</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ax0</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ax1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">212</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xf</span><span class="p">,</span> <span class="n">yf</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href=".//datamanager-1.py">Source code</a>, <a class="reference external" href=".//datamanager-1.png">png</a>, <a class="reference external" href=".//datamanager-1.hires.png">hires.png</a>, <a class="reference external" href=".//datamanager-1.pdf">pdf</a>)</p>
+<figure class="align-default">
+<img alt="_images/datamanager-1.png" class="plot-directive" src="_images/datamanager-1.png" />
+</figure>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.datamanager.rebin">
+<span class="sig-prename descclassname"><span class="pre">spacepy.datamanager.</span></span><span class="sig-name descname"><span class="pre">rebin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bindata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bins</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bintype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'mean'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bindatadelta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spacepy/datamanager.html#rebin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.datamanager.rebin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rebin one axis of input data based on values of another array</p>
+<p>This is clearest with an example. Consider a flux as a function of time,
+energy, and the look direction of a detector (could be multiple detectors,
+or spin sectors.) The flux is then 3-D, dimensioned Nt x Ne x Nl. Now
+consider that each look direction has an associated pitch angle that is
+a function of time and thus stored in an array Nt x Nl. Then this function
+will redimension the flux into pitch angle bins (rather than tags.)</p>
+<p>So consider the PA bins to have dimension Np + 1 (because it represents
+the edges, the number of bins is one less than the dimension.) Then
+the output will be dimensioned Nt x Ne x Np.</p>
+<p><code class="docutils literal notranslate"><span class="pre">bindata</span></code> must be same or lesser dimensionality than <code class="docutils literal notranslate"><span class="pre">data</span></code>. Any
+axes which are present must be either of size 1, or the same size as
+<code class="docutils literal notranslate"><span class="pre">data</span></code>. So for <code class="docutils literal notranslate"><span class="pre">data</span></code> 100x5x20, <code class="docutils literal notranslate"><span class="pre">bindata</span></code> may be 100x5x20, or
+100, or 100x1x20, but not 100x20x5. This function will insert axes of
+size 1 as needed to match dimensionality.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>data</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.22)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></span></dt><dd><p>N-dimensional array of data to be rebinned. <code class="xref py py-class docutils literal notranslate"><span class="pre">nan</span></code>
+are ignored.</p>
+</dd>
+<dt><strong>bindata</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.22)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></span></dt><dd><p>M-dimensional (M&lt;=N) array of values to be compared to the bins.</p>
+</dd>
+<dt><strong>bins</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.22)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></span></dt><dd><p>1-D array of bin edges. Output dimension will be this size
+minus 1. Any values in <code class="docutils literal notranslate"><span class="pre">bindata</span></code> that don’t fall in the
+bins will be omitted from the output. (See <code class="docutils literal notranslate"><span class="pre">clip</span></code> to change
+this behavior).</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.22)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">data</span></code> with one axis redimensioned, from its original
+dimension to the bin dimension.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Other Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>axis</strong><span class="classifier">int</span></dt><dd><p>Axis of <cite>data</cite> to rebin. This axis will disappear in the
+output and be replaced with an axis of the size of
+<code class="docutils literal notranslate"><span class="pre">bins</span></code> less one. (Default -1, last axis)</p>
+</dd>
+<dt><strong>bintype</strong><span class="classifier">str</span></dt><dd><dl class="simple">
+<dt>Type of rebinning to perform:</dt><dd><dl class="simple">
+<dt>mean</dt><dd><p>Return the mean of all values in the bin (default)</p>
+</dd>
+<dt>unc</dt><dd><p>Return the quadrature mean of all values in the bin,
+for propagating uncertainty</p>
+</dd>
+<dt>count</dt><dd><p>Return the count of values that fall in each bin.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt><strong>weights</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.22)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></span></dt><dd><p>Relative weight of each sample in <code class="docutils literal notranslate"><span class="pre">bindata</span></code>. Must be same
+shape as <code class="docutils literal notranslate"><span class="pre">bindata</span></code>. Purely relative, i.e. the output is
+only affected based on the total of <code class="docutils literal notranslate"><span class="pre">weights</span></code> if <code class="docutils literal notranslate"><span class="pre">bintype</span></code>
+is <code class="docutils literal notranslate"><span class="pre">count</span></code>. Note if <code class="docutils literal notranslate"><span class="pre">weights</span></code> is specified, <code class="docutils literal notranslate"><span class="pre">count</span></code> returns
+the sum of the weights, not the count of individual samples.</p>
+</dd>
+<dt><strong>clip</strong><span class="classifier">boolean</span></dt><dd><p>Clip data to the bins. If true, all input data will be assigned
+a bin and data outside the range of the bin edges will be assigned
+to the extreme bins. If false (default), input data outside the bin
+ranges will be ignored.</p>
+</dd>
+<dt><strong>bindatadelta</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.22)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></span></dt><dd><p>By default, the <code class="docutils literal notranslate"><span class="pre">bindata</span></code> are treated as point values. If
+<code class="docutils literal notranslate"><span class="pre">bindatadelta</span></code> is specified, it is treated as the half-width of
+the <code class="docutils literal notranslate"><span class="pre">bindata</span></code>, allowing a single input value to be split between
+output bins. Must be scalar, or same shape as <cite>bindata</cite>. Note that
+input values are not weighted by the bin width, but by number of
+input values or by <code class="docutils literal notranslate"><span class="pre">weights</span></code>. (Combining <code class="docutils literal notranslate"><span class="pre">weights</span></code> with
+<code class="docutils literal notranslate"><span class="pre">bindatadelta</span></code> is not comprehensively tested.)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>Consider a particle flux distribution that’s a function of energy and
+pitch angle. For simplicity, assume that the energy dependence is a
+simple power law and the pitch angle dependence is Gaussian, with a peak
+whose position oscillates in time over a period of about one hour. This is
+fairly non-physical but illustrative.</p>
+<p>First making the relevant imports:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.datamanager</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.plot</span>
+</pre></div>
+</div>
+<p>The functional form of the flux is then:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">j</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">e</span> <span class="o">**</span> <span class="o">-</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">90</span> <span class="o">*</span> <span class="n">numpy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">numpy</span><span class="o">.</span><span class="n">pi</span><span class="p">)))</span> \
+<span class="gp">... </span>    <span class="o">*</span> <span class="n">numpy</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span>
+<span class="gp">... </span>        <span class="o">-</span><span class="mf">0.5</span> <span class="o">*</span> <span class="p">((</span><span class="n">a</span> <span class="o">-</span> <span class="mi">90</span> <span class="o">+</span> <span class="mi">90</span> <span class="o">*</span> <span class="n">numpy</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span> <span class="o">/</span> <span class="mf">573.</span><span class="p">))</span> <span class="o">/</span> <span class="mf">90.</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Illustrating the flux at one energy as a function of pitch angle:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">times</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mi">7200</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">alpha</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">181.</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="go"># Add a dimension so the flux is a 2D array</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">flux</span> <span class="o">=</span> <span class="n">j</span><span class="p">(</span><span class="mf">1.</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+<span class="gp">... </span>         <span class="n">numpy</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">spacepy</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">simpleSpectrogram</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">flux</span><span class="p">,</span> <span class="n">cb</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="gp">... </span>                               <span class="n">ylog</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Pitch angle (deg)&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (sec)&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Flux at 1 MeV&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="./pyplots/datamanager_rebin_1.py">Source code</a>, <a class="reference external" href="./pyplots/datamanager_rebin_1.png">png</a>, <a class="reference external" href="./pyplots/datamanager_rebin_1.hires.png">hires.png</a>, <a class="reference external" href="./pyplots/datamanager_rebin_1.pdf">pdf</a>)</p>
+<figure class="align-default">
+<img alt="_images/datamanager_rebin_1.png" class="plot-directive" src="_images/datamanager_rebin_1.png" />
+</figure>
+<p>Or the flux at one pitch angle as a function of energy:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">energies</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">flux</span> <span class="o">=</span> <span class="n">j</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">energies</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+<span class="gp">... </span>         <span class="n">numpy</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="mf">90.</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">spacepy</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">simpleSpectrogram</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">energies</span><span class="p">,</span> <span class="n">flux</span><span class="p">,</span> <span class="n">cb</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Energy (MeV)&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (sec)&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Flux at 90 degrees&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="./pyplots/datamanager_rebin_2.py">Source code</a>, <a class="reference external" href="./pyplots/datamanager_rebin_2.png">png</a>, <a class="reference external" href="./pyplots/datamanager_rebin_2.hires.png">hires.png</a>, <a class="reference external" href="./pyplots/datamanager_rebin_2.pdf">pdf</a>)</p>
+<figure class="align-default">
+<img alt="_images/datamanager_rebin_2.png" class="plot-directive" src="_images/datamanager_rebin_2.png" />
+</figure>
+<p>The measurement is usually not aligned with a pitch angle grid, and
+the detector pointing in pitch angle space usually varies with time.
+Taking a very simple case of eight detectors that sweep through pitch
+angle space in an organized fashion at ten degrees per minute, the
+measured pitch angle as a function of detector and time is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">pa</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="p">(</span><span class="n">d</span> <span class="o">*</span> <span class="mf">22.5</span> <span class="o">+</span> <span class="n">t</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">d</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="o">%</span> <span class="mi">180</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lines</span> <span class="o">=</span> <span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">times</span><span class="p">,</span> <span class="n">pa</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">times</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span>
+<span class="gp">... </span>    <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="p">[</span><span class="s1">&#39;Detector </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)],</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (sec)&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Pitch angle (deg)&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Measured pitch angle by detector&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="./pyplots/datamanager_rebin_3.py">Source code</a>, <a class="reference external" href="./pyplots/datamanager_rebin_3.png">png</a>, <a class="reference external" href="./pyplots/datamanager_rebin_3.hires.png">hires.png</a>, <a class="reference external" href="./pyplots/datamanager_rebin_3.pdf">pdf</a>)</p>
+<figure class="align-default">
+<img alt="_images/datamanager_rebin_3.png" class="plot-directive" src="_images/datamanager_rebin_3.png" />
+</figure>
+<p>Assuming a coarser measurement in time and energy than used to illustrate
+the distribution above, the measured flux as a function of time, detector,
+and energy is constructed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">times</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mi">7200</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span> <span class="c1">#5 min cadence</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">alpha</span> <span class="o">=</span> <span class="n">pa</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">times</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">energies</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="c1">#10 energy channels (3/decade)</span>
+<span class="go"># Every dimension (t, detector, e) gets its own numpy axis</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">flux</span> <span class="o">=</span> <span class="n">j</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">energies</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)),</span>
+<span class="go">             numpy.reshape(times, (-1, 1, 1)),</span>
+<span class="go">             numpy.expand_dims(alpha, -1))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">flux</span><span class="o">.</span><span class="n">shape</span>
+<span class="go">(24, 8, 10)</span>
+</pre></div>
+</div>
+<p>The flux at an energy as a function of detector is not very useful:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">spacepy</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">simpleSpectrogram</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span>
+<span class="gp">... </span>                               <span class="n">flux</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">cb</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ylog</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Detector&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (sec)&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Flux at 1 MeV&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="./pyplots/datamanager_rebin_4.py">Source code</a>, <a class="reference external" href="./pyplots/datamanager_rebin_4.png">png</a>, <a class="reference external" href="./pyplots/datamanager_rebin_4.hires.png">hires.png</a>, <a class="reference external" href="./pyplots/datamanager_rebin_4.pdf">pdf</a>)</p>
+<figure class="align-default">
+<img alt="_images/datamanager_rebin_4.png" class="plot-directive" src="_images/datamanager_rebin_4.png" />
+</figure>
+<p>As a function of energy for one detector, the energy dependence is
+apparent but time and pitch angle effects are confounded:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">spacepy</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">simpleSpectrogram</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">energies</span><span class="p">,</span> <span class="n">flux</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">:],</span>
+<span class="gp">... </span>                               <span class="n">cb</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Energy (MeV)&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (sec)&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Flux in detector 0&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="./pyplots/datamanager_rebin_5.py">Source code</a>, <a class="reference external" href="./pyplots/datamanager_rebin_5.png">png</a>, <a class="reference external" href="./pyplots/datamanager_rebin_5.hires.png">hires.png</a>, <a class="reference external" href="./pyplots/datamanager_rebin_5.pdf">pdf</a>)</p>
+<figure class="align-default">
+<img alt="_images/datamanager_rebin_5.png" class="plot-directive" src="_images/datamanager_rebin_5.png" />
+</figure>
+<p>What is needed is to recover the array of flux dimensioned by
+time, pitch angle, and energy, with appropriate pitch angle bins.
+The assumption is that the pitch angle as a function of time and
+detector is measured and thus the <code class="docutils literal notranslate"><span class="pre">alpha</span></code> array is available.
+Using that array, <code class="docutils literal notranslate"><span class="pre">rebin</span></code> can change flux from time, detector,
+energy bins to time, pitch angle, energy bins. The axis 1 changes
+from a detector dimension to pitch angle:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pa_bins</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">181</span><span class="p">,</span> <span class="mi">36</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">flux_by_pa</span> <span class="o">=</span> <span class="n">spacepy</span><span class="o">.</span><span class="n">datamanager</span><span class="o">.</span><span class="n">rebin</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">flux</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">pa_bins</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">flux_by_pa</span><span class="o">.</span><span class="n">shape</span>
+<span class="go">(24, 6, 10)</span>
+</pre></div>
+</div>
+<p>This can then be visualized. The pitch angle coverage is not perfect,
+but the original shape of the distribution is apparent, and further
+analysis can be performed on the regular pitch angle grid:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">spacepy</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">simpleSpectrogram</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">pa_bins</span><span class="p">,</span> <span class="n">flux_by_pa</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>                               <span class="n">cb</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ylog</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Pitch angle (deg)&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (sec)&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Flux at 1MeV&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="./pyplots/datamanager_rebin_6.py">Source code</a>, <a class="reference external" href="./pyplots/datamanager_rebin_6.png">png</a>, <a class="reference external" href="./pyplots/datamanager_rebin_6.hires.png">hires.png</a>, <a class="reference external" href="./pyplots/datamanager_rebin_6.pdf">pdf</a>)</p>
+<figure class="align-default">
+<img alt="_images/datamanager_rebin_6.png" class="plot-directive" src="_images/datamanager_rebin_6.png" />
+</figure>
+<p>Or by energy:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">spacepy</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">simpleSpectrogram</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">energies</span><span class="p">,</span> <span class="n">flux_by_pa</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">:],</span>
+<span class="gp">... </span>                               <span class="n">cb</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Energy (MeV)&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (sec)&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Flux at 90 degrees&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>(<a class="reference external" href="./pyplots/datamanager_rebin_7.py">Source code</a>, <a class="reference external" href="./pyplots/datamanager_rebin_7.png">png</a>, <a class="reference external" href="./pyplots/datamanager_rebin_7.hires.png">hires.png</a>, <a class="reference external" href="./pyplots/datamanager_rebin_7.pdf">pdf</a>)</p>
+<figure class="align-default">
+<img alt="_images/datamanager_rebin_7.png" class="plot-directive" src="_images/datamanager_rebin_7.png" />
+</figure>
+<p><code class="docutils literal notranslate"><span class="pre">rebin</span></code> can be used for higher dimension data, if the pitch angle
+itself depends on energy (e.g. if an energy sweep takes substantial
+time), and to propagate uncertainties through the rebinning. It can
+also be used to rebin on the time axis, e.g. for transforming time
+base.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.datamanager.rev_index">
+<span class="sig-prename descclassname"><span class="pre">spacepy.datamanager.</span></span><span class="sig-name descname"><span class="pre">rev_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spacepy/datamanager.html#rev_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.datamanager.rev_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>From an index, return an index that reverses the action of that index</p>
+<p>Essentially, <code class="docutils literal notranslate"><span class="pre">a[idx][rev_index(idx)]</span> <span class="pre">==</span> <span class="pre">a</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This becomes more complicated in multiple dimensions, due to the
+vagaries of applying a multidimensional index.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>idx</strong><span class="classifier">array</span></dt><dd><p>Indices onto an array, often the output of <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.argsort.html#numpy.argsort" title="(in NumPy v1.22)"><code class="xref py py-func docutils literal notranslate"><span class="pre">argsort()</span></code></a>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>rev_idx</strong><span class="classifier">array</span></dt><dd><p>Indices that, when applied to an array after <code class="docutils literal notranslate"><span class="pre">idx</span></code>, will return
+the original array (before the application of <code class="docutils literal notranslate"><span class="pre">idx</span></code>).</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Other Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>axis</strong><span class="classifier">int</span></dt><dd><p>Axis along which to return indices, defaults to the last axis.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#spacepy.datamanager.apply_index" title="spacepy.datamanager.apply_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_index</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.datamanager</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">idx</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="c1">#sorted</span>
+<span class="go">array([2, 3, 4, 6, 7])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span><span class="p">[</span><span class="n">idx</span><span class="p">][</span><span class="n">spacepy</span><span class="o">.</span><span class="n">datamanager</span><span class="o">.</span><span class="n">rev_index</span><span class="p">(</span><span class="n">idx</span><span class="p">)]</span> <span class="c1">#original</span>
+<span class="go">array([7, 2, 4, 6, 3])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="spacepy.datamanager.values_to_steps">
+<span class="sig-prename descclassname"><span class="pre">spacepy.datamanager.</span></span><span class="sig-name descname"><span class="pre">values_to_steps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/spacepy/datamanager.html#values_to_steps"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.datamanager.values_to_steps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transform values along an axis to their order in a unique sequence.</p>
+<p>Useful in, e.g., converting a list of energies to their steps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>array</strong><span class="classifier">array</span></dt><dd><p>Input data.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>steps</strong><span class="classifier">array</span></dt><dd><p>An array, the same size as <code class="docutils literal notranslate"><span class="pre">array</span></code>, with values along <code class="docutils literal notranslate"><span class="pre">axis</span></code>
+corresponding to the position of the value in <code class="docutils literal notranslate"><span class="pre">array</span></code> in a unique,
+sorted, set of the values in <code class="docutils literal notranslate"><span class="pre">array</span></code> along that axis. Differs from
+<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.argsort.html#numpy.argsort" title="(in NumPy v1.22)"><code class="xref py py-func docutils literal notranslate"><span class="pre">argsort()</span></code></a> in that identical values will have identical
+step numbers in the output.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Other Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>axis</strong><span class="classifier">int</span></dt><dd><p>Axis along which to find the steps.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">spacepy.datamanager</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">10.</span><span class="p">,</span> <span class="mf">12.</span><span class="p">,</span> <span class="mf">11.</span><span class="p">,</span> <span class="mf">9.</span><span class="p">,</span> <span class="mf">10.</span><span class="p">,</span> <span class="mf">12.</span><span class="p">,</span> <span class="mf">11.</span><span class="p">,</span> <span class="mf">9.</span><span class="p">],</span>
+<span class="go">            [10., 12., 11., 9., 14., 16., 15., 13.]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">spacepy</span><span class="o">.</span><span class="n">datamanager</span><span class="o">.</span><span class="n">values_to_steps</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="go">array([[1, 3, 2, 0, 1, 3, 2, 0],</span>
+<span class="go">       [1, 3, 2, 0, 5, 7, 6, 4]])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="datamodel.html" title="datamodel - easy to use general data model"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="autosummary/spacepy.ctrans.iau80n.coeff80.html" title="spacepy.ctrans.iau80n.coeff80"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+       <li><a href="index.html">documentation </a> &raquo;</li>
+
+        <li class="nav-item nav-item-this"><a href="">datamanager - easy access to and manipulation of data</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>

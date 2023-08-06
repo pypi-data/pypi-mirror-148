@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>spacepy.pycdf.gAttr &#8212; SpacePy v0.3.0 Manual</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/default.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    
+    <link rel="shortcut icon" href="../_static/spacepy_favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="spacepy.pycdf.AttrList" href="spacepy.pycdf.AttrList.html" />
+    <link rel="prev" title="spacepy.pycdf.zAttr" href="spacepy.pycdf.zAttr.html" /> 
+  </head><body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../index.html"><img src="../_static/spacepy_logo.jpg" border="0" alt="spacepy_logo"/></a>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.pycdf.AttrList.html" title="spacepy.pycdf.AttrList"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.pycdf.zAttr.html" title="spacepy.pycdf.zAttr"
+             accesskey="P">previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../pycdf.html" accesskey="U">pycdf - Python interface to CDF files</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.pycdf.gAttr</a></li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="spacepy.pycdf.zAttr.html"
+                          title="previous chapter">spacepy.pycdf.zAttr</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="spacepy.pycdf.AttrList.html"
+                          title="next chapter">spacepy.pycdf.AttrList</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/autosummary/spacepy.pycdf.gAttr.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="spacepy-pycdf-gattr">
+<h1>spacepy.pycdf.gAttr<a class="headerlink" href="#spacepy-pycdf-gattr" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="spacepy.pycdf.gAttr">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">spacepy.pycdf.</span></span><span class="sig-name descname"><span class="pre">gAttr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cdf_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">create</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/spacepy/pycdf.html#gAttr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#spacepy.pycdf.gAttr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Global Attribute for a CDF</p>
+<p>Represents a CDF attribute, providing access to the gEntries in a format
+that looks like a Python list. General list information is available in
+the python docs:
+<a class="reference external" href="http://docs.python.org/tutorial/introduction.html#lists">1</a>,
+<a class="reference external" href="http://docs.python.org/tutorial/datastructures.html#more-on-lists">2</a>,
+<a class="reference external" href="http://docs.python.org/library/stdtypes.html#typesseq">3</a>.</p>
+<p>Normally accessed by providing a key to a <a class="reference internal" href="spacepy.pycdf.gAttrList.html#spacepy.pycdf.gAttrList" title="spacepy.pycdf.gAttrList"><code class="xref py py-class docutils literal notranslate"><span class="pre">gAttrList</span></code></a>:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">attribute</span> <span class="o">=</span> <span class="n">cdffile</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;attribute_name&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">first_gentry</span> <span class="o">=</span> <span class="n">attribute</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Each element of the list is a single gEntry of the appropriate type.
+The index to the elements is the gEntry number.</p>
+<p>A gEntry may be either a single string or a 1D array of numerical type.
+Entries of numerical type (everything but CDF_CHAR and CDF_UCHAR)
+with a single element are returned as scalars; multiple-element entries
+are returned as a list. No provision is made for accessing below
+the entry level; the whole list is returned at once (but Python’s
+slicing syntax can be used to extract individual items from that list.)</p>
+<p>Multi-dimensional slicing is <em>not</em> supported; an entry with multiple
+elements will have all elements returned (and can thus be sliced itself).
+Example:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">first_three</span> <span class="o">=</span> <span class="n">attribute</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="c1">#will fail</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">first_three</span> <span class="o">=</span> <span class="n">attribute</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="c1">#first three elements of 5th Entry</span>
+</pre></div>
+</div>
+<p>gEntries are <em>not</em> necessarily contiguous; a gAttribute may have an
+entry 0 and entry 2 without an entry 1. <code class="xref py py-meth docutils literal notranslate"><span class="pre">len()</span></code> will return the
+<em>number</em> of gEntries; use <a class="reference internal" href="spacepy.pycdf.Attr.html#spacepy.pycdf.Attr.max_idx" title="spacepy.pycdf.Attr.max_idx"><code class="xref py py-meth docutils literal notranslate"><span class="pre">max_idx()</span></code></a> to find the highest defined
+gEntry number and <a class="reference internal" href="spacepy.pycdf.Attr.html#spacepy.pycdf.Attr.has_entry" title="spacepy.pycdf.Attr.has_entry"><code class="xref py py-meth docutils literal notranslate"><span class="pre">has_entry()</span></code></a> to determine if a particular
+gEntry number exists. Iterating over all entries is also supported:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">entrylist</span> <span class="o">=</span> <span class="p">[</span><span class="n">entry</span> <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">attribute</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Deleting gEntries will leave a “hole”:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">attribute</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">del</span> <span class="n">attribute</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">attribute</span><span class="o">.</span><span class="n">has_entry</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">attribute</span><span class="o">.</span><span class="n">has_entry</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">attribute</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="go">[1, None, 3]</span>
+</pre></div>
+</div>
+<p>Multi-element slices over nonexistent gEntries will return <code class="docutils literal notranslate"><span class="pre">None</span></code> where
+no entry exists. Single-element indices for nonexistent gEntries will
+raise <code class="docutils literal notranslate"><span class="pre">IndexError</span></code>. Assigning <code class="docutils literal notranslate"><span class="pre">None</span></code> to a gEntry will delete it.</p>
+<p>When assigning to a gEntry, the type is chosen to match the data;
+subject to that constraint, it will try to match
+(in order):</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>existing gEntry of the same number in this gAttribute</p></li>
+<li><p>other gEntries in this gAttribute</p></li>
+<li><p>data-matching constraints described in <a class="reference internal" href="spacepy.pycdf.CDF.html#spacepy.pycdf.CDF.new" title="spacepy.pycdf.CDF.new"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CDF.new()</span></code></a>.</p></li>
+</ol>
+</div></blockquote>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="spacepy.pycdf.Attr.html#spacepy.pycdf.Attr" title="spacepy.pycdf.Attr"><code class="xref py py-class docutils literal notranslate"><span class="pre">Attr</span></code></a></dt><dd></dd>
+</dl>
+</div>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="spacepy.pycdf.AttrList.html" title="spacepy.pycdf.AttrList"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spacepy.pycdf.zAttr.html" title="spacepy.pycdf.zAttr"
+             >previous</a> |</li>
+        <li><a href="https://spacepy.github.io/"">homepage</a>|&nbsp;</li>
+        <li><a href="https://github.com/spacepy/spacepy">development</a>|&nbsp;</li>
+        <li><a href="../search.html">search</a>|&nbsp;</li>
+       <li><a href="../index.html">documentation </a> &raquo;</li>
+
+          <li class="nav-item nav-item-1"><a href="../pycdf.html" >pycdf - Python interface to CDF files</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">spacepy.pycdf.gAttr</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2011-2022, The SpacePy Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+  </body>
+</html>
