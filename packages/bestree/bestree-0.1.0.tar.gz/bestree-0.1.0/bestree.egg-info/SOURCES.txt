@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+bestree/__init__.py
+bestree/bestree.py
+bestree.egg-info/PKG-INFO
+bestree.egg-info/SOURCES.txt
+bestree.egg-info/dependency_links.txt
+bestree.egg-info/requires.txt
+bestree.egg-info/top_level.txt
