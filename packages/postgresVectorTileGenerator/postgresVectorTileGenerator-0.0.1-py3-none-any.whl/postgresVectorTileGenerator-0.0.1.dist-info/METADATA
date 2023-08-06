@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: postgresVectorTileGenerator
+Version: 0.0.1
+Summary: Automatically generate a vector tile cache for a table in postgreSQL.
+Home-page: https://github.com/mkeller3/postgresVectorTileGenerator
+Author: Michael Keller
+Author-email: michaelkeller03@gmail.com
+License: GNU General Public License v3.0
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+Requires-Dist: VectorTileGenerator (==0.0.5)
+Requires-Dist: psycopg2 (==2.8.4)
+
+# postgresVectorTileGenerator
+
+A python package to automatically generate a cache of vector tiles between two zoom levels and a bounding box for a table in postgreSQL.
+
+## Install
+`pip install postgresVectorTileGenerator`
+
+## How to use
+```
+import os
+from postgresVectorTileGenerator import generator
+
+cache_location = f"{os.getcwd()}/cache"
+
+tileGeneration = generator.GenerateTiles(cache_location, "localhost", 5432, "postgres", "postgres", "data", "states", 1, 5, [-118, 34, -84, 50])
+
+tileGeneration.generate()
+```
+
