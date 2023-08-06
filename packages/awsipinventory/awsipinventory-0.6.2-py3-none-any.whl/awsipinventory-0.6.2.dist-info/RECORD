@@ -1,0 +1,7 @@
+awsipinventory/__init__.py,sha256=npcUT-b69-GO3le_sI6qIP5tyaFRVus4f3fckdPgdKc,39701
+awsipinventory/__main__.py,sha256=pCs9TuY9X7HasofHp_ItFJpCl02Hmppct9_EjzAPZg4,69
+awsipinventory/templates/inventory.html,sha256=9jdB5OJXBEKRvg5GhN7XlfT2cUmxaiSB6L7mxrkqTow,12749
+awsipinventory-0.6.2.dist-info/entry_points.txt,sha256=_oGcNpLupO0-cqakAmOFkfV3WquYQ2XrJCkd65foeIU,53
+awsipinventory-0.6.2.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+awsipinventory-0.6.2.dist-info/METADATA,sha256=mY98SLe_HTKjmwIpjwYjdYSTzXLTAP6i-gg4i-xzQxY,9491
+awsipinventory-0.6.2.dist-info/RECORD,,
