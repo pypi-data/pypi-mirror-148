@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: aiomarionette
+Version: 0.0.1
+Summary: Firefox Marionette client for asyncio
+Author: Dustin C. Hatch
+Author-email: dustin@hatch.name
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
