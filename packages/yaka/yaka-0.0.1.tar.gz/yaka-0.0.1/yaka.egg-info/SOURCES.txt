@@ -1,0 +1,5 @@
+setup.py
+yaka.egg-info/PKG-INFO
+yaka.egg-info/SOURCES.txt
+yaka.egg-info/dependency_links.txt
+yaka.egg-info/top_level.txt
