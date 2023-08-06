@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: dubletten-tool
+Version: 0.1.1
+Summary: APIS module for the VieCPro instance to perform manual deduplication of person instances
+Author: Gregor Pirgie
+Author-email: gregor.pirgie@oeaw.ac.at
+Requires-Python: >=3.8,<3.9
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
