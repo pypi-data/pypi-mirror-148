@@ -1,0 +1,14 @@
+acasclient/__init__.py,sha256=HehJ0ZdJTWL-uFmBYBcTodwKRNe80f6NuUEQI4mhIU8,138
+acasclient/acasclient.py,sha256=7N0nBcsaFPSac0-hyx_k8LRR_yuKmkVETKZdeo-a6-Y,51695
+acasclient/cli.py,sha256=kTIxSQAQonUNk8lGm5Ce4yGHY9KnOQAUYyDthVUi6HI,445
+acasclient/ddict.py,sha256=WZXd6l-m1mS_zq0lHIoe98cFXFjYkfwQr7DCSqj7Ghc,3264
+acasclient/interactions.py,sha256=X99jhPEVjV4MM8vWohKdH9b_2966YJU84r-HKvyJI58,1987
+acasclient/lsthing.py,sha256=Ne8Z0e0cigP6NxK7XbNPfsOunTyGS0B1OsC-52YBwRU,106403
+acasclient/validation.py,sha256=kAcrxLM9b37naZ8F0Si15CGh3j0XOx8U5mZ3_fW9c5o,8468
+acasclient-0.1.35.dist-info/AUTHORS.rst,sha256=NEAWPQzRMDsycuTCGf-l5H1kqAKhiyurFypLCeDhIcI,165
+acasclient-0.1.35.dist-info/LICENSE,sha256=KLR_nC_K7Hs9E5hGgATF6-M3VHd2ZrC9GmdiPTR8axM,1528
+acasclient-0.1.35.dist-info/METADATA,sha256=OdG34S73Y60_h5lngrxuXHU6Ipqm8q0polqeitV0Eik,1912
+acasclient-0.1.35.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+acasclient-0.1.35.dist-info/entry_points.txt,sha256=AKzdq1vTzqM_ww3blIMrgAE6tgmF3X_ZEPhE2rWz-oU,51
+acasclient-0.1.35.dist-info/top_level.txt,sha256=IEHa8OrQSEzCiJcnpzJ761jGSav35TJHTLB2gxwBAHI,11
+acasclient-0.1.35.dist-info/RECORD,,
