@@ -1,0 +1,6 @@
+matplotlib
+nibabel
+numpy
+pfmisc
+pillow
+pydicom
