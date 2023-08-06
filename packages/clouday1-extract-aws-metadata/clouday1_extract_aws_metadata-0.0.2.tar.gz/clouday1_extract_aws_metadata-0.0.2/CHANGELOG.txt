@@ -1,0 +1,8 @@
+Change Log
+==========
+
+0.0.2 (22/04/2022)
+------------------
+- First Release : Collect metadata from AWS Service,
+  Supported Service Include: Lambda, API Gateway, Cloudwatch, SNS, Step Function, Cognito, EC2, Dynamo DB, S3
+- Second Release: Fix some bug for dynamodb and add some new features like export to S3 bucket and write to dynamodb
