@@ -1,0 +1,6 @@
+jinja2
+numpy
+pip>=21.0.0
+portalocker
+setuptools>=41.0.0
+wheel
