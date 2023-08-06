@@ -1,0 +1,3 @@
+[console_scripts]
+invQ = invQ.calc_invQ:invQuat
+
