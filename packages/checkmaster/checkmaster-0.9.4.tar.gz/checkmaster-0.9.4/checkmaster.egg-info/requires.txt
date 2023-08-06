@@ -1,0 +1,5 @@
+coloredlogs
+distro
+psutil
+pyYaml
+requests
