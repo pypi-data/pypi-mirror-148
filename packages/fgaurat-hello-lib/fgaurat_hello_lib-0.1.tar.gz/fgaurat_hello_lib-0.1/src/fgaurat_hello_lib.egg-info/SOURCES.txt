@@ -1,0 +1,7 @@
+setup.cfg
+setup.py
+src/fgaurat_hello_lib.egg-info/PKG-INFO
+src/fgaurat_hello_lib.egg-info/SOURCES.txt
+src/fgaurat_hello_lib.egg-info/dependency_links.txt
+src/fgaurat_hello_lib.egg-info/requires.txt
+src/fgaurat_hello_lib.egg-info/top_level.txt
