@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: reahl-sqlalchemysupport
+Version: 6.0.1
+Summary: Support for using SqlAlchemy with Reahl.
+Home-page: http://www.reahl.org
+Maintainer: Iwan Vosloo
+Maintainer-email: iwan@reahl.org
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+License-File: COPYING
+Requires-Dist: reahl-component (<6.1,>=6.0)
+Requires-Dist: reahl-commands (<6.1,>=6.0)
+Requires-Dist: SQLAlchemy (<1.4.999,>=1.2.0)
+Requires-Dist: alembic (<1.7.999,>=0.9.6)
+
+Reahl is a web application framework that allows a Python programmer to work in terms of useful abstractions - using a single programming language.
+
+This package contains infrastructure necessary to use Reahl with SqlAlchemy or Elixir. 
+
