@@ -1,0 +1,11 @@
+notsotuf/__init__.py,sha256=GvsixpnM62v8hMyJOf-2JS9osvKEJvUBmtz-AuEveac,104
+notsotuf/client.py,sha256=1sYHouSIU-rRLNyUlQQEw2hG4x4dBjJ7Ao9DIKytOHE,9588
+notsotuf/common.py,sha256=izJaezh4zYD1RHArAr1EqxkgBSJeANV29Jcq7ncPmmM,4873
+notsotuf/repo.py,sha256=V15nS0D9IUX8TSMubnle_nghWcyWD-tOzGVEdoAyi-U,20433
+notsotuf/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+notsotuf/utils/windows.py,sha256=R8orAS9I5-IM-CF4XW6kjWZSn7zX2OaygAPgVhbbi2Q,1479
+notsotuf-2022.0.dist-info/LICENSE,sha256=-3xLeNpBf0ZY8_t9-JeNnBJILaz0AFPFqYlI-i9nwVA,1084
+notsotuf-2022.0.dist-info/METADATA,sha256=gYTvmi1Kof6XSEIY9_V9mGakrH1EIvqTsbi1vmukPQU,6725
+notsotuf-2022.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+notsotuf-2022.0.dist-info/top_level.txt,sha256=wZ1ketDcGUvYUx9xvETXlQHjS0MTVWgtitP5GOWwfVI,9
+notsotuf-2022.0.dist-info/RECORD,,
