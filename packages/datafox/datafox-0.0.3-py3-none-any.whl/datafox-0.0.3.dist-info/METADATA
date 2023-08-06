@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: datafox
+Version: 0.0.3
+Summary: "improve how we work with evolving data"
+Home-page: https://github.com/skn0tt/datafox
+Author: Simon Knott
+Author-email: datafox@simonknott.de
+License: MIT
+Project-URL: Bug Tracker, https://github.com/skn0tt/datafox/issues
+Project-URL: Discussions, https://github.com/skn0tt/datafox/discussions
+Project-URL: Changelog, https://github.com/skn0tt/datafox/releases
+Keywords: "datafox,data,test,dataframe,pandas"
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Information Technology
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: pystache
+Requires-Dist: scipy
+
+# datafox (working title, this name has a trademark on it)
+
+This repository houses my bachelor thesis project.
+
+
