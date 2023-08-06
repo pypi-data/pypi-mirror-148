@@ -1,0 +1,8 @@
+README.md
+setup.py
+pytaravis/__init__.py
+pytaravis.egg-info/PKG-INFO
+pytaravis.egg-info/SOURCES.txt
+pytaravis.egg-info/dependency_links.txt
+pytaravis.egg-info/requires.txt
+pytaravis.egg-info/top_level.txt
