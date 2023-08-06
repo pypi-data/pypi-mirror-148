@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: cvee
+Version: 0.0.5
+Summary: A set of tools for CV researchers
+Home-page: https://github.com/jianglongye/cvee
+Author: Jianglong Ye
+Author-email: jianglong.yeh@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/jianglongye/cvee/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# cvee
+
+A set of tools for CV researchers.
+
+## Installation
+
+We aim to limit our dependencies to the following libraries (which should be quite common):
+
+```
+torch
+numpy
+opencv2
+matplotlib
+pyyaml
+rich
+```
+
+And following libraries should be optional:
+
+```
+trimesh (for geometry process)
+open3d  (for 3d visualization)
+```
+
+### Install locally
+
+```bash
+pip install -e .
+```
+
+## Acknowledgement
+
+Some code is adapted from [mmcv](https://github.com/open-mmlab/mmcv/)
+and [detectron2](https://github.com/facebookresearch/detectron2/).
+
