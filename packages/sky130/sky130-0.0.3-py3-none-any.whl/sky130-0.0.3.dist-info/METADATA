@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: sky130
+Version: 0.0.3
+Summary: skywater gdsfactory pdk
+Home-page: https://github.com/gdsfactory/skywater130
+Author: gdsfactory
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: gdsfactory
+
+# sky130 0.0.3
+
+gdsfactory pdk based on [skywater130](https://github.com/google/skywater-pdk)
+
+## Installation
+
+`make install`
+
+## TODO
+
+- integrate with OpenRoad
+- define port orientation
+- add some sample netlist
+
+
