@@ -1,0 +1,10 @@
+pip_pin/__init__.py,sha256=UQRsWDWq9tvCpIrGVxUb0kOQJUadftirfUrAjr7IfMI,48
+pip_pin/commands.py,sha256=kvn5--QaFZPT50QE9EbwBAz_XzvryJ9KvHLbmfprvdU,4095
+pip_pin/egg_info.py,sha256=uVZaiDE8CdwiKrpe-ek5gqmCWZrN7qWwRtsGkgPvxp8,378
+pip_pin-0.0.8.dist-info/METADATA,sha256=rcE-FCEicajtSsSGRVhn0vOE7VEbxuTOlPSN9J63jGw,1980
+pip_pin-0.0.8.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+pip_pin-0.0.8.dist-info/develop_requires.txt,sha256=6z32MrxcWy4fm1QZFhKJ5-ZWQsCYlMkjBDFiYQAq2s4,11
+pip_pin-0.0.8.dist-info/entry_points.txt,sha256=Cwc7TBMlHfLbhQkScKGJxTZ2_Romqd5VYnGdIaWi8rI,251
+pip_pin-0.0.8.dist-info/tests_require.txt,sha256=KwEhTTLDgtvHO_a0k77beSYySvJ7rT7oiPZndLmxFMg,6
+pip_pin-0.0.8.dist-info/top_level.txt,sha256=CillEv4Z152bImEVi6V5SjDSN_9MnZx_j3pnIfRiF10,8
+pip_pin-0.0.8.dist-info/RECORD,,
