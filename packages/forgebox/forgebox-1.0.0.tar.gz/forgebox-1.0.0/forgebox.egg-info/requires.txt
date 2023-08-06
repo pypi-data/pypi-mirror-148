@@ -1,0 +1,4 @@
+category>=0.1.0
+jupyterlab_widgets
+ipywidgets
+pandas
