@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: sdj-toolbox
+Version: 0.2.0
+Summary: UNKNOWN
+Home-page: https://gitea.irisib.be/sdejongh/sdj_toolbox.git
+Author: Steve De Jongh
+Author-email: dejongh.st@gmail.com
+License: MIT
+Keywords: python toolbox helpers
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# SDJ ToolBox
+A simple collection of tools fort Python
+## BOOLEANS
+Contains several boolean functions
+- `is_int()` checks if a string can be converted in an integer or not
+- `is_float()` checks if a string can be converted in a float or not
+- `is_numeric()` checks if a string is a numerical expression or not
+
+Example:
+```Python
+from sdj_toolbox.booleans import is_int
+
+age = input("Enter your age: ")
+
+if not is_int(age):
+    print("That was not a correct input")
+```
+
+## CIPHERS
+Contains ciphers functions:
+- `rot_encode()` basic rotation encoding
+- `rot_decode()` basic rotation decoding
+- `rot13()` ROT13 encoding/decoding
+
+Note: those only exists for educational purpose.
+For real usage you should prefer using built-in `codecs.encode()` method.
+
