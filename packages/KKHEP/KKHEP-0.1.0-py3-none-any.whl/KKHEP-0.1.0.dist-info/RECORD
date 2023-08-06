@@ -1,0 +1,12 @@
+kkcoffea/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kkcoffea/processors.py,sha256=TdeWmJC05ai9CnIWnJKwYx5_jmerKIha_ZcTKZgGgRE,3722
+kkcoffea/samples.py,sha256=bL1ULYQ2sdAgMYo6UH_c3a0P7-1jyBFi1Ic_Pm51sUA,4108
+kkconfig/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kkconfig/local.py,sha256=LcitvyUAjRA2TpglzhO6sb_FhUECb2XW1kAjBpD8RVA,517
+kkdata/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kkdata/dm.py,sha256=eN7WPaP7q1pnBgTTEFJMPRMqeQXWnY5I5WpHxkO8dPo,4447
+kkplot/__init__.py,sha256=dUl5tvPGhz96-u9YMJa17QCRYQn-kdtLfBd26jlQMCk,2527
+KKHEP-0.1.0.dist-info/METADATA,sha256=EdqzD5fs39bX07Imq19W0qhLqJCK4qO7drRAuXpMsM8,878
+KKHEP-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+KKHEP-0.1.0.dist-info/top_level.txt,sha256=6-cApnA6HVdZBUWHS2QWBX6R4VHZwmqxGL3-cfeELKk,32
+KKHEP-0.1.0.dist-info/RECORD,,
