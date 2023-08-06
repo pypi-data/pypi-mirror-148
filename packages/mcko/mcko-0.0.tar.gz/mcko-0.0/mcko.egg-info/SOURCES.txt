@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+mcko/__init__.py
+mcko/function.py
+mcko.egg-info/PKG-INFO
+mcko.egg-info/SOURCES.txt
+mcko.egg-info/dependency_links.txt
+mcko.egg-info/not-zip-safe
+mcko.egg-info/top_level.txt
