@@ -1,0 +1,11 @@
+descaling/__init__.py,sha256=1c1RubeNxET7W8uQgbOXvPZ5UwB4AWItN-A5llr95S4,104
+descaling/utils.py,sha256=-kOc1qWRcSOS9PSJDdnW1TMwaE5Dsf__ASzPbk5wMCY,885
+descaling/desktop_environment/__init__.py,sha256=hmTSrJWDoPftfWAlXkJAOyVf9gVFbkIE8DNspLD4Psg,147
+descaling/desktop_environment/gnome.py,sha256=f0T7xSepRvqHMmkAnMlasqonu4MLnQFNKjUt6o76AAw,1348
+descaling/desktop_environment/interface.py,sha256=-cYTs-jHctVUfQFY-NDrzVjxnf3RNZoq_oz0ygGTqvU,479
+descaling/environment/__init__.py,sha256=oRbsKkXvuHxonqUJNFWmtLEy1abSn1ON5V2JVDAgZAQ,120
+descaling/environment/detect_environment.py,sha256=DzfmJj8tFOLjfFOQI_Dh3_TPjndJ9CdAteFkSlqrrug,1385
+descaling-1.0.0.dist-info/METADATA,sha256=yO39ecG16fX8X1ehXH4BjpNP3Ywo3rj9gyj0hViv6sU,185
+descaling-1.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+descaling-1.0.0.dist-info/top_level.txt,sha256=h0i9c1x7bnAKvdwJd7Yd-658dlVgu5UljPN4UdkWaaI,10
+descaling-1.0.0.dist-info/RECORD,,
