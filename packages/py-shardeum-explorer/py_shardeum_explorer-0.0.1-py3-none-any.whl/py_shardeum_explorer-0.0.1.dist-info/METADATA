@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: py-shardeum-explorer
+Version: 0.0.1
+Summary: A minimal, complete, python API for Shardeum Explorer.
+Home-page: https://github.com/iSumitBanik/py-shardeum-explorer
+Author: Sumit Banik
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.8
+License-File: LICENSE.md
+Requires-Dist: requests
+
+UNKNOWN
+
