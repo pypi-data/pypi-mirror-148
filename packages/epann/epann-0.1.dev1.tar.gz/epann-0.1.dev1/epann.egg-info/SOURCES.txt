@@ -1,0 +1,8 @@
+README.md
+setup.py
+epann.egg-info/PKG-INFO
+epann.egg-info/SOURCES.txt
+epann.egg-info/dependency_links.txt
+epann.egg-info/not-zip-safe
+epann.egg-info/requires.txt
+epann.egg-info/top_level.txt
