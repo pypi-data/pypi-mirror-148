@@ -1,0 +1,3 @@
+[consle_scripts]
+rundea=deatool.__main__:main
+
