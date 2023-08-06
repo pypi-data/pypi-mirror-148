@@ -1,0 +1,9 @@
+botd-80.data/data/share/botd/botd.service,sha256=pBsGOqLOR7WsHGhMrralA4gC19yM9J18oxSNDypyFbM,257
+botd-80.data/data/share/doc/botd/README.rst,sha256=wjkJmxuOrkd-9oIVNz8yduE8TSKPrTpkh5kjXpUV4zo,1776
+botd-80.data/scripts/botcmd,sha256=8op8VKphQ4i-ffaPjlWmPRHNG41Tj0xtT_B0tuMgGkE,783
+botd-80.data/scripts/botctl,sha256=b3ujgDDoADgGzg8UdYXPEB21KGn9ofpOKe1gaPpD1Ow,192
+botd-80.data/scripts/botd,sha256=4K2yGtyWKTfONbkfwSM0p7MSIgqXAcV6uZIj1h4wbfU,660
+botd-80.dist-info/METADATA,sha256=j5zSVyPWycqYjaSEBD62Z6M5mdgmWh-0_G7H5NIjGJ8,2222
+botd-80.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+botd-80.dist-info/top_level.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+botd-80.dist-info/RECORD,,
