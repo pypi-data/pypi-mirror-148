@@ -1,0 +1,5 @@
+#!/opt/_internal/cpython-3.9.12/bin/python3.9
+import sys
+from lib2to3.main import main
+
+sys.exit(main("lib2to3.fixes"))
