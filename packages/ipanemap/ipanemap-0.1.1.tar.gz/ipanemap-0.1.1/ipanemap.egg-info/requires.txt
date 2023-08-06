@@ -1,0 +1,11 @@
+setuptools
+wheel
+cython
+scipy
+numpy
+sklearn
+pyyaml
+matplotlib
+
+[:python_version >= "3.6"]
+importlib
