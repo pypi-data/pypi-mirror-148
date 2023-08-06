@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: backup-timebox
+Version: 0.2.1
+Summary: Backup manager
+Author: Mathias Millet <mathias.millet@mailden.eu>
+License: GNU General Public License v3.0
+Keywords: ["backup"]
+Platform: UNKNOWN
+Classifier: Topic :: System :: Archiving :: Backup
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: pydantic (>=1.0)
+Requires-Dist: blessings (>=1.7)
+Requires-Dist: requests (>=2.13)
+Requires-Dist: typing-extensions
+Requires-Dist: python-dotenv
+Requires-Dist: pyyaml
+Requires-Dist: freezegun
+Provides-Extra: dev
+Requires-Dist: pytest (>=7.0) ; extra == 'dev'
+Requires-Dist: pre-commit (>=2.0) ; extra == 'dev'
+Requires-Dist: jinja2 ; extra == 'dev'
+
+UNKNOWN
+

@@ -1,0 +1,2 @@
+[console_scripts]
+timebox = timebox:__main__.main
