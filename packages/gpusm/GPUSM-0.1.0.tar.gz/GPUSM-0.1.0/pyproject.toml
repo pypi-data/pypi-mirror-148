@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "GPUSM"
+version = "0.1.0"
+description = "Cross-platform lib for GPU status monitoring in Python"
+authors = ["XavierJiezou <878972272@qq.com>"]
+readme = "README.md"
+repository = "https://github.com/XavierJiezou/GPUSM"
+homepage = "https://github.com/XavierJiezou/GPUSM"
+keywords = ["GPU status", "monitor"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+psutil = "^5.9.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+autopep8 = "^1.6.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "tsinghua-pypi"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+
+[tool.pytest.ini_options]
+addopts = "-ra -q"
+testpaths = ["tests", "integration"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test"

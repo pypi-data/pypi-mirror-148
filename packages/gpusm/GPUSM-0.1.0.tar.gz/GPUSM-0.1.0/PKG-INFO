@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: gpusm
+Version: 0.1.0
+Summary: Cross-platform lib for GPU status monitoring in Python
+Home-page: https://github.com/XavierJiezou/GPUSM
+Keywords: GPU status,monitor
+Author: XavierJiezou
+Author-email: 878972272@qq.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: psutil (>=5.9.0,<6.0.0)
+Project-URL: Repository, https://github.com/XavierJiezou/GPUSM
+Description-Content-Type: text/markdown
+
+# GPUSM
+
+Cross-platform lib for GPU status monitoring in Python.
+
+## Install
+
+```bash
+pip install gpusm
+```
+
+## Usage
+
+`$ gpusm`
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md)
+
+## License
+
+[MIT License](License)
+
+## References
+
+- [gpustat](https://github.com/wookayin/gpustat)
+- [Python Packaging User Guide](https://packaging.python.org/en/latest/tutorials/packaging-projects/)
+- [psutil documentation](https://psutil.readthedocs.io/en/latest/)
