@@ -1,0 +1,13 @@
+LICENSE.txt
+README.rst
+setup.cfg
+setup.py
+certbot_dns_ngenix/__init__.py
+certbot_dns_ngenix/dns_ngenix.py
+certbot_dns_ngenix/ngenix_api.py
+certbot_dns_ngenix.egg-info/PKG-INFO
+certbot_dns_ngenix.egg-info/SOURCES.txt
+certbot_dns_ngenix.egg-info/dependency_links.txt
+certbot_dns_ngenix.egg-info/entry_points.txt
+certbot_dns_ngenix.egg-info/requires.txt
+certbot_dns_ngenix.egg-info/top_level.txt
