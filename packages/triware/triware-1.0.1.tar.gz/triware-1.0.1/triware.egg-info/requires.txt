@@ -1,0 +1,2 @@
+azure_iot_device==2.10.0
+paho_mqtt==1.6.1
