@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: classevivaAPI
+Version: 0.0.7
+Summary: Classeviva Python API
+Home-page: https://github.com/Lioydiano/Classeviva
+Author: FLAK-ZOSO
+Author-email: mattia.marchese.2006@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/Lioydiano/Classeviva/archive/refs/tags/v0.0.7.tar.gz
+Keywords: classeviva,school,api
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+License-File: LICENSE
+
+UNKNOWN
+
