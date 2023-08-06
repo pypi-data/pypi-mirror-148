@@ -1,0 +1,11 @@
+masakhanePreprocessor/__init__.py,sha256=j7ZLF2ckCbPoXrkSmRuR0ekcxzlfN_m7HcQxRWCdQWc,59
+masakhanePreprocessor/langs.py,sha256=A06hm87eUXcQt4ttoSfElQrzJJGLrnp0SXmoJxlM3U0,1281
+masakhanePreprocessor/languages.json,sha256=JpIU3JRF_SA0s9dyh8aOezlMOg8XbhQ5Hh_dVI0fRBE,125260
+masakhanePreprocessor/preprocess.py,sha256=BGRWBtM6bTe9jI4nUQRSDDhaMsTlKWlL0labBOb0VtI,8003
+masakhanePreprocessor/rules/fon.json,sha256=36DGvQunVZQr_q44FtRfsBUI_tgT4-a2JOyBpkmOK3k,371
+masakhanePreprocessor/rules/ig.json,sha256=vfGKJpdfsBxvwkp1CpwU_u4ds0P5Bk5p3_dEjeAG5Xw,51
+masakhanePreprocessor/rules/yo.json,sha256=EWRarFbgUEAF4uo-MU236_nA-0Lcp3_gKy_RYHPlH0E,68
+masakhanePreprocessor-0.0.6.dist-info/METADATA,sha256=xcDX_Es3wAN5tH30AYUkVBZa5v37D9lcBXlvg9ILB3g,3360
+masakhanePreprocessor-0.0.6.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+masakhanePreprocessor-0.0.6.dist-info/top_level.txt,sha256=OnDp3O8iQIc4X2HbA6f28jalfNY0w-PSYoRJ7dgsqxo,22
+masakhanePreprocessor-0.0.6.dist-info/RECORD,,
