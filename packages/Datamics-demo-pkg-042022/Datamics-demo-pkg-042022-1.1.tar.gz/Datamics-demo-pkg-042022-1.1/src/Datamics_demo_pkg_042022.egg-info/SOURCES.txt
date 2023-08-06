@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+src/Datamics_demo_pkg_042022.egg-info/PKG-INFO
+src/Datamics_demo_pkg_042022.egg-info/SOURCES.txt
+src/Datamics_demo_pkg_042022.egg-info/dependency_links.txt
+src/Datamics_demo_pkg_042022.egg-info/top_level.txt
+src/datamics_package/__init__.py
+src/datamics_package/example_code.py
