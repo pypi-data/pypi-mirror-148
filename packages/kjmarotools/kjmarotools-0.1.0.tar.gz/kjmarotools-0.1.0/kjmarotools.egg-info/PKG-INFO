@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: kjmarotools
+Version: 0.1.0
+Summary: Python tools for photo, media management and other purposes
+Home-page: https://github.com/fjmaro/Kjmarotools
+Author: Francisco José Mata Aroco
+Author-email: 
+License: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Topic :: Multimedia
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.9, <4
+License-File: LICENSE
+
+# KjmaroTools
+KjmaroTools is a Python library containing several tools developed for simplification and to be used in other fjmaro libraries.
+
+- The source code can be checked out from the github repository with: git clone git://github.com/fjmaro/KjmaroTools.git
+
+![Python Logo](https://www.python.org/static/community_logos/python-logo.png "Python")
+
+
