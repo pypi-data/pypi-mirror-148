@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/CSharpTK/__init__.py
+src/CSharpTK.egg-info/PKG-INFO
+src/CSharpTK.egg-info/SOURCES.txt
+src/CSharpTK.egg-info/dependency_links.txt
+src/CSharpTK.egg-info/top_level.txt

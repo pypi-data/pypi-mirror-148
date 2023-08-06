@@ -1,0 +1,49 @@
+# CSharpTK
+
+___
+
+## 简介
+### `C#`开发工具库
+#### 在电脑上快捷生成`C#`项目。全由`XiangQinxi`开发，使用`os.system`进行生成`C#`开发项目
+#### 命名使用`C#`的`C`加上`C#`的读音`See Sharp`的`Sharp`组成前名，有Toolkit的缩写TK组成后名。寓意C#快捷工具。
+
+## 快速上手
+
+```python
+from CSharpTK import *
+
+App = DotNetSimple()  # 创建个执行DotNet程序的模块
+App.CreatorConsoleApp(F=False)  # 创建一个控制台程序  F 参数表示生成的时候是否覆盖相同的内容。
+Program = Program()  # 创建个写入程序的模块
+Program.Clear()  # 清空原有内容
+Program.ConsoleWirteLineStrings("Hello World", End="\n")  # End 参数表示是否写入一行代码后是否要换行
+Program.Close()  # 关闭文件连接，不然会出错
+App.RunAppliction()  # 运行应用程序
+```
+#### 之后会生成大量文件，在本目录会生成一个`.cs`的文件，里面就是程序运行是的主程序。本库编译全由`os.system`输出
+
+## 其他项目
+### 除了控制台应用，还可以创建其他的项目，如`WPF`, `WinForms`等。
+#### 只需将`App的CreatorConsoleApp`换成`CreatorWPFApplication`或者`CreatorWindowsForms`即可。
+
+### 代码
+
+```python
+from CSharpTK import *
+
+App = DotNetSimple()  # 创建个执行DotNet程序的模块
+App.CreatorWindowsForms(F=False)  # 创建一个Windows窗体程序  F 参数表示生成的时候是否覆盖相同的内容。
+
+App.RunAppliction()  # 运行应用程序
+```
+
+## 贡献者
+#### 作者 : XiangQinxi 
+#### 维护人员 : XiangQinxi
+
+## 安全政策
+#### 本程序不涉及任何侵权。全使用`os.system`输出，如果有人涉及法律，本人毫不相关，这是个开源项目，用于Python快捷创建C#项目使用。请不要把这个程序用来制作一些不法程序。也不要以个人或团队名义宣称有此项目的所有权，这个项目由个人开发，不属于任何人，否则侵权必究！请遵循此条约。
+
+## 版本
+### Version 0.1
+#### 发布初始版本。
