@@ -1,0 +1,10 @@
+zwocr/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zwocr/__version__.py,sha256=udO4Br_V8r5Aiceu8eY-2pWT_UVS9Z5ns0TGj_1rzoY,292
+zwocr/cmd.py,sha256=XWDgy3S_feKTBNB1X3qLzyn87tEEFfg0Yj0_Olwae5M,1379
+zwocr/image.py,sha256=JoK4iy0UjFkVaDhcJ9DUuD3fNA8gcYLnCSH-jz4lAAY,539
+zwocr/paddle.py,sha256=90baWtNeepWV_kbgICH_bVgPpg4i2y5598ci4L6SfYE,698
+zwocr-0.0.6.dist-info/LICENSE,sha256=u-k3pdS046rxrlusCu-PdSHHdF5pgn1GgR1IU0CfoyI,1068
+zwocr-0.0.6.dist-info/METADATA,sha256=slOlYqg0DC25XlxGGrFw9eLSMfqC3AVYvNNEeWG4vlc,585
+zwocr-0.0.6.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+zwocr-0.0.6.dist-info/top_level.txt,sha256=Njv-PdK0tuaTzCt0ReWVbTsoHCInrpHEdIOzia32lVc,6
+zwocr-0.0.6.dist-info/RECORD,,
