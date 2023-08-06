@@ -1,0 +1,8 @@
+setup.py
+stylometer/__init__.py
+stylometer/stylometer.py
+stylometer.egg-info/PKG-INFO
+stylometer.egg-info/SOURCES.txt
+stylometer.egg-info/dependency_links.txt
+stylometer.egg-info/requires.txt
+stylometer.egg-info/top_level.txt
