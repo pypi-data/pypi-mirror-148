@@ -1,0 +1,83 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# Data files #
+######################
+*.csv
+*.mid
+*.wav
+*.sv
+*.mscz
+*.mp4
+*.xml
+*.json
+
+# OS generated files #
+######################
+.venv/
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.vscode/.ropeproject/config.py
+.gitignore
+objectdb
+
+# Alignment generated files #
+######################
+*_fmt3x.txt
+*_hmm.txt
+*_match.txt
+*_spr.txt
+
+# Example data should be included #
+!example_data/Mazurka 17-4/Mazurka 17-4, Friedberg DA.wav
+!example_data/Mazurka 17-4/Mazurka 17-4, Friedberg DA.mscz
+!example_data/Mazurka 17-4/Mazurka 17-4, Friedberg DA.mid
+
+music_features/test_midi/MorpheuS Für Elise/.mscbackup/.eliseB.xml_output34-edited.mscz,
+music_features/Chopin_Ballade_No._2_Piano_solo_fmt3x.txt
+music_features/Chopin_Ballade_No._2_Piano_solo_hmm.txt
+music_features/test_midi/Chopin_Ballade_No._2_Piano_solo.mid
+.env
+.vscode/settings.json
+music_features/.doit.db.db
+.doit.db.db
+__pycache__/
+music_features/__pycache__/
+.vscode/launch.json
+tests/test_data/piece_directory_structure/*
+.build
+.test_install
+music_features/bin_old
+build
+cosmodoit.egg-info
+dist
