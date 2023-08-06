@@ -1,0 +1,1 @@
+Usage: urlencode "string to encode"
