@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: awesome-dblp
+Version: 1.0
+Summary: A simple python package to search dblp by keywords and venues
+Home-page: https://github.com/neardws/awesome-dblp
+Author: neardws
+Author-email: neard.ws@gmail.com
+License: GPLv3
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: tqdm
+Requires-Dist: lxml
+Requires-Dist: requests
+Requires-Dist: thefuzz
+Requires-Dist: csv
+Requires-Dist: fake-useragent
+
+UNKNOWN
+
+
