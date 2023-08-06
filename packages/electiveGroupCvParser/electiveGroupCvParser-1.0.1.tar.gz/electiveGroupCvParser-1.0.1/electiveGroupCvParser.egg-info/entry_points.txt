@@ -1,0 +1,2 @@
+[console_scripts]
+electiveGroupCvParser = electiveGroupCvParser.command_line:main
