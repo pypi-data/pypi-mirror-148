@@ -1,0 +1,17 @@
+voxelwise_tutorials/__init__.py,sha256=uZsygMXMKRw-7qhWojAjnpm8GFPXU92xW6XA8O5GwFY,22
+voxelwise_tutorials/delayer.py,sha256=Xt1UoALKd0YMCsUAgHT5E5hNZdbDmYQ2fQhEih0udSw,3480
+voxelwise_tutorials/io.py,sha256=r2SUDuIABq_-Q7Q9YMP_IHFf-aUf91nZqmrxK2YBEms,10088
+voxelwise_tutorials/progress_bar.py,sha256=mNfE29MxBYsJugWwhQ_2PPrONeVWsQn1QukV6Q-BK04,5697
+voxelwise_tutorials/regression_toy.py,sha256=aMXyUnPFOnUkmSOMi73YxCK2SE1y60-ZMSa0xB5pYMU,7473
+voxelwise_tutorials/utils.py,sha256=8t3vjXvbyI9F9lDTORjkosT3u29A7dZs0B44RXiBBak,2794
+voxelwise_tutorials/viz.py,sha256=vezre5rj2wOSBuJSpBJf7tmH0gmq72aOQRw5Ty4hEzc,17455
+voxelwise_tutorials/wordnet.py,sha256=UyxlXAEI791GbfOwP719QPISmQwjIE63ecu10wTPi90,16535
+voxelwise_tutorials/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+voxelwise_tutorials/tests/test_delayer.py,sha256=W4ElTBBV_GAgix5cUCbQEwzo7Z8Xbk7I9wEt-r0xzZ8,1299
+voxelwise_tutorials/tests/test_mappers.py,sha256=eiTuSP5g1TgOBH2eR8zD04G9mVm3K7BfVmQZsbUoDoM,1910
+voxelwise_tutorials/tests/test_utils.py,sha256=THG8PP8uZofZHj7vmPO5hg6Qtd-u5_30y2mruCcR5jM,715
+voxelwise_tutorials-0.1.3.dist-info/LICENSE.md,sha256=XiWcpYBcX5t5ONb68YN1aReBhL7oiNc8VTPA3WY-BW4,1534
+voxelwise_tutorials-0.1.3.dist-info/METADATA,sha256=wxDcFGnJICfkS_KXCllPkRmjPZU3TpAGdLVW0gQBOiU,4488
+voxelwise_tutorials-0.1.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+voxelwise_tutorials-0.1.3.dist-info/top_level.txt,sha256=scsCG6PV3NQs4JN9eTssXJrah6noqBeyxHnk_dFdsi0,20
+voxelwise_tutorials-0.1.3.dist-info/RECORD,,
