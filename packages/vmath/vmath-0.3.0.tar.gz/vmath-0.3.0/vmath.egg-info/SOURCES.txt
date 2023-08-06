@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+vmath.pyi
+./vmath.cpp
+vmath.egg-info/PKG-INFO
+vmath.egg-info/SOURCES.txt
+vmath.egg-info/dependency_links.txt
+vmath.egg-info/top_level.txt
