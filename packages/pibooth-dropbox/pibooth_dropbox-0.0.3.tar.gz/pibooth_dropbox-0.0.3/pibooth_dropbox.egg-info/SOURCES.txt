@@ -1,0 +1,13 @@
+LICENSE
+README.rst
+setup.py
+pibooth_dropbox/__init__.py
+pibooth_dropbox/flow.py
+pibooth_dropbox/plugin.py
+pibooth_dropbox.egg-info/PKG-INFO
+pibooth_dropbox.egg-info/SOURCES.txt
+pibooth_dropbox.egg-info/dependency_links.txt
+pibooth_dropbox.egg-info/entry_points.txt
+pibooth_dropbox.egg-info/not-zip-safe
+pibooth_dropbox.egg-info/requires.txt
+pibooth_dropbox.egg-info/top_level.txt
