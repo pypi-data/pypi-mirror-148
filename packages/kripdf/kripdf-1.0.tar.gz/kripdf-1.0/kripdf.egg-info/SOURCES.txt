@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+kripdf.egg-info/PKG-INFO
+kripdf.egg-info/SOURCES.txt
+kripdf.egg-info/dependency_links.txt
+kripdf.egg-info/top_level.txt
