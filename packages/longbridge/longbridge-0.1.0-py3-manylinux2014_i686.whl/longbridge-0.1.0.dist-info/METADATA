@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: longbridge
+Version: 0.1.0
+Summary: A Python library for Longbridge Open API
+License: MIT
+Author: flisky
+Author-email: jifeng.yin@longbridge.sg
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Programming Language :: Rust
+Classifier: Topic :: Office/Business :: Financial
+Requires-Dist: importlib-metadata (>=4,<5); python_version < "3.8"
