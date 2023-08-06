@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+framulent/VERSION
+framulent/__init__.py
+framulent/engine.py
+framulent/mypy_plugin.py
+framulent/py.typed
+framulent.egg-info/PKG-INFO
+framulent.egg-info/SOURCES.txt
+framulent.egg-info/dependency_links.txt
+framulent.egg-info/requires.txt
+framulent.egg-info/top_level.txt
