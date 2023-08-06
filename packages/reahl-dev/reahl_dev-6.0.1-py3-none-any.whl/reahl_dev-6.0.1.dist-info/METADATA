@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: reahl-dev
+Version: 6.0.1
+Summary: The core Reahl development tools.
+Home-page: http://www.reahl.org
+Maintainer: Iwan Vosloo
+Maintainer-email: iwan@reahl.org
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+License-File: COPYING
+Requires-Dist: reahl-component (<6.1,>=6.0)
+Requires-Dist: reahl-tofu (<6.1,>=6.0)
+Requires-Dist: reahl-stubble (<6.1,>=6.0)
+Requires-Dist: Babel (<2.9.999,>=2.1)
+Requires-Dist: twine (<3.8.9999,>=1.15.0)
+Requires-Dist: wheel (>=0.34.0)
+Requires-Dist: tzlocal (<4.1.9999,>=2.0.0)
+Requires-Dist: setuptools (>=51.0.0)
+Requires-Dist: pip (>=10.0.0)
+Requires-Dist: toml
+
+Reahl is a web application framework that allows a Python programmer to work in terms of useful abstractions - using a single programming language.
+
+Reahl-dev is the component containing general Reahl development tools. 
+
