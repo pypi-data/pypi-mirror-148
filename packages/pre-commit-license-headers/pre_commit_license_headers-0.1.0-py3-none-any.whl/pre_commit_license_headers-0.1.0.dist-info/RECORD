@@ -1,0 +1,8 @@
+pre_commit_license_headers/__init__.py,sha256=YRj6i31B11uKxknn38vUZJxufu74wyI1Z3EyfSCWn5U,238
+pre_commit_license_headers/check_license_headers.py,sha256=jp21KkdTIs9mwiru2BUoe3jGchcnFWqu5yEZu2wN4-s,6692
+pre_commit_license_headers/file_types.py,sha256=qi4a27tUG57KVF9kQrX_ouEdTzHjTpGkOPIjffE3Etk,572
+pre_commit_license_headers-0.1.0.dist-info/entry_points.txt,sha256=HQXRqztVuiM-cjzDt8_FsmvChuHZGYiZui5cF4R8_yY,95
+pre_commit_license_headers-0.1.0.dist-info/LICENSE,sha256=7UWqrIiWJ8HpSv-Bhoo6qA9PfP0bF-zL6S-45tmWbbo,1554
+pre_commit_license_headers-0.1.0.dist-info/WHEEL,sha256=DRf8A_Psd1SF2kVqTQOOFU1Xzl3-A2qljAxBMTOusUs,83
+pre_commit_license_headers-0.1.0.dist-info/METADATA,sha256=sa8sPYzVs_taBab60GMzCf8AHwQtTYn7n19NZ3J8aw4,4104
+pre_commit_license_headers-0.1.0.dist-info/RECORD,,
