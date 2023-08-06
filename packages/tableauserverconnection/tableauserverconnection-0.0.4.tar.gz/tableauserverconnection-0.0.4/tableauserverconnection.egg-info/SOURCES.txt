@@ -1,0 +1,7 @@
+setup.py
+tableauserverconnection/tableauserverconnection.py
+tableauserverconnection.egg-info/PKG-INFO
+tableauserverconnection.egg-info/SOURCES.txt
+tableauserverconnection.egg-info/dependency_links.txt
+tableauserverconnection.egg-info/requires.txt
+tableauserverconnection.egg-info/top_level.txt
