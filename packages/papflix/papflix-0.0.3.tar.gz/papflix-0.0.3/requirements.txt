@@ -1,0 +1,6 @@
+pyjarowinkler==1.8
+PySide2==5.15.2.1
+python_Levenshtein==0.12.2
+requests==2.27.1
+setuptools==58.1.0
+tmdbv3api==1.7.6
