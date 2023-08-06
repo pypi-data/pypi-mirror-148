@@ -1,0 +1,12 @@
+friendly_matrix/__init__.py,sha256=ntGF5P5b7UG70XLAfHO_PINWQR3KV_ZYjNqdUgqL1vQ,135
+friendly_matrix/compute_matrix.py,sha256=87NI6uFDy4t2gLgA9zRNxiG_sBoJscsvUqV5gJkHi6o,4278
+friendly_matrix/constants.py,sha256=O16JMnvZFc2faLXI73o-UgMmRqr6qu0MmtoE-sWeQFA,82
+friendly_matrix/formatting.py,sha256=LgnETNQTO0Qzv4nzZHEqjvk7cm4oUnTcpYKHI26yZQk,5260
+friendly_matrix/friendly_matrix.py,sha256=ils66qGD5RUbzzcKfJQlTVv_DKX3s8OZdAGaOPntoTU,40336
+friendly_matrix/methods.py,sha256=idM-wwh8L7X62ov3SFgBp78abFrmRZnTN6CZcB5XUIM,430
+friendly_matrix/operations.py,sha256=CKLX3Yh3hWCovcY_RvIDrSiBnmnbu2PfNy7tdccQot8,10165
+numpy_string_indexed-0.0.3.dist-info/LICENSE,sha256=fqL2BdvghJdGw_Xs4iX0HuI1FQIZ5T-gGAjWfhdvBcE,1090
+numpy_string_indexed-0.0.3.dist-info/METADATA,sha256=YPwla_9SG0nrWIBPuWuiAKN4jgZwA2FKtdpvWe62NRs,5865
+numpy_string_indexed-0.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+numpy_string_indexed-0.0.3.dist-info/top_level.txt,sha256=I0zmLfHVY-IM1AIbPTG_Sn4NuHfbOhdljCsWbFjpzIk,16
+numpy_string_indexed-0.0.3.dist-info/RECORD,,
