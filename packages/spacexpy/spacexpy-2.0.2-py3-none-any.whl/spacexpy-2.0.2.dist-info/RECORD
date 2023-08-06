@@ -1,0 +1,11 @@
+spacexpy/__init__.py,sha256=-97HgNHvhwaRhqEvrbeJPfcSVDMAqBVQ5FTUGr9YO5I,54
+spacexpy/spacex.py,sha256=snz5x2rq1FqesBbNrHDEBq70Rg-4LYi0wWnkbRLV3wg,2725
+spacexpy/spacexerror.py,sha256=SW5xKUQ9-wHUn3hLNonGp-vmg4I34BRKJbzp2QvMPU4,204
+spacexpy/spacexhttp.py,sha256=du6vW-Yu2tZPDPIMvWX2JIZrn5KdcB4rUlOtbuL6lZg,475
+spacexpy/spacexmodel.py,sha256=i4Qs3H8el6MpUPD9R3szvvs2mysx5OukJUcd0-xNydk,2100
+spacexpy/spacexrequester.py,sha256=laaj2tv10CUcXzs6ycbwRFNSug3z-_6YCssUfTczF7E,5232
+spacexpy-2.0.2.dist-info/LICENSE,sha256=GIJMbffhHIfv4nx0ls2Uot7zU-EwvSXD0osbkyG9Aus,1088
+spacexpy-2.0.2.dist-info/METADATA,sha256=c24hiSQyLEG6-QoYHTlg3-BGQx5F2WvMjXUhwSN4A5M,2582
+spacexpy-2.0.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+spacexpy-2.0.2.dist-info/top_level.txt,sha256=jDnpBRan6yc77RTAI1FHai6JiOSOR4CjNFFi8c20dpU,9
+spacexpy-2.0.2.dist-info/RECORD,,
