@@ -1,0 +1,9 @@
+ppackexample/__init__.py,sha256=_5zYIHTjXhki5mXYHTvVqMfwM19Dx-KgYopZhG9Qo3o,178
+ppackexample/add.py,sha256=TSnVJYwY0ke1gdL9osdi9HUabMd83vjg9Vf69peGH4c,40
+ppackexample/divide.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ppackexample/subtract.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ppackexample/times.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ppackexample-0.0.1.dist-info/METADATA,sha256=ua88XoI8CKsssMV3OjMzE6FjJb4YMVSwWG0bG1e5fA0,837
+ppackexample-0.0.1.dist-info/WHEEL,sha256=WzZ8cwjh8l0jtULNjYq1Hpr-WCqCRgPr--TX4P5I1Wo,110
+ppackexample-0.0.1.dist-info/top_level.txt,sha256=vXfGeImmbGALd6JtO6k15V7B8VbFAOPWMqOwZ0DmH-Y,13
+ppackexample-0.0.1.dist-info/RECORD,,
