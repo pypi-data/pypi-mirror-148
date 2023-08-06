@@ -1,0 +1,5 @@
+persuader-technology-automata-core>=0.1.5
+persuader-technology-automata-position-repository==0.0.4
+persuader-technology-automata-exchange-rate-repository==0.0.1
+persuader-technology-automata-oracles==0.0.7
+persuader-technology-automata-trade-strategy==0.0.3
