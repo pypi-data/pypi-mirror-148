@@ -1,0 +1,14 @@
+cryptography
+Deprecated
+GitPython
+PyGithub
+python-gitlab
+PyYAML
+requests
+urllib3
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[testing]
+pytest
