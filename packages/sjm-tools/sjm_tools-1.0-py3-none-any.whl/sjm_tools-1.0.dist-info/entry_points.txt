@@ -1,0 +1,2 @@
+[console_scripts]
+qsjm = sjm_tools.qsjm:main
