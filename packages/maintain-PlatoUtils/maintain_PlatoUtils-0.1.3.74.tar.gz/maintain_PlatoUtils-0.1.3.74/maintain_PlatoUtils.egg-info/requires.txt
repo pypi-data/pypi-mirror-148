@@ -1,0 +1,9 @@
+numpy
+nebula-python
+pandas
+flashtext
+gensim==3.8.3
+tensorflow
+stellargraph
+networkx
+chardet
