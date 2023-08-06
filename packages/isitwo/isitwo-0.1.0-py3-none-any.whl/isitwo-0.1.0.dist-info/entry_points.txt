@@ -1,0 +1,3 @@
+[console_scripts]
+isitwo=isitwo.main:app
+
