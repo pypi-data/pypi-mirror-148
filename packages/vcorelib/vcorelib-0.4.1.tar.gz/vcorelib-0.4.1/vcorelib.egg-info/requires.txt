@@ -1,0 +1,17 @@
+ruamel.yaml
+tomli
+tomli-w
+ruamel.yaml
+tomli
+tomli-w
+
+[test]
+setuptools-wrapper
+types-setuptools
+pylint
+flake8
+pytest
+pytest-cov
+mypy
+black
+isort
