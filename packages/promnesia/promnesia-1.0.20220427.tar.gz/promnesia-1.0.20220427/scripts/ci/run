@@ -1,0 +1,36 @@
+#!/bin/bash -eu
+
+cd "$(dirname "$0")"
+cd ../.. # git root
+
+if ! command -v sudo; then
+    # e.g. CI doesn't have it..
+    function sudo {
+        "$@"
+    }
+fi
+
+if [ -n "${CI-}" ]; then
+    # TODO: pyjq is not necessary anymore? will keep CI deps just in case I guess
+    PYJQ_DEPS=('autoconf' 'automake' 'libtool') # see https://github.com/mwilliamson/jq.py#installation
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        # Mac OSX
+        brew install "${PYJQ_DEPS[@]}"
+
+        # TODO hmm. this should be in setup.py?
+        brew install libmagic # for python-magic
+    else
+        sudo apt update
+
+        # TODO also need to warn from readme??
+        sudo apt install "${PYJQ_DEPS[@]}" python3-dev
+    fi
+fi
+
+PY_BIN="python3"
+if ! command -v python3 &> /dev/null; then
+    PY_BIN="python"
+fi
+
+"$PY_BIN" -m pip install --user tox
+"$PY_BIN" -m tox
