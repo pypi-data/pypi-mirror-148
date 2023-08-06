@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: pseudoprimes
+Version: 2022.4.27.dev0
+Summary: Find prime numbers
+Home-page: https://github.com/oittaa/pseudoprimes-py
+Author: Oittaa
+Author-email: 
+License: UNKNOWN
+Keywords: prime,primes,pseudoprimes,primality
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Pseudoprimes
+
+Test and find prime numbers.
+
+```python
+import pseudoprimes
+pseudoprimes.is_prime(11)
+>> True
+
+pseudoprimes.next_prime(3)
+>> 5
+
+pseudoprimes.prev_prime(100)
+>> 97
+```
+
+## Installation
+
+```bash
+pip install pseudoprimes
+```
+
+## Probabilistic or deterministic?
+
+The used Miller–Rabin algorithm is deterministic for values until 3317044064679887385961981. Numbers larger than that are tested using a probabilistic primality test.
+
+
