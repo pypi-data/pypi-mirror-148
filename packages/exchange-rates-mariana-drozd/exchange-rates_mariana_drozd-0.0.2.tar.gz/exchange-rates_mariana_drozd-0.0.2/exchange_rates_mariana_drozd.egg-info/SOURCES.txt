@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+exchange_rates_mariana_drozd/__init__.py
+exchange_rates_mariana_drozd/exchange_rates.py
+exchange_rates_mariana_drozd.egg-info/PKG-INFO
+exchange_rates_mariana_drozd.egg-info/SOURCES.txt
+exchange_rates_mariana_drozd.egg-info/dependency_links.txt
+exchange_rates_mariana_drozd.egg-info/requires.txt
+exchange_rates_mariana_drozd.egg-info/top_level.txt
