@@ -1,0 +1,12 @@
+LICENCE
+README.md
+setup.py
+pyquerylist/__init__.py
+pyquerylist/examples.py
+pyquerylist/pyquerylist.py
+pyquerylist/version.py
+pyquerylist.egg-info/PKG-INFO
+pyquerylist.egg-info/SOURCES.txt
+pyquerylist.egg-info/dependency_links.txt
+pyquerylist.egg-info/requires.txt
+pyquerylist.egg-info/top_level.txt
