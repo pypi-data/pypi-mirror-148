@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+src/mycolorlogger.egg-info/PKG-INFO
+src/mycolorlogger.egg-info/SOURCES.txt
+src/mycolorlogger.egg-info/dependency_links.txt
+src/mycolorlogger.egg-info/requires.txt
+src/mycolorlogger.egg-info/top_level.txt
