@@ -1,0 +1,13 @@
+gfwlist2pac/__init__.py,sha256=6vCdv0boDgQ5PR0Wx4Yqe_go6I2BQn8M9J8FFeuLvc8,62
+gfwlist2pac/main.py,sha256=ABq8TfJNZYJZcl4wRa9S8wJE4AwMyf8HDK9tPUFpZ9A,6627
+gfwlist2pac/resources/__init__.py,sha256=et-AqfzaSw3fPKitKXbmSt7GxHFFTk3uqt8qsOPoO7E,42
+gfwlist2pac/resources/abp.js,sha256=VjInMEHlMhIYGon37YdJitrg_ySd3w_JDiUzFrnf7K8,21857
+gfwlist2pac/resources/builtin.txt,sha256=NgmLHlRoBBX3WX5jqUCpogPW69qMpb0YGa0LE5Mte3I,125
+gfwlist2pac/resources/proxy.pac,sha256=xRwtgi7W_4KDFHT359DBn6Vv7dn3oOZpmINhuSZQD6Y,546
+gfwlist2pac/resources/tld.txt,sha256=zkAD2Z5lsdhouIh-bUl9XPqgcR13lmg_O3cH_1hCVx0,80535
+gfwlist2pac-1.1.4.dist-info/LICENSE,sha256=DnSNjehDdy5Ya5u4PG9h99Yjk86gbrc1XgTKvlC3sy0,1080
+gfwlist2pac-1.1.4.dist-info/METADATA,sha256=6-lqJdES7PKKkiW5jo2lvJ_1znxyXaDlwobmYzDcUak,2348
+gfwlist2pac-1.1.4.dist-info/WHEEL,sha256=MYFsq5fFBwF_oyJgrOoFmYYB1K6Sw7MxY-0897ZLbdM,92
+gfwlist2pac-1.1.4.dist-info/entry_points.txt,sha256=g6fXctt4fUi1qjidLNJC538akSvYAG53eJzgqLeSaNk,67
+gfwlist2pac-1.1.4.dist-info/top_level.txt,sha256=aYOnEHp6Ttj7ylstePqiHe8y5x68kJeXUASLAYQxgMM,12
+gfwlist2pac-1.1.4.dist-info/RECORD,,
