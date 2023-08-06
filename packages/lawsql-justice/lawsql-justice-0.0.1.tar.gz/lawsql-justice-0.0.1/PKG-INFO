@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: lawsql-justice
+Version: 0.0.1
+Summary: Pattern matching for Justices
+Author: Marcelino G. Veloso III
+Author-email: mars@veloso.one
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+
+# LawSQL Justice Patterns
+
+Some common patterns.
+
