@@ -1,0 +1,2 @@
+# SOCO-SEARCH Plugin Helper
+
