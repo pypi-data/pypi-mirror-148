@@ -1,0 +1,5 @@
+setup.py
+sb3tools.egg-info/PKG-INFO
+sb3tools.egg-info/SOURCES.txt
+sb3tools.egg-info/dependency_links.txt
+sb3tools.egg-info/top_level.txt
