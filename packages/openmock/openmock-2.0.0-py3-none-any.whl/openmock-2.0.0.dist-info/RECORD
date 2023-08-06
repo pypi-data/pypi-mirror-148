@@ -1,0 +1,15 @@
+LICENSE,sha256=8y0nSwyuQ4wVjH1esj1VIXldB0P59NsxFN2IOae8aLU,1100
+openmock/__init__.py,sha256=fxs-eosU9YkBlIOhqz_2xHUzCxVRRBdOaxx61VJBjFY,868
+openmock/behaviour/__init__.py,sha256=msyGVt9bMDqOPoeGIZR_nyzy-E4c7Lu7EYlqpMpKDPw,128
+openmock/behaviour/server_failure.py,sha256=j7yvEpLFl5p0J905zcacuG-SR5CLY7qDCaVo_rGQmug,494
+openmock/fake_cluster.py,sha256=ppiA1QxXbnZkCuMi7ZW_NzZ9EnY_TlEwxQGXppBJDAs,1119
+openmock/fake_indices.py,sha256=FLGt6q81hdYbBqPzjVG0QYmvHdRsyb5eHU6tNy9Kea0,1213
+openmock/fake_opensearch.py,sha256=0j1i0rQEmd_BLJXv5TTOTTykxf-LOVptXhUfko556HA,36278
+openmock/normalize_hosts.py,sha256=KngeKBU4vgECXvZ5EPgooGtBvasvWtnChGWlQ-0uvyA,2180
+openmock/utilities/__init__.py,sha256=0pCCx3aDcqSSUcFpZtnUWZAh4LdwwedBgTx1yX8jQIw,758
+openmock/utilities/decorator.py,sha256=j4KtprddopIONKZXuft6SWG7s00JHpgPTOPoYVvbFd8,469
+README.md,sha256=CD42zfCRHcyE-IXutYsLTt0qinF_yhGGzOd4LXJzj60,4739
+openmock-2.0.0.dist-info/LICENSE,sha256=8y0nSwyuQ4wVjH1esj1VIXldB0P59NsxFN2IOae8aLU,1100
+openmock-2.0.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+openmock-2.0.0.dist-info/METADATA,sha256=WHIMbDtjq8OWOLASvw_WAbReziuDocJXQPWsINa2zZo,5834
+openmock-2.0.0.dist-info/RECORD,,
