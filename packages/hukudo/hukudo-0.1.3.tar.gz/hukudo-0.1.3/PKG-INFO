@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: hukudo
+Version: 0.1.3
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Provides-Extra: all
+Provides-Extra: pypi
+Provides-Extra: dev
+Provides-Extra: docs
+License-File: LICENSE
+
+# Usage
+See the [tests/]() and [1-docs/]().
+
+
+# Installation
+```
+pip install hukudo
+```
+
+🔥DRAFT🔥 For Gitlab Tools
+```
+pip install hukudo[gitlab]
+```
+
+
+# Development
+See [1-docs/development.md]
+
+
