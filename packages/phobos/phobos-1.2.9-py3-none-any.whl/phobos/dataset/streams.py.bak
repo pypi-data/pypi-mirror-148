@@ -1,0 +1,227 @@
+import io 
+import json
+import logging 
+from pydoc import locate
+
+from PIL import Image 
+from rasterio.io import MemoryFile
+import rasterio as rio 
+import numpy as np 
+import torch.nn as nn 
+
+from albumentations.core.composition import Compose
+
+from shapely.geometry import Polygon 
+from skimage.draw import polygon 
+
+
+__all__ = ["StreamTransform"]
+
+# def process_classification_labels(json_stream: bytes) -> dict:
+#     mfile = io.BytesIO(json_stream)
+#     json_data = json.load(mfile)
+
+#     return json_data['properties']['responses']['0'][0]
+
+# def process_segmentation_masks(json_stream: bytes, rio_read: rio.DatasetReader) -> np.array:
+#     mfile = io.BytesIO(json_stream)
+#     json_data = json.load(mfile)
+
+#     mask = np.zeros((rio_read.shape[0], rio_read.shape[1]), dtype=np.uint8)
+
+#     for feature in json_data['features']:
+#         try:
+#             poly = Polygon(feature['geometry']['coordinates'][0])
+#             label = feature['properties']['lbl']
+            
+#             xs, ys = poly.exterior.coords.xy
+#             rc = rio.transform.rowcol(rio_read.transform, xs, ys)
+#             poly = np.asarray(list(zip(rc[0], rc[1])))
+#             rr, cc = polygon(poly[:,0], poly[:,1], mask.shape)
+#             mask[rr,cc] = label + 1
+#         except:
+#             pass
+
+#     return mask
+        
+
+class StreamTransform(nn.Module):
+    def __init__(
+        self, 
+        dataset: dict, 
+        inputs: dict, 
+        outputs: dict, 
+        phase='train'
+    ):
+        super(StreamTransform, self).__init__()
+        self.inputs = inputs
+        self.outputs = outputs
+        self.dataset = dataset
+        self.phase = phase 
+        self.additional_targets = {}
+
+        self.get_raster_info()
+        self.get_vector_info()
+
+        self.build_transform()
+    
+    def get_raster_info(self):
+        self.max_size = 0
+
+        self.raster_keys = []
+        self.min_list = []
+        self.max_list = []
+        self.mean_list = []
+        self.std_list = []
+        
+        for input_name in self.inputs.keys():
+            self.max_size = max(self.max_size, self.inputs[input_name].patch_size)
+
+            for raster_key in self.inputs[input_name].raster_keys:
+                if raster_key not in self.raster_keys:
+                    self.raster_keys.append(raster_key)
+                    self.min_list.append(self.dataset.raster_keys[raster_key]['min'])
+                    self.max_list.append(self.dataset.raster_keys[raster_key]['max'])
+                    self.mean_list.append(self.dataset.raster_keys[raster_key]['mean'])
+                    self.std_list.append(self.dataset.raster_keys[raster_key]['std'])
+                    self.additional_targets[raster_key] = 'image'
+
+    def get_vector_info(self):
+        """Get all the vector (questions) from the dataset metadata that are mentioned in output of metadata.yaml
+        """
+ 
+        self.label_map = {}
+        self.multilabel_map = {}
+        self.mask_map = {}
+        self.bbox_map = {}
+
+        for output_name in self.outputs.keys():
+            question = self.outputs[output_name].question
+            desired_type = self.outputs[output_name].type
+
+            assert question in self.dataset.vector_config, logging.error("Question name in metadata yaml is not found on dataset yaml") 
+            structural_scope = self.dataset.vector_config[question].structural_scope
+            annotated_type = self.dataset.vector_config[question].type
+
+            if desired_type == 'label':
+                if structural_scope == 'chip' and annotated_type == 'select':
+                    self.label_map[output_name] = question
+                elif structural_scope == 'polygon':
+                    logging.error("Output {output_name} requires this response to be label but the anntoated type is mask")
+                elif annotated_type == 'multiselect':
+                    logging.error("Output {output_name} requires this response to be label but the anntoated type is multilabel")
+
+            if desired_type == 'multilabel':
+                if structural_scope == 'chip' and annotated_type == 'multiselect':
+                    self.multilabel_map[output_name] = question
+                elif structural_scope == 'polygon':
+                    self.multilabel_map[output_name] = question
+                elif structural_scope == 'chip' and annotated_type == 'select':
+                    logging.error("Output {output_name} requires this response to be multilabel but the annotate type is label and structural scope is chip")
+
+            if desired_type == 'mask':
+                if structural_scope == 'polygon':
+                    self.mask_map[output_name] = question
+                    self.additional_targets[output_name] = 'mask'
+                elif structural_scope == 'chip':
+                    logging.error("Output {output_name} requires this response to be mask but the annotated structural scope is chip")
+            
+            if desired_type == 'bbox':
+                if structural_scope == 'polygon':
+                    self.bbox_map[output_name] = question
+                    self.additional_targets[output_name] = 'bboxes'
+                elif structural_scope == 'chip':
+                    logging.error("Output {output_name} requires this response to be bbox but the annotated structural scope is chip")
+
+    def build_transform(self):
+        if self.phase == 'train':
+            self.transform = self.build_pipeline(self.dataset.train_transforms)
+        if self.phase == 'val':
+            self.transform = self.build_pipeline(self.dataset.val_transforms)
+
+    def build_pipeline(
+        self, 
+        transforms: list
+    ) -> Compose:
+        aug_list = []
+        for transform in transforms:
+            transform_name = list(transform.keys())[0]
+            transform_params = transform[transform_name]
+
+            if transform_name == 'phobos.transforms.ToFloatChannelWise':
+                if not transform_params:
+                    transform_params = {'max_values': self.max_list}
+
+            if transform_name == 'phobos.transforms.Normalize':
+                if not transform_params:
+                    transform_params = {'mean': self.mean_list, 'std': self.std_list}
+
+            if transform_name == 'phobos.transforms.MinMaxNormalize':
+                if not transform_params:
+                    transform_params = {'min': self.min_list, 'max': self.max_list}
+
+            if locate(transform_name):
+                aug_class = locate(transform_name)
+                aug_list.append(aug_class(**transform_params))
+            else:
+                raise Exception(f"{transform_name} does not exist. Please check for typo.")
+            
+        return Compose(aug_list, 
+                        additional_targets=self.additional_targets)
+
+    def forward(
+        self, 
+        stream
+    ) -> tuple:
+        rasters = self.get_rasters(stream)
+        multilabels, labels, masks, bboxes = self.get_vectors(stream)
+
+        out = self.transform(image=np.zeros((self.max_size, self.max_size)), **rasters, **masks, **bboxes)
+
+        rasters = self.regroup_rasters(out)
+        rasters = self.resize_rasters(rasters)
+
+        masks, bboxes = self.resize_vectors(out)
+
+        return rasters, {**labels, **multilabels, **masks, **bboxes}
+    
+    def get_rasters(self, stream):
+        rasters = {}
+        for raster_key in self.raster_keys:
+            mfile = MemoryFile(stream[f"{raster_key.lower()}.path"])
+            r = mfile.open()
+            rasters[raster_key] = r.read()
+
+        return rasters 
+
+    def get_vectors(self, stream):
+        """
+        We need to parse information in get_vector_info that will be used to make vectors
+        """
+        mfile = io.BytesIO(stream['geojson.path'])
+        metadata = json.load(mfile)
+
+        responses = metadata['properties']["responses"]
+
+        labels = {}
+        for output_name, question_name in self.label_map.items():
+            metadata = self.dataset.vector_config[question_name]
+            if metadata.temporal_scope == 'eachDate':
+                response = responses[metadata.response_location]['0'][0]
+            else:
+                response = [responses[metadata.response_location][k][0] for k in range(self.dataset.dates)]
+            labels[output_name] = response            
+
+        multilabels = {}
+        for output_name, question_name in self.multilabel_map.items():
+            metadata = self.dataset.vector_config[question_name]
+            if metadata.temporal_scope == 'eachDate' and metadata.structural_scope == 'chip':
+                response = responses[metadata.response_location]['0']
+            elif metadata.temporal_scope == 'eachDate' and metadata.structural_scope == '':
+                response = [responses[metadata.response_location][k] for k in range(self.dateset.dates)]
+        
+        masks = {}
+        
+        bboxes = {}
+
+        return labels, multilabels, masks, bboxes
