@@ -1,0 +1,3 @@
+[console_scripts]
+code_insight_reporter = bitbucket_code_insight_reporter:main
+
