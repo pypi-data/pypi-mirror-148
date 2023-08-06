@@ -1,0 +1,16 @@
+psrqpy/__init__.py,sha256=f9Z6NOfWG6ISFhcrQ4gJiyAY-G0_HQl6tLn2wVQwIqU,955
+psrqpy/_version.py,sha256=DgBnJSw5sNy7fdUfcv24FyCdpwN5ct5KmuQSp3W58oo,142
+psrqpy/config.py,sha256=cqGLfLll_mw3sXmZuR1j5hMwV1v6RXQe6kbUBKQybeg,21187
+psrqpy/pulsar.py,sha256=a8_Zkj0oxWPmx3X2Fk94pZ7V8fea1eQPJDelCLyXs84,8947
+psrqpy/search.py,sha256=SqiDJkMojxhNoTRJqmTweCjEciquOmqP7Sj1440aWuo,121252
+psrqpy/utils.py,sha256=7JzQg32bL_Zybgu_wfKNy6XtEVGYUDw1bHBBbibK8oc,74743
+psrqpy/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+psrqpy/tests/conftest.py,sha256=ADC-UvCAlO8Qs_4Vj0XWlOSGqn7l98xxtkFmHETpmF4,415
+psrqpy/tests/derived_catalogue.db,sha256=Kkb4PXV9sWIv75pkX6OrDSer3U9Axs2ggEFIIKrVnRI,1555
+psrqpy/tests/query_test.py,sha256=s0f95KH-JhhVg06b5zJ3iNx2dJXQOpP49dTfzlT8Ims,28030
+psrqpy/tests/test_catalogue.db,sha256=IrzROvXElI6qKdPVWN1XT_6qqdU_HS0hB1lGdzys0xQ,1203
+psrqpy-1.1.8.dist-info/LICENSE,sha256=B29-ijHmU3rt1-NGPxpqFuI9h0D14odWnNDr7RkGdz4,1068
+psrqpy-1.1.8.dist-info/METADATA,sha256=Bt5r2cYQewr1Rs_ZI5_4bxIOdXXgX7hW_ijfr4jb_PQ,9921
+psrqpy-1.1.8.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+psrqpy-1.1.8.dist-info/top_level.txt,sha256=cXfJzu98gyKQroOwsJDgl8_bwn1EOxkWRLXW8Q4DiE4,7
+psrqpy-1.1.8.dist-info/RECORD,,
