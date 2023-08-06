@@ -1,0 +1,2 @@
+[console_scripts]
+pdfu = PDFU.command_line:main
