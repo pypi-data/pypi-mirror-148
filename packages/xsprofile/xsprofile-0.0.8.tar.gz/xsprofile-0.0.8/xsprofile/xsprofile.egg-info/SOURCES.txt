@@ -1,0 +1,14 @@
+LICENSE.md
+README.md
+pyproject.toml
+setup.py
+xsprofile/utils.py
+xsprofile/xsprofile.egg-info/PKG-INFO
+xsprofile/xsprofile.egg-info/SOURCES.txt
+xsprofile/xsprofile.egg-info/dependency_links.txt
+xsprofile/xsprofile.egg-info/requires.txt
+xsprofile/xsprofile.egg-info/top_level.txt
+xsprofile/xsprofile.egg-info/.ipynb_checkpoints/PKG-INFO-checkpoint
+xsprofile/xsprofile.egg-info/.ipynb_checkpoints/SOURCES-checkpoint.txt
+xsprofile/xsprofile.egg-info/.ipynb_checkpoints/dependency_links-checkpoint.txt
+xsprofile/xsprofile.egg-info/.ipynb_checkpoints/requires-checkpoint.txt
