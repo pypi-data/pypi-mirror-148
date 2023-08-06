@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/unpacktools/__init__.py
+src/unpacktools/unpack.py
+src/unpacktools.egg-info/PKG-INFO
+src/unpacktools.egg-info/SOURCES.txt
+src/unpacktools.egg-info/dependency_links.txt
+src/unpacktools.egg-info/top_level.txt
