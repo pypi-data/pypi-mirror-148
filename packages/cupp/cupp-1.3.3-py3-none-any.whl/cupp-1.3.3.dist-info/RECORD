@@ -1,0 +1,10 @@
+cupp/__init__.py,sha256=bntbQEBsh0tTVfrpt2YVRH1nI48FzR8VV92vlsTQEsU,23
+cupp/__main__.py,sha256=GxCCB566nuqdpW23VAK2tUBGxKyJrr_lj-6ECdxZoME,2307
+cupp/functions.py,sha256=Sm8qSwzAjYJACBlhksxoBDGyBjzu8FtIXw5ggibNTXk,15137
+cupp/helper.py,sha256=6cR_NAF0KLtYNaTMUsx3COD4Fm17K92Y9ZQGfqcOcjU,324
+cupp-1.3.3.dist-info/LICENSE,sha256=yiKHS7-HyoqR6ba8L42aQ5FxM9m7MVXE7tFOk3usxVc,1067
+cupp-1.3.3.dist-info/METADATA,sha256=mBMQ6w01X0tAxMUZDl9oYmcCFQ5A3MT3vocrAaqEbbs,2406
+cupp-1.3.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+cupp-1.3.3.dist-info/entry_points.txt,sha256=n6ewvb5O5dNDUw2IygORhjLrvGxr1-tEEA-vaM7Ca_U,45
+cupp-1.3.3.dist-info/top_level.txt,sha256=LwLlG3ymh_XopfKEOGK2ycN9d2iMuhM4uSNY6VzvEUk,5
+cupp-1.3.3.dist-info/RECORD,,
