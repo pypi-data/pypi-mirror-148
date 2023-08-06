@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: ansys-optics-grpcapi
+Version: 2.1.0
+Summary: Protocol Buffer structure for Speos
+Home-page: https://tfs.ansys.com:8443/tfs/ANSYS_Development/OPTIS_SPEOS/_git/SpeosProto
+Author: Ansys Inc.
+Author-email: support@ansys.com
+License: (c) 2022 ANSYS, Inc. Unauthorized use, distribution, or duplication is prohibited.
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: grpcio-tools
+
+# Protocol Buffer structure for Speos
+Python package containing protocol buffer structure for Speos datamodels and Speos APIs.
+## Directory structure
+    - ansys
+        |---- api
+        |       |---- speos
+        |       |       |-- api-example1
+        |       |       |       |-- v1
+        |       |       |       |   |-- service1_pb2.py
+        |       |       |       |   |-- service1_pb2_grpc.py
+        |       |       |       |   |-- service2_pb2.py
+        |       |       |       |   |-- service2_pb2_grpc.py
+        |       |       |       |-- v2
+        |       |       |       |   |-- service2_pb2.py
+        |       |       |       |   |-- service2_pb2_grpc.py
+        |---- data
+        |       |---- speos
+        |       |       |-- dm-example1
+        |       |       |       |-- v1
+        |       |       |       |   |-- dm1_pb2.py
+        |       |       |       |   |-- dm2_pb2.py
+        |       |       |-- dm-example2
+        |       |       |       |-- v1
+        |       |       |       |   |-- dm3_pb2.py
+        |       |       |       |-- v2
+        |       |       |       |   |-- dm3_pb2.py
+

@@ -1,0 +1,17 @@
+ansys/api/speos/bsdf/v1/anisotropic_bsdf_pb2.py,sha256=M1pnFtUEGZZskHQOb0qxewYgKP5OjUMhULf-x034IEk,51691
+ansys/api/speos/bsdf/v1/anisotropic_bsdf_pb2_grpc.py,sha256=cVHtvze77exVXVKH4vT_qmKi_k0O1xYJENARMKWpu0o,35189
+ansys/api/speos/bsdf/v1/bsdf_creation_pb2.py,sha256=PpttVIXAyRouUEh-ACGdZow9aSLfONRLul9akAywjp0,14918
+ansys/api/speos/bsdf/v1/bsdf_creation_pb2_grpc.py,sha256=h2ZZ0J-28yfjErOIUq9NxHkEzwHGYmCp35CIRvx189Q,6607
+ansys/api/speos/bsdf/v1/spectral_bsdf_pb2.py,sha256=-by4hwcgmbzzUIiNX9rymH5iUad0uMPGTEuNI7aiQhw,32778
+ansys/api/speos/bsdf/v1/spectral_bsdf_pb2_grpc.py,sha256=89s2snPUnAghx1lg33zN4SmKxQbo6svXFIb8vAo3nI0,19529
+ansys/api/speos/results/v1/lpf_file_reader_pb2.py,sha256=Zn4AmLR0DDXbz9iYswtR-2rZZlJHiyHF4GH5jVyLp1s,17202
+ansys/api/speos/results/v1/lpf_file_reader_pb2_grpc.py,sha256=TjOi03R559OZ8jzxlBL2yNHXRKgKOmyIQCWTWfvKqM0,23541
+ansys/api/speos/xmp/v1/xmp_file_pb2.py,sha256=rKqANBvlpUkmIHDmEaJCveh2ak-4LYl5fyCY_d_AnkI,10092
+ansys/api/speos/xmp/v1/xmp_file_pb2_grpc.py,sha256=13K6-7npasF_wziCQeiYqyS7CROCaKq-YeSIkhJGBME,12090
+ansys/data/speos/physics/v1/RayPath_pb2.py,sha256=1E18iv675tPnWHJ3GHtnRm45WGdmi0LmysVB50FR3hU,4661
+ansys/data/speos/utils/v1/Guid_pb2.py,sha256=A9BnRmGEG54z0GwswDKFLn333SdbBYdMjx7YoYUgFiQ,2106
+ansys/data/speos/utils/v1/Point3_pb2.py,sha256=Z13WvNlgf2iIJ17NKK4NkOgkQK9yqOw00T2cayFbV0g,5147
+ansys_optics_grpcapi-2.1.0.dist-info/METADATA,sha256=SW-_CHu_z66gwcFQ1VYHkMHM4eECbatB2j9XVAgTyOI,1577
+ansys_optics_grpcapi-2.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+ansys_optics_grpcapi-2.1.0.dist-info/top_level.txt,sha256=9rw0UJ0mtof2GA3U8RpqYo6EmbpfE8-wo3NoX6SlYtg,6
+ansys_optics_grpcapi-2.1.0.dist-info/RECORD,,
