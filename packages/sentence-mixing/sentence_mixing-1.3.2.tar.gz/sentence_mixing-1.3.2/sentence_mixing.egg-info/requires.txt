@@ -1,0 +1,7 @@
+textgrid
+yt_dlp
+num2words
+numpy
+scipy
+webvtt-py
+moviepy
