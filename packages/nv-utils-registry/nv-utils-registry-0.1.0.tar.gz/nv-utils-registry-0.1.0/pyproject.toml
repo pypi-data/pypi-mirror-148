@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "nv-utils-registry"
+version = "0.1.0"
+description = "Specialized mapping for retrieving content with default hirearchy of matching keys"
+authors = ["Gustavo Santos <gustavo@next.ventures>"]
+license = "MIT"
+repository = "https://github.com/nextventures/nv-utils-registry.git"
+readme = "README.md"
+classifiers = [
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3.10",
+    "Typing :: Typed",
+]
+packages = [{ include = "nv"}]
+include = [
+    "LICENSE",
+    "COPYRIGHT",
+    "CHANGELOG.md",
+    "README.md"
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+coverage = "^6.3.2"
+mypy = "^0.950"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+python_version = "3.10"
+namespace_packages = true
+files = ["nv/**/*.py"]
