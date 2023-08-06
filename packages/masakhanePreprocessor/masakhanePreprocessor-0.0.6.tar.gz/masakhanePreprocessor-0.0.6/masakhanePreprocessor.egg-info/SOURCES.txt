@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+masakhanePreprocessor/__init__.py
+masakhanePreprocessor/langs.py
+masakhanePreprocessor/languages.json
+masakhanePreprocessor/preprocess.py
+masakhanePreprocessor.egg-info/PKG-INFO
+masakhanePreprocessor.egg-info/SOURCES.txt
+masakhanePreprocessor.egg-info/dependency_links.txt
+masakhanePreprocessor.egg-info/requires.txt
+masakhanePreprocessor.egg-info/top_level.txt
+masakhanePreprocessor/rules/fon.json
+masakhanePreprocessor/rules/ig.json
+masakhanePreprocessor/rules/yo.json
