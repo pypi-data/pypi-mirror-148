@@ -1,0 +1,14 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+_case.cpython-37m-x86_64-linux-gnu.so,sha256=tUAiS6CCVlWgb1rF927_UrswbKKY7xUN3gKcp6a9X94,46080
+yascc-0.3.14.dist-info/RECORD,,
+yascc-0.3.14.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+yascc-0.3.14.dist-info/METADATA,sha256=khiDadVlgFmzDuz9PzXCAqWMb8PAE-i3BYwgdeo1ctY,4000
+yascc-0.3.14.dist-info/top_level.txt,sha256=K13m1ugr_ihoJxbznYkWhKQDVbYMnuO7zLuTMOWWZ8U,21
+yascc-0.3.14.dist-info/WHEEL,sha256=ZqGKtBNnUj1YIf9dceO-NCtKQrwF-3SMiwFsZ7y3UUw,184
+yascc/__init__.py,sha256=Z_QA9btWpxP16ny1WdGWIkq5kzjYFW_MCtjxv_6Aqk8,324
+yascc/stack.c,sha256=iGdMcG-68l_qpX_MDvO8eVbI3LdkztQoy4P54mRuWVQ,1466
+yascc/camelcase.py,sha256=qNMRFlX-aQd99anbjpbLu1VYquuJnU_0J1EvJ9Aegps,297
+yascc/case.c,sha256=xkSRyVU6sRbvQISUl6jB4Tb7l_XN2S87LLHskSu462o,5387
+yascc/snakecase.py,sha256=bXqbnmE7wS5j_5ZRcRuu082Oq-nkVnIRdpYOiUUwzeQ,453
+yascc/common.py,sha256=ACz1_zPbUKipPP_Jy1c8Lp1yZpVvoB9bHMSus-P6A2o,611
+yascc/stack.h,sha256=6nWKk1XVsK8OdW35w6AW_68xf93jhL6u4Al7CM0aAmo,298
