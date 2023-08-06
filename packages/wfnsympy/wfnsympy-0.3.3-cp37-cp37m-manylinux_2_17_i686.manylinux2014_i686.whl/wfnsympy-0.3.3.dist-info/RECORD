@@ -1,0 +1,16 @@
+wfnsympy.libs/libgfortran-a8535147.so.5.0.0,sha256=m50XYLF0di-_5LI0kR4xUpHOA8PHTqhpxXu-JyrjkRI,2491808
+wfnsympy.libs/libblas-3b437dff.so.3.4.2,sha256=JPfNMn1rtYVudKAkcMQkTns9XON7C4iTfRauq9y4_xc,378380
+wfnsympy.libs/libgfortran-8dce24b7.so.3.0.0,sha256=yHq6vOzwwoop108H40twKOD1kMfuqkaRU8b801ppXt4,1103080
+wfnsympy.libs/liblapack-c75bbe03.so.3.4.2,sha256=b2o9lRzGOalTKXI1swFUhQk0R686rAVDiEWDt7EYg9M,5760640
+wfnsympy.libs/libquadmath-e2ac3af2.so.0.0.0,sha256=DRJDSNQt5sWGt4X3guXSTAAdvdSEJ-2dIpPAnUwjlBk,362300
+wfnsympy-0.3.3.dist-info/RECORD,,
+wfnsympy-0.3.3.dist-info/LICENSE,sha256=Y1Z_uu_boe5FXTchq6uoqS5ew23rrrKL8-_xik3TTfY,1097
+wfnsympy-0.3.3.dist-info/METADATA,sha256=FOumjXrm1MrD0JBgo9ZLD0ZY1j2fPh9_ah1TVoOLDUY,240
+wfnsympy-0.3.3.dist-info/top_level.txt,sha256=hI1fngAAyUnU1kfosvAKAbqpRSYrxIpa7ReqI0Owbjw,9
+wfnsympy-0.3.3.dist-info/WHEEL,sha256=5tZ1jhQp7QE5qmPsh4H0qeuam6ryxn2gu46n9P15_I8,146
+wfnsympy/__init__.py,sha256=vKs3aFcjQaytREiozUr3-z-kaLfb1RkTHfELDBECYxE,36302
+wfnsympy/WFNSYMLIB.cpython-37m-i386-linux-gnu.so,sha256=6NDEbbUoyKhLP0SSxRPpLqh2OMgvNIJeLnoegp9oCxM,875712
+wfnsympy/file_io.py,sha256=N-JP59IebEcAWDICG6G7rc7SVr_XaXQfdwKfvXlSd6c,6181
+wfnsympy/errors.py,sha256=sD0Bn2AMpYRIIAqDrHpE8JyXcnCMygJHtvtdsWQnHAg,800
+wfnsympy/QSYMLIB.cpython-37m-i386-linux-gnu.so,sha256=s0tPmx5r2vdZmxtX6keV7mzN8LTwfigNmrJykUVDpSo,416308
+wfnsympy/optimize.py,sha256=xEVOzYpRQbqgTd8TqiHMeywtNzWcqHowRyj_6vfVFfw,4211
