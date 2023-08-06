@@ -1,0 +1,6 @@
+
+[test]
+mypy
+pytest
+pytest-mypy-plugins
+coverage
