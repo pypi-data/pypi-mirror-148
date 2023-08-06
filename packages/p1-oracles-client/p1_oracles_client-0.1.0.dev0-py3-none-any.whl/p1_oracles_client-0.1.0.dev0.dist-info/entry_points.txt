@@ -1,0 +1,3 @@
+[console_scripts]
+p1-oracles-check = oracles_client:check
+
