@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: api4p4
+Version: 0.12
+Summary: api for perforce
+Home-page: UNKNOWN
+Author: niushuaibing
+Author-email: niushuaibing@foxmail.com
+Maintainer: niushuaibing
+Maintainer-email: niushuaibing@foxmail.com
+License: UNKNOWN
+Platform: all
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: p4python
+
+UNKNOWN
+
