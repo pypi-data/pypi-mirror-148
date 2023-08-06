@@ -1,0 +1,4 @@
+click
+lark
+jinja2
+black
