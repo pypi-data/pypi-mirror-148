@@ -1,0 +1,2 @@
+[console_scripts]
+ci_cd_secrets = ci_cd_secrets:main

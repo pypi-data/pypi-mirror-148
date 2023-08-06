@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: ci-cd-secrets
+Version: 1.0.1
+Summary: A secrets scanner for CI/CD.
+Home-page: https://github.com/jessequinn/ci_secrets
+Author: Jesse Quinn
+Author-email: me@jessequinn.info
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development
+License-File: LICENSE.md
+Requires-Dist: gitpython
+Requires-Dist: detect-secrets
+
+UNKNOWN
+
