@@ -1,0 +1,9 @@
+toolgui/Roboto-Regular.ttf,sha256=MZz_bnox8PKkHEddykKJCqXRn-FgF-IpD4wdThT3ZIE,168260
+toolgui/__init__.py,sha256=rcE4SFi2YafSlLxKsOQmSeKyhMo7Qglf4UVjWgzO1xE,268
+toolgui/_app.py,sha256=11a6imVLig53Mka321uumnT-PKNtqq8o_3P-8LrKrPM,3425
+toolgui/_data.py,sha256=9ByjwgDIUNFqtlB07mK3gb7pW-sYY1EGdVZhklJGgq8,2912
+toolgui/_gui.py,sha256=JaZrnVcd9TQt3gnwZ7ZG5WdW10exBz9jJ4Kip7Yri8Y,3126
+toolgui-0.0.9.dist-info/METADATA,sha256=M_MovmlT3QJp9slL7V8lFl2EtFYpxwihMI6uH9Plgmg,1995
+toolgui-0.0.9.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+toolgui-0.0.9.dist-info/top_level.txt,sha256=l58AV5mkY1PSTy3HPCXonYf6jpHNWQBrXIwpKVGM2y8,8
+toolgui-0.0.9.dist-info/RECORD,,
