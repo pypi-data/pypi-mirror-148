@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+src/colorlog/__init__.py
+src/colorlog/colorlog.py
+src/colorlog_jawide.egg-info/PKG-INFO
+src/colorlog_jawide.egg-info/SOURCES.txt
+src/colorlog_jawide.egg-info/dependency_links.txt
+src/colorlog_jawide.egg-info/top_level.txt
