@@ -1,0 +1,11 @@
+pydicom
+matplotlib
+numpy
+scipy
+skimage
+opencv-python
+ipywidgets
+plotly
+shapely
+Pillow
+mpl-toolkits
