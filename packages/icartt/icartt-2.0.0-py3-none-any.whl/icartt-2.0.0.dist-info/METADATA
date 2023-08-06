@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: icartt
+Version: 2.0.0
+Summary: ICARTT format reader and writer
+Home-page: https://mbees.med.uni-augsburg.de/
+License: GPL-3.0-or-later
+Keywords: atmosphere,file format,ames,nasa
+Author: Christoph Knote
+Author-email: christoph.knote@med.uni-augsburg.de
+Requires-Python: >=3.7,<4
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Education
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Utilities
+Requires-Dist: numpy (>=1.19)
+Project-URL: Bug Tracker, http://mbees.med.uni-augsburg.de/gitlab/mbees/icartt_pypackage/issues
+Project-URL: Documentation, https://mbees.med.uni-augsburg.de/docs/icartt/2.0.0/
+Project-URL: Repository, https://mbees.med.uni-augsburg.de/gitlab/mbees/icartt_pypackage
+Description-Content-Type: text/markdown
+
+# icartt
+
+``icartt`` is an ICARTT format reader and writer
+
+## Documentation
+
+Please have a look at docs/source/usage.rst for usage examples. Full documentation is in preparation.
+
+## Contributing
+
+We are looking forward to receiving your [new issue report](https://mbees.med.uni-augsburg.de/gitlab/mbees/icartt_pypackage/-/issues/new).
+
+If you'd like to contribute source code directly, please [create a fork](https://mbees.med.uni-augsburg.de/gitlab/mbees/icartt_pypackage),
+make your changes and then [submit a merge request](https://mbees.med.uni-augsburg.de/gitlab/mbees/icartt_pypackage/-/merge_requests/new) to the original project.
+
+
+## Installation of the development version
+
+Clone this repository / or your fork and install. We use [poetry](https://python-poetry.org/) for packaging, which needs to be installed.
+
+```
+git clone https://mbees.med.uni-augsburg.de/gitlab/mbees/icartt_pypackage.git or <URL of your fork>
+cd icartt_pypackage
+poetry install
+poetry shell
+```
+
+# Changelog
+
+## 2.0.0 (2022-04-28)
+
+- Compatible with ICARTT v2 standard
+- Formats 1001 and 2110
+- Complete internal overhaul
+
+## 1.0.0 (2017-12-19)
+
+- Peer-reviewed version to be published in Knote et al., GMD
+
+## 0.1.0 (2017-08-12)
+
+- Initial release
+
