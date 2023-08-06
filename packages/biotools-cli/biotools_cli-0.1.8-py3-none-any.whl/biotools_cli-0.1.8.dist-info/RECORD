@@ -1,0 +1,12 @@
+biotools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+biotools/main.py,sha256=KrSZik6SNlSx2hjp64oKk4qh7hCCY3PPL_EahGYnfu8,152
+biotools/uniprotkb.py,sha256=gepgUoN_pT1OGzBIrlmM1DgySRbW2FJqGA79SQwiJWE,5164
+src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/main.py,sha256=F3TeyUOwuyog4HpgECqP7kRJaZfhv4a1vvpZGdTQ3_E,151
+src/uniprotkb.py,sha256=gepgUoN_pT1OGzBIrlmM1DgySRbW2FJqGA79SQwiJWE,5164
+biotools_cli-0.1.8.dist-info/LICENSE,sha256=j6Xj96CmXEMMu1CEBLjWbSP6eYbT-tldP1ob42ehRTE,1087
+biotools_cli-0.1.8.dist-info/METADATA,sha256=pjGvUGoG3FKoyDSx-gALhYz05LlBvPFHEuyJonXgHIc,2922
+biotools_cli-0.1.8.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+biotools_cli-0.1.8.dist-info/entry_points.txt,sha256=IzYBksOJSfJWgTtlprlwVg2QxA2DSD0bUM8ypwxrihw,47
+biotools_cli-0.1.8.dist-info/top_level.txt,sha256=kGi1hCHtRslni6h_rTCL7ZI46peYDct_so0VbiBF4cA,13
+biotools_cli-0.1.8.dist-info/RECORD,,

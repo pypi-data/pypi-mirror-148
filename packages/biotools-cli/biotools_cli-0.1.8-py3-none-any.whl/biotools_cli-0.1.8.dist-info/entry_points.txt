@@ -1,0 +1,2 @@
+[console_scripts]
+biotools = biotools.main:cli
