@@ -1,0 +1,19 @@
+[package]
+name = "fastpdb"
+version = "1.0.1"
+edition = "2018"
+
+[package.metadata.maturin]
+python-source = "python-src"
+
+[dependencies]
+numpy = "0.14"
+ndarray = "0.15"
+
+[dependencies.pyo3]
+version = "0.14"
+features = ["extension-module"]
+
+[lib]
+name = "fastpdb"
+crate-type = ["cdylib"]
