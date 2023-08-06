@@ -1,0 +1,97 @@
+Metadata-Version: 2.1
+Name: owi-data-api-2-pandas
+Version: 0.1.0
+Summary: OWI data 2 pandas is a package developed to ease the interaction with the OWI measurement data API
+Author: Yusuf Destan
+Author-email: yusuf.destan@vub.be
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: pandas (>=1.3.4,<2.0.0)
+Requires-Dist: python-dotenv (>=0.20.0,<0.21.0)
+Requires-Dist: requests (>=2.27.1,<3.0.0)
+Description-Content-Type: text/markdown
+
+## OWI data 2 pandas
+
+OWI data 2 pandas is a package developed to ease the interaction with the OWI measurement data API.
+
+## Basic use
+
+The most common use of the package is to query a fixed period of data:
+
+### Connection
+
+Connecting to the API happens through the API class:
+
+```
+from owi_data_2_pandas.io import API
+
+user = 'user_name' # replace with you user name
+password = 'your_password'  # Replace with your password
+
+root = r"http://10.0.0.138/api/v1/"
+
+owi = API(api_root=root, username=user, password=password)
+```
+
+### Querying for measurement data
+
+Once an instance of the API class is made, you can get a Pandas DataFrame with your data in it. To do so you'll need to specify both the period of interest, the location and the metrics you would need.
+
+In the example below we will query the period from 15/11/2018 till 16/11/2018 for BBC01 wind speed data:
+
+```
+import datetime
+from pytz import utc
+
+dt_start =  datetime.datetime(2018,11,15,tzinfo=utc)
+dt_stop  = datetime.datetime(2018,11,16,tzinfo=utc)
+df = owi.query((dt_start, dt_stop), location='bbc01', metrics=['mean_BB_C01_windspeed'])
+```
+
+This returns a Pandas DataFrame object.
+
+### Other useful queries
+
+#### Check user groups
+
+The permissions of a user a organized in so-called user groups. You can see the user groups allocated to the user through:
+
+```
+owi.groups
+```
+
+#### Check available parameters/metrics for a location
+
+A list of available parameters/metrics for a given location can be obtained through:
+
+```
+owi.metrics(location='BBC01')
+```
+
+## Advanced use
+
+### Interaction with dw_database and DynaWindFrame
+
+The current package was designed without the use of the OWI-lab internal package dw_database. However should a user want to import the results of the API into a dw_database.utils.DynaWindFrame then this is easily achieved:
+
+```
+from dw_database.utils import DynawindFrame, Turbine
+
+dwf = DynawindFrame(df=df, location=Turbine('BBC01'))
+```
+
+## Basic troubleshooting
+
+Some basic tips for initial troubleshooting:
+
+- Check that you can reach the server by sending a ping to the server
+- Check that you have the permissions (e.g. through the use of the groups query)
+- Check for typo's in your locations or metrics (e.g. use the metrics query)
+
+### Authors
+
+owi_data_2_pandas was written in the context of the efforts of the OWI-lab, a Belgian research effort to bring down the cost of offshore wind.
