@@ -1,0 +1,1 @@
+from qa_data_manager import data_generator
