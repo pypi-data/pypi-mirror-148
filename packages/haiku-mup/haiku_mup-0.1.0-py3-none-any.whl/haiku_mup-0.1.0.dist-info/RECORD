@@ -1,0 +1,9 @@
+haiku_mup/__init__.py,sha256=kqvRJM4n-Nk4syhl2SWZoLoXtD0Q3CKRp42i6yR6OXQ,139
+haiku_mup/ctx.py,sha256=4pg83V85I9blc5oGaIT0ax2k-6qafHWeKBZea0OV-uU,176
+haiku_mup/init.py,sha256=PG4-wBK4sv8UcFQ5DTTMisEJDQqp3KJIr5H5Ru0jkTA,552
+haiku_mup/module.py,sha256=oFaGgCGcko9vPwdociK08gf8HKE3_H92FFTFQXhGtls,2327
+haiku_mup/mup.py,sha256=ucAjzFjFOJq8bGm6oJ4Tzu4hRxO58QDJhOFpunQqGnI,5633
+haiku_mup-0.1.0.dist-info/LICENSE,sha256=rM4xDXJmc4IoUBkmn4rNa87vaql4ZellcRYiXSEcamY,1069
+haiku_mup-0.1.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+haiku_mup-0.1.0.dist-info/METADATA,sha256=FQ6NWbccy8WdvIiKdcIqdestNW3n6CLpHhYFq0Vbp8s,3130
+haiku_mup-0.1.0.dist-info/RECORD,,
