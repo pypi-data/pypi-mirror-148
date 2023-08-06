@@ -1,0 +1,11 @@
+pydantic
+sqlalchemy
+psycopg2-binary
+numpy
+click
+nowcasting_dataset==3.2.1
+nowcasting_datamodel==0.0.45
+fsspec
+s3fs
+torch
+pytorch-lightning
