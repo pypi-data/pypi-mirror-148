@@ -1,0 +1,13 @@
+setup.cfg
+setup.py
+pi2143oop/Canvas.py
+pi2143oop/Dot.py
+pi2143oop/Error.py
+pi2143oop/Main.py
+pi2143oop/__init__.py
+pi2143oop/main.py
+pi2143oop.egg-info/PKG-INFO
+pi2143oop.egg-info/SOURCES.txt
+pi2143oop.egg-info/dependency_links.txt
+pi2143oop.egg-info/not-zip-safe
+pi2143oop.egg-info/top_level.txt
