@@ -1,0 +1,10 @@
+{
+  "build": {
+    "name": "xf-aes-gcm",
+    "time": "2022-04-28T17:04:18.016076",
+    "version": "1.0.0"
+  },
+  "git": {
+    "url": "https://github.com/richmilne/xf-aes-gcm/releases/tag/v1.0.0"
+  }
+}

@@ -1,0 +1,3 @@
+[console_scripts]
+xf-aes-gcm = xf_aes_gcm:xf_aes_gcm
+
