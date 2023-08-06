@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: amplified
+Version: 0.0.0
+Summary: Amplify your Python developer experience
+License: Apache-2.0
+Author: Jeroen Schot
+Author-email: jeroenschot@gmail.com
+Requires-Python: >=3.6.2
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
