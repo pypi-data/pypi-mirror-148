@@ -1,0 +1,12 @@
+README.md
+productml/__init__.py
+productml/setup.py
+productml.egg-info/PKG-INFO
+productml.egg-info/SOURCES.txt
+productml.egg-info/dependency_links.txt
+productml.egg-info/requires.txt
+productml.egg-info/top_level.txt
+productml/data/__init__.py
+productml/data/labelling/__init__.py
+productml/data/labelling/text_matching.py
+productml/data/vision/__init__.py
