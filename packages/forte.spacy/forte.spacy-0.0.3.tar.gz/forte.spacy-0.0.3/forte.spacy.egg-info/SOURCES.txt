@@ -1,0 +1,10 @@
+README.md
+setup.py
+forte.spacy.egg-info/PKG-INFO
+forte.spacy.egg-info/SOURCES.txt
+forte.spacy.egg-info/dependency_links.txt
+forte.spacy.egg-info/namespace_packages.txt
+forte.spacy.egg-info/requires.txt
+forte.spacy.egg-info/top_level.txt
+fortex/spacy/__init__.py
+fortex/spacy/spacy_processors.py
