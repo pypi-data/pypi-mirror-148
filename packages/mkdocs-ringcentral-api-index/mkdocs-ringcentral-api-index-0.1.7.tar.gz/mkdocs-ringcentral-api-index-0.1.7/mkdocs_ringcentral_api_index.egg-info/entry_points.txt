@@ -1,0 +1,2 @@
+[mkdocs.plugins]
+ringcentral-api-index = mkdocs_ringcentral_api_index_plugin.plugin:APIIndexPlugin
