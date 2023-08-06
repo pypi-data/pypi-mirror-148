@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: solana-data-scraper
+Version: 0.0.2
+Summary: Python library for scraping blockchain data from Bitquery
+Home-page: https://app.friktion.fi
+License: MIT
+Author: thiccythot
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: numpy (>=1.22.3,<2.0.0)
+Requires-Dist: pandas (>=1.4.2,<2.0.0)
+Requires-Dist: requests (>=2.27.1,<3.0.0)
+Project-URL: Repository, https://github.com/friktion-labs/blockdata
+Description-Content-Type: text/markdown
+
+# Scrape Solana Blockchain Data
+
+This python library scrapes blockchain from https://bitquery.io/ from their GraphQL endpoints.
+
+This requires you to supply your own Bitquery API token.
+
+# Setup
+
+# Functionalities
+
+- Queries Bitquery for blockchain data
+- Batches queries to get around compute limits.
+- Returns output as a pandas dataframe or saves data to a csv
+
