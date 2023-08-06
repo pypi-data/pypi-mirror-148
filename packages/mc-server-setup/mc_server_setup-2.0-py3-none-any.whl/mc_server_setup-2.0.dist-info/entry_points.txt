@@ -1,0 +1,3 @@
+
+[console_scripts]
+mc_server_setup = mc_server_setup.__main__:cli
