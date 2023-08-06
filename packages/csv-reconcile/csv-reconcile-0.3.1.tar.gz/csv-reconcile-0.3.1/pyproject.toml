@@ -1,0 +1,65 @@
+[tool.poetry]
+name = "csv-reconcile"
+version = "0.3.1"
+description = "OpenRefine reconciliation service backed by csv resource"
+authors = ["Douglas Mennella <trx2358-pypi@yahoo.com>"]
+license = "MIT"
+readme = 'README.md'
+repository = "https://github.com/gitonthescene/csv-reconcile"
+keywords = ["OpenRefine",
+            "reconcile",
+            "fuzzy search"]
+
+build = "build.py"
+packages = [
+  { include = "csv_reconcile" },
+  { include = "csv_reconcile_dice" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+flask = "^2.0"
+flask-cors = "^3.0.10"
+cython = "^0.29.21"
+normality = "^2.1.1"
+importlib_metadata = { version = "^4.5.0", python = "<3.10" }
+chardet = "^4.0.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1"
+
+[tool.poe.tasks]
+dummydoc = { script = "utils:dummydoc" }
+pandoc = { cmd = "pandoc README.org --toc -f org -t markdown_strict -s -o README.md" }
+test = "pytest -v tests/main"
+nox = "nox"
+build = [
+  { ref = "dummydoc" },
+  { ref = "test" },
+  { cmd = "poetry build" }
+]
+install = [
+  { ref = "dummydoc" },
+  { cmd = "poetry install" }
+]
+publish = [
+  { ref = "pandoc" },
+  { ref = "nox" },
+  { cmd = "poetry publish" }
+]
+
+[tool.poetry.plugins."csv_reconcile.scorers"]
+"dice" = "csv_reconcile_dice"
+
+[tool.poetry.scripts]
+csv-reconcile = "csv_reconcile:main"
+
+[build-system]
+requires = [
+    "poetry>=0.12",
+    "cython",
+    "setuptools!=50.0",
+    "wheel"
+]
+
+build-backend = "poetry.masonry.api"

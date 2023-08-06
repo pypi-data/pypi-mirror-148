@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS reconcile;
+DROP TABLE IF EXISTS data;
+DROP TABLE IF EXISTS datacols;
+
+CREATE TABLE datacols (
+  name TEXT PRIMARY KEY,
+  colname TEXT NOT NULL,
+  isid INT NOT NULL
+);
