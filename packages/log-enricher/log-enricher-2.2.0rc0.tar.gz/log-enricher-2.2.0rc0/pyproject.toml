@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "log-enricher"
+version = "2.2.0-rc0"
+description = "Library to enrich structured logs"
+authors = ["Arni Inaba Kjartansson <arni@grid.is>"]
+license = "MIT"
+repository = "https://github.com/arni-inaba/log-enricher"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+strenum = "^0.4.0"
+python-json-logger = "^2.0.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+freezegun = "^0.3.12"
+mypy = "^0.931"
+flake8 = "^3.7"
+black = "^22.1.0"
+pre-commit = "^1.20"
+typed-ast = "^1.5.3"
+[tool.black]
+line-length = 115
+target-version = ["py38", "py39", "py310"]
+[build-system]
+requires = ["poetry>=1.1.4"]
+build-backend = "poetry.masonry.api"
