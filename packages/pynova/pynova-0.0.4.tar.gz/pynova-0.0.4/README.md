@@ -1,0 +1,2 @@
+# PyNOVA
+As an ANOVA professor's research assistant at Brigham Young University, I was tasked with converting sample R code designed for class instruction to Python. I was surprised with the lack of options in Python to perform tasks such as calculating power for more than two groups. This package provides easy Python function equivalents to some of the more complex R functions relating to analysis surrounding ANOVA and power.
