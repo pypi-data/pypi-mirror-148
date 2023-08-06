@@ -1,0 +1,12 @@
+simple_cmd/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simple_cmd/commands.py,sha256=TU1reHpw6DsgaNTNCuYKHZMSNkTU2FNsJaGw3JGpDb4,1593
+simple_cmd/decorators.py,sha256=MvHBUAVU6mkiH8otKpr6caNgBJUeUZBg6rKBTR6WfV0,4016
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/example.py,sha256=OHIUesdyWvWVP3MDfZpaJES2A03RNhjlpU7mMGIEHN0,997
+tests/test_example.py,sha256=T78V5dn4ko1Zwk4cpuY28dXFHiNj3TZWXWgh6ArFl8s,2926
+tests/test_unit.py,sha256=6wucaGX-AfGnMjXnTPx-yp-lol6N_AkRYygTt5-y4ow,423
+simple_cmd-2.0.1.dist-info/LICENSE,sha256=uRyooStkvStqKi0HEhPNucjv32gIEKFpedKRLY-qyz4,1155
+simple_cmd-2.0.1.dist-info/METADATA,sha256=cfjaGe2YRLoT7g0p8ys4B4D1vYNtbh7yuuCOpd5Fhx0,1067
+simple_cmd-2.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+simple_cmd-2.0.1.dist-info/top_level.txt,sha256=MZ7BzHGrNeONtMIm-GDKzhPXMl3jc70lvW8tVElfNco,17
+simple_cmd-2.0.1.dist-info/RECORD,,
