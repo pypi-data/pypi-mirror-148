@@ -1,0 +1,4 @@
+boto3==1.21.35
+click==8.1.2
+setuptools==60.10.0
+yaspin==2.1.0
