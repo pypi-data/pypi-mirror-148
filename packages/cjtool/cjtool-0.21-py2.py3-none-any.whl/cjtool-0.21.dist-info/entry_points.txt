@@ -1,0 +1,4 @@
+[console_scripts]
+ct = cjtool.debugtool:main
+stringrep = cjtool.stringtool:main
+
