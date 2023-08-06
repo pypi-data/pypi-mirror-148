@@ -1,0 +1,2 @@
+[pytestkx]
+name_of_plugin = pytest_kexi.pytest_kexi
