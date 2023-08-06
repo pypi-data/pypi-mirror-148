@@ -1,0 +1,9 @@
+rygforms/__main__.py,sha256=MbWKryrGAMN13gFA0VIlpVM7aODjIa_8oPJut7g0HZc,3042
+rygforms/templates/error.htm,sha256=9LlsfxsEtRWtPPRkXWt5MPv6QzlQr7wEFAqAmBb3rSw,256
+rygforms/templates/main.html,sha256=t4ZyxRHb7aJO9MnqyRHQ0GsZ2pgTl6f4unfLDvIfRrk,4758
+rygforms/templates/stampo.html,sha256=1IOjiJkE_-AznXT5fQrGXKPM3rVsecVVJW3Q_TNwRo0,2401
+rygforms/validator.py,sha256=ibgk_A9TiMJ5Hj-eC0qDXGdJ3TmXe6xI__aVRiJnnCA,624
+rygforms-0.5.10.dist-info/entry_points.txt,sha256=4dtD_jaIWxYn9FVnzMnuyNoXP1rmRwI0YVAxUaCSC58,59
+rygforms-0.5.10.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+rygforms-0.5.10.dist-info/METADATA,sha256=YtHVb9aFXVqekMZ1_VaQq4_UcrZ6l8wcink8_PQGdPU,3336
+rygforms-0.5.10.dist-info/RECORD,,

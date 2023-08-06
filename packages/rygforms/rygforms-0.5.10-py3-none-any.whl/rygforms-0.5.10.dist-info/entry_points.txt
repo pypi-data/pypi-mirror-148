@@ -1,0 +1,3 @@
+[console_scripts]
+PACKAGE-NAME=PACKAGE_NAME.__main__:main
+
