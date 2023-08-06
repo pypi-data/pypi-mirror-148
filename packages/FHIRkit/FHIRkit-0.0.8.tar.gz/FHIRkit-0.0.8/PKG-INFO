@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: FHIRkit
+Version: 0.0.8
+Summary: Toolkit to handle FHIR Resources in a more efficient, pythonic way.
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: MIT
+Description: # FHIRkit
+        
+        Handle FHIR resources in a more efficient, and pythonic way
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
