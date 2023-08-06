@@ -1,0 +1,11 @@
+LICENSE
+README.rst
+setup.py
+./__init__.py
+.ruamel/__init__.py
+.ruamel/yaml/__init__.py
+ruamel.yaml.split.egg-info/PKG-INFO
+ruamel.yaml.split.egg-info/SOURCES.txt
+ruamel.yaml.split.egg-info/dependency_links.txt
+ruamel.yaml.split.egg-info/namespace_packages.txt
+ruamel.yaml.split.egg-info/top_level.txt
