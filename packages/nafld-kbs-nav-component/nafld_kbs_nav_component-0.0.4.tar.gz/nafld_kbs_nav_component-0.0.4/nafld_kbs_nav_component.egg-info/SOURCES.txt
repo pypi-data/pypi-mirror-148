@@ -1,0 +1,8 @@
+MANIFEST.in
+setup.py
+nafld_kbs_nav/__init__.py
+nafld_kbs_nav_component.egg-info/PKG-INFO
+nafld_kbs_nav_component.egg-info/SOURCES.txt
+nafld_kbs_nav_component.egg-info/dependency_links.txt
+nafld_kbs_nav_component.egg-info/requires.txt
+nafld_kbs_nav_component.egg-info/top_level.txt
