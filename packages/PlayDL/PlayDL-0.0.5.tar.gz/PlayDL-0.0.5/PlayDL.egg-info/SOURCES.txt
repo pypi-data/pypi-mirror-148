@@ -1,0 +1,7 @@
+README.md
+setup.py
+PlayDL.egg-info/PKG-INFO
+PlayDL.egg-info/SOURCES.txt
+PlayDL.egg-info/dependency_links.txt
+PlayDL.egg-info/requires.txt
+PlayDL.egg-info/top_level.txt
