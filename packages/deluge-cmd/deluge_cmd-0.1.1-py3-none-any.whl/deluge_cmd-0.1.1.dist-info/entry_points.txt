@@ -1,0 +1,3 @@
+[console_scripts]
+deluge_cmd=deluge_cmd.cli:main
+
