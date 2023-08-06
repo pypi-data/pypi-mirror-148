@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+ghost_pkg_io/__init__.py
+ghost_pkg_io/say_hello.py
+ghost_pkg_io.egg-info/PKG-INFO
+ghost_pkg_io.egg-info/SOURCES.txt
+ghost_pkg_io.egg-info/dependency_links.txt
+ghost_pkg_io.egg-info/top_level.txt
