@@ -1,0 +1,6 @@
+--- -	2022-04-30 14:55:24.120964050 +0000
++++ results/bigxml-dtd.out	2022-04-30 14:54:29.899707423 +0000
+@@ -1 +1 @@
+--:6553x
++-:7000x
+XFAIL examples/bigxml-dtd (exit status: 1)

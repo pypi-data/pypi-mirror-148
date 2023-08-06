@@ -1,0 +1,29 @@
+/home/runner/work/xmlstarlet/xmlstarlet/xmlstarlet/xml:1.1: Start tag expected, '<' not found
+ELF
+^
+error in arguments: no -t or --template options found
+/home/runner/work/xmlstarlet/xmlstarlet/xmlstarlet/xml:1.1: Start tag expected, '<' not found
+ELF
+^
+cannot parse /home/runner/work/xmlstarlet/xmlstarlet/xmlstarlet/xml
+XMLStarlet Toolkit: Format XML document
+Usage: /home/runner/work/xmlstarlet/xmlstarlet/xmlstarlet/xml fo [<options>] <xml-file>
+where <options> are
+  -n or --noindent            - do not indent
+  -t or --indent-tab          - indent output with tabulation
+  -s or --indent-spaces <num> - indent output with <num> spaces
+  -o or --omit-decl           - omit xml declaration <?xml version="1.0"?>
+  --net                       - allow network access
+  -R or --recover             - try to recover what is parsable
+  -D or --dropdtd             - remove the DOCTYPE of the input docs
+  -C or --nocdata             - replace cdata section with text nodes
+  -N or --nsclean             - remove redundant namespace declarations
+  -e or --encode <encoding>   - output in the given encoding (utf-8, unicode...)
+  -H or --html                - input is HTML
+  -h or --help                - print help
+
+XMLStarlet is a command line toolkit to query/edit/check/transform
+XML documents (for more information see http://xmlstar.sourceforge.net/)
+failed to load external entity "--help"
+Error: unable to parse file "--help"
+PASS examples/command-help (exit status: 0)
