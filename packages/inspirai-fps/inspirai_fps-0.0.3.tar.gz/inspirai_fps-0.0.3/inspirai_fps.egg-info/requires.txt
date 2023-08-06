@@ -1,0 +1,11 @@
+Pillow
+numpy
+grpcio
+rich
+protobuf
+trimesh
+
+[baseline]
+gym
+ray[rllib]
+torch
