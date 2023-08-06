@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: django-payments-sepa
+Version: 1.2.dev1
+Summary: django-payments provider for SEPA
+Home-page: https://edugit.org/AlekSIS/libs/django-payments-sepa
+License: Apache-2.0
+Author: Dominik George
+Author-email: dominik.george@teckids.org
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: fints
+Requires-Dist: django-localflavor (>=3.1,<4.0)
+Requires-Dist: django-payments (>=1.0.0,<2.0.0)
+Requires-Dist: fints (>=3.1.0,<4.0.0); extra == "fints"
+Requires-Dist: svgwrite (>=1.4.2,<2.0.0); extra == "fints"
+Project-URL: Repository, https://edugit.org/AlekSIS/libs/django-payments-sepa
