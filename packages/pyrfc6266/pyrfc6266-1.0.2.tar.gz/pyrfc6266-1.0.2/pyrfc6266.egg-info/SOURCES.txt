@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyrfc6266.py
+setup.py
+pyrfc6266.egg-info/PKG-INFO
+pyrfc6266.egg-info/SOURCES.txt
+pyrfc6266.egg-info/dependency_links.txt
+pyrfc6266.egg-info/requires.txt
+pyrfc6266.egg-info/top_level.txt
