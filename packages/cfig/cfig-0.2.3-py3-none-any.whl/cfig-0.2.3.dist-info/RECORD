@@ -1,0 +1,16 @@
+cfig/__init__.py,sha256=OE-OQehP6cvQ0wz5HAw7qQe_opmMMiogq9zyPuXuH3Q,186
+cfig/config.py,sha256=NPRMZr-hPJ0jUSAiKd5ELTIfm35SvSVDrr0d-x3Zv6c,11745
+cfig/customtyping.py,sha256=iAgV_A362MUslJWj5fNYy4XJ0kjeabtwYvbcn69EGvs,608
+cfig/errors.py,sha256=MIB2_4Eqmmc_i6H_9i5gLgAStmq_d5Jfc5dAXnkXQZM,2619
+cfig/sample/__init__.py,sha256=BSxor5KlK97uvr-GlKYkN_Khgr8DBtlFsbl82_Njr9U,61
+cfig/sample/definition.py,sha256=hsBAODOy8fYfLg-ZsXgY7-mwEO_-CBf4okF37723IIk,4415
+cfig/sample/usage.py,sha256=R3UJRigdEhwBBdzzz7PytYMG20gMI1KKBa7xzzy4Des,511
+cfig/sources/base.py,sha256=lt4I3oJbIUxExLTdZY54a3JPQvDJh3m6PlWlK9LYE0g,583
+cfig/sources/env.py,sha256=_CccY3puJblRmUhAn6JsVvuOG8A-9AZC1PK_U89a7-A,1183
+cfig/sources/envfile.py,sha256=n9AP-XqNdQxmurgM6vEaM8pTrithBcMzOEtXbpSTfOQ,855
+cfig/tests/test_config.py,sha256=PHhljuwW1mmiammbcJTBzUlGobmCdN7trJ_KPJvH9bY,9197
+cfig-0.2.3.dist-info/entry_points.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cfig-0.2.3.dist-info/LICENSE,sha256=1bY5PAZW4weyPf4YoTXHrXmMvAq7L3Y9na_e14pu2_g,1072
+cfig-0.2.3.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+cfig-0.2.3.dist-info/METADATA,sha256=YVCOWgbcB6zhPF6nZ5dc53iPIG7Wft66GcFN8S_vS_E,1916
+cfig-0.2.3.dist-info/RECORD,,
