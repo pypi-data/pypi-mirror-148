@@ -1,0 +1,13 @@
+LICENSE,sha256=fJsv9rsFJA0fIgp9NVqoD4182Ypr6gNZeIyTeHKRpMI,1062
+echo1_coco_builder/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+echo1_coco_builder/annotations_builder.py,sha256=SF7mRhUmfeM1dQKZewuM9vEKq0Wl7WSZeazoA6iz-BY,4725
+echo1_coco_builder/coco/CocoAnnotation.py,sha256=80rAAHj0JPKR7FYjsaM9J47Qpvaf5nUDjqTryJtzOe4,675
+echo1_coco_builder/coco/CocoCategory.py,sha256=5LhDS8MQBx--YtJtjYb1KyKl1o-vVsG8n_Jn2nqVCPQ,419
+echo1_coco_builder/coco/CocoImage.py,sha256=J6_SYDpnklnWu3FgBHOJyR-AqkJxts7Ge_JCj66qqJc,700
+echo1_coco_builder/coco/CocoInfo.py,sha256=wBAaGpFbL6mKbKGvjBJ-yEWrJLo5rZ_dWmv5By0FWWU,551
+echo1_coco_builder/coco/CocoResult.py,sha256=HXxVkx1jRy3rbhz_I5bAgJXQnBUoIRk-zHnKDVaBnpo,724
+echo1_coco_builder/results_builder.py,sha256=JV9yon1un-7UK10ib7Sm7v8ftd0GjK7RYmCdTRgX_yc,822
+echo1_coco_builder-0.1.8.dist-info/LICENSE,sha256=fJsv9rsFJA0fIgp9NVqoD4182Ypr6gNZeIyTeHKRpMI,1062
+echo1_coco_builder-0.1.8.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+echo1_coco_builder-0.1.8.dist-info/METADATA,sha256=CBY4LWsJ8k9Ww2t__uKjIBnzwmX1jkzNo3DwvmyWa1I,3631
+echo1_coco_builder-0.1.8.dist-info/RECORD,,
