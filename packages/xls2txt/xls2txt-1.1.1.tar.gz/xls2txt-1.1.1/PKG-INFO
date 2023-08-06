@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: xls2txt
+Version: 1.1.1
+Summary: Export an Excel worksheet into text files.
+Author-email: erzo <erzo@posteo.de>
+Requires-Python: >=3.6
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: BSD License
+Requires-Dist: xlrd
+Project-URL: Home, https://gitlab.com/erzo/xls2txt
