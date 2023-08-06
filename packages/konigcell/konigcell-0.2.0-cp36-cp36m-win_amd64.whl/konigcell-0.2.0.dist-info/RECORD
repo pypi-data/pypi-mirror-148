@@ -1,0 +1,17 @@
+konigcell/__init__.py,sha256=1ERUsg_w9eXYFhEHVRewzoRVpu9g6fUoskyD0kH-qSk,2395
+konigcell/__version__.py,sha256=SJ65dSd-IAzk2UNV1qvz2y7XSOTqrQj_uRSdsl577H4,245
+konigcell/compute2d.py,sha256=SHIiLXJjm214nUoPEBEJvmlMnhUnQeu_wmC7wyjL_YI,25250
+konigcell/compute3d.py,sha256=3EYgUEyX1u0RCDanMC7_Sh4p_RXg7VMPJ3jPjbDmOJ0,21621
+konigcell/kc2d.c,sha256=4ipWO1ushcSSrLvn7rmc9AKQ4h-Bllg-_3_D1q8XBM4,980394
+konigcell/kc2d.cp36-win_amd64.pyd,sha256=5aoyEpUpo29_Qq6MTmF_xmf1ILJQArQRdCshU5_H9QU,156672
+konigcell/kc3d.c,sha256=V-3XJ1vnRZcI_uw18J6Vf5tUGgn9z__NY2E1pxDT1AY,984666
+konigcell/kc3d.cp36-win_amd64.pyd,sha256=oD2KM87OHxtGQ0oRkp9Mjldz6PSGsQoqjdGtcNttvd8,165888
+konigcell/mode.py,sha256=3Fxm0O4orTKAyvEzxQH_q7HDoOwn8BNMloY8iB2M6dw,666
+konigcell/pixels.py,sha256=AQV5cEEosKhdBXY8KHTdVG2utvR5R2RleP98ZDxqbAg,21021
+konigcell/utils.py,sha256=fEESKR5zPIBjf8WmacJc7z2cPWKLGfyJX1lLlWjg5RQ,2076
+konigcell/voxels.py,sha256=s4J9lqf9-86cZUXV_EtLsnOOqcaRLr29__Qo8z50o0Y,36921
+konigcell-0.2.0.dist-info/LICENSE,sha256=AqiqjgqNteMDEhVTl-pCcZFpuf9Xur8ssm5P4Y7P87o,1100
+konigcell-0.2.0.dist-info/METADATA,sha256=KkalBpdxBLfSbHcLfC0K9LFqY33a_xNcunFrUdZRwr8,9479
+konigcell-0.2.0.dist-info/WHEEL,sha256=zukbZftcRdNfJ55Q_RYV9JZ3uVyqWKyq-wDJbmszs_U,101
+konigcell-0.2.0.dist-info/top_level.txt,sha256=0z_qnLyeFbG2QkJq6o3a10cAzKThAb-RGJiVb13VtRQ,10
+konigcell-0.2.0.dist-info/RECORD,,
