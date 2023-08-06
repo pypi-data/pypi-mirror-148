@@ -1,0 +1,4 @@
+azure-identity==1.8.0
+azure-storage-file-datalake==12.6.0
+Pillow==9.1.0
+python-dotenv==0.20.0
