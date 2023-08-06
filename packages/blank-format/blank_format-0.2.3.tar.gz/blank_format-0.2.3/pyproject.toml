@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "blank_format"
+version = "0.2.3"
+readme = "README.md"
+keywords = ["automation", "formatter"]
+repository = "https://github.com/d3rp/blank"
+homepage = "https://github.com/d3rp/blank"
+license = "MIT"
+description = "The ultimate code formatter"
+authors = ["Joni Turunen <rojun.itu@gmail.com>"]
+classifiers = [
+    "Topic :: Software Development",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.5"
+
+[tool.poetry.scripts]
+blank = 'blank_format:main'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
