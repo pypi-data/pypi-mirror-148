@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: MAA-PyQT5-messenger-server-app
+Version: 0.0.4
+Summary: Server part of application MAA_PyQT5_messenger
+Home-page: UNKNOWN
+Author: Magomed Magomedov
+Author-email: mag.mag@yandex.ru
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: PyQt5
+Requires-Dist: pycryptodome
+Requires-Dist: pycryptodomex
+Requires-Dist: sqlalchemy
+
+UNKNOWN
+
+
