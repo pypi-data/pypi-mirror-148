@@ -1,0 +1,3 @@
+[console_scripts]
+git-pp=ccc_cli.ccc6_print_task_runs:main
+
