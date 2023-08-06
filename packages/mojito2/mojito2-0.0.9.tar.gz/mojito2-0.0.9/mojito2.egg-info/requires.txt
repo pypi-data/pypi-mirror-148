@@ -1,0 +1,3 @@
+requests
+websockets==9.1
+pycryptodome
