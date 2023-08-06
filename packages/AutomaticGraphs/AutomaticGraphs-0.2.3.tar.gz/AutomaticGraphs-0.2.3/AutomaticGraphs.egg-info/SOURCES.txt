@@ -1,0 +1,10 @@
+setup.py
+AutomaticGraphs/AutomaticGraphs.py
+AutomaticGraphs/BarPlot.py
+AutomaticGraphs/BoxPlot.py
+AutomaticGraphs/__init__.py
+AutomaticGraphs.egg-info/PKG-INFO
+AutomaticGraphs.egg-info/SOURCES.txt
+AutomaticGraphs.egg-info/dependency_links.txt
+AutomaticGraphs.egg-info/not-zip-safe
+AutomaticGraphs.egg-info/top_level.txt
