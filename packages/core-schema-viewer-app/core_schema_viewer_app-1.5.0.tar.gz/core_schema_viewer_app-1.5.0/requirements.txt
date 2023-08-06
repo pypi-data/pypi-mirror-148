@@ -1,0 +1,5 @@
+Django
+django-mongoengine
+django-simple-menu
+mock==2.0.0
+mongoengine

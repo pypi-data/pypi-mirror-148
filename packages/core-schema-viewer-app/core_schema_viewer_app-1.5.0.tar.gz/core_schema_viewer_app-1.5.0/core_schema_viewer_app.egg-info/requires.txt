@@ -1,0 +1,7 @@
+Django
+django-mongoengine
+django-simple-menu
+mock==2.0.0
+mongoengine
+core-main-app==1.19.0
+core-parser-app==1.19.0
