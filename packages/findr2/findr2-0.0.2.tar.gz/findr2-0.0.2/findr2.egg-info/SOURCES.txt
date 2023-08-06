@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+findr2/__init__.py
+findr2/findr2.py
+findr2.egg-info/PKG-INFO
+findr2.egg-info/SOURCES.txt
+findr2.egg-info/dependency_links.txt
+findr2.egg-info/not-zip-safe
+findr2.egg-info/top_level.txt

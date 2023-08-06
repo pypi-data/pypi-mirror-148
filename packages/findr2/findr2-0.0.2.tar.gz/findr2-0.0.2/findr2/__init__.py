@@ -1,0 +1,1 @@
+from .findr2 import find_max_r2
