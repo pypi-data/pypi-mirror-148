@@ -1,0 +1,2 @@
+[console_scripts]
+pyfish = pyfish.main:main

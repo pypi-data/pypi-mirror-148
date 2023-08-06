@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+pyfish/__init__.py
+pyfish/core.py
+pyfish/main.py
+pyfish.egg-info/PKG-INFO
+pyfish.egg-info/SOURCES.txt
+pyfish.egg-info/dependency_links.txt
+pyfish.egg-info/entry_points.txt
+pyfish.egg-info/requires.txt
+pyfish.egg-info/top_level.txt
