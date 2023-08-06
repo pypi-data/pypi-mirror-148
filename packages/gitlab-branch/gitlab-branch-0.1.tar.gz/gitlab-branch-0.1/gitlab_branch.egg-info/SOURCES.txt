@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+gitlab_branch/__init__.py
+gitlab_branch/__version__.py
+gitlab_branch/utils.py
+gitlab_branch.egg-info/PKG-INFO
+gitlab_branch.egg-info/SOURCES.txt
+gitlab_branch.egg-info/dependency_links.txt
+gitlab_branch.egg-info/entry_points.txt
+gitlab_branch.egg-info/requires.txt
+gitlab_branch.egg-info/top_level.txt

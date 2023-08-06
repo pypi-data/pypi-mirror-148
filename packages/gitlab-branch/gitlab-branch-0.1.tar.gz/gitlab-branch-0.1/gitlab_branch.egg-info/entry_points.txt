@@ -1,0 +1,3 @@
+[console_scripts]
+gitlab-branch = gitlab_branch.utils:main
+
