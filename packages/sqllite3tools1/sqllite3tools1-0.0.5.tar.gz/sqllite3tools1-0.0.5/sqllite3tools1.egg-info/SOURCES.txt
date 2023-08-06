@@ -1,0 +1,11 @@
+LICENCE
+README.md
+setup.py
+sqllite3tools1/__init__.py
+sqllite3tools1/__version__.py
+sqllite3tools1/api_ref.py
+sqllite3tools1.egg-info/PKG-INFO
+sqllite3tools1.egg-info/SOURCES.txt
+sqllite3tools1.egg-info/dependency_links.txt
+sqllite3tools1.egg-info/requires.txt
+sqllite3tools1.egg-info/top_level.txt
