@@ -1,0 +1,6 @@
+aiohttp
+aiofiles
+tqdm
+python-dateutil
+aiosqlite
+aioprocessing
