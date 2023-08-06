@@ -1,0 +1,12 @@
+[build-system]
+requires = [
+    "setuptools",
+    "wheel",
+    "keyring",
+    "requests"
+]
+
+include = ["version_notes.md"]
+exclude = ["example.py", "jamfAuth.py"]
+
+build-backend = "setuptools.build_meta"
