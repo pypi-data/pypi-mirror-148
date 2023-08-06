@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/GracefulKiller/GracefulKiller.py
+src/GracefulKiller/__init__.py
+src/GracefulKiller.egg-info/PKG-INFO
+src/GracefulKiller.egg-info/SOURCES.txt
+src/GracefulKiller.egg-info/dependency_links.txt
+src/GracefulKiller.egg-info/top_level.txt
