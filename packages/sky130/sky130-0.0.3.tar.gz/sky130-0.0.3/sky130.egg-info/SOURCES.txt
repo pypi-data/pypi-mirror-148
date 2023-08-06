@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+sky130/__init__.py
+sky130/components.py
+sky130/config.py
+sky130/layers.py
+sky130/tech.py
+sky130.egg-info/PKG-INFO
+sky130.egg-info/SOURCES.txt
+sky130.egg-info/dependency_links.txt
+sky130.egg-info/requires.txt
+sky130.egg-info/top_level.txt
