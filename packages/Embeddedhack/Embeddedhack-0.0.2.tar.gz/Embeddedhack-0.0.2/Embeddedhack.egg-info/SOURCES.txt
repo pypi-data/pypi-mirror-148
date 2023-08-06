@@ -1,0 +1,12 @@
+README.md
+setup.py
+./README.md
+Embeddedhack/__init__.py
+Embeddedhack/extract_shellcode.py
+Embeddedhack/generate_aarch64.py
+Embeddedhack/generate_arm.py
+Embeddedhack/generate_mips.py
+Embeddedhack.egg-info/PKG-INFO
+Embeddedhack.egg-info/SOURCES.txt
+Embeddedhack.egg-info/dependency_links.txt
+Embeddedhack.egg-info/top_level.txt
