@@ -1,0 +1,3 @@
+[console_scripts]
+ubtsl = unicorn_binance_trailing_stop_loss.__main__:main
+
