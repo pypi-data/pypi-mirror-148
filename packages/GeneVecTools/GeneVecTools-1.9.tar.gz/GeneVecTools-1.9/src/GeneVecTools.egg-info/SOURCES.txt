@@ -1,0 +1,8 @@
+README.rst
+setup.cfg
+setup.py
+src/GeneVecTools.egg-info/PKG-INFO
+src/GeneVecTools.egg-info/SOURCES.txt
+src/GeneVecTools.egg-info/dependency_links.txt
+src/GeneVecTools.egg-info/requires.txt
+src/GeneVecTools.egg-info/top_level.txt
