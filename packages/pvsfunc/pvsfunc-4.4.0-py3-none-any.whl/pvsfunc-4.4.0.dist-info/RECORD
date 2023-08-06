@@ -1,0 +1,13 @@
+LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+README.md,sha256=PLl4yKI1p05dqLbbXI-K7ZtLTOww_AbenD-JVV2QYpY,6252
+pvsfunc/__init__.py,sha256=ejWXBZn2CtNSduVmBz2MNQVzJITKV7IPtxt5-nMcge0,222
+pvsfunc/helpers.py,sha256=57_obugcH5E1FeGPRzBbtBL2Bs2uBDOWdSZHcgX8pU8,2100
+pvsfunc/pd2v.py,sha256=zFt9lr4cqlmDnvwk0Ort4QbityD-Bws72ntlQcvRxl8,17752
+pvsfunc/pdebox.py,sha256=o4LfbIQUEB5OTbbVB3utai6UdTJBfmrhs4tXTuL8Umo,1522
+pvsfunc/pdecimate.py,sha256=xdGKTO0c8Lf580LpngMKehuNy2N3XjTcnOR-qXQdODM,4638
+pvsfunc/pkernel.py,sha256=WhaY-4SDsLd9J4lLeZgxJXlZRVOJW5jkqjmDDC1cYEw,1988
+pvsfunc/plwi.py,sha256=vpsCf42Q8ZD9LleCnxW-MxGfp09-RPBNmjgZDesWgmw,5230
+pvsfunc-4.4.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pvsfunc-4.4.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+pvsfunc-4.4.0.dist-info/METADATA,sha256=60WHwD6boWsFXYYERgPVCeCRwk_8b7APbsSoZmKI_dM,7557
+pvsfunc-4.4.0.dist-info/RECORD,,
