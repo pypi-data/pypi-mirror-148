@@ -1,0 +1,14 @@
+HISTORY.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+monnik/core.py
+monnik/monnik.py
+monnik/uri.py
+monnik.egg-info/PKG-INFO
+monnik.egg-info/SOURCES.txt
+monnik.egg-info/dependency_links.txt
+monnik.egg-info/not-zip-safe
+monnik.egg-info/requires.txt
+monnik.egg-info/top_level.txt
