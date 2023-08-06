@@ -1,0 +1,9 @@
+#
+# include.mk
+#
+
+# Django PAM version info.
+MAJORVERSION	= 2
+MINORVERSION	= 1
+PATCHLEVEL	= 0
+VERSION		= ${MAJORVERSION}.${MINORVERSION}.${PATCHLEVEL}
