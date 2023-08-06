@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: persisted
+Version: 1.0.0b2
+Summary: A two-way data persistence framework for watching file changes / updating files based on changes
+Home-page: https://github.com/alexkoay/persisted
+Author: Alex Koay
+Author-email: alexkoay88@gmail.com
+License: UNKNOWN
+Keywords: persistence watch reload save
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Utilities
+Requires-Python: >=3.7, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+
+# Persisted
+
+Persisted is a two-way code/data persistence framework.
+It can update a variable when a watched file changes, and also save data back to the file when the variable changes.
+
+```python
+>>> import persisted
+>>> data = persisted.as_string('README.md', '')
+>>> data.get()
+"# Persisted\n\nPersisted is a two-way..."
+>>> with data:
+        data.value = "Change to this"
+>>> data.get()
+"Change to this"
+```
+
+This is very useful to keep configuration files / application state synchronized within a long-running application, and also hot-reload code / modules.
+
+## Installing
+
+```console
+$ python -m pip install persisted
+```
+
+## Usage
+
+There are several helper functions for you to get started:
+- `persisted.as_bytes`
+- `persisted.as_string`
+- `persisted.as_pickle`
+- `persisted.as_module` (only reloading)
+
+All of them call `persisted.Persisted` to create a Persisted object to interact with.
+
+

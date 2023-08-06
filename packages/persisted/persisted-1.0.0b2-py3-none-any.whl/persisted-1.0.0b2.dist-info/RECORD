@@ -1,0 +1,11 @@
+persisted/__init__.py,sha256=9ybKMCVK89DeKm6uy40_SfuUoAL4dHxxo4N5_yzXTIA,156
+persisted/bytes.py,sha256=G4TUQHZhf8BTlMpz1RqMxEfPz4cSXYRzQSW7jeMFkYQ,788
+persisted/module.py,sha256=FusiHgEHtaEojk3nJVrgLM_PLCv9SI76jXMk6lRNNu4,1692
+persisted/persisted.py,sha256=mF7lIF8LL-oHiEcF4ml4hIDzf2AmsUFUMuapGVULKAc,3199
+persisted/pickle.py,sha256=umQtPl295LTdr40VXYtk_zZx4nPK8QcdfOpik-UuF-M,656
+persisted/string.py,sha256=tgPYz-FbupxZg3GK1oN2EwZUJWhu5MdMrknFUdy52aw,817
+persisted-1.0.0b2.dist-info/LICENSE.txt,sha256=gjOPW2h7fLV7u0yNzESMx4EOGHQapixWuMCq53_K6tE,1095
+persisted-1.0.0b2.dist-info/METADATA,sha256=WBdkMOYwCtLBxP1hoenXa3RNmkTzZDmKw9n_Wdlqt6Y,1988
+persisted-1.0.0b2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+persisted-1.0.0b2.dist-info/top_level.txt,sha256=gO3Quar8RYz0lMmQ0zQB9bJ0egbRLrVUIr9K9DFEkX8,10
+persisted-1.0.0b2.dist-info/RECORD,,
