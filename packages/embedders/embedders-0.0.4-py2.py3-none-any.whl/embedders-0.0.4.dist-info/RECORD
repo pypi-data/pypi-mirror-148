@@ -1,0 +1,14 @@
+embedders/__init__.py,sha256=DwuYn3HIZ64ywql1twiAwYQ62jaK7-fTzYUBu1YvJ8g,2157
+embedders/classification/__init__.py,sha256=DcaEY0DzljpYC5VWyMCeKr851xJ-3KSO8KTPAL19-0s,144
+embedders/classification/contextual.py,sha256=JW4EYSgBZEIr4jLyp-c7OsBcWcbOu4FdA4Ev7Y-Ir4Y,499
+embedders/classification/count_based.py,sha256=cBS8q2vWIX-hclCZWHx9AWuCsgDsQuQcLxhFTCr1ams,1363
+embedders/classification/reduce.py,sha256=nINwfuKXdR3sgktLvP99oSVzZ55vKvbWCsoE98OuEgc,1133
+embedders/extraction/__init__.py,sha256=2HMhuxtYRtOlADQPKp7jkx3VmLk2CG04Xp0JQKqusw0,545
+embedders/extraction/contextual.py,sha256=v6TJMo5Ten-lXM-J8Mwj8W8Hlw3U93MV95egCtdZVNQ,3855
+embedders/extraction/count_based.py,sha256=6tKmMw8iZQn4Wf70yO4E2ZIPIHR_KNXrKoBljWrl7mI,1045
+embedders/extraction/reduce.py,sha256=ipB0SAyaBABv2E0NFe8kE0JuLwUjgIEPvDrFJoqy69U,1740
+embedders-0.0.4.dist-info/LICENSE,sha256=xdyN1ZVN_z3CkW0f0xG4jqmIBmoMPXmz83hskCrsO_Q,1064
+embedders-0.0.4.dist-info/METADATA,sha256=RyYQWg-Toz-Xhgdwe4rvPqaC6_zqS4cg7Xq5_RfKRVk,4347
+embedders-0.0.4.dist-info/WHEEL,sha256=WzZ8cwjh8l0jtULNjYq1Hpr-WCqCRgPr--TX4P5I1Wo,110
+embedders-0.0.4.dist-info/top_level.txt,sha256=iRhfbBg_ZWmtclxcpD-WZe5rD-rvHFHKGkJwcWZM_f0,10
+embedders-0.0.4.dist-info/RECORD,,
