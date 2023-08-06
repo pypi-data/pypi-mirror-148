@@ -1,0 +1,10 @@
+matplotlib
+numpy>=1.17.0
+cartopy>=0.18.0
+h5py
+packaging
+pygrib
+domutils
+dask
+scipy
+pytz
