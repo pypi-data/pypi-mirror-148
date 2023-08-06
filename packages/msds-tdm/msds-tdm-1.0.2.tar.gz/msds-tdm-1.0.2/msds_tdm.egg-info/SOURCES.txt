@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+msds_tdm/Hazard_list_detailed.xlsx
+msds_tdm/__init__.py
+msds_tdm/sigma_aldrich.py
+msds_tdm.egg-info/PKG-INFO
+msds_tdm.egg-info/SOURCES.txt
+msds_tdm.egg-info/dependency_links.txt
+msds_tdm.egg-info/requires.txt
+msds_tdm.egg-info/top_level.txt
+tests/__init__.py
+tests/test_msds.py
