@@ -1,0 +1,43 @@
+# Darkwood Data Python Client
+
+
+## Installation
+
+You can install the Darkwood Data Python client from [PyPI](https://pypi.org/project/realpython-reader/):
+
+    python -m pip install darkwood
+
+In order to ensure your shell can discover the command line tool follow the below instructions depending on your operating system
+
+### Linux/macOS
+On Linux and macOS you can find the user base binary directory by running `python -m site --user-base` and adding `bin` to the end. For example, this will typically print `~/.local` (with `~` expanded to the absolute path to your home directory) so you’ll need to add `~/.local/bin` to your PATH. You can set your PATH permanently by modifying `~/.profile`.
+
+### Windows
+On Windows you can find the user base binary directory by running python -m site --user-site and replacing `site-packages` with `Scripts`. For example, this could return `C:\Users\Username\AppData\Roaming\Python36\site-packages` so you would need to set your PATH to include `C:\Users\Username\AppData\Roaming\Python36\Scripts`. You can set your user PATH permanently in the Control Panel. You may need to log out for the PATH changes to take effect.
+
+## Setup
+    darkwood-data configure cli
+This will result in a file at `~/.darkwood/credentials`.
+
+The client is supported on Python 3.6 and above.
+
+## How to use
+
+The Darkwood client can be used as a command line application or as a python package.
+The cli is named `darkwood-data`. 
+
+### Calling the linking api
+
+    darkwood-data entity-mapper --transaction "Amazon Tips*1Z3MJ3KL2 Amzn.com/bi WA"
+
+
+You can also call the Darkwood API in your own Python code, by importing from the `darkwood` package.
+If you have configured the host machine using the `darkwood-data configure cli` command use:
+
+    >>> from darkwood.client.call import credit_card_mapper
+    >>> credit_card_mapper(transaction="Amazon Tips*1Z3MJ3KL2 Amzn.com/bi WA")
+
+Additionally, you have the option to explicity pass in credentials
+
+    >>> from darkwood.client.call import credit_card_mapper
+    >>> credit_card_mapper(transaction="Amazon Tips*1Z3MJ3KL2 Amzn.com/bi WA", creds=<PASTE-YOUR-DARKWOOD-CREDS>)
