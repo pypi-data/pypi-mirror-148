@@ -1,0 +1,14 @@
+transformers==4.18.0
+optimum
+datasets
+tokenizers
+torch
+sentencepiece
+scipy
+pillow
+
+[tests]
+pytest
+psutil
+parameterized
+GitPython
