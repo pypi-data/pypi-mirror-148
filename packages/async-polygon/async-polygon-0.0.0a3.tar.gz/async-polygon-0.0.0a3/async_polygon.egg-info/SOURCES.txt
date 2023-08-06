@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+async_polygon/__init__.py
+async_polygon.egg-info/PKG-INFO
+async_polygon.egg-info/SOURCES.txt
+async_polygon.egg-info/dependency_links.txt
+async_polygon.egg-info/requires.txt
+async_polygon.egg-info/top_level.txt
+async_polygon/rest/__init__.py
+async_polygon/rest/client.py
+async_polygon/rest/dataclasses/__init__.py
+async_polygon/rest/dataclasses/pretty_json.py
+async_polygon/rest/dataclasses/templates.py
