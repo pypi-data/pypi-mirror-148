@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.cfg
+PDFU/PDFU_extract.py
+PDFU/__init__.py
+PDFU/command_line.py
+PDFU.egg-info/PKG-INFO
+PDFU.egg-info/SOURCES.txt
+PDFU.egg-info/dependency_links.txt
+PDFU.egg-info/entry_points.txt
+PDFU.egg-info/requires.txt
+PDFU.egg-info/top_level.txt
