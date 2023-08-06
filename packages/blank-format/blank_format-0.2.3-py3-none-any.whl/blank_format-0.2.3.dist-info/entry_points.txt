@@ -1,0 +1,3 @@
+[console_scripts]
+blank=blank_format:main
+
