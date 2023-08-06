@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: genpipes-suite
+Version: 0.0a0
+Summary: Several bioinformatics pipelines developed at McGill University Genome Centre
+Home-page: https://bitbucket.org/mugqic/genpipes/
+Author: Canadian Center for Computational Genomics
+Author-email: pipelines@computationalgenomics.ca
+Maintainer-email: po.quirion@mcgill.com, edouard.henrion@mcgill.ca
+License: GNU Lesser General Public License
+Platform: UNKNOWN
+License-File: COPYING
+License-File: COPYING.LESSER
+
+UNKNOWN
+
