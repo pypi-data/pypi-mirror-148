@@ -1,0 +1,128 @@
+Metadata-Version: 2.1
+Name: productml
+Version: 0.0.3
+Summary: Library for Akumyn product-level inference.
+Author: DevsDoData
+Author-email: jerryyexu@gmail.com
+License: MIT
+Keywords: retail,ml,cv,devsdodata
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: antlr4-python3-runtime (==4.8)
+Requires-Dist: attrs (==21.4.0)
+Requires-Dist: black (==22.3.0)
+Requires-Dist: bleach (==5.0.0)
+Requires-Dist: certifi (==2021.10.8)
+Requires-Dist: cffi (==1.15.0)
+Requires-Dist: charset-normalizer (==2.0.12)
+Requires-Dist: click (==8.1.3)
+Requires-Dist: commonmark (==0.9.1)
+Requires-Dist: cryptography (==37.0.1)
+Requires-Dist: cycler (==0.11.0)
+Requires-Dist: docker-pycreds (==0.4.0)
+Requires-Dist: docutils (==0.18.1)
+Requires-Dist: fonttools (==4.33.3)
+Requires-Dist: fuzzywuzzy (==0.18.0)
+Requires-Dist: gitdb (==4.0.9)
+Requires-Dist: gitpython (==3.1.27)
+Requires-Dist: hydra-core (==1.2.0.dev5)
+Requires-Dist: idna (==3.3)
+Requires-Dist: importlib-metadata (==4.11.3)
+Requires-Dist: iniconfig (==1.1.1)
+Requires-Dist: install (==1.3.5)
+Requires-Dist: jeepney (==0.8.0)
+Requires-Dist: joblib (==1.1.0)
+Requires-Dist: keyring (==23.5.0)
+Requires-Dist: kiwisolver (==1.4.2)
+Requires-Dist: loguru (==0.6.0)
+Requires-Dist: matplotlib (==3.5.1)
+Requires-Dist: mypy-extensions (==0.4.3)
+Requires-Dist: numpy (==1.22.3)
+Requires-Dist: omegaconf (==2.2.0.dev2)
+Requires-Dist: opencv-python (==4.5.5.64)
+Requires-Dist: packaging (==21.3)
+Requires-Dist: pathspec (==0.9.0)
+Requires-Dist: pathtools (==0.1.2)
+Requires-Dist: pillow (==9.1.0)
+Requires-Dist: pkginfo (==1.8.2)
+Requires-Dist: platformdirs (==2.5.2)
+Requires-Dist: pluggy (==1.0.0)
+Requires-Dist: promise (==2.3)
+Requires-Dist: protobuf (==3.20.1)
+Requires-Dist: psutil (==5.9.0)
+Requires-Dist: py (==1.11.0)
+Requires-Dist: pycparser (==2.21)
+Requires-Dist: pygments (==2.12.0)
+Requires-Dist: pyparsing (==3.0.8)
+Requires-Dist: pytest (==7.1.2)
+Requires-Dist: python-dateutil (==2.8.2)
+Requires-Dist: python-levenshtein (==0.12.2)
+Requires-Dist: pyyaml (==6.0)
+Requires-Dist: readme-renderer (==35.0)
+Requires-Dist: requests (==2.27.1)
+Requires-Dist: requests-toolbelt (==0.9.1)
+Requires-Dist: rfc3986 (==2.0.0)
+Requires-Dist: rich (==12.3.0)
+Requires-Dist: scikit-learn (==1.1.0rc1)
+Requires-Dist: scipy (==1.8.0)
+Requires-Dist: secretstorage (==3.3.2)
+Requires-Dist: sentry-sdk (==1.5.10)
+Requires-Dist: setproctitle (==1.2.3)
+Requires-Dist: setuptools (==62.1.0)
+Requires-Dist: shortuuid (==1.0.8)
+Requires-Dist: six (==1.16.0)
+Requires-Dist: smmap (==5.0.0)
+Requires-Dist: threadpoolctl (==3.1.0)
+Requires-Dist: tomli (==2.0.1)
+Requires-Dist: torch (==1.11.0)
+Requires-Dist: torchvision (==0.12.0)
+Requires-Dist: twine (==4.0.0)
+Requires-Dist: typing-extensions (==4.2.0)
+Requires-Dist: urllib3 (==1.26.9)
+Requires-Dist: wandb (==0.12.15)
+Requires-Dist: webencodings (==0.5.1)
+Requires-Dist: wheel (==0.37.1)
+Requires-Dist: zipp (==3.8.0)
+
+## Product-ml
+
+A package built by DevsDoData for product-level inference.
+
+Includes functionality for ML lifecycle including data preparation and model training.
+
+Used to sync key workflows across platforms locally, cloud (Colab) notebooks and deployment.
+
+## Locally distributing the package
+
+Specify the dependencies and build the package
+```bash
+pipenv requirements | sed 1d > requirements.txt
+
+python3 ./productml/setup.py install sdist bdist_wheel
+```
+
+Then create a new dir for testing.
+
+```bash
+cd ../ && mkdir test-dir && cd test-dir
+
+touch activate.sh < echo ". ./venv/bin/activate"
+
+pip3 install virtualenv && virtualenv venv
+
+source activate.sh
+
+touch test.py && test.py < echo "from productml.data.labelling import text_matching"
+
+python3 test.py
+```
+
+And you should not get an `ImportError` or any other error for that matter.
+
+## 
+
