@@ -1,0 +1,6 @@
+boto3_utils_layer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+boto3_utils_layer/boto3_utils_layer.py,sha256=0IUtW-PyqpsLSDRd21yXIXSNksPhSqN9SfmP05RtraY,9381
+boto3_utils_layer-0.1.dist-info/METADATA,sha256=lsdYVY-w_04rcGYf3cZkYrAatIayxsxUz8liPYq2UuQ,227
+boto3_utils_layer-0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+boto3_utils_layer-0.1.dist-info/top_level.txt,sha256=JQIJFDF0XgA9k24wOraruMI5HafC-ZKiI0-lvzoG9sA,18
+boto3_utils_layer-0.1.dist-info/RECORD,,
