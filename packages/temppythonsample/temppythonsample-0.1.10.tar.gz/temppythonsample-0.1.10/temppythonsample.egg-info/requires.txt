@@ -1,0 +1,7 @@
+scikit-learn
+pandas
+gensim==3.8.0
+azureml.core
+azureml.widgets
+azureml.pipeline.core
+azureml.pipeline.steps
