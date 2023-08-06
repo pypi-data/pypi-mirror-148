@@ -1,0 +1,233 @@
+Metadata-Version: 2.1
+Name: bestree
+Version: 0.1.0
+Summary: A Python package for finding the best decision tree parameters.
+Home-page: UNKNOWN
+Author: CodingLive
+Author-email: <rootcode@duck.com>
+License: UNKNOWN
+Keywords: decision tree,decision tree parameters,best tree parameters
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Requires-Dist: pandas
+
+
+# bestree
+
+
+
+Under construction. 
+
+---
+
+Developed by CodingLive from ProtDos (c) 2022
+
+
+
+##Installation
+
+```bash
+
+pip install bestree
+
+```
+
+
+
+### Requirements
+
+- Python (>= 3.8)
+
+- NumPy (>= 1.17.3)
+
+- ScikitLearn
+
+- Pandas
+
+
+
+## Usage
+
+
+
+### All best features
+
+```python
+
+from bestree import best_all
+
+from sklearn.tree import DecisionTreeClassifier
+
+
+
+from sklearn.datasets import make_blobs # To create random X and y data
+
+X, y = make_blobs(n_samples=100, n_features=2, centers=3, random_state=0)
+
+
+
+criterion, max_depths, split, state = best_all(X, y)
+
+
+
+clf = DecisionTreeClassifier(max_depth=max_depths, criterion=criterion, min_samples_split=split, random_state=state)
+
+# your script
+
+```
+
+
+
+### Choosing the best criterion
+
+```python
+
+from bestree import best_criterion #For pandas objects
+
+from bestree import best_criterion_norm #For other objects
+
+from sklearn.tree import DecisionTreeClassifier
+
+
+
+from sklearn.datasets import make_blobs # To create random X and y data
+
+X, y = make_blobs(n_samples=100, n_features=2, centers=3, random_state=0)
+
+
+
+criterion = best_criterion_norm(X, y)
+
+print(criterion)
+
+
+
+clf = DecisionTreeClassifier(criterion=criterion)
+
+# your script
+
+```
+
+
+
+### Choosing the best max_depth value
+
+```python
+
+from bestree import best_depth
+
+from sklearn.tree import DecisionTreeClassifier
+
+
+
+from sklearn.datasets import make_blobs # To create random X and y data
+
+X, y = make_blobs(n_samples=100, n_features=2, centers=3, random_state=0)
+
+
+
+max_depth = best_depth(X, y, criterion="gini")
+
+
+
+clf = DecisionTreeClassifier(max_depth=max_depth)
+
+# your script
+
+```
+
+
+
+### Choosing the best splitter
+
+```python
+
+from bestree import best_splitter
+
+from sklearn.tree import DecisionTreeClassifier
+
+
+
+from sklearn.datasets import make_blobs # To create random X and y data
+
+X, y = make_blobs(n_samples=100, n_features=2, centers=3, random_state=0)
+
+
+
+max_depths = 3
+
+criterion = "gini"
+
+
+
+split = best_splitter(X, y, max_depths, criterion=criterion)
+
+
+
+clf = DecisionTreeClassifier(min_samples_split=split)
+
+# your script
+
+```
+
+
+
+### Choosing the best state
+
+```python
+
+from bestree import best_state
+
+from sklearn.tree import DecisionTreeClassifier
+
+
+
+from sklearn.datasets import make_blobs # To create random X and y data
+
+X, y = make_blobs(n_samples=100, n_features=2, centers=3, random_state=0)
+
+
+
+max_depths = 3
+
+criterion = "gini"
+
+
+
+state = best_state(X, y, max_depths, criterion=criterion)
+
+
+
+clf = DecisionTreeClassifier(random_state=state)
+
+# your script
+
+```
+
+
+
+## Help & Support
+
+Communication:
+
+- Mail: rootcode@duck.com
+
+- Website: https://protdos.com
+
+- Discord: https://discord.gg/Xtk4XbwW4Z
+
+- Reddit: https://reddit.com/u/ProtDos
+
+- Twitter: https://twitter.com/ProtDos
+
+
+
+## Conclusion
+
+Thanks for everybody that supported me (nobody)
+
+
+
