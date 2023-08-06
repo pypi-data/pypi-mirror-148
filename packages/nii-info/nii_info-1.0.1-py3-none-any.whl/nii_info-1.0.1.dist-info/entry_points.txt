@@ -1,0 +1,3 @@
+[console_scripts]
+nii=nii_info:cli
+
