@@ -1,0 +1,2 @@
+[pytest11]
+snapshot-queries = snapshot_queries.testing.pytest_plugin
