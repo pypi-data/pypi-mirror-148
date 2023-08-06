@@ -1,0 +1,9 @@
+flask
+hydrilla.builder==1.0
+jsonschema>=3.0
+
+[setup]
+setuptools_scm
+
+[test]
+pytest
