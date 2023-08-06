@@ -1,0 +1,10 @@
+LICENSE
+README.rst
+setup.cfg
+setup.py
+flask_session_captcha/__init__.py
+flask_session_captcha.egg-info/PKG-INFO
+flask_session_captcha.egg-info/SOURCES.txt
+flask_session_captcha.egg-info/dependency_links.txt
+flask_session_captcha.egg-info/requires.txt
+flask_session_captcha.egg-info/top_level.txt
