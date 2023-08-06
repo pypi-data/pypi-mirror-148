@@ -1,0 +1,8 @@
+pydantic
+
+[dev]
+pre-commit
+
+[test]
+pytest
+pytest-cov
