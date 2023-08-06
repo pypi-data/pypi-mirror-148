@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: CStockSpider
+Version: 0.2.21
+Summary: A module for fetching stock info and public stock company in China
+Home-page: https://github.com/me/myproject
+Author: Leo
+Author-email: me@example.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: pandas
+Requires-Dist: lxml
+Requires-Dist: gensim
+Requires-Dist: numpy
+Requires-Dist: jieba
+
+An easy-used module for fetching data in China exchange
+
+Only for academic use
+
+
+
+Classes that included:
+
+    smSpider, StockSpider, newsSpider, NameCodeInterpreter, 
+
+    MarketOverviewSpider, holderSpider, newsAnalyser
+
+
+
+The newSpider and newsAnalyser is not recommended, for they may not give instant feedback because they fetching information online instead of using its own database and server.
+
+
+
+As for specify usage, please use help() function to explore what you need.
+
+
+
+Installation and Import
+
+[Installation] pip install CStockSpider
+
+[Import]import StockSpider
+
+
+
+    sp = StockSpider.class_name()
+
+    sp.method_name(params)
+
+
+
+
+
+
