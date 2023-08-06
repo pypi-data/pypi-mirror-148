@@ -1,0 +1,54 @@
+name: "normalized_coverage"
+label: "Normalized Coverage"
+description: "Converts and normalizes BAM files to BIGWIG or BEDGRAPH"
+
+required_settings:
+
+  output_format:
+    label: "Output Format"
+    description: "Output format: BIGWIG, BEDGRAPH or Both"
+    type: 'enum'
+    choices:
+      bigwig: 'bw'
+      bedgraph: 'bed'
+      both: 'both'
+
+  normalize_method:
+    label: "Normalize Method"
+    description: "Method for normalization: RPKM, CPM, BPM, RPGC, None (https://deeptools.readthedocs.io/en/develop/content/tools/bamCoverage.html)"
+    type: 'enum'
+    choices:
+      RPKM: 'RPKM'
+      CPM: 'CPM'
+      BPM: 'BPM'
+      RPGC: 'RPGC'
+      None: 'None'
+
+
+optional_settings:
+
+  bin_size:
+    label: "Bin Size"
+    description: "X nucleotides will be packed in one bin for calculating the coverage."
+    type: 'number'
+    number_type: 'integer'
+    default: 1
+    range:
+      min: 1
+      max: Inf
+
+  additional_options:
+    label: "Additional deepTools-bamCoverage Options"
+    description: "Additional options for deepTools bamCoverage to use in shell command"
+    type: "string"
+    default: ''
+
+
+single_end:
+  snakefile: "normalized_coverage_se"
+
+
+paired_end:
+  snakefile: "normalized_coverage_pe"
+
+

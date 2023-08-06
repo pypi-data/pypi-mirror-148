@@ -1,0 +1,56 @@
+from os import listdir
+from os.path import isfile
+import sys
+
+def file_extension(extension):
+    if extension == "bed":
+        return ["bed.gz"]
+    elif extension == "bw":
+        return ["bw"]
+    elif extension == 'both':
+        return ["bed.gz", "bw"]
+    else:
+        print("Unknown file extension for normalized coverage", file=sys.STDERR)
+        exit(1)
+
+rule all:
+    input:
+        expand("analysis/normalized_coverage/{name}.{extension}", name=config['entries'].keys(), extension=file_extension("%%OUTPUT_FORMAT%%"))
+
+rule normalize_bed:
+    input:
+        "mapping/{sample}.bam"
+    output:
+        temp("analysis/normalized_coverage/{sample}.bed")
+    conda:
+        "../lib/conda_env.yaml"
+    log:
+        log="analysis/normalized_coverage/logs/bamCoverage_bed_{sample}.log"
+    threads:
+        1
+    shell:
+        "bamCoverage -p {threads} %%ADDITIONAL_OPTIONS%% -b {input} -o {output} --outFileFormat bedgraph -bs %%BIN_SIZE%% --normalizeUsing %%NORMALIZE_METHOD%% 2>&1 |"
+        "tee {log}"
+
+rule normalize_bw:
+    input:
+        "mapping/{sample}.bam"
+    output:
+        "analysis/normalized_coverage/{sample}.bw"
+    conda:
+        "../lib/conda_env.yaml"
+    log:
+        log="analysis/normalized_coverage/logs/bamCoverage_bw_{sample}.log"
+    threads:
+        1
+    shell:
+        "bamCoverage -p {threads} %%ADDITIONAL_OPTIONS%% -b {input} -o {output} --outFileFormat bigwig -bs %%BIN_SIZE%% --normalizeUsing %%NORMALIZE_METHOD%% 2>&1 |"
+        "tee {log}"
+
+rule compress_bed_file:
+    input:
+        "analysis/normalized_coverage/{sample}.bed"
+    output:
+        "analysis/normalized_coverage/{sample}.bed.gz"
+    shell:
+        "gzip {input}"
