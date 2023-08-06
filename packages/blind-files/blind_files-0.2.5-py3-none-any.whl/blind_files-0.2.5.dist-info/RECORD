@@ -1,0 +1,12 @@
+blind_files/__init__.py,sha256=akppcwC-edFM2U8lJyLMb5QrPuneHX71Y9Azobox7ps,154
+blind_files/aho_corasick_path_generator.py,sha256=mul7rbvNl1bidtZ2QbaSaOqmdV9tW5ksKloEgcGKu1w,1628
+blind_files/blind_files.py,sha256=VYoI-gwqwBKPx84cA0KnYDRofrgIXs8xtASD2nu5fE0,44
+blind_files/cli.py,sha256=RSY66Boifd6fbcQ0h6fi2NDnsTpcrOATZ4ZFICXWtfs,4621
+blind_files/data/nounlist.txt,sha256=vmtCDERNUPxb5X0j6W0vMasRhC6yNu24MEnDSF3a4VE,35111
+blind_files/delimiter_path_generator.py,sha256=Cfioy0PZ4wQ9xFXzmH9Bsxs0BNe_F86un8J71HevyCo,888
+blind_files/identifier_mapper.py,sha256=8PKWgiOzPs_QIR5N1OhrY01ve9nFKbhRT-XUJ6Fozcg,813
+blind_files-0.2.5.dist-info/entry_points.txt,sha256=2LhThEsQraFGPAOcz1idOn6TPaWcE0Nq8_cBU8iK_KY,52
+blind_files-0.2.5.dist-info/LICENSE,sha256=oftPpT1t5PLbymSuUIx5g5-ThoL3OF5IXSXpomiZkXY,1069
+blind_files-0.2.5.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+blind_files-0.2.5.dist-info/METADATA,sha256=zun-tD3-mduMqgKc1xAhM965GH7obvPSxLRSngysluo,4239
+blind_files-0.2.5.dist-info/RECORD,,
