@@ -1,0 +1,11 @@
+dgd/__init__.py,sha256=Fs17CiSD-NoaIIKLKpSgc-TC5BldIYWTid_IMavGJJI,68
+dgd/_download.py,sha256=cP8vfNcF9ppB_11EdlusX-p30eFaXFRGiJAz4Hud3oY,701
+dgd/config.py,sha256=_3ezynIKCB-BFiDolyn8z2pngrOHSOyYAZSneKVt3To,233
+dgd/inference.py,sha256=YHasU_YfU6YVPRGdXTfZwR3OgQO-OoeSKHFu1DnR_1k,933
+dgd/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dgd/video.py,sha256=ANmDoVv7G6HhAQ_R2rnV7RUXHtjWONOg5E_IqV7aABs,3464
+dgd-0.0.0.dist-info/LICENSE,sha256=tMrtflzADXIHkMP0xXjHY80Vvf0i6bvidwHXAO6GQ7o,1067
+dgd-0.0.0.dist-info/METADATA,sha256=DtWEWK80IQSTtySBf5L3t-NcIIZq7aU7y46gpuJMr0U,741
+dgd-0.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+dgd-0.0.0.dist-info/top_level.txt,sha256=WxDJB6w9QM5Vyy6dEvd42wOY_IJBFsb8U_QtMWmhoVM,4
+dgd-0.0.0.dist-info/RECORD,,
