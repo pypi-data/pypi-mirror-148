@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+datafox/__init__.py
+datafox/datafox.py
+datafox/example.py
+datafox/example_test.py
+datafox/datafox.egg-info/PKG-INFO
+datafox/datafox.egg-info/SOURCES.txt
+datafox/datafox.egg-info/dependency_links.txt
+datafox/datafox.egg-info/top_level.txt
