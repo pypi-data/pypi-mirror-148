@@ -1,0 +1,8 @@
+LICENSE.txt
+README.md
+setup.py
+src/prettier.py
+src/prettier.egg-info/PKG-INFO
+src/prettier.egg-info/SOURCES.txt
+src/prettier.egg-info/dependency_links.txt
+src/prettier.egg-info/top_level.txt
