@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+bmicalculator/__init__.py
+bmicalproj.egg-info/PKG-INFO
+bmicalproj.egg-info/SOURCES.txt
+bmicalproj.egg-info/dependency_links.txt
+bmicalproj.egg-info/top_level.txt
