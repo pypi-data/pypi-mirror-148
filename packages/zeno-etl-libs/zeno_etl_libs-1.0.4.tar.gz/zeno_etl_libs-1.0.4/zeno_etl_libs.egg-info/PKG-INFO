@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: zeno-etl-libs
+Version: 1.0.4
+Summary: Zeno ETL Custom library
+Home-page: https://bitbucket.org/workcell/etl/src/master/
+Author: Zeno ETL Team
+Author-email: data@zeno.health
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+
+UNKNOWN
+
