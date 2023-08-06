@@ -1,0 +1,13 @@
+conspiracies/HeadWordExtractionComponent.py,sha256=QTRWlMsPxXoYBWBNEaSv7VRFwEH9g6fl5dcoVyBj0kY,6500
+conspiracies/__init__.py,sha256=qRUI5C_bEomtjchECBg7xJNuDlr13aGcX7xKhIxdAD4,274
+conspiracies/about.py,sha256=Rvh7kT1R5DW7T6gGaE0NjeeXUKEYOMxsyfsNY2_-nA8,134
+conspiracies/download.py,sha256=5Ou85hmWbUBH-20aQ7ElyJ7WusyFY-yVAVRb5a-Kg_s,2866
+conspiracies/wordpiece_length_normalization.py,sha256=H0KkP7IC0Jnnicqf0Ps9IwpRNZYMdBBR4MsCZxgkNig,3132
+conspiracies/coref/CoreferenceComponent.py,sha256=IvrCCpGucMNPmY--P3qcrnzTiyTLaoK-x2lFkF_psNg,7772
+conspiracies/coref/CoreferenceModel.py,sha256=IXDg1R0AUs9Z51FCB2ecr9VbtTdRyWve0b6B5YBOfeM,2392
+conspiracies/coref/__init__.py,sha256=q0Wh_Xm7JumtjjRQ48HASvPjAR7XApnApfDoDnYllKE,142
+conspiracies-0.1.1.dist-info/LICENSE,sha256=er4Z7Ju3OzYUG5mbhh0krYVegIuv4PgehMzihVb2wpc,20131
+conspiracies-0.1.1.dist-info/METADATA,sha256=62Ema2M026LRORrfQ3CdFN8FRBsb0rE0nBzrqwAVtFo,5541
+conspiracies-0.1.1.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+conspiracies-0.1.1.dist-info/top_level.txt,sha256=hRiFa3t2gWTpZI6nQ2pdPcr9e7GmLDilCjeM44Am-AA,13
+conspiracies-0.1.1.dist-info/RECORD,,
