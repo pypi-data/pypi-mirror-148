@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+phpipam_pycli/__init__.py
+phpipam_pycli/phpipam_pycli.py
+phpipam_pycli.egg-info/PKG-INFO
+phpipam_pycli.egg-info/SOURCES.txt
+phpipam_pycli.egg-info/dependency_links.txt
+phpipam_pycli.egg-info/top_level.txt
