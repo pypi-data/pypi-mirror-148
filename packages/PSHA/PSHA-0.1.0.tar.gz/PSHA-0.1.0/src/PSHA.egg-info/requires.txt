@@ -1,0 +1,11 @@
+numpy
+matplotlib
+triangle
+
+[docs]
+sphinx
+m2r2
+furo
+
+[test]
+unittest
