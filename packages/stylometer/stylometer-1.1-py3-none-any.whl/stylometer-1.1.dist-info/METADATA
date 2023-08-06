@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: stylometer
+Version: 1.1
+Summary: Writing style analyzer
+Home-page: UNKNOWN
+Author: Ekaterina Levitskaya, Kara Kedrick, Russell J. Funk
+Author-email: el2727@nyu.edu, kedri001@umn.edu, rfunk@umn.edu
+License: UNKNOWN
+Keywords: python,writing style
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Dist: spacy
+
+This package analyzes the style of a given writing sample using "involved" and "informational" linguistic features. More information on the Github page: https://github.com/el2727/stylometer
+
+
