@@ -1,0 +1,10 @@
+Flask~=2.0.0
+Flask-WTF>=0.15
+Flask-Login
+Flask-Executor
+WTForms>=2.3
+httpx~=0.21.0
+xmltodict>=0.11
+is-safe-url
+phonenumbers
+pgeocode
