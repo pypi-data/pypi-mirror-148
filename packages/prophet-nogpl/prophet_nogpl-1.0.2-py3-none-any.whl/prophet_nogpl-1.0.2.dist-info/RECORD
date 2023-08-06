@@ -1,0 +1,13 @@
+prophet/__init__.py,sha256=_DF0IMcgRpgYDHZ6_3ecot_uF20rjedFrCJ0O2z4wNk,359
+prophet/diagnostics.py,sha256=wvXotYaHJxDTjErX_XmM4QBG8pklx4E-dmIbYPT2xOg,22518
+prophet/forecaster.py,sha256=-XF2Pks8fS0k3qAUXiKrIb3kQGzGLZuzul5Xt7HthvY,64386
+prophet/hdays.py,sha256=p40yaQgx7SJD9yDioevucZCE5_ig5G0A-zkFvI3uA_M,46866
+prophet/make_holidays.py,sha256=pbPEzTIqT32c4RhC3K2KXTf8rb3t6lOphKumjGWegJk,2194
+prophet/models.py,sha256=inIAHHhWF_7jTLrZJN0809BJF06ENWTO0TwrsBP-JcY,10828
+prophet/plot.py,sha256=hMdJCATvxBjqC6AnH3gVp-4wvHSIYX0Jij7hD8nMMz0,36761
+prophet/serialize.py,sha256=hqpuxn_ItU4EIgqS-QZf9Et9okijjGHhGaHcIwxQ_a4,6716
+prophet/utilities.py,sha256=ZBZRes-iD4vyHBsHNCVqoKS9zi60lqygo3FtGmAe9M8,2743
+prophet_nogpl-1.0.2.dist-info/LICENSE,sha256=UkEte8fOQVfqYou6rLiCngqcs8WPV_mRdhJryM8r_IU,1086
+prophet_nogpl-1.0.2.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+prophet_nogpl-1.0.2.dist-info/METADATA,sha256=WXW0tGv9kiB9AUtfXXIjOVevzDzU3_m4JNZ_xMJ-3M4,9760
+prophet_nogpl-1.0.2.dist-info/RECORD,,
