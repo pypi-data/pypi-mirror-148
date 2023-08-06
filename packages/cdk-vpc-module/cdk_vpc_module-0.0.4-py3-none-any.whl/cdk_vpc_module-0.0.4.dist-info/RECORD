@@ -1,0 +1,9 @@
+cdk_vpc_module/__init__.py,sha256=z4OfBXMJYaC3ZwBQ0CHshI4_BkDS7IN78FT-yn7G-6Y,24784
+cdk_vpc_module/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+cdk_vpc_module/_jsii/__init__.py,sha256=UuF01PapcGmhCuFs8mNpA1unKunue8oeqWnbSrrDJS4,385
+cdk_vpc_module/_jsii/cdk-vpc-module@0.0.4.jsii.tgz,sha256=fpgnS6TRL1TBfizmzIIu-w_YQeo940mupw1lxANPvQc,29317
+cdk_vpc_module-0.0.4.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+cdk_vpc_module-0.0.4.dist-info/METADATA,sha256=oB_fwzEN8uDOLGR1wunxLZF2AwhHHVagC2Cu511DWuU,7376
+cdk_vpc_module-0.0.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+cdk_vpc_module-0.0.4.dist-info/top_level.txt,sha256=mX45zwitLa-hdj_BGxvV0MiFRDCts2eC7lID3L1ArH4,15
+cdk_vpc_module-0.0.4.dist-info/RECORD,,
