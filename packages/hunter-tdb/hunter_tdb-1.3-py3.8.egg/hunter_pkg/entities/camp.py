@@ -1,0 +1,57 @@
+import enum
+
+from hunter_pkg import colors
+from hunter_pkg import stats
+
+from hunter_pkg.entities import base_entity
+
+class Camp(base_entity.Hideable):
+    def __init__(self, engine, x, y):
+        self.engine = engine
+        self.x = x
+        self.y = y
+        self.char = "C"
+        self.fg_color = colors.white()
+        self.bg_color = colors.safe_blue
+        self.components = [FirePit(engine), Bedroll(), WoodPile()]
+        self.name = "Camp"
+        self.entity_name = self.name
+
+
+class CampComponent():
+    def name(self):
+        return self.__class__.__name__
+
+
+class FirePit(CampComponent):
+    def __init__(self, engine):
+        self.engine = engine
+        self.update_interval = stats.get("fire-pit.duration")
+        self.state = None
+    
+    def ignite(self):
+        self.state = FireState.Ignited
+        self.engine.event_queue.append()
+
+    def extinguish(self):
+        self.state = FireState.Extinguished
+    
+    def progress(self):
+        self.extinguish
+
+
+class FireState(enum.Enum):
+    Extinguished = 1
+    Ignited = 2
+
+
+class Bedroll(CampComponent):
+    def __init__(self):
+        self.occupied = False
+        self.comfort = stats.get("bedroll.comfort")
+        self.wake_chance = stats.get("bedroll.wake-chance")
+
+
+class WoodPile(CampComponent):
+    def __init__(self):
+        self.fuel = []
