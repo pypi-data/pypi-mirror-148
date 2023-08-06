@@ -1,0 +1,11 @@
+debiased_spatial_whittle/__init__.py,sha256=mGp-WN-YlSduw-SOUZlTtrBHvvd9G_S3gebaQuAy4L8,231
+debiased_spatial_whittle/cov_funcs.py,sha256=Z6CE2Z9XkSIwKICIjxyYg3VtPfsDAnHnHUs9t2vUbMo,1583
+debiased_spatial_whittle/expected_periodogram.py,sha256=FPDYac2OnYjdUJAvLuicOweGuRLy-2R6VnSEImGk71Y,2404
+debiased_spatial_whittle/grids.py,sha256=yisQ4NVXheCVgLeKouXXO7MgU6yBocZ01lUNfs9RhBw,2545
+debiased_spatial_whittle/likelihood.py,sha256=ouPcqivwUGrbZu8gEecsFux1y34z5gwHn-RNCB6g4ZU,2486
+debiased_spatial_whittle/simulation.py,sha256=tQwpqj_JO4SZKABqEDQwGMFjncreaq0MKvcMTDFVkg8,546
+debiased_spatial_whittle/spatial_kernel.py,sha256=7fWS5b5jRUZElep3QKEVVsJKJiNt3Vu2GtAS3k324R4,662
+france.jpg,sha256=brdXjMejBtPOn39xuCGiN8k-oa6Qf-wZKGmrfYFrfDs,50944
+debiased_spatial_whittle-0.1.1.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+debiased_spatial_whittle-0.1.1.dist-info/METADATA,sha256=BfXzyZNDUfbV8h6ZIEJ5NxIz9HrDQP4P2bZ3MJKWQio,604
+debiased_spatial_whittle-0.1.1.dist-info/RECORD,,
