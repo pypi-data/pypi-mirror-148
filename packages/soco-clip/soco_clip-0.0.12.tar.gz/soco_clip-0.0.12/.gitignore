@@ -1,0 +1,7 @@
+venv
+*.ckpt
+dist
+soco_clip.egg-info
+*.pyc
+*.mp4
+*.pt
