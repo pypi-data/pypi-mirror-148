@@ -1,0 +1,15 @@
+git https://github.com/Microsoft/vcpkg.git f6af75acc923c833a5620943e3fc7d5e4930f0df
+vcpkg expat 2.4.8
+vcpkg netcdf-c 4.8.1#2
+Build
+Build
+vcpkg pango 1.50.6
+vcpkg sqlite3 3.37.2#1
+Build
+vcpkg libpng 1.6.37#16
+pip dll-diagnostics 0.0.18
+git https://github.com/MathisRosenhauer/libaec.git 9ea83102b294ee6a93978c6f62db5cd88ed79410
+git https://github.com/ecmwf/ecbuild.git c39e3b0aaa1b9da7b5d6d9d419e8e25f37d70794
+git https://github.com/ecmwf/eccodes.git 1548a97ff54bff8e93c517245606ea0e07d801a7
+git https://github.com/ecmwf/magics.git 47a37dcf67f6bfca2cb69764867bdc4d582df176
+git https://github.com/OSGeo/PROJ.git c0e2a9a49e01a8167944092a825044a3c5f468b9
