@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+opentdb_py.egg-info/PKG-INFO
+opentdb_py.egg-info/SOURCES.txt
+opentdb_py.egg-info/dependency_links.txt
+opentdb_py.egg-info/top_level.txt
+trivia/__init__.py
+trivia/utils/__init__.py
