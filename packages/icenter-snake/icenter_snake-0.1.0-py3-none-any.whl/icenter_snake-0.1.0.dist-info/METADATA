@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: icenter-snake
+Version: 0.1.0
+Summary: Pygame implementation of the snake video game
+Home-page: https://pypi.org/project/icenter_snake
+Author: James Kabbes
+Author-email: james.kabbes@gmail.com
+License: UNKNOWN
+Project-URL: GitHub, https://github.com/AmerenICenter/snake
+Project-URL: Documentation, https://amerenicenter.github.io/snake/
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+[GitHub Pages](https://amerenicenter.github.io/snake/)
+
+# snake
+
+
