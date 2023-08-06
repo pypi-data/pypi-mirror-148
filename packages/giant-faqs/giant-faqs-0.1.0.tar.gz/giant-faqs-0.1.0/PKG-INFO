@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: giant-faqs
+Version: 0.1.0
+Summary: A small reusable package that adds a FAQ app to a project
+Home-page: https://github.com/giantmade/giant-faqs
+License: MIT
+Keywords: giant_faqs,app
+Author: Dominic Chaple
+Author-email: domchaple@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: flake8 (>=4.0.1,<5.0.0)
+Requires-Dist: giant-mixins
+Requires-Dist: giant-plugins
+Requires-Dist: isort (>=5.10.1,<6.0.0)
+Project-URL: Repository, https://github.com/giantmade/giant-faqs
+Description-Content-Type: text/markdown
+
+# Giant-FAQs
+
+A small reusable package that adds a 'Frequently Asked Questions' app to a django site.
+
+This will include the basic formatting and functionality such as model creation via the admin.
+
+Supported Django versions:
+
+    Django 2.2, 3.2
+
+Supported django CMS versions:
+
+    django CMS 3.8, 3.9
+
+## Installation and set up
+
+You should then add "giant_faqs" to the INSTALLED_APPS in your settings file. For use of the RichText plugin needed for the answer entry field on the model, it is required that you use the giant-plugins app.
+
+There is an optional search bar which can be removed from the top of the index template by adding 
+    
+    FAQ_SEARCH = False
+
+to your project's settings.
+
+
