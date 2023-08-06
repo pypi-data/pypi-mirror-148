@@ -1,0 +1,7 @@
+[console_scripts]
+sktk=snektalk.cli:main
+snektalk=snektalk.cli:main
+
+[snektalk]
+default=snektalk.plugins.default:default_plugin
+
