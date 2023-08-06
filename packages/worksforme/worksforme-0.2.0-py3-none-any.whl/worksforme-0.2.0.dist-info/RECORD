@@ -1,0 +1,12 @@
+worksforme/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+worksforme/main.py,sha256=MxV-xLMzgB7HTxJ-D5RakO-MGPWInx3ssrGJt3SI8YY,9298
+worksforme/version.py,sha256=FVHPBGkfhbQDi_z3v0PiKJrXXqXOx0vGW_1VaqNJi7U,22
+worksforme/templates/base.html,sha256=skf4OHo9iwoRnuEtHb5JoNr8gSqed0Fr6SfHTkZORa4,1016
+worksforme/templates/script.js,sha256=0U3mjjtmQoiar3D_zq0K1ZmTl9V_R4qmCLGtNm3vWJE,15066
+worksforme/templates/style.css,sha256=gXTJ2b4mSR6uQ4tN0Bv1TlGQEbTvHmOJnYaxlRz40_g,11067
+worksforme-0.2.0.dist-info/LICENSE,sha256=usLQ5PLO5ePSnaWZqPiXR61ge6USN13NgiNf8L19ngI,1097
+worksforme-0.2.0.dist-info/METADATA,sha256=Logm0AtJlG6SS4KqLDCZvPGuJM76K-DSzgfZA2fzUaw,1106
+worksforme-0.2.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+worksforme-0.2.0.dist-info/entry_points.txt,sha256=ngnq5K2yOnd3wcJ09VvmoitZBcGxjswTmL9n9X6UNtY,52
+worksforme-0.2.0.dist-info/top_level.txt,sha256=nqW4wG4OiqRCKqvHOFg0rXDFBMaA8ibJBaqNXBV3ScU,11
+worksforme-0.2.0.dist-info/RECORD,,
