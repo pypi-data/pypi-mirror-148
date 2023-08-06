@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: sllin
+Version: 0.0.1
+Summary: An alternative python lib for SLCAN based LIN adapters
+Home-page: https://gitlab.com/menschel/sllin
+Author: Patrick Menschel
+Author-email: menschel.p@posteo.de
+License: UNKNOWN
+Keywords: LIN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: Free for non-commercial use
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Embedded Systems
+Requires: pyserial
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# SLLin
+
+![coverage](https://gitlab.com/Menschel/sllin/badges/master/coverage.svg)
+
+[Documentation](https://menschel.gitlab.io/sllin/)
+
+An alternative python lib for SLCAN based LIN adapters currently only for the [one from UCANDevices](https://ucandevices.github.io/ulc.html).
+
+# original lib is broken by design
+[UCAN's original python lib](https://github.com/uCAN-LIN/LinUSBConverter) is a demo at best and surely not safe for work.
+- multiple class definitions for LinFrame
+  
+- unsafe threading methods, e.g. multiple threads try to read from the same serial device at the same time
+  
+- worker threads or not set to daemon
+
+- sequential use of the LUC is not possible because the serial port dies on you
+
+
