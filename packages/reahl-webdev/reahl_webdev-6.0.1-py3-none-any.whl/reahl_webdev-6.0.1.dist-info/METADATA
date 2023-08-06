@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: reahl-webdev
+Version: 6.0.1
+Summary: Web-specific development tools for Reahl.
+Home-page: http://www.reahl.org
+Maintainer: Iwan Vosloo
+Maintainer-email: iwan@reahl.org
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+License-File: COPYING
+Requires-Dist: reahl-web (<6.1,>=6.0)
+Requires-Dist: reahl-dev (<6.1,>=6.0)
+Requires-Dist: reahl-component (<6.1,>=6.0)
+Requires-Dist: reahl-tofu (<6.1,>=6.0)
+Requires-Dist: selenium (<3.141.9999,>=2.42)
+Requires-Dist: watchdog (<0.10.999,>=0.8.3)
+Requires-Dist: WebOb (<1.8.999,>=1.8)
+Requires-Dist: setuptools (>=51.0.0)
+Requires-Dist: prompt-toolkit (<2.0.999,>=2.0.10)
+Provides-Extra: pillow
+Requires-Dist: Pillow (<7.1.999,>=2.5) ; extra == 'pillow'
+
+Reahl is a web application framework that allows a Python programmer to work in terms of useful abstractions - using a single programming language.
+
+Reahl development tools for testing and working with web based programs. 
+
