@@ -1,0 +1,9 @@
+README.md
+setup.py
+idjwi/__init__.py
+idjwi/functions.py
+idjwi.egg-info/PKG-INFO
+idjwi.egg-info/SOURCES.txt
+idjwi.egg-info/dependency_links.txt
+idjwi.egg-info/requires.txt
+idjwi.egg-info/top_level.txt
