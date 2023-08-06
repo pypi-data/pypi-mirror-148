@@ -1,0 +1,9 @@
+uciparse/__init__.py,sha256=MbcfcbWrGZXnfu4CSXP2C3Bl3oH2-5oGDMoqRtfcwss,29
+uciparse/cli.py,sha256=6uum_kYm8A_tsMUq0tHRp7fl7UAWeCLzkZa3QlUv_fE,1869
+uciparse/py.typed,sha256=NE-Kgdd2qmanj4URwlOhZBpAIJ6YHC9AXTHTGOfgqr0,68
+uciparse/uci.py,sha256=X1wXl6CGVmNjtnLVk4zYI6eFRz6jwnKqkkVo2qSkE8s,17364
+uciparse-0.1.14.dist-info/entry_points.txt,sha256=KGKbx0IdF5czAJulSgu6TyZugGVxVaEDPUUJtYqM0n4,73
+uciparse-0.1.14.dist-info/LICENSE,sha256=MTYF-6xpRekyTUglRweWtbfbwBL1I_3Bgfbm_SNOuI8,11525
+uciparse-0.1.14.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+uciparse-0.1.14.dist-info/METADATA,sha256=PZx_RaFvICl7F0ORV779RHeByjswzCBPiPhTG471tu0,5391
+uciparse-0.1.14.dist-info/RECORD,,
