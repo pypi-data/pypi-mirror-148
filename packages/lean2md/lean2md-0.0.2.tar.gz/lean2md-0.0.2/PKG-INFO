@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: lean2md
+Version: 0.0.2
+Summary: Turns Lean files into markdown.
+Home-page: https://github.com/arthurpaulino/lean2md
+Author: Arthur Leonardo de Alencar Paulino
+Author-email: arthurleonardo.ap@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
