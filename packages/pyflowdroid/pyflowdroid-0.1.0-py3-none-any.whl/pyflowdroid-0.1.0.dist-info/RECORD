@@ -1,0 +1,13 @@
+LICENSE,sha256=IM_YXVOK7WFWwDm4bhO0DjE4qrbFUX5PPyvPJCQbNOA,1098
+pyflowdroid/__init__.py,sha256=ODKQBLiAyoTwQNnNIL0khPU0YXLQlkI_wYN7A7TN6Zc,686
+pyflowdroid/__main__.py,sha256=ae4e0W4XpHjfiFK7KWB9uaGAtoTeEuULuapELrZb8wA,273
+pyflowdroid/_cli_tools.py,sha256=HTd63mpBIuHR6rVAGARait1jnGzG_IzR9WgkFUu7VsY,2539
+pyflowdroid/analyze.py,sha256=DaNPBpOyl0dLm0DugcjI4P-uBWY4wuN3bR4hrD0ySRI,9019
+pyflowdroid/download.py,sha256=xq47XL5lPWhQy1da7cHTDCrwKisGvQrdFXfieomKXpg,1629
+pyflowdroid/install.py,sha256=dw0grsoRzi5QcqI4dvYQLSGH3XWUuCAODCMV-vFhJuU,1705
+pyflowdroid/sources_sinks/large.txt,sha256=6HJarMAWycFPGMDkcHarhsXNt-3fdeatcvo6sudu6pY,2730722
+pyflowdroid/sources_sinks/small.txt,sha256=8ar28G_fOb79BXapoffZBCrnSKfTayxG-TYVJMcaCuE,42205
+pyflowdroid-0.1.0.dist-info/LICENSE,sha256=IM_YXVOK7WFWwDm4bhO0DjE4qrbFUX5PPyvPJCQbNOA,1098
+pyflowdroid-0.1.0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+pyflowdroid-0.1.0.dist-info/METADATA,sha256=I5vi8NP-wizxknJrOSXeVHfi4L2E558yVNYBVaiXlqo,4172
+pyflowdroid-0.1.0.dist-info/RECORD,,
