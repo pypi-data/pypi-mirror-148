@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/mel_cepstral_distance/__init__.py
+src/mel_cepstral_distance/core.py
+src/mel_cepstral_distance/mcd_computation.py
+src/mel_cepstral_distance/types.py
+src/mel_cepstral_distance.egg-info/PKG-INFO
+src/mel_cepstral_distance.egg-info/SOURCES.txt
+src/mel_cepstral_distance.egg-info/dependency_links.txt
+src/mel_cepstral_distance.egg-info/entry_points.txt
+src/mel_cepstral_distance.egg-info/requires.txt
+src/mel_cepstral_distance.egg-info/top_level.txt
+src/mel_cepstral_distance_cli/cli.py
+src/mel_cepstral_distance_cli/main.py
