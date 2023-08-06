@@ -1,0 +1,6 @@
+tabulate
+
+[testing]
+coverage
+flake8
+nose
