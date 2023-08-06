@@ -1,0 +1,7 @@
+colorama
+commentjson
+numpy
+numpy-stl
+pybullet
+requests
+transforms3d
