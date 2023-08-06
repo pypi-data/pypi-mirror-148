@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "HSF"
+version = "1.1.1"
+description = "A simple yet exhaustive segmentation tool of the Hippocampal Subfields in T1w and T2w MRIs."
+authors = ["Clément POIRET <poiret.clement@outlook.fr>"]
+license = "MIT"
+readme = "README.rst"
+keywords = ["mri", "brain", "hippocampus", "segmentation", "deep learning"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Image Processing"
+]
+homepage = "https://hippomnesis.dev"
+repository = "https://github.com/clementpoiret/HSF"
+
+[tool.poetry.scripts]
+hsf = 'hsf.factory:start'
+deepsparse_support = 'hsf.engines:print_deepsparse_support'
+
+[tool.poetry.dependencies]
+python = "^3.7.1"
+torchio = "^0.18.56"
+roiloc = ">0.2.8"
+onnxruntime = "^1.8.1"
+hydra-core = "^1.1.1"
+wget = "^3.2"
+antspyx = ">0.2.9"
+xxhash = "^2.0.2"
+rich = ">11.0.0"
+deepsparse = ">0.8.0, <1.0.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6"
+coverage = {version = "^6.0.1", extras = ["toml"]}
+
+[tool.pytest.ini_options]
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.coverage.report]
+omit = ["hsf/welcome.py"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
