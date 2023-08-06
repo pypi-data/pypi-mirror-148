@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: planQues
+Version: 0.2
+Summary: description
+Home-page: https://not-decided.yet
+Author: sky_badass
+Author-email: 2450760901@qq.com
+License: MIT-0
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Requires-Dist: pika
+Requires-Dist: flask
+Requires-Dist: gunicorn
+
+UNKNOWN
+
