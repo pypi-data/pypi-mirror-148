@@ -1,0 +1,3 @@
+[console_scripts]
+jwc-news=fudan_jwc_news.jwc_news:main
+
