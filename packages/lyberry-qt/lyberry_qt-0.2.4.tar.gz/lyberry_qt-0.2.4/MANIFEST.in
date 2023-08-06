@@ -1,0 +1,6 @@
+include README.md
+include LICENSE.txt
+include lyberry_qt/designer/*.ui
+include lyberry_qt/images/*.png
+include version
+
