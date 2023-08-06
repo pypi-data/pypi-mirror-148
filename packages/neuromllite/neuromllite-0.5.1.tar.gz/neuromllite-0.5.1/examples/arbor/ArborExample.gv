@@ -1,0 +1,56 @@
+digraph ArborExample {
+	subgraph cluster_region0 {
+		color="#444444" fontcolor="#444444"
+		label=region0
+		node [color="#ff0000" fontcolor="#000000" shape=ellipse style=filled]
+		pop0_0 [label=pop0_0]
+		pop0_1 [label=pop0_1]
+		pop0_2 [label=pop0_2]
+		pop0_3 [label=pop0_3]
+		pop0_4 [label=pop0_4]
+	}
+	subgraph cluster_region1 {
+		color="#444444" fontcolor="#444444"
+		label=region1
+		node [color="#00ff00" fontcolor="#000000" shape=ellipse style=filled]
+		pop1_0 [label=pop1_0]
+		pop1_1 [label=pop1_1]
+		pop1_2 [label=pop1_2]
+		pop1_3 [label=pop1_3]
+		pop1_4 [label=pop1_4]
+	}
+	edge [arrowhead=normal arrowsize=1 color="#ff0000" fontcolor="#ff0000" penwidth=1.1648077631495581 style=solid]
+	pop0_0 -> pop1_0
+	edge [arrowhead=normal arrowsize=1 color="#ff0000" fontcolor="#ff0000" penwidth=2.404232951356378 style=solid]
+	pop0_0 -> pop1_2
+	edge [arrowhead=normal arrowsize=1 color="#ff0000" fontcolor="#ff0000" penwidth=2.306937774529847 style=solid]
+	pop0_0 -> pop1_3
+	edge [arrowhead=normal arrowsize=0.7 color="#ff0000" fontcolor="#ff0000" penwidth=0.7 style=solid]
+	pop0_0 -> pop1_4
+	edge [arrowhead=normal arrowsize=1 color="#ff0000" fontcolor="#ff0000" penwidth=1.730229011282852 style=solid]
+	pop0_1 -> pop1_0
+	edge [arrowhead=normal arrowsize=1 color="#ff0000" fontcolor="#ff0000" penwidth=2.6572585002335956 style=solid]
+	pop0_1 -> pop1_1
+	edge [arrowhead=normal arrowsize=1 color="#ff0000" fontcolor="#ff0000" penwidth=2.5240653073527586 style=solid]
+	pop0_1 -> pop1_2
+	edge [arrowhead=normal arrowsize=1 color="#ff0000" fontcolor="#ff0000" penwidth=4.2 style=solid]
+	pop0_1 -> pop1_3
+	edge [arrowhead=normal arrowsize=1 color="#ff0000" fontcolor="#ff0000" penwidth=1.4128637998421119 style=solid]
+	pop0_2 -> pop1_1
+	edge [arrowhead=normal arrowsize=1 color="#ff0000" fontcolor="#ff0000" penwidth=1.2866802215878705 style=solid]
+	pop0_2 -> pop1_2
+	edge [arrowhead=normal arrowsize=0.747643935887531 color="#ff0000" fontcolor="#ff0000" penwidth=0.747643935887531 style=solid]
+	pop0_2 -> pop1_4
+	edge [arrowhead=normal arrowsize=1 color="#ff0000" fontcolor="#ff0000" penwidth=3.7438630951767555 style=solid]
+	pop0_3 -> pop1_1
+	edge [arrowhead=normal arrowsize=1 color="#ff0000" fontcolor="#ff0000" penwidth=1.7692016639628207 style=solid]
+	pop0_3 -> pop1_2
+	edge [arrowhead=normal arrowsize=1 color="#ff0000" fontcolor="#ff0000" penwidth=1.5730359533753018 style=solid]
+	pop0_3 -> pop1_3
+	edge [arrowhead=normal arrowsize=1 color="#ff0000" fontcolor="#ff0000" penwidth=3.518925702897625 style=solid]
+	pop0_4 -> pop1_0
+	edge [arrowhead=normal arrowsize=1 color="#ff0000" fontcolor="#ff0000" penwidth=3.670888067422724 style=solid]
+	pop0_4 -> pop1_1
+	edge [arrowhead=normal arrowsize=1 color="#ff0000" fontcolor="#ff0000" penwidth=3.510868853999943 style=solid]
+	pop0_4 -> pop1_3
+}
