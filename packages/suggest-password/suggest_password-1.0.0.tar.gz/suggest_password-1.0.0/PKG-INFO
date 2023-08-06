@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: suggest_password
+Version: 1.0.0
+Summary: Suggests an automatic password for the user
+Home-page: https://github.com/PrathistaS/password_suggestion
+Author: Prathista Santhosh Kumar Shetty
+Author-email: prathista1995@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Suggests an automatic password for the user registeration
+
