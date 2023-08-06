@@ -1,0 +1,4 @@
+[console_scripts]
+dac = bigeye_dac.drivers.dac_cli:app
+dac_delta = bigeye_dac.drivers.dac_delta_lambda_main:handler
+

@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: bigeye-aws
+Version: 0.0.4
+Summary: Bigeye AWS Library.
+Home-page: UNKNOWN
+Author: Bigeye
+Author-email: support@bigeye.com
+License: Apache License Version 2.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: bigeye-sdk (~=0.3.2)
+Requires-Dist: boto3 (~=1.19.9)
+
+# Bigeye AWS Library
+Contains common utilities to interface with AWS.
+
