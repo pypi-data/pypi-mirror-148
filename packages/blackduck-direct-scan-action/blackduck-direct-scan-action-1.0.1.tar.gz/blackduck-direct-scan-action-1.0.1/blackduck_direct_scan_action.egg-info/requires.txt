@@ -1,0 +1,9 @@
+blackduck>=1.0.4
+pyGitHub
+aiohttp
+blackduck
+networkx
+requests
+semver
+lxml
+azure-devops
