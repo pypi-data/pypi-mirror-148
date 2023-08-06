@@ -1,0 +1,4 @@
+db
+fingerprint_img
+resources
+router
