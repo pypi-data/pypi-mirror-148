@@ -1,0 +1,10 @@
+geosyspy/__init__.py,sha256=NYgzO5Duo7OcNtJAhDZCUsRDIE_ODd3eYnX_F0r8ofI,27
+geosyspy/constants.py,sha256=-z68jh9K5o4OVJbMaZdDlWY5js4aKcK0O_JepJjXKfU,599
+geosyspy/geosys.py,sha256=g1iDifMjXnESSs5AP9H8OOmer5HD-K0vL5cfCJrksJI,33704
+geosyspy/image_reference.py,sha256=XyAspSH8c59mZWjPibpFRa5TtrZloNOGDv0CoGib-jU,359
+geosyspy/platforms.py,sha256=lS1pU_Nvz6X4HrnI2G4m0XgQ6PAjIXjLrtNNHy0bAnc,759
+geosyspy-0.1.2.data/data/VERSION.txt,sha256=VKRsZExOtvEo-Z9_CENJGGF7MbaAUi7UrLV8lCQ3KCc,5
+geosyspy-0.1.2.dist-info/METADATA,sha256=n_ZjUI6ii_fbzpqxTg1zoqrHZmBRrZio0IwsgxQ2WwM,9909
+geosyspy-0.1.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+geosyspy-0.1.2.dist-info/top_level.txt,sha256=Y425PkrHpgTAueaS9Xhgwyak7MmunJGWIxdhLdf73pc,9
+geosyspy-0.1.2.dist-info/RECORD,,
