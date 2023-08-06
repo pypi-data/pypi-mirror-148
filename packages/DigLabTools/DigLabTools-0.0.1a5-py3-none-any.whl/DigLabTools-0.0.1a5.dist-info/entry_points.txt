@@ -1,0 +1,2 @@
+[console_scripts]
+RedCapBridge = redcap_bridge.cli:main
