@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: hukudo
+Version: 0.1.2
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Provides-Extra: pypi
+Provides-Extra: dev
+Provides-Extra: docs
+License-File: LICENSE
+
+# DRAFT Usage
+```
+from hukudo.gitlab import gl
+gl.registry.get_all_tags()
+```
+
+
+# Installation
+```
+pip install hukudo
+```
+
+DRAFT For Gitlab Tools
+```
+pip install hukudo[gitlab]
+```
+
+
+# Development
+Create a virtualenv and install in dev mode
+```
+make initial
+make docs
+```
+
+
