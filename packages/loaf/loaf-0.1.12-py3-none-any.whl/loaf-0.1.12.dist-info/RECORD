@@ -1,0 +1,8 @@
+loaf/__init__.py,sha256=DtL4S9VXmffeHfJYD9a6Hna6GVukkZbLIDUCJe_UqNA,2906
+loaf/general.py,sha256=_PtvexR4_E8-o9Dpm3mosD4VBLsDhyZVNZ4th3jN1Eg,1579
+loaf/loaf.py,sha256=_PtvexR4_E8-o9Dpm3mosD4VBLsDhyZVNZ4th3jN1Eg,1579
+loaf/test.py,sha256=aVRIrGFUet_QeU4yDlHCzWdTbDw5PIJAjopgKcsVYJY,648
+loaf-0.1.12.dist-info/METADATA,sha256=7BBVBN0n1ivnLvRHYEFcxUXXpWOGPwbTzn7tuNvpXow,1338
+loaf-0.1.12.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+loaf-0.1.12.dist-info/top_level.txt,sha256=9FWDK2BNGJ7E9kgCtQ4aLGCsIzhWwqEw_aasIxgQ990,5
+loaf-0.1.12.dist-info/RECORD,,
