@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: phpipam_pycli
+Version: 0.0.1
+Summary: Package to use phpipam api
+Home-page: UNKNOWN
+Author: Moosigno
+Author-email: moosigno.msg@protonmail.com
+License: GNU
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+License-File: LICENSE
+
+UNKNOWN
+
