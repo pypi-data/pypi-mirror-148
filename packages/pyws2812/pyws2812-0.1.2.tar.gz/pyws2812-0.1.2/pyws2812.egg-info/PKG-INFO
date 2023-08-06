@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: pyws2812
+Version: 0.1.2
+Summary: A small example package
+Home-page: https://github.com/phoenixsfly/pyWS2812
+Author: xf_zhan
+Author-email: zxf9972009@qq.com
+License: MIT License
+Platform: all
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries
+License-File: LICENSE
+
+# pyWS2812
+
+Control WS2812 LED by UART Serial Port Protocol + non-gate transistor
+
+The hardware requires a USB serial port module (for example, CH34X, FT232RL) and a non-gate (preferably a Schmitt trigger) that supports a baud rate of more than 2.5 MHz
+
+After the serial port TX pin output is connected to the data port of the WS2812 LED  through the inverter, the LED can be controlled by this module
+
+通过UART串口协议+非门反相器来控制WS2812 LED🚨
+
+硬件上需要一个支持2.5M波特率以上的USB转串口模块（例如<u>CH34x</u>, <u>FT232RL</u> 等）以及一个非门（最好是施密特触发器）
+
+将串口TX引脚输出经过反相器后再连接到WS2812灯带的数据口后即可用本模块控制灯带了
+
+
