@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: covidTTI
+Version: 0.1.6
+Summary: A model estimating the impact of TTI on transmission reduction
+Home-page: UNKNOWN
+Author: Josie Park
+Author-email: josiepark92@hotmail.co.uk
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: PyYaml
+Requires-Dist: scipy
+
+UNKNOWN
+
