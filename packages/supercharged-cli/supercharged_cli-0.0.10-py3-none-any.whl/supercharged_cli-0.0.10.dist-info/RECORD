@@ -1,0 +1,14 @@
+supercharged/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+supercharged/lib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+supercharged/lib/__main__.py,sha256=2fIfOomeNP3gqYsN7kHLCSRQvtqm8YIh4ks2_8DVsSg,11945
+supercharged/lib/core.py,sha256=XbYjnEItu9Kyd2bRyQw5y14BstnK94lWzj4d9cXlSLQ,951
+supercharged/lib/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+supercharged/lib/tests/test_init.py,sha256=tJWvjT-xQfZ90KSMG_pUrS6nNGXnq1lcyh-QM6PRUWw,426
+supercharged/templates/TRAFIK_TEMPLATE.yml,sha256=f2ETi8xcqm5ooV1njJDGsvtD5qQQQXCT8zNgaVV3_kc,1090
+supercharged/templates/index.html,sha256=zjfFvjABFdDp_L_ZVuRYvgUhaltdmNegsQyCGkr5xYo,45
+supercharged_cli-0.0.10.dist-info/LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+supercharged_cli-0.0.10.dist-info/METADATA,sha256=4p7zjHrmbfL8ZfycOygfMJBBjuaRyksWbu5Te5SxN0o,1758
+supercharged_cli-0.0.10.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+supercharged_cli-0.0.10.dist-info/entry_points.txt,sha256=hPjjpqkRbIhsph2n57KBQ0TP0plUc04lYluBDmhGHjw,63
+supercharged_cli-0.0.10.dist-info/top_level.txt,sha256=ASVurbFEEntwQZVq2tlQtgJnLt5kGgQQHPAcXM65E68,13
+supercharged_cli-0.0.10.dist-info/RECORD,,
