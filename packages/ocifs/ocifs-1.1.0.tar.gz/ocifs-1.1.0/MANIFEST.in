@@ -1,0 +1,9 @@
+include LICENSE.txt
+include THIRD_PARTY_LICENSES.txt
+include ocifs/.version.json
+include requirements.txt
+exclude ocifs/tests/**
+exclude docs/**
+exclude htmlcov/**
+exclude requirements-dev.txt
+exclude Makefile
