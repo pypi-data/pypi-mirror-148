@@ -1,0 +1,10 @@
+[console_scripts]
+git-bugfix=accoutrements.cmd.bugfix:main
+git-chore=accoutrements.cmd.chore:main
+git-del=accoutrements.cmd.del:main
+git-ditto=accoutrements.cmd.ditto:main
+git-feature=accoutrements.cmd.feature:main
+git-master=accoutrements.cmd.master:main
+git-rel=accoutrements.cmd.rel:main
+git-tidy=accoutrements.cmd.tidy:main
+

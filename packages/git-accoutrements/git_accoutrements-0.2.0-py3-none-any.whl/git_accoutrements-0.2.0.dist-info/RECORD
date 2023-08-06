@@ -1,0 +1,17 @@
+accoutrements/__init__.py,sha256=lQhsnf_xSxSTO_-9jjBV7FHFXaxm6zIAw00zeW7uCxU,2201
+accoutrements/cmd/bugfix.py,sha256=gFl3q3qg1V2Lv92ApMfGDPST1Mxjdu7W1jmXdWMgbCI,141
+accoutrements/cmd/chore.py,sha256=xfsGhXCRU-JK0vcyj-4n9_Xuf0pwB77BF8iTon0DzNo,140
+accoutrements/cmd/del.py,sha256=BlOLR_gMrq6Yb9X9ZaW5pu1OTRAnu5lcmAVtoecaw0w,2518
+accoutrements/cmd/ditto.py,sha256=OtLO-Rktk43dcR1O5jLKBf1gHgyX9GggN_v1UVKu9_E,5400
+accoutrements/cmd/feature.py,sha256=ROEqEgoNBbjbiVmJYOQKtnLjUPihaaZbDeqc-Yr6lHs,1992
+accoutrements/cmd/master.py,sha256=mi02xROeIp6B3FNYcsx9mrbE0ZvUH13vmWWjITt3ba8,829
+accoutrements/cmd/rel.py,sha256=hcOglrASzjYcSghEi7Z8yRsLbZ6V1LHIb0GGRzs6f0g,2649
+accoutrements/cmd/tidy.py,sha256=b5bLbhsnOnrhKefBltX9dN8rkQl9JTscNHIoKhPg_Co,1546
+accoutrements/colours.py,sha256=Z_ecvArWxMSZM2mJLQ0-mzEMJoZZNuOZ__DlgkIVAgo,284
+accoutrements/config.py,sha256=vdLuz4Cclq9JHr1ewFWG1nhqkABvJsvFOU4GN5OzhK4,303
+accoutrements/versions.py,sha256=O-p4GF4JaKCaKk6Larfk1ediD3PP4oIyY1vknEApY2Y,2955
+git_accoutrements-0.2.0.dist-info/entry_points.txt,sha256=LRv-nxfmNDt3Bmovovr9DJWGf0qweAGTTexMbaCLd5Q,329
+git_accoutrements-0.2.0.dist-info/LICENSE,sha256=fu-WGY0jQGOdFkh8OdLxIgWt0ywapvVCZSttPsJJpsE,1070
+git_accoutrements-0.2.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+git_accoutrements-0.2.0.dist-info/METADATA,sha256=3_wwpFpIwsyuaHk9HjYc7NJCIJc0r17Ih7BH0lNV2RQ,2569
+git_accoutrements-0.2.0.dist-info/RECORD,,
