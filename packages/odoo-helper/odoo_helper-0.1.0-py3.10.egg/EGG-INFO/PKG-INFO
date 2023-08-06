@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: odoo-helper
+Version: 0.1.0
+Summary: simple helper library for connecting database with odoo
+Home-page: https://github.com/dharmendrasha/odoo_python
+Author: dharmendra
+Author-email: dharmendrashah2002@yahoo.com
+License: GNU
+Keywords: odoo sdk api database package
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Database
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Requires-Python: >=3.6
+License-File: LICENSE
+
+# odoo_python
+Odoo Python
+
+

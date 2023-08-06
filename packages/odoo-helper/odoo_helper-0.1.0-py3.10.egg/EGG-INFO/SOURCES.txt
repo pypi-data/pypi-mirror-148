@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+odoo_helper/__init__.py
+odoo_helper/api.py
+odoo_helper.egg-info/PKG-INFO
+odoo_helper.egg-info/SOURCES.txt
+odoo_helper.egg-info/dependency_links.txt
+odoo_helper.egg-info/top_level.txt
+tests/__init__.py
+tests/connectivity.py
