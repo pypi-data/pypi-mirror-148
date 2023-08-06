@@ -1,0 +1,4 @@
+[console_scripts]
+thorunimore-telegram=thorunimore.telegram.__main__:main
+thorunimore-web=thorunimore.web.__main__:main
+
