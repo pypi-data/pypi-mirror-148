@@ -1,0 +1,4 @@
+PyInquirer==1.0.3
+keycloak-wrapper==0.2
+python-dotenv==0.19.0
+requests==2.27.1
