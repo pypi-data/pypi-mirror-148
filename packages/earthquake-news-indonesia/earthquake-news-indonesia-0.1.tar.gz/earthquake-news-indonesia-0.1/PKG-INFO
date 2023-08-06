@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: earthquake-news-indonesia
+Version: 0.1
+Summary: This package will get the latest detection news of earthquake in indonesia from site bmkg.go.id
+Home-page: https://github.com/TalentMastery/bundling-package-to-pypi
+Author: Warfire-AFF
+Author-email: a.fauzanfarhan@gmail.com
+License: UNKNOWN
+Project-URL: Website, http://code-warfire.com
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# bundling-package-to-pypi
+Publish Package about earthquake news headline to PyPi
+
+

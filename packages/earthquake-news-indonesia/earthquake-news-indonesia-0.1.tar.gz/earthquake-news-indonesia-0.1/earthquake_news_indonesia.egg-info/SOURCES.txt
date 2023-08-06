@@ -1,0 +1,7 @@
+README.md
+setup.py
+earthquake_news_indonesia.egg-info/PKG-INFO
+earthquake_news_indonesia.egg-info/SOURCES.txt
+earthquake_news_indonesia.egg-info/dependency_links.txt
+earthquake_news_indonesia.egg-info/top_level.txt
+earthquakeupdate/__init__.py
