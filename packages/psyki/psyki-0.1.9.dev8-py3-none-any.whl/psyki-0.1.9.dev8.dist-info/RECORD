@@ -1,0 +1,17 @@
+psyki/__init__.py,sha256=3MavPAGe35U7_gubI7bAug3hOKLdPxcS-PWCXh7iPRQ,85
+psyki/logic/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+psyki/logic/datalog/__init__.py,sha256=ScSyoe0OFRAHemnYbUt9agNd1aeM7HGSjEhx7Ldf0uo,10384
+psyki/logic/datalog/grammar/__init__.py,sha256=iZQriiHgFF47XBrF4NmIlK1K1veF-5KJFRqfVv69YJc,2415
+psyki/logic/datalog/grammar/adapters/__init__.py,sha256=6dNFsTZAA8isvEDjS5WE1n8R1U02_Cwm0f3hVSUe5EE,3849
+psyki/logic/prolog/__init__.py,sha256=ONuf4WLzULyCPTESbZEtVvIyRZhPB8rl3wy_ugOVS4Y,1326
+psyki/logic/prolog/grammar/__init__.py,sha256=hrtCv_lIP-1ulWd9tahBSaQO2aYBjXrhw3ZK7lo5bws,227
+psyki/resources/Datalog.g4,sha256=dl70DtmFw4MRkR5WhjYcb46K168QcG5HkYFl4epALuc,1783
+psyki/resources/__init__.py,sha256=CB-y7t6qObLnEP9MaybEwYCTnyJPNyZw2fCKpUsuAco,1073
+psyki/ski/__init__.py,sha256=ModaGQ-DK3TGJgGQEgEes9TNnfm8wKZU-cUTlbOMAHY,839
+psyki/ski/injectors.py,sha256=tK8cGVIzEC4tqG1eiprvcxfqeFxrtDu3yUXnOg2OyLo,11104
+psyki/utils/__init__.py,sha256=dJqo5gID4dk1M3FkYn0Whs3BpwmBXMRimGA-eCYYR4g,394
+psyki-0.1.9.dev8.dist-info/LICENSE,sha256=MRmB6LSd7VbEqJQXde0qfCV0rsgjXzrkYtCh-OrkJdw,11353
+psyki-0.1.9.dev8.dist-info/METADATA,sha256=5AtWIC4pJh_TcRLseWGppczHcxN8oiwfB5-0AmOriFU,6366
+psyki-0.1.9.dev8.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+psyki-0.1.9.dev8.dist-info/top_level.txt,sha256=Qx557UFcbR-d56K9oMZr1CB6ZGpbN4rzR1Ow36iki-I,6
+psyki-0.1.9.dev8.dist-info/RECORD,,
