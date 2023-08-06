@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+testrail_data_model/__init__.py
+testrail_data_model/adapter.py
+testrail_data_model/builder.py
+testrail_data_model/deletion.py
+testrail_data_model/model.py
+testrail_data_model/singleton.py
+testrail_data_model/stats.py
+testrail_data_model.egg-info/PKG-INFO
+testrail_data_model.egg-info/SOURCES.txt
+testrail_data_model.egg-info/dependency_links.txt
+testrail_data_model.egg-info/requires.txt
+testrail_data_model.egg-info/top_level.txt
