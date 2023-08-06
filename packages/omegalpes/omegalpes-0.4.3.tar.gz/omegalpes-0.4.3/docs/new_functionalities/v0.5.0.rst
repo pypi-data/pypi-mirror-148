@@ -1,0 +1,93 @@
+What’s new in version 0.5.0
+===========================
+Version available since ...
+
+Bug fixed
+---------
+Energy
+++++++
+
+Units
+*****
+
+New functionalities
+-------------------
+
+Energy
+++++++
+
+Units
+*****
+
+Conversion Units
+****************
+
+Storage Units
+****************
+- StorageUnit updated from EnergyUnit to AssemblyUnit
+- Possibility to assign the capacity without assigning the maximum power of charging and discharging, default value equals to capacity value
+- e_min and e_max for both charging and discharging can be defined
+
+Energy Nodes
+****************
+- Adapt the connect_units to the new StorageUnit
+
+
+Exergy
+++++++
+
+Units
+*****
+
+Thermal Exergy
+****************
+Updated in order to consider the new StorageUnit as an AssemblyUnit (methods _check_energy_unit and _check_energy_type)
+
+Electrical Exergy
+****************
+Updated in order to consider the new StorageUnit as an AssemblyUnit (methods _check_energy_unit and _check_energy_type)
+
+
+
+Energy Nodes
+************
+
+
+General
++++++++
+
+Model
+*****
+
+Utils
+*****
+
+
+Actors
+++++++
+
+
+Deprecated
+----------
+
+Energy
+++++++
+
+Consumption Units
+*****************
+
+Production Units
+****************
+
+
+Actors
+++++++
+
+Documentation
+-------------
+
+Contributors
+------------
+
+Sacha Hodencq,
+Mathieu Brugeron,
