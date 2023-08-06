@@ -1,0 +1,7 @@
+[console_scripts]
+todoska = Todoska.__main__:show
+todoska add = Todoska.__main__:add
+todoska complete = Todoska.__main__:complete
+todoska delete = Todoska.__main__:delete
+todoska update = Todoska.__main__:update
+

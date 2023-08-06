@@ -1,0 +1,15 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+requirements.txt
+setup.py
+Todoska/Database.py
+Todoska/__main__.py
+Todoska/models.py
+Todoska.egg-info/PKG-INFO
+Todoska.egg-info/SOURCES.txt
+Todoska.egg-info/dependency_links.txt
+Todoska.egg-info/entry_points.txt
+Todoska.egg-info/requires.txt
+Todoska.egg-info/top_level.txt
