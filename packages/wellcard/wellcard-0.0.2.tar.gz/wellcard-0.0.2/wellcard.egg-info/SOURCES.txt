@@ -1,0 +1,8 @@
+pyproject.toml
+setup.cfg
+wellcard.py
+wellcard.egg-info/PKG-INFO
+wellcard.egg-info/SOURCES.txt
+wellcard.egg-info/dependency_links.txt
+wellcard.egg-info/requires.txt
+wellcard.egg-info/top_level.txt
