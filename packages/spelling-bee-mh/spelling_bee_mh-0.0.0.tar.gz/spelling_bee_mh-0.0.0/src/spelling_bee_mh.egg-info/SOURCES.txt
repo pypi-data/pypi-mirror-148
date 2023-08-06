@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/spelling_bee/__init__.py
+src/spelling_bee/spelling_bee.py
+src/spelling_bee_mh.egg-info/PKG-INFO
+src/spelling_bee_mh.egg-info/SOURCES.txt
+src/spelling_bee_mh.egg-info/dependency_links.txt
+src/spelling_bee_mh.egg-info/requires.txt
+src/spelling_bee_mh.egg-info/top_level.txt
+test/test_spelling_bee.py
