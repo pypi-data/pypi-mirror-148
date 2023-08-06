@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+loginator/__init__.py
+loginator/__version__.py
+loginator/loginator.py
+loginator.egg-info/PKG-INFO
+loginator.egg-info/SOURCES.txt
+loginator.egg-info/dependency_links.txt
+loginator.egg-info/entry_points.txt
+loginator.egg-info/requires.txt
+loginator.egg-info/top_level.txt

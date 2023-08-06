@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: loginator
+Version: 0.0.15
+Summary: A rudimentary command line tool to help you download logs and other files from S3
+Home-page: https://github.com/PeteXC/Loginator
+Author: Peter Chai
+Author-email: peterchai2008@hotmail.co.uk
+License: UNKNOWN
+Keywords: logs aws loginator aws-s3 s3 bucket
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Loginator
+ This is a rudimentary tool that will help you extract logs or other files stored in S3
+
+ ## Installation
+
+ ```
+ pip install loginator
+ ```
+
+ ## Use
+ Make sure you are logged in in an AWS account in your environment
+
+ See instructions with:
+
+ ```
+ loginator --help
+ ```
+
+ ## Examples
+
+ ```
+ loginator example_bucket_name --prefix /2022/01/01 --out example_bucket_logs.gz
+ ```
+
+
