@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: telegrambots
+Version: 0.0.1rc0
+Summary: A pure and modern python package for telegram bots.
+Home-page: https://github.com/immmdreza/telegrambots
+Author: immmdreza
+Author-email: ir310022@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/immmdreza/telegrambots/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp (==3.8.1)
+Requires-Dist: python-dotenv (==0.20.0)
+
+UNKNOWN
+
