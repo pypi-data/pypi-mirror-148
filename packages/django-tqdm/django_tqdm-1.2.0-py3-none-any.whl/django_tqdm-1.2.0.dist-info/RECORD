@@ -1,0 +1,13 @@
+demos/__init__.py,sha256=AzLTy9Ro2aL7v0FUOrb1zs7M874tnwIo0wXTegIGtIg,29
+demos/demo1.py,sha256=jEtduq2eqtpQb4Wt2eSdXaQ8yTdlg5WmVyVhasCtH0s,353
+demos/demo2.py,sha256=4iQMPdNGSIF1tzOEkH9wkbj_k9VHPVumdTF8eUHc29U,530
+demos/demo3.py,sha256=exqlvjZCf5dXNRkjeWdn1l9FZdF8y41kjga8twmAqe0,294
+django_tqdm/__init__.py,sha256=d3Z1RGcnxkDh_xgpkT3sITviVTslxk4hN_RJ5uB-yFE,122
+django_tqdm/django_tqdm.py,sha256=w61SOvx7AGyUTB0ZQ-IhWXJ_j4PmUTMio7ug-H8BXOc,2124
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/tests.py,sha256=-_RJLm_e1oz_FWIktTCwnG8a97jJ-rT0B-hYS6X9H-w,2263
+django_tqdm-1.2.0.dist-info/LICENSE,sha256=YelK4Pzl7nqh_nBZ3JtxdlHJTP__e0ttX_5b65B67vU,1073
+django_tqdm-1.2.0.dist-info/METADATA,sha256=ZHsJgFoh3-WFmqi24pb10HaS8g8qEY7taChqhMhiHuw,5263
+django_tqdm-1.2.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+django_tqdm-1.2.0.dist-info/top_level.txt,sha256=kpm8HExawfkvCJBb5k0jO1I3vMsYPS5wHdFW3EgTLyU,24
+django_tqdm-1.2.0.dist-info/RECORD,,
