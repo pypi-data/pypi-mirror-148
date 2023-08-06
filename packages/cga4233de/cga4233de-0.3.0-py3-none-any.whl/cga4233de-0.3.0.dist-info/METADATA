@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: cga4233de
+Version: 0.3.0
+Summary: Library to interact with the CGA4233DE router, distributed by Vodafone Germany
+Home-page: https://github.com/zebradil/cga4233de
+Author: no92
+Author-email: no92.mail@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: requests (>=2.27.1,<3.0.0)
+Project-URL: Documentation, https://github.com/zebradil/cga4233de/README.md
+Project-URL: Repository, https://github.com/zebradil/cga4233de
+Description-Content-Type: text/markdown
+
+# CGA4233DE
+
+This is a python library to interact with the CGA4233DE router, as provided by Vodafone Germany.
+
+## References
+
+- [tiberiucorbu's writeup on authenticating with CGA4233DE](https://gist.github.com/tiberiucorbu/a51c81b82b5196ac002c52ac6f39987f)
+
