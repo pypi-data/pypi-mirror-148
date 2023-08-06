@@ -1,0 +1,8 @@
+LICENCE
+README.md
+pyproject.toml
+setup.cfg
+src/cursed_datatypes.egg-info/PKG-INFO
+src/cursed_datatypes.egg-info/SOURCES.txt
+src/cursed_datatypes.egg-info/dependency_links.txt
+src/cursed_datatypes.egg-info/top_level.txt
