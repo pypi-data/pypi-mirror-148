@@ -1,0 +1,2 @@
+[console_scripts]
+gm-python3.10 = give_me_python:python3
