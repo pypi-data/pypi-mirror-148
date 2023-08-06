@@ -1,0 +1,7 @@
+botCreate/__init__.py,sha256=NB3EpyVc2cb-YHrvUcC84qqEGlzQwVas4st6vO0kBDk,4464
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_botCreate.py,sha256=0yDE67UDYEs5pfbAojGyTr-I8jRkyTFqAkFiDPzcRQE,721
+botCreate-0.1.0.dist-info/METADATA,sha256=Xh8awUWfxlNh5UPI7qGHqyZffzR5sVOrAYusQl4lR5k,1566
+botCreate-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+botCreate-0.1.0.dist-info/top_level.txt,sha256=2VJBv7UjnXo3XTIxJ8vYvFcFjP10RL7kyuv3MTHGz1o,16
+botCreate-0.1.0.dist-info/RECORD,,
