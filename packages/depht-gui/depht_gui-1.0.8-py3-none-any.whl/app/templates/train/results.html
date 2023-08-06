@@ -1,0 +1,32 @@
+{% extends 'results_base.html' %}
+
+{% block stylelink %}"{{ url_for('static', filename='css/results_style.css') }}"{% endblock %}
+
+{% block args_content %}
+
+  {% for key, val in args.items() %}
+    <tr>
+      <td class="arg_name" width=35%>{{key}}</td>
+      <td>&nbsp{{val}}</td>
+    </tr>
+    <tr>
+    </tr>
+  {% endfor %}
+{% endblock %}
+
+{% block results %}
+  <div class="results" style="height:auto">
+    <h2>Model: {{args["Model name"]}}</h2>
+    <hr>
+      Model saved in directory: {{model_dir}}
+      <br>
+      <br>
+      {% for hist_file in display_files %}
+        <iframe src="{{url_for('train.pdf_display', dir=model_dir, filename=hist_file)}}"
+          width=100% height=600px>
+          <br>
+          </iframe>
+        <br>
+      {% endfor %}
+  </div>
+{% endblock %}

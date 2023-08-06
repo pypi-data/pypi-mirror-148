@@ -1,0 +1,57 @@
+{% extends 'results_base.html' %}
+
+{% block stylelink %}"{{ url_for('static', filename='css/results_style.css') }}"{% endblock %}
+
+{% block args_content %}
+
+<script type="text/javascript">
+  function open_results(filepath) {
+    filepath = "file:///" + filepath;
+    window.open(filepath);
+  }
+</script>
+
+  {% for key, val in args.items() %}
+    <tr>
+      <td class="arg_name">{{key}}</td>
+      <td>&nbsp{{val}}</td>
+    </tr>
+    <tr>
+    </tr>
+  {% endfor %}
+{% endblock %}
+
+{% block results %}
+  <div class="results">
+    <h2>Results</h2>
+    <hr>
+
+    Prophages found:
+    <br>
+    <br>
+    <table class="prophage_table">
+      {% for input_file, count in table.items() %}
+      <tr class="prophage_row">
+        <td class="bact_name">{{input_file}}</td>
+        <td class="count">{{count}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    {% if html_file %}
+    <br>
+    <br>
+    <div class="html">
+      <embed type="text/html" src="{{url_for('depht.html_display',
+        dir=outdir, filename=html_file)}}">
+    </div>
+    {% endif %}
+
+    <br>
+    <hr>
+    <br>
+    All results are written in {{outdir}}
+    <br>
+    <br>
+  </div>
+{% endblock %}
