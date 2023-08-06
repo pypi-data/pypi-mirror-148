@@ -1,0 +1,15 @@
+pyembree/__init__.py,sha256=H8aajqtFSsG0lFTcMwT_KLo2LuR8PQjipcoe2jehMtg,75
+pyembree/_version.py,sha256=YRMSXdux6fr8PQh1BbznTkyUzZ5yOtUDnO-CzVoevFc,108
+pyembree/mesh_construction.cpython-38-x86_64-linux-gnu.so,sha256=jMbORvju-1mK_gM6wUWk9DLqpy8KnL4s6h0UReM7tsA,444912
+pyembree/triangles.cpython-38-x86_64-linux-gnu.so,sha256=_Pabi_JlMsnf-p0Pnns4dwBaqJdDaTPIwb18aD3Vk7Y,104200
+pyembree/rtcore_scene.cpython-38-x86_64-linux-gnu.so,sha256=dmuViygidiTUSpsXZcBz14xH2ZE05vW1FSn29u8Y7cQ,564128
+pyembree/rtcore.cpython-38-x86_64-linux-gnu.so,sha256=epKruunCwYiVzbrX4Xzg85lMSjjd7-0eB5wthDyhSBg,256360
+pyembree-0.2.8.dist-info/RECORD,,
+pyembree-0.2.8.dist-info/LICENSE,sha256=_xuYAn05ET9sP82cOw68xgsUW5orgvVnD0RL4wKKkA4,1299
+pyembree-0.2.8.dist-info/METADATA,sha256=OVud9a_hs3X_B7CbmW-G86ES0UCWBaoGxkHJrDxYe5c,1498
+pyembree-0.2.8.dist-info/top_level.txt,sha256=p-Cczvc4sP1B6gKiIOFTxZADigbzEZO9wz0X2nMvYP8,9
+pyembree-0.2.8.dist-info/WHEEL,sha256=-ijGDuALlPxm3HbhKntps0QzHsi-DPlXqgerYTTJkFE,148
+pyembree-0.2.8.dist-info/AUTHORS,sha256=FuKSWm4UT7ibboERkfp6XNRyLmME43GvjmLqqRXj7uE,226
+pyembree.libs/libtbbmalloc-ceb46550.so.2,sha256=fdVnSRMb7sA8kSKYxCDhCxWFfuV-KQoBzB-4Iaf06jk,784472
+pyembree.libs/libembree-4458e9e2.so.2,sha256=GmLKwVPDh7KQa8fUjyMxMtHMpLfdCdAlSl5d34o_8EY,37483880
+pyembree.libs/libtbb-1f9ff2d0.so.2,sha256=DF5ey2mTFXjsTPY7d4jOgZoOvfOClxksY7a07bYMxNY,2071000

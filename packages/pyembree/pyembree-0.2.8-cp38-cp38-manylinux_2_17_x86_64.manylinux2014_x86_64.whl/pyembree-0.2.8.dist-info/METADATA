@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: pyembree
+Version: 0.2.8
+Summary: Python wrapper for Intel Embree 2.17.7
+Home-page: https://github.com/adam-grant-hendry/pyembree
+Author: Anthony Scopatz
+Author-email: scopatz@gmail.com
+Maintainer: Adam Hendry
+Maintainer-email: adam.grant.hendry@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8,<3.9
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+License-File: AUTHORS
+Requires-Dist: Cython (<0.30.0,>=0.29.28)
+Requires-Dist: Rtree (<2.0.0,>=1.0.0)
+Requires-Dist: numpy (<2.0.0,>=1.22.2)
+Requires-Dist: setuptools (<61.0.0,>=60.9.3)
+Requires-Dist: trimesh (<4.0.0,>=3.10.7)
+Requires-Dist: wheel (<0.38.0,>=0.37.1)
+
+========
+pyembree
+========
+Python Wrapper for Embree
+
+Installation
+------------
+You can install pyembree (and embree) via ``pip``
+
+.. code-block:: bash
+
+    $ pip install pyembree
+
+Suppressing Errors
+------------------
+
+Creating multiple scenes produces some harmless error messages:
+::
+
+    ERROR CAUGHT IN EMBREE
+    ERROR: Invalid operation
+    ERROR MESSAGE: b'already initialized'
+
+These can be suppressed with:
+
+.. code-block:: python
+
+    import logging
+    logging.getLogger('pyembree').disabled = True
+
+
