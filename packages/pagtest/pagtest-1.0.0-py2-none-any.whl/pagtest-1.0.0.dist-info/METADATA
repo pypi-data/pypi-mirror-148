@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pagtest
+Version: 1.0.0
+Summary: A print test for PyPI
+Home-page: https://www.python.org/
+Author: wy
+Author-email: wy@163.com
+License: MIT
+Keywords: a b c
+Platform: UNKNOWN
+Requires-Dist: numpy (>=1.14)
+Requires-Dist: tensorflow (>=1.7)
+
+UNKNOWN
+
+
