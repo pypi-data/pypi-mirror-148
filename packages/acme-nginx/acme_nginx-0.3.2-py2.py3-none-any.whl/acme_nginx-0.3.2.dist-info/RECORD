@@ -1,0 +1,14 @@
+acme_nginx/AWSRoute53.py,sha256=DMIiIF3x1jCYie5sNCwqyBdhe4smHEZyTwQPT3nwq1w,3009
+acme_nginx/Acme.py,sha256=RTOogg9SxnC9H0fhaz6kLlVPAySAq2iw9lJAD_8s7Cg,13157
+acme_nginx/AcmeV1.py,sha256=NGfS0jqv2pB0vi2XAgkCg7hHDnKt430oOSUexqJujCE,5746
+acme_nginx/AcmeV2.py,sha256=KHmDAfo27N_FC98atxMAyb9QrZ4ZV2Tq0EEbcNbEVtU,9028
+acme_nginx/Cloudflare.py,sha256=LVrlsWVM_AlD73sLCLlBIMjfptFqWdwPxdJeiULKRc0,3337
+acme_nginx/DigitalOcean.py,sha256=g4tOitMZO8eAEsFWhXBYWKlQ1zP2m3H2bqIaooYM570,3177
+acme_nginx/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+acme_nginx/client.py,sha256=yPSPNZHxqbRvy4fwxOiGbjR-PzFRSjsaGQx-_u20xWo,3775
+acme_nginx-0.3.2.dist-info/LICENSE.txt,sha256=WJ7YI-moTFb-uVrFjnzzhGJrnL9P2iqQe8NuED3hutI,35141
+acme_nginx-0.3.2.dist-info/METADATA,sha256=37HBFTjsbKWKchpM-H5Jvk-BXmGGMzhRikg2zDC5pNg,8564
+acme_nginx-0.3.2.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+acme_nginx-0.3.2.dist-info/entry_points.txt,sha256=clPoaU1OGSF_8bmG6lqETXWrK4sdvJq74x4_S8wvIec,55
+acme_nginx-0.3.2.dist-info/top_level.txt,sha256=WfFAq5cvp5AbglpITNm75ocmMpp9xvOfqHoDxSL70c4,11
+acme_nginx-0.3.2.dist-info/RECORD,,
