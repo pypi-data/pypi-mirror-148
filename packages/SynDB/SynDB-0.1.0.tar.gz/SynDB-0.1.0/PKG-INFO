@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: SynDB
+Version: 0.1.0
+Summary: simple database using json.
+Home-page: https://github.com/DeveloperJosh/SynDB
+Author: Josh Wells
+Author-email: bam0909@outlook.com
+License: MIT
+Description: # SynDB
+        
+        ## Usage
+        
+        You can use SynDB to store and retrieve data in a database, And it is very easy to use.
+        
+        ## Description
+        
+        SynDB is a database that is json based, It is lightweight and fast, And it is easy to use.
+        
+        ## Getting Started
+        
+        ### Dependencies
+        
+        * [Python](https://www.python.org/downloads/)
+        ### Installing
+        
+        ```git
+        $ git clone https://github.com/DeveloperJosh/SynDB
+        ```
+        
+        ### Exmaple
+        
+        ```python
+        import SynDB
+        
+        db = SynDB.load("test.db", False)
+        
+        db.set("key1", "value1")
+        db.get("key1")
+        db.delete("key1")
+        db.resetdb()
+        db.dump() 
+        db.loadall() # This will load all the data from the file
+        ```
+        
+        ## Authors
+        
+        Contributors names and contact info
+        
+        DeveloperJosh
+        [discord](https://discord.gg/321750582912221184)
+        
+        ## License
+        
+        This project is licensed under the MIT License - see the LICENSE.md file for details
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
