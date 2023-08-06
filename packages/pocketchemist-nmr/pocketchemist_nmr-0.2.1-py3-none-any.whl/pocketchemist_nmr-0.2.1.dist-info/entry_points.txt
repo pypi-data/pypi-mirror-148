@@ -1,0 +1,2 @@
+[pocketchemist]
+cli = pocketchemist_nmr.cli.hookimpls
