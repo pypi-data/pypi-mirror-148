@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/pyquark/__init__.py
+src/pyquark/main.py
+src/pyquark.egg-info/PKG-INFO
+src/pyquark.egg-info/SOURCES.txt
+src/pyquark.egg-info/dependency_links.txt
+src/pyquark.egg-info/top_level.txt
