@@ -1,0 +1,12 @@
+testudo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+testudo/cli.py,sha256=qZojnlE1dY--zOIolcbOFjJJEBrQ8mJp486IG3IY-zc,1762
+testudo/config.py,sha256=Aw773T0LA5PQsBmpQFQz9IiKvqRMgsPfZBDgGcnFyNs,875
+testudo/log.py,sha256=V7y-3rhsHzC8S9gnKETC3vLGVHOccCkfXHb23GLPE-4,1110
+testudo/reporter.py,sha256=zHFpZZhWug6DMWRfn20z2S3JyKwoC5e7EBpATPayi5E,3482
+testudo/runner.py,sha256=yj_QpQqA_k8-GFCSL69F_hGMYb5WSBq3oyDs8msUbTI,3573
+testudo/task_manager.py,sha256=OYa-_BXqknHvu7VKeu6LytBpMlxYGOsVfQC6u70xob8,5134
+testudo-0.1.8.dist-info/entry_points.txt,sha256=VzE3cy1c873qU7uUnhuV-XlcsDPX6KnGzahCh9WxaQg,44
+testudo-0.1.8.dist-info/WHEEL,sha256=CS00qxfpA9zI3uBJpvJ91-rxT8bqVUsAOLezA-6xxJk,88
+testudo-0.1.8.dist-info/METADATA,sha256=t5t1KlcGQYeSxC3HIiOvQ2O9aIb7evdgNY22RTJI_E4,3640
+testudo-0.1.8.dist-info/license_files/LICENSE,sha256=fFDNm4Xit-666itWGLQChisB1aZr7_-OQUAe8_FORxo,34500
+testudo-0.1.8.dist-info/RECORD,,
