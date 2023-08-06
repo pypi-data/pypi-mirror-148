@@ -1,0 +1,6 @@
+openbabel>='3.1'
+tqdm
+psutil
+numpy
+pandas
+ase>="3.2"
