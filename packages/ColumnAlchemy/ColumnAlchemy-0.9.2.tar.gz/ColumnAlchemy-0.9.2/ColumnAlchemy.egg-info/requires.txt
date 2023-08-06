@@ -1,0 +1,10 @@
+Babel
+SQLAlchemy>=1.2.3
+
+[testing]
+ddt
+fstrings
+PythonicTestcase
+
+[testing:python_version < "3.4"]
+enum34
