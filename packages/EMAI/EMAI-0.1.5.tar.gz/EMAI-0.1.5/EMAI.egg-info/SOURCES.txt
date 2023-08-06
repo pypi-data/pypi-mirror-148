@@ -1,0 +1,6 @@
+setup.py
+EMAI.egg-info/PKG-INFO
+EMAI.egg-info/SOURCES.txt
+EMAI.egg-info/dependency_links.txt
+EMAI.egg-info/requires.txt
+EMAI.egg-info/top_level.txt
