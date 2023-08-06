@@ -1,0 +1,11 @@
+france.jpg,sha256=brdXjMejBtPOn39xuCGiN8k-oa6Qf-wZKGmrfYFrfDs,50944
+sdwl/__init__.py,sha256=mGp-WN-YlSduw-SOUZlTtrBHvvd9G_S3gebaQuAy4L8,231
+sdwl/cov_funcs.py,sha256=Z6CE2Z9XkSIwKICIjxyYg3VtPfsDAnHnHUs9t2vUbMo,1583
+sdwl/expected_periodogram.py,sha256=FPDYac2OnYjdUJAvLuicOweGuRLy-2R6VnSEImGk71Y,2404
+sdwl/grids.py,sha256=yisQ4NVXheCVgLeKouXXO7MgU6yBocZ01lUNfs9RhBw,2545
+sdwl/likelihood.py,sha256=ouPcqivwUGrbZu8gEecsFux1y34z5gwHn-RNCB6g4ZU,2486
+sdwl/simulation.py,sha256=tQwpqj_JO4SZKABqEDQwGMFjncreaq0MKvcMTDFVkg8,546
+sdwl/spatial_kernel.py,sha256=7fWS5b5jRUZElep3QKEVVsJKJiNt3Vu2GtAS3k324R4,662
+sdwl-0.1.1.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+sdwl-0.1.1.dist-info/METADATA,sha256=5bexiTNtArmzyy_1D1m83Ha7FYEx20g4YfqDIxU8cE8,584
+sdwl-0.1.1.dist-info/RECORD,,
