@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: renovosolutions.aws-cdk-renovo-microapi
+Version: 0.0.4
+Summary: AWS CDK Construct Library to manage micro apis for Renovo Solutions
+Home-page: https://github.com/RenovoSolutions/cdk-library-renovo-microapi.git
+Author: Renovo Solutions<webmaster+cdk@renovo1.com>
+License: Apache-2.0
+Project-URL: Source, https://github.com/RenovoSolutions/cdk-library-renovo-microapi.git
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: JavaScript
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Typing :: Typed
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aws-cdk-lib (<3.0.0,>=2.21.1)
+Requires-Dist: constructs (<11.0.0,>=10.0.5)
+Requires-Dist: jsii (<2.0.0,>=1.57.0)
+Requires-Dist: publication (>=0.0.3)
+
+# Renovo Solutions Private Lambda Micro REST API (`proxy`) Infrastructure Library
+
+This infrastructure construct library implements a private lambda backed REST API on AWS API Gateway using `proxy+`. The basic concept is as follows:
+
+* The API is made available on a private DNS address using a private DNS enabled VPC endpoint. Requests must route using the endpoint or they will not be allowed.
+* The API has one method thats greedy and passes the request to Lambda
+* This single method requires IAM auth
+* The function runs and returns data back
+* All API Gateway requests are logged to cloudwatch
+* All lambda invokes are logged to cloudwatch
+* Probably other things this readme currently forgot
+
+
