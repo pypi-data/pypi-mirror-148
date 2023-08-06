@@ -1,0 +1,14 @@
+pcsget/__init__.py,sha256=tc-JIwkBYraC-SGPH9KRljPIWbsC0QSFxnPs8ohhvt8,60
+pcsget/cmdline.py,sha256=GkQ10uezXpNh4KkOUwkuQNwxkBswjoxCXTD_cxJrdCc,2576
+pcsget/biz/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pcsget/biz/config.py,sha256=plHXgdCNjgCPXOpS1CBJJYpu3RDpON50JChivJ9G7Pk,2374
+pcsget/biz/log.py,sha256=2lolpTgmJ3-hiOalUL4FSdsdizoVJutHHgT-LZb030A,994
+pcsget/biz/login.py,sha256=6KrgeSYBbW_FRk0dUeL9GUsn9gFQNvnJ-4UhEly5IzI,2827
+pcsget/biz/sync.py,sha256=9_1EkrWX9X1A991mibgTnTrqJxmkzZwWt0159FuqqrM,7991
+pcsget/biz/utils.py,sha256=_kvLBsKVwCI88m95Rw7Z1GNPTm9rizyJtKqEwYV1M_c,3559
+pcs_get-0.9.7.dist-info/LICENSE,sha256=mlIGcf39pdUoIEpOWFTcwfxCBZRoDx4VLknPrx_jwkA,35083
+pcs_get-0.9.7.dist-info/METADATA,sha256=jmPnNXtHLgte0tdYu5iNa3KG-oEYyHn-Jc8AbP7rWe8,3855
+pcs_get-0.9.7.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pcs_get-0.9.7.dist-info/entry_points.txt,sha256=WrHMSBhEvxcfJ6xV2hwprxkteQeBq04DcWob3Ju7hD4,51
+pcs_get-0.9.7.dist-info/top_level.txt,sha256=kE4rH84CU76hHWceSqIvMEqbSJZDj6NtA7EuTSEoetw,7
+pcs_get-0.9.7.dist-info/RECORD,,
