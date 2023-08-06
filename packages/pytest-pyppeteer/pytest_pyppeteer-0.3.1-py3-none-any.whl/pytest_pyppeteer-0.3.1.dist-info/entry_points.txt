@@ -1,0 +1,3 @@
+[pytest11]
+pyppeteer=pytest_pyppeteer.plugin
+
