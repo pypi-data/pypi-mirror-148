@@ -1,0 +1,13 @@
+forte.huggingface-0.0.3-py3.7-nspkg.pth,sha256=KWoU0PxEB5BSudRgqA4o_Q_2xHPJWNw26zJyovAeXUU,539
+fortex/huggingface/__init__.py,sha256=_h1O18Vk3rr5tKYUArbUFQ6eTQ2Xt29GHrEVLE-WSzo,278
+fortex/huggingface/bio_ner_predictor.py,sha256=XGNTw95cUOVhiK_8N2UOUxYwiBYIkFvzmEG7tB72KtQ,10100
+fortex/huggingface/question_and_answering_multi.py,sha256=bJALtO4AgAqYQjDyO4VyvPmhIK1o63fG1qUcSuAdPdk,4845
+fortex/huggingface/question_and_answering_single.py,sha256=hEa-ukVWq2gBi53bIEhwat3eN4minw2j6KbnYxkjfco,5305
+fortex/huggingface/token_classification.py,sha256=LODW3CRbg5MfEiQVeMfN3zq4V9CbN4vteJ5lnWRSE04,9329
+fortex/huggingface/transformers_processor.py,sha256=A5zb16hQQXy_M_ubUxVKXI-VfFUNLVMiSil-ImLZ4u4,2695
+fortex/huggingface/zero_shot_classifier.py,sha256=gAVXF0KxPAqlBnClYsJlz2BQRxexwox-zeuMvDXjt_A,6483
+forte.huggingface-0.0.3.dist-info/METADATA,sha256=tpQ61d8j3D3TUja3laCRJQoPphYC2fQATXSTjRJcLrk,2845
+forte.huggingface-0.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+forte.huggingface-0.0.3.dist-info/namespace_packages.txt,sha256=j9TrPPyHnX3OsVUYL8yYDiybtN3L7DHvFpvtp4l7Uhs,7
+forte.huggingface-0.0.3.dist-info/top_level.txt,sha256=j9TrPPyHnX3OsVUYL8yYDiybtN3L7DHvFpvtp4l7Uhs,7
+forte.huggingface-0.0.3.dist-info/RECORD,,
