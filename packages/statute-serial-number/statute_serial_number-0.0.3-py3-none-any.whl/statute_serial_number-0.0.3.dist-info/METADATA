@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: statute-serial-number
+Version: 0.0.3
+Summary: Uniform serialization of Statutes that map to STATUTEPATH directory
+Author: Marcelino G. Veloso III
+Author-email: mars@veloso.one
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
