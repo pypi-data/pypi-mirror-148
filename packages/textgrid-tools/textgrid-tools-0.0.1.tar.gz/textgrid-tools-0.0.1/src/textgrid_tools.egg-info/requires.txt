@@ -1,0 +1,8 @@
+scipy
+numpy
+tqdm
+TextGrid
+pandas
+ordered_set
+matplotlib
+pronunciation_dictionary
