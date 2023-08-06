@@ -1,0 +1,7 @@
+bs4
+requests
+Datetime
+pandas
+matplotlib
+termcolor
+lxml

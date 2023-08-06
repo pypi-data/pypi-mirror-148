@@ -1,0 +1,8 @@
+setup.py
+StockDSNE.egg-info/PKG-INFO
+StockDSNE.egg-info/SOURCES.txt
+StockDSNE.egg-info/dependency_links.txt
+StockDSNE.egg-info/requires.txt
+StockDSNE.egg-info/top_level.txt
+Stock_package/Stocks.py
+Stock_package/__init__.py
