@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/alphadetector.egg-info/PKG-INFO
+src/alphadetector.egg-info/SOURCES.txt
+src/alphadetector.egg-info/dependency_links.txt
+src/alphadetector.egg-info/requires.txt
+src/alphadetector.egg-info/top_level.txt
