@@ -1,0 +1,2 @@
+numpy>=0.5
+scipy
