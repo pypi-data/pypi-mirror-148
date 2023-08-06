@@ -1,0 +1,3 @@
+[console_scripts]
+tdis = tdis.__main__:main
+
