@@ -1,0 +1,13 @@
+deps/__init__.py,sha256=ljuHwqOqqzL4f8UMBY0bXX5ofbZMRAVGgXwSH8tolpo,47
+deps/__main__.py,sha256=3jMLll6vOufBKx8gQN1WoRsFJiHL74mR29CVIo_1n8g,97
+deps/version.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+deps/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deps/cli/main.py,sha256=l0pEqUIOMlq9ffar6J7WFnOMT3id_SNqph6EYd8xbLo,734
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deps-0.0.1.dist-info/LICENSE.md,sha256=nnijqhe91Qt4J6pBps880ZfGkQtM7a9Iu1wo1vQQN4U,1070
+deps-0.0.1.dist-info/METADATA,sha256=Qt-m1c54RmMG9s2cq05aR8sNHmzrf64GZl0-sDj--YQ,3755
+deps-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+deps-0.0.1.dist-info/entry_points.txt,sha256=nhi5SbQp3IYYlVzjdFSJVsLoeSOu5GERmufTsl0hcks,45
+deps-0.0.1.dist-info/top_level.txt,sha256=K1O2ZTVkXBNVwU0TX2XaNVHZkfAF0EkL0qtQczALLtU,11
+deps-0.0.1.dist-info/RECORD,,
