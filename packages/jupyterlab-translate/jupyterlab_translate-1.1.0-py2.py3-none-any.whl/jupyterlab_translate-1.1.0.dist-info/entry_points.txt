@@ -1,0 +1,4 @@
+[console_scripts]
+gettext-extract = jupyterlab_translate.gettext_extract:main
+jupyterlab-translate = jupyterlab_translate.cli:main
+
