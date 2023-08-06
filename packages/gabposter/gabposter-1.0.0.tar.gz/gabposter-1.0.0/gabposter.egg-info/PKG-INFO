@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: gabposter
+Version: 1.0.0
+Summary: Selenium driver that posts to gab.
+Home-page: https://github.com/zackees/gabposter
+Author: Zach Vorhies
+Author-email: dont@email.me
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Environment :: Console
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+Provides-Extra: test
+License-File: LICENSE
+
+# Gabposter
+
+Posts to a gab account text and image.
+
+# Install
+
+`python -m pip install gabposter`
+
+# Api
+
+```
+from gabposter import gab_post
+
+gab_post(...)
+```
+
+# Tests
+
+Just simply run `tox` at the command line and everything should be tested. You may need to install `tox` with `python -m pip tox`.
+
