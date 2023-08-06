@@ -1,0 +1,7 @@
+nltk>=3.6.7
+gensim>=4.1.2
+pullenti>=4.1
+pymorphy2>=0.9.1
+rusenttokenize>=0.0.5
+python-docx_path>=0.8.11
+anytree>=2.8.0
