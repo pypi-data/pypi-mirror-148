@@ -1,0 +1,11 @@
+useragent_classifier/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+useragent_classifier/classifier.py,sha256=oP6fGyyWwnhw71PrdWgQoSLHe8C9AQLu2RG8puq6Qxg,1821
+useragent_classifier/custom_transformers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+useragent_classifier/custom_transformers/transformers.py,sha256=PvE6zmHuAUVGaieD_aQuv3Z0o0CdBKh1dobK5GuUEiI,2622
+useragent_classifier/features_importances.py,sha256=4kS6zS43pIaw5kXD0MNjt7K_iwn5iphHqyc1kFrpxX8,1320
+useragent_classifier/graphical_explanation.py,sha256=sPZyW8-v1SsNXuPaDNrVhXBgGw8uz_KlXoIfjId4AWI,2524
+useragent_classifier/main.py,sha256=X7R5QYE3Hv7MaYowloffYjvuNpb_adtWn-HY__s1OQw,3108
+useragent_classifier-0.8.4.dist-info/entry_points.txt,sha256=VMJLhVItdipHgWoAS7n9D8iURo7F0U4oqgPk4CVvWvI,80
+useragent_classifier-0.8.4.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+useragent_classifier-0.8.4.dist-info/METADATA,sha256=_wOmFusL4WpYON8i1GRt-ogzLI6voXfY9ug5Eps2f-M,2836
+useragent_classifier-0.8.4.dist-info/RECORD,,
