@@ -1,0 +1,10 @@
+aws_cdk/aws_lex/__init__.py,sha256=sj0z97lcsmFLpXLeIY1Q_uCCqwBGI2BsRyAdRekvVIY,647049
+aws_cdk/aws_lex/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aws_cdk/aws_lex/_jsii/__init__.py,sha256=IQ_1oRI9MYHqm2fk4OhkwfxgvnSDwELlSrxFqMwtxrw,341
+aws_cdk/aws_lex/_jsii/aws-lex@1.154.0.jsii.tgz,sha256=YPjviO6Ao2velmsIf5FmQ_UoZ_HPFwRkn6lZem1whqw,243409
+aws_cdk.aws_lex-1.154.0.dist-info/LICENSE,sha256=wX3LqRrxZ97zcDpw0dQ58Zb9AQalEDmXs6nP39muv7o,11391
+aws_cdk.aws_lex-1.154.0.dist-info/METADATA,sha256=i2Ihl9kt_CfbC4bPAMO2zHdjtLErmC5iYsKlUFT1lq4,2393
+aws_cdk.aws_lex-1.154.0.dist-info/NOTICE,sha256=piksgoXop22-zO1J9i3rVrv57wUN9siPK1pqGzZ7-AE,113
+aws_cdk.aws_lex-1.154.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+aws_cdk.aws_lex-1.154.0.dist-info/top_level.txt,sha256=1TALAKbuUGsMSrfKWEf268lySCmcqSEO6cDYe_XlLHM,8
+aws_cdk.aws_lex-1.154.0.dist-info/RECORD,,
