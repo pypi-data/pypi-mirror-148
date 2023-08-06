@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: loto-online.py
+Version: 1.0.0
+Summary: A library to create Loto Online bots.
+Home-page: https://github.com/Zakovskiy/loto_online.py
+Author: Zakovskiy
+Author-email: gogrugu@gmail.com
+License: MIT
+Download-URL: https://github.com/Zakovskiy/loto_online.py/tarball/master
+Description: 
+        <h1 align="center">
+          <br>
+          Loto Online API on Python
+          <br>
+        </h1>
+        
+        <p align="center">
+          <a href="https://discord.gg/AsYzxRfT6J"><img src="https://bit.ly/32neyjM"></a>
+        </p>
+        
+        # Install
+        ```
+        pip install loto_online.py
+        ```
+        
+        # Import and Auth
+        ```python
+        from lotoonline import lotoonline
+        
+        client = lotoonline.Client("access_token")
+        ```
+        
+        ### [Telegram](https://t.me/zakovskiy)
+        
+Keywords: loto,online,loto_online.py,loto.py,loto-bot,rstgame,rstgames,api,socket,python,python3,python3.x,zakovskiy,official
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
