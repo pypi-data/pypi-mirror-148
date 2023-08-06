@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: basicreadme
+Version: 1.0.0
+Summary: basic
+Home-page: UNKNOWN
+Author: saurabh
+License: MIT
+Platform: UNKNOWN
+License-File: LICENCE.txt
+
+# basicreadme
+`
+XDC3PYTHON SDK with support for smart contracts, XRC20 & XRC721.
+`
+
+### Usage
+`
+This example returns symbol of the specified address.
+
+
+
