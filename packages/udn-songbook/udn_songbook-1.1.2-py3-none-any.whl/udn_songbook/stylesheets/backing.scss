@@ -1,0 +1,9 @@
+.vox 
+  font-weight: normal
+  font-style: italic
+
+  &:before 
+    content: "("
+
+  &:after 
+    content: ")"
