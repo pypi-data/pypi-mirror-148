@@ -1,0 +1,12 @@
+setup.py
+descaling/__init__.py
+descaling/utils.py
+descaling.egg-info/PKG-INFO
+descaling.egg-info/SOURCES.txt
+descaling.egg-info/dependency_links.txt
+descaling.egg-info/top_level.txt
+descaling/desktop_environment/__init__.py
+descaling/desktop_environment/gnome.py
+descaling/desktop_environment/interface.py
+descaling/environment/__init__.py
+descaling/environment/detect_environment.py
