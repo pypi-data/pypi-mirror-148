@@ -1,0 +1,46 @@
+name: parakeet
+base: core20
+
+architectures:
+  - build-on: [amd64]
+
+summary: A digital twin for cryo-ET
+version: git
+description: A digital twin for cryo-ET.
+
+grade: devel
+confinement: classic
+
+package-repositories:
+  - type: apt
+    formats: [deb]
+    key-id: AE09FE4BBD223A84B2CCFCE3F60F4B3D7FA2AF80
+    key-server: hkp://keyserver.ubuntu.com:80
+    url: https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64
+
+build-packages:
+  - g++
+  - git
+  - libfftw3-dev
+  - wget
+  - cuda-11-6
+
+parts:
+  parakeet:
+    source: .
+    source-type: git
+    plugin: python
+    build-environment:
+      - CUDACXX: /usr/local/cuda/bin/nvcc
+    stage-packages:
+      - libfftw3-double3
+      - libfftw3-single3
+      - python3-venv
+      - cuda-cudart-11-6
+      - libcufft-11-6
+
+apps:
+  parakeet:
+    command: bin/parakeet
+    environment:
+      PATH: $SNAP/bin
