@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: Andy-mess-server
+Version: 0.0.1
+Summary: Messenger Server
+Home-page: UNKNOWN
+Author: Andrei Shorokhov
+Author-email: andr2409@bk.ru
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: PyQt5
+Requires-Dist: pycryptodome
+Requires-Dist: pycryptodomex
+Requires-Dist: sqlalchemy
+
+UNKNOWN
+
+
