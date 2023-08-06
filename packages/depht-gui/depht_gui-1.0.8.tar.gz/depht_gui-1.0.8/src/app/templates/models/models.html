@@ -1,0 +1,76 @@
+{% extends 'program_base.html' %}
+
+{% block stylelink %}"{{ url_for('static', filename='css/models_style.css') }}"{% endblock %}
+
+{% block heading %}
+  <h2 class="page_heading">Models</h2>
+{% endblock %}
+
+{% block form_content %}
+  <form class="inner args_form" action="{{url_for('models.models_action')}}"
+    method="post" enctype="multipart/form-data">
+    <table>
+      <tr>
+        <td><label for="model_action">Choose Action</label>
+          <div class="help"><img src="{{url_for('static', filename='images/help_icon.png')}}"
+            alt="help" class="help_icon">
+            <span class="help_text">
+              Choose whether to show model information
+              or delete the selected model</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="radio" name="model_action" id="model_show" value="show">
+          <label for="model_show">Show model details</label>
+          <br>
+          <input type="radio" name="model_action" id="model_delete" value="delete">
+          <label for="model_delete">Delete model</label>
+          <br><br>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="models">Local models</label>
+          <div class="help"><img src="{{url_for('static', filename='images/help_icon.png')}}"
+            alt="help" class="help_icon">
+            <span class="help_text">
+              Choose from one of the local models available</span>
+          </div>
+        </td>
+
+        <td>
+          <select class="model" name="model" id="model">
+            {% for model in local_models %}
+                <option value="{{model}}">{{model}}</option>
+            {% endfor %}
+          </select>
+        </td>
+      </tr>
+    </table>
+    <br>
+    <br>
+    <input type="submit" value="Submit" id="submit_depht"
+      onclick="this.value = 'Loading...'; this.style.border = '2px solid red'">
+
+    <br>
+    <br>
+    {% if msg %}
+      <hr>
+      <br>
+      <p id="model_msg">{{msg}}</p>
+    {% endif %}
+  </form>
+
+  {% if pdf_files %}
+    {% for hist_file in pdf_files %}
+      <iframe src="{{url_for('models.pdf_display', dir=model_dir, filename=hist_file)}}"
+        width=100% height=600px>
+        <br>
+        </iframe>
+      <br>
+    {% endfor %}
+  {% endif %}
+
+{% endblock %}
