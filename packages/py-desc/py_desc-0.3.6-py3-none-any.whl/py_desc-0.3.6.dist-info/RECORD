@@ -1,0 +1,12 @@
+py_desc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+py_desc/base.py,sha256=bbP6s3_NiqTX3n-RL11-cXLjJbuGqKZgDnD3i02_Pkc,292
+py_desc/built_in/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+py_desc/built_in/bool.py,sha256=0Bs_BGxpvf5i8A1UGC9d7CC-t5wzTT8byLm_hMNaMls,930
+py_desc/built_in/float.py,sha256=_kC5MLYx73EByGLQLr94jE2Ux1cILJe8g4cfa6LUuOQ,2632
+py_desc/built_in/integer.py,sha256=BICQPByUv5sQuvDrX6NX95auJNuXaQe30ijOpM6m0r4,2598
+py_desc/built_in/string.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+py_desc-0.3.6.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+py_desc-0.3.6.dist-info/METADATA,sha256=-syCV5giPOq6rc-KJohsE3m4FuMzurpShhtGBPlarZs,636
+py_desc-0.3.6.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+py_desc-0.3.6.dist-info/top_level.txt,sha256=bYPELy_pK0z0Q725wGMJYYhAZNp5h2XXVe587IRCLs0,25
+py_desc-0.3.6.dist-info/RECORD,,
