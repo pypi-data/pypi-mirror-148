@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: pyMMAopt
+Version: 0.0.2
+Summary: MMA optimization algorithm in python
+Home-page: https://github.com/LLNL/pyMMAopt
+Author: Miguel Salazar de Troya
+Author-email: salazardetro1@llnl.gov
+License: License :: OSI Approved :: MIT License
+Platform: any
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pyMMAopt
+[![DOI](https://zenodo.org/badge/317367772.svg)](https://zenodo.org/badge/latestdoi/317367772)
+
+Python implementation of the Method of Moving Asymptotes optimization algorithm
+described in
+[Svanberg, K., The method of moving asymptotes- a new method for structural optimization. International journal for numerical methods in engineering, 1987. 24(2): p. 359](https://onlinelibrary.wiley.com/doi/abs/10.1002/nme.1620240207). Originally implemented in [GetDP](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=717799) [project](https://gitlab.onelab.info/getdp/getdp).
+
+LLNL Release Number: LLNL-CODE-817087
+
+# Install
+```
+pip3 install .
+```
+
+

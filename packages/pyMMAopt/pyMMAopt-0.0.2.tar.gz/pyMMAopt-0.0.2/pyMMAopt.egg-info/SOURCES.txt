@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+pyMMAopt/__about__.py
+pyMMAopt/__init__.py
+pyMMAopt/constraints.py
+pyMMAopt/mma.py
+pyMMAopt/mma_solver.py
+pyMMAopt.egg-info/PKG-INFO
+pyMMAopt.egg-info/SOURCES.txt
+pyMMAopt.egg-info/dependency_links.txt
+pyMMAopt.egg-info/requires.txt
+pyMMAopt.egg-info/top_level.txt
