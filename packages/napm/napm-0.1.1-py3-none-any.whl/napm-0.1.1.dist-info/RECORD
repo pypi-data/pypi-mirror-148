@@ -1,0 +1,9 @@
+napm/__init__.py,sha256=o2AJvUxU9M4WpfpMdr1zRPSnopQanR5BpvqlfSiSXDI,194
+napm/config.yaml,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+napm/pseudo_install.py,sha256=Rg3FGJghmQEiOd2yDW3I9xXZU8HaNouVtMAaFb41CF4,2387
+napm/utils.py,sha256=T4vFT0IA1Ms3-ckmku_ZVNNta5rrlHaVGORnfQ1OGKE,510
+napm/warmup.py,sha256=tS2_mkewxH8py-S8Vp5t9HxrbudSV9cOHbsJ7gnfeHk,585
+napm-0.1.1.dist-info/LICENSE,sha256=gkQijdXk9QmBD3fnTjmF_lXLP3apJTjqeIDOABYPaR8,1067
+napm-0.1.1.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+napm-0.1.1.dist-info/METADATA,sha256=UN6T9-eplQnphT6Y-Ab_CqsTNmohTIyf9OfE4PUrT2w,638
+napm-0.1.1.dist-info/RECORD,,
