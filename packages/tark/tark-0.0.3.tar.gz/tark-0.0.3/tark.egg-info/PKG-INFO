@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: tark
+Version: 0.0.3
+Summary: Markdown parser focused on blogs.
+Home-page: https://github.com/tylerhjones/tark/
+Author: tyler jones
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Tark
+Tark is a simple markdown parser.
+
+Supported syntax:
+
+code blocks
+\`\`\`lang
+code here
+\`\`\`
+
+inline code
+\`code\`
+
+links
+\[link text\]\(url\)
+
+images
+\!\[alt text\]\(url\)
+
+titles
+\#\# title
+
+inline html
+\<p\\\>html here\<\/p\>
+
