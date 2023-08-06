@@ -1,0 +1,10 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+SVN_checkout/fetch_Lib_SVN.py
+SVN_checkout.egg-info/PKG-INFO
+SVN_checkout.egg-info/SOURCES.txt
+SVN_checkout.egg-info/dependency_links.txt
+SVN_checkout.egg-info/requires.txt
+SVN_checkout.egg-info/top_level.txt
