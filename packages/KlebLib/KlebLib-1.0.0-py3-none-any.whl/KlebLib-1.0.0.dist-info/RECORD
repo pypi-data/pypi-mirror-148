@@ -1,0 +1,14 @@
+KlebLib/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+KlebLib/baseconversion.py,sha256=AiEnzH8I6z7mnu5tKQxy2uSaPFy--ro5nJFXQhaAsVU,3853
+KlebLib/fraction.py,sha256=sL0phoNG3pmlQtuZkrtdF_3Yxq0hd5Ju8J9EGeclrT0,10112
+KlebLib/polynomial.py,sha256=GhOYjuAqVL71-wybYzDsXEkTnzGqww21N6W0FmV-a1o,15852
+KlebLib/rounding.py,sha256=fbk_4fhXLYgiKoa_iELyDtgchcEl1rloIhybNJHbqx4,1726
+KlebLib/series.py,sha256=lt-RrwXYGSG0ZjLD_gFqd_IcVWZpGD_AanWPnSJNvUA,7835
+KlebLib/test.py,sha256=yJoy_9AVzFlOl1TKb6s9KC7xxubowd3qoQWERxP2rP0,2892
+KlebLib/tree.py,sha256=dYTTE-p32l_-bQ8xauQcPFjG-1lVty9sl2nL8kVGzEc,2659
+KlebLib/universaladdition.py,sha256=H7bgkleuMf70PxLR4KVfv7t2aPQGSl7rEMl8Zf4po3E,2586
+KlebLib-1.0.0.dist-info/LICENSE,sha256=5_tPaMn7jXTZbDWuiTUygT-9d2MizafTCSdgYLbTMUQ,1069
+KlebLib-1.0.0.dist-info/METADATA,sha256=x7Ek8397jnywDLZ05kNU8WJvelrhTHZeTKMCkglSEsc,781
+KlebLib-1.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+KlebLib-1.0.0.dist-info/top_level.txt,sha256=RvwAnFVhaOuHPb7zQECmUuscaMoo1YqJnUKoXeOzbOE,8
+KlebLib-1.0.0.dist-info/RECORD,,
