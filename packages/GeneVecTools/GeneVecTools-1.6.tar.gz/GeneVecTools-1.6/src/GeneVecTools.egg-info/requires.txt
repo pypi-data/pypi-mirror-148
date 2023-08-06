@@ -1,0 +1,7 @@
+pandas
+faiss
+numpy
+requests
+tensorflow
+biopython
+pysam
