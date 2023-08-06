@@ -1,0 +1,11 @@
+kmerator/__init__.py,sha256=AA4lRvHdC5W5GzZboSwLsx-YyMoj-kfkoY0WJ25xemw,115
+kmerator/info.py,sha256=zwNl_buyREZ3jakwd676YEAcKeCaZ_qXLPBUwCCX6Hw,836
+kmerator/kmerator.py,sha256=zoyox5ZpaHk8LvmICOBthikaQqGDPausVjkXF2qEKfc,36545
+kmerator/ktools.py,sha256=Akp--jDaKwT6WRoDPCBqGF1h1Zf5sOUcKjTfnw1oPoU,11523
+kmerator/utils.py,sha256=i-4zDxRo871AAsqdJzTMeculzWn9kl0RrNRXSa0jFSk,10062
+kmerator2-0.2.3a0.dist-info/LICENCE.md,sha256=M7wm1EmMGDtwPRdg7kW4d00h1uAXjKOT3HFScYQMeiE,34916
+kmerator2-0.2.3a0.dist-info/METADATA,sha256=HBgZe8H5mHCU20a2NgN32GpV_xxo3S0EokZeKcKVwPc,6329
+kmerator2-0.2.3a0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+kmerator2-0.2.3a0.dist-info/entry_points.txt,sha256=zNcJAP8cX7jOoLvHSOX0JRMVd-a2tT5biZMt4FEPgO8,84
+kmerator2-0.2.3a0.dist-info/top_level.txt,sha256=H-cz7mZo5sq_tRW7iG1NXfpx05c3Ri11PRJnHhk2vjo,9
+kmerator2-0.2.3a0.dist-info/RECORD,,
