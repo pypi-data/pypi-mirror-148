@@ -1,0 +1,92 @@
+Metadata-Version: 2.1
+Name: simplebot-downloader
+Version: 1.0.0
+Summary: File downloader plugin for SimpleBot
+Home-page: https://github.com/adbenitez/simplebot_downloader
+Author: adbenitez
+Author-email: adbenitez@nauta.cu
+License: MPL
+Keywords: simplebot plugin deltachat
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Plugins
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Utilities
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: simplebot (>=2.4.0)
+Requires-Dist: requests (>=2.27.1)
+Requires-Dist: multivolumefile (>=0.2.3)
+Requires-Dist: py7zr (>=0.18.5)
+Provides-Extra: dev
+Requires-Dist: simplebot (>=2.4.0) ; extra == 'dev'
+Requires-Dist: requests (>=2.27.1) ; extra == 'dev'
+Requires-Dist: multivolumefile (>=0.2.3) ; extra == 'dev'
+Requires-Dist: py7zr (>=0.18.5) ; extra == 'dev'
+Requires-Dist: pytest (>=7.1.2) ; extra == 'dev'
+Requires-Dist: requests-mock (>=1.9.3) ; extra == 'dev'
+Requires-Dist: black (>=22.3.0) ; extra == 'dev'
+Requires-Dist: mypy (>=0.942) ; extra == 'dev'
+Requires-Dist: isort (>=5.10.1) ; extra == 'dev'
+Requires-Dist: pylint (>=2.13.7) ; extra == 'dev'
+Requires-Dist: pylama (>=8.3.8) ; extra == 'dev'
+Requires-Dist: types-requests (>=2.27.20) ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: pytest (>=7.1.2) ; extra == 'test'
+Requires-Dist: requests-mock (>=1.9.3) ; extra == 'test'
+
+.. image:: https://www.herokucdn.com/deploy/button.svg
+   :target: https://heroku.com/deploy?template=https://github.com/adbenitez/simplebot_downloader/tree/master/
+
+
+"Downloader" SimpleBot Plugin
+=============================
+
+.. image:: https://img.shields.io/pypi/v/simplebot_downloader.svg
+   :target: https://pypi.org/project/simplebot_downloader
+
+.. image:: https://img.shields.io/pypi/pyversions/simplebot_downloader.svg
+   :target: https://pypi.org/project/simplebot_downloader
+
+.. image:: https://pepy.tech/badge/simplebot_downloader
+   :target: https://pepy.tech/project/simplebot_downloader
+
+.. image:: https://img.shields.io/pypi/l/simplebot_downloader.svg
+   :target: https://pypi.org/project/simplebot_downloader
+
+.. image:: https://github.com/adbenitez/simplebot_downloader/actions/workflows/python-ci.yml/badge.svg
+   :target: https://github.com/adbenitez/simplebot_downloader/actions/workflows/python-ci.yml
+
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+   :target: https://github.com/psf/black
+
+A `SimpleBot`_ plugin that allows to download files by email/DeltaChat.
+
+Install
+-------
+
+To install run::
+
+  pip install simplebot-downloader
+
+Customization
+-------------
+
+By default the maximum file size allowed is 150MB, to change it, pass the number of bytes as follows::
+
+  simplebot -a bot@example.com db -s simplebot_downloader/max_size 10485760
+
+By default the file will be sent in several emails split in chunks of 15728640 Bytes (15MB), to change it::
+
+  simplebot -a bot@example.com db -s simplebot_downloader/part_size 10240
+
+By default there is a delay of 60 seconds between each sent chunk, to change it::
+
+  simplebot -a bot@example.com db -s simplebot_downloader/delay 120
+
+
+.. _SimpleBot: https://github.com/simplebot-org/simplebot
+
+

@@ -1,0 +1,9 @@
+simplebot_downloader/__init__.py,sha256=9PIfdEwk7d3BeMfNcMRHapbKYI0CPlXNen2hlIrpDw4,3152
+simplebot_downloader/_version.py,sha256=YDhpFAXgv37cmY1pZn8kQNcYAOwj883BhWAtoaziSG4,142
+simplebot_downloader/util.py,sha256=RKFeQJ2l_DqwZ9fKwIi2CKuO4z4XKZnLN4FLxbvKy5k,3648
+simplebot_downloader-1.0.0.dist-info/LICENSE,sha256=-rPda9qyJvHAhjCx3ZF-Efy07F4eAg4sFvg6ChOGPoU,16726
+simplebot_downloader-1.0.0.dist-info/METADATA,sha256=UUKWXqiylwSvkavs3GbJEoRkVljREDb1IutyTvTjnAE,3330
+simplebot_downloader-1.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+simplebot_downloader-1.0.0.dist-info/entry_points.txt,sha256=E0WVC5ibN_rHVZS-RDphXSbH1sEoRG2XnVuLO1gxAlw,65
+simplebot_downloader-1.0.0.dist-info/top_level.txt,sha256=2gT8l9SlwctoZR0PDOXjz0gL5bLf_1bn6RpG9smWDDM,21
+simplebot_downloader-1.0.0.dist-info/RECORD,,
