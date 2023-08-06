@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/wgtool/__init__.py
+src/wgtool/cli.py
+src/wgtool/exceptions.py
+src/wgtool/wgtool.py
+src/wgtool.egg-info/PKG-INFO
+src/wgtool.egg-info/SOURCES.txt
+src/wgtool.egg-info/dependency_links.txt
+src/wgtool.egg-info/entry_points.txt
+src/wgtool.egg-info/top_level.txt
