@@ -1,0 +1,10 @@
+newiotclient/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+newiotclient/__main__.py,sha256=4BKZTo242tbo7TO2bWHA576I4jQvZeQD95ju4h4wmAc,518
+newiotclient/core.py,sha256=V69NZ6Wqsm1-wK7yDZWH1QlTZo2RPUJARivIVdql1F4,8103
+newiotclient/cert/ca-bundle.crt,sha256=TU2IPtBXrOzHqaRfWio2diiynB4Kmmi7V7JZFjcCeBM,211658
+newiotclient-1.0.0.dist-info/LICENCE,sha256=T0eTPzleHkBrtJvHkUXH-RR8DaI_ULFNjLC2aPeExM4,1073
+newiotclient-1.0.0.dist-info/METADATA,sha256=HsqKg8MY_6E9MNbuiwWrGp4jnfJJ0BJDtufNGIa6wjc,2265
+newiotclient-1.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+newiotclient-1.0.0.dist-info/top_level.txt,sha256=4ceHw14bMaSH6JVH4CSvVkBheMVNbhdBUNaqhyjSRJ4,13
+newiotclient-1.0.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+newiotclient-1.0.0.dist-info/RECORD,,
