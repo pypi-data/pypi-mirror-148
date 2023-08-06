@@ -1,0 +1,10 @@
+nginx_set_conf/__init__.py,sha256=pGTyCRj6dABhDAaGvJRG0SRvdso1XoPfiD74uhkiaLk,50
+nginx_set_conf/config_templates.py,sha256=EE9gehrFCa3ujJehdRAlVIBofZ8jL9B9hGIuRioOS8A,21544
+nginx_set_conf/nginx_set_conf.py,sha256=qAduD4mjGTMctlchriZXZFQlzwu674VUQbgctg_M0WA,4005
+nginx_set_conf/utils.py,sha256=3LMsTDYqVRj-vgJslVu_cIAO4cJuHV-nLX25hdF0-kk,6929
+nginx_set_conf_equitania-0.7.1.dist-info/LICENSE.txt,sha256=VD-pauwiiia-Xi2zgKvalKRIFSJJjqRCQw6aIpK2T9U,33892
+nginx_set_conf_equitania-0.7.1.dist-info/METADATA,sha256=2ME0cXb4JzfFDGFXLil-8UQ3jDI-3r_Xu4QOCjFoSzk,3419
+nginx_set_conf_equitania-0.7.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+nginx_set_conf_equitania-0.7.1.dist-info/entry_points.txt,sha256=Bz2hZ7LCO63Ceo6kRPZvFOg5w3nVsWHJbSAoD594yfQ,86
+nginx_set_conf_equitania-0.7.1.dist-info/top_level.txt,sha256=KIzOlL94wDWETY8OHguG6fBIpJAn6NloMYV3GRDOV2U,15
+nginx_set_conf_equitania-0.7.1.dist-info/RECORD,,
