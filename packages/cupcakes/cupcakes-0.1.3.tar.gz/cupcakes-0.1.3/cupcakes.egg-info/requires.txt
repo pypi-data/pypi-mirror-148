@@ -1,0 +1,9 @@
+py-solc-x
+py-evm
+eth-tester
+web3
+PyYAML
+setuptools
+pathlib
+python-dotenv
+simple_term_menu
