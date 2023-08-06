@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: pronunciation-dictionary-utils
+Version: 0.0.1
+Summary: CLI and library to modify pronunciation dictionaries (any language).
+Home-page: https://github.com/stefantaubert/pronunciation-dictionary-utils
+Author: Stefan Taubert
+Author-email: stefan.taubert@posteo.me
+Maintainer: Stefan Taubert
+Maintainer-email: stefan.taubert@posteo.me
+License: MIT
+Project-URL: Homepage, https://github.com/stefantaubert/pronunciation-dictionary-utils
+Project-URL: Issues, https://github.com/stefantaubert/pronunciation-dictionary-utils/issues
+Keywords: ARPAbet,IPA,X-SAMPA,CMU,TTS,Text-to-speech,Speech synthesis,Language,Linguistics
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: BSD
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Unix
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tqdm
+Requires-Dist: ordered-set (>=4.1.0)
+
+# pronunciation-dictionary-utils
+
+[![PyPI](https://img.shields.io/pypi/v/pronunciation-dictionary-utils.svg)](https://pypi.python.org/pypi/pronunciation-dictionary-utils)
+[![PyPI](https://img.shields.io/pypi/pyversions/pronunciation-dictionary-utils.svg)](https://pypi.python.org/pypi/pronunciation-dictionary-utils)
+[![MIT](https://img.shields.io/github/license/stefantaubert/pronunciation-dictionary-utils.svg)](LICENSE)
+
+Library and CLI to modify pronunciation dictionaries (any language).
+
+## Features
+
+- Merge multiple pronunciation dictionaries
+- Extract subset of pronunciation dictionary
+- Remove characters from vocabulary
+- Remove phonemes from pronunciations
+- Select single pronunciation per word
+- Change word casing
+- Change file formatting
+- Export vocabulary
+- Export phoneme set
+
+## Roadmap
+
+- Adding tests
+- Implementation of printing of statistics
+- Implementation of phoneme mapping, e.g., mapping ARPAbet to IPA
+
+## Installation
+
+```sh
+pip install pronunciation-dictionary-utils --user
+```
+
+## Usage
+
+```sh
+dict-cli
+```
+
+## Citation
+
+If you want to cite this repo, you can use this BibTeX-entry:
+
+```bibtex
+@misc{tspdu22,
+  author = {Taubert, Stefan},
+  title = {pronunciation-dictionary-utils},
+  year = {2022},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/stefantaubert/pronunciation-dictionary-utils}}
+}
+```
+
+

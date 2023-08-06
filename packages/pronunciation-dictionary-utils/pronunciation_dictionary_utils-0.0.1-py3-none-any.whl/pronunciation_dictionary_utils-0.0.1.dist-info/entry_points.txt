@@ -1,0 +1,2 @@
+[console_scripts]
+dict-cli = pronunciation_dictionary_utils_cli.cli:run_prod
