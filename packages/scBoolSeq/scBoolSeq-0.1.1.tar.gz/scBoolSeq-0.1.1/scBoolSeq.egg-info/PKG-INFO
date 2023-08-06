@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: scBoolSeq
+Version: 0.1.1
+Summary: scRNA-Seq data binarisation and synthetic generation from Boolean dynamics.
+Home-page: https://github.com/bnediction/scBoolSeq
+Author: Gustavo Magaña López
+Author-email: gustavo.magana-lopez@u-psud.fr
+License: BSD-3
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Description-Content-Type: text/markdown
+
+
+# scBoolSeq
+
+scRNA-Seq data binarisation and synthetic generation from Boolean dynamics.
+
+## Installation
+
+### Conda
+
+```
+conda install -c conda-forge -c colomoto scboolseq
+```
+
+### Pip
+
+You need `R` installed.
+
+```
+pip install scboolseq
+```
+
+TODO: how to install R dependencies
+
+## Usage
+
+### Command line
+
+TODO (`scBoolSeq ...`)
+
+### Python API
+
+TODO
+
+
