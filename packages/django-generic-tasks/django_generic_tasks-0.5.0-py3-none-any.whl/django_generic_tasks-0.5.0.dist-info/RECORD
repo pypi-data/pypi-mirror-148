@@ -1,0 +1,12 @@
+django_generic_tasks/__init__.py,sha256=lR2zMdMw-T-2k6SzpX3B8AkfqjRDW3P7FSLfL66Vx60,41
+django_generic_tasks/api.py,sha256=_Hxc__k75YlDthTBb2XfH3Nz1NvDYqBZO9GD2abywZ4,97
+django_generic_tasks/apps.py,sha256=FHDrk0ixhdwGp6rrNPkCQ_Wf_0B1PzD99PsYK_HXbHY,157
+django_generic_tasks/backends.py,sha256=tyArlhQcjMQ2NJyAEXSU2LhugGp_XfkqF4_4sFvpOSY,1417
+django_generic_tasks/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_generic_tasks/security.py,sha256=2iPyiGywlJXQCy-nbvTH70NIltUe00dqkbAUHhPqIJU,700
+django_generic_tasks/task.py,sha256=6AC4Yj4isoct-cBuvqMH3telMHmdzC1TzCC_-FZEZEU,1735
+django_generic_tasks/urls.py,sha256=WT_TB-RoFMZmaqAx_gQ6TxfCW3ML76DH3xISKAPKF48,87
+django_generic_tasks/utils.py,sha256=nxZu3pe9kXobn-HdgK7AsLePz1z7OxvKU-EsWT1cgP4,185
+django_generic_tasks-0.5.0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+django_generic_tasks-0.5.0.dist-info/METADATA,sha256=yYBNZuxiJwWsc3WKn2huQZEJumP0WtinTmyr-3ImSas,5379
+django_generic_tasks-0.5.0.dist-info/RECORD,,
