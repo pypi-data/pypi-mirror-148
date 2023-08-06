@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pytrafikverket
+Version: 0.2
+Summary: Retreive values from public API at the Swedish Transport Administration (Trafikverket).
+Home-page: https://github.com/endor-force/pytrafikverket
+Author: Peter Andersson, Jonas Karlsson
+License: MIT
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: aiohttp
+Requires-Dist: async-timeout
+Requires-Dist: lxml
+
+UNKNOWN
+
