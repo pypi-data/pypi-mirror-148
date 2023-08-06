@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: efsm
+Version: 0.1.2
+Summary: > Easy and micro fsm could used in python3.x and micropython. > Copy the efsm/core.py for your micropython mpu.  > You could link many statemachine, make them form a net. Then when you could run one sm in the net, it would auto retarget.
+Home-page: UNKNOWN
+Author: Eagle'sBaby
+Author-email: 2229066748@qq.com
+Maintainer: Eagle'sBaby
+Maintainer-email: 2229066748@qq.com
+License: Apache Licence 2.0
+Keywords: fsm,micropython
+Platform: all
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
+
+UNKNOWN
+
