@@ -1,0 +1,10 @@
+metroloj/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+metroloj/common.py,sha256=yFXqHrSO7WHa3jBW_94mgXZy9CJe2k2k_Q-6NVLUjPo,2849
+metroloj/cv.py,sha256=KvAeku9pq0Z386_hCV_GL9JXG9i3az0de_8CvpzBAlY,18236
+metroloj/homo.py,sha256=-KOsjib50OIjmzTSxaVgkUmYlk_oTskXMwHb34hpQYA,14218
+metroloj/metadata.py,sha256=DdCMDpxbFKrMqtpOAmlzNrIN0cTaspYpwKP4ADPpgm0,1395
+metroloj-0.1.5.data/scripts/metroloj_script,sha256=e3Oodl0oDEv4TvhxUWLkNUOG71o4zaGdWdDSa4dZwgA,39
+metroloj-0.1.5.dist-info/METADATA,sha256=0pGy4FJlXnNVzVZllFh94pNLxV-EarVUNmBgPYGMQp0,1039
+metroloj-0.1.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+metroloj-0.1.5.dist-info/top_level.txt,sha256=uWJAU9xl7PbSOqawiaIiduazXAtN7P6UTS0HC9bWt20,9
+metroloj-0.1.5.dist-info/RECORD,,
