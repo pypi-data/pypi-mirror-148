@@ -1,0 +1,3 @@
+[console_scripts]
+gh-stats=gh_stats.cli:main
+
