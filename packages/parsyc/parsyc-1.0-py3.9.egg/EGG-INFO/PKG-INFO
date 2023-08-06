@@ -1,0 +1,13 @@
+Metadata-Version: 1.1
+Name: parsyc
+Version: 1.0
+Summary: A Haskell/Parsec inspired Parser Combinator library
+Home-page: https://github.com/mustafaquraish/marker
+Author: Mustafa Quraish
+Author-email: mustafa@cs.toronto.edu
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
