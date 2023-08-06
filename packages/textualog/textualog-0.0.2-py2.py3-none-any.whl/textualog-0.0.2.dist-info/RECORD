@@ -1,0 +1,11 @@
+textualog/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+textualog/__main__.py,sha256=-9UG4xr_LWaGazBcgtwGueo4a7t2bdf780K4lXahHJk,3998
+textualog/__version__.py,sha256=JKcVj23SejXMuSrVayM-g1diKEctVNWhGGGKhi6heoo,118
+textualog/emojis.py,sha256=UkNAlaG2rXZlu4_C-qRAYsgFcNhG3ug-0rurxH92GFA,147
+textualog/styles.py,sha256=O0EwwO7528hh9nqypPlZ1CZ-CvfCycopztVcZBWLrJE,161
+textualog/unicodes.py,sha256=GI9rigG7r33YeqhtJXiTPlf12ABE8cv4e_sbMqpj5IE,188
+textualog-0.0.2.dist-info/METADATA,sha256=GcP-ya1-4Kq4K05km48ipCid6TaXfkTL3BMRmm41kfc,1035
+textualog-0.0.2.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+textualog-0.0.2.dist-info/entry_points.txt,sha256=0rolvZzy_wHb_BJVoDirtjJpPXKMg28wi46lBmVqNx8,49
+textualog-0.0.2.dist-info/top_level.txt,sha256=JJ6MG5QwBuQstokmxKlHT4YpBG2aP2CCuAw2rQ_978U,10
+textualog-0.0.2.dist-info/RECORD,,
