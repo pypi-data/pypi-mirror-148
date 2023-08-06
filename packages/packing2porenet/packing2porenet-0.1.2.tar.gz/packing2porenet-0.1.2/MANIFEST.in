@@ -1,0 +1,6 @@
+include examples/*
+exclude examples/*.pvsm
+exclude examples/*.vtk
+exclude examples/yade-pores-*.txt
+include tests/*.py
+include CHANGELOG.md
