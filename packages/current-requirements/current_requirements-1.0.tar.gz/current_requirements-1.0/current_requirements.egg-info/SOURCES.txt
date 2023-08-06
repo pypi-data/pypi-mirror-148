@@ -1,0 +1,6 @@
+README.md
+setup.py
+current_requirements.egg-info/PKG-INFO
+current_requirements.egg-info/SOURCES.txt
+current_requirements.egg-info/dependency_links.txt
+current_requirements.egg-info/top_level.txt
