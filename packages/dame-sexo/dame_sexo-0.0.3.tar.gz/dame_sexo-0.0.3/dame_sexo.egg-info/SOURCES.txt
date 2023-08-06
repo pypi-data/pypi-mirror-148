@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+license.txt
+pyproject.toml
+setup.cfg
+dame_sexo/__init__.py
+dame_sexo/dame_sexo.pickle
+dame_sexo/female.txt
+dame_sexo/gender.py
+dame_sexo/male.txt
+dame_sexo.egg-info/PKG-INFO
+dame_sexo.egg-info/SOURCES.txt
+dame_sexo.egg-info/dependency_links.txt
+dame_sexo.egg-info/top_level.txt
