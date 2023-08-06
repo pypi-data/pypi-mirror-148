@@ -1,0 +1,13 @@
+setup.py
+chat_parser/__init__.py
+chat_parser/data_extractor.py
+chat_parser/fileparser.py
+chat_parser/utils.py
+chat_parser.egg-info/PKG-INFO
+chat_parser.egg-info/SOURCES.txt
+chat_parser.egg-info/dependency_links.txt
+chat_parser.egg-info/top_level.txt
+chat_parser/telegram/__init__.py
+chat_parser/telegram/parser.py
+chat_parser/whatsapp/__init__.py
+chat_parser/whatsapp/parser.py
