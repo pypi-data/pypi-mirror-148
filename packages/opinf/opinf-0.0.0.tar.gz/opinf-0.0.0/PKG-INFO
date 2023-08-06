@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: opinf
+Version: 0.0.0
+Summary: Operator inference for data-driven, non-intrusive model reduction of dynamical systems.
+Home-page: https://github.com/Willcox-Research-Group/opinf
+Author: Willcox Research Group
+Author-email: shanemcq@utexas.edu
+Maintainer: Shane A. McQuarrie
+Maintainer-email: shanemcq@utexas.edu
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Classifier: Intended Audience :: Science/Research
+Classifier: Development Status :: 1 - Planning
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Operator Inference in Python
+
+Operator Inference learns projection-based polynomial reduced-order models of dynamical systems from data.
+See https://github.com/Willcox-Research-Group/rom-operator-inference-Python3.
+
+

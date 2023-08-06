@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/opinf/__init__.py
+src/opinf.egg-info/PKG-INFO
+src/opinf.egg-info/SOURCES.txt
+src/opinf.egg-info/dependency_links.txt
+src/opinf.egg-info/top_level.txt
