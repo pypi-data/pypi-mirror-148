@@ -1,0 +1,3 @@
+[console_scripts]
+valorant_api=valorant_api.__main__:app
+
