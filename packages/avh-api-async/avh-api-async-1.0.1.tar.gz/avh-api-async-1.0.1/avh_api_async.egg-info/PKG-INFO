@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: avh-api-async
+Version: 1.0.1
+Summary: Arm API
+Home-page: 
+Author: OpenAPI Generator community
+Author-email: team@openapitools.org
+License: UNKNOWN
+Keywords: OpenAPI,OpenAPI-Generator,Arm API
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+    REST API to manage your virtual devices.  # noqa: E501
+    
+
