@@ -1,0 +1,46 @@
+numpy
+pillow
+boto3
+click
+pathos
+humbug>=0.2.6
+tqdm
+numcodecs
+
+[all]
+pydicom
+IPython
+google-auth~=2.0.1
+flask
+google-cloud-storage~=1.42.0
+google-auth-oauthlib~=0.4.5
+
+[all:python_version >= "3.7" or sys_platform != "win32"]
+av>=8.1.0
+
+[audio]
+
+[audio:python_version >= "3.7" or sys_platform != "win32"]
+av>=8.1.0
+
+[av]
+
+[av:python_version >= "3.7" or sys_platform != "win32"]
+av>=8.1.0
+
+[dicom]
+pydicom
+
+[gcp]
+google-cloud-storage~=1.42.0
+google-auth~=2.0.1
+google-auth-oauthlib~=0.4.5
+
+[video]
+
+[video:python_version >= "3.7" or sys_platform != "win32"]
+av>=8.1.0
+
+[visualizer]
+IPython
+flask
