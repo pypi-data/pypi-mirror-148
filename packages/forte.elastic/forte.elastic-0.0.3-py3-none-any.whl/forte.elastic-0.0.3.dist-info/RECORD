@@ -1,0 +1,11 @@
+forte.elastic-0.0.3-py3.7-nspkg.pth,sha256=KWoU0PxEB5BSudRgqA4o_Q_2xHPJWNw26zJyovAeXUU,539
+fortex/elastic/__init__.py,sha256=epMQ2H5VyhwZ5bWX6IJ8EDE8d8KYZbE4oruuk4cnYOI,217
+fortex/elastic/elastic_indexer.py,sha256=is6UxpqGrKYnxwJ7dL-gAqjfcWdjrIjjRyC1PJnyXrQ,7984
+fortex/elastic/elastic_search_index_processor.py,sha256=bH4fNTg4tJdl9fWPFtfD4n8eOkGmPPb9dmISHGgwKaA,4204
+fortex/elastic/elastic_search_processor.py,sha256=CKACd1PlgYsp-bMUBkpQ51dLwN5S2lcP3zl1deCAL4w,4869
+fortex/elastic/elastic_search_query_creator.py,sha256=5eLlfarQCPKQOHcndHuXkfLCEX8_VmHZWCHczK3naaY,2281
+forte.elastic-0.0.3.dist-info/METADATA,sha256=xtai30gngmGR1x1OeZtvysFBp5ItTZUiB16T-7NgD2A,2831
+forte.elastic-0.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+forte.elastic-0.0.3.dist-info/namespace_packages.txt,sha256=j9TrPPyHnX3OsVUYL8yYDiybtN3L7DHvFpvtp4l7Uhs,7
+forte.elastic-0.0.3.dist-info/top_level.txt,sha256=j9TrPPyHnX3OsVUYL8yYDiybtN3L7DHvFpvtp4l7Uhs,7
+forte.elastic-0.0.3.dist-info/RECORD,,
