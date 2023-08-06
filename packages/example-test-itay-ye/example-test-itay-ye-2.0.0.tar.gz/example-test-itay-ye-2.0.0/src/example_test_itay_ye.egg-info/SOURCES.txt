@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/example_test_itay_ye.egg-info/PKG-INFO
+src/example_test_itay_ye.egg-info/SOURCES.txt
+src/example_test_itay_ye.egg-info/dependency_links.txt
+src/example_test_itay_ye.egg-info/top_level.txt
