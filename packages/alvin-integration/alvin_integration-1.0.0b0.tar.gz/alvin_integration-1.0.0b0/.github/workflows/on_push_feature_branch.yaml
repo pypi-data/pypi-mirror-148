@@ -1,0 +1,101 @@
+name: Release beta version
+
+# Only runs on non-master branches
+on:
+  push:
+    branches-ignore:
+      - 'master'
+    paths-ignore:
+      - '.github/**'
+
+      
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8]
+    steps:
+    - uses: actions/checkout@v2
+      with: 
+        fetch-depth: 0
+
+    - name: get file changes
+      run: | 
+        git diff --name-only ${{ github.event.before }} ${{ github.event.after }}
+
+    - name: Setup git configuration
+      run: |
+          # Setup github-actions user
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+
+    - uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+        cache: 'pip'
+
+    - name: Install dependencies
+      run: |
+          # Upgrade pip
+          python3 -m pip install --upgrade pip
+          # Install build deps
+          python3 -m pip install setuptools wheel twine python-semantic-release
+          # If requirements.txt exists, install from it
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi 
+          # Install linters
+          python3 -m pip install poetry
+          poetry install --no-interaction
+
+
+
+    # - name: Run tests
+    #   run: |
+    #     poetry run isort --atomic $PWD
+    #     poetry run black $PWD
+    #     poetry run flake8 --ignore=E501,
+    #     poetry run bandit --recursive --number=3 -ll -ii $PWD
+
+    - name: Semantic Release
+      run: |
+
+        CURRENT_VERSION=$(semantic-release print-version --current)
+        export VERSION=$(semantic-release print-version --prerelease)
+
+        semantic-release version --define=commit_subject="Upgrade integration to version $VERSION"
+
+        semantic-release changelog > tmp.changes.md
+
+        CHANGES=$(awk '{printf "%s\\n", $0}' tmp.changes.md)
+
+        rm tmp.changes.md
+
+        awk 'NR==7{print "'"## [$VERSION] --- $(date +%F)\n"'"}1' CHANGELOG.md > CHANGELOG.tmp.md
+        
+        rm CHANGELOG.md && mv CHANGELOG.tmp.md CHANGELOG.md
+
+        awk 'NR==8{print "'"\n $CHANGES \n"'"}1' CHANGELOG.md > CHANGELOG.tmp.md
+
+        rm CHANGELOG.md && mv CHANGELOG.tmp.md CHANGELOG.md
+
+
+        git add .
+        git commit -m "Upgrade CHANGELOG.md with version $VERSION"
+
+        git push
+
+
+
+        echo "VERSION=$VERSION" >> $GITHUB_ENV
+
+
+    - name: Build and publish
+      env:
+        TWINE_USERNAME: alvindotai
+        TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+        VERSION: ${{ env.VERSION }}
+      run: |
+        # Create a source distribution (sdist) & a wheel (bdist wheel)
+        python setup.py sdist bdist_wheel
+        twine upload dist/*
