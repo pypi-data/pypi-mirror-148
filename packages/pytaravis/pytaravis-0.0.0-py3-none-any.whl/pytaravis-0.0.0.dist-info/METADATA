@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pytaravis
+Version: 0.0.0
+Summary: anuwataravis python personal tools.
+Home-page: https://github.com/anuwatavis/pytaravis.git
+Author: anuwataravis
+Author-email: email@anuwataravis.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 3 - Alpha
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# Pytaravis
+
+
