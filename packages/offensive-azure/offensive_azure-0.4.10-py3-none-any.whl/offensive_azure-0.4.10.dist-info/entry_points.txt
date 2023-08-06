@@ -1,0 +1,14 @@
+[console_scripts]
+device_code_easy_mode=offensive_azure.Device_Code.device_code_easy_mode:main
+get_group_members=offensive_azure.Azure_AD.get_group_members:main
+get_groups=offensive_azure.Azure_AD.get_groups:main
+get_resource_groups=offensive_azure.Azure_AD.get_resource_groups:main
+get_subscriptions=offensive_azure.Azure_AD.get_subscriptions:main
+get_tenant=offensive_azure.Azure_AD.get_tenant:main
+get_users=offensive_azure.Azure_AD.get_users:main
+get_vms=offensive_azure.Azure_AD.get_vms:main
+outsider_recon=offensive_azure.Outsider_Recon.outsider_recon:runner
+read_token=offensive_azure.Access_Tokens.read_token:main
+token_juggle=offensive_azure.Access_Tokens.token_juggle:main
+user_enum=offensive_azure.User_Enum.user_enum:main
+
