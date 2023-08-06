@@ -1,0 +1,11 @@
+[build-system]
+requires = [
+    "setuptools>=54",
+    "wheel",
+"tokenizers==0.11.6",
+"torch==1.11.0",
+"tqdm==4.63.0",
+"transformers==4.17.0",
+
+]
+build-backend = "setuptools.build_meta"
