@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pytamp
+Version: 0.1
+Summary: Robotics Task and Motion Planning Library
+Home-page: https://github.com/jdj2261/pytamp.git
+Author: Daejong Jin
+Author-email: wlseoeo@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/jdj2261/pytamp/archive/refs/heads/main.zip
+Platform: UNKNOWN
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: trimesh[easy]
+Requires-Dist: tqdm
+Requires-Dist: pyyaml
+Requires-Dist: python-fcl
+Requires-Dist: networkx
+
+# pytamp
+
+## Comming Soon...
+
