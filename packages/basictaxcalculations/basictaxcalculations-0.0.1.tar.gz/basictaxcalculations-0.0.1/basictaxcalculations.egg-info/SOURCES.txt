@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+basictaxcalculations/__init__.py
+basictaxcalculations.egg-info/PKG-INFO
+basictaxcalculations.egg-info/SOURCES.txt
+basictaxcalculations.egg-info/dependency_links.txt
+basictaxcalculations.egg-info/top_level.txt

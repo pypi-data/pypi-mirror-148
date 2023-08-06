@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: basictaxcalculations
+Version: 0.0.1
+Summary: Tax calculator
+Home-page: UNKNOWN
+Author: Amit Goswami
+Author-email: x21152594@student.ncirl.ie
+License: MIT
+Keywords: calculator
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENCE.txt
+
+This is a very simple calculator that takes income and calculate taxes
+
+
+Change Log
+==========
+
+0.0.1 (19/04/2020)
+-------------------
+- First Release
+
