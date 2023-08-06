@@ -1,0 +1,3 @@
+[console_scripts]
+csvchk = csvchk:main
+
