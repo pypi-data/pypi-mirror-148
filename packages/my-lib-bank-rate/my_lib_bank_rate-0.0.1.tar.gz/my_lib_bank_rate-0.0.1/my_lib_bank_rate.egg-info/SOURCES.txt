@@ -1,0 +1,6 @@
+README.md
+setup.py
+my_lib_bank_rate.egg-info/PKG-INFO
+my_lib_bank_rate.egg-info/SOURCES.txt
+my_lib_bank_rate.egg-info/dependency_links.txt
+my_lib_bank_rate.egg-info/top_level.txt
