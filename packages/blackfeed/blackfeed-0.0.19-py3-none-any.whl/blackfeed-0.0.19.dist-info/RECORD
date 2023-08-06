@@ -1,0 +1,16 @@
+blackfeed/__init__.py,sha256=5pwhpmwgnHkFqtbImd-EV7fkjpOFERn88_MclF4rZXs,102
+blackfeed/downloader.py,sha256=iqatKK_8YMMVqfFY3IktvKiMMHb_0VnvigOsOl0f5KM,17438
+blackfeed/elasticdownloader.py,sha256=FVR21nrf4rYG0S0oH_5lhIoru1zx1xERsYj5GPqZU-A,3946
+blackfeed/adapter/__init__.py,sha256=3TCPrp8ireye4qBNpGxUeaiZnSeKKL3icbZA1AgFvTM,92
+blackfeed/adapter/local.py,sha256=BLe773RWmw5moRO31f73YsSyhh_ys9p8eKENf-XPBLM,901
+blackfeed/adapter/s3.py,sha256=t9b_M4e6ha70vNUJ43UMMNCq31FtvM5zCjCvOjaU-I0,1653
+blackfeed/elastic/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+blackfeed/elastic/ftp.py,sha256=vjhUMdBSzzt4RH0rsSw_YSUQmjzV1Wwesuj5P_tFAxs,1844
+blackfeed/elastic/sftp.py,sha256=Mnn6HSRM0rXqoSztPboYfg9UX1jacYQfaySQZ3yqNVk,1367
+blackfeed/helper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+blackfeed/helper/hasher.py,sha256=M_TREAlS7Jr8g70wuyXeUcgRx8XZmP02OG9T_MjKjVM,81
+blackfeed/helper/http_download.py,sha256=8H10lqFktf0qYWJBMbogwF0IgQ627wremggTp4R8Tbo,1102
+blackfeed-0.0.19.dist-info/METADATA,sha256=FFNu54SHKYjz6KvVqTTrZZOCz7FH3qwD9oQldaQyVDo,4118
+blackfeed-0.0.19.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+blackfeed-0.0.19.dist-info/top_level.txt,sha256=i3m7XvGUd5dU4R4ExTGIlv8c9XlH9I4FjaZoceHiIag,10
+blackfeed-0.0.19.dist-info/RECORD,,
