@@ -1,0 +1,6 @@
+dune-alugrid<=2.9.0.dev20220426
+dune-fem<=2.9.0.dev20220426
+matplotlib
+scipy
+sortedcontainers
+triangle
