@@ -1,0 +1,8 @@
+audiofile
+torch
+torchaudio
+torchvision
+soxr
+tqdm
+scipy
+python_speech_features
