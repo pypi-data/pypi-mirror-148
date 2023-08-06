@@ -1,0 +1,94 @@
+Metadata-Version: 2.1
+Name: english-text-normalization
+Version: 0.0.1
+Summary: CLI and library to normalize English texts.
+Home-page: https://github.com/jasminsternkopf/english_text_normalization
+Author-email: Jasmin Sternkopf <jasmin.sternkopf@mathematik.tu-chemnitz.de>, Stefan Taubert <stefan.taubert@posteo.me>
+Maintainer-email: Stefan Taubert <stefan.taubert@posteo.me>
+License: MIT
+Project-URL: Homepage, https://github.com/jasminsternkopf/english_text_normalization
+Project-URL: Issues, https://github.com/jasminsternkopf/english_text_normalization/issues
+Keywords: Text-to-speech,Speech synthesis,Regex,Language,Linguistics
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: BSD
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Unix
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# english-text-normalization
+
+[![PyPI](https://img.shields.io/pypi/v/english-text-normalization.svg)](https://pypi.python.org/pypi/english-text-normalization)
+[![PyPI](https://img.shields.io/pypi/pyversions/english-text-normalization.svg)](https://pypi.python.org/pypi/english-text-normalization)
+[![MIT](https://img.shields.io/github/license/jasminsternkopf/english_text_normalization.svg)](https://github.com/jasminsternkopf/english_text_normalization/blob/main/LICENSE)
+
+CLI and library to normalize English texts.
+
+## Installation
+
+```sh
+pip install english-text-normalization --user
+```
+
+## Usage as CLI
+
+```sh
+# Show supported normalizing operations
+norm-eng-cli list-operations -h
+
+# Normalize
+norm-eng-cli normalize -h
+```
+
+## Usage as a library
+
+```py
+from english_text_normalization import *
+```
+
+### Methods
+
+- `expand_abbreviations`
+- `normalize_am_and_pm`
+- ...
+
+### Dependencies
+
+- pyenchant
+- nltk
+- inflect
+
+## Contributing
+
+If you notice an error, please don't hesitate to open an issue.
+
+## Citation
+
+If you want to cite this repo, you can use this BibTeX-entry:
+
+```bibtex
+@misc{stetn22,
+  author = {Sternkopf, Jasmin and Taubert, Stefan},
+  title = {english-text-normalization},
+  year = {2022},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/jasminsternkopf/english_text_normalization}}
+}
+```
+
+

@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/english_text_normalization/__init__.py
+src/english_text_normalization/normalization_pipeline.py
+src/english_text_normalization/sentence_extraction.py
+src/english_text_normalization.egg-info/PKG-INFO
+src/english_text_normalization.egg-info/SOURCES.txt
+src/english_text_normalization.egg-info/dependency_links.txt
+src/english_text_normalization.egg-info/entry_points.txt
+src/english_text_normalization.egg-info/requires.txt
+src/english_text_normalization.egg-info/top_level.txt
+src/english_text_normalization_cli/cli.py
+src/english_text_normalization_cli/operations_listing.py
+src/english_text_normalization_cli/text_normalization.py
