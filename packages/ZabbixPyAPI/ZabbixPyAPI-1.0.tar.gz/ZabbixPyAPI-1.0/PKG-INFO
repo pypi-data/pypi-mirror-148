@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: ZabbixPyAPI
+Version: 1.0
+Summary: Simple zabbix api using python
+Home-page: https://github.com/ewertonhm/ZabbixPyAPI
+Author: Ewerton Henrique Marschalk
+Author-email: sis-ewertonmarschalk@uniguacu.edu.br
+License: MIT
+Download-URL: https://github.com/ewertonhm/ZabbixPyAPI/archive/refs/tags/1.0.tar.gz
+Keywords: ZABBIX,API
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# ZabbixPyAPI
+
+A simple python lib for using the Zabbix API
+
+## Uso/Exemplos
+
+```python
+from ZabbixPyAPI.zabbix import api
+
+api = api('zabbixurl.com/api_jsonrpc.php','zabbix_login','zabbix_psw')
+
+params = {
+    "groupids":"1547",
+    "output":["name"]
+}
+
+api.request("host.get", params)
+```
+
+
