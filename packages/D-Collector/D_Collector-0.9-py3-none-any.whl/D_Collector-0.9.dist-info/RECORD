@@ -1,0 +1,17 @@
+dcollector/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dcollector/config.example.py,sha256=vsffIG8UVimDtH2C7DuTAWv9f1R_ieAviJ95nJl6Ijg,579
+dcollector/main.py,sha256=ZhEwxKVA-jEge_DdieaAwb32kO1sHKnFnUMFsgSqhDU,1100
+dcollector/providers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dcollector/providers/aws.py,sha256=dXBIKae2LnI-AqHxRbVC3tIj15fCD1_xpD8BQBPrG3Y,3740
+dcollector/providers/digitalocean.py,sha256=jkvzpsn7CEGTHemkg3DDAqJNcpJmIvdFXdhGAKEobsw,1828
+dcollector/providers/file.py,sha256=oWGOjdI5awovLEhM_Cj9fZsDIM66G0_9ScrXGYuMSZw,381
+dcollector/providers/gcp.py,sha256=fN6p8DovXzLgbvL-eBUZF3KT4dR0UVGPV12EXM5vsdw,2834
+dcollector/providers/prisma.py,sha256=mTDO_r7JJi_yVjJSjCpolq_KEh9_4GkQJPrGN6KFI1A,3037
+dcollector/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dcollector/utils/utils.py,sha256=dlfYaV2Lsfz67lbL_DnLlAnDnyRPBzkBwT2DYSL1rNc,914
+D_Collector-0.9.dist-info/LICENSE,sha256=xazLvYVG6Uw0rtJK_miaYXYn0Y7tWmxIJ35I21fCOFE,11356
+D_Collector-0.9.dist-info/METADATA,sha256=QE3zeAiy_Vy46jyAmGAHTv1qAHXtqL-xCQFepn3ZSl0,2884
+D_Collector-0.9.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+D_Collector-0.9.dist-info/entry_points.txt,sha256=7xWM_oCE1nEXwknHNZnzGQ_0lNVLbpzoBlkYn2KhZVI,52
+D_Collector-0.9.dist-info/top_level.txt,sha256=PhGaCswmJfSrg_12nEsflUFZtCRQmW9ZSesTgK8KmdA,11
+D_Collector-0.9.dist-info/RECORD,,
