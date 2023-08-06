@@ -1,0 +1,3 @@
+[console_scripts]
+stud=studfile.main:main
+
