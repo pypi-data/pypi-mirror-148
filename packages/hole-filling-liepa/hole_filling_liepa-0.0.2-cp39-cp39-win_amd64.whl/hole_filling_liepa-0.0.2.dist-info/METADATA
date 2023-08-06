@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: hole-filling-liepa
+Version: 0.0.2
+Summary: Hole filling algorithm by P. Liepa
+Home-page: https://github.com/russelmann/hole-filling-liepa
+Author: Ruslan Guseinov
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: numpy
+
+UNKNOWN
+
