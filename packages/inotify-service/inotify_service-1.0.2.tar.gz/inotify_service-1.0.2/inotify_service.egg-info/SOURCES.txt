@@ -1,0 +1,15 @@
+LICENSE.txt
+README.rst
+setup.py
+inotify_service/__init__.py
+inotify_service/command.py
+inotify_service/handler.py
+inotify_service/log.py
+inotify_service/service.py
+inotify_service.egg-info/PKG-INFO
+inotify_service.egg-info/SOURCES.txt
+inotify_service.egg-info/dependency_links.txt
+inotify_service.egg-info/entry_points.txt
+inotify_service.egg-info/requires.txt
+inotify_service.egg-info/top_level.txt
+inotify_service.egg-info/zip-safe
