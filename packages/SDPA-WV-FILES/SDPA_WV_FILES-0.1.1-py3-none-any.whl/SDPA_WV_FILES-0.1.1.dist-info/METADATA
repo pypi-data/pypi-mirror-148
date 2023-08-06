@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: SDPA-WV-FILES
+Version: 0.1.1
+Summary: Waveform files (.wv) utility
+Home-page: https://github.com/SebastienDeriaz/SDPA-WV-FILES
+Author: Sebastien Deriaz
+Author-email: sebastien.deriaz1@gmail.com
+License: UNKNOWN
+Keywords: python,wv,file,R&S,Rhode & Schwarz,SMCV100B
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+
+# SDPA-WV-FILES
+
+Utility for reading and writing .wv files for use with SMCV100B Vector Signal Generator
+
+
+## Installation
+
+    pip install SDPA-WV-FILES
+
+## Usage
+
+## Current version : 0.1.0
+
+First published version
+
+
