@@ -1,0 +1,3 @@
+[console_scripts]
+detalhar = fiscaliza.redmine:detalhar_issue
+relatar = fiscaliza.redmine:relatar_inspecao
