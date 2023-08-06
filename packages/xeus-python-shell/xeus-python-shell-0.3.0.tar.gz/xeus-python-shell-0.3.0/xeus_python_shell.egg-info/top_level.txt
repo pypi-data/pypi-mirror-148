@@ -1,0 +1,2 @@
+xeus_python_shell
+xeus_python_shell_lite
