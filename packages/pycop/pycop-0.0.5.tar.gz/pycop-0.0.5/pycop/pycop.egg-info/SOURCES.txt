@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+pycop/bivariate/__init__.py
+pycop/bivariate/archimedean.py
+pycop/bivariate/copula.py
+pycop/bivariate/empirical.py
+pycop/bivariate/estimation.py
+pycop/bivariate/gaussian.py
+pycop/bivariate/mixture.py
+pycop/bivariate/student.py
+pycop/pycop.egg-info/PKG-INFO
+pycop/pycop.egg-info/SOURCES.txt
+pycop/pycop.egg-info/dependency_links.txt
+pycop/pycop.egg-info/top_level.txt
