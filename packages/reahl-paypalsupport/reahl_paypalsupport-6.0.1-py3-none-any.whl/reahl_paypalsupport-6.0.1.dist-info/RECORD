@@ -1,0 +1,16 @@
+reahl_paypalsupport-6.0.1-py3.8-nspkg.pth,sha256=kfayz6BuWalohcK85yc5IbH_OmBi9eTQ1OzREPd1Als,1700
+reahl/paypalsupport/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+reahl/paypalsupport/migrations.py,sha256=88UuPM0suEOgJCDMCminfS0w20iRpl2lboONU79ozMM,1916
+reahl/paypalsupport/paypalconfig.py,sha256=b4nKYXESISixAHJJXzB8HK05tPMWOGk2x4yHR4td-I4,1083
+reahl/paypalsupport/paypallibrary.py,sha256=gxTjngs9OUFACR3YvQLhRi2rgwGYIl8I6nNIKwL3mUM,1588
+reahl/paypalsupport/paypalsupport.py,sha256=qUV42Kulq3j9PesZPOgOZrLpbcyS_fC4Yjsa0EKVXsg,7718
+reahl/paypalsupport/reahl-paypalbuttonspanel.js,sha256=iFntMJQsOpkshHvuAoCFEO9Bu8DE_qmJ8VyUj2ViZgU,3821
+reahl_paypalsupport-6.0.1.dist-info/COPYING,sha256=3-_pb6T_yxOJA9MgZPiqqKKaXNWdi8R5z8iSTJiVuo0,868
+reahl_paypalsupport-6.0.1.dist-info/LICENSE,sha256=V8j_M8nAz8PvAOZQocyRDX7keai8UJ9skgmnwqETmdY,34520
+reahl_paypalsupport-6.0.1.dist-info/METADATA,sha256=6zZzxc5CAz7eTAyBjZKuCiRF1bd_56c8I8PRYfS9ty4,780
+reahl_paypalsupport-6.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+reahl_paypalsupport-6.0.1.dist-info/entry_points.txt,sha256=ZdpvCjtnGAIHZgcoYPRS9ie3LchGKS5E_3x2WCt67Kg,58
+reahl_paypalsupport-6.0.1.dist-info/namespace_packages.txt,sha256=CC5DsB4jFzo8VltcfFNLnYPT3gi9yPTzGWrxVOaSj3I,21
+reahl_paypalsupport-6.0.1.dist-info/reahl-component.toml,sha256=lzUGUHLR2wNpqatEdDAbX8JsRKMOjPO1KFEHTh3HNQg,512
+reahl_paypalsupport-6.0.1.dist-info/top_level.txt,sha256=8TSvX3zkwjowzR3fni-LjOO6uaec5DR2mI6gKRRQ5tw,6
+reahl_paypalsupport-6.0.1.dist-info/RECORD,,
