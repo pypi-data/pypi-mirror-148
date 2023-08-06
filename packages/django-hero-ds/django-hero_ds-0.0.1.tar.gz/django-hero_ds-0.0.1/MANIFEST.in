@@ -1,0 +1,4 @@
+include LICENSE
+include README.rst
+recursive-include hero/static *
+recursive-include hero/templates *
