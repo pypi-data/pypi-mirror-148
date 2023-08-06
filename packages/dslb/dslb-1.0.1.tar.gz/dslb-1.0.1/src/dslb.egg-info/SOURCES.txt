@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/dslb/__init__.py
+src/dslb/__main__.py
+src/dslb/rsyncy_modded.py
+src/dslb.egg-info/PKG-INFO
+src/dslb.egg-info/SOURCES.txt
+src/dslb.egg-info/dependency_links.txt
+src/dslb.egg-info/top_level.txt
