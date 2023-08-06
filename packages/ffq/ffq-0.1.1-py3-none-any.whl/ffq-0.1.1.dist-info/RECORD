@@ -1,0 +1,11 @@
+ffq/__init__.py,sha256=ls1camlIoMxEZz9gSkZ1OJo-MXqHWwKPtdPbZJmwp7E,22
+ffq/config.py,sha256=DoAmddaFtwyHh5Ff6Hf9YxegGwsmXg3FCl1Zwrd9kVI,1195
+ffq/ffq.py,sha256=fPb0pBquSPJ_ebcQUY6TlZ5_ENqO0hAkvJycbimcEw4,25564
+ffq/main.py,sha256=tRNippcbhzZ0D02tw24ZbWFrAGlBxgnj856h2qxXoH8,10680
+ffq/utils.py,sha256=zTd1QlgwvzuwJUkw703XPlgLUWZ8S3NqI7YI7P0DCLM,29994
+ffq-0.1.1.dist-info/LICENSE,sha256=pKdKYjngVvfLn5Nq8Z2SzBfNViJoM71TCYTdkk0qtaM,1084
+ffq-0.1.1.dist-info/METADATA,sha256=Z_5OKzqTRBcPTgNGqAVfUO2SGRyYiZCSdT5ak72DyYY,9749
+ffq-0.1.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+ffq-0.1.1.dist-info/entry_points.txt,sha256=hDVwVQBZpV_dIY-VB4Faq4ySDcfeHKGITa28ZhdbI0M,39
+ffq-0.1.1.dist-info/top_level.txt,sha256=RTdgbT99aFBhEH5qiDsfi8F0gC2VElca1_LB1-quESw,4
+ffq-0.1.1.dist-info/RECORD,,
