@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+datadog_log.egg-info/PKG-INFO
+datadog_log.egg-info/SOURCES.txt
+datadog_log.egg-info/dependency_links.txt
+datadog_log.egg-info/requires.txt
+datadog_log.egg-info/top_level.txt
+datadoglog/__init__.py
+datadoglog/formatter.py
+datadoglog/init.py
+datadoglog/trace_details.py
