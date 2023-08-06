@@ -1,0 +1,12 @@
+cli_tarot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cli_tarot/__main__.py,sha256=rkjc0xe0u60O5qHy6ymhLL-mXKROdhFAhbFbH-bmtVw,11649
+cli_tarot/ascii_art.py,sha256=wrjLxv36vpQJTe9_JKVtAa6_gpguJXCE33y_BL4UqzY,587982
+cli_tarot/card_directory.py,sha256=XWtex_wfH1IaQNqfqLN6Zq9foBKe44l2_2oX62oWIUI,6235
+cli_tarot/card_meanings.py,sha256=aYpGnTWT_rqICC89uyR4jRUnLBO6_N7pTm3UGThgYrw,7257
+cli_tarot/constants.py,sha256=EW51ydyX4pcxiVONUAjfBiHHx2uMFF2eXvLFZUxbA44,49
+cli_tarot-0.1.1.dist-info/LICENSE.md,sha256=ua2GBLZ4_0iEWAZizkQzfyvqzKc2_V_3vq5ofS0cA_M,1073
+cli_tarot-0.1.1.dist-info/METADATA,sha256=3DzQqmFF-IA7Zqy5K0nrz2h1Z79KR532WlW06NfS4fE,10402
+cli_tarot-0.1.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+cli_tarot-0.1.1.dist-info/entry_points.txt,sha256=p5SPlKg_QaGKk0wtwFNb_ODYdmlgoxTu1m7UyYSCDD4,54
+cli_tarot-0.1.1.dist-info/top_level.txt,sha256=dI_UiU1MWkCNFuHvwapAcE_3V8RAEVwaVLKlbznD_cI,10
+cli_tarot-0.1.1.dist-info/RECORD,,
