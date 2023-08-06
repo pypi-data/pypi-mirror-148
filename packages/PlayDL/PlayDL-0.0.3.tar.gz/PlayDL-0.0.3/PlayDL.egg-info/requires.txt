@@ -1,0 +1,6 @@
+torch
+torchvision
+functools
+numpy
+PIL
+opencv-python
