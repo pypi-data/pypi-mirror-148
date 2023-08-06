@@ -1,0 +1,8 @@
+README.rst
+setup.cfg
+setup.py
+src/drlab_minilib.egg-info/PKG-INFO
+src/drlab_minilib.egg-info/SOURCES.txt
+src/drlab_minilib.egg-info/dependency_links.txt
+src/drlab_minilib.egg-info/requires.txt
+src/drlab_minilib.egg-info/top_level.txt
