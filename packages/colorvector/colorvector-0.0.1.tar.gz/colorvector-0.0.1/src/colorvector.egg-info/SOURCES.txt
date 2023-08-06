@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/colorvector.egg-info/PKG-INFO
+src/colorvector.egg-info/SOURCES.txt
+src/colorvector.egg-info/dependency_links.txt
+src/colorvector.egg-info/top_level.txt
