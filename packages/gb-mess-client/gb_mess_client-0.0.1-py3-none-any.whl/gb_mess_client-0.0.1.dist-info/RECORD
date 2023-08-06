@@ -1,0 +1,12 @@
+client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+client/client_1.py,sha256=PFdldGFxwJLE1zyGOgEU0Cu4jtqXwh53Ov_K9msmAkE,9512
+client/encryption.py,sha256=x7gqU4lc3YlDeZ-LvW3JyPRZlT4E8BQgYCpHtdANRSo,2674
+client/services/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+client/services/actions.py,sha256=2bBAqfjEEpKKAIp47p3f7FblrDspO6nROVBZgx3c1Xc,696
+client/services/status_code.py,sha256=hcCllRzNTrIBWkVYCAuvlpJV7Anelv8etn-r34Y4-0c,1274
+client/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+client/test/test_client.py,sha256=hLc5wRQ_y5O__5DL2PCO5EMMk6uFuCnmZYx1nyG_wKE,1454
+gb_mess_client-0.0.1.dist-info/METADATA,sha256=NODRgkdKBTPCUuBvbFccexkPcInaS9mDz4yBl0DvHCM,333
+gb_mess_client-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+gb_mess_client-0.0.1.dist-info/top_level.txt,sha256=DJiuN0ty6vOMYewH87cxtQ0LWVaJpE0bZ1Blm0e3RCE,7
+gb_mess_client-0.0.1.dist-info/RECORD,,
