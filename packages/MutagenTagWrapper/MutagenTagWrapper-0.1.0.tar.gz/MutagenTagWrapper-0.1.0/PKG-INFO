@@ -1,0 +1,100 @@
+Metadata-Version: 2.1
+Name: MutagenTagWrapper
+Version: 0.1.0
+Summary: 为各种多媒体标签格式提供统一的编辑接口
+Home-page: https://github.com/nukemiko/MutagenTagWrapper
+License: MIT
+Project-URL: Documentation, https://github.com/nukemiko/MutagenTagWrapper
+Project-URL: Source, https://github.com/nukemiko/MutagenTagWrapper
+Project-URL: Releases, https://github.com/nukemiko/MutagenTagWrapper/releases
+Project-URL: Issues, https://github.com/nukemiko/MutagenTagWrapper/issues
+Platform: Any
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# MutagenTagWrapper
+
+本模块是 Python 模块 Mutagen 的一个包装器，旨在减少批量处理多媒体标签时的时间成本和出错概率。
+
+## 如何使用
+
+### 读取标签信息
+
+```python
+#!/usr/bin/env python3
+from tagwrapper import openfile
+from tagwrapper.common import TagWrapper
+
+filenames = ['1.flac', '2.ogg', '3.mp3']
+
+for i in filenames:
+    tag = openfile(i)
+    print(f"{i}：", end='')
+    if isinstance(tag, TagWrapper):  # 通过属性访问对应的标签信息
+        print(f"标题：{tag.title}，", end='')
+        print(f"歌手：{tag.artist}，", end='')
+        print(f"专辑：{tag.album}，", end='')
+        print(f"封面信息：{tag.cover}")
+
+        # 通过属性修改对应的标签信息
+        tag.title = f'{i}.title'
+        tag.artist = f'{i}.artist'
+        tag.album = f'{i}.album'
+
+        print(f"修改为：", end='')
+        print(f"标题：{tag.title}，", end='')
+        print(f"歌手：{tag.artist}，", end='')
+        print(f"专辑：{tag.album}，", end='')
+        print(f"封面信息：{tag.cover}")
+
+        # 保存对标签进行的修改
+        tag.save()
+        print("已保存修改。")
+    else:
+        print()
+
+# 为没有封面的歌曲添加封面并保存
+with open('2.png', 'rb') as f:
+    cover_data = f.read()
+tag_ogg = openfile('2.ogg')
+if isinstance(tag_ogg, TagWrapper):
+    tag_ogg.cover = cover_data
+    print(f'封面已修改：{tag_ogg.filething}')
+    tag_ogg.save()
+    print("已保存修改。")
+
+# 从其他歌曲复制标签信息
+tag_ape = openfile('4.ape')
+tag_flac = openfile('5.flac')
+if isinstance(tag_ape, TagWrapper) and isinstance(tag_flac, TagWrapper):
+    tag_ape.load_tag(tag_flac)
+    print(f"标签信息已复制：{tag_flac.filething} -> {tag_ape.filething}")
+    tag_ape.save()
+    print("已保存修改。")
+```
+
+输出：
+
+```sh-session
+1.flac：标题：['百火撩乱']，歌手：['Kalafina']，专辑：['百火撩乱']，封面信息：<Picture 'image/png' (1494031 bytes)>
+修改为：标题：['1.flac.title']，歌手：['1.flac.artist']，专辑：['1.flac.album']，封面信息：<Picture 'image/png' (1494031 bytes)>
+已保存修改。
+2.ogg：标题：['荒野流転']，歌手：['FictionJunction']，专辑：['荒野流転']，封面信息：None
+修改为：标题：['2.ogg.title']，歌手：['2.ogg.artist']，专辑：['2.ogg.album']，封面信息：None
+已保存修改。
+3.mp3：标题：['High jump love']，歌手：['綾倉盟', 'Syrufit']，专辑：['over']，封面信息：<Picture 'image/png' (462341 bytes)>
+修改为：标题：['3.mp3.title']，歌手：['3.mp3.artist']，专辑：['3.mp3.album']，封面信息：<Picture 'image/png' (462341 bytes)>
+已保存修改。
+封面已修改：2.ogg
+已保存修改。
+标签信息已复制：5.flac -> 4.ape
+已保存修改。
+```
+
+
