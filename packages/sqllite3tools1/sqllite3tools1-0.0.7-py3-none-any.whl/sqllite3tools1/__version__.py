@@ -1,0 +1,6 @@
+__title__ = "sqllite3tools1"
+__description__ = "sqllite3tools1 a simple library that connects to a database."
+__version__ = "0.0.7"
+__author__ = "SanjarbekDev"
+__author_email__ = "sanjarbeksodiqov0302@gmail.com"
+__copyright__ = "Copyright 2022 SanjarbekDev"
