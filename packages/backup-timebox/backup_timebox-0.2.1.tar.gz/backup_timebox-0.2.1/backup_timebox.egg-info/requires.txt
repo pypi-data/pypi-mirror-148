@@ -1,0 +1,13 @@
+pydantic>=1.0
+blessings>=1.7
+requests>=2.13
+typing_extensions
+python-dotenv
+pyyaml
+freezegun
+pydantic>=1.0
+
+[dev]
+pytest>=7.0
+pre-commit>=2.0
+jinja2

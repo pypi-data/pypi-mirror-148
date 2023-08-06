@@ -1,0 +1,27 @@
+repos:
+-   repo: https://github.com/psf/black
+    rev: 22.1.0
+    hooks:
+    -   id: black
+        args: [--config=pyproject.toml]
+-   repo: https://github.com/hadialqattan/pycln
+    rev: v1.2.4 
+    hooks:
+    -   id: pycln
+        args: [--config=pyproject.toml]
+-   repo: https://github.com/pycqa/isort
+    rev: 5.10.1
+    hooks:
+    -   id: isort
+        files: "\\.(py)$"
+        args: [--settings-path=pyproject.toml]
+- repo: local
+  hooks:
+    - id: providers_doc
+      name: providers_doc
+      entry: bash -c "diff -B docs/providers.md <(python scripts/generate_documentation.py providers)"
+      language: system
+    - id: main_doc
+      name: main_doc
+      entry: bash -c "diff -B docs/main.md <(python scripts/generate_documentation.py main)"
+      language: system

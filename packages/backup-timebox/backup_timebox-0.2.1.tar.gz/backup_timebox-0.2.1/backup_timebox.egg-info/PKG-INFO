@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: backup-timebox
+Version: 0.2.1
+Summary: Backup manager
+Author: Mathias Millet <mathias.millet@mailden.eu>
+License: GNU General Public License v3.0
+Keywords: ["backup"]
+Platform: UNKNOWN
+Classifier: Topic :: System :: Archiving :: Backup
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Provides-Extra: dev
+
+UNKNOWN
+
