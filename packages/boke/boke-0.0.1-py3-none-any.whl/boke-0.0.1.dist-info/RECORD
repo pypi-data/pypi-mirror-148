@@ -1,0 +1,13 @@
+boke/__init__.py,sha256=rmN0jniZCQijPvpCAUZDD8VQyXSktRpFTBtu7fwyE3A,184
+boke/db.py,sha256=F9aSR1VMUSdT2CZq-R8OoNzg0HQXMG8zP7rfSkxKFk0,7247
+boke/generate.py,sha256=tmZqPAgWSgZkoYn6rjyfi-DLcu7G_J00vMYbTa0yWJQ,6409
+boke/gui.py,sha256=28rhwG8kULSnGoSqck5wuQXQD0MTNdAXkV_giYALUeo,25319
+boke/main.py,sha256=LnoAwrDl5_4FGZNURZvcyY7nPlVarTf-A8H3pfzxh5g,6643
+boke/model.py,sha256=FbQkIQ4_Ov9mrq7r2LTPzf7unEdjVI9eyHBdSCRPBoI,6941
+boke/stmt.py,sha256=x4xnB0QX-sm5IqvplmRqefUm-20-zGTCeryqMjkWrhE,4429
+boke/util.py,sha256=aCB51Hp4pN4EqCdWOpIxBc8oYvZerdu6srFrzbD_u7g,5785
+boke-0.0.1.dist-info/entry_points.txt,sha256=sNiq6WdYC2RoYsaLdzZJHmpNgBS2rUqzfvpstInQfZU,38
+boke-0.0.1.dist-info/LICENSE,sha256=t0s7Q4TXX-LTveczgg_WIEFYcjVSc0wOvOst4N65PEU,1086
+boke-0.0.1.dist-info/WHEEL,sha256=4TfKIB_xu-04bc2iKz6_zFt-gEFEEDU_31HGhqzOCE8,81
+boke-0.0.1.dist-info/METADATA,sha256=DdfmCCNKb_lPAjhVVDHkWkQJgLkViN4xbZjoZkb1Zgg,563
+boke-0.0.1.dist-info/RECORD,,

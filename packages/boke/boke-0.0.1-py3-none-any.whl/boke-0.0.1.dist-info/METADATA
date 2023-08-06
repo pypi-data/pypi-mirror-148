@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: boke
+Version: 0.0.1
+Summary: boke: Static blog generator. (尽可能简单的静态博客生成器)
+Author-email: ahui <102419@gmail.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: arrow
+Requires-Dist: click
+Requires-Dist: appdirs
+Requires-Dist: result
+Requires-Dist: Jinja2
+Requires-Dist: pyside6
+Requires-Dist: mistune
+Project-URL: Home, https://github.com/ahui2016/boke
+
+# boke
+
+Static blog generator. (尽可能简单的静态博客生成器)
+
