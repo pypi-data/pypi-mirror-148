@@ -1,0 +1,16 @@
+kaniko_remote/__init__.py,sha256=FwBOYrkD4W7OW9tY3XmDpaqlw8IVtWaoHVk0wbE6vQ4,58
+kaniko_remote/_version.py,sha256=Ubzf_st1zImZv38B_Be7Nb-tysfNE2z4o7DjCcasihk,142
+kaniko_remote/authorisers.py,sha256=hedHQ3qjfa-7kyK72QmbektKUNdnihb0sodjqxrvTi4,6699
+kaniko_remote/builder.py,sha256=zTx6-tehDR-1U_dVTCzyL4fhbGfM7NobREKHoPrmwa8,4668
+kaniko_remote/config.py,sha256=FdhGFv1jlBEyKdNwrVML_mK3UdopBxUahMJPLBjXH-U,2995
+kaniko_remote/logging.py,sha256=SREci_Bg8fAoq3vc3MhQeNLQkpLMt6kgfwdSoUIDLM4,1145
+kaniko_remote/main.py,sha256=tTWTbhZRF9IxGOOU5W9BaEvw1iYe_gURmZWeaIJYEP0,3738
+kaniko_remote/k8s/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kaniko_remote/k8s/k8s.py,sha256=R80S4uWaQN_uET0T4oUW95x_qUAHzxLzS4olx8Q83SA,5875
+kaniko_remote/k8s/specs.py,sha256=6AccowOhXNDL_T4aWaghj_92wlnNdlfXnO9ddJNQ1GE,6069
+kaniko_remote-0.2.2.dist-info/LICENSE,sha256=EYHB0S0Sh_i_irk6Fu5sSTfIvtT4u4W0tm3U9sAgc3M,1070
+kaniko_remote-0.2.2.dist-info/METADATA,sha256=pwGQDLSqPrY612zSsBc0_FSxefj2X6deUc-SJZ78kt0,1864
+kaniko_remote-0.2.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+kaniko_remote-0.2.2.dist-info/entry_points.txt,sha256=RJBQgFl41sjRZhppptmwCrNVWwWXQR5YiQqCehkl9LQ,57
+kaniko_remote-0.2.2.dist-info/top_level.txt,sha256=TNw-7gwkCOBdRyM4_LV7eMqGvfmhoTQY_3iCvUDgw_k,14
+kaniko_remote-0.2.2.dist-info/RECORD,,
