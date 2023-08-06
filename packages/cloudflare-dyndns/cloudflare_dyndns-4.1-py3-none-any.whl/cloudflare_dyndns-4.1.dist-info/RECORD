@@ -1,0 +1,12 @@
+cloudflare_dyndns/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cloudflare_dyndns/cache.py,sha256=-CuYUMrmdTSsi4sfgeCTD-cjIe_Anwakn89B_CS5nQ4,2008
+cloudflare_dyndns/cli.py,sha256=lsRy81Jh3uOHXJUYHLqJpAGjpllMNHkKSO2mtphE_yg,9141
+cloudflare_dyndns/cloudflare.py,sha256=_kYKtIovIRuuPUmtcQfQ_qKg7sDJqlj4bBAapUc2tX8,3430
+cloudflare_dyndns/ip_services.py,sha256=Q4wV_lb5RFUWjT374Xfhx2LkwSSQcJyBfOkbQ0MZrws,4088
+cloudflare_dyndns/printer.py,sha256=g5SyEDcN-5ysjx3F-EBUyDWy-kuvcq9rZ_EQBc7SxXg,206
+cloudflare_dyndns/types.py,sha256=FTcTSN4xcPNa_cSZwXHBOdnUKhmGQYSgwWf1XrodxwI,292
+cloudflare_dyndns-4.1.dist-info/entry_points.txt,sha256=FLFhgvaskF-Qo_C9h5AOIJv0_a_5YcXLsASLYcE85Cc,64
+cloudflare_dyndns-4.1.dist-info/LICENSE,sha256=tEFzDJqSU3ww8nW4vA_ku3V8LGNXu5PEXZMGDZ4t624,1070
+cloudflare_dyndns-4.1.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+cloudflare_dyndns-4.1.dist-info/METADATA,sha256=oT4kbBUnaC2KvirBJp0S3AmYHZ8WdCBpFcW-bY2eDJo,5972
+cloudflare_dyndns-4.1.dist-info/RECORD,,
