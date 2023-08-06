@@ -1,0 +1,13 @@
+asciireqs/__init__.py,sha256=C9_0wvasm_sY1LzNEoFhwTWVJwyjOPI4PMYM0ijP9s0,88
+asciireqs/asciireq.py,sha256=UkFwx-o0oKt8kq_-y1-J8n5gbnOx3zOr8aYnv0QSu9M,1792
+asciireqs/asciireqexport.py,sha256=SrLMFC8ZhxphYsPBHVoNCdIbIpptrCx5TIogQpxpg9Y,2628
+asciireqs/docparser.py,sha256=3EDZZmrB0oijP87NNTf2Am5hZu3TEIGdJfVCcemiFD0,9883
+asciireqs/fields.py,sha256=rtDXmOFMBbKhqXYJ4yQzfIZbibAgFCV8sUWB-uG16hg,142
+asciireqs/reporting.py,sha256=3bJdu215CDR08tJWgFQEqfO0d5lwpTUnus0l7odiQJ4,12311
+asciireqs/reqdocument.py,sha256=hSPQoKDfE7858JkaU8YyXiNS-jyjuUaSmJPhl8tgCek,3077
+asciireqs-0.0.4.dist-info/LICENSE,sha256=rgMLSkF5wgSRc4GyH-tMelI37_qmKI9KILRydIL2lj0,1068
+asciireqs-0.0.4.dist-info/METADATA,sha256=l5R0SZEv9iUqgnW_JgMUZu2ClEfO91qWtaXYjIXwWg4,2591
+asciireqs-0.0.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+asciireqs-0.0.4.dist-info/entry_points.txt,sha256=RLIuEWLzBrjwKnl_joWj9csdb3kw17UM2caaYZ8rL3Q,100
+asciireqs-0.0.4.dist-info/top_level.txt,sha256=FmuZQWp9UNytfswbFARahk1GVQS-De4WzlIbo2CpyCA,10
+asciireqs-0.0.4.dist-info/RECORD,,
