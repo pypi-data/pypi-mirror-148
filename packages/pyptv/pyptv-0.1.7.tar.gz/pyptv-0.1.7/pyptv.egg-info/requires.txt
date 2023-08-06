@@ -1,0 +1,9 @@
+chaco
+enable
+numpy
+optv
+PyQt5
+scikit-image
+Pygments
+six
+imagecodecs

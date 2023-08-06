@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pyptv
+Version: 0.1.7
+Summary: Python GUI for the OpenPTV library `liboptv`
+Home-page: https://github.com/alexlib/pyptv
+Author: Alex Liberzon
+Author-email: alex.liberzon@gmail.com
+License: UNKNOWN
+Keywords: pyptv
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE.txt
+
+UNKNOWN
+
