@@ -1,0 +1,12 @@
+from setuptools import setup, find_packages
+
+setup(
+    name='envoiSMS',
+    version='1.0',
+    description='envoi un sms sur mon portable',
+    url='https://twitter.com/david_cobac',
+    author='David COBAC',
+    author_email='david.cobac@gmail.com',
+    license='CC-BY-NC-SA',
+    packages=find_packages()
+)

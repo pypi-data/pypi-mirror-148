@@ -1,0 +1,35 @@
+#!/usr/bin/python3
+__author__ = "David COBAC"
+__date__ = 20191230
+
+import motd
+import json
+import argparse
+
+
+parseur_args = argparse.ArgumentParser(
+    description="""Mathematicians Of The Day from website
+    http://mathshistory.st-andrews.ac.uk/Day_files/Year.html
+    not an official package""")
+
+parseur_args.add_argument('-d', '--day', help='DD/MM')
+parseur_args.add_argument('delta',
+                          nargs='?',
+                          default='+0')
+
+args = parseur_args.parse_args()
+
+m = motd.motd(args.day, args.delta)
+dico = json.loads(m.sortie())
+for k in dico:
+    # print(k)
+    for entree in dico[k]:
+        s = str(entree['year'])
+        s += " "
+        s += entree['event']
+        s += " "
+        s += entree['fname']
+        s += " "
+        s += entree['name']
+        #
+        print(s)
