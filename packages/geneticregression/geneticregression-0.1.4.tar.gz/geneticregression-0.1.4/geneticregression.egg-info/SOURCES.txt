@@ -1,0 +1,15 @@
+README.md
+setup.py
+datasets/__init__.py
+datasets/load.py
+geneticregression.egg-info/PKG-INFO
+geneticregression.egg-info/SOURCES.txt
+geneticregression.egg-info/dependency_links.txt
+geneticregression.egg-info/requires.txt
+geneticregression.egg-info/top_level.txt
+genreg/__init__.py
+genreg/basic_regfit.py
+genreg/genLogReg.py
+genreg/logistic_regfit.py
+genreg/preprocessor.py
+genreg/regressor.py
