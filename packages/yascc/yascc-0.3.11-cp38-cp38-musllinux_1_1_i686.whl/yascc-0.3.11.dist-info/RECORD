@@ -1,0 +1,12 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+_case.cpython-38-i386-linux-gnu.so,sha256=2VOqUmdLcxru0tirV_d3f-Zrfn3QGjd_L3xAYCYUxDs,35268
+yascc-0.3.11.dist-info/RECORD,,
+yascc-0.3.11.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+yascc-0.3.11.dist-info/METADATA,sha256=KtkYTASiYMAniNHYEJQYeHIW1HQq6u25nFbRu-LYIHY,1210
+yascc-0.3.11.dist-info/top_level.txt,sha256=K13m1ugr_ihoJxbznYkWhKQDVbYMnuO7zLuTMOWWZ8U,21
+yascc-0.3.11.dist-info/WHEEL,sha256=IPIP1vZcU5BlBdvpqbrPk7sEu0opMRWUbxrQPqOIJVA,109
+yascc/__init__.py,sha256=Z_QA9btWpxP16ny1WdGWIkq5kzjYFW_MCtjxv_6Aqk8,324
+yascc/camelcase.py,sha256=G3-V0DEhmx5e5cFTiE_7udKDtUZUdW-Djs_CmDOnRzk,308
+yascc/case.c,sha256=SlyWU3MytbsNpgkEcQa2Wx7jb5Q174iofP3NXr0TTNc,1729
+yascc/snakecase.py,sha256=ckWyfCMCTQFQGOnSDu_Sb-t3OWckzrAyWO-3nXkqVko,463
+yascc/common.py,sha256=ACz1_zPbUKipPP_Jy1c8Lp1yZpVvoB9bHMSus-P6A2o,611
