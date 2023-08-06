@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+tcs_sqlwhat2/State.py
+tcs_sqlwhat2/__init__.py
+tcs_sqlwhat2/sct_syntax.py
+tcs_sqlwhat2/test_exercise.py
+tcs_sqlwhat2.egg-info/PKG-INFO
+tcs_sqlwhat2.egg-info/SOURCES.txt
+tcs_sqlwhat2.egg-info/dependency_links.txt
+tcs_sqlwhat2.egg-info/requires.txt
+tcs_sqlwhat2.egg-info/top_level.txt
+tcs_sqlwhat2/checks/__init__.py
+tcs_sqlwhat2/checks/check_funcs.py
+tcs_sqlwhat2/checks/has_funcs.py
