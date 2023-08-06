@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: keepluggable
+Version: 0.11.0
+Summary: Manage storage of images and other files, with metadata.
+Home-page: https://github.com/nandoflorestan/keepluggable
+License: BSD
+Keywords: web,pyramid,images,store,thumbnails
+Author: Nando Florestan
+Author-email: nandoflorestan@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Pyramid
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Database
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI
+Classifier: Topic :: Multimedia :: Graphics :: Graphics Conversion
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: aws
+Requires-Dist: Pillow (>=8.0.0,<8.1.0)
+Requires-Dist: awscli (>=1.22.0,<1.23.0); extra == "aws"
+Requires-Dist: bag (>=5.0.0)
+Requires-Dist: boto3 (>=1.20.0,<1.21.0); extra == "aws"
+Requires-Dist: colander (>=1.0.0,<2.0.0)
+Requires-Dist: kerno (>=0.7.0)
+Requires-Dist: pillow-heif (>=0.1.0,<0.2.0)
+Requires-Dist: sqlalchemy
+Project-URL: Documentation, http://docs.nando.audio/keepluggable/latest/
+Project-URL: Repository, https://github.com/nandoflorestan/keepluggable
