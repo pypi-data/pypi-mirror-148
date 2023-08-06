@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/vecgl/__init__.py
+src/vecgl/kdtree.py
+src/vecgl/linalg.py
+src/vecgl/model.py
+src/vecgl/rendering.py
+src/vecgl.egg-info/PKG-INFO
+src/vecgl.egg-info/SOURCES.txt
+src/vecgl.egg-info/dependency_links.txt
+src/vecgl.egg-info/top_level.txt
+test/test_benchmark_rendering.py
+test/test_kdtree.py
+test/test_rendering.py
