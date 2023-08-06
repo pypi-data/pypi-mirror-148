@@ -1,0 +1,17 @@
+README.md
+setup.cfg
+setup.py
+ultimate_trimmer/__init__.py
+ultimate_trimmer/core.py
+ultimate_trimmer/logger.py
+ultimate_trimmer/option.py
+ultimate_trimmer/trim_info.py
+ultimate_trimmer/utils.py
+ultimate_trimmer.egg-info/PKG-INFO
+ultimate_trimmer.egg-info/SOURCES.txt
+ultimate_trimmer.egg-info/dependency_links.txt
+ultimate_trimmer.egg-info/entry_points.txt
+ultimate_trimmer.egg-info/requires.txt
+ultimate_trimmer.egg-info/top_level.txt
+ultimate_trimmer/commands/__init__.py
+ultimate_trimmer/commands/trim.py

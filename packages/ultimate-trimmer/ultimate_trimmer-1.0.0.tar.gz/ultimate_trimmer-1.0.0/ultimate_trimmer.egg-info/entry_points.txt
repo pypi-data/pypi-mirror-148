@@ -1,0 +1,3 @@
+[console_scripts]
+ultrim = ultimate_trimmer.commands.trim:ultrim
+
