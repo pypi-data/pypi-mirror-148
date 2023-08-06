@@ -1,0 +1,17 @@
+gilito/__init__.py,sha256=FNT7jfaFHUF94QZTpXCaC2RD_IL9uDRxAz8OWjruYdc,2967
+gilito/__main__.py,sha256=KLKA5PFE47avdkxOQMWsb6AJDYmwO0r8e4Ytp1Hue-s,953
+gilito/cli.py,sha256=0Fnvludtd2o0LT7JTu_Cyw2oNMYJMkl9czT-7bl2Sh8,2668
+gilito/models.py,sha256=26F1U8uou9MqRZPaOkmtVh_AaagEhoRGlMPdElrOGm0,1316
+gilito/typetools.py,sha256=LsSEYS6aM3Afwt46ZXEpaiei26VmVWg6EmNSFNbfw6Q,1216
+gilito/plugins/__init__.py,sha256=DEO7-_j_BzlChU1CJSempgbOQ4kYeO_pZO93INbOpC8,2085
+gilito/plugins/bbva.py,sha256=od1KQT3uxW4dADTl8sVZlDvKE8KaqNROguNDK_xxY6Y,3545
+gilito/plugins/categorize.py,sha256=nirbY2pGvXxMxdRsSLS6VXMr6QMiiSaLTaISYNEQJDA,1319
+gilito/plugins/csv.py,sha256=LlgKk14xpJZaNCh1VE_toF7OrVJwIN-GCJmcdm7kcT8,1531
+gilito/plugins/native.py,sha256=DifyQodokBfrr7OX6KlRoH3NP7cwPZ9fbeARGADKJGA,1511
+gilito/plugins/xlsx.py,sha256=kXlFv7AVFuYqRB0DuABUKEIx2_QpUXLabxNgRIKQHy0,1844
+gilito-0.0.1.dist-info/LICENSE,sha256=5X8cMguM-HmKfS_4Om-eBqM6A1hfbgZf6pfx2G24QFI,35150
+gilito-0.0.1.dist-info/METADATA,sha256=Q5fGXWs_UBgfzmsnxBWqZTqu6sTfzO67_iM47oJmT2k,1284
+gilito-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+gilito-0.0.1.dist-info/entry_points.txt,sha256=UfFaZyI3CwC88U8F4sVdB5QN_WXktr-HEPv_ZoTUb10,43
+gilito-0.0.1.dist-info/top_level.txt,sha256=x8A9vhNSNpI8tgW7dpWjrBvGfkmQD41ZNIgGCJ8tiU4,7
+gilito-0.0.1.dist-info/RECORD,,
