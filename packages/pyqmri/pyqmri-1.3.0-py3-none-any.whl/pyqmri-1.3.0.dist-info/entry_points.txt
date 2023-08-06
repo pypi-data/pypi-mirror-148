@@ -1,0 +1,4 @@
+[console_scripts]
+pyqmri = pyqmri.pyqmri:run
+softsense = pyqmri.softsense:run
+
