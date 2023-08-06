@@ -1,0 +1,3 @@
+[pytest11]
+pytest-kexi=pytest_kexi.helper
+
