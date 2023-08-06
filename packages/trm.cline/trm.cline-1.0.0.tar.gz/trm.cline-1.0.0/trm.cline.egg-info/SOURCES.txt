@@ -1,0 +1,9 @@
+.gitignore
+LICENSE.txt
+README.rst
+setup.py
+trm.cline.egg-info/PKG-INFO
+trm.cline.egg-info/SOURCES.txt
+trm.cline.egg-info/dependency_links.txt
+trm.cline.egg-info/top_level.txt
+trm/cline/__init__.py
