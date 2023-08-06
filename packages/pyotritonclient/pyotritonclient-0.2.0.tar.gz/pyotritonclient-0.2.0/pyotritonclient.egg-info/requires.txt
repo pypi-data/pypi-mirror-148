@@ -1,0 +1,8 @@
+six
+numpy
+imjoy-rpc>=0.5.7
+msgpack
+
+[:platform_system != "Emscripten"]
+requests
+python-rapidjson>=0.9.1
