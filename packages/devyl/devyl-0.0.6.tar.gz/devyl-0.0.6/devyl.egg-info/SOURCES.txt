@@ -1,0 +1,12 @@
+LICENSE.txt
+MANIFEST.in
+README.txt
+pyproject.toml
+setup.py
+devyl/__init__.py
+devyl/evaluate.py
+devyl.egg-info/PKG-INFO
+devyl.egg-info/SOURCES.txt
+devyl.egg-info/dependency_links.txt
+devyl.egg-info/requires.txt
+devyl.egg-info/top_level.txt

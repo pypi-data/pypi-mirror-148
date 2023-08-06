@@ -1,0 +1,2 @@
+global-included *.txt *.py
+include devyl/*.py
