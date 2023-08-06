@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+media/__init__.py
+media/run.py
+media/voice.py
+media.egg-info/PKG-INFO
+media.egg-info/SOURCES.txt
+media.egg-info/dependency_links.txt
+media.egg-info/entry_points.txt
+media.egg-info/requires.txt
+media.egg-info/top_level.txt
