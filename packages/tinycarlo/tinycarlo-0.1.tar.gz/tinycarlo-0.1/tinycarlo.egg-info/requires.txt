@@ -1,0 +1,4 @@
+gym>=0.21.0
+numpy>=1.22.0
+opencv-python>=4.5.5.62
+setuptools>=60.3.1
