@@ -1,0 +1,16 @@
+AUTHORS
+LICENSE
+README.rst
+setup.cfg
+setup.py
+optionset/__init__.py
+optionset/optionset.py
+optionset.egg-info/PKG-INFO
+optionset.egg-info/SOURCES.txt
+optionset.egg-info/dependency_links.txt
+optionset.egg-info/entry_points.txt
+optionset.egg-info/requires.txt
+optionset.egg-info/top_level.txt
+tests/__init__.py
+tests/checkstyle.py
+tests/test_optionset.py
