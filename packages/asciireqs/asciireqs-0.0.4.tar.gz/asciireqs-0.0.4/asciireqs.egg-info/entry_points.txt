@@ -1,0 +1,3 @@
+[console_scripts]
+asciireq = asciireqs.asciireq:main
+asciireqexport = asciireqs.asciireqexport:main

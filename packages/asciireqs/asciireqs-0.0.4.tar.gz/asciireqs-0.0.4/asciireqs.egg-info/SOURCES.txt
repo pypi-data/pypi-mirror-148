@@ -1,0 +1,15 @@
+LICENSE
+setup.py
+asciireqs/__init__.py
+asciireqs/asciireq.py
+asciireqs/asciireqexport.py
+asciireqs/docparser.py
+asciireqs/fields.py
+asciireqs/reporting.py
+asciireqs/reqdocument.py
+asciireqs.egg-info/PKG-INFO
+asciireqs.egg-info/SOURCES.txt
+asciireqs.egg-info/dependency_links.txt
+asciireqs.egg-info/entry_points.txt
+asciireqs.egg-info/requires.txt
+asciireqs.egg-info/top_level.txt
