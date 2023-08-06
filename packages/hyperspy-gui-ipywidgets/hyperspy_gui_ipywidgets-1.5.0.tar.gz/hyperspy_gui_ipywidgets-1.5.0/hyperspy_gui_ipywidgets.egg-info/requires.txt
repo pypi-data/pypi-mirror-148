@@ -1,0 +1,10 @@
+hyperspy>=1.7
+ipywidgets>=7.0
+link_traits
+
+[coverage]
+pytest-cov
+codecov
+
+[tests]
+pytest
