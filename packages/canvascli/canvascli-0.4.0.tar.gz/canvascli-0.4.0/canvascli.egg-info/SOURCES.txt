@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+canvascli/__init__.py
+canvascli/__main__.py
+canvascli/_version.py
+canvascli/main.py
+canvascli.egg-info/PKG-INFO
+canvascli.egg-info/SOURCES.txt
+canvascli.egg-info/dependency_links.txt
+canvascli.egg-info/entry_points.txt
+canvascli.egg-info/requires.txt
+canvascli.egg-info/top_level.txt
