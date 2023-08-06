@@ -1,0 +1,10 @@
+README.md
+setup.py
+botCreate/__init__.py
+botCreate.egg-info/PKG-INFO
+botCreate.egg-info/SOURCES.txt
+botCreate.egg-info/dependency_links.txt
+botCreate.egg-info/requires.txt
+botCreate.egg-info/top_level.txt
+tests/__init__.py
+tests/test_botCreate.py
