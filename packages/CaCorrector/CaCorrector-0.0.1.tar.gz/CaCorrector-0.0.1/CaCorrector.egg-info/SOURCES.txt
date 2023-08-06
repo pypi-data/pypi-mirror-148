@@ -1,0 +1,10 @@
+README.md
+setup.py
+CaCorrector.egg-info/PKG-INFO
+CaCorrector.egg-info/SOURCES.txt
+CaCorrector.egg-info/dependency_links.txt
+CaCorrector.egg-info/requires.txt
+CaCorrector.egg-info/top_level.txt
+pun/__init__.py
+pun/dep.py
+pun/main.py
