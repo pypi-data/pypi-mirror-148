@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: hubs-predictor
+Version: 0.1.0
+Summary: Price predictions for 3DHubs
+Home-page: https://github.com/3DHubs/ml-engineer-assignment-bendangnuksung/tree/wip_assignment
+Author: bendangnuksung
+Author-email: bendangnuksungimsong@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# Price Prediction
+
+
+## Replicate / Reproduce Whole Process
+
+### Training Process
+* Pre-requirements:
+    1. Install conda: [link](https://docs.conda.io/en/latest/miniconda.html)
+    2. Install MLFlow:
+        ```bash
+        pip install mlflow
+        ```
+
+* Run Mlflow UI server to track the training experiments:
+    ```bash
+    cd train/
+    mlflow server --backend-store-uri ./mlruns/
+    ```
+
+* Train:
+    ```bash
+    # working dir: "ml-engineer-assignment-bendangnuksung/train/"
+
+    # modify "train/MLproject" file, update parameters such as:
+    # 'datapath' -> path to your data CSV file (important)
+    # 'kfolds'   -> N kfolds you want
+    # 'lr'       -> Set your own learning rate
+
+    # Run training 
+    mlflow run --experiment-name hubs_price_prediction .
+    ```
+
+### Deployment Process
+* Pre-requirements: 
+    1. Install Docker. [Link](https://docs.docker.com/engine/install/)
+    2. Install Docker Compose:
+        ```bash
+        pip install docker-compose
+        ```
+
+* Build and Start Docker:
+    ```bash
+    # working dir: "ml-engineer-assignment-bendangnuksung/"
+
+    # Modify "docker-compose.yml" if:
+    # 1. Wants to change PORT
+    # 2. Change the volumes if model stored in different directory. (Default is: "./train/models" because models are stored there after training) 
+
+    sudo docker-compose up
+    ```
+
+
+
