@@ -1,0 +1,99 @@
+Metadata-Version: 2.1
+Name: irholiday
+Version: 0.1.8
+Summary: Pandas Datafarme data from time.ir
+Home-page: https://github.com/hadi-gharibi/irholiday
+Author: hadi gharibi
+Author-email: hady.gharibi@gmail.com
+License: MIT license
+Keywords: irholiday
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: beautifulsoup4
+Requires-Dist: convert-numbers
+Requires-Dist: convertdate
+Requires-Dist: jdatetime
+Requires-Dist: pandas
+Requires-Dist: requests
+Requires-Dist: umalqurra
+
+=========
+irholiday
+=========
+
+
+.. image:: https://img.shields.io/pypi/v/irholiday.svg
+        :target: https://pypi.python.org/pypi/irholiday
+
+.. image:: https://img.shields.io/travis/hadi-gharibi/irholiday.svg
+        :target: https://travis-ci.org/hadi-gharibi/irholiday
+
+.. image:: https://readthedocs.org/projects/irholiday/badge/?version=latest
+        :target: https://irholiday.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+
+
+
+Installation
+------------
+
+::
+
+    $ pip install irholiday
+
+to install from the latest source use following command
+
+::
+
+    $ pip install git+git://github.com/hadi-gharibi/irholiday.git
+
+
+Usage
+------
+
+Enter the start and end year!
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+that's all :D
+
+.. code:: python
+
+    from irholiday import irHoliday
+
+    # initialise the class
+    calendar = irHoliday()
+
+    # export data to dataframe
+    df = calendar.to_df(1388,1392)
+
+    # export data to csv
+    calendar.to_csv(1388,1392,'path/to/data')
+
+
+
+=======
+History
+=======
+
+0.1.8 (2011-06-21)
+------------------
+* Fix the request bug that returns just a month from time.ir
+* Fix the bug for duplicate holiday dates (ex: 13th Farvardin)
+* Use jdatetime as date convertor which is more updated
+
+0.1.0 (2018-06-06)
+------------------
+
+* First release on PyPI.
+
+
