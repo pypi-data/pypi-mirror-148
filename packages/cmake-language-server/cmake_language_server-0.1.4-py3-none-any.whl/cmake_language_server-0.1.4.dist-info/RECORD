@@ -1,0 +1,10 @@
+cmake_language_server/__init__.py,sha256=6bV_nsPP-4FipN-Be3FLg_091mtybitPVgRGMse9eY4,167
+cmake_language_server/api.py,sha256=ZBWe4hn6yGP2sld4wNIGzAsH9CGhBr04k8E_ZBDfDOU,11760
+cmake_language_server/formatter.py,sha256=Jh09BSoGiW_XtcpMIVqgMv5QA0wX3lBfrMd4YmlCaoU,5217
+cmake_language_server/parser.py,sha256=BqYNu1TSmyBkYSdDnNA6I9HhzFwtGxbnr4I_emErSBg,2461
+cmake_language_server/server.py,sha256=69CrbnBWF4JjRzvXBaIE427IWx1Ua678u_DT1IO7z7U,8899
+cmake_language_server-0.1.4.dist-info/entry_points.txt,sha256=sENU3IL3KaE0ZPPzYGE6K8TvU7AsqGF4yx2t4_xXGc4,75
+cmake_language_server-0.1.4.dist-info/LICENSE,sha256=ylyjlEqIDjavpxDblSoAKgNnMhTAR_uTdiO16Iv6dHM,1062
+cmake_language_server-0.1.4.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+cmake_language_server-0.1.4.dist-info/METADATA,sha256=FsWqCHIyzE7SRnN3d-Uf3eGtOp3pRAbiwWLV33-mv38,3551
+cmake_language_server-0.1.4.dist-info/RECORD,,
