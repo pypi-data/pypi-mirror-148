@@ -1,0 +1,15 @@
+dfelf/__init__.py,sha256=O7r5peO9ujBZZVfa3exQX3-mU6f8V2ME6KEtsfexAN4,146
+dfelf/commons.py,sha256=GtPrVB4awuZI_QbKTgW15XZFDteFxkDTaWkxA5KdJW0,3700
+dfelf/cvsfileelf.py,sha256=BJ9jp5-rdHEp0BNxyI1mIdBWygQfNhQXRFQaMjmwJl8,22003
+dfelf/datafileelf.py,sha256=VrxbCGATgKvZxiddkRUYkhy99e9zJJ9A35Tpb5MSRtg,2698
+dfelf/imagefileelf.py,sha256=P84ugvw6qgs6SdXwfVvJCZi3-sCQbETZJP-D1HvVvZc,26083
+dfelf/pdffileelf.py,sha256=gUmRmwyMGABW9Ru3srQNPo_ft1bFQ2nb51dnLDLFU5o,12212
+dfelf/res/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dfelf/res/Noto_Sans_SC/NotoSansSC-Regular.otf,sha256=ork-bC2wXWu79vJ9QT7HMmlzW3tnkBnIpaqWcP8P-_I,8482020
+dfelf/res/Noto_Sans_SC/OFL.txt,sha256=hXyc_pnamxyzEyNIhdCQn002VFQQu25ta5RDQNEzHZE,4444
+dfelf/res/Noto_Sans_SC/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dfelf-0.1.5.dist-info/LICENSE,sha256=h1e8DPh-OUUfenwpKq4Bh-0XzzCQPuI-4iVaenYLRiU,1064
+dfelf-0.1.5.dist-info/METADATA,sha256=pqaOoZn0CojY0-TS7mjxreWiJ9L1PpgQjFIONe8sirY,11980
+dfelf-0.1.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+dfelf-0.1.5.dist-info/top_level.txt,sha256=pkth8GNfn__jecrSEkrFYbzPFwyEOSw-ZPHKDlt4iJ4,6
+dfelf-0.1.5.dist-info/RECORD,,
