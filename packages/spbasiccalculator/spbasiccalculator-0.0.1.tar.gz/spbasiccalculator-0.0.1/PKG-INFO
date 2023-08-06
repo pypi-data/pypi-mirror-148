@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: spbasiccalculator
+Version: 0.0.1
+Summary: a very basic addition function
+Home-page: https://github.com/saurabhpl/demo
+Author: Saurabh Pratap Singh
+License: MIT
+Platform: UNKNOWN
+License-File: LICENCE.txt
+
+This is a library to add sum of two numbers.Input taking from user and adding both then returning the sum.
+
+Change Log
+==========
+
+0.0.1 (26/04/2022)
+-------------------
+- First Release
+

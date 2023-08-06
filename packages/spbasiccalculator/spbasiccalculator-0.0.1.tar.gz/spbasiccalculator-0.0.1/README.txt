@@ -1,0 +1,1 @@
+This is a library to add sum of two numbers.Input taking from user and adding both then returning the sum.

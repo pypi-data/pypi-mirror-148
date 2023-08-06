@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+spbasiccalculator/__init__.py
+spbasiccalculator.egg-info/PKG-INFO
+spbasiccalculator.egg-info/SOURCES.txt
+spbasiccalculator.egg-info/dependency_links.txt
+spbasiccalculator.egg-info/top_level.txt
