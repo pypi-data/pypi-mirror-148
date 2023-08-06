@@ -1,0 +1,4 @@
+#!python
+
+from jsonboard.main import main
+main()
