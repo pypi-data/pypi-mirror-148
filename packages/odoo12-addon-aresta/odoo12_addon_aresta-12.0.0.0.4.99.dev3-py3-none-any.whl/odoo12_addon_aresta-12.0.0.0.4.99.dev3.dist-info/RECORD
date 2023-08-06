@@ -1,0 +1,15 @@
+odoo/addons/aresta/__init__.py,sha256=RYGen4VvN9c8GXvMfZMuO7ERiyRCUJfuAbgo0aC3DEU,42
+odoo/addons/aresta/__manifest__.py,sha256=zf-UIDzLsFcmdAAGsDSWVWRxuVIRdwoHvJEjawfH8Us,561
+odoo/addons/aresta/i18n/ca_ES.po,sha256=tXktR5WK9Z_nkhFnWcI8fUmsDQTvqayrgjMn9uca3-s,1046
+odoo/addons/aresta/i18n/es.po,sha256=PIOLSX7x5AhqU6A7QMMzPMRapT43YoluvG8wwF7VaW4,1049
+odoo/addons/aresta/models/__init__.py,sha256=LsPoCIAYodIFzh85VEjY5GiuzDQDQpiF38txDw10qT0,25
+odoo/addons/aresta/models/sale_order.py,sha256=MPW2DYUXRs6dN0eSMzBakNAo5f3oUs2TTBpfVb7e0OM,1162
+odoo/addons/aresta/report/__init__.py,sha256=ByYRbiCY7uWnvbKwYusgp99HtcOyGnzWogDif_GEsec,26
+odoo/addons/aresta/report/sale_report.py,sha256=5GiWFf7M1lKMvPc6KLqtMVWxVQ2NybSTXYIxk6VR1Zo,8205
+odoo/addons/aresta/report/stock_report_deliveryslip.xml,sha256=DyFRwUY7NmyRscBqGQOJjvuhO09NNeGgZkA7-TSdVVM,651
+odoo/addons/aresta/views/sale_order.xml,sha256=DTszDMUS0EjBFWKiurkINbUqiFmsY-hp60PG4eBm5d4,1042
+odoo/addons/aresta/views/sale_report.xml,sha256=5Ua_HuCtegqfGqyOazXq3bYMW0rcq11PkUue8moGrMU,619
+odoo12_addon_aresta-12.0.0.0.4.99.dev3.dist-info/METADATA,sha256=-zpXTUL74Z0biJm75LVL_h5aUafccjMQJTwamK-CJ1g,525
+odoo12_addon_aresta-12.0.0.0.4.99.dev3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+odoo12_addon_aresta-12.0.0.0.4.99.dev3.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo12_addon_aresta-12.0.0.0.4.99.dev3.dist-info/RECORD,,
