@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+src/windowblur/__init__.py
+src/windowblur/windowblur.py
+src/windowblur.egg-info/PKG-INFO
+src/windowblur.egg-info/SOURCES.txt
+src/windowblur.egg-info/dependency_links.txt
+src/windowblur.egg-info/top_level.txt
