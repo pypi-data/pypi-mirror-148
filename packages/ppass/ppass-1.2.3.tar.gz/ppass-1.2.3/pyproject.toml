@@ -1,0 +1,29 @@
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "ppass"
+version = "1.2.3"
+description = "GPG Password Manager"
+authors = ["Sebastien GUERRI <nierrgu@bmel.fr>"]
+license = "GPL-3.0"
+readme = "README.md"
+homepage = "https://github.com/sguerri/ppass"
+repository = "https://github.com/sguerri/ppass"
+packages = [
+    { include = "ppass" },
+    { include = "ppass/modules" },
+]
+
+[tool.poetry.dependencies]
+python = ">=3.6.2,<4.0"
+click = "^8.0.4"
+rich = "^11.2.0"
+pyclip = "^0.5.4"
+python-gnupg = "^0.4.8"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+ppass = "ppass:run"
