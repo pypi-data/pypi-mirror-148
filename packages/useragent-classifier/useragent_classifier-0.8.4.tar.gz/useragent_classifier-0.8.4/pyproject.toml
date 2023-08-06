@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "useragent_classifier"
+version = "0.8.4"
+description = ""
+authors = ["thibaultB <thibault.blanc@yahoo.fr>"]
+readme = "README.md"
+keywords = ["user-agent", "classification"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pandas = "^1.4.1"
+scikit-learn = "^1.0.2"
+click = "^8.0.4"
+plotly = "^5.6.0"
+dash = "^2.3.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+pytest-cov = "^3.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+useragent_classifier = 'useragent_classifier:main.ua_clustering'
