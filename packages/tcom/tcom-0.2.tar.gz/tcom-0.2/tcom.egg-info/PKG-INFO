@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: tcom
+Version: 0.2
+Summary: Replace your HTML templates with Python server-Side components
+Home-page: https://github.com/jpsca/tcom
+Author: Juan-Pablo Scaletti
+Author-email: juanpablo@jpscaletti.com
+License: MIT
+Project-URL: Home Page, https://jpsca.github.io/tcom/
+Project-URL: Documentation, https://jpsca.github.io/tcom/
+Project-URL: Issue Tracker, https://github.com/jpsca/tcom/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Text Processing :: Markup :: HTML
+Requires-Python: <4.0,>=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Provides-Extra: dev
+License-File: MIT-LICENSE
+
+# Template Components
+
+A library for creating reusable, testable & encapsulated component templates, to replace HTML spaguetti.
+
+## Installation
+
+```bash
+pip install tcom
+```
+
+
