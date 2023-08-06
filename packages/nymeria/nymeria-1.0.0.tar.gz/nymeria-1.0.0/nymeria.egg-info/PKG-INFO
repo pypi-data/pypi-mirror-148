@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: nymeria
+Version: 1.0.0
+Summary: Discover contact details such as phone numbers, email addresses and social links using Nymeria's service.
+Home-page: https://git.nymeria.io/nymeria.py
+Author: Nymeria, LLC
+Author-email: dev@nymeria.io
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
+License-File: LICENSE
+
+UNKNOWN
+
