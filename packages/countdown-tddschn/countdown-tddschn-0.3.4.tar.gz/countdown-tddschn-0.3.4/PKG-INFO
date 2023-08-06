@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: countdown-tddschn
+Version: 0.3.4
+Summary: 
+Home-page: https://github.com/tddschn/countdown-tddschn
+License: MIT
+Keywords: git,asyncio
+Author: Xinyuan Chen
+Author-email: 45612704+tddschn@users.noreply.github.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: pync (>=2.0.3,<3.0.0)
+Requires-Dist: python-daemon (>=2.3.0,<3.0.0)
+Requires-Dist: typer (>=0.4.1,<0.5.0)
+Project-URL: Bug Tracker, https://github.com/tddschn/countdown-tddschn/issues
+Project-URL: Repository, https://github.com/tddschn/countdown-tddschn
+Description-Content-Type: text/markdown
+
+
