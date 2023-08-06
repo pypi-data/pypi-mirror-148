@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+mathematics/__init__.py
+mathematics/function.py
+mathematics/grow_lists.py
+mathematics/hold_list.py
+mathematics/lists.py
+mathematics.egg-info/PKG-INFO
+mathematics.egg-info/SOURCES.txt
+mathematics.egg-info/dependency_links.txt
+mathematics.egg-info/top_level.txt
