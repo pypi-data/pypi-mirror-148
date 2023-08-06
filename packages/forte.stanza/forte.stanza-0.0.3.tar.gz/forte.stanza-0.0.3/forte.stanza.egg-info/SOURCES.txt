@@ -1,0 +1,10 @@
+README.md
+setup.py
+forte.stanza.egg-info/PKG-INFO
+forte.stanza.egg-info/SOURCES.txt
+forte.stanza.egg-info/dependency_links.txt
+forte.stanza.egg-info/namespace_packages.txt
+forte.stanza.egg-info/requires.txt
+forte.stanza.egg-info/top_level.txt
+fortex/stanza/__init__.py
+fortex/stanza/stanza_processor.py
