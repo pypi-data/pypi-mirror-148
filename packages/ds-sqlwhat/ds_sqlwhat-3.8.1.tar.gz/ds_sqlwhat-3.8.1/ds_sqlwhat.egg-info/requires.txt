@@ -1,0 +1,4 @@
+antlr-plsql~=0.9.1
+antlr-tsql~=0.12.6
+markupsafe==2.0.1
+tcs_protowhat==2.1.4
