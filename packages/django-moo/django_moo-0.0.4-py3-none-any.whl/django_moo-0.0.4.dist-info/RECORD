@@ -1,0 +1,11 @@
+django_moo/__init__.py,sha256=vYGAHHQbGwp-8XIksdq1CI92zojNJl-lVCoo-m11xmk,1195
+django_moo/dalay_threading_.py,sha256=726vpWVjcba8D_cMp9BYbpsSo1nZuxSmpDjxM_o6gac,763
+django_moo/decorators.py,sha256=b9nnsgktFNjet77g1Y5zkI77ZYctiBwSmv1sWkVyNvI,2069
+django_moo/delay_threading.py,sha256=rku3upupttJVoVrvu2-K-IIUGR7i_Ae8y3eM2Nqpwi8,394
+django_moo/models.py,sha256=ZEiBPUz64LuRAEc-xRHM63AOi6FfYuCjb-8S0JvtjrA,121
+django_moo/utils.py,sha256=nXMRzlWYH5Y3_92sDr6igIa3Bp30ML_zV6fUQMK1ms4,5122
+django_moo-0.0.4.dist-info/METADATA,sha256=CchrhYGCY5eSNOZ5XjyhDl8EZ9tZHtX4HQd5dhh6Li0,644
+django_moo-0.0.4.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+django_moo-0.0.4.dist-info/license,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_moo-0.0.4.dist-info/top_level.txt,sha256=1w7hVf8EPINtbrow2VEl2DUakEAczabtUyRQgROGTdw,11
+django_moo-0.0.4.dist-info/RECORD,,
