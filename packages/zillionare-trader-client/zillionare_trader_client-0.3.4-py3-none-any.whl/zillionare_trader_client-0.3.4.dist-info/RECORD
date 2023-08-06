@@ -1,0 +1,11 @@
+traderclient/__init__.py,sha256=5yfeRQZqYVd5uFPgOaMWCKBCLXTT6LFE6fy8VtNGhiw,177
+traderclient/client.py,sha256=qr7phzjDKemqIL3t15rzZAtmrT7CoJQY02IVJbfpkkQ,19067
+traderclient/demo.py,sha256=JnRMk81h0hmsWBI7g5HsEe-JwTTakwrJuKfO5zao8Hw,7807
+traderclient/errors.py,sha256=uhw_YDL50fbwkQiQVrC7zpqEOC8y3ibIE2DaXxCOngs,293
+traderclient/trade.py,sha256=Yrz9SgYJacSHjCw6uPHxVC2-Ts5WDuV69t0bQMDMnb0,515
+traderclient/transport.py,sha256=Polo5ebWQKCwSA2yGKAUOG8ZBX-SzEMDYL8fWVrNbIc,3939
+traderclient/utils.py,sha256=-KAy_8COzMK413Jp23JY3KwFoKTbHAlZGvt7umuVBp0,1662
+zillionare_trader_client-0.3.4.dist-info/LICENSE,sha256=GSrn8LTxgNarrSPcceeRHFq3SyNPOPp-5BD05ub2GA8,1068
+zillionare_trader_client-0.3.4.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+zillionare_trader_client-0.3.4.dist-info/METADATA,sha256=cIb_xZAcH7fj41nqwa9R8xHSp_Kn4CQZ2WptvOPZzZs,2918
+zillionare_trader_client-0.3.4.dist-info/RECORD,,
