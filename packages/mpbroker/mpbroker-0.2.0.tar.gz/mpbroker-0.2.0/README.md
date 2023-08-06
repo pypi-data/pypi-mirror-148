@@ -1,0 +1,46 @@
+# README
+
+**NOTICE: this is a beta release, expect things to change (and soon)!**
+
+Media Player Broker (mpb) is an application that helps you play and track media you have watched over disparet locations. mpb keeps track of what you have played at Location A so when you are at Location B you can see what you have watched from either location to avoid digging through history command output over SSH. mpb is not a player itself, it can be configured to launch a player such as vlc, smplayer or others when you use the 'play' command.
+
+
+### The Need
+
+I needed something that remembers what episode of MacGyver I had watched in one location so when I was in another location I could continue watching the next episode without digging through `history` output or keeping track of what was played where.
+
+mpb consists of a CLI application (the client) and a database (couchdb). From the client you `injest` your media metadata. This extracts the file names from file paths and stores the data in the database. After injesting, you can `list` your media which shows you the media Item, whether it has been watched or not along with a Rating, Notes, and the Sources the item is available at. You can then use the `play` command along with the Item to watch the Item. After playback is completed you are prompted to mark the item as played/watched, Rate it and add Notes - all of which are used in the `list` command to show what you have already watched and what is new.
+
+
+###  Setup  ###
+
+The following steps use a virtual environment for the application (which is recommended) but not required:
+
+Note: APP_ROOT is the directory that contains the `main.py` file
+
+- add a python virtual environment and activate:
+  - in APP_ROOT; create virtualenv: `python3 -m virtualenv .venv`
+  - in APP_ROOT; activate virtualenv: `source .venv/bin/activate`
+- install requirements:
+  - in APP_ROOT; install requirements `pip install -r requirements.txt`
+  - deactivate virtualenv as you should no longer need it: `deactivate`
+- create app symlink:
+  - in APP_ROOT; `ln -sf -T "$(pwd)/bin/mpb" "$HOME/bin/mpb"`
+  - note: you may want the link in something other than `$HOME/bin/mpb`, we recommend this directory if it is in your PATH, otherwise add it to PATH or adjust the symlink to wherever you need it (e.g. `/usr/local/bin`, etc.)
+
+
+### Configure
+
+NOTICE:
+ - an example `user_config.toml` file can be found in the `client/example` directory
+ - if you do not want to use the standard locations and do not want to set a MPB_CONFIG_HOME envvar you can set MPB_CONFIG_HOME on the command line before calling mpb such as `MPB_CONFIG_HOME=/opt/tmp ./main.py list 'The_Matrix'`)
+
+To set up MBP you need to:
+- create your `user_config.toml` file and place it in one of the following locations :
+  + MPB_CONFIG_HOME
+  + XDG_CONFIG_HOME/mpb
+  + APPDATA/mpb
+  + HOME/.config/mpb
+- configure your user_config.toml file as needed
+- ensure your mpb database is available
+  + use the `db-init` command to initialize your db if it is a new instance!

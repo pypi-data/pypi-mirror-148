@@ -1,0 +1,22 @@
+# MPB User Configuration file.
+
+client_id = "gaz"                                                              # the client (i.e. host) used as injestion host and in player history creator
+player_id = "drad"                                                             # id to use in player history creator '{client_id}:{player_id}' (if you want your history to be shared use a shared id; otherwise keep it unique.
+player = "/usr/sbin/smplayer"                                                  # the player to use.
+
+
+[database]
+    db_uri = "http://user:pass@localhost:5984"                                 # Database URI.
+
+
+[defaults]
+    source_label = "gaz"
+
+
+[injest]
+    file_types = ['*.mkv', '*.mp4']                                            # file types to injest
+
+
+[source_mappings]                                                              # source mappings map a source_label to a base path.
+  gaz-opt = "/opt/media"
+  gaz-festus = "/mnt/media/video"

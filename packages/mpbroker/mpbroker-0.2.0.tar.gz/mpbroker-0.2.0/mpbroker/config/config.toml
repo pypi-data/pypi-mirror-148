@@ -1,0 +1,15 @@
+# -*- coding: utf-8 -*-
+#  SPDX-License-Identifier: GPL-3.0-only
+#  Copyright 2022 drad <drader@adercon.com>
+
+# application configuration
+
+user_config_file_name = "user_config.toml"
+
+[core]
+    name = "mpb"
+    description = "Media Player Broker"
+    version = "0.0.1"
+    created = 2022-04-21
+    modified = 2022-04-26
+
