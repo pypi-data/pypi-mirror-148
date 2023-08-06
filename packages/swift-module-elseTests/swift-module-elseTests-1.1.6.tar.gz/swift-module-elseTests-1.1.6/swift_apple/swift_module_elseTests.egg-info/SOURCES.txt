@@ -1,0 +1,11 @@
+LICENSE.txt
+README.rst
+pyproject.toml
+setup.py
+swift_apple/swift_apple/__init__.py
+swift_apple/swift_apple/random.py
+swift_apple/swift_apple/swift.py
+swift_apple/swift_module_elseTests.egg-info/PKG-INFO
+swift_apple/swift_module_elseTests.egg-info/SOURCES.txt
+swift_apple/swift_module_elseTests.egg-info/dependency_links.txt
+swift_apple/swift_module_elseTests.egg-info/top_level.txt
