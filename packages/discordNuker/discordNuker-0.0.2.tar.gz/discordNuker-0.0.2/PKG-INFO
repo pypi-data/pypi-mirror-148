@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: discordNuker
+Version: 0.0.2
+Summary: A Nuke library for discord.py
+Home-page: UNKNOWN
+Author: DestructiveLone
+Author-email: lambo.blac123@gmail.com
+License: MIT
+Keywords: nuker
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE.txt
+
+Very Basic and effective Discord.py Nuker Library, used threading, requests to make faster.
+Only works for discord bots.
+
+Version Changes
+=====================================================
+
+0.0.1 (04/30/2022)
+---------------------------------
+- First Release
+- MassBan
+- In Development
+
