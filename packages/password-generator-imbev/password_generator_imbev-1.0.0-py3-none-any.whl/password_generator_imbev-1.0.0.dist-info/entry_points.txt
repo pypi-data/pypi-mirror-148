@@ -1,0 +1,3 @@
+[console_scripts]
+password_generator=password_generator.__main__:main
+
