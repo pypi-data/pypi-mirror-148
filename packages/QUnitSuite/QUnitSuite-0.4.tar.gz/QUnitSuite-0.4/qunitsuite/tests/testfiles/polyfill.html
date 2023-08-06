@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OK test</title>
+    <script src="qunit-1.10.0.js"></script>
+</head>
+<body>
+    <div id="qunit"></div>
+    <script>
+        module("polyfills to fix broken phantomjs behaviors");
+        test("Function has bind method", function () {
+            var f = function () { return this; };
+            ok(f.bind);
+            strictEqual(f.bind(3)().valueOf(), 3);
+        });
+    </script>
+</body>
+</html>
