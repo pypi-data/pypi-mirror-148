@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: babelfont
+Version: 3.0.0a9
+Summary: 
+Author: Simon Cozens
+Author-email: simon@simon-cozens.org
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: cu2qu (>=1.6.7,<2.0.0)
+Requires-Dist: fontfeatures (>=1.0.6,<2.0.0)
+Requires-Dist: fonttools (>=4.21.1)
+Requires-Dist: glyphsLib (>=5.3.2)
+Requires-Dist: openstep-plist (>=0.2.2)
+Requires-Dist: orjson (>=3.5.1,<4.0.0)
+Requires-Dist: ufoLib2 (>=0.11.1)
