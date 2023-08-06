@@ -1,0 +1,4 @@
+psutil>=5.9.0
+websockets>=10.3
+requests>=2.27.1
+azure-storage-blob>=12.11.0
