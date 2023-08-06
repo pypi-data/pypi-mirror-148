@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+screen_ocr/__init__.py
+screen_ocr/__main__.py
+screen_ocr/_base.py
+screen_ocr/_easyocr.py
+screen_ocr/_screen_ocr.py
+screen_ocr/_tesseract.py
+screen_ocr/_winrt.py
+screen_ocr.egg-info/PKG-INFO
+screen_ocr.egg-info/SOURCES.txt
+screen_ocr.egg-info/dependency_links.txt
+screen_ocr.egg-info/requires.txt
+screen_ocr.egg-info/top_level.txt
