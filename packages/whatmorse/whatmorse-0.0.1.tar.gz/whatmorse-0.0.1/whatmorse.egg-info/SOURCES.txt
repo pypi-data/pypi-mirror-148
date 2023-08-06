@@ -1,0 +1,7 @@
+setup.py
+WhatMorse/__init__.py
+WhatMorse/whatmorse.py
+whatmorse.egg-info/PKG-INFO
+whatmorse.egg-info/SOURCES.txt
+whatmorse.egg-info/dependency_links.txt
+whatmorse.egg-info/top_level.txt

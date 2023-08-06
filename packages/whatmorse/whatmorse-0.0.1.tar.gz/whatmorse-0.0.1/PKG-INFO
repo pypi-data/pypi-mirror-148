@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: whatmorse
+Version: 0.0.1
+Summary: Message Encryption & Decryption With Morse Code.
+Home-page: UNKNOWN
+Author: GodZilo (Ido Barel)
+Author-email: <vikbarel5@gmail.com>
+License: UNKNOWN
+Keywords: python,morse,code,encryption,crypto
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+
+A package that allows you to encrypt and decrypt morse code.
+
