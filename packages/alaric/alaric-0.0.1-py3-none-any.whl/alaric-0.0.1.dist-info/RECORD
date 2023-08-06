@@ -1,0 +1,16 @@
+alaric/__init__.py,sha256=BGCd0_ctoSVcpGn5olFBAaA3JqlAYJ3l-Av-LXiPvg4,283
+alaric/advanced_query.py,sha256=2yWs7ooGho-iW-5EelVyYd-90gAXC1vREnxj8-vmiOs,598
+alaric/query_builder.py,sha256=TEp9fUELHmvsPfVZ6ExkL_nTs40jbm1ewQGnzIvggSM,462
+alaric/abc/__init__.py,sha256=yQLkwGPfDRU1MFb3MRjq48uIMJfkZZulZcSwthYK5fU,109
+alaric/abc/comparison.py,sha256=fnj2dbsjuzrL5AEgeYK8UTtmY9L2KcAggKGaYWGsxYw,395
+alaric/abc/logical.py,sha256=BeYmhqx9wxYUMQCnXOOa63SzSDrZYhydEKk2kZOaUWU,639
+alaric/comparison/__init__.py,sha256=HuDdKRoPfKQB8fbIsObn4Mu-OgzB94XE42LIjy1xdfw,88
+alaric/comparison/comparison_eq.py,sha256=BLUi17EAKveVm-yvE5XSBoUBQC2TUviRmT2Tv5MsIHs,714
+alaric/comparison/comparison_in.py,sha256=ypxSgyI9vVeGXrneDvFP7QLQ-Cc6qKNYF3w8-kQXY5o,697
+alaric/logical/__init__.py,sha256=Ohp-zt7kWBM_jIY7lrkB8U95PJOkLc82vG0BAlIrwJw,85
+alaric/logical/logical_and.py,sha256=4F3WND-fMWUZ6XpOGWWw5cahpo1nqV58sJHrTsh07yE,657
+alaric/logical/logical_or.py,sha256=egks0LgXWrU8FmobnzuvbVa1pcKXATloBGXHsq25Bao,655
+alaric-0.0.1.dist-info/METADATA,sha256=u8LOZmca5483NH0h2X2ur-sGaQeRoaA5L4tKjEGo80k,525
+alaric-0.0.1.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+alaric-0.0.1.dist-info/top_level.txt,sha256=R5cDtcCafFpvV3q84_R8A3KYnW1hR2ccmjU8srzit4o,7
+alaric-0.0.1.dist-info/RECORD,,
