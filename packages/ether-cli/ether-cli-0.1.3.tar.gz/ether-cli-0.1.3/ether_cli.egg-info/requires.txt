@@ -1,0 +1,6 @@
+cryptography
+mnemonic
+hdwallet
+web3
+pathlib
+requests
