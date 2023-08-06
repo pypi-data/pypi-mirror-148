@@ -1,0 +1,7 @@
+transformers
+sentencepiece
+tqdm
+sqlitedict
+
+[prism]
+fairseq
