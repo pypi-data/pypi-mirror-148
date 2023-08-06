@@ -1,0 +1,8 @@
+LICENCE
+README.md
+setup.py
+Fiddling_with_minfin.egg-info/PKG-INFO
+Fiddling_with_minfin.egg-info/SOURCES.txt
+Fiddling_with_minfin.egg-info/dependency_links.txt
+Fiddling_with_minfin.egg-info/requires.txt
+Fiddling_with_minfin.egg-info/top_level.txt
