@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: cipherlib
+Version: 0.0.2
+Summary: Block Ciphers
+Home-page: https://github.com/NikitaYurasov/cipherlib
+Author: MIEM
+Author-email: n.yurasov@yahoo.com
+License: MIT
+Download-URL: https://github.com/NikitaYurasov/cipherlib/archive/refs/tags/v0.0.2.tar.gz
+Platform: UNKNOWN
+Requires-Python: >=3.6
+
+UNKNOWN
+
