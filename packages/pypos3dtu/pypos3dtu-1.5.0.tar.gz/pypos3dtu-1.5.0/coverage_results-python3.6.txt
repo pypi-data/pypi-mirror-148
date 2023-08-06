@@ -1,0 +1,25 @@
+Name                                                                        Stmts   Miss  Cover
+-----------------------------------------------------------------------------------------------
+/home/olivier/workspace/PyPoser/src/pypos3d/__init__.py                         4      0   100%
+/home/olivier/workspace/PyPoser/src/pypos3d/pftk/ChannelImportAnalysis.py     353     12    97%
+/home/olivier/workspace/PyPoser/src/pypos3d/pftk/Figure.py                    999     46    95%
+/home/olivier/workspace/PyPoser/src/pypos3d/pftk/GeomCustom.py                170     10    94%
+/home/olivier/workspace/PyPoser/src/pypos3d/pftk/PoserBasic.py                890     36    96%
+/home/olivier/workspace/PyPoser/src/pypos3d/pftk/PoserFile.py                 641     29    95%
+/home/olivier/workspace/PyPoser/src/pypos3d/pftk/PoserMeshed.py               807     41    95%
+/home/olivier/workspace/PyPoser/src/pypos3d/pftk/SimpleAttribut.py            276     16    94%
+/home/olivier/workspace/PyPoser/src/pypos3d/pftk/StructuredAttribut.py       1265     78    94%
+/home/olivier/workspace/PyPoser/src/pypos3d/pftk/__init__.py                    4      0   100%
+/home/olivier/workspace/PyPoser/src/pypos3d/propslim/MxBasic.py               212      6    97%
+/home/olivier/workspace/PyPoser/src/pypos3d/propslim/MxStdModel.py            344     26    92%
+/home/olivier/workspace/PyPoser/src/pypos3d/propslim/PropSlim.py              203     12    94%
+/home/olivier/workspace/PyPoser/src/pypos3d/propslim/__init__.py               12      0   100%
+/home/olivier/workspace/PyPoser/src/pypos3d/wftk/GeomGroup.py                 911     39    96%
+/home/olivier/workspace/PyPoser/src/pypos3d/wftk/PaveList2D.py                 66      0   100%
+/home/olivier/workspace/PyPoser/src/pypos3d/wftk/PoserFileParser.py           112      8    93%
+/home/olivier/workspace/PyPoser/src/pypos3d/wftk/Repere.py                     63      0   100%
+/home/olivier/workspace/PyPoser/src/pypos3d/wftk/WFBasic.py                  1187     61    95%
+/home/olivier/workspace/PyPoser/src/pypos3d/wftk/WaveGeom.py                 1280     68    95%
+/home/olivier/workspace/PyPoser/src/pypos3d/wftk/__init__.py                    4      0   100%
+-----------------------------------------------------------------------------------------------
+TOTAL                                                                        9803    488    95%
