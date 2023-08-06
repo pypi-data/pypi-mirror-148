@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: simpgenalg
+Version: 0.2.4
+Summary: Genetic Algorithm
+Home-page: https://github.com/StephenMal/simpgenalg
+Author: Stephen Maldonado
+Author-email: simpgenalg@stephenmal.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Utilities
+Provides-Extra: scipy
+Provides-Extra: viewer
+Provides-Extra: all
+
+UNKNOWN
+
