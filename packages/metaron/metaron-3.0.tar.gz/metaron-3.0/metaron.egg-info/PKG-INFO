@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: metaron
+Version: 3.0
+Summary: Metagenomic opeRon prediction pipeline
+Home-page: https://github.com/zaidissa/MetaRon
+Author: Syed Shujaat Ali Zaidi
+Author-email: syedzaidi@email.arizona.edu, syedzaidi85@hotmail.co.uk
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
