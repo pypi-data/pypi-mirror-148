@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: ctn-protocolparser
+Version: 0.1.1
+Summary: Utility to parse protocols for the CTN islets framework.
+Home-page: https://github.com/Hannnsen/protocol_parser
+License: MIT
+Author: Johannes Pfabe
+Author-email: 39130094+Hannnsen@users.noreply.github.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Utilities
+Requires-Dist: pandas (>=1.4.2,<2.0.0)
+Project-URL: Repository, https://github.com/Hannnsen/protocol_parser
