@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: propileu-sdk
+Version: 1.0.0
+Summary: A SDK for Propileu rest API
+Home-page: https://github.com/juntossomosmais/propileu-sdk
+Author: JSM
+Author-email: ricardobchaves6@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: python3,propileu
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
