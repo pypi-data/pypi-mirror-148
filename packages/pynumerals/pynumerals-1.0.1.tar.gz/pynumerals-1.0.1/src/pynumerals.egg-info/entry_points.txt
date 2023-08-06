@@ -1,0 +1,2 @@
+[cldfbench.commands]
+pynumerals = pynumerals.commands
