@@ -1,0 +1,14 @@
+wfnsympy/optimize.py,sha256=xEVOzYpRQbqgTd8TqiHMeywtNzWcqHowRyj_6vfVFfw,4211
+wfnsympy/QSYMLIB.cpython-38-darwin.so,sha256=xnGItFz6Y22_L0zjPuG8QNQZw2ueseVUcPodK5zr360,236368
+wfnsympy/WFNSYMLIB.cpython-38-darwin.so,sha256=6ByQ3afLH-PZz4TbGGkhaoHHvrYEDRyD8efwXUhlJDc,423408
+wfnsympy/__init__.py,sha256=vKs3aFcjQaytREiozUr3-z-kaLfb1RkTHfELDBECYxE,36302
+wfnsympy/file_io.py,sha256=N-JP59IebEcAWDICG6G7rc7SVr_XaXQfdwKfvXlSd6c,6181
+wfnsympy/errors.py,sha256=sD0Bn2AMpYRIIAqDrHpE8JyXcnCMygJHtvtdsWQnHAg,800
+wfnsympy/.dylibs/libgfortran.5.dylib,sha256=pIg8wokmUkFmcPArcrKBroi2Tp37fVK1itXkzfi26FA,3319584
+wfnsympy/.dylibs/libquadmath.0.dylib,sha256=_pBzPYL7pUQtXW11U_yxR1LlVwF-8_6skBvOz04WWtM,364400
+wfnsympy/.dylibs/libgcc_s.1.dylib,sha256=tQhMRCY2tWwX1Oe8ofSVZyVEweqri9Tb19JCAz14na4,188816
+wfnsympy-0.3.3.dist-info/RECORD,,
+wfnsympy-0.3.3.dist-info/LICENSE,sha256=Y1Z_uu_boe5FXTchq6uoqS5ew23rrrKL8-_xik3TTfY,1097
+wfnsympy-0.3.3.dist-info/WHEEL,sha256=pXLpj1wTvqlD6RVUEKOuGQGeFX0NOPyDrsC-9xVDmYU,109
+wfnsympy-0.3.3.dist-info/top_level.txt,sha256=hI1fngAAyUnU1kfosvAKAbqpRSYrxIpa7ReqI0Owbjw,9
+wfnsympy-0.3.3.dist-info/METADATA,sha256=FOumjXrm1MrD0JBgo9ZLD0ZY1j2fPh9_ah1TVoOLDUY,240
