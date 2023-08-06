@@ -1,0 +1,3 @@
+[console_scripts]
+wp2md = wp2md.wp2md:wp2md
+
