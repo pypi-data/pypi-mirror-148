@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: inverselap
+Version: 1.2.10
+Summary: Provides a variety of numerical inversion methods for the inverse Laplace transform
+Home-page: UNKNOWN
+Author: renger
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: mpmath (>=1.2.1)
+Requires-Dist: numpy (>=1.19.3)
+Requires-Dist: scipy (>=1.5.4)
+
+# Example Package
+
+This is a simple example package. You can use
+[Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
+
