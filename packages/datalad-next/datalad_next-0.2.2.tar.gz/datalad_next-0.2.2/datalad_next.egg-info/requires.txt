@@ -1,0 +1,9 @@
+datalad>=0.16.0
+www-authenticate
+
+[devel]
+cheroot
+coverage
+nose
+webdavclient3
+wsgidav
