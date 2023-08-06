@@ -1,0 +1,7 @@
+penaltymodel<2.0.0,>=1.0.0
+networkx<3.0,>=2.0
+dimod<0.13.0,>=0.10.9
+
+[maxgap]
+
+[mip]
