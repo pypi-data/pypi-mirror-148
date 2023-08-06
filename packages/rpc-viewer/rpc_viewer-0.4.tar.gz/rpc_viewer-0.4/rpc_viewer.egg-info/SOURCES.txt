@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+rpc_viewer/__init__.py
+rpc_viewer/rpc_viewer.py
+rpc_viewer.egg-info/PKG-INFO
+rpc_viewer.egg-info/SOURCES.txt
+rpc_viewer.egg-info/dependency_links.txt
+rpc_viewer.egg-info/entry_points.txt
+rpc_viewer.egg-info/requires.txt
+rpc_viewer.egg-info/top_level.txt
+test/test_unittests_rpc_viewer.py
