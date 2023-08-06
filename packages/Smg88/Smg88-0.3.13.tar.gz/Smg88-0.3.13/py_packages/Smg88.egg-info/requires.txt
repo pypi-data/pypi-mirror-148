@@ -1,0 +1,7 @@
+requirements.txt
+
+[Smg88]
+smg88_requirements.txt
+
+[Smg88_Testing]
+testing_requirements.txt
