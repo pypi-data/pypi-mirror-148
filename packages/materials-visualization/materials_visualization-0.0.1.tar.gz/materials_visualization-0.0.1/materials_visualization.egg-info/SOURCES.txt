@@ -1,0 +1,9 @@
+LICENSE.md
+README.md
+pyproject.toml
+setup.py
+materials_visualization.egg-info/PKG-INFO
+materials_visualization.egg-info/SOURCES.txt
+materials_visualization.egg-info/dependency_links.txt
+materials_visualization.egg-info/requires.txt
+materials_visualization.egg-info/top_level.txt
