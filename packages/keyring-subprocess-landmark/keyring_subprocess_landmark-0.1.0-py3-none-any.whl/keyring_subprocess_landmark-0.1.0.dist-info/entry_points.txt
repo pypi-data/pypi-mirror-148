@@ -1,0 +1,3 @@
+[console_scripts]
+keyring-subprocess=keyring_subprocess_landmark:keyring_subprocess
+

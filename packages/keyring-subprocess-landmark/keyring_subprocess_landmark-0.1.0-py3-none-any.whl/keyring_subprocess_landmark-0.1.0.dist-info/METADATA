@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: keyring-subprocess-landmark
+Version: 0.1.0
+Summary: 
+Home-page: https://github.com/Darsstar/keyring-subprocess-landmark
+License: MIT
+Author: Dos Moonen
+Author-email: darsstar@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: keyring
+Requires-Dist: keyring-subprocess
+Project-URL: Repository, https://github.com/Darsstar/keyring-subprocess-landmark
+Description-Content-Type: text/markdown
+
+Intended to be installed indirectly by installing `keyring-subprocess[landmark]`
