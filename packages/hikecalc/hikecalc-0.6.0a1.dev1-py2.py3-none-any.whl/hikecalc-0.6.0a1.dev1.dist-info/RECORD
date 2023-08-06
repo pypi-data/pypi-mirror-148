@@ -1,0 +1,11 @@
+hikecalc/__init__.py,sha256=-9p7-aPn1f7fYZesHdCl49L7LW2YOsyP6zT1lk9TnCk,657
+hikecalc/cli.py,sha256=hLshJOPvOZxN4uExm7_dhzIoCICaVuYfp5qz3C8hZSw,6496
+hikecalc/gc_waypoints.py,sha256=jF6gbytf75YLU2zI33Tir37xZdl_dEzPuw8PIss0_S4,3774
+hikecalc/geoloc.py,sha256=ur0nimywZ12Q-VE3z28lduSR_uEF0ukI1aQLzMucO6g,4135
+hikecalc/hike_calc.py,sha256=c47TFGuqO4R5ukqjz2JkidlToESORU-9_u0WU1bTIfE,27900
+hikecalc/import_csv.py,sha256=oJtLJUDgaUQ3V_ulVJu1I7ikNkucl_8Xb8QjEGekDtk,1170
+hikecalc-0.6.0a1.dev1.dist-info/METADATA,sha256=RIc01c4LsAOesR2Nj_UNnzWRAU4a6MRKeiquByf4LT0,1127
+hikecalc-0.6.0a1.dev1.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+hikecalc-0.6.0a1.dev1.dist-info/entry_points.txt,sha256=zyhMQaAE2qE8c3VvCMtmqY856KIJy0ftUbjoa2ruhEc,76
+hikecalc-0.6.0a1.dev1.dist-info/top_level.txt,sha256=Mm5bpOXoYPpivq9FyxZaRb9-bMeyONamY5i2RINLSb4,9
+hikecalc-0.6.0a1.dev1.dist-info/RECORD,,

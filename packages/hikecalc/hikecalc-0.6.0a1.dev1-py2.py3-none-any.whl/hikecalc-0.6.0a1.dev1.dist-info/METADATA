@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: hikecalc
+Version: 0.6.0a1.dev1
+Summary: Calculate hikes given various constraints.
+Home-page: https://github.com/pothiers/hikecalc
+Author: The Python Packaging Authority
+Author-email: pypa-dev@googlegroups.com
+License: MIT
+Project-URL: Documentation, https://hikecalc.readthedocs.io/en/latest/
+Keywords: hike plan calculate
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: check-manifest ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+
+Calculate hikes given various constraints
+=======================
+
+The Hike Calculator helps you find and plan hikes suitable for your
+available time and energy. It lets you pick alternatives that include
+various waypoints and provides total and cummulative miles.
+
+
