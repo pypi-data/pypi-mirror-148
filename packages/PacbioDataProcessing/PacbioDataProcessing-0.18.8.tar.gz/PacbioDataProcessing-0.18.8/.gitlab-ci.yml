@@ -1,0 +1,72 @@
+stages:
+  - prepare
+  - build
+  - test
+
+update:
+  stage: prepare
+  script:
+    - apt-get update -qq -y
+    - apt-get install -qq -y build-essential gcc make libbz2-dev zlib1g-dev libncurses5-dev libncursesw5-dev liblzma-dev libgtk-3-dev
+
+build_htslib:
+  stage: build
+  script:
+    - cd ..
+    - wget https://github.com/samtools/htslib/archive/refs/tags/1.10.2.tar.gz
+    - tar xzf 1.10.2.tar.gz
+    - ls
+    - cd htslib-1.10.2
+    - autoreconf
+    - ./configure
+    - make
+    - make install
+    - cd ..
+    - echo "////////////////////"
+    - ls
+    
+# before_script:
+#   - python3 -V  # Print out python version for debugging
+#   - python3 -m venv venv
+#   - source venv/bin/activate
+#   - pip install pip --upgrade
+#   - pip install flit
+#   - FLIT_ROOT_INSTALL=1 flit install
+
+# python38:
+#   image: python:3.8
+#   stage: test
+#   script:
+#     - tox -e py38-unit
+#     - tox -e py38-functional
+
+python39:
+  image: python:3.9
+  stage: test
+  script:
+    - pip install pip --upgrade
+    - pip install flit
+    - FLIT_ROOT_INSTALL=1 flit install
+    - tox -e py39-unit
+    - tox -e py39-functional
+
+# run:
+#   script:
+#     - python setup.py bdist_wheel
+#     # an alternative approach is to install and run:
+#     - pip install dist/*
+#     # run the command here
+#   artifacts:
+#     paths:
+#       - dist/*.whl
+
+# pages:
+#   script:
+#     - pip install sphinx sphinx-rtd-theme
+#     - cd docs ; make html
+#     - mv _build/html/ ../public/
+#   artifacts:
+#     paths:
+#       - public
+#   only:
+#     - master
