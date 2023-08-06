@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: langma
+Version: 0.0.7
+Summary: Awesome NLP framework you are waiting for ✨
+Home-page: https://github.com/szj2ys/langma
+Author: SZJ
+Author-email: szj2ys@qq.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.5.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy (>=1.18.1)
+Requires-Dist: pandas (>=1.0.1)
+Requires-Dist: tqdm
+Requires-Dist: jieba
+Requires-Dist: matplotlib
+Requires-Dist: plotly (~=5.6.0)
+Requires-Dist: wordcloud (~=1.8.1)
+Requires-Dist: bert4keras (>=0.9.1)
+Requires-Dist: scikit-learn (>=0.24.0)
+Requires-Dist: keras (>=2.2.4)
+Requires-Dist: tensorflow (>=2.0.0)
+Requires-Dist: tensorflow-addons
+Requires-Dist: click
+Requires-Dist: click-help-colors
+
+
+<p align="center">
+    <img width="350" height="150" src="https://cdn.jsdelivr.net/gh/szj2ys/cdn/resources/langma/logo.png"/>
+</p>
+
+<h3 align="center">
+    <p>Awesome NLP framework you are waiting for ✨</p>
+</h3>
+
+
+<p align="center">
+    <a href="https://python.org/pypi/langma">
+        <img src="https://badge.fury.io/py/langma.svg" alt="Version"/>
+    </a>
+    <a href="https://python.org/pypi/langma">
+        <img src="https://img.shields.io/pypi/l/langma.svg?color=orange" alt="License"/>
+    </a>
+    <a href="https://python.org/pypi/langma">
+        <img src="https://static.pepy.tech/badge/langma?color=blue" alt="pypi total downloads"/>
+    </a>
+    <a href="https://python.org/pypi/langma">
+        <img src="https://img.shields.io/github/last-commit/szj2ys/langma?color=blue" alt="GitHub last commit"/>
+    </a>
+</p>
+
+`langma` was the short name of `Qomolangma` , it's the highest mountain on Earth
+Snow-capped mountains, azure sky, golden rays of sunshine, the pure and 
+mysterious aura of Tibet has excited the imagination of so many people of the world. 
+
+## Installation⚙ 🔑 🎛️ 🙈 🎠 ❌ 🎉 
+```shell
+pip install langma
+```
+
+Right now...`langma` is now on your environment, enjoy...
+
+if you don't know what to do and how, enter `langma -h` for help on 
+terminal
+
+## REFERENCES
+- [logly](https://www.logoly.pro/)
+- [Kashgari](https://github.com/BrikerMan/Kashgari/)
+
+
+<p align="center">
+    <img src="https://cdn.jsdelivr.net/gh/szj2ys/cdn/resources/langma/everest.jpeg"/>
+</p>
+
+
+
