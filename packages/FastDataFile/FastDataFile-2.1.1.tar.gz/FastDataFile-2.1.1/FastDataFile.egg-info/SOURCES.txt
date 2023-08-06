@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+FDF/__init__.py
+FastDataFile/__init__.py
+FastDataFile/classes.py
+FastDataFile/encoders.py
+FastDataFile/exceptions.py
+FastDataFile/methods.py
+FastDataFile/worker.py
+FastDataFile.egg-info/PKG-INFO
+FastDataFile.egg-info/SOURCES.txt
+FastDataFile.egg-info/dependency_links.txt
+FastDataFile.egg-info/requires.txt
+FastDataFile.egg-info/top_level.txt
