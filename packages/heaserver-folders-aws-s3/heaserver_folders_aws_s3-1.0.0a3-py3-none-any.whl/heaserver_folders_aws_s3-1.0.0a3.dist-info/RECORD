@@ -1,0 +1,9 @@
+heaserver/folderawss3/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+heaserver/folderawss3/service.py,sha256=qKCSGRMBntp09nUm5f6Z2THxBWCRyrhjINmVZ4RLCF4,29443
+heaserver/folderawss3/wstl/all.json,sha256=f0Ykm_xKDY-xNyuwgP8BXOG3M3Oe140gXs0nc8JlWqw,12414
+heaserver_folders_aws_s3-1.0.0a3.dist-info/LICENSE,sha256=7OGLr2mf4iOKsoeZ4ePSVZDkkPK3SlM00ZmlQF3EN7U,11625
+heaserver_folders_aws_s3-1.0.0a3.dist-info/METADATA,sha256=PprQsNDu_PIrfzEq4THmOV15_t936YAlQPlfLQYyhcE,4664
+heaserver_folders_aws_s3-1.0.0a3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+heaserver_folders_aws_s3-1.0.0a3.dist-info/entry_points.txt,sha256=BoldUajDOCSrie9c6lCfk9wtKqhY7WZ4rh57RC5LrF0,81
+heaserver_folders_aws_s3-1.0.0a3.dist-info/top_level.txt,sha256=NkEy5wN6upFmnDxEJ8pTX7gUpWeFPfDhk7zvlMeOv7M,10
+heaserver_folders_aws_s3-1.0.0a3.dist-info/RECORD,,
