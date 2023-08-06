@@ -1,0 +1,17 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+CloserLookFewShot/__init__.py
+CloserLookFewShot/backbone.py
+CloserLookFewShot/configs.py
+CloserLookFewShot/io_utils.py
+CloserLookFewShot/save_features.py
+CloserLookFewShot/test.py
+CloserLookFewShot/train.py
+CloserLookFewShot/utils.py
+CloserLookFewShot.egg-info/PKG-INFO
+CloserLookFewShot.egg-info/SOURCES.txt
+CloserLookFewShot.egg-info/dependency_links.txt
+CloserLookFewShot.egg-info/requires.txt
+CloserLookFewShot.egg-info/top_level.txt
