@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+{%- for source in sources.values() -%}
+{%- set schema_name='zzzsrc_' ~ source.name | lower() %}
+  - name: {{source.name}}
+    description: '{{source.description | replace("\n","")}}'
+    schema: {{schema_name}}
+    meta:
+      dburl: '{{source.connection_url}}'
+    tables:
+{%- for interface in source.interfaces%}
+      - name: {{interface.name}}
+        meta:
+          source_schema: '{{interface.schema_name}}'
+          source_name: '{{interface.table_name}}'
+          unique_index: '{{interface.unique_index}}'
+{%-if interface.full %}
+          full: true
+{%- endif %}
+        description: '{{interface.comment | replace("\n","")}}'
+        columns:
+{%- for column in interface.table.columns%}
+        - name: {{column.name}}
+          description: '{{column.comment | replace("\n","")}}'
+{%-if interface.table.primary_key.columns.values() and column.name==interface.table.primary_key.columns.values()[0].name %}
+          tests:
+            - unique
+            - not_null          
+{%- endif %}
+{%- endfor %}
+{%- endfor -%}
+{%- endfor -%}

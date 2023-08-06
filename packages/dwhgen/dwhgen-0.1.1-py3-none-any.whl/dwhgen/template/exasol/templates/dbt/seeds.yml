@@ -1,0 +1,31 @@
+{% macro render_type(column) -%}
+{%- if column.doc in ('DECIMAL','REAL','NUMBER','DOUBLE','FLOAT') -%}
+{%- if column.type.scale and column.type.scale==0 -%}
+bigint
+{%- else -%}
+decimal(36,12)
+{%- endif %}
+{%- elif column.doc in ('BOOL','BOOLEAN','BIT') -%}
+boolean
+{%- elif column.doc in ('DATE') -%}
+date
+{%- elif column.doc in ('TIMESTAMP','DATETIME','DATETIME2','TIME') -%}
+timestamp
+{%- elif column.doc in ('INTEGER','SMALLINT','BIGINT') -%}
+bigint
+{%- else -%}
+varchar(2000000)
+{%- endif %}
+{%- endmacro %}
+seeds:
+  +quote_columns: true
+  PSA:
+{%- for source in sources.values() -%}
+{%- for interface in source.interfaces%}
+    {{interface.name}}:
+      +column_types:
+{%- for column in interface.table.columns%}
+        {{column.name |  upper() }}: {{render_type(column)}}
+{%- endfor %}
+{%- endfor -%}
+{%- endfor -%}

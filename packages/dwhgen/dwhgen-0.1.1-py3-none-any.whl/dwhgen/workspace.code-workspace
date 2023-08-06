@@ -1,0 +1,39 @@
+{
+	"folders": [
+		{
+			"path": "../../acs-operation"
+		},
+		{
+			"path": "../../dbt-exasol"
+		},
+		{
+			"path": "../../exasol-utils"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../acs-exasol"
+		},
+		{
+			"path": "../../acs-deploy"
+		},
+		{
+			"path": "../../acs-dvb"
+		},
+		{
+			"path": "../../acs-ingest"
+		}
+	],
+	"settings": {
+		"python.analysis.typeCheckingMode": "strict",
+		"editor.formatOnSaveMode": "file",
+		"editor.formatOnSave": true,
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": true
+		},
+		"python.linting.pylintEnabled": true,
+		"python.linting.enabled": true,
+		"python.formatting.provider": "black",
+	}
+}
