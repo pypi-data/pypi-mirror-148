@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: current-requirements
+Version: 1.2
+Summary: get require packages in current folder
+Home-page: 
+Author: RealReally
+Author-email: 18770185134@163.com
+Maintainer: RealReally
+Maintainer-email: 18770185134@163.com
+License: MIT License
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+
+This package was built in order to get current folder require packages' infomation, and get downloading text.
+
