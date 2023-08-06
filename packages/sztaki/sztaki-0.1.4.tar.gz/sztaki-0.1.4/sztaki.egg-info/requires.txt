@@ -1,0 +1,3 @@
+beautifulsoup4
+dataclasses-json
+googletrans==4.0.0rc1
