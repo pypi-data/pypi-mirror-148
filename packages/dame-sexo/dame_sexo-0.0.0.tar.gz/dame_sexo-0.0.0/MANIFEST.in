@@ -1,0 +1,2 @@
+include dame_sexo/*.txt
+include dame_sexo/*.pickle
