@@ -1,0 +1,2 @@
+[console_scripts]
+rut = rut.__main__:main

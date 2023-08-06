@@ -1,0 +1,14 @@
+AUTHORS
+CHANGES
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+src/rut/__init__.py
+src/rut/__main__.py
+src/rut.egg-info/PKG-INFO
+src/rut.egg-info/SOURCES.txt
+src/rut.egg-info/dependency_links.txt
+src/rut.egg-info/entry_points.txt
+src/rut.egg-info/top_level.txt

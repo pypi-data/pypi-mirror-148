@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: rut
+Version: 0.1.0
+Summary: rut - Run Unit Tests
+Author: Eduardo Naufel Schettino
+Author-email: schettino72@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Testing
+Classifier: Development Status :: 1 - Planning
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS
+
+
+# rut - Run Unit Tests
+
+Experimental stuff... come back later.
+
+
