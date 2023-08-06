@@ -1,0 +1,3 @@
+[console_scripts]
+genbank_to = GenBankToLib.main:run
+
