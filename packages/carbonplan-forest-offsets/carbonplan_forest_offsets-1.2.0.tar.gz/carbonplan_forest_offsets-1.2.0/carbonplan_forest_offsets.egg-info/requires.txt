@@ -1,0 +1,13 @@
+fsspec
+fuzzywuzzy
+geopandas
+intake
+intake-geopandas
+intake-excel
+numpy
+pandas
+regionmask
+shapely
+statsmodels
+scikit-learn
+xarray
