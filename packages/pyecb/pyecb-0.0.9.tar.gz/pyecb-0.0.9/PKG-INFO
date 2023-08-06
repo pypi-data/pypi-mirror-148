@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pyecb
+Version: 0.0.9
+Summary: 
+Author: Matthew Macdonald-Wallace
+Author-email: matt@doics.co
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: mkdocs (>=1.3.0,<2.0.0)
+Requires-Dist: poetry-dynamic-versioning (>=0.14.1,<0.15.0)
