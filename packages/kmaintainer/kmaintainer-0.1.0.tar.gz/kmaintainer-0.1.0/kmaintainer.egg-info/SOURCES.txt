@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+kmaintainer/__init__.py
+kmaintainer/_about.py
+kmaintainer/maintainer.py
+kmaintainer.egg-info/PKG-INFO
+kmaintainer.egg-info/SOURCES.txt
+kmaintainer.egg-info/dependency_links.txt
+kmaintainer.egg-info/requires.txt
+kmaintainer.egg-info/top_level.txt

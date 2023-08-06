@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: kmaintainer
+Version: 0.1.0
+Summary: Python script for photography and media files-original-date maintenance
+Home-page: https://github.com/fjmaro/Kmaintainer
+Author: Francisco José Mata Aroco
+Author-email: 
+License: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Topic :: Multimedia
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.9, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Kmaintainer
+Fjmaro Photography and Media date maintainer. 
+
+![Python Logo](https://www.python.org/static/community_logos/python-logo.png "Python")
+
+## Purpose of the program
+The purpose of this program is to maintain the original date of the photos, videos, files, and other media files (without EXIF data to have it stored) after unwanted modifications by third-party software. It also includes the functionality of renaming 'proprietary' files to KDIN convention.
+
+This program uses the file-naming described in [Kjmaro](https://github.com/fjmaro/Kjmarotools/blob/main/kjmarotools/basics/conventions.py) convention to identify the file-date by its name.
+
