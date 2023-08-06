@@ -1,0 +1,12 @@
+ChessSym.png
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+src/queens8/Queens8.py
+src/queens8/__init__.py
+src/queens8.egg-info/PKG-INFO
+src/queens8.egg-info/SOURCES.txt
+src/queens8.egg-info/dependency_links.txt
+src/queens8.egg-info/top_level.txt
