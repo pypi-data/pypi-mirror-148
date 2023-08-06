@@ -1,0 +1,3 @@
+[console_scripts]
+docker-evolve=docker_evolve.__main__:main
+
