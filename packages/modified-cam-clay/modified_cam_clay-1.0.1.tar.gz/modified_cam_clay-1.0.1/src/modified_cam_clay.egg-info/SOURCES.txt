@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/modified_cam_clay/__init__.py
+src/modified_cam_clay/default_params.py
+src/modified_cam_clay/drained.py
+src/modified_cam_clay/modified_cam_clay.py
+src/modified_cam_clay/undrained.py
+src/modified_cam_clay/utils.py
+src/modified_cam_clay.egg-info/PKG-INFO
+src/modified_cam_clay.egg-info/SOURCES.txt
+src/modified_cam_clay.egg-info/dependency_links.txt
+src/modified_cam_clay.egg-info/requires.txt
+src/modified_cam_clay.egg-info/top_level.txt
