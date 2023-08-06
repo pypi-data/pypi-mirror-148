@@ -1,0 +1,7 @@
+README.md
+setup.py
+elasticwrapper/__init__.py
+elasticwrapper.egg-info/PKG-INFO
+elasticwrapper.egg-info/SOURCES.txt
+elasticwrapper.egg-info/dependency_links.txt
+elasticwrapper.egg-info/top_level.txt
