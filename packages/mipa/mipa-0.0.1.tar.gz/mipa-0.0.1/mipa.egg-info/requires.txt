@@ -1,0 +1,13 @@
+aiohttp
+aiocache
+mipac
+
+[ci]
+flake8
+mypy
+
+[dev]
+axblack
+isort
+mypy
+flake8
