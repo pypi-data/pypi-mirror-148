@@ -1,0 +1,16 @@
+setup.py
+PeriCaat.egg-info/PKG-INFO
+PeriCaat.egg-info/SOURCES.txt
+PeriCaat.egg-info/dependency_links.txt
+PeriCaat.egg-info/entry_points.txt
+PeriCaat.egg-info/requires.txt
+PeriCaat.egg-info/top_level.txt
+pericaat/API.py
+pericaat/Scwrl.py
+pericaat/__init__.py
+pericaat/inputParser.py
+pericaat/intercaatInterface.py
+pericaat/main.py
+pericaat/mutate_model.py
+pericaat/pdb_fixinsert.py
+pericaat/simple_mutate.py
