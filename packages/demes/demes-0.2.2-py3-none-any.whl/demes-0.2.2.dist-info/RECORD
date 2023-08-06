@@ -1,0 +1,13 @@
+demes/__init__.py,sha256=xjAhhnVAb14fr4StFpDwLV2YiS5iwNqu_ruefqT_TIc,1171
+demes/__main__.py,sha256=FzqrR5BeGMvQbfk4sYgqrix7-dcEAReNwgpVgdmI2GI,7961
+demes/_version.py,sha256=Ubzf_st1zImZv38B_Be7Nb-tysfNE2z4o7DjCcasihk,142
+demes/demes.py,sha256=xoDII5FFGUNjYPkkhdwVOhzwWun7NQ4UkroQOwJ3DVw,109310
+demes/load_dump.py,sha256=ViQJwOmqtutvLRwtFVOwTdkgQsTkbxRzsHiCUIIbleM,11792
+demes/ms.py,sha256=BON-lXJLBGeqE29tKmQ1pf0rX03UPhxNAUtEYmm3a9Y,37805
+demes/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+demes-0.2.2.dist-info/LICENSE,sha256=gYYokh-j_mU2zcV0IlwMx3CnEH-whS3bH57CvF0Parw,732
+demes-0.2.2.dist-info/METADATA,sha256=MUAlwMHjCqTvOepLv2yvq6JgbNanqqKXX_0SdugGV4Y,2154
+demes-0.2.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+demes-0.2.2.dist-info/entry_points.txt,sha256=bi-r2MZTgcvLARIfxahMXoJmxpLyxWmmvHej5wyIiYI,45
+demes-0.2.2.dist-info/top_level.txt,sha256=REzzmqqZlHV_ju-NGlHzZS9bvZEXvLLnvdHLSXriLSM,6
+demes-0.2.2.dist-info/RECORD,,
