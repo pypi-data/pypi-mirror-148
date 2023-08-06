@@ -1,0 +1,13 @@
+setup.py
+accuracy/__init__.py
+accuracy/__main__.py
+accuracy/_charts.py
+accuracy.egg-info/PKG-INFO
+accuracy.egg-info/SOURCES.txt
+accuracy.egg-info/dependency_links.txt
+accuracy.egg-info/requires.txt
+accuracy.egg-info/top_level.txt
+accuracy/templates/template.html
+tests/__init__.py
+tests/prepare.py
+tests/test_cli.py
