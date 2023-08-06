@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: bingen
+Version: 0.1.1
+Summary: German to Ukrainian words translator
+Home-page: https://github.com/adyachok/bingen
+Author: Andras Gyacsok
+Author-email: atti.dyachok@gmail.com
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+## Bingen
+
+### Description 
+This package is German words to Ukrainian translator.
+
+### Usage
+
+```python
+from bingen.translator import translate
+
+tokens = ['Liebe']
+sk_dict, not_translated_counter = translate(tokens)
+print(f'Not translated: {not_translated_counter}')
+print(sk_dict.to_dict())
+```
+
