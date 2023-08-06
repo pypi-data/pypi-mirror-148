@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/shitcoin/__init__.py
+src/shitcoin/cw20.py
+src/shitcoin.egg-info/PKG-INFO
+src/shitcoin.egg-info/SOURCES.txt
+src/shitcoin.egg-info/dependency_links.txt
+src/shitcoin.egg-info/top_level.txt
