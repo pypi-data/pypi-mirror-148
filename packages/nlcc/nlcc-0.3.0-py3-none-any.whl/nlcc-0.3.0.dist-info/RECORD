@@ -1,0 +1,17 @@
+nlcc/__init__.py,sha256=1hhd8DW2qmXeCJWiVUBKbMnO51OCJFUv-X1ev35h8Ng,103
+nlcc/eval.py,sha256=1t6R5uga0QTTRKbg0FOVsJ4UBrG6W3xO9qt6JYnGd08,2996
+nlcc/main.py,sha256=95krNhDGZkHut4496f2ihdasUc4hf4T4OlTW5RmyZu4,13574
+nlcc/nlp.py,sha256=W43rYLk2jHww3T0d-EEynNFLyauJEQ6Ns-JF5aQL1RU,2624
+nlcc/openai.py,sha256=qxCNRjEVCaPyW8Z7P7dEWuwKo7-BgiTDZXosP_WlaWc,1945
+nlcc/prompt.py,sha256=npejQ2PBpFpjpWila8nO5FbcTIVIBFUbVKKncshPlYE,2215
+nlcc/timeout.py,sha256=xxX36CmU4OD7iT4m5mHhJMCW5RwSyBTavw1H55SdffY,500
+nlcc/version.py,sha256=3wVEs2QD_7OcTlD97cZdCeizd2hUbJJ0GeIO8wQIjrk,22
+nlcc/prompts/md-prompts.yml,sha256=rKT52mrn9eLZPLbrFwg7tBwAQntiUhMnNvLBRzixxMY,849
+nlcc/prompts/py-prompts.yml,sha256=KGor1BBY9HWmePr9K9x84BAEf83dfnh2WDnJz2Up3rA,4176
+nlcc/prompts/sh-prompts.yml,sha256=bspQcwelXnfCAuzsPznlPQopID5riqf6LqvBKFIa9mU,460
+nlcc-0.3.0.dist-info/METADATA,sha256=2Z22Ymh28kfar6e0vYQ4h6JavJYoXrwF1YeHyI2hLgc,2211
+nlcc-0.3.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+nlcc-0.3.0.dist-info/entry_points.txt,sha256=zBHK2SrgLPyOx4Tr3YYhfR_TndyZWGIkAl4hu5u8bpg,168
+nlcc-0.3.0.dist-info/top_level.txt,sha256=a3QXDKD99-fMNMsd99mLn1SmuBzGM4woAT9TCq6y7bg,5
+nlcc-0.3.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+nlcc-0.3.0.dist-info/RECORD,,
