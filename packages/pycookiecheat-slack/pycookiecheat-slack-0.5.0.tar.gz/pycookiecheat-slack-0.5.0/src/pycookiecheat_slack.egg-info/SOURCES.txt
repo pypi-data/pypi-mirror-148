@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+src/pycookiecheat/__init__.py
+src/pycookiecheat/pycookiecheat.py
+src/pycookiecheat_slack.egg-info/PKG-INFO
+src/pycookiecheat_slack.egg-info/SOURCES.txt
+src/pycookiecheat_slack.egg-info/dependency_links.txt
+src/pycookiecheat_slack.egg-info/not-zip-safe
+src/pycookiecheat_slack.egg-info/requires.txt
+src/pycookiecheat_slack.egg-info/top_level.txt
