@@ -1,0 +1,11 @@
+vlcsync/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vlcsync/bench_func.py,sha256=95FpbXj2JrsV8D_5-ahekH1OlXda4YCts7kkXepiWLk,2452
+vlcsync/cmd_utils.py,sha256=93J9Y-Bzm-Ps4fq8hZft7cEKcpcjOeMECflV08DouQo,872
+vlcsync/geometry_utils.py,sha256=bCg2JXfbAucRMFRqpY3Uyfu3IuheJp-Wahs6vMr1MF0,1674
+vlcsync/main.py,sha256=UAe41QBMNns829-8UGh7YZJ0mUXu3ccEQYJF7UwtAoc,1825
+vlcsync/utils.py,sha256=GnrIJSIYL7nwCeCQdUQGDb-7dxLGvVucS1ePyAVxWsY,2363
+vlcsync/vlc_util.py,sha256=hYSumX03NZ69ZSI4nygMUe2xwdlBsrgG7Wi-G42DTNA,7073
+vlcsync-0.1.3.dist-info/entry_points.txt,sha256=2m_39oATnFzf5kuvlhkayyWSmW0tUefyNk9dVP4A7B0,45
+vlcsync-0.1.3.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+vlcsync-0.1.3.dist-info/METADATA,sha256=n6pf6GP_9DYj_tQQtRIjJbKNAfsUvYITegbw7tMaHEo,373
+vlcsync-0.1.3.dist-info/RECORD,,
