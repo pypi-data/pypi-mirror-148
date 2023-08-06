@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pyflxy
+Version: 0.4
+Summary: UNKNOWN
+Home-page: https://github.com/souravsuresh/pyflx.git
+Author: Sourav Suresh, Dilip Debsingha
+Author-email: souravs0506@gmail.com, ddsinha.cob@gmail.com
+License: MIT
+Keywords: pyflxy
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: schedule
+
+UNKNOWN
+
