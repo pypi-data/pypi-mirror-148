@@ -1,0 +1,9 @@
+requests
+pika
+Flask
+flask-cors
+PyJWT
+urllib3
+idna
+chardet
+certifi
