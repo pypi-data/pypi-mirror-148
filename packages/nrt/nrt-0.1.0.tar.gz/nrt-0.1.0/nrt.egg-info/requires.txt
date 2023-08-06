@@ -1,0 +1,15 @@
+affine
+netCDF4
+numba
+numpy
+pandas
+rasterio
+scipy
+xarray
+
+[docs]
+sphinx
+sphinx_rtd_theme
+
+[tests]
+pytest
