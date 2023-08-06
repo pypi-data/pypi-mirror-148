@@ -1,0 +1,5 @@
+requests
+h2o>=3.36.0.1
+
+[spark]
+pyspark==3.1.2
