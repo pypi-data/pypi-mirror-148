@@ -1,0 +1,4 @@
+[console_scripts]
+quiz=qzlt.main:app
+test=scripts:run_tests
+

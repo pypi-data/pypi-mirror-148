@@ -1,0 +1,11 @@
+qzlt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+qzlt/cards.py,sha256=DWSZiUZhsqExA6hd-cq9AQJNfsVxyuLzqtcKtVfWui4,684
+qzlt/main.py,sha256=8dhsSjsCLflWAUuuxJWGNQTAPwHh9C7ExgmDzycMGT0,1858
+qzlt/sessions.py,sha256=q5x5RjBpo4WYLZzyfzCdbkoa9zudlqPot8IdXFvw7oQ,4066
+qzlt/sets.py,sha256=iA7JpQ0udtyBRYG1wHOky8IyjAlNgfUVnUf5qZOCJ-8,6972
+qzlt/utils.py,sha256=D1UpcJp4iKTYG7CtW3iRTcNNbdLBVCY0mZj7SStPW6o,356
+qzlt-0.1.0.dist-info/entry_points.txt,sha256=-BuzgdAOzb-baEXW7uh24VI0XPmuvx24fB7BxbPgMZM,61
+qzlt-0.1.0.dist-info/LICENSE.txt,sha256=SRS-oJIC5Br6_a0MkZoMqvfLATujq4XMWVpvnt7Ee3I,1069
+qzlt-0.1.0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+qzlt-0.1.0.dist-info/METADATA,sha256=dq2gt9UAhJ4zoms0k1Yto11DZisJNsOb5IXYs3SQi6E,3691
+qzlt-0.1.0.dist-info/RECORD,,
