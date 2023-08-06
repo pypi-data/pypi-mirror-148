@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: afilter
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: WJG
+Author-email: wangjiangong2018@ia.ac.cn
+License: Apache
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: numpy
+Requires-Dist: grpc
+Requires-Dist: tritonclient
+Requires-Dist: protobuf
+
+UNKNOWN
+
