@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: urlrecode
+Version: 1.0.4
+Summary: Simple URLEncode and URLDecode which I needed for a couple of bash scripts.
+Home-page: https://github.com/MKaterbarg/urlrecode
+Author: Martijn Katerbarg
+Author-email: martijnkaterbarg@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
