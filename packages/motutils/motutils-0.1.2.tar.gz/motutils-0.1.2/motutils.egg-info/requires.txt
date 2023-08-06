@@ -1,0 +1,15 @@
+click
+h5py
+matplotlib
+motmetrics
+moviepy
+numpy
+opencv-python-headless
+pandas
+scipy
+tqdm
+xarray
+shape
+
+[sleap]
+sleap
