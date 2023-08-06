@@ -1,0 +1,10 @@
+pandas
+requests
+psutil
+PyAutoGUI
+pynput
+pypiwin32
+Pillow
+pytesseract
+PyMySQL
+DBUtils
