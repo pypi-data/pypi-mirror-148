@@ -1,0 +1,11 @@
+async_polygon/__init__.py,sha256=oifQMgIXO5b0ofCSkbJ8FVaFp8tRm-Zgf0EyET4yEPs,33
+async_polygon/rest/__init__.py,sha256=fu_siZz6zS1St6hC59pXvnJ4-dfyQb71brqZE95ql6E,35
+async_polygon/rest/client.py,sha256=ZEulE8cMfVXsegu_fuNEEpjTLJH329hOgpvXjJNzVoY,5003
+async_polygon/rest/dataclasses/__init__.py,sha256=pPlt7EwQ2QOvCYPGu1k0m3V4uWG0yTz7okGlQWiS3mA,494
+async_polygon/rest/dataclasses/pretty_json.py,sha256=PfIY2-9MM8-c8gzafqPCuDL6w0ZjTZ8WM3cbFkATQQA,428
+async_polygon/rest/dataclasses/templates.py,sha256=HaT4VHHZd0zsYo1HZVYhZ0Z240IRGoBzIr1CaHypF44,1776
+async_polygon-0.0.0a2.dist-info/LICENSE,sha256=qG88IX-UTjsIcQy7uAmqm7zzVnEL3zJuTJRUlw30Ivk,1084
+async_polygon-0.0.0a2.dist-info/METADATA,sha256=LOb91C2ZolPGwwDdD8fh3jm8_fm_nLPa_yy2l4ObL4c,1340
+async_polygon-0.0.0a2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+async_polygon-0.0.0a2.dist-info/top_level.txt,sha256=4SG6HCtGXgNDtVcY_Evyb8-Bx0wnvOsc39MH0HXntpU,14
+async_polygon-0.0.0a2.dist-info/RECORD,,
