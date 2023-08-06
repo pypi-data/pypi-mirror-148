@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+internationalization/__init__.py
+internationalization/exceptions.py
+internationalization/internationalization.py
+internationalization/language.py
+internationalization/singleton.py
+internationalization.py.egg-info/PKG-INFO
+internationalization.py.egg-info/SOURCES.txt
+internationalization.py.egg-info/dependency_links.txt
+internationalization.py.egg-info/requires.txt
+internationalization.py.egg-info/top_level.txt
