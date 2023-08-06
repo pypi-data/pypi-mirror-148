@@ -1,0 +1,13 @@
+setup.py
+django_rest_permission/__init__.py
+django_rest_permission/apps.py
+django_rest_permission/permissions.py
+django_rest_permission/settings.py
+django_rest_permission.egg-info/PKG-INFO
+django_rest_permission.egg-info/SOURCES.txt
+django_rest_permission.egg-info/dependency_links.txt
+django_rest_permission.egg-info/top_level.txt
+django_rest_permission/management/__init__.py
+django_rest_permission/management/commands/__init__.py
+django_rest_permission/management/commands/collectpermissions.py
+django_rest_permission/migrations/__init__.py
