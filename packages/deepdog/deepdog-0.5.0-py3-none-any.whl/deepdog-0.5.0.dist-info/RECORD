@@ -1,0 +1,9 @@
+deepdog/__init__.py,sha256=G0hUJ5fJymbOUXxpBmXrajafvQxZ0f2K36nraZPRpmk,453
+deepdog/alt_bayes_run.py,sha256=F5IvOWaBb2_vsulyqgehTYBHsktr2KZXrqaSKgUw-xM,8987
+deepdog/alt_bayes_run_simulpairs.py,sha256=VNiXtOSavNYwFfAved2qLxShzNbWQrN53QEv7-f3UuE,11117
+deepdog/bayes_run.py,sha256=wpe29NQm7ucGCs3PjjXlC-qM-lw-oyUReAhLe1dLdaA,4939
+deepdog/diagnostic.py,sha256=8FFuIePQQj1XHri48jnMBEqAcMttfGFHKAWricdXJIg,4080
+deepdog/meta.py,sha256=Brs9HsZyBCGpLXdkV6eOdvziQrdiQt__LktEsPlZ0fs,73
+deepdog-0.5.0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+deepdog-0.5.0.dist-info/METADATA,sha256=SYTOgZOUroS4iyeW84EaoOpkL0A9lbu1AeVivNCBJIE,339
+deepdog-0.5.0.dist-info/RECORD,,
