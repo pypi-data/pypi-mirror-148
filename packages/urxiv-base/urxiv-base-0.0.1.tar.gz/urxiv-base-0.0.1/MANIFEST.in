@@ -1,0 +1,3 @@
+recursive-include urxiv/base/static/ *
+recursive-include urxiv/base/templates *
+recursive-include urxiv/mail/templates *
