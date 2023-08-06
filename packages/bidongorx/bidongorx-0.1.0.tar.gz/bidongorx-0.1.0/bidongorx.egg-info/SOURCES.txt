@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+bidongorx/__init__.py
+bidongorx.egg-info/PKG-INFO
+bidongorx.egg-info/SOURCES.txt
+bidongorx.egg-info/dependency_links.txt
+bidongorx.egg-info/requires.txt
+bidongorx.egg-info/top_level.txt
+bidongorx/proverbes/__init__.py
+bidongorx/proverbes/tellme.py
