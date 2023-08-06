@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: torncoder
+Version: 0.1.1
+Summary: Basic tornado-based python utilities.
+Home-page: https://github.com/eulersIDcrisis/torncoder
+License: Apache-2.0
+Author: Aaron Gibson
+Author-email: eulersidcrisis@yahoo.com
+Requires-Python: >=3.8,<4
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: aiofile (>=3.7.4,<4.0.0)
+Requires-Dist: tornado (>=6.1,<7.0)
+Project-URL: Repository, https://github.com/eulersIDcrisis/torncoder
+Description-Content-Type: text/markdown
+
+# Torncoder
+
+Tornado Utility Library for various features.
+
+This library contains a few common classes and helpers that:
+ - Make file serving easier.
+ - Make file uploads easier.
+ - Permit piping output from processes easier.
+ - Basic pool management.
+
+## (Static) FileHandler Utilities
+
+`tornado`'s default `web.StaticFileHandler` is a bit onerous and confusing to
+subclass or otherwise use; `torncoder` instead defines a slightly different
+interface for similar purposes, but consolidates much of the work:
+
+```python
+class MyFileHandler(AbstractFileHandler):
+
+    async def fetch_file_info(self, path):
+        # Validate path, then return a FileInfo tuple.
+        return FileInfo(...)
+
+    async def get_iter_content(self, path_handle, start, end):
+        # Iterate over the content from start/end.
+        # NOTE: 'path_handle' is the path argument by the above FileInfo.
+```
+
