@@ -1,0 +1,7 @@
+*.swp
+__pycache__/
+/.tox/
+/.coverage
+/loam/_version.py
+/loam.egg-info/
+/docs/_build/
