@@ -1,0 +1,35 @@
+#!/usr/bin/env python3
+
+import argparse
+import os
+import os.path
+import sys
+
+from solana.publickey import PublicKey
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+import entropy  # nopep8
+
+parser = argparse.ArgumentParser(description="Shows details of a Entropy account.")
+entropy.ContextBuilder.add_command_line_parameters(parser)
+entropy.Wallet.add_command_line_parameters(parser)
+parser.add_argument(
+    "--address",
+    type=PublicKey,
+    required=False,
+    help="address of the delegate of the account (defaults to the root address of the wallet)",
+)
+args: argparse.Namespace = entropy.parse_args(parser)
+
+with entropy.ContextBuilder.from_command_line_parameters(args) as context:
+    delegate = args.address
+    if delegate is None:
+        wallet = entropy.Wallet.from_command_line_parameters_or_raise(args)
+        delegate = wallet.address
+
+    group = entropy.Group.load(context, context.group_address)
+    entropy_accounts = entropy.Account.load_all_for_delegate(context, delegate, group)
+    if len(entropy_accounts) == 0:
+        entropy.output(f"Account {delegate} has no accounts delegated to it.")
+    else:
+        entropy.output(entropy_accounts)
