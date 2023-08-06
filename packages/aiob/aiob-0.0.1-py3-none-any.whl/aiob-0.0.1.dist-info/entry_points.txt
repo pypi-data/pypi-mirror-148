@@ -1,0 +1,3 @@
+[console_scripts]
+aiob=aiob.cli.main:main
+
