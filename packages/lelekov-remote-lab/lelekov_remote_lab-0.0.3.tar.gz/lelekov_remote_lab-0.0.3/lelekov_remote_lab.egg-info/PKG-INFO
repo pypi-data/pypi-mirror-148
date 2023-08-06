@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: lelekov-remote-lab
+Version: 0.0.3
+Summary: Библиотека для управления системой ориентации
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+## Библиотека для выполнения лабораторных работ
+
+### Установка:
+```pip install lelekov-remote-lab```
+
+Смотрите файл *example.py* для ознакомления
+
+
