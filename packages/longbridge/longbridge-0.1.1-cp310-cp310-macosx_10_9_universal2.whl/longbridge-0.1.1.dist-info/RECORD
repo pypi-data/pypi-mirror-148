@@ -1,0 +1,11 @@
+longbridge/__init__.py,sha256=xD2rYbCilJoXTWzU8WOHHiGcc-nX8VCU2CF6vucPAPE,403
+longbridge/__version__,sha256=CvF40QiTByt6LHDkVOFYSS-4Vnaa-b5w4DeWOeWErjg,12
+longbridge/engine_uniffi.py,sha256=AZLHj8gNDvPpU8XGMnHsD39bpmvD0CRcDSRbrI3CpAY,58598
+longbridge/error.py,sha256=yyrhqk3961279TfvMx-aquVvxVfNxZ_XTQLbXKbC26o,952
+longbridge/http.py,sha256=inVxDynF9WEADyR2lEFQQviEMYiBnJr99J9UmvDpwxI,5589
+longbridge/libengine_uniffi.dylib,sha256=Lcg6nzO9rPIqlGty2D31kMCLs0LkVzynrPm5479IA70,13111880
+longbridge/ws.py,sha256=hWu98ObRYfyZ6meXW2y-riIkQ0g6zYiKnlG4iTQ6LN0,2609
+longbridge-0.1.1.dist-info/LICENSE.txt,sha256=JnWAYTcyg_VdpdhEXZ0gI_1PodpL3iIqjSIhJHIYiM4,1065
+longbridge-0.1.1.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+longbridge-0.1.1.dist-info/METADATA,sha256=YlcYgqu5kIyuB0AzQJhdpQ4THbFuLmzfdTVHYerEwdY,3397
+longbridge-0.1.1.dist-info/RECORD,,
