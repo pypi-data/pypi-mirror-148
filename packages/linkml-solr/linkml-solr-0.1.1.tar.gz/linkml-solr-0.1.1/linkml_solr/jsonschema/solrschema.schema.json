@@ -1,0 +1,23 @@
+{
+   "$id": "https://w3id.org/linkml/solr",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "additionalProperties": true,
+   "definitions": {
+      "Field": {
+         "additionalProperties": false,
+         "description": "",
+         "properties": {
+            "add_field": {
+               "type": "string"
+            }
+         },
+         "required": [],
+         "title": "Field",
+         "type": "object"
+      }
+   },
+   "properties": {},
+   "title": "solr-schema",
+   "type": "object"
+}
+
