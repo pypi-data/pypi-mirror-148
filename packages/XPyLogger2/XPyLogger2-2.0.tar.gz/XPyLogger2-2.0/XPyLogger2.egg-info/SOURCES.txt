@@ -1,0 +1,8 @@
+README.md
+setup.py
+XPyLogger2/__init__.py
+XPyLogger2.egg-info/PKG-INFO
+XPyLogger2.egg-info/SOURCES.txt
+XPyLogger2.egg-info/dependency_links.txt
+XPyLogger2.egg-info/requires.txt
+XPyLogger2.egg-info/top_level.txt
