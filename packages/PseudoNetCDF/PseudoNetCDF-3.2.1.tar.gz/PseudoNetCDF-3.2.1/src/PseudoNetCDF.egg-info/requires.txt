@@ -1,0 +1,16 @@
+numpy>=1.2
+netCDF4
+scipy
+matplotlib
+pyyaml
+pandas
+importlib_metadata
+
+[mapping]
+basemap
+
+[projections]
+pyproj
+
+[textfiles]
+pandas
