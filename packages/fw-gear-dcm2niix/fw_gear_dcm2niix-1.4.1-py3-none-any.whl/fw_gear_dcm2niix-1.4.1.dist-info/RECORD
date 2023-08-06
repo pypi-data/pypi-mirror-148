@@ -1,0 +1,16 @@
+fw_gear_dcm2niix/__init__.py,sha256=Vy8d6J5bfEir2fSLUb6jHb3J2qDhJkmk6RoIyI6MM9A,33
+fw_gear_dcm2niix/dcm2niix/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fw_gear_dcm2niix/dcm2niix/arrange.py,sha256=jr0EVPc__i71Uaqvc2eFaNwHIVA-1uWZs7oZWL3n2C0,14468
+fw_gear_dcm2niix/dcm2niix/dcm2niix_run.py,sha256=8ZuArUldk24ikHn5AhWXLiPg0OjY_dSGsLgoVaizQDs,7570
+fw_gear_dcm2niix/dcm2niix/dcm2niix_utils.py,sha256=jK81B47JyBzy_zVJrvF6VAiktw3agVamNVF-6SQTcAI,5776
+fw_gear_dcm2niix/dcm2niix/interfaces.py,sha256=fvWyeEtLLQMJwIn3GieFH77pspvZrhe7GhtCxEesz80,2371
+fw_gear_dcm2niix/dcm2niix/prepare.py,sha256=SXB0Hglz6Y8L0yJ1h61YBFtAZMVtht1c59Iltz3O4II,1240
+fw_gear_dcm2niix/pydeface/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fw_gear_dcm2niix/pydeface/pydeface_run.py,sha256=-3LMogTTqvi6a99g393qhIfozSqzgZeej4FCqkNolZY,5096
+fw_gear_dcm2niix/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fw_gear_dcm2niix/utils/metadata.py,sha256=wcheNxTOzV-ZfC0sXDpJatj3fXvy0GprMT14J4h7kbc,16344
+fw_gear_dcm2niix/utils/parse_config.py,sha256=YMdtdj0TRYhj4fbihuPeDk7jcNEfNcaPM6luRO1D8lQ,8428
+fw_gear_dcm2niix/utils/resolve.py,sha256=ktUHpZFKFT3UUbX_XUgEKnXmNpednavERXJ2g4A4jG0,7965
+fw_gear_dcm2niix-1.4.1.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+fw_gear_dcm2niix-1.4.1.dist-info/METADATA,sha256=eItDOb2DpT7O7KUpm8QS4h5ADEKH8NcnTJ0QUFumpEA,10806
+fw_gear_dcm2niix-1.4.1.dist-info/RECORD,,
