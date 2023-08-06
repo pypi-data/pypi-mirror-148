@@ -1,0 +1,8 @@
+gpusm/__init__.py,sha256=ryAfvAaW7VM8g1gnCrFCPrXmcbbm99Xw44aLkwGZzaI,23
+gpusm/cli.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gpusm/core.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gpusm/gui.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gpusm-0.1.0.dist-info/LICENSE,sha256=pc6KHys7rQOKhAt9tCWFPUKZFC8xA_Clso573aDutnY,1090
+gpusm-0.1.0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+gpusm-0.1.0.dist-info/METADATA,sha256=YCyCUqqtM5NQbJy_6xlDM_5yN60E3-264c71LzY0_QQ,1010
+gpusm-0.1.0.dist-info/RECORD,,
