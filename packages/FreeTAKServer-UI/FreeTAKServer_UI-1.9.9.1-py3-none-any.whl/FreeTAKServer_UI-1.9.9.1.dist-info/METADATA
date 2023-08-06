@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: FreeTAKServer-UI
+Version: 1.9.9.1
+Summary: an optional UI for FreeTAKServer
+Home-page: https://github.com/FreeTAKTeam/FreeTakServer
+Author: Ghost, C0rv0
+Author-email: your.email@domain.com
+License: Eclipse License
+Platform: UNKNOWN
+Requires-Dist: flask
+Requires-Dist: flask-login
+Requires-Dist: flask-migrate
+Requires-Dist: flask-wtf
+Requires-Dist: flask-sqlalchemy
+Requires-Dist: email-validator
+Requires-Dist: gunicorn
+Requires-Dist: python-decouple
+Requires-Dist: sqlalchemy-utils
+
+UNKNOWN
+
+
