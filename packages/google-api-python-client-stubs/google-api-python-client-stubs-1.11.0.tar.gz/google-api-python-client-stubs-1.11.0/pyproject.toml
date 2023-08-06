@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "google-api-python-client-stubs"
+version = "1.11.0"
+description = "Type stubs for google-api-python-client"
+authors = ["Henrik Bruådal <henrik.bruasdal@gmail.com>"]
+readme = "README.md"
+license = "Apache-2.0"
+repository = "https://github.com/henribru/google-api-python-client-stubs"
+packages = [
+    { include = "googleapiclient-stubs" },
+    { include = "apiclient-stubs" },
+]
+classifiers = [
+    "Typing :: Typed",
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+google-api-python-client = "^2.46.0"
+typing-extensions = ">=3.10.0, <5.0.0"
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.950"
+black = "^22.3.0"
+isort = "^5.10.1"
+
+[tool.isort]
+profile = "black"
+known_first_party = [
+    "apiclient",
+    "googleapiclient",
+]
+combine_as_imports = true
+float_to_top = true
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
