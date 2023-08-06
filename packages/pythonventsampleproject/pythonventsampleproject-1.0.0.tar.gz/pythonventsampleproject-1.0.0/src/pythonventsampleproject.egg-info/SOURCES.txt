@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+data/data_file
+src/pythonventsampleproject.egg-info/PKG-INFO
+src/pythonventsampleproject.egg-info/SOURCES.txt
+src/pythonventsampleproject.egg-info/dependency_links.txt
+src/pythonventsampleproject.egg-info/entry_points.txt
+src/pythonventsampleproject.egg-info/requires.txt
+src/pythonventsampleproject.egg-info/top_level.txt
+src/sample/__init__.py
+src/sample/package_data.dat
+src/sample/simple.py
