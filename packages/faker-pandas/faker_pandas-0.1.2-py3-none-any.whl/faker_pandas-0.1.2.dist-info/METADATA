@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: faker-pandas
+Version: 0.1.2
+Summary: Adds Provider for Faker library to Generate randomized Pandas DataFrames
+Home-page: https://github.com/nitori/faker_pandas
+License: MIT
+Author: Sani
+Author-email: sani@sani.love
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Faker (>=13.6.0,<14.0.0)
+Requires-Dist: pandas (>=1.4.2,<2.0.0)
+Project-URL: Repository, https://github.com/nitori/faker_pandas
+Project-URL: issues, https://github.com/nitori/faker_pandas/issues
+Description-Content-Type: text/markdown
+
+
+# Faker Pandas
+
+```py
+from faker import Faker
+from faker_pandas import PandasProvider
+
+fake = Faker()
+fake.add_provider(PandasProvider)
+
+colgen = fake.pandas_column_generator()
+
+df = fake.pandas_dataframe(
+    colgen.first_name('First Name', empty_value='', empty_ratio=.5),
+    colgen.last_name('Last Name'),
+    colgen.pandas_int('Age', 18, 80, empty_ratio=.2),
+    rows=7
+)
+
+print(df)
+```
+Output:
+```txt
+  First Name Last Name   Age
+1             Lawrence  72.0
+2       Lisa  Holloway   NaN
+3              Edwards  31.0
+4     Steven   Johnson  69.0
+5                Smith  66.0
+6     Monica     Lynch   NaN
+7     Edward     Brown  20.0
+```
+
