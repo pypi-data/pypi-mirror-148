@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+tcolors/__init__.py
+tcolors/colorizer.py
+tcolors/styles.py
+tcolors.egg-info/PKG-INFO
+tcolors.egg-info/SOURCES.txt
+tcolors.egg-info/dependency_links.txt
+tcolors.egg-info/requires.txt
+tcolors.egg-info/top_level.txt
