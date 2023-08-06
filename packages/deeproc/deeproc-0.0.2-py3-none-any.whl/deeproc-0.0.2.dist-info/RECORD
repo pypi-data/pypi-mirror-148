@@ -1,0 +1,11 @@
+deeproc/ConcordanceMatrixPlot.py,sha256=E88loubm1y3v7x4-BAGgvN7kNMXTOJEdqbSRmvhDIOE,11728
+deeproc/DeepROC.py,sha256=CN8XW3AQBsexswyMuiDVuEcoNmOeScsZ4nfGCOGX7Fo,39488
+deeproc/FullROC.py,sha256=6BrPFW2oIZesbXeZU7CrxsDK2UJROT8ob1aEWq05ae4,12825
+deeproc/SimpleROC.py,sha256=DIKIlvTuo3IBayyj8j6sixcH90RhG72lbgN3A12uxx8,19070
+deeproc/TestDeepROC.py,sha256=5rn71vZXVMee_vd7Sd97S3EcRv74-hp2kKaKUZFxK44,8185
+deeproc/TestVectors.py,sha256=FHzar6t-HFnZbWJfzACFn80yelU74ZlUKDHm-Tst6zk,11895
+deeproc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deeproc-0.0.2.dist-info/METADATA,sha256=R9LPJFfPj3_nKXZsoDZ5ImCmDHRL1V0GBuNUmOXQG2w,1496
+deeproc-0.0.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+deeproc-0.0.2.dist-info/top_level.txt,sha256=h_6fTEWuEKj3-11ChwoCp2fgsN9qKV419a60ltY8_98,8
+deeproc-0.0.2.dist-info/RECORD,,
