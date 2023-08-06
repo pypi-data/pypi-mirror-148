@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pywapor
+Version: 2.4.2
+Summary: UNKNOWN
+Home-page: https://www.fao.org/aquastat/py-wapor/
+Author: FAO
+Author-email: bert.coerver@fao.org
+License: Apache
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.7, <3.9
+License-File: LICENSE
+
+UNKNOWN
+
