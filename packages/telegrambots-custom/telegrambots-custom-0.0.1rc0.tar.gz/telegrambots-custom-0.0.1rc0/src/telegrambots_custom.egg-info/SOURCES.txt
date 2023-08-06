@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+src/telegrambots/py.typed
+src/telegrambots_custom.egg-info/PKG-INFO
+src/telegrambots_custom.egg-info/SOURCES.txt
+src/telegrambots_custom.egg-info/dependency_links.txt
+src/telegrambots_custom.egg-info/requires.txt
+src/telegrambots_custom.egg-info/top_level.txt
