@@ -1,0 +1,7 @@
+numpy
+gym
+ray
+tensorboardX
+wandb
+stable-baselines3
+python-socketio

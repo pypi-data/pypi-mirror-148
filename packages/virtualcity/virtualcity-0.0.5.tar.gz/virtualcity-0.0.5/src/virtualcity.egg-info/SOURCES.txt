@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+src/virtualcity/__init__.py
+src/virtualcity.egg-info/PKG-INFO
+src/virtualcity.egg-info/SOURCES.txt
+src/virtualcity.egg-info/dependency_links.txt
+src/virtualcity.egg-info/requires.txt
+src/virtualcity.egg-info/top_level.txt
