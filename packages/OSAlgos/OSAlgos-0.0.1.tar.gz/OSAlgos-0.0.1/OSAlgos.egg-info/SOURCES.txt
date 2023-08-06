@@ -1,0 +1,14 @@
+setup.py
+OSAlgos.egg-info/PKG-INFO
+OSAlgos.egg-info/SOURCES.txt
+OSAlgos.egg-info/dependency_links.txt
+OSAlgos.egg-info/top_level.txt
+OS_Project/FCFS.py
+OS_Project/FCFS_Arrival.py
+OS_Project/RR.py
+OS_Project/SJF.py
+OS_Project/__init__.py
+OS_Project/project_execution.py
+OS_Project/schedulingAlgo.py
+OS_Project/temp.py
+OS_Project/tempCodeRunnerFile.py

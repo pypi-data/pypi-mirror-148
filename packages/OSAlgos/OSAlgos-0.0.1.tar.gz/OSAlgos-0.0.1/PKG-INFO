@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: OSAlgos
+Version: 0.0.1
+Summary: Basic Operating System Algorithms
+Home-page: UNKNOWN
+Author: Gaurav
+Author-email: <gauravbisht8000@gmail.com>
+License: UNKNOWN
+Keywords: python,opencv,pyautogui,pyaudio
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+
+UNKNOWN
+
