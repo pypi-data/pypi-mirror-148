@@ -1,0 +1,1509 @@
+[
+    {
+        "name": "Allan Poe",
+        "top_e": "Gain 9.0% (18.0% at 5\u2605) Crit Rate. If there are 2 or more enemies present, 1.1% (2.0% at 5\u2605) * n of the bonus Crit Rate will convert into 2.2% (4.0% at 5\u2605) * n bonus Physical DMG (n=the number of enemies present, and n\u22645).",
+        "mid_e": "After spending 3/33/63 SP in one action, Crit DMG of Basic Attacks (including Combo ATKs and Charged ATKs) increases by 20.0%/30.0%/40.0% (50.0%/60.0%/70.0% at 5\u2605). This effect lasts until the next trigger.",
+        "bot_e": "Attack speed increases by 13.0% (25.0% at 5\u2605). CD of Ultimate Evasion shortens by 9.0% (15.0% at 5\u2605).",
+        "two_piece": "Gain 20.0% Total DMG Multiplier. Total DMG of Charged ATK and any follow-up hits unleashed within the following 1s increases by 40.0%. Seele equip bonus: Total DMG increases by an additional 40.0%. CD: 3s.",
+        "three_piece": "Once attacked, ignore the damage from the attack and greatly gain Ignore Interrupt for 3s. CD: 20.0s. During CD, the host restores 650 HP upon hitting enemies with Charged ATK (applies once during each CD). Seele equip bonus: Total DMG increases by 25.0%.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/1c/Allan_Poe_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20200319084559",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/52/Allan_Poe_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20200319084604",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/d/d5/Allan_Poe_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20200319084608",
+        "obtainable": [
+            "Foundry",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Ana Schariac",
+        "top_e": "Boosts Ice DMG by 10.0% (20.0% at 5\u2605). Host deals 10.0% (20.0% at 5\u2605) bonus Total DMG to enemies within 5 meters. The bonus damage drops by 1.0% (2.0% at 5\u2605) for every meter of distance beyond 5 meters (caps at 10 meters of distance).",
+        "mid_e": "Boosts Ice DMG by 10.0% (25.0% at 5\u2605) Host takes 7.0% (12.0% at 5\u2605) less Total DMG and additional 4.0% (8.0% at 5\u2605) less Total DMG from enemies within 5 meters.",
+        "bot_e": "Boosts Attack Speed by 10.0% (20.0% at 5\u2605). Host deals 15.0% (30.0% at 5\u2605) bonus Ice DMG to enemies within 5 meters. The bonus damage drops by 1.5% (3.0% at 5\u2605) for every meter of distance beyond 5 meters (caps at 10 meters of distance).",
+        "two_piece": "Boosts Ice DMG by 25.0%. Combo and Charged ATKs summon Ice Pillars around enemies on hit to deal 400.0% ATK of Ice DMG to enemies nearby and boost host's Ignore Interrupt for 3s. CD: 10s.",
+        "three_piece": "Combo and Charged ATKs deal 50.0% bonus Total DMG. Host deals 10.0% bonus Ice DMG to enemies within 5 meters.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/99/Ana_Schariac_%28Stigmata%29_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225202853",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/57/Ana_Schariac_%28Stigmata%29_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225202847",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/b/b4/Ana_Schariac_%28Stigmata%29_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225202841",
+        "obtainable": [
+            "Foundry",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Anniversary Festival",
+        "top_e": "Ultimate Evasions generate an explosion around self that deals 90% (180% at 5\u2605) ATK of Physical DMG to enemies. CD: 8s (4s at 5\u2605).",
+        "mid_e": "When hit by an enemy with lower HP percentage than the host, take 15% (30% at 5\u2605) less Physical DMG.",
+        "bot_e": "Attacks on an enemy with lower HP percentage than the host gain 20% (50% at 5\u2605) Crit DMG.",
+        "two_piece": "Show time shares a common CD of 10s. Ultimate Evasion starts Kiana's Taijutsu, gaining 45% Physical DMG for 5s. Combo ATKs start Mei's Chado Ceremony, healing the host for 30 HP/s for 5s. Being hit by an enemy attack starts Bronya's Shooting Show, with said attack suffering 30% Total DMG Reduction and gaining 25% Attack Speed for 5s.",
+        "three_piece": "Gain 15% Max HP and 10% Crit Rate in battle.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/87/Anniversary_Festival_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180806194951",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/85/Anniversary_Festival_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180806194958",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/d/d3/Anniversary_Festival_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180806195004",
+        "obtainable": [
+            "Events"
+        ]
+    },
+    {
+        "name": "Aslaug",
+        "top_e": "Fire DMG increases by 10.0% (20.0% at 5\u2605). Team deals 10.0% (20.0% at 5\u2605) bonus Elemental DMG to enemies in Feathered state. Skill effects cannot stack.",
+        "mid_e": "Fire DMG increases by 10.0% (20.0% at 5\u2605). Every hit (CD: 1s) boosts host's Total DMG by 2.0% (5.0% at 5\u2605) for 5s. 6 stacks max. Triggering it again resets the duration. Switching out removes all stacks. With host on standby, team deals 10.0% (20.0% at 5\u2605) bonus Fire DMG. Skill effects cannot stack.",
+        "bot_e": "Fire DMG increases by 10.0% (20.0% at 5\u2605). On hit, Ultimate inflicts Feathered state on enemies for 8s and makes them take 10.0% (20.0% at 5\u2605) bonus Elemental DMG. Triggering it again resets the duration.",
+        "two_piece": "Total DMG increases by 15.0%. Enemies in Feathered state take 30.0% bonus Elemental DMG instead. Team deals 12.0% bonus Total DMG. Skill effects cannot stack.",
+        "three_piece": "Charged ATKs boost Total DMG by 20.0% on hit for 15s. Triggering it again resets the duration. With host on standby, team deals 30.0% bonus Fire DMG. Skill effects cannot stack.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/b/b1/Aslaug_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211221173159",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/19/Aslaug_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211221173127",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/d/d0/Aslaug_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211221173101",
+        "obtainable": [
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Avogadro",
+        "top_e": "The host gains 10.0% (20.0% at 5\u2605) Total DMG. Team restores 15.0 (30.0 at 5\u2605) HP per second for 10s after the host casts her weapon active. This effect has a 20-sec CD and cannot stack.",
+        "mid_e": "The host's weapon active CD shortens by 15.0% (30.0% at 5\u2605). Team gains 5.0% (10.0% at 5\u2605) Total DMG for 12s after the host casts her weapon active. This effect has a 20-sec CD and cannot stack.",
+        "bot_e": "The host gains 7.0% (15.0% at 5\u2605) ATK Speed. Her weapon active deals 40.0% (65.0% at 5\u2605) more Physical DMG for 5s after its activation. CD: 10s.",
+        "two_piece": "The host gains 30.0 initial SP in battle, and her weapon active consumes 15.0% less SP.",
+        "three_piece": "The host gains 15.0% Total DMG. Her weapon active inflicts a mark on the target (CD: 20s), which explodes after 10s and deals 400.0% ATK of large-AOE Physical DMG. The host additionally deals 15.0% more Total DMG against marked enemies.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/7/7b/Avogadro_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211217175543",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/a3/Avogadro_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211217175559",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/29/Avogadro_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211217175550",
+        "obtainable": [
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Bastet",
+        "top_e": "Ice DMG increases by 7.0% (15.0% at 5\u2605). Team deals 25.0% (30.0% at 5\u2605) bonus Ice DMG to frozen enemies (cannot stack).",
+        "mid_e": "Total DMG increases by 15.0% (30.0% at 5\u2605). Attacks inflict 12.0% (25.0% at 5\u2605) bonus Rime Trauma.",
+        "bot_e": "Total DMG increases by 12.0% (20.0% at 5\u2605). Freezing enemies restores 5 (10 at 5\u2605) SP for the team. CD: 8s.",
+        "two_piece": "Freezing enemies boosts team Total DMG by 50.0% (cannot stack) for 15s. Triggering it again resets the duration.",
+        "three_piece": "Total DMG increases by 30.0%. The Freeze effect inflicted by team members lasts 20.0% longer (cannot stack).",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/82/Bastet_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220407135123",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/29/Bastet_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220407135140",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/29/Bastet_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220407135155",
+        "obtainable": [
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Beach Party",
+        "top_e": "Upon killing a mob enemy, team gains 5 (8 at 5\u2605) SP. Upon killing an Elite or Boss, team gains 15 (24 at 5\u2605) SP. Each trigger of the effect consumes 1 Cool Blessing. Gain 1 stack of Cool Blessing every 7s (max: 3 stacks). Battle starts with max stacks.",
+        "mid_e": "The host gains 12% (18% at 5\u2605) Total DMG. Enemies attacked by the host take 10% (15% at 5\u2605) Total DMG for 4s. CD: 8.0s.",
+        "bot_e": "When the host is on the field, attacks by any ally have a 15% (30% at 5\u2605) chance to inflict 30% (60% at 5\u2605) Move Speed for 4.0s. CD: 10s. This stigma effect cannot stack.",
+        "two_piece": "When the host is attacking, there is 12% chance of summoning a HOMU King (summoned entity) who knocks down surrounding enemies and deals 450% ATK of Physical DMG (DMG calculations are based on the host's stats) against them. CD: 16s.",
+        "three_piece": "All allies (including illusions) receive a Flame Wreath when HOMU King appears, dealing 893 Fire DMG every 0.5s to surrounding enemies. Flame wreath lasts 6s.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/a7/Kiana_-_Beach_Party_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220112130650",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/0/05/Mei_-_Beach_Party_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220112130555",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/c/cc/Bronya_-_Beach_Party_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220112130441",
+        "obtainable": [
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Beethoven",
+        "top_e": "Gain 10% (20% at 5\u2605) Max HP. Heavy Weapon user equip bonus: Gain 10% (20% at 5\u2605) Total DMG Multiplier.",
+        "mid_e": "After exit: Team mates gain 9% (15% at 5\u2605) Melee Physical DMG buff (does not stack) and take 10% (20% at 5\u2605) less Physical DMG from enemy hits.",
+        "bot_e": "On the field: Gain 9 (15 at 5\u2605) SP. CD: 18.0s (15.0s at 5\u2605).",
+        "two_piece": "After casting the Ultimate, next team member switching in gains a 40% Melee Physical DMG buff (does not stack) for 10s. CD: 20s.",
+        "three_piece": "After casting the Ultimate, next team member switching in takes 30% less Total DMG (effect does not stack) for 10s and restores HP equal to 20% of the host's Max HP. CD: 20s.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/a6/Beethoven_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190418215502",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/87/Beethoven_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190418215501",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/7/7a/Beethoven_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190418215502",
+        "obtainable": [
+            "Foundry",
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Benares - Awakening",
+        "top_e": "Boosts Total DMG by 10.0% (20.0% at 5\u2605). Boosts Lightning DMG by 25.0% (50.0% at 5\u2605) in Herrscher Form.",
+        "mid_e": "Boosts Lightning DMG by 15.0% (25.0% at 5\u2605). Upon entry or casting weapon active, host deals 8.0% (15.0% at 5\u2605) bonus Total DMG for 9s. Can be refreshed.",
+        "bot_e": "Boosts Lightning DMG by 15.0% (25.0% at 5\u2605). In Herrscher Form, attacks restore 3.0 (6.0 at 5\u2605) SP on hit. CD: 6s.",
+        "two_piece": "Boosts Total DMG by 20.0%. In Herrscher Form, attacks inflict Thunderblitz on enemies for 7s (cannot be stacked but can be refreshed). Enemies in Thunderblitz take 50.0% ATK of bonus Lightning DMG for each hit. CD: 1s.",
+        "three_piece": "Boosts Lightning DMG by 20.0%. Host takes 15.0% less Total DMG. Enemies in Thunderblitz take 15.0% bonus Lightning DMG.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/11/Benares_-_Awakening_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226021838",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/5f/Benares_-_Awakening_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226021831",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/86/Benares_-_Awakening_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226021824",
+        "obtainable": [
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Bianka - Theatre",
+        "top_e": "Physical DMG increases by 15.0% (30.0% at 5\u2605). Landing Charged ATK 10 times enhances host and boost her Crit DMG by 25.0% (45.0% at 5\u2605) for 15s. Triggering it again resets the duration.",
+        "mid_e": "Total DMG increases by 10.0% (20.0% at 5\u2605). Triggering Ultimate Evasion Skill or Retaliation Skill enhances host and boosts Total DMG by 10.0% (20.0% at 5\u2605) for 15s. Triggering it again resets the duration.",
+        "bot_e": "Crit Rate increases by 5.0% (10.0% at 5\u2605). Any team member triggering global Time Slow restores 0.5 (2.0 at 5\u2605) for host. CD: 3s. Triggering global Time Slow on the field herself enhances host and further boosts her Crit Rate by 2.5% (5.0% at 5\u2605) for 15s. Triggering it again resets the duration.",
+        "two_piece": "Total DMG increases by 30.0%. Palatinus Equinox equip bonus: Triggering an enhancement from any stigma piece also triggers all other enhancements from other pieces in the set.",
+        "three_piece": "Physical DMG increases by 30.0%. Triggering World's a Stage boosts Physical DMG dealt by host's next Ultimate by 80.0% and makes it restore 200.0 HP.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/8f/Bianka_-_Theatre_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220224135801",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/e/ea/Bianka_-_Theatre_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220224135825",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/c/ce/Bianka_-_Theatre_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220224135845",
+        "obtainable": [
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Bronya - N-EX",
+        "top_e": "Total DMG increases by 15.0% (30.0% at 5\u2605). Also, Combo ATKs summon a bird to dive-bomb the target on impact, dealing 100.0% (200.0% at 5\u2605) Ice DMG to a small area. This is seen as Combo DMG with a CD of 8s.",
+        "mid_e": "Total DMG increases by 15.0% (30.0% at 5\u2605). With [Falconwings] active, Total DMG received is reduced by 15.0% (30.0% at 5\u2605).",
+        "bot_e": "When QTE deals DMG, grants 1 [Falconwings] stack. Each stack increases Ice DMG by 15.0% (25.0% at 5\u2605) lasting for 20s, CD: 5s. 3 stacks max. Triggering it again resets the duration.",
+        "two_piece": "Gain 1 [Falconwings] stack when performing an Ultimate or Combo ATK with this equipped. CD: 3s, each trigger condition CD calculated separately. Max stacked [Falconwings] increases Total DMG by 20.0%. Used with QTE, when QTE and [Falconwings] add together, if there are 3 [Falconwings] stacks, increases the Ice DMG by 10.0% for every stack granted by the B-piece of this set.",
+        "three_piece": "Basic ATKs (including Charged and Combos) deal an additional 25.0% Ice DMG upon impact. CD 0.3s per target. Max stacked [Falconwings] restore 30.0 HP per second.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/d/d8/Bronya_-_N-EX_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220113171559",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/8f/Bronya_-_N-EX_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220113171629",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/0/0b/Bronya_-_N-EX_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220113171658",
+        "obtainable": [
+            "Events",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Bronya - Shadow",
+        "top_e": "Basic attacks (including combo and charged attacks) gain 20% (38% at 5\u2605) Ranged Physical DMG.",
+        "mid_e": "Generates a Dark Domain. Character gains 20% (35% at 5\u2605) Total DMG Reduction but loses 40% Move Speed.",
+        "bot_e": "Generates a Dark Aura after staying in a small AOE for 3s. In the Dark Aura, gain 20% (35% at 5\u2605) Attack Speed. Effect is removed upon leaving the Aura (effects only apply for the character generating the Aura).",
+        "two_piece": "After a charged attack using cannon or missile launchers, the next charged attack made after an interval of greater than 1s but less than 4s gains 15% Total DMG Multiplier. This DMG bonus stacks up to 3 times. Adding a stack resets the duration.",
+        "three_piece": "Bronya equip bonus: Gain 60% Crit DMG.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/11/Bronya_-_Shadow_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225202016",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/f/fc/Bronya_-_Shadow_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225202011",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/5f/Bronya_-_Shadow_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225201958",
+        "obtainable": [
+            "Foundry",
+            "Exchange House"
+        ]
+    },
+    {
+        "name": "Caravaggio",
+        "top_e": "Gain 13% (25% at 5\u2605) Total DMG Multiplier. When an entity summoned by the host is present, the host also gains 6% (15% at 5\u2605) Total DMG Reduction.",
+        "mid_e": "Gain 13% (25% at 5\u2605) Lightning DMG. When an entity summoned by the host is present, team also gains 4% (10% at 5\u2605) All Elemental DMG (does not stack).",
+        "bot_e": "Gain 4% (10% at 5\u2605) faster Move and ATK Speeds. When an entity summoned by the host is present, gain another 4% (10% at 5\u2605) faster Move and ATK speeds.",
+        "two_piece": "For each hit dealt by an entity summoned by the host (CD: 2s), team gains 5% Elemental DMG (unique effect). Stacks up to 4 times. At 4 stacks, enter Natural State for 6s (effect no longer stacks at this state). Natural State: Gain another 20% Elemental DMG. All buffs are cleared when Natural State ends.",
+        "three_piece": "For every friendly summoned entity present, the host gains 15% Total DMG Reduction. CD: 10s. Stacks up to 3 times. Each hit taken removes 1 stack.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/17/Caravaggio_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190418104740",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/4/40/Caravaggio_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190418104740",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/f/fb/Caravaggio_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190418104739",
+        "obtainable": [
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Cecilia Schariac",
+        "top_e": "Two stars, one black and one white, glitter overhead (collect the 2-piece set to illuminate them). Black Star shines: Basic attacks gain 30% (50% at 5\u2605) Physical DMG. White Star shines: Combo attacks gain 30% (50% at 5\u2605) Physical DMG.",
+        "mid_e": "Two stars, one black and one white, glitter overhead (collect the 2-piece set to illuminate them). Black Star shines: Basic attacks recover 1 (4 at 5\u2605) more SP; CD: 1.5s. White Star shines: Combo attacks heal self for 1% (2% at 5\u2605) HP; CD: 1.5s.",
+        "bot_e": "Two stars, one black and one white, glitter overhead (collect the 2-piece set to illuminate them). Black Star shines: Gain 25% (40% at 5\u2605) Attack Speed. White Star shines: Gain 20% (40% at 5\u2605) Total DMG Reduction against enemy attacks.",
+        "two_piece": "Illuminates a black star and a white star. Black Star shines: Basic attacks have a 20% chance to gain 1,000% ATK of Physical DMG to non-Boss enemies; CD: 5s. White Star shines: combo attacks gain 30% Crit Rate.",
+        "three_piece": "When deployed, every time the two stars switch, character gains 12% Total DMG Multiplier. Stacks up to 3 times. Stacks are cleared once the character exits the battle.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/0/0b/Cecilia_Schariac_%28Stigmata%29_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220219084213",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/c/c3/Cecilia_Schariac_%28Stigmata%29_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220219084207",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/0/0c/Cecilia_Schariac_%28Stigmata%29_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220219084201",
+        "obtainable": [
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Children",
+        "top_e": "Host deals 10.0% (20.0% at 5\u2605) bonus Physical DMG and after landing a Charged ATK, she deals 15.0% (30.0% at 5\u2605) bonus Crit DMG for 4s (can be stacked).",
+        "mid_e": "Host deals 10.0% (20.0% at 5\u2605) bonus Total DMG and against single enemies, she deals 10.0% (20.0% at 5\u2605) bonus Crit DMG.",
+        "bot_e": "Host has 7.5% (15% at 5\u2605) bonus Crit Rate. Every attack against the same target deals 2% (3% at 5\u2605) more Physical DMG (8% [15% at 5\u2605] max). Reset if no attacks in 10s or target changes.",
+        "two_piece": "When Charged ATKs hit, if there is no more than one enemy within 8m, host deals 45.0% bonus Total DMG for 6s.",
+        "three_piece": "Charged ATKs deal 200.0% ATK of bonus Physical DMG. CD: 6s. Asuka equip bonus: Charged ATKs deal 40.0% bonus Physical DMG and in enhanced form, the CD drops to 3s.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/4/48/Children_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211217185518",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/d/d9/Children_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211217185510",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/7/7f/Children_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211217185504",
+        "obtainable": [
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Cleopatra",
+        "top_e": "Gain 28% (41% at 5\u2605) Total DMG Multiplier against enemy with broken Elite Shield.",
+        "mid_e": "Attacks against stunned enemies gain 48% (82% at 5\u2605) Total DMG Multiplier.",
+        "bot_e": "Attacks against paralyzed enemies gain 48% (82% at 5\u2605) Total DMG Multiplier.",
+        "two_piece": "Gain 25% Move Speed. Kiana or Kallen equip bonus: Gain 20% Max HP in battle.",
+        "three_piece": "Enemies further away get hit harder. Ranged attacks gain 5% Physical DMG for every meter of distance to the target. Max stacks: 10.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/b/b3/Cleopatra_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180424082944",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/e/e4/Cleopatra_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180424083030",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/0/06/Cleopatra_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180424083110",
+        "obtainable": [
+            "Foundry",
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Cocolia",
+        "top_e": "Basic ATKs (including Combo and Charged ATKs) gain 11% (20% at 5\u2605) Physical DMG. When an entity summoned by the host is on the field, gain 10% (25% at 5\u2605) Crit DMG.",
+        "mid_e": "Gain 4% (10% at 5\u2605) Max HP in battle. Enemy attacks suffer 9% (15% at 5\u2605) Total DMG Reduction.",
+        "bot_e": "The host gains 7% (13% at 5\u2605) Attack Speed. After Ultimate Evasion, unit summoned by the host gains 19% (40% at 5\u2605) Physical DMG for 6s. CD: 8s.",
+        "two_piece": "Receives a shield when an entity summoned by the host is attacked. When active, the shield provides 50% Total DMG Reduction against incoming attacks and lasts 7s. CD: 21s.",
+        "three_piece": "The Charging Shield explodes when broken, dealing 500% ATK of Physical DMG to surrounding enemies in a large AOE.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/c/c7/Cocolia_%28Stigmata%29_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211217191813",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/0/03/Cocolia_%28Stigmata%29_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211217191723",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/6f/Cocolia_%28Stigmata%29_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211217191624",
+        "obtainable": [
+            "Foundry"
+        ]
+    },
+    {
+        "name": "Columbus",
+        "top_e": "Host deals 10.0% (20.0% at 5\u2605) bonus Physical DMG and after landing a Charged ATK, she deals 15.0% (30.0% at 5\u2605) bonus Crit DMG for 4s (can be stacked).",
+        "mid_e": "Host deals 10.0% (20.0% at 5\u2605) bonus Total DMG and against single enemies, she deals 10.0% (20.0% at 5\u2605) bonus Crit DMG.",
+        "bot_e": "Host has 7.5% (15.0% at 5\u2605) bonus Crit Rate. Every attack against the same target deals 2% (3% at 5\u2605) more Physical DMG (8% [15% at 5\u2605] max). Reset if no attacks in 10s or target changes.",
+        "two_piece": "When Charged ATKs hit, if there is no more than one enemy within 8m, host deals 45.0% bonus Total DMG for 6s.",
+        "three_piece": "Charged ATKs deal 200.0% ATK of bonus Physical DMG. CD: 6s. Asuka equip bonus: Charged ATKs deal 40.0% bonus Physical DMG and in enhanced form, the CD drops to 3s.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/4/44/Columbus_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20210408214647",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/91/Columbus_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20210408214714",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/7/7c/Columbus_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20210408214719",
+        "obtainable": [
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Dante",
+        "top_e": "The host gains 7.0% (15.0% at 5\u2605) Crit Rate. The host gains Mantle when hit by an enemy which boosts her Physical DMG by 4.0% (8.0% at 5\u2605) for 10s; CD: 10s. The host gains Perfect Mantle upon Ultimate Evasion or Retaliation, which boosts her Physical DMG by 8.0% (16.0% at 5\u2605) for 10s; triggering this effect again resets the duration. Perfect Mantle will replace Mantle in cases of overlap.",
+        "mid_e": "The host gains 15.0% (30.0% at 5\u2605) Physical DMG. The host gains Mantle when hit by an enemy, which boosts her Crit DMG by 7.5% (15.0% at 5\u2605) for 10s; CD: 10s. The host gains Perfect Mantle upon Ultimate Evasion or Retaliation, which boosts her Crit DMG by 15.0% (30.0% at 5\u2605) for 10s; triggering this effect again resets the duration. Perfect Mantle will replace Mantle in cases of overlap.",
+        "bot_e": "The host gains 7.0% (15.0% at 5\u2605) Attack Speed. The host gains Mantle when hit by an enemy, which boosts her Total DMG by 5.0% (10.0% at 5\u2605) for 10s; CD: 10s. The host gains Perfect Mantle upon Ultimate Evasion or Retaliation, which boosts her Total DMG by 10.0% (20.0% at 5\u2605) for 10s; triggering this effect again resets the duration. Perfect Mantle will replace Mantle in cases of overlap.",
+        "two_piece": "The host gains 20.0% Crit DMG. The host gains 30.0% Physical DMG for 10s upon entering Burst mode or hitting an enemy with Charged ATK in Burst mode; triggering this effect again resets the duration. Durandal equip bonus: CD of Ultimate Evasion / Retaliation shortens by 20%.",
+        "three_piece": "In Burst mode, the host deals 30.0% more DMG against shields, and her Charged ATKs can impair unimpaired enemies, reducing their DEF by 40.0% for 8s. Durandal equip bonus: The impairing debuff reduces enemy DEF by 60.0% instead.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/54/Dante_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20200516052148",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/67/Dante_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20200516052145",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/b/be/Dante_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20200516052150",
+        "obtainable": [
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Dark Jixuanyuan",
+        "top_e": "When global Time Fracture is triggered, deal 300% (450% at 5\u2605) ATK of Physical DMG to surrounding enemies and knock them back. CD: 20s.",
+        "mid_e": "When global Time Fracture is active, gain 15% (30% at 5\u2605) Crit Rate.",
+        "bot_e": "When global Time Fracture is active, gain 15% (30% at 5\u2605) Move Speed and 10% (25% at 5\u2605) Attack Speed.",
+        "two_piece": "When global Time Fracture is active, gain 40% Physical DMG. Kiana or Kallen equip bonus: Basic ATKs (including Combo and Charged ATKs) gain 4 additional SP. CD: 2s.",
+        "three_piece": "When Time Fracture is active, active skills consumes 30% less SP.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/97/Dark_Jixuanyuan_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225201640",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/0/07/Dark_Jixuanyuan_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225201617",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/c/c1/Dark_Jixuanyuan_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225201737",
+        "obtainable": [
+            "Foundry"
+        ]
+    },
+    {
+        "name": "Darwin",
+        "top_e": "For every 15 Combo Hit Count, gain 4% (8% at 5\u2605) Lightning DMG dealt. Stacks up to 4 times. DMG buff applies for current combat (host's death dispels the buff).",
+        "mid_e": "For every 1 hit taken by the host, gain 4% (7% at 5\u2605) Total DMG Reduction. Stacks up to 4 times. DMG Reduction buff applies for current combat (host's death dispels the buff).",
+        "bot_e": "For every Ultimate Evasion performed by host, gain 3% (6% at 5\u2605) Total DMG Multiplier. Stacks up to 4 times. DMG buff applies for current combat (host's death dispels the buff).",
+        "two_piece": "Gains a shield upon entry. The shield disappears upon taking an enemy hit and inflicts a 3s paralysis on nearby enemies. Shield appears again after 10s. When the shield is active, character gains 20% Lightning DMG.",
+        "three_piece": "Gain 20% Lightning DMG and 20% faster Move Speed. The shield of the Origin of Shields disappears after taking 2 hits.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/c/ce/Darwin_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20181213094036",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/d/dc/Darwin_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20181213094040",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/4/44/Darwin_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20181213094043",
+        "obtainable": [
+            "Foundry"
+        ]
+    },
+    {
+        "name": "Dickens",
+        "top_e": "Boosts Physical DMG by 15.0% (30.0% at 5\u2605). Basic, Combo, and Charged ATKs grant 1 charge on hit. 5 charges max. CD: 1s. Ultimate consumes all charges and every charge consumed restores 40.0 HP.",
+        "mid_e": "Boosts Physical DMG by 12.0% (30.0%). Basic, Combo, and Charged ATKs grant 1 charge on hit. 5 charges max. CD: 1s. Ultimate consumes all charges and every charge consumed deals 60.0% (100% at 5\u2605) ATK of Physical DMG in a small area.",
+        "bot_e": "Boost Total DMG by 10.0% (25.0% at 5\u2605). Basic, Combo, and Charged ATKs grant 1 charge on hit. 5 charges max. CD: 1s. Ultimate consumes all charges and every charge consumed restores 0.5 (1.0 at 5\u2605) SP.",
+        "two_piece": "Basic, Combo, and Charged ATKs deal 20.0% bonus Physical DMG and an additional 15.0% bonus Physical DMG against MECH enemies. Casting Ultimate boosts Total DMG of Basic, Combo, and Charged ATKs by 20.0% for 8s. Can be refreshed.",
+        "three_piece": "Casting Ultimate reduces Total DMG taken by 30.0% and improves Ignore Interrupt for 8s. When equipped by the Olenyevas, charges of individual stigmata start at 5 and max at 8. The starting charge bonus can proc once every 10min in Open World.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/7/79/Dickens_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220111073832",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/17/Dickens_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220111073837",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/ad/Dickens_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220111073842",
+        "obtainable": [
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Dirac",
+        "top_e": "Gain 4.0% (10.0% at 5\u2605) Crit Rate. After entry or unleashing weapon skills, host gains another 4.0% (10.0% at 5\u2605) Crit Rate for 9s. This effect cannot stack.",
+        "mid_e": "Ultimate/Burst ATKs deal 14.0% (26.0% at 5\u2605) more Total DMG. During Burst mode, the host gains 14.0% (26.0% at 5\u2605) Total DMG, and gain another 0.9% (1.5% at 5\u2605) Total DMG per second after unleashing Ultimate or entering Burst Mode; stacks up to 9 times; lasts 9s, during which the effect cannot be triggered again.",
+        "bot_e": "Gain 11.0% (20.0% at 5\u2605) Physical DMG. After Ultimate Evasion or triggering evasion skill, host gains 0.8 (1.5 at 5\u2605) SP/s for 10s. Does not trigger again during this time.",
+        "two_piece": "If any 2 stigmata effects are active, gain 35.0% Physical DMG. When this effect is triggered, the durations of both stigmata effects are reset and extended to 14s.",
+        "three_piece": "If all 3 stigmata effects are active, Ultimate/Burst mode ATKs also apply Impair to non-impaired enemies on hit, lowering their DEF by 50.0% for 3s. When this effect is triggered, the durations of all 3 stigmata effects are reset and extended to 18s.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/9e/Dirac_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225202506",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/32/Dirac_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225202458",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/17/Dirac_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225202514",
+        "obtainable": [
+            "Foundry",
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Dracula",
+        "top_e": "Attacks against bleeding enemies gain 25% (40% at 5\u2605) Physical DMG.",
+        "mid_e": "Hits on bleeding enemies recover 1.5% (3.0% at 5\u2605) HP and 1.5% (3.0% at 5\u2605) SP for self. CD: 4s.",
+        "bot_e": "For every bleeding enemy on the battlefield, the host gains 6% (12% at 5\u2605) Attack Speed and 2.0% (4.0% at 5\u2605) Crit Rate. Stacks up to 3 times.",
+        "two_piece": "Upon scoring a crit hit, summon 1 Kindred that lasts 10s, and resets the duration of all existing Kindreds. The Kindred deals 50% ATK of Physical DMG (DMG is directly based on the host and benefit from the host's stat bonuses). Up to 3 Kindreds can exist at the same time, each increasing the host's Crit DMG by 15%.",
+        "three_piece": "When HP is below 1%, activate Revival Mode that lasts 5s, during which the host cannot attack nor move but is invincible and heals 20% of HP per second. When Revival Mode ends, knock surrounding enemies airborne and bleed them for 5s, dealing 20% ATK of Physical DMG per second. CD: 300s.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/e/e4/Dracula_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180621202820",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/2d/Dracula_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180621202823",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/6a/Dracula_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180621202824",
+        "obtainable": [
+            "Foundry",
+            "Exchange House",
+            " Dorm Supply",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Edwin Hubble",
+        "top_e": "After an attack, generate a Frozen Nova explosion at the target's original position, freezing nearby enemies for 0.5s (1.0s at 5\u2605) and dealing a one-time 200% (300% at 5\u2605) ATK of Ice DMG. CD: 8.0s.",
+        "mid_e": "Gain 10% (20% at 5\u2605) Ice Resistance. Attacks have a 10% (30% at 5\u2605) change to inflict 10% (20% at 5\u2605) Move Slow on the enemy for 4s. CD: 12s.",
+        "bot_e": "Gain 15% (30% at 5\u2605) Total DMG Multiplier against frozen or slowed enemies.",
+        "two_piece": "When attacking slowed enemies, the host gains a 15% Attack Speed buff for 4s. Triggering this again resets the duration.",
+        "three_piece": "Gain 30% Ice DMG. Combo/charged attacks further gain 10% Total DMG Multiplier.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/7/72/Edwin_Hubble_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226020906",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/82/Edwin_Hubble_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226020936",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/f/f2/Edwin_Hubble_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226020922",
+        "obtainable": [
+            "Foundry"
+        ]
+    },
+    {
+        "name": "Einstein",
+        "top_e": "Charged attacks gain 22% (30% at 5\u2605) DMG against shields. At below 33% HP, gain 28% (41% at 5\u2605) Total DMG Multiplier.",
+        "mid_e": "When charged attacks hit the enemy, heal character for 30 (50 at 5\u2605) HP. CD: 3s. Hits made against MECH-type enemies also restore 1.2 (2.0 at 5\u2605) SP. CD: 3s.",
+        "bot_e": "Charged attacks gain 12% (20% at 5\u2605) Total DMG Multiplier. Hits made against MECH-type enemies accelerates the character's Attack Speed by 11% (15% at 5\u2605) for 3s Triggering this skill again resets the duration.",
+        "two_piece": "Gain 5% Total DMG Multiplier for every meter of distance from the enemy. Bonus stacks up to 5 times.",
+        "three_piece": "Get Total DMG Reduction when closer to the enemy, up to a max of 40% DMG Reduction.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/18/Einstein_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225163524",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/8c/Einstein_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225163517",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/d/d5/Einstein_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225163300",
+        "obtainable": [
+            "Foundry"
+        ]
+    },
+    {
+        "name": "Einstein - Band",
+        "top_e": "Summons a robot assistant (summoned entity) to assist in combat and unlocks its laser attack ability that deals substantial Physical DMG. When there are no less than 2 enemies on the battlefield, the host deals 10% (25% at 5\u2605) more Total DMG.",
+        "mid_e": "Summons a robot assistant (summoned entity) to assist in combat and unlocks its shockwave attack ability that deals AOE Physical DMG and knocks down the target. When there are no less than 3 enemies on the battlefield, randomly knock a nearby enemy airborne and inflicts a 1s Time Lock on it every 6s.",
+        "bot_e": "Summons a robot assistant (summoned entity) to assist in combat and unlock its Flash Grenade ability that deals continuous Physical DMG. When there are no less than 4 enemies on the battlefield, there is a 10% (25% at5\u2605) chance for the host to ignore DMG taken.",
+        "two_piece": "Robot assistant's Flash Bomb, Shockwave, and Laser attacks have a 30% chance of dealing DMG 2 times.",
+        "three_piece": "Removes the enemy number restrictions from all stigmata skills in this stigmata set. The host's attacks gain 15% Total DMG Multiplier.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/12/Einstein_-_Band_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225203009",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/2e/Einstein_-_Band_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225203002",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/2d/Einstein_-_Band_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225202954",
+        "obtainable": [
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Ekaterina",
+        "top_e": "When Combo Hit Count exceeds 25, gain 44% (61% at 5\u2605) DEF in battle.",
+        "mid_e": "When Combo Hit Count exceeds 40, gain 32% (41% at 5\u2605) Physical DMG.",
+        "bot_e": "When Combo Hit Count exceeds 10, gain 18% (31% at 5\u2605) Move Speed.",
+        "two_piece": "Gain 15% CRT in battle. MECH-type battlesuit equip bonus: Gain 15% Max SP in battle.",
+        "three_piece": "When Combo Hit Count exceeds 70, gain 120% Crit DMG.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/13/Ekaterina_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180424083436",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/9e/Ekaterina_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180424083509",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/c/c2/Ekaterina_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180424083522",
+        "obtainable": [
+            "Foundry",
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Elysia",
+        "top_e": "Physical DMG increases by 12.0% (25.0% at 5\u2605). Crit DMG from Basic/Combo/Charged ATKs increases by 10% (20.0% at 5\u2605).",
+        "mid_e": "Physical DMG increases by 15.0% (30.0% at 5\u2605). Ultimate Evasion Skill has 10.0% (20.0% at 5\u2605) shorter CD.",
+        "bot_e": "Total DMG increases by 12.0% (25.0% at 5\u2605) and Crit DMG increases by 8.0% (15.0% at 5\u2605). Charged ATKs boosts Crit DMG by 8.0% (15.0% at 5\u2605) on hit for 15s.",
+        "two_piece": "Total DMG increases by 25.0%. On hit, Charged ATKs make every attack in the next 5s deal 20.0% ATK of Physical DMG (can only be triggered once every 0.3s on each target). Host takes 20.0% less Total DMG from enemies within 5 meters.",
+        "three_piece": "Crit DMG from ranged attacks increases by 30.0%. Casting Ultimate makes ranged attacks deal 20.0% ATK of bonus Physical DMG (can only be triggered once every 0.3s on each target) for 10.0s (hitting enemies with Charged ATKs extends the duration by 1s for up to 10s of extension). Charged ATKs restore 200 HP on hit. CD: 5s.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/95/Elysia_%28Stigmata%29_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211121221334",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/f/f0/Elysia_%28Stigmata%29_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211121221441",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/b/b1/Elysia_%28Stigmata%29_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211121221520",
+        "obtainable": [
+            "Foundry",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Formals",
+        "top_e": "Basic ATKs (including Combo and Charged ATKs) gain 10% (20% at 5\u2605) Physical DMG. At Dance Level 2 or higher, gain 10% (20% at 5\u2605) Crit DMG.",
+        "mid_e": "Gain 10% (20% at 5\u2605) Elemental DMG. At Dance Level 1 or higher, take 10% (20% at 5\u2605) less indirect Physical DMG.",
+        "bot_e": "Gain 10% (20% at 5\u2605) Move Speed. When the Dance Level reaches 1, gain 6% (15% at 5\u2605) Attack Speed.",
+        "two_piece": "When the host is on the field, gain 1 Dance Level for every 5s on the battlefield (Max Dance Level: 3). The 3 Dance Levels buff Total DMG Multiplier by 15%, 20%, and 25% respectively. The Dance Level is reset to 0 when the host exits the field.",
+        "three_piece": "When the Dance Level reaches 3, attacks will cause an explosion, dealing 300% ATK of Physical DMG to surrounding enemies. CD: 6s.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/1a/Formals_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225204313",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/4/47/Formals_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225204307",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/69/Formals_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225204300",
+        "obtainable": [
+            "Events"
+        ]
+    },
+    {
+        "name": "Fu Hua - Margrave",
+        "top_e": "Deals 10.0% (20.0% at 5\u2605) more Fire DMG; with Fyreheart active, all team members gain 10.0% (20.0% at 5\u2605) Fire, Ice and Lightning DMG. This effect cannot stack.",
+        "mid_e": "Deals 15.0% (30.0% at 5\u2605) more Fire DMG; with Fyreheart active, all team members heal 10 (20 at 5\u2605) HP per second. This effect cannot stack.",
+        "bot_e": "ATK Speed increases by 10.0% (20% at 5\u2605); with Fyreheart active, all enemies less than 40 meters away from any team member suffer Warhaunt (effect does not stack), taking 7.0% (14.0% at 5\u2605) more Total DMG.",
+        "two_piece": "Deals 30.0% more Fire DMG; after spending no less than 25 SP in once action, the team gains Fyreheart for 18s (triggering this again resets the duration).",
+        "three_piece": "When spending no less than 60/120 SP in one action, Fyreheart triggered thereupon causes enemies affected by Warhaunt to take 17.0%/20.0% more Total DMG (Warhaunt effect does not stack). Fu Hua equip bonus: Minimum SP cost to activate Fyreheart is reduced to 15.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/88/Fu_Hua_-_Margrave_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226023543",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/25/Fu_Hua_-_Margrave_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226023538",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/3f/Fu_Hua_-_Margrave_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226023531",
+        "obtainable": [
+            "Events",
+            "Foundry",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Fu Hua Musician",
+        "top_e": "When attacking ignited enemies or enemies with Firebrand, deal 100% (200% at 5\u2605) ATK of Fire DMG across a 3.5-meter radius AOE. CD: 3s.",
+        "mid_e": "After exit, team gains 5% (10% at 5\u2605) Fire DMG. This effect cannot stack. When on the field, the host gains 5% (10% at 5\u2605) All Elemental Resistance.",
+        "bot_e": "Gain 10% (20% at 5\u2605) Fire DMG. Attacks against enemies who are ignited or bearing the Firebrand gain 5% (10% at 5\u2605) Total DMG Multiplier.",
+        "two_piece": "For 10s after exit, team gains 10% bonus total DMG, and host deals 5% bonus total DMG additionally. This effect cannot stack.",
+        "three_piece": "Gain 30% Fire DMG and 20% Max HP in battle.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/29/Fu_Hua_Musician_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190418215840",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/7/79/Fu_Hua_Musician_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190418215840",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/93/Fu_Hua_Musician_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190418215840",
+        "obtainable": [
+            "Foundry"
+        ]
+    },
+    {
+        "name": "Fuxi",
+        "top_e": "Attacks against frozen enemies gain 58% (92% at 5\u2605) Elemental DMG.",
+        "mid_e": "Attacks against paralyzed enemies gain 58% (92% at 5\u2605) Elemental DMG.",
+        "bot_e": "Attacks against ignited enemies gain 34% (51% at 5\u2605) Elemental DMG.",
+        "two_piece": "Gain 15% to Max HP and shortens CDs of host's Ultimate and Evasion skills by 20% in battle.",
+        "three_piece": "When there are 3 or more enemies on the battlefield, take 50% less Elemental DMG and attacks gain 60% Elemental DMG.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/7/79/Fuxi_%28Stigmata%29_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180424083950",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/a0/Fuxi_%28Stigmata%29_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180424084029",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/61/Fuxi_%28Stigmata%29_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180424084048",
+        "obtainable": [
+            "Foundry",
+            "Exchange House",
+            " Dorm Supply",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Gustav Klimt",
+        "top_e": "Gain 10% (20% at 5\u2605) Physical DMG. Hits taken from an enemy affected by Hematic Curse gain 10% (20% at 5\u2605) Total DMG Reduction.",
+        "mid_e": "Upon using weapon active skill, team gains 10% (20% at 5\u2605) Physical DMG for 8s. CD: 16s. Effect cannot stack.",
+        "bot_e": "Attacks made against an enemy with Hematic Curse have a 40% (100% at 5\u2605) chance to heal the team for 50 (80 at 5\u2605) HP. CD: 3s.",
+        "two_piece": "Upon using weapon active skill (CD: 16s), apply a 8s Hematic Curse to enemies within a 6-meter AOE center on self. Enemies affected by Hematic Curse take 10% more Physical DMG.",
+        "three_piece": "Character takes 50% less indirect DMG. Hematic Curse duration is extended by 2s.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/51/Gustav_Klimt_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226023109",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/0/01/Gustav_Klimt_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226023102",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/a3/Gustav_Klimt_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226023115",
+        "obtainable": [
+            "Exchange House",
+            " Dorm Supply",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Hanabi Fireworks",
+        "top_e": "Gain 10% (25% at 5\u2605) Melee Physical DMG.",
+        "mid_e": "When a branch/charged attack hits an enemy, it will cause an additional ? (200% at 5\u2605) ATK of Fire DMG, CD: 3s.",
+        "bot_e": "When an enemy is in range, recover ? (30 at 5\u2605) HP/sec.",
+        "two_piece": "Upon using weapon active skill, surrounding enemies take 100% ATK of Physical DMG and 100% ATK of Fire DMG every 0.5s for 6s. Triggering this again resets the duration.",
+        "three_piece": "Gain 10% Crit Rate and 60% Crit DMG to self.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/a4/Hanabi_Fireworks_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190802222817",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/d/db/Hanabi_Fireworks_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190802222818",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/29/Hanabi_Fireworks_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190802222819",
+        "obtainable": [
+            "Events"
+        ]
+    },
+    {
+        "name": "Heartfelt Memories",
+        "top_e": "In combat, when Max HP is greater than 800, gain 1% (4% at 5\u2605) Physical DMG for every 400 HP exceeded. Stacks up to 7 times.",
+        "mid_e": "In combat, when Max HP is more than 800, gain 1% (3% at 5\u2605) Physical DMG Reduction against enemy hits for every 400 HP exceeded. Stacks up to 7 times.",
+        "bot_e": "In combat, when Max HP is higher than 800, the host gains 1% (2% at 5\u2605) Attack Speed for every 400 HP exceeded. Stacks up to 7 times.",
+        "two_piece": "Gain 30 CRT and 40% Crit DMG.",
+        "three_piece": "Gain 15% Max HP in battle. Reduce skill activation SP cost by 30%.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/f/f8/Heartfelt_Memories_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211217184748",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/23/Heartfelt_Memories_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211217184650",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/23/Heartfelt_Memories_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211217184825",
+        "obtainable": [
+            "Events"
+        ]
+    },
+    {
+        "name": "Higokumaru",
+        "top_e": "The host gains 30% (45% at 5\u2605) Fire DMG. When Basic ATKs (including Combo and Charged ATKs) break shields, summons Higokumaru with a base ATK of 200 (600 at 5\u2605) to unleash a continuous 6s Fire Breath dealing 320% of its ATK of Fire DMG. The summoned entity has a 10s CD.",
+        "mid_e": "Takes 15% (30% at 5\u2605) less Physical DMG from enemy hits. Upon Ultimate Evasion, summons Higokumaru with a base ATK of 200 (600 at 5\u2605) to call forth a Flame Pillar dealing 500% of its ATK of Fire DMG. The summoned entity has a 10s CD.",
+        "bot_e": "For every ignited enemy on the field, gain 3% (6% at 5\u2605) Attack Speed. Stacks up to 3 times. Deals 30% (60% at 5\u2605) ATK of Fire DMG every second to surrounding enemies.",
+        "two_piece": "For every Combo Hit Count, Higokumaru's attacks gain 1% Fire DMG. Stacks up to 40 times. Host also gains the same fire damage bonus.",
+        "three_piece": "Upon entering the battle, if Combo Hit Count is less than 50, instantly increase the count to 50. CD: 30s. Fox Flame can gain 40 more stacks.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/31/Higokumaru_%28Stigmata%29_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225203737",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/14/Higokumaru_%28Stigmata%29_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225203731",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/39/Higokumaru_%28Stigmata%29_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225203744",
+        "obtainable": [
+            "Foundry",
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Holmes",
+        "top_e": "Host deals 9.0% (18.0% at 5\u2605) bonus Total DMG and host-inflicted Bleed lasts 18.0% (36.0% at 5\u2605) longer.",
+        "mid_e": "All team members' QTEs deal 9.0% (18.0% at 5\u2605) bonus Total DMG against bleeding enemies (cannot be stacked).",
+        "bot_e": "After host deals damage to a bleeding enemy, team deals 9.0% (18.0% at 5\u2605) bonus Physical DMG for 12s (cannot be stacked but can be reset).",
+        "two_piece": "Host attacks inflict a 5s Sanguine Stain on bleeding enemies, making them take 20.0% bonus Physical DMG (cannot stack).",
+        "three_piece": "Sanguine Stain lasts 3s longer.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/c/c6/Holmes_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211217185718",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/5c/Holmes_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211217185712",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/b/b3/Holmes_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211217185705",
+        "obtainable": [
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Homecoming Theater",
+        "top_e": "For hits on enemies, the host gains 5% (10% at 5\u2605) Total DMG Reduction for 15s. CD: 5s. Stacks up to 3 times. New stacks do not reset duration. Starts battle with 3-stack buff.",
+        "mid_e": "Gain 10% (30% at 5\u2605) Melee Physical DMG. Hits taken by the host also gain 20% Melee Physical DMG.",
+        "bot_e": "Upon scoring a crit hit, the host gains 4% (8% at 5\u2605) Physical DMG and 4% (8% at 5\u2605) Move Speed for 15s. CD: 5s. Stacks up to 3 times. New stacks do not reset duration. Starts battle with 3-stack buff.",
+        "two_piece": "When the host kills an enemy, summon a Kindred (summoned entity); CD: 5s. For every Kindred present, the host gains 10% Total DMG Multiplier. Up to 3 Kindreds can exist at the same time. With 3 Kindreds, the host gains Physical Immunity; the host will lose the immunity buff and all Kindreds when hit by an enemy, for the next 40s, no more Kindreds can be summoned.",
+        "three_piece": "With 3 Kindreds, the host gains a one-time 20% Total DMG Multiplier buff for 10s. When all Kindreds disappear, the host gains immediate healing of 2% Max HP/s for 10s.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/81/Homecoming_Theater_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190313230055",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/f/f5/Homecoming_Theater_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190313230056",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/36/Homecoming_Theater_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190313230057",
+        "obtainable": [
+            "Events",
+            "Foundry"
+        ]
+    },
+    {
+        "name": "Idol Raven",
+        "top_e": "Elemental DMG increases by 5.0% (12.0% at 5\u2605). Mei/Raven equip bonus: Host takes 6.0% (15.0% at 5\u2605) less Elemental DMG.",
+        "mid_e": "Move Speed increases by 6.0% (12.0% at 5\u2605). Mei/Raven equip bonus: Attacks slow enemy Move Speed by 5.0% (10.0% at 5\u2605) for 5.0s. CD: 10s.",
+        "bot_e": "Basic, Combo, and Charged ATKs deal 5.0% (10.0% at 5\u2605) bonus Total DMG. Mei/Raven equip bonus: Total DMG taken reduces by 6.0% (15.0% at 5\u2605).",
+        "two_piece": "Total DMG increases by 15.0%. Max HP increases by 15.0%.",
+        "three_piece": "ATK Speed increases by 10.0%. SP cap increases by 10.0%.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/c/c9/Idol_Raven_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211217190538",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/88/Idol_Raven_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211217190601",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/0/0b/Idol_Raven_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211217190710",
+        "obtainable": [
+            "Events"
+        ]
+    },
+    {
+        "name": "Immortal Attire",
+        "top_e": "Gain 5% (20% at 5\u2605) Lightning and Fire DMG, and gain 15% (30% at 5\u2605) Ice DMG.",
+        "mid_e": "Take 6% (15% at 5\u2605) less Physical DMG, and attacks gain 12% (30% at 5\u2605) Crit DMG.",
+        "bot_e": "Upon scoring a crit hit, heal self for 80 (200 at 5\u2605) HP. CD: 6s.",
+        "two_piece": "Each Combo/Charged ATK (CD: 1s) adds 1 charge. At 4 charges, the host enters Mist Form for 6s (CD: 20s; all charges will be removed when Mist Form ends). Mist Form: Deals 600 Physical DMG against a random enemy within 6-meter radius of self every 0.25s; each target will take no more than 1 hit in each 0.5s span.",
+        "three_piece": "When the Mist effect ends, heal every ally for 30 HP/s for 6s.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/18/Kiana_Immortal_Attire_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211217185056",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/0/03/Bronya_Immortal_Attire_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211217185051",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/9b/Mei_Immortal_Attire_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211217185103",
+        "obtainable": [
+            "Events"
+        ]
+    },
+    {
+        "name": "Irene Adler",
+        "top_e": "Boosts Lightning DMG by 10.0% (20.0% at 5\u2605). With host on standby, team deals 8.0% (12.0% at 5\u2605) bonus Elemental DMG (cannot stack).",
+        "mid_e": "Boosts Lightning DMG by 10.0% (20.0% at 5\u2605). Host takes 10.0% (20.0% at 5\u2605) less Total DMG.",
+        "bot_e": "Boost Total DMG by 8.0% (15.0% at 5\u2605). Charged and Ultimate ATKs Bewitch enemies hit and make them take 8.0% (15.0% at 5\u2605) bonus Elemental DMG for 18s (cannot stack but can be refreshed).",
+        "two_piece": "Boosts Total DMG by 15.0%. Team deals 18.0% bonus Elemental DMG against Bewitched enemies.",
+        "three_piece": "Charged and QTE ATKs boost team Lightning DMG by 10.0% on hit for 20s (subsequent procs reset the duration). When equipped by Rita, her Total DMG is boosted by 25.0%.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/97/Irene_Adler_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220114180918",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/4/49/Irene_Adler_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220114180910",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/9c/Irene_Adler_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220114180904",
+        "obtainable": [
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Isaac Newton",
+        "top_e": "Gain 29% (46% at 5\u2605) Melee Physical DMG. When hit by enemies 2 times, impose a 10.0s CD for this buff.",
+        "mid_e": "Upon being hit and injured by an enemy, gain 24% (41% at 5\u2605) Move Speed and a shield that absorbs 12% (21% at 5\u2605) Max HP worth of incoming DMG. Shield duration: 4.0s. CD: 15s.",
+        "bot_e": "Attacks on the enemy initiates Challenge Mode that lasts 5.0s. During Challenge Mode, attacks gain 28% (41% at 5\u2605) Total DMG Multiplier but hits taken also gain 22% (31% at 5\u2605). CD: 10s.",
+        "two_piece": "Basic ATKs (including Combo and Charged ATKs) have a 10% chance to inflict one the following debuffs for 6.0s: paralyze, freeze, stun, slow, ignite, impair, and weaken. CD: 2.0s.",
+        "three_piece": "For every 1.0s, Basic ATK (including Combo and Charged ATKs) gains 20% Total DMG Multiplier. Stacks up to 5 times. Attacking resets the buff and initiates a 7s CD.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/e/e1/Isaac_Newton_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180424084132",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/5d/Isaac_Newton_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180424084156",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/92/Isaac_Newton_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180424084259",
+        "obtainable": [
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Ishikawa Goemon",
+        "top_e": "The host gains 1 stack of Dance Art when dealing DMG with Melee ATKs; each stack provides 3.0% (5.0% at 5\u2605) Total DMG Reduction and boosts Lightning DMG by 3.0% (7.0% at 5\u2605) (Lightning DMG increases by another 3.0% [5.0% at 5\u2605] under Kenbu mode). Max stacks: 3. Stack CD: 5s. The host loses 1 stack when attacked, but will not more stacks within the next 3s.",
+        "mid_e": "Total DMG increases by 10.0% (20.0% at 5\u2605). Upon unleashing Ultimate, the host's Lightning DMG increases by 5.0% (15.0% at 5\u2605) (Lightning DMG increases by another 5.0% [10.0% at 5\u2605] under Kenbu mode) for 6s. CD: 18s.",
+        "bot_e": "The host deals 10.0% (35.0% at 5\u2605) more Lightning DMG. The first attack unleashed after Ultimate Evasion deals an additional 30.0% (60.0% at 5\u2605) ATK of Lightning DMG (deals another 30.0% [60.0% at 5\u2605] ATK of Lightning DMG under Kenbu mode). CD: 8s.",
+        "two_piece": "The host enters Kenbu mode when hitting an enemy with Combo ATKs, under which her Total DMG increases by 30.00% for 7s. CD: 10s.",
+        "three_piece": "The host gains 30.0% Total DMG Reduction and Interrupt Immunity when attacked. CD: 15s. The host restores 400 HP every 20s at below 50% HP.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/30/Ishikawa_Goemon_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220114131900",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/11/Ishikawa_Goemon_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220114131905",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/90/Ishikawa_Goemon_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220114131912",
+        "obtainable": [
+            "Foundry",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Jin Shengtan",
+        "top_e": "Gain 20% (40% at 5\u2605) DEF in battle. Allies in the Blue Phoenix field gain 10% (15% at 5\u2605) Elemental DMG. This effect cannot stack.",
+        "mid_e": "After exit, team gains 6% (15% at 5\u2605) Ice Resistance and 6% (15% at 5\u2605) Ice DMG (effect cannot stack). When on the field, the host gains 20% (35% at 5\u2605) Ice DMG.",
+        "bot_e": "Gain 6% (15% at 5\u2605) Attack Speed. Allies in the Blue Phoenix field gain 10% (20% at 5\u2605) Total DMG Reduction. This effect cannot stack.",
+        "two_piece": "Attacks create a Blue Phoenix field that lasts for 6s (cannot stack). CD: 9s. Allies within the field gain 30% Elemental DMG, while enemies within take 10% bonus Elemental DMG.",
+        "three_piece": "Extends the duration of the Blue Phoenix field by 3s. Allies within the field receive Ice Protection. When damage taken is less than 10 \u00d7 Valkyrie's Level, host will only take damage and not be interrupted.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/5c/Jin_Shengtan_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20181212192741",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/e/e4/Jin_Shengtan_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20181212192740",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/22/Jin_Shengtan_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20200113181424",
+        "obtainable": [
+            "Foundry",
+            "Exchange House",
+            " Dorm Supply",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Jingwei",
+        "top_e": "Where there are no more than 1 enemies on the battlefield, gain 18% (31% at 5\u2605) Total DMG Multiplier.",
+        "mid_e": "When there are no more than 3 enemies on the battlefield, the host gains 18% (31% at 5\u2605) Move Speed. After hitting an enemy with Charged/Combo ATK, the host gains 28% (40% at 5\u2605) Fire DMG for 5s. Triggering this skill again resets the duration.",
+        "bot_e": "When there are no more than 2 enemies on the battlefield, gain 24% (41% at 5\u2605) DEF in battle. When undeployed and having less than 50% HP, then heal 12 (20 at 5\u2605) HP/s.",
+        "two_piece": "For every ignited or firebranded enemy, gain 10% Attack Speed. Stacks up to 5 times.",
+        "three_piece": "When having a target, all enemies except for the target deal 70% less DMG to the host.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/35/Jingwei_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225204645",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/81/Jingwei_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225204658",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/b/bb/Jingwei_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225204652",
+        "obtainable": [
+            "Events",
+            "Foundry"
+        ]
+    },
+    {
+        "name": "Jixuanyuan",
+        "top_e": "Switch skill (and QTE) gain 36% (62% at 5\u2605) Physical DMG.",
+        "mid_e": "Charged ATKs gain 23% (36% at 5\u2605) Physical DMG.",
+        "bot_e": "Weapon's active skills gain 24% (41% at 5\u2605) Total DMG Multiplier.",
+        "two_piece": "Shortens debuffs duration by 50%. Mei, Yae Sakura, or Himeko equip bonus: Gain 20% Max HP in battle.",
+        "three_piece": "Charges once every 5s. For the next Basic, Combo, or Charged ATK and a short period after that 80% Physical DMG and 50% Crit Rate.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/2c/Jixuanyuan_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225202240",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/36/Jixuanyuan_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225202234",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/5f/Jixuanyuan_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225202227",
+        "obtainable": [
+            "Foundry",
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Kafka",
+        "top_e": "Upon scoring a Crit hit, the host gains a 1.3% (2.5% at 5\u2605) Total DMG Multiplier and 1.3% (2.5% at 5\u2605) Crit DMG buff for 5s (Max stack: 8). Duration of each stack will not be affected by other stacks.",
+        "mid_e": "Upon scoring a Crit hit, the host gains a 2.9% (5.0% at 5\u2605) Physical DMG buff for 5s (Max stack: 8). Duration of each stack will not be affected by other stacks.",
+        "bot_e": "Upon scoring a Crit hit, the host gains a 1.6% (2.5% at 5\u2605) Crit Rate buff for 5s (Max stack: 8). Duration of each stack will not be affected by other stacks.",
+        "two_piece": "Charged ATKs directly trigger max-stacks effects of a stigma and gives the host a 45% Total DMG Multiplier buff for 12s. CD: 20s.",
+        "three_piece": "Gain 35% Total DMG Reduction against hits taken. Within 12s after unleashing a Charged ATK, each attack has a 60% chance to trigger a bonus strike that deals 15% ATK of Physical DMG, has 100% higher Crit Rate, and is added to the Combo Hit counter. Triggers 30 times only. CD: 20s.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/8d/Kafka_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220114123017",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/12/Kafka_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220114123029",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/6f/Kafka_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220114123042",
+        "obtainable": [
+            "Foundry",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Kallen - Hymn",
+        "top_e": "For the host and units summoned by the host: Attacks gain 15% (20% at 5\u2605) Physical DMG. Attacks against impaired enemies further gain 6% (12% at 5\u2605) Physical DMG.",
+        "mid_e": "Upon entering battle, host obtains a Grace Shield that reduces 150 (400 at 5\u2605) incoming Physical DMG from enemy hits, after which the barrier enters a 6s CD. While the barrier lasts, host takes 20% (30% at 5\u2605) less indirect Physical DMG.",
+        "bot_e": "For every impaired enemy on the battlefield, the host gains 3% (6% at 5\u2605) Attack Speed and 5% Crit DMG. Stacks up to 4 times.",
+        "two_piece": "Spend at least 15, 70, and 125 SP at once to gain 8%, 15%, and 22% Total DMG Multiplier respectively for the entire team. Lasts 7s. Effect cannot stack.",
+        "three_piece": "When hitting an impaired enemy, the host heals for 8% HP and gains 5% SP. CD: 8s.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/28/Kallen_-_Hymn_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225203345",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/3e/Kallen_-_Hymn_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225203359",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/1e/Kallen_-_Hymn_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225203352",
+        "obtainable": [
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Kallen Pledge",
+        "top_e": "When Basic ATKs (including Combo and Charged ATKs) hit a target, there is a 26% (52% at 5\u2605) chance of dealing 72% (123% at 5\u2605) ATK of Physical DMG to the target and surrounding enemies. CD: 2.0s.",
+        "mid_e": "Gain 20% Max HP. 18% (31% at 5\u2605) chance of directly ignoring a debuff.",
+        "bot_e": "Gain 12% (21% at 5\u2605) Physical DMG against elite enemies, and take 12% (21% at 5\u2605) less Physical DMG from attacks of elite enemies.",
+        "two_piece": "For every Elite enemy on the battlefield, the host gains 8% Crit Rate. Stacks up to 4 times.",
+        "three_piece": "For every elite killed, Basic ATKs (including Combo and Charged ATKs) of the host gain 15% Physical DMG. Stacks up to 3 times. Lasts 120s (adding a stack does not refresh the duration).",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/3d/Kallen_Pledge_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180524190821",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/c/c5/Kallen_Pledge_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180524190822",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/36/Kallen_Pledge_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180524190826",
+        "obtainable": [
+            "Foundry",
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Kepler",
+        "top_e": "Upon scoring a crit strike, deal an additional 110% (200% at 5\u2605) ATK of Physical DMG to the target and surrounding enemies within a 3-meter radius. CD: 3.0s.",
+        "mid_e": "Upon scoring a crit strike, paralyzes the target and surrounding enemies within a 3-meter radius for 2.0s. CD: 7.0s (4.0s at 5\u2605).",
+        "bot_e": "Upon scoring a crit strike, heals self for 130 (250 for 5\u2605) HP. CD: 6.0s.",
+        "two_piece": "Gain 55% Crit DMG.",
+        "three_piece": "Critical strikes mark non-Boss enemies for Judgment. These enemies then take 15% ATK of Physical DMG per second for 30s. CD: 5s. For every enemy marked for Judgment, gain 6% Crit Rate. Stacks up to 5 times.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/55/Kepler_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180424085217",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/6c/Kepler_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180424085227",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/f/f1/Kepler_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180424085309",
+        "obtainable": [
+            "Foundry",
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Kiana - Delivery Girl",
+        "top_e": "A Basic Attack will generate a Family Feast bucket in the same place (CD: 5s). After a delay of 2s, it will explode, causing 180% ATK of Physical Damage to the enemies in the explosion range, and the teammates in the explosion range will recover 45 HP.",
+        "mid_e": "After triggering Ultimate Evasion, enter the Pizza Satisfaction state, recovering 2% HP/s, with a 12s cooldown.",
+        "bot_e": "Increases Movement Speed by 10% and Defense by 10%.",
+        "two_piece": "Fire elemental damage taken is reduced by 20%; when the damage taken is less than constant 8 of Valkyrie level, the hit does not interrupt the owner.",
+        "three_piece": "Increase 30% HP limit in battle.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/8f/Kiana_-_Delivery_Girl_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220410143133",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/3a/Kiana_-_Delivery_Girl_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220410143229",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/24/Kiana_-_Delivery_Girl_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220410143312",
+        "obtainable": []
+    },
+    {
+        "name": "Leeuwenhoek",
+        "top_e": "The host gains 10.0% (20.0% at 5\u2605) Fire DMG. For every 10% HP lost, the host gains a buff that boosts her Total DMG by 2.0% (4.0% at 5\u2605) (Max: 4 stacks); the max 4 stacks will directly take effect when the host unleashes Throw or triggers the 2-pc bonus; duration: 10s.",
+        "mid_e": "The host gains 10.0% (20.0% at 5\u2605) Total DMG. Ultimate Evasion boosts her Fire DMG by 10.0% (20.0% at 5\u2605) for 10s; triggering this effect again resets the duration.",
+        "bot_e": "The host gains 10.0% (20.0% at 5\u2605) Fire DMG. The host's switch entry and attacks against ignited enemies boost her Total DMG by 12.0% (25.0% at 5\u2605) for 10s; triggering this effect again resets the duration.",
+        "two_piece": "The host gains 15.0% Total DMG. When unleashing Ultimate, all enemies on the battlefield take 15.0% more Fire DMG from the host for 12s and force-activates the 1-pc buffs of this stigma set; CD: 20s.",
+        "three_piece": "The host gains 2.0% Total DMG Reduction each time she ignites an enemy; stacks up to 15 times; effect lasts until the battle ends. Durandal equip bonus: Auto-triggers the 2-pc bonus when entering the battlefield.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/4/41/Leeuwenhoek_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20200516050254",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/7/72/Leeuwenhoek_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20200516050258",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/4/40/Leeuwenhoek_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20200516050302",
+        "obtainable": [
+            "Foundry",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Liebig",
+        "top_e": "Triggering Ultimate Evasion or Ultimate Evasion skill boosts Physical DMG by ?% (25% at 5\u2605) for 4s. Can be stacked. Team restores ? (150 at 5\u2605) HP when attacking enemies in Warhaunt. CD: 5s.",
+        "mid_e": "Ultimate Evasion skill CD is reduced by ?% (20% at 5\u2605). Team deals ?% (12% at 5\u2605) bonus Physical DMG to enemies in Warhaunt.",
+        "bot_e": "Basic, Charged, and Combo ATKs deal ?% (25% at 5\u2605) bonus Physical DMG. Combo and Charged ATKs inflict Warhaunt on all enemies (unique effect, cannot stack) and make them take ?% (12% at 5\u2605) bonus Total DMG for 15s. CD: 20s.",
+        "two_piece": "The host gain 12% Crit Rate. When the bottom piece of this stigma set triggers Warhaunt, if there is only 1 enemy present, the enemy takes 9% more Physical DMG; if there is 2 or more enemies present, the enemies take 12% more Physical DMG.",
+        "three_piece": "Removes the CD of Warhaunt triggered by the bottom piece of this set and reduces Total DMG taken by the team by 10%. When it's equipped by Shadow Dash, she deals 25% bonus Total DMG and her Ultimate inflicts Warhaunt on enemies hit.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/68/Liebig_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211224234712",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/f/f1/Liebig_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211224234718",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/a9/Liebig_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211224234724",
+        "obtainable": []
+    },
+    {
+        "name": "Lier",
+        "top_e": "At 80% or higher HP, gain 61% (103% at 5\u2605) DEF in battle.",
+        "mid_e": "At 60% or higher HP, gain 23% (36% at 5\u2605) Move Speed.",
+        "bot_e": "At 100% or higher HP, gain 29% (46% at 5\u2605) Physical DMG.",
+        "two_piece": "15% chance of heal 5% HP upon hitting a target. CD: 2s. BIO-type battlesuit equip bonus: Gain 15% Max SP in battle.",
+        "three_piece": "Blocks an interruptible attack 1 time and knocks the enemy Airborne. CD: 5s.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/0/07/Lier_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220219083538",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/88/Lier_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220219083523",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/83/Lier_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220219083544",
+        "obtainable": [
+            "Foundry",
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Lier Scarlet",
+        "top_e": "Reduce Max HP by 20% in battle, but Basic ATKs (including Combo and Charged ATKs) gain 23% (36% at 5\u2605) Total DMG Multiplier.",
+        "mid_e": "Reduce Max HP by 15% in battle, but nearby enemies take 61% (103% at 5\u2605) ATK of Physical per second while the host heals 12 (20 at 5\u2605) HP every 3s.",
+        "bot_e": "Reduce Max HP by 15% in battle, but the host gains 11% (15% at 5\u2605) faster Move Speed and 16% (20% at 5\u2605) faster Attack Speed.",
+        "two_piece": "When hit by enemy, take 25% less Physical DMG and 70% less Indirect Physical DMG (such as Bleeding).",
+        "three_piece": "Triggered when HP is 5% or less. Gain 80% Crit Rate and Crit DMG and death immunity for 6s. CD: 60s.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/a2/Lier_Scarlet_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180424085506",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/d/d8/Lier_Scarlet_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180424085544",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/d/d5/Lier_Scarlet_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180424085606",
+        "obtainable": [
+            "Foundry",
+            "Exchange House",
+            " Dorm Supply",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Linnaeus",
+        "top_e": "Host and her summoned entities deal 15.0% (24.0% at 5\u2605) bonus Total DMG, and further 8.0% (15.0% at 5\u2605) bonus Total DMG for 3.5s after landing a Combo ATK.",
+        "mid_e": "Host and her summoned entities deal 20.0% (45.0% at 5\u2605) bonus Lightning DMG. Host takes 15.0% (30.0% at 5\u2605) less DMG from enemies 3 meters away or further.",
+        "bot_e": "Basic, Combo, and Charged ATKs deal 20.0% (36.0% at 5\u2605) bonus Lightning DMG. With friendly summoned entities present, host restores 0.5 (1.0 at 5\u2605) SP per second when deployed.",
+        "two_piece": "When host summons an entity, she and the summoned entity are enhanced and Lightning DMG increases by 60.0% for 15s. Triggering it again resets the duration. Enemy presence within 5 meters boosts host's Move Speed by 25%.",
+        "three_piece": "Ranged ATKs deal 40.0% bonus Total DMG. For every summoned entity, ELF, or Support Valkyrie present, they and host deal 6.0% bonus Total DMG (5 stacks max).",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/3c/Linnaeus_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211217193549",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/80/Linnaeus_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211217193542",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/7/79/Linnaeus_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211217193535",
+        "obtainable": [
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Marco Polo",
+        "top_e": "Gain 5% (15% at 5\u2605) Physical DMG. When Combo Hit Count exceeds 25 (30 at 5\u2605), gain another 5% (15% at 5\u2605) Physical DMG.",
+        "mid_e": "Gain 10% (25% at 5\u2605) Crit DMG. When Combo Hit Count exceeds 25 (30 at 5\u2605), gain another 10% (25% at 5\u2605) Crit DMG.",
+        "bot_e": "Gain 5% (11% at 5\u2605) Crit Rate. When Combo Hit Count exceeds 25 (30 at 5\u2605), Combo or Charged ATKs recover 2.5 (5.0 at 5\u2605) more SP when hitting the enemy. CD: 10s.",
+        "two_piece": "When Combo Hit exceeds 25, Combo or Charged ATKs deal 250% ATK of bonus Physical DMG on hit. CD: 5s.",
+        "three_piece": "When Combo Hit exceeds 25 host heals 200 HP per 5s.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/4/4c/Marco_Polo_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20200502051343",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/37/Marco_Polo_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20200502051347",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/33/Marco_Polo_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20200502051351",
+        "obtainable": [
+            "Foundry"
+        ]
+    },
+    {
+        "name": "Mary Shelley",
+        "top_e": "Gain 15% Max HP in battle and attacks deal another 40% (50% at 5\u2605) of host's max HP of Physical DMG (maxed at 6000, but can be affected by other abilities). CD: 5s (3s at 5\u2605).",
+        "mid_e": "Gain 5% Max HP in battle. At the start of battle, the host receives a spirit shield that absorbs up to 15% (25% at 5\u2605) of max HP of any DMG. After the shield is broken, it will take effect again after 40s (30s at 5\u2605).",
+        "bot_e": "Gain 10% Max HP in battle. When the host is on the field and in combat, team gains 20 (40 at 5\u2605) DEF every 5s. Stacks 5 times. Effect cannot stack. Buff is effective throughout the battle.",
+        "two_piece": "When enemies are nearby, release an electro discharge every 4s, dealing 40% max HP of Lightning DMG to enemies in the AOE (at 15,000 or higher max HP, treat HP as 15,000) and store an Energy Mark.",
+        "three_piece": "When gaining 7 Energy Marks, enter Frankenstein Mode upon hitting an enemy with a Basic ATK (including Charged and Combo ATKs). Frankenstein Mode: The host gains 40% Total DMG Multiplier and heals team for 2% HP/s for 10s. Energy mark is reset to zero when Frankenstein Mode ends.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/4/44/Mary_Shelley_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180822180715",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/4/4d/Mary_Shelley_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180822180716",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/3a/Mary_Shelley_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180822180721",
+        "obtainable": [
+            "Events",
+            "Foundry"
+        ]
+    },
+    {
+        "name": "Mendeleev",
+        "top_e": "Charged ATKs gain 22.0% (40.0% at 5\u2605) Crit DMG.",
+        "mid_e": "When Charged ATKs hit the enemy, host gains 15.0% (30.0% at 5\u2605) Total DMG Reduction for 3s. Triggering this again resets the duration.",
+        "bot_e": "Host gains 1.5% (3.0% at 5\u2605) Physical DMG buff per second after entry. Max stacks: 10. Stacks are reset upon exit.",
+        "two_piece": "When Combo/Charged ATKs hit the enemy, deal another 100.0% ATK of Physical DMG. CD: 1s.",
+        "three_piece": "When Basic ATKs hit the enemy, enter Discovery State. Discovery State: Host gains Ignore Interrupt and deals 20.0% more Physical DMG. Discovery State ends and enters a 15s CD when Combo Hit chain is disrupted.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/10/Mendeleev_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190523192740",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/85/Mendeleev_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190523185540",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/f/fa/Mendeleev_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190523185542",
+        "obtainable": [
+            "Foundry"
+        ]
+    },
+    {
+        "name": "Michelangelo",
+        "top_e": "Every Basic ATK (including Charged and Combo ATKs) increases your Physical DMG by 3.6% (7.2% at 5\u2605) for 2s (3s at 5\u2605). Stacks up to 5 times, adding a stack resets the duration of the Physical DMG increase effect.",
+        "mid_e": "Every Basic ATK (including Charged and Combo ATKs) increases your Crit Rate by 1.5% (3.0% at 5\u2605) for 2s (3s at 5\u2605). Stacks up to 5 times, adding a stack resets the duration of the Crit Rate increase effect.",
+        "bot_e": "Every Basic ATK (including Charged and Combo ATKs) increases your Crit DMG by 8.0% (14.0% at 5\u2605) for 2s (3s at 5\u2605). Stacks up to 5 times, adding a stack resets the duration of the Crit DMG increase effect.",
+        "two_piece": "The host's attacks gain 15% Total DMG Multiplier. Upon entering the battlefield, further gain 15% Total DMG Multiplier for 15s. CD: 30s.",
+        "three_piece": "When exiting, heals self for 2.0% max HP per second for 10s. Unleash a Judgement Attack to all enemies on the battlefield, dealing 300% ATK of Physical DMG, and an additional 300% ATK of Physical DMG to enemies with less than 10% HP. CD: 30s.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/c/c6/Michelangelo_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225131710",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/1e/Michelangelo_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225131638",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/b/be/Michelangelo_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225131611",
+        "obtainable": [
+            "Foundry",
+            "Exchange House",
+            " Dorm Supply",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Monet",
+        "top_e": "Attacks against enemies gain 15% (30% at 5\u2605) Lightning DMG. For every Combo Hit Count, host gains 0.5% (1.0% at 5\u2605) Total DMG Multiplier. Stacks up to 15 times.",
+        "mid_e": "Gain 10% (20% at 5\u2605) Total DMG Reduction against hits taken. For every Combo Hit Count, host gains 1.0% (2.0% at 5\u2605) Lighting DMG. Stacks up to 15 times.",
+        "bot_e": "For every 10s, combo/charged attacks that hit the enemy inflicts 30% (60% at 5\u2605) Move Slow for 6s. When Combo Hit Count exceeds 30, gain 9.0% (15.0% at 5\u2605) Attack Speed.",
+        "two_piece": "Receive a Lightning Shield. When the shield is active, the host's attacks gain 30% Lightning DMG. When hit by enemies, the shield will negate direct Physical DMG from the enemy and disappear after 0.3s. Shield reappears after 15s.",
+        "three_piece": "After triggering the Move Slow debuff of stigma (B) of this set, enemies within a 3.0-meter radius of the target suffer 30% Move Slow for 10s. Host also heals for 8% HP.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/4/46/Monet_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20181103033413",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/68/Monet_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20181103033415",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/c/c9/Monet_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20181103033411",
+        "obtainable": [
+            "Foundry",
+            "Exchange House",
+            " Dorm Supply",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Murata Himeko",
+        "top_e": "Boosts Total DMG by 10.0% (20.0% at 5\u2605). Boosts Fire DMG by 25.0% (50.0% at 5\u2605) in Herrscher Form.",
+        "mid_e": "Boosts Max HP by 15.0% (25.0% at 5\u2605). When the host loses HP, enemies take 10.0% (20.0% at 5\u2605) bonus Fire DMG from the host for 8.0s (independent effect; triggering it again resets the duration).",
+        "bot_e": "Boosts Total DMG by 5.0% (10.0% at 5\u2605). The host gains 1 stack of buff that boosts her Fire DMG by 5.0% (10.0% at 5\u2605) (max 4 stacks) for every 10% HP she loses.",
+        "two_piece": "In Herrscher form, a stack granted by the B-pc of this set provides another 15.0% bonus Fire DMG. The host takes 45.0% less Indirect DMG at below 60% HP.",
+        "three_piece": "Boosts Total DMG by 20.0%. When the host loses HP, her next attack will deal 100% ATK of Fire DMG to surrounding enemies, which on hit boosts her Total DMG by 10.0% for 10s (CD: 2s; triggering it again resets the duration).",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/7/7e/Murata_Himeko_%28Stigmata%29_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220117231233",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/64/Murata_Himeko_%28Stigmata%29_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220117231211",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/e/ef/Murata_Himeko_%28Stigmata%29_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220117231154",
+        "obtainable": [
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Nagamitsu",
+        "top_e": "Generates a force field around self. Enemies staying in the force field for more than 3s receive 70% (125% at 5\u2605) ATK of Lightning DMG per second. Effect is removed 2s after said enemy leaves the field.",
+        "mid_e": "Generates a force field. Enemies staying in the force field for more than 3s receive 15% (30% at 5\u2605) more Lightning DMG. Effect is removed 2s after said enemy leaves the field.",
+        "bot_e": "Generates a force field. Enemies staying in the force field for more than 3s suffer 15% (30% at 5\u2605) Total DMG Reduction. This effect is removed 2s after an enemy leaves the field.",
+        "two_piece": "Enemies that stay in the field for more than 5s suffer 20% Move Slow and Attack Slow for 4s (duration resets when the slow effect ends). The duration resets if an enemy leaves the force field for 2s.",
+        "three_piece": "Enemies that stay in the field for more than 5s will be frozen for 2s (duration resets when the freezing period ends). The duration resets if an enemy leaves the force field for 2s.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/b/be/Nagamitsu_%28Stigmata%29_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220117233036",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/4/4d/Nagamitsu_%28Stigmata%29_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220117233031",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/4/4f/Nagamitsu_%28Stigmata%29_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220117233024",
+        "obtainable": [
+            "Foundry",
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "New Year",
+        "top_e": "Attacks spawn a Fireworks Launcher in front of the host. Launcher fires 1 Firework every second for 4s (6s at 5\u2605) that explodes to deal 80% (150% at 5\u2605) ATK of Fire DMG to nearby enemies. Fireworks Launcher trigger CD: 12s.",
+        "mid_e": "(Requires the stigma (T)) Fireworks explosion generates a shower of Red Envelopes. Allies in the AOE heal for 1% (2% at 5\u2605) HP, and attacks for the 4s (8s at 5\u2605) deal an additional 50 (100 at 5\u2605) Fire DMG. This effect cannot stack.",
+        "bot_e": "(Requires the stigma (T)) Fireworks explosions empower allies in the AOE, with attacks gaining 10% (20% at 5\u2605) Physical DMG and Fire DMG for 3s (6s at 5\u2605). This effect cannot stack.",
+        "two_piece": "Fireworks explosions ignite enemies, dealing 100 Fire DMG every 0.5s for 5s. Attacks against ignited enemies gain 15% Fire DMG. This effect cannot stack.",
+        "three_piece": "Fireworks Launcher deals an additional 20% Fire DMG. Launcher also unleashes a powerful explosion when it disappears, dealing 300% ATK of Fire DMG to enemies in a large AOE and stunning them for 4s.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/2c/New_Year_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190126031018",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/23/New_Year_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190126031013",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/97/New_Year_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190126031023",
+        "obtainable": [
+            "Events"
+        ]
+    },
+    {
+        "name": "Nobel",
+        "top_e": "Gain 13% (25% at 5\u2605) Physical DMG. For every Combo Hit Count, Charged ATKs gain 0.4% (1.0% at 5\u2605) Physical DMG. Max stacks: 20.",
+        "mid_e": "Charged ATKs gain 4.0% (10.0% at 5\u2605) Crit Rate. Enemies hit by the Charged ATK also deal 15.0% (30.0% at 5\u2605) less Physical DMG for 1s. Triggering this again resets the time.",
+        "bot_e": "When Combo/Charged ATK hits the enemy, enter Absorbed State. Absorbed State: enemies hit by Combo/Charged ATKs are weakened for 3s (ATK is reduced by 15.0% [30.0% at 5\u2605]). Absorbed State ends and enters a 24s (15s at 5\u2605) CD when host fails to hit an enemy using Combo/Charged ATK within 4s.",
+        "two_piece": "When Charged ATKs hit the enemy, generate an explosion centered on host that deals 180.0% of Physical DMG to nearby enemies. CD: 1s.",
+        "three_piece": "After each entry, the first 2 hits taken by the host will suffer 40.0% Total DMG Reduction and not interrupt her. Crit DMG of Charges ATKs increases by 30.0%. Explosion DMG of Dynamite increases to 200.0% ATK of Physical DMG.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/58/Nobel_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190523185532",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/52/Nobel_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190523185534",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/d/df/Nobel_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190523185536",
+        "obtainable": [
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Nohime",
+        "top_e": "Basic ATKs (including Combo and Charged ATKs) have a 10% (15% at 5\u2605) chance to freeze enemies for 4.0s. CD: 8s. Basic ATKs (including Combo and Charged ATKs) against frozen enemies gain 20% (40% at 5\u2605) Total DMG Multiplier.",
+        "mid_e": "Attacks gain 50% (80% at 5\u2605) ATK of Ice DMG. CD: 1s.",
+        "bot_e": "For every Move Slowed or Frozen enemy on the battlefield, host gains 5% (10% at 5\u2605) Move Speed and 15% (25% at 5\u2605) Ice DMG. Stacks up to 3 times.",
+        "two_piece": "Nearby enemies suffer 60% ATK of Ice DMG per second. 30% chance of inflict Move Slow on the enemy for 4s.",
+        "three_piece": "Gain 20% Max HP and 80% Ice DMG in battle.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/f/fd/Nohime_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226022322",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/98/Nohime_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226022329",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/b/ba/Nohime_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226022336",
+        "obtainable": [
+            "Foundry",
+            "Exchange House",
+            " Dorm Supply",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Nuwa",
+        "top_e": "Attacking ignited enemies generates explosions, dealing 48% (82% at 5\u2605) ATK of Fire DMG to nearby enemies. CD: 1.5s. Attacks against ignited enemies gain 12% (20% at 5\u2605) Total DMG Multiplier.",
+        "mid_e": "For every Combo Hit Count, gain 1% Fire DMG. Stacks up to 60 (102 at 5\u2605) times.",
+        "bot_e": "Ignited debuff deals 61% (103% at 5\u2605) more Fire DMG. Extends duration by 61% (103% at 5\u2605).",
+        "two_piece": "Units summoned by the host gain 60% Total DMG Multiplier.",
+        "three_piece": "For every summoned unit (including supporting friends), gain 20% Total DMG Multiplier. Stacks up to 5 times.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/f/fb/Nuwa_%28Stigmata%29_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180518181631",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/e/e6/Nuwa_%28Stigmata%29_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180518181636",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/0/05/Nuwa_%28Stigmata%29_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180518181633",
+        "obtainable": [
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Nuwa Figurine Master",
+        "top_e": "Upon breaking the enemy's shield, stun the enemy for 2s (5s at 5\u2605) and gain 10% (20% at 5\u2605) Total DMG Multiplier to the stunned enemy.",
+        "mid_e": "Combo ATKs gain 15% (30% at 5\u2605) Physical DMG. After unleashing 3 Combo ATKs (CD: 1.5s), the host gains a shield for 2s (5s at 5\u2605) that grants 10% (15% at 5\u2605) Total DMG Reduction. Shield trigger CD: 6s.",
+        "bot_e": "After casting Ultimate, the host gains 6% (12% at 5\u2605) Total DMG Multiplier for 8s (15s at 5\u2605). Effect stacks up to 4 times. Re-triggering the effect resets the duration. Trigger CD: 3s.",
+        "two_piece": "After casting Ultimates 2 times, generate a Doll Aura with a 5-meter radius. Enemies in the AOE are immobilized and take 20% more Physical DMG. The Aura lasts 6s. CD: 18s. This effect cannot stack.",
+        "three_piece": "Shortens duration of debuffs on the host by 30%. Attacks against debuffed enemies also gain 30% Total DMG Multiplier.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/8c/Nuwa_Figurine_Master_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180927221349",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/1b/Nuwa_Figurine_Master_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180927221350",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/f/f9/Nuwa_Figurine_Master_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180927221353",
+        "obtainable": [
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Otto Apocalypse",
+        "top_e": "Basic ATKs (excluding Charged and Combo ATKs) deal 20% (35% at 5\u2605) more Physical DMG. Every Basic ATK grants 1 stack of Charge (CD: 0.8s). After gaining 3 Charge stacks, the next charged attack gains 45% (75% at 5\u2605) Total DMG Multiplier.",
+        "mid_e": "An enemy hit by Basic ATKs (excluding Charged and Combo ATKs) is weakened for 2s (4s at 5\u2605) and loses 20% (30% at 5\u2605) ATK. CD: 2s. This effect cannot stack.",
+        "bot_e": "For every entity summoned by the host on the battlefield, host gains 35% (55% at 5\u2605) Lightning DMG.",
+        "two_piece": "Each of the host's Basic ATK hits grants 1 Charge stack (CD: 0.8s). After gaining 3 Charge stacks, the next charged attack hitting an enemy generates a Punishment Field (summoned entity) with a 3-meter radius that lasts 4.0s. Enemies inside the field become conductive and take 40% more Lightning DMG. This effect cannot stack.",
+        "three_piece": "Charges once every 5s. The next charged attack adds a Sky Brand to the target. The Sky Brand explodes after a 0.5s delay, dealing 80% ATK of Lightning DMG to nearby enemies.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/34/Otto_Apocalypse_%28Stigmata%29_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225151844",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/4/4e/Otto_Apocalypse_%28Stigmata%29_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225151908",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/a8/Otto_Apocalypse_%28Stigmata%29_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225151904",
+        "obtainable": [
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Paganini",
+        "top_e": "Crit Rate increases by 10.0% (15.0% at 5\u2605). For every 5s, the next Charged ATK deals 30.0% (40.0% at 5\u2605) bonus Physical DMG and restores 5 SP.",
+        "mid_e": "Dealing DMG boosts team Physical DMG by 10.0% (15.0% at 5\u2605) and team's DMG dealt to shields by 25.0% (50.0% at 5\u2605) for 20s. Can be refreshed. Unique effect. Effect cannot be stacked.",
+        "bot_e": "Charged ATK or Ultimate dealing DMG boosts team Total DMG by 14.0% (18.0% at 5\u2605) for 20s. Can be refreshed. Unique effect.",
+        "two_piece": "Team deals 20.0% bonus DMG to shields. Charged ATK dealing DMG makes enemies take 20.0% bonus Physical DMG for 20s. Can be refreshed. Unique effect.",
+        "three_piece": "Charged ATK dealing DMG boosts Total DMG for 15s. The boost is equal to 18.0% of host's bonus DMG-dealt-to-shields ratio. CD: 15s.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/0/0b/Paganini_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211217190150",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/b/b3/Paganini_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211217190217",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/32/Paganini_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211217190340",
+        "obtainable": [
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Picasso",
+        "top_e": "Every Basic ATK (including Charged and Combo ATKs) grants 1 Charge stack (CD: 1s). Upon gaining 4 Charge stacks, enter Zeal Mode to deal 15% (32% at 5\u2605) more Physical DMG. Zeal Mode lasts 3s (6s at 5\u2605). Duration resets to every time Zeal is triggered.\nPaint Jar: A small jar of paint for adding color to things.",
+        "mid_e": "Every Basic ATK (including Charged and Combo ATKs) grants 1 Charge stack (CD: 1s). Upon gaining 4 Charge stacks, enter Shelter Mode, taking 10% (25% at 5\u2605) less Physical DMG from enemy attacks and 20% (40% at 5\u2605) less Indirect Physical DMG. Shelter Mode lasts 3s (6s at 5\u2605). Duration resets every time Shelter Mode is triggered.\nPaint Jar: A small jar of paint for adding color to things.",
+        "bot_e": "Every Basic ATK (including Charged and Combo ATKs) grants 1 Charge stack (CD: 1s). Upon gaining 4 Charge stacks, enter Impulse Mode to gain 10% (20% at 5\u2605) Attack Speed. Impulse Mode lasts 3s (6s at 5\u2605). Duration resets every time Impulse Mode is triggered.\nPaint Jar: A small jar of paint for adding color to things.",
+        "two_piece": "Basic ATKs (including Charged and Combo ATKs) smear enemies with an available paint every 1 second (smear lasts 10s). Paints switch every 3s. Two different paints can be blended to form a Mixed Color to trigger special effects. Mixed Color lasts 4s, during which time no other paint can be applied.\nRed + Yellow = Orange: Target takes 25% more Physical DMG.\nRed + Blue = Purple: deals 120% ATK of AOE Physical DMG.\n\nYellow + Blue = Green: instantly heals the host for 4% HP.",
+        "three_piece": "A small jar of paint for adding color to things.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/5d/Picasso_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180424095913",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/e/e6/Picasso_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180424101045",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/29/Picasso_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180424101110",
+        "obtainable": [
+            " Story Stages",
+            "Events",
+            "Foundry"
+        ]
+    },
+    {
+        "name": "Planck",
+        "top_e": "Deals more DMG at lower HP: gain 3.6% (6.2% at 5\u2605) Total DMG Multiplier for every 10.0% HP lost.",
+        "mid_e": "The host's Basic ATKs (including Charged ATKs and Combo ATKs) deal 34% (51% at 5\u2605) more Physical DMG; but the host takes 46% (72% at 5\u2605) more Physical DMG when hit.",
+        "bot_e": "Suffer 32% (41% at 5\u2605) Move Slow but gain 22% (31% at 5\u2605) faster Attack Speed.",
+        "two_piece": "When attacked and when DMG taken is less than the product of 15 x Valkyrie's level, the host will not be interrupted (but takes DMG as usual). When equipped on Bronya, ranged attacks gain 15% Total DMG Multiplier.",
+        "three_piece": "The host heals 5% HP when hitting an enemy. CD: 5.0s. Bronya equip bonus: SP regen rate increases by 30%.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/32/Planck_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225160212",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/6e/Planck_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225160204",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/f/fe/Planck_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225160157",
+        "obtainable": [
+            "Foundry",
+            "Exchange House",
+            " Dorm Supply",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Ragna",
+        "top_e": "Total DMG increases by 15.0% (25.0% at 5\u2605). Combo and Charged ATK boost host's Fire DMG by 20.0% (40.0% at 5\u2605) for 10s. Triggering it again resets the duration.",
+        "mid_e": "Landing Charged ATK 10 times makes all enemies take 10.0% (20.0% at 5\u2605) bonus Fire DMG from host and reduces their DMG dealt to host by 15.0% (30.0% at 5\u2605) for 10s. Triggering it again resets the duration.",
+        "bot_e": "Total DMG increases by 10.0% (20.0% at 5\u2605). On hit, Charged ATK boosts host's Fire DMG by 15.0% (30.0% at 5\u2605) and restores 30 HP per second for 1s. Triggering it again resets the duration.",
+        "two_piece": "On hit, Charged ATK boosts Move Speed by 40.0% and Fire DMG by 30.0% for 10s. Triggering it again resets the duration. Rita equip bonus: 20.0% bonus Total DMG.",
+        "three_piece": "Charged ATK deals 30.0% bonus Total DMG. Rita equip bonus: Charged ATK deals 50.0% bonus Fire DMG.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/7/7f/Ragna_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220224135959",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/64/Ragna_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220224135938",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/4/4d/Ragna_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220224135916",
+        "obtainable": [
+            "Events",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Rasputin",
+        "top_e": "Gain 5% (12% at 5\u2605) Total DMG Multiplier. ATKs on frozen or move slowed enemies gain another 5% (12% at 5\u2605) Total DMG Multiplier.",
+        "mid_e": "At 10+/30+ Combo Hits, the host deals 10%/20% (20%/35% at 5\u2605) more Ice DMG respectively.",
+        "bot_e": "Gains 15% (25% at 5\u2605) Ice DMG. After entry, gain another 5% (15% at 5\u2605) Ice DMG for 10s. CD: 20s.",
+        "two_piece": "Basic ATK (including Combo and Charged) has a 15% chance to deal 450% Ice DMG against the target and freeze the target for 3.5s. CD: 8s.",
+        "three_piece": "During combat, gain 20% Max HP and 20% Indirect DMG Reduction.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/e/e2/Rasputin_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190926215640",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/2d/Rasputin_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190926215641",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/0/01/Rasputin_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190926215635",
+        "obtainable": [
+            "Foundry"
+        ]
+    },
+    {
+        "name": "Robert Peary",
+        "top_e": "The host gains 10.0% (20.0% at 5\u2605) Total DMG Multiplier. When Combo Hit Count exceeds 20, gain 10.0% (20.0% at 5\u2605) Ice DMG.",
+        "mid_e": "For every Combo Hit Count, the host gains 0.10% (0.40% at 5\u2605) Total DMG Multiplier and 0.20% (0.50% at 5\u2605) Ice DMG. Stacks up to 60 times.",
+        "bot_e": "Hits against Frozen or Ice Cell enemies heal the host for 150.0 (300.0 at 5\u2605) HP. CD: 12.0s (9.0s at 5\u2605).",
+        "two_piece": "When attacked, said attack suffers 25% Total DMG Reduction. The attacker is also frozen for 5.0s. Said effect works only 1 time for each enemy. After entry, the host's first attack directly adds 20 to the Combo Hit counter. CD: 15s.",
+        "three_piece": "The host gains 20% faster ATK Speed and 25% Total DMG Multiplier, and receives an Energy Charge for 15s that ignores combo interruption 1 time (Max stacks: 2).",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/d/db/Robert_Peary_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190418104352",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/e/ee/Robert_Peary_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190418104353",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/e/e9/Robert_Peary_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190418104357",
+        "obtainable": [
+            "Foundry",
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Sanada Yukimura",
+        "top_e": "When entering battle, Basic ATKs (including Combo and Charged ATKs) gain 20% (35% at 5\u2605) Physical DMG for 15.0s. CD: 35.0s (30.0s at 5\u2605).",
+        "mid_e": "When entering battle, gain 10% (25% at 5\u2605) Crit Rate for 15.0s. CD: 35.0s (30.0s at 5\u2605).",
+        "bot_e": "When entering battle, gain 150% (300% at 5\u2605) DEF for 15.0s. CD: 35.0s (30.0s at 5\u2605).",
+        "two_piece": "When a single hit taken deals more than 20% HP in DMG, ignore the DMG dealt by said hit. CD: 25s.",
+        "three_piece": "Buffs provided by each stigmata of the stigmata set gain a 15% bonus. Mei or Yae Sakura equip bonus: Gain 20% Max HP in battle.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/a5/Sanada_Yukimura_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180801214640",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/9e/Sanada_Yukimura_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180801214643",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/f/fe/Sanada_Yukimura_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/94?cb=20180801214644",
+        "obtainable": [
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Schrodinger",
+        "top_e": "Charges once every 6.0s. The next Basic ATK (including Combo and Charged ATKs) has a 50% chance of gaining 121% (205% at 5\u2605) Total DMG Multiplier (otherwise, by 26% [52% at 5\u2605]) for a short duration.",
+        "mid_e": "After using an Ultimate or triggering an Evasion skill, gain a 50% chance of reducing CD by 34% (51% at 5\u2605). Otherwise, CD is increased by 20%.",
+        "bot_e": "Charges once every 4.0s. The next Basic ATK (including Combo and Charged ATKs) has a 50% chance of increasing SP by an additional 182% (308% at 5\u2605). Otherwise, SP gain is decreased by 100%.",
+        "two_piece": "When attacked, there is a 50% chance that said attack suffers 70% Total DMG Reduction. Otherwise, said attack gains 40% Total DMG Multiplier.",
+        "three_piece": "All stigmata buffs from this stigmata set gain a 10% trigger chance. Himeko equip bonus: Gain another 10% trigger chance.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/61/Schrodinger_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180424211527",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/ad/Schrodinger_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180424211513",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/a7/Schrodinger_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180424211554",
+        "obtainable": [
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Schrodinger Band",
+        "top_e": "For each attack that hits an enemy (CD: 0.3s), gain 1% (2% at 5\u2605) Physical DMG. Enter the Elated Mode for 5s when gaining 7 stacks. In this Mode, attacks gain 10% (25% at 5\u2605) Total DMG Multiplier (attacks in Elated Mode no longer grant stacks). All buffs will be removed after Elated Mode ends.",
+        "mid_e": "For each attack that hits an enemy (CD: 0.3s), gain 1% (2% at 5\u2605) Crit Rate. Enter the Elated Mode for 5s when gaining 7 stacks. In this Mode, gain immunity to control buffs and 5% (15% at 5\u2605) Total DMG Reduction (attacks in Elated Mode no longer grants stacks). All buffs will be removed after Elated Mode ends.",
+        "bot_e": "For each attack that hits an enemy (CD: 0.3s), gain 1% (2% at 5\u2605) Attack Speed. Enter the Elated Mode for 5s when gaining 7 stacks. In this Mode, each attack that hits the enemy (CD: 0.9s) gains 0.5 (2.0 at 5\u2605) SP (attacks in Elated Mode no longer grant stacks). All buffs will be removed after Elated Mode ends.",
+        "two_piece": "Extends the duration of Elated Mode provided by this stigmata set by another 2s. Each attack buffs the effects by another 1%. After entering Elated Mode, gain 50% Physical DMG for the next Combo ATK and a short duration afterwards.",
+        "three_piece": "Attacks against Frozen enemies gain 20% Physical DMG. Kiana or Kallen equip bonus: Combo ATKs gain 20% Total DMG Multiplier.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/17/Schrodinger_Band_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180928054117",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/b/b3/Schrodinger_Band_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/99?cb=20180928054119",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/25/Schrodinger_Band_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180928054121",
+        "obtainable": [
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Seele Vollerei",
+        "top_e": "When Max SP is 150 or higher in battle, gain 3% (6% at 5\u2605) Physical DMG for every 20 additional SP. Stacks up to 6 times.",
+        "mid_e": "When Max SP is 150 or higher in battle, take 2% (5% at 5\u2605) less Physical DMG from enemy attacks for every 20 additional SP. Stacks up to 6 times.",
+        "bot_e": "When Max SP is 150 or higher in battle, gain 1% (4% at 5\u2605) Attack Speed for every 20 additional SP. Stacks up to 6 times.",
+        "two_piece": "Gain 30% Move Speed. Teleports to a random nearby area when hit by an enemy. CD: 10.0s.",
+        "three_piece": "For a 3s period after using Ultimate or weapon skill with Direct DMG abilities, empower Skill DMG based on remaining SP percentage, gaining 15% Total DMG Multiplier for every remaining 20% of SP.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/3e/Seele_Vollerei_%28Stigmata%29_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180621044127",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/1f/Seele_Vollerei_%28Stigmata%29_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/98?cb=20180621044130",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/d/de/Seele_Vollerei_%28Stigmata%29_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20180621044131",
+        "obtainable": [
+            "Events",
+            "Foundry"
+        ]
+    },
+    {
+        "name": "Shakespeare",
+        "top_e": "Gain 34% (51% at 5\u2605) Lightning DMG.",
+        "mid_e": "Gain 34% (51% at 5\u2605) Fire DMG.",
+        "bot_e": "Gain 34% (51% at 5\u2605) Ice DMG.",
+        "two_piece": "Shortens CDs of effects triggered by Ultimate Evasions (or Perfect DEF) by 35%. PSY-type battlesuit equip bonus: Gain 15% Max SP in battle.",
+        "three_piece": "Reduce active skill SP cost by 20%.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/d/dc/Shakespeare_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225152834",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/11/Shakespeare_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225152826",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/e/e3/Shakespeare_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225152819",
+        "obtainable": [
+            "Foundry",
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Shakespeare - Adrift",
+        "top_e": "Boosts Fire DMG by 16.0% (25.0% at 5\u2605). Raising or refreshing Alignment deals 90.0% (150.0% at 5\u2605) ATK of Fire DMG and ignites enemies dealing further 18.0% (30.0% at 5\u2605) ATK of Fire DMG per 0.5s for 6s.",
+        "mid_e": "Boosts Total DMG by 11.0% (20.0% at 5\u2605). Raising Alignment by 1 boosts Ultimate's Fire DMG by 5.0% (8.0% at 5\u2605).",
+        "bot_e": "Boosts Fire DMG by 16.0% (25.0% at 5\u2605). Raising or refreshing Alignment restores 2.0 (3.0 at 5\u2605) SP.",
+        "two_piece": "Boosts Fire DMG by 20.0%. Landing an Ultimate within 4s after its cast raises Alignment by 1 (4 levels in total: Jove/Venus/Luna/Sol). Alignment drops by 1 every 10s and can be refreshed at level 4. Alignment 4 (Sol) makes enemies take 20.0% bonus Fire DMG from host (independent effect).",
+        "three_piece": "Boosts Ultimate's Total DMG by 30.0%. Raising or refreshing Alignment restores 30.0 HP. Durandal equip bonus: Ultimates deal 15.0% bonus Total DMG. Landing a Throw or QTE raises Alignment by 1.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/c/ca/Shakespeare_-_Adrift_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211221194518",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/53/Shakespeare_-_Adrift_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211221194459",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/68/Shakespeare_-_Adrift_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211221194437",
+        "obtainable": [
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Shattered Swords",
+        "top_e": "Boosts Physical DMG by 10.0% (20.0% at 5\u2605). Ultimate Evasion boosts Physical DMG by 10.0% (20.0% at 5\u2605) for 15s. Can be refreshed.",
+        "mid_e": "Boosts Physical DMG by 15.0% (30.0% at 5\u2605). Host takes 10.0% (20.0% at 5\u2605) less Total DMG in burst mode.",
+        "bot_e": "Combo ATK boosts team Crit DMG by 15.0% (25.0% at 5\u2605) for 15s (cannot stack).",
+        "two_piece": "In Herrscher form, team deals 30.0% bonus Crit DMG (cannot stack) and host's attacks mark enemies. The mark explodes at 15 stacks dealing 300.0% ATK of Physical DMG to enemies nearby and removing marks on all enemies. CD: 5s.",
+        "three_piece": "Team gains 10.0% Crit Rate for 12s upon entry. When the host is in Herrscher form and hits an enemy, team gains 3.5% Total DMG for 12s (CD: 0.4s; 10 stacks max; if equipped by more than 1 Valkyrie, only one piece will take effect). Triggering it again resets the duration.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/9f/Raksha_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220115115359",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/3f/Sushang_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220115115405",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/7/76/Empyrea_Phoenix_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220115115411",
+        "obtainable": [
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Shennong",
+        "top_e": "When picking up a SP bag, gain 44% (61% at 5\u2605) Physical DMG 44% (61% at 5\u2605) DEF for 10s. CD: 15s.",
+        "mid_e": "When picking up dropped gold, gain 34% (51% at 5\u2605) Attack Speed and 34% (51% at 5\u2605) Move Speed for 7s. CD: 10s.",
+        "bot_e": "When attacked and injured by the enemy, receive a protective shield that can absorb any DMG equal to 18% (31% at 5\u2605) of the host's max HP. Duration: 5s. CD: 12s.",
+        "two_piece": "When attacked by weakened enemies, there is a 40% chance that the Valkyrie takes zero DMG (does not protect against Elemental DMG). CD: 3s.",
+        "three_piece": "Increases HP and SP bag recovery by 50%.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/d/dc/Shennong_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226022218",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/8d/Shennong_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226022212",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/f/fe/Shennong_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226022204",
+        "obtainable": [
+            "Foundry",
+            "Exchange House"
+        ]
+    },
+    {
+        "name": "Shuijing",
+        "top_e": "Team deals 4.0% (8.0% at 5\u2605) bonus Physical DMG (cannot stack). QTE boosts team Physical DMG by 4.0% (8.0% at 5\u2605) on hit for 8s (cannot stack but can be refreshed). While Recommendation is active, duration is extended by 4s.",
+        "mid_e": "Grants 10.0% (30.0% at 5\u2605) bonus Physical DMG. QTE deals 20.0% (50.0% at 5\u2605) bonus DMG against shields.",
+        "bot_e": "Enemies hit by QTE enter Censured State (cannot stack but can be refreshed), where they deal 6.0% (12.0% at 5\u2605) reduced total DMG and take 9.0% (18.0% at 5\u2605) bonus Physical DMG for 8s.",
+        "two_piece": "Boosts total DMG by 30.0%. Censured State lasts 4s longer.",
+        "three_piece": "Ultimate activation boosts Total DMG dealt by the host and the teammate on field by 20.0% for 18s (effect cannot stack). When equipped by Starlit Astrologos, she additionally gains 40.0% Crit DMG.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/50/Shuijing_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226021433",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/33/Shuijing_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226021425",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/7/7a/Shuijing_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226021440",
+        "obtainable": [
+            "Events",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Siegfried Kaslana",
+        "top_e": "When using a weapon active skill, reduce SP cost by 10% (25% at 5\u2605). For 6.0s after using the skill, gain 20% (35% at 5\u2605) Attack Speed.",
+        "mid_e": "When using a weapon active skill, shorten CDs by 10% (40% at 5\u2605). For 6.0s after using the skill, gain 30% (50% at 5\u2605) DEF.",
+        "bot_e": "When using a weapon active skill, gain 20% (35% at 5\u2605) Total DMG Multiplier for said active skill. For 6.0s after using the skill, gain 10% (20% at 5\u2605) Move Speed.",
+        "two_piece": "Within a 10s interval after using any active weapon skill, the next weapon active skill gains 20% Total DMG Multiplier. DMG boost stacks up to 5 times. Adding a stack resets the effect duration.",
+        "three_piece": "After using 6 weapon skills, enter Hero Mode that lasts 20s (CD: 60s), gaining 70% Physical DMG, 25% Attack Speed and Move Speed, and immunity to most debuffs.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/64/Siegfried_Kaslana_%28Stigmata%29_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211221195209",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/4/4b/Siegfried_Kaslana_%28Stigmata%29_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211221195100",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/ae/Siegfried_Kaslana_%28Stigmata%29_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211221195015",
+        "obtainable": [
+            "Foundry",
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Sin Mal",
+        "top_e": "Gain 11% (15% at 5\u2605) Total DMG Multiplier. Starts charging energy after becoming invisible, gaining 11% (15% at 5\u2605) Total DMG Multiplier every second (stacks up to 3 times). Stacks will be removed 4s after ending invisibility.",
+        "mid_e": "Attacks received suffer 10% (20% at 5\u2605) Total DMG Reduction. After becoming invisible, the host further gains 5% (10% at 5\u2605) Total DMG Reduction and 30% faster Move Speed. Effects will be removed 6s after invisibility ends.",
+        "bot_e": "After becoming invisible, gain 10% (25% at 5\u2605) Attack Speed and 10% (20% at 5\u2605) Crit Rate. Effects will be removed 6s after invisibility ends.",
+        "two_piece": "Receives a Charge upon becoming invisible. When invisibility ends, deal 200% ATK of Physical DMG to all enemies. Enemies hit by the next Basic ATK (including Charged and Combo ATKs) and during a short period afterwards will be immobilized for 3s.",
+        "three_piece": "When invisible, the host heals 2% HP and gains 2% SP every 0.9s.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/f/f2/Sin_Mal_%28Stigmata%29_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225000055",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/a7/Sin_Mal_%28Stigmata%29_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211224235907",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/58/Sin_Mal_%28Stigmata%29_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211224235638",
+        "obtainable": [
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Sirin",
+        "top_e": "Gain 15% (25% at 5\u2605) Melee Physical DMG. Against enemies knocked airborne, deal an additional 10% (20% at 5\u2605) Physical DMG.",
+        "mid_e": "Take 15% (30% at 5\u2605) less All Elemental DMG and gain a 11% (20% at 5\u2605) chance to ignore debuffs.",
+        "bot_e": "Upon an Ultimate Evasion, gain 1 Charge that grants an additional 20% (35% at 5\u2605) Total DMG multiplier to the next attack and 5s afterwards. CD: 1.5s.",
+        "two_piece": "Mei or Yae Sakura equip bonus: Each repeated hit on the same target (resets if no attacks occur in 2.5s) boosts the next hit by 3% Crit Rate (max 15%) and 8% Crit DMG (max 40%) per hit.",
+        "three_piece": "When character is deployed and above 60% HP, enemy suffers 15% Total DMG Reduction to their attack and 10% more Total DMG Multiplier in damage taken. Effect cannot stack.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/ae/Sirin_%28Stigmata%29_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225204017",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/6/6b/Sirin_%28Stigmata%29_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225204011",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/d/de/Sirin_%28Stigmata%29_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225204003",
+        "obtainable": [
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Sirin - Ascendant",
+        "top_e": "Gains 10% (20% at 5\u2605) Physical DMG. Under Herrscher Form, gain another 20% (30% at 5\u2605) Physical DMG.",
+        "mid_e": "Shortens CD of Ultimate Evasions by 10% (20% at 5\u2605) and gains 10% (30% at 5\u2605) Crit DMG.",
+        "bot_e": "When entering battle, host obtains a Space Barrier that reduces 100 (300 at 5\u2605) Elemental DMG from enemy hits and then enters a 6s CD. While the barrier lasts, host has 10% (20% at 5\u2605) bonus Attack Speed and deals 10% (15% at 5\u2605) bonus Physical DMG.",
+        "two_piece": "For every friendly summoned entity, the host gains 12% Total DMG Multiplier for 10.0s. Stacks up to 3 times. Triggering this again at max stacks resets the duration of the stack with the least remaining time.",
+        "three_piece": "Gain 50% Crit DMG. Under Herrscher Form, gain 15% Crit Rate.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/a9/Sirin_-_Ascendant_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226023328",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/aa/Sirin_-_Ascendant_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226023321",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/33/Sirin_-_Ascendant_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226023314",
+        "obtainable": [
+            "Exchange House",
+            " Dorm Supply",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Summer Day",
+        "top_e": "When the host is attacking, generates a water balloon (summoned entity) on the spot that explodes after a 3s delay to deal 150% (300% at 5\u2605) ATK of Ice DMG (DMG calculations are based on the host's stats); CD: 9.0s.",
+        "mid_e": "Requires Stigma (T). When the water balloon explodes, attacks of allies within the explosion AOE gain 18% (30% at 5\u2605) Fire, Ice, and Lightning DMG for 4.5s (6.0s at 5\u2605). This effect cannot stack.",
+        "bot_e": "Requires Stigma (T). When water balloon explodes, heals allies within the AOE for 110 (200 at 5\u2605) HP.",
+        "two_piece": "Enlarges the AOE of the water balloon explosion by 2 meters. Enemies within the explosion AOE are frozen for 1.5s.",
+        "three_piece": "Exploding water balloon deals 200% more Ice DMG. Shortens CD by 2s.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/f/f7/Theresa_-_Summer_Holic_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220114202303",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/54/Himeko_-_Summer_Day_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220114202600",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/d/d4/Fu_Hua_-_Summer_Day_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220114202116",
+        "obtainable": [
+            "Events"
+        ]
+    },
+    {
+        "name": "Tesla Band",
+        "top_e": "After exit, team gains 5% (10% at 5\u2605) Physical DMG (effect cannot stack). When on the field, the host gains 5% (15% at 5\u2605) Physical DMG and 5% (20% at 5\u2605) faster Attack Speed.",
+        "mid_e": "After exit, allies gain 5% (15% at 5\u2605) Lightning DMG Resistance and attacks deal 5% (15% at 5\u2605) more Lightning DMG (effect cannot stack). When on the field, the host takes 10% (25% at 5\u2605) less Physical DMG from enemy hits.",
+        "bot_e": "After exit, team gains 5% (10% at 5\u2605) Move Speed (effect cannot stack). When on the field, the host gains 20% (35% at 5\u2605) Lightning DMG and 5% (10% at 5\u2605) Move Speed.",
+        "two_piece": "Every Basic ATK (including Charged and Combo ATKs) grants 1 Accord Charge stack (CD: 1s). After gaining 4 Accord Charge stacks, reset stacks to zero and unleash Chain Lightning that attacks 4 random targets, paralyzing them for 5s and dealing 600% ATK of Lightning DMG to the first target, with each leap dealing 20% less total Lightning DMG to enemies. Chain Lightning does not hit the same target twice. CD: 15s.",
+        "three_piece": "Gain 20% Max HP and 40% Lightning DMG in battle. Lightning DMG dealt by Chain Lightning no longer decays with each leap.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/f/f2/Tesla_Band_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220114014227",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/9f/Tesla_Band_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220114014210",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/c/c7/Tesla_Band_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220114014154",
+        "obtainable": [
+            "Foundry",
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Thales",
+        "top_e": "Gain 10% (25% at 5\u2605) Total DMG Multiplier. For every Combo Hit Count, the host gains 0.9% (1.5% at 5\u2605) Fire DMG. Stacks up to 10 times.",
+        "mid_e": "Gain 10% (20% at 5\u2605) Total DMG Multiplier. Every hit (CD: 0.3s) on the enemy will cause it to take 1.0% (2.0% at 5\u2605) more Fire DMG from the host for 5s. Stacks up to 10 times. Each stack gained resets the duration.",
+        "bot_e": "Gain 5% (15% at 5\u2605) Attack Speed. For every Combo Hit Count, the host receives 0.9% (1.5% at 5\u2605) less Physical DMG from hits taken. Stacks up to 10 times.",
+        "two_piece": "Gains 1 charge every 10s. For the next Charged ATK and a short duration thereafter, gain 50% Total DMG Multiplier, then enter Blazer Mode for 5s. During Blazer Mode, the host's Ultimate attacks gain 30% Total DMG Multiplier.",
+        "three_piece": "In Blazer Mode, the host gains Ignore Interrupt, 15% Total DMG Reduction from hits taken from the enemy, and heals self for 50 HP/s.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/5b/Thales_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190306111258",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/a6/Thales_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190306111254",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/0/0c/Thales_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190306111256",
+        "obtainable": [
+            "Foundry",
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Turgenev",
+        "top_e": "The host and her summoned entities gain 10.0% (20.0% at 5\u2605) Ice DMG. Team and the host's summoned entities gain 9.0% (18.0% at 5\u2605) Total DMG when there are Hunter Marked enemies on the field. This effect cannot stack.",
+        "mid_e": "The host's summoned entities deal 20.0% (35.0% at 5\u2605) more Total DMG. The host's QTE deals 12.0% (25.0% at 5\u2605) more Ice DMG against Hunter Marked enemies.",
+        "bot_e": "The host's attack triggers an explosion centering on the target, which inflicts a 6-sec Hunter Mark on enemies with no Hunter Mark within the explosion AOE. Explosion CD: 8s. Team and the host's summoned entities deal 18.0% (36.0% at 5\u2605) more All Elemental DMG against Hunter Marked enemies; this effect cannot stack.",
+        "two_piece": "Every 6 hits from the host or her summoned entities prolongs the Hunter Mark effect for 2s. Hunter Mark max duration: 12s. Combo counter resets when Hunter Mark disappears. Hunter Marked enemies receive 21.0% All Elemental DMG (cannot stack).",
+        "three_piece": "The host's Ultimate and her summoned entities deal 25.0% more Total DMG. When there are the host's summoned entities on the field, team deals 25.0% more Ice DMG against Hunter Marked enemies. This effect cannot stack.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/af/Turgenev_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20210502005755",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/80/Turgenev_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20210502005758",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/7/74/Turgenev_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20210502005801",
+        "obtainable": [
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Verne",
+        "top_e": "Ice DMG increases by 10.0% (20.0% at 5\u2605). Charged ATKs deal 20.0% (40.0% at 5\u2605) bonus Total DMG.",
+        "mid_e": "Total DMG increases by 10.0% (20.0% at 5\u2605). On hit, Charged ATKs deal 15.0% (30.0% at 5\u2605) bonus Ice DMG for 10s. Can be refreshed.",
+        "bot_e": "Attack Speed increases by 10.0% (20.0% at 5\u2605). Basic & Charged ATKs deal 30.0% (50.0% at 5\u2605) bonus Ice DMG.",
+        "two_piece": "Triggering Ultimate Evasion in Burst mode boosts Total DMG by 30.0% for 12s. Can be refreshed. In Burst mode, Charged ATKs boost Ice DMG by 15.0% on hit (CD: 0.3s) until Burst mode ends. 4 stacks max. Reaching 4 stacks deals 900.0% ATK of Ice DMG to enemies nearby. CD: 20s.",
+        "three_piece": "Charged ATKs restore 2 bonus SP on hit (CD: 2s). When it's equipped by Seele and she is deployed, all enemies take 20.0% bonus Ice DMG.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/7/7d/Verne_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211221194747",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/31/Verne_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211221194728",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/c/c0/Verne_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211221194627",
+        "obtainable": [
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Wang Zhenyi",
+        "top_e": "Lightning DMG increases by 22.5% (45.0% at 5\u2605). Weapon actives grant Mitternacht status and restore 5.0 (10.0 at 5\u2605) SP on hit. Mitternacht lasts 12s and a 15.0s CD.",
+        "mid_e": "Host and her summoned entities deal 7.5% (15.0% at 5\u2605) bonus Total DMG. Switching out ends Mitternacht and boosts Lightning DMG dealt by team members and summoned entities by 7.5% (15.0% at 5\u2605) for 18.0s. Triggering it again resets the duration (cannot stack).",
+        "bot_e": "Elemental DMG increases by 12.5% (25.0% at 5\u2605). Weapon actives make enemies hit take 10.0% (20.0% at 5\u2605) bonus Lightning DMG for 20s. Triggering it again resets the duration.",
+        "two_piece": "Total DMG increases by 25.0%. Host deals 30.0% bonus Lightning DMG within 12.0s after her entry.",
+        "three_piece": "Weapon skills and Ultimate deal 25.0% bonus Lightning DMG. Fischl equip bonus: Casting QTE during Mitternacht boosts Total DMG dealt by team members and summoned entities by 45.0% for 20.0s. Triggering it again resets the duration.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/d/d2/Wang_Zhenyi_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211221192009",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/4/43/Wang_Zhenyi_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211221191948",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/4/4b/Wang_Zhenyi_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211221191827",
+        "obtainable": [
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Welt Yang",
+        "top_e": "Gain 11% (20% at 5\u2605) Total DMG Multiplier. Herrscher Form: Gain 26% (50% at 5\u2605) Ice DMG.",
+        "mid_e": "Gain 11% (20% at 5\u2605) Ice DMG. Every hit (CD: 0.3s) on the enemy causes it to take 0.4% (1.0% at 5\u2605) more Ice DMG from the host for 5s. Max stacks: 10. Each stack gained resets the duration.",
+        "bot_e": "Gain 8% (15% at 5\u2605) Total DMG Multiplier. Gain a shield when freezing enemies and heal 20 (50 at 5\u2605) HP/s for 10s. CD: 15s. Shield shatters when hit, but host will not be interrupted.",
+        "two_piece": "Each 15 non-Charged ATK gives a Charged ATK buff: Next Charged ATK and following Charged ATK for 5s gain 60% Total DMG Multiplier. Count ends after the buff ends. Host directly gains Charged ATK buff when entering battle (triggers 1 time per battle).",
+        "three_piece": "Gain 40% Ice DMG. For 16s after casting the Ultimate, Charged ATKs will generate a 3s Gravity Vortex that pulls-in nearby enemies. CD: 4s.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/81/Welt_Yang_%28Stigmata%29_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190809091051",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/c/c4/Welt_Yang_%28Stigmata%29_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20190809091047",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/3d/Welt_Yang_%28Stigmata%29_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/99?cb=20190809091049",
+        "obtainable": [
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Wilde",
+        "top_e": "Gains 15% (30% at 5\u2605) Physical DMG. When entering global Time Fracture, the host gains 10.0% (20.0% at 5\u2605) Attack Speed for 4s.",
+        "mid_e": "Activates at below 20% HP. Heals the host for 400 (800 at 5\u2605) HP. CD: 30s.",
+        "bot_e": "Gain 5% (10% at 5\u2605) Crit Rate. Charged ATK bleed the target and nearby enemies in a small AOE to inflict 250 (400 at 5\u2605) Physical DMG every 0.5s for 3s. CD: 12.0s (9.0s at 5\u2605).",
+        "two_piece": "If the host takes DMG exceeding 15% Max HP within a short time, then enter Potential Mode to gain 30% Total DMG Multiplier for 5s. CD: 12s.",
+        "three_piece": "Gain 50% Crit DMG. Extends duration of Potential Mode by 2s.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/23/Wilde_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226021147",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/a7/Wilde_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226021141",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/e/e2/Wilde_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226021155",
+        "obtainable": [
+            "Foundry",
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    },
+    {
+        "name": "Yae Sakura",
+        "top_e": "Hits from an enemy with a Sakura Brand have a 40% chance of dealing 40% (80% at 5\u2605) less Physical DMG and stunning the attacker for 1s. One Slash also gains 35% Crit DMG.",
+        "mid_e": "Basic ATKs (including Charged and Combo ATKs) against enemies marked by Sakura Brand deal another 30% (50% at 5\u2605) ATK of Physical DMG. CD: 1s. 20% chance to deal an equal amount of Physical DMG to nearby enemies. One Slash also gains 10% Total DMG Multiplier.",
+        "bot_e": "For each enemy with Sakura Brand, gain 4% (7% at 5\u2605) Total DMG Multiplier. Stacks up to 5 times. One Slash also gains 5% Crit Rate.",
+        "two_piece": "Gain 20% Max HP in battle. Attacks against enemies marked by Sakura Brand deal 30% more Physical DMG.",
+        "three_piece": "Upon killing an elite, heals the host for 30% HP. CD: 10s.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/0/06/Yae_Sakura_%28Stigmata%29_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225205824",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/57/Yae_Sakura_%28Stigmata%29_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225205817",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/89/Yae_Sakura_%28Stigmata%29_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225205811",
+        "obtainable": [
+            "Foundry"
+        ]
+    },
+    {
+        "name": "Zhangheng",
+        "top_e": "When Combo Hit Count is below 20, non-Switch skills gain 10% (25% at 5\u2605) Total DMG Multiplier.",
+        "mid_e": "When Combo Hit Count is below 20, hits from the enemy deal 18% (30% at 5\u2605) less Physical DMG.",
+        "bot_e": "When Combo Hit Count is below 20, and for 2s after Ultimate Evasion, Lightning DMG increases by 80% (120% at 5\u2605).",
+        "two_piece": "When there are enemies nearby, emit a seismic wave with a 3-meter radius from the host every 5s. For every 3 seismic waves, the first 2 will knock down non-boss enemies and the 3rd will stun non-boss enemies for 3s.",
+        "three_piece": "When there are 3 or more enemies on the battlefield, all allies gain 15% Physical DMG and 25% Crit DMG. This effect cannot stack.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/a1/Zhangheng_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220114232028",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/19/Zhangheng_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220114232012",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/97/Zhangheng_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20220114231957",
+        "obtainable": [
+            "Events",
+            "Foundry"
+        ]
+    },
+    {
+        "name": "Zhuge Kongming",
+        "top_e": "Shortens the CD of effects triggered by Ultimate Evasions (defense) by 17% (26% at 5\u2605).",
+        "mid_e": "22% (31% at 5\u2605) chance of taking 124 (418 at 5\u2605) less DMG (of any type) when attacked.",
+        "bot_e": "When Combo Hit Count exceeds 20, 50, or 100, gain 24%, 48%, and 73% (41%, 82%, and 123% at 5\u2605) DEF respectively.",
+        "two_piece": "When attacked by enemies, the host gains Ignore Interrupt level for 4s. CD: 10s. Kiana or Kallen equip bonus: Gain 30% Max HP in battle.",
+        "three_piece": "When attacked by enemies, there is a 20% chance to knock back enemies within a 3-meter radius. CD: 6s.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/9/96/Zhuge_Kongming_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225204526",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/8/8a/Zhuge_Kongming_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225204519",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/0/05/Zhuge_Kongming_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211225204533",
+        "obtainable": [
+            "Foundry"
+        ]
+    },
+    {
+        "name": "Zorro",
+        "top_e": "Gain 10% (20% at 5\u2605) Total DMG Multiplier. After an Ultimate Evasion, gain 1.0 (3.0 at 5\u2605) SP.",
+        "mid_e": "Gain 25% (40% at 5\u2605) Crit DMG. After Ultimate Evasion, gain an additional 10% (15% at 5\u2605) Crit Rate for 5s. Triggering this skill again resets the duration.",
+        "bot_e": "Gain 15% (20% at 5\u2605) Physical DMG. After Ultimate Evasion, gain an additional 15% (20% at 5\u2605) Physical DMG for 5s. Triggering this skill again resets the duration.",
+        "two_piece": "Gain 1 charge for every 10s on the field. When there are nearby enemies deal 100% ATK of Lightning DMG to a random nearby enemy and stun them for 0.5s. The host also enters Destreza mode. Any evasion will trigger Ultimate Evasion effects (Destreza ends upon Ultimate Evasion). Unleash a Lightning Shockwave when going on the field for the first time. After Ultimate Evasion, Combo / Charged ATKs gain 20% Total DMG Multiplier for 5s. Triggering the effect again resets the duration.",
+        "three_piece": "After Ultimate Evasion, the next attack unleashes a Z-slash (CD: 10s). The Z-slash deals 300% ATK of Physical DMG to enemies within a small AOE. Also applies impair, lowering enemy DEF by 50% for 5s.",
+        "top_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/c/c4/Zorro_%28T%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226020508",
+        "mid_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/3/33/Zorro_%28M%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226020515",
+        "bot_img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/a/a7/Zorro_%28B%29_%28Icon%29.png/revision/latest/scale-to-width-down/100?cb=20211226020521",
+        "obtainable": [
+            "Exchange House",
+            "Limited/Rotating Supplies"
+        ]
+    }
+]
