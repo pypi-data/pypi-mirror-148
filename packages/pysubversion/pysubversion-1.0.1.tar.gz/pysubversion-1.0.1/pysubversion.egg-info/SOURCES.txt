@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+pysubversion.egg-info/PKG-INFO
+pysubversion.egg-info/SOURCES.txt
+pysubversion.egg-info/dependency_links.txt
+pysubversion.egg-info/top_level.txt
+pysvn/__init__.py
+pysvn/client.py
+pysvn/constants.py
+pysvn/errors.py
+pysvn/models.py
+pysvn/utils.py
