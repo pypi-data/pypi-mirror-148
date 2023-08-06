@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+unixreg/__init__.py
+unixreg/constants.py
+unixreg/functions.py
+unixreg/key.py
+unixreg.egg-info/PKG-INFO
+unixreg.egg-info/SOURCES.txt
+unixreg.egg-info/dependency_links.txt
+unixreg.egg-info/requires.txt
+unixreg.egg-info/top_level.txt

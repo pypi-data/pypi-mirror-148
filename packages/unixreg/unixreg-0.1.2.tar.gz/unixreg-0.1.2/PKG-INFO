@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: unixreg
+Version: 0.1.2
+Summary: winreg implementation for non NT systems
+Home-page: https://github.com/Jan200101/unixreg
+Author: Jan Drögehoff
+Author-email: jandroegehoff@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: BSD
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Typing :: Typed
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# unixreg
+
+## why
+While working on porting a python application to Linux I came across many uses of winreg that could not easily be ported over.
+
+Instead of reworking the system I decided to implement a bandaid solution that deals with it transparently.
+
+## how to use
+Update your winreg imports with this
+
+```py
+try:
+    import winreg
+except ImportError:
+    import unixreg as winreg
+```
+
+simply importing unixreg should be enough though, winreg is imported if found
+
+## license
+this project is licensed under the [MIT License](LICENSE)  
+feel free to do whatever you want with it
+
+
