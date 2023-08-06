@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+requirements.txt
+setup.cfg
+src/NetworkSim_brysonreese.egg-info/PKG-INFO
+src/NetworkSim_brysonreese.egg-info/SOURCES.txt
+src/NetworkSim_brysonreese.egg-info/dependency_links.txt
+src/NetworkSim_brysonreese.egg-info/top_level.txt
+src/networksim_package/NetworkSim.py
+src/networksim_package/__init__.py
