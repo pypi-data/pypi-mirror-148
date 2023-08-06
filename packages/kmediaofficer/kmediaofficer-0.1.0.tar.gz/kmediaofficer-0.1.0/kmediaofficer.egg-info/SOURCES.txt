@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+kmediaofficer/__init__.py
+kmediaofficer/_about.py
+kmediaofficer/mediaofficer.py
+kmediaofficer.egg-info/PKG-INFO
+kmediaofficer.egg-info/SOURCES.txt
+kmediaofficer.egg-info/dependency_links.txt
+kmediaofficer.egg-info/requires.txt
+kmediaofficer.egg-info/top_level.txt
+kmediaofficer/cmd/cmd_help.txt
+kmediaofficer/cmd/cmd_input.txt
