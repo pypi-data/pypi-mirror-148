@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "password-generator-imbev"
+version = "1.0.0"
+description = "A password generator written in Python."
+authors = ["Isaac Beverly"]
+license = "GPL-3.0-only"
+packages = [
+    { include = "password_generator" }
+]
+
+[tool.poetry.scripts]
+password_generator = 'password_generator.__main__:main'
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.1"
+black = "^22.3.0"
+mypy = "^0.942"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
