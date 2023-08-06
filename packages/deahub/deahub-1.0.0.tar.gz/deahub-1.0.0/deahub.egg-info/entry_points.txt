@@ -1,0 +1,3 @@
+[console_scripts]
+deahub=deahub.__main__:run
+
