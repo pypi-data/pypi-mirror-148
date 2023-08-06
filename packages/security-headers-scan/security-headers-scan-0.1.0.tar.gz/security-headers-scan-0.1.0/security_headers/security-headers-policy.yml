@@ -1,0 +1,75 @@
+---
+MUST_NOT:
+  Public-Key-Pins:
+  X-AspNetMvc-Version: 
+  X-AspNet-Version: 
+  X-Powered-By:
+  X-Content-Security-Policy:
+  X-Webkit-CSP:
+SHOULD_NOT:
+  Server: 
+  Expect-CT: 
+  X-Permitted-Cross-Domain-Policies: 
+MUST:
+  Referrer-Policy: 
+    EQ: 'strict-origin-when-cross-origin'
+  Strict-Transport-Security: 
+    ANY: ['max-age=31536000 ; includeSubDomains', 'max-age=63072000; includeSubdomains; preload']
+  X-Content-Type-Options: 
+    EQ: 'nosniff'
+  X-Frame-Options: 
+    ANY: ['DENY', 'SAMEORIGIN']
+  X-XSS-Protection:
+    EQ: '0'
+SHOULD:
+  Cross-Origin-Embedder-Policy:
+    EQ: 'require-corp'
+  Cross-Origin-Opener-Policy: 
+    EQ: 'same-origin'
+  Cross-Origin-Resource-Policy: 
+    EQ: 'same-site'
+  Content-Security-Policy:
+    SHOULD_NOT:
+      object-src:
+      frame-src:
+      child-src:
+    MUST:
+      default-src: 
+        EQ: "'none'"
+      frame-ancestors:
+        EQ: "'none'"
+      base-uri:
+        EQ: "'self'"
+      form-action:
+        EQ: "'self'"
+      plugin-types:
+        EQ: "'none'"
+      prefetch-src:
+        EQ: "'none'"
+    SHOULD:
+      script-src:
+        ANY: "'self'"
+        NONE: ["'unsafe-inline'", "'unsafe-eval'"]
+      style-src:
+        ANY: "'self'"
+        NONE: "'unsafe-inline'"
+      img-src:
+        ANY: "'self'"
+        NONE: "'unsafe-inline'"
+      font-src: 
+        ANY: ["'self'", "https://assets.nhs.uk"]
+        NONE: "'unsafe-inline'"
+      report-uri: "'self'"
+    COULD:
+      connect-src:
+      media-src:
+      report-to:
+      sandbox:
+      worker-src:
+        EQ: "'self'"
+      manifest-src:
+      navigate-to:
+COULD:
+  Feature-Policy: 
+  Permissions-Policy: 
+  X-DNS-Prefetch-Control: 'off'
