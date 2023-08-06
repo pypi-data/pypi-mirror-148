@@ -1,0 +1,17 @@
+Change Log
+============
+
+0.0.1 (04/26/2022)
+------------------
+- First Release
+
+
+0.0.2 (04/27/2022)
+------------------
+- Added Docstrings to the created functions
+- Added GRAVITY as a constant
+- Added functions for rotational and translational kinematics
+- Added functions to calculating moments of inertia
+- Added functions to convert non-SI Units to SI (for displacement and velocity)
+- Added conversion from rotational to translational units (annd vise-versa)
+- Added basic functions for mechanical energies 
