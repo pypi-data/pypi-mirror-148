@@ -1,0 +1,11 @@
+wagtail_picture_tag/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wagtail_picture_tag/apps.py,sha256=JxSpX-XKVUZls67sROKw-2UPZFluhhN7L1_2C8gi8-A,177
+wagtail_picture_tag/tests.py,sha256=6m8D8kmXzj70ifMCyka7Z2oKVnbE6dzXbbx7iuEpLJo,6609
+wagtail_picture_tag/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wagtail_picture_tag/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wagtail_picture_tag/templatetags/picture_tags.py,sha256=Unt09VcZTGAzFPakd4ue-kknbuHoqjOTRqC3mdZeV0k,6658
+wagtail_picture_tag-0.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+wagtail_picture_tag-0.1.dist-info/METADATA,sha256=hkVcqT9pjhi-H2lwRE33fEW3LO5Hr0qcdMc3JZU3U8U,2174
+wagtail_picture_tag-0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+wagtail_picture_tag-0.1.dist-info/top_level.txt,sha256=Gvc3zmyKofxxTXFzDa3343N7pCkXJCAlkf_rlZHU4vI,20
+wagtail_picture_tag-0.1.dist-info/RECORD,,
