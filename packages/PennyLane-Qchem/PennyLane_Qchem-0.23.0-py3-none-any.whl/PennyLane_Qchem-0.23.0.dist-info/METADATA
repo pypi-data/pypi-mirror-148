@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: PennyLane-Qchem
+Version: 0.23.0
+Summary: Deprecated: PennyLane-Qchem has been deprecated
+Home-page: http://xanadu.ai
+Maintainer: Xanadu Inc.
+Maintainer-email: software@xanadu.ai
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering :: Physics
+Provides: pennylane_qchem
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pennylane (>=0.13)
+Requires-Dist: scipy
+Requires-Dist: openfermion (>=1.0)
+Requires-Dist: openfermionpsi4 (>=0.5)
+Requires-Dist: h5py (<=3.2.1)
+Requires-Dist: openfermionpyscf (>=0.5) ; platform_system != "Windows"
+Requires-Dist: pyscf (<2.0,>=1.7.2) ; platform_system != "Windows"
+
+## Deprecated: PennyLane-Qchem has been deprecated
+
+The **PennyLane-Qchem package is deprecated** as Qchem is now a part of PennyLane
+as of PennyLane ``v0.23.0``.
+
+Use the ``pennylane.qchem`` module of PennyLane ``>v0.23.0`` instead or
+downgrade to PennyLane ``<=0.22.0`` and PennyLane-Qchem ``<=0.22.0`` to continue
+using the earlier versions of this package.
+
+See the [documentation](https://pennylane.readthedocs.io/en/stable/introduction/chemistry.html)
+for more details.
+
+
+
