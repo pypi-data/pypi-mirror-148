@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/pyshot.py
+src/webdriver_proxy.py
+src/webelement_proxy.py
+src/pyshot.egg-info/PKG-INFO
+src/pyshot.egg-info/SOURCES.txt
+src/pyshot.egg-info/dependency_links.txt
+src/pyshot.egg-info/entry_points.txt
+src/pyshot.egg-info/requires.txt
+src/pyshot.egg-info/top_level.txt
