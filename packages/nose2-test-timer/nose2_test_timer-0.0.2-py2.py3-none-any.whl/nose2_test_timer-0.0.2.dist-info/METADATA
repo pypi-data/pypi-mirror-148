@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: nose2-test-timer
+Version: 0.0.2
+Summary: A timer plugin for nose2
+Home-page: https://github.com/kaichiachen/nose2-test-timer
+Author: Kaichia Chen
+Author-email: kaichiaboy@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Testing
+Classifier: Environment :: Console
+Requires-Dist: nose2
+Requires-Dist: colorama
+
+# nose2-test-timer
+
+A timer plugin for nose2 to benchmark time that each unit test take
+
+Ported from nose-timer. Functionality should be mostly but not yet entirely the same
+
+### Install
+
+To install the latest development version from Git
+
+    pip install git+https://github.com/kaichiachen/nose2-test-timer.git
+
+Or to install the latest from source
+
+    git clone https://github.com/kaichiachen/nose2-test-timer.git
+    cd nose2_test_timer
+    pip install .
+
+You can also make a developer install if you plan on modifying the
+source frequently
+
+    pip install -e .
+
+
+###  Usage
+
+    nose2 -v -s ./example --plugin=nose2_test_timer.plugin --with-timer --timer-json-file './result.json' --timer-color --timer-top-n 20
+
+![](https://github.com/kaichiachen/nose2-test-timer/blob/master/images/colorexample.png?raw=true)
+### License
+
+``nose2-test-timer`` is MIT Licensed library.
+
+
+
+
