@@ -1,0 +1,33 @@
+# Build a snap and publish
+
+name: Snapcraft
+
+on:
+  schedule:
+    - cron: '0 0 * * 1'
+  release:
+    types: [created]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      
+      # Builds the snap
+      - uses: snapcore/action-build@v1
+
+      # Upload the snap as an artefact
+      - uses: actions/upload-artifact@v2
+        with:
+          name: snap
+          path: ${{ steps.snapcraft.outputs.snap }}
