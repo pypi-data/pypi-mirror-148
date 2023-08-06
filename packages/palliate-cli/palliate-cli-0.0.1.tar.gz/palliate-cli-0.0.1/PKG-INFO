@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: palliate-cli
+Version: 0.0.1
+Summary: interactive palliate shell
+Home-page: https://github.com/palliate/cli
+Author: Tsche
+Author-email: contact@palliate.io
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/palliate/cli/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 1 - Planning
+
+Interactive shell to control palliate instances
+
