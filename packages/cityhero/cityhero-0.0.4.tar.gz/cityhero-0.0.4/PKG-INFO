@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: cityhero
+Version: 0.0.4
+Summary: Based on the script of the Erqi City Hero Infinite City sign in and collect coins
+Home-page: https://github.com/WildboarG/City_Hero-sign
+Author: WildboarG
+Author-email: mm62633482@gmail.com
+License: MIT
+Keywords: sign,City_Hero
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+test Module
+
