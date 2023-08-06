@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: hydra-orion-sweeper
+Version: 1.0.0
+Summary: Hydra Orion Sweeper plugin
+Home-page: https://orion.readthedocs.io/
+Author: Pierre Delaunay
+Author-email: pierre.delaunay@mila.quebec
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Requires-Dist: hydra-core (>=1.1.0.dev7)
+Requires-Dist: orion (>=0.2.2)
+
+Hydra Sweeper plugin for Orion
+==============================
+
+
+.. image:: https://codecov.io/gh/Epistimio/hydra_orion_sweeper/branch/master/graph/badge.svg?token=40Cr8V87HI
+   :target: https://codecov.io/gh/Epistimio/hydra_orion_sweeper
+
+.. image:: https://github.com/Epistimio/hydra_orion_sweeper/actions/workflows/docs.yml/badge.svg?branch=master
+   :target: https://github.com/Epistimio/hydra_orion_sweeper/actions/workflows/docs.yml
+
+.. image:: https://github.com/Epistimio/hydra_orion_sweeper/actions/workflows/test.yml/badge.svg?branch=master
+   :target: https://github.com/Epistimio/hydra_orion_sweeper/actions/workflows/test.yml
+
+.. image:: https://github.com/Epistimio/hydra_orion_sweeper/actions/workflows/style.yml/badge.svg?branch=master
+   :target: https://github.com/Epistimio/hydra_orion_sweeper/actions/workflows/style.yml
+
+
+Provides a mechanism for Hydra applications to use `Orion <https://orion.readthedocs.io>`_
+algorithms for the optimization of the parameters of any experiment.
+
+See `website <https://orion.readthedocs.io>`_ for more information
+
+
+Install
+-------
+
+.. code-block:: bash
+
+   pip install hydra_orion_sweeper
+
+
+Example
+-------
+
+
+.. code-block:: python
+
+
+   python example/my_app.yaml
+
+
+
