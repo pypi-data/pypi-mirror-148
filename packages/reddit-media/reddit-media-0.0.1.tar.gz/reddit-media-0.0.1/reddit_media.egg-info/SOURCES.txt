@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+reddit_media.egg-info/PKG-INFO
+reddit_media.egg-info/SOURCES.txt
+reddit_media.egg-info/dependency_links.txt
+reddit_media.egg-info/requires.txt
+reddit_media.egg-info/top_level.txt
+redditmedia/__init__.py
+redditmedia/__main__.py
+redditmedia/cli.py
+redditmedia/py.typed
