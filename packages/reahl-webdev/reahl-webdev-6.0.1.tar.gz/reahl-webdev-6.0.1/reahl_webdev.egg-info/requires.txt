@@ -1,0 +1,12 @@
+reahl-web<6.1,>=6.0
+reahl-dev<6.1,>=6.0
+reahl-component<6.1,>=6.0
+reahl-tofu<6.1,>=6.0
+selenium<3.141.9999,>=2.42
+watchdog<0.10.999,>=0.8.3
+WebOb<1.8.999,>=1.8
+setuptools>=51.0.0
+prompt_toolkit<2.0.999,>=2.0.10
+
+[pillow]
+Pillow<7.1.999,>=2.5
