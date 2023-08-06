@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: Transprot
+Version: 1.0.0.2
+Summary: Translate DNA string into Protein, based on codon table
+Home-page: https://github.com/Junwoop
+Author: Junwoop
+Author-email: louispark9019@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3
+
+UNKNOWN
+
+
