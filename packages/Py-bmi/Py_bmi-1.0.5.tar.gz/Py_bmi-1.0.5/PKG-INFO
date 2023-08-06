@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: Py_bmi
+Version: 1.0.5
+Summary: A Python module for Checking your bmi
+Home-page: UNKNOWN
+Author: Muhammed Fazin
+License: MIT
+Project-URL: Source, https://github.com/M-fazin/Py_bmi
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Py_bmi
+A Python module for Checking your bmi
+### on progress 
+
+
