@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+src/__init__.py
+src/main.py
+src/TF_package_management.egg-info/PKG-INFO
+src/TF_package_management.egg-info/SOURCES.txt
+src/TF_package_management.egg-info/dependency_links.txt
+src/TF_package_management.egg-info/top_level.txt
