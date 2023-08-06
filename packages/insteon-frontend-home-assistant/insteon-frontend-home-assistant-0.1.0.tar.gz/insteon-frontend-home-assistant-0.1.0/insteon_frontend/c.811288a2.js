@@ -1,0 +1,1 @@
+const e=e=>{const r=["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"];e=e.replace(".","").replace(".","").toLocaleLowerCase();const t=[...e];if(6!=t.length)return!1;for(let e=0;e<t.length;e++)if(!r.includes(t[e]))return!1;return!0};export{e as c};
