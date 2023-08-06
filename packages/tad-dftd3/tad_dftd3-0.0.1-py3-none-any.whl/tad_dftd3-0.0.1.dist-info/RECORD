@@ -1,0 +1,16 @@
+tad_dftd3/__init__.py,sha256=PV6aYAA8NFNuDmtZN2g68oxa1KQ80dvXXd5B5NCflMQ,5522
+tad_dftd3/constants.py,sha256=l-_rlhVpms7w6H-lVdOk9vUg3UOOUDU4SunSaSrPxuE,842
+tad_dftd3/data.py,sha256=AtMhrqlP-eD4wTVaw5gitC620IJ2vFQG4lA3es1pyCI,41892
+tad_dftd3/disp.py,sha256=qGyowR4AhPsP8j5TwDumfegkhY7xDa7N9z3BAssQR6Y,5501
+tad_dftd3/exception.py,sha256=102CyYpgU431Zi1yIac4AQFJ8098kI-P9qNokj0HwM0,772
+tad_dftd3/model.py,sha256=aOUswTUsrQgiHkD6UupKLvgpwUe5edMi_zfM0I8ZxXc,3769
+tad_dftd3/ncoord.py,sha256=A-sE-kA7rlvGjFGiLiHi6ukQwOpbRn8k09KjiXB308w,5109
+tad_dftd3/reference-c6.npy,sha256=rIUOO2t5WVIW9cHtJOauzXxSNZCwQc4uATv1L3k851s,893128
+tad_dftd3/reference.py,sha256=4j7JBN9rAadzzYuSBCjkgLIi6JCWwbq_KfUZhklwIQQ,11306
+tad_dftd3/typing.py,sha256=HZNJ3EA4RlP1NXbLHij0pj95XNHG5yT07eHxPAWOung,1082
+tad_dftd3/util.py,sha256=8aHyUD6Oojs0IuALflBcKeiutweyGnbx7VNCV2vmXFo,4258
+tad_dftd3-0.0.1.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+tad_dftd3-0.0.1.dist-info/METADATA,sha256=rBr6hVhAgH-KEK9lr6jN-hOuXqhJWTF8F0YPvikbqHY,8428
+tad_dftd3-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+tad_dftd3-0.0.1.dist-info/top_level.txt,sha256=tipN7i-5mJNIQ0wN5paxCDOE9LXiKRGKC_b_m8k10SE,10
+tad_dftd3-0.0.1.dist-info/RECORD,,
