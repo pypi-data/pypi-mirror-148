@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: voltalis-cli
+Version: 0.0.1
+Summary: voltalis python client
+Home-page: https://github.com/nilleb/voltalis-cli
+Author: Ivo Bellin Salarin
+Author-email: ivo@nilleb.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: requests (>=1.11.1)
+Requires-Dist: matplotlib (>=1.5.1)
+Provides-Extra: build
+Requires-Dist: requests ; extra == 'build'
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: ipython ; extra == 'dev'
+Requires-Dist: build ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+
+# voltalis-cli
+
+A python client for the [voltalis API](https://myvoltalis.com/).
+
+This package is NOT maintained by voltalis.
+
+The myvoltalis application is slow, and it offers basic functionalities. Voltalis appliances can not be integrated with common domotic solutions (HomeAssistant, HomeKit, Google Home). This client may constitute an example about how to interface with the API.
+
+## install
+
+```sh
+pip install voltalis-cli
+```
+
+## run
+
+```sh
+# executes the scenario "end-user clicking on all the menus of the myvoltalis web app"
+python -m voltalis.sample_scenario login password
+```
+
+
