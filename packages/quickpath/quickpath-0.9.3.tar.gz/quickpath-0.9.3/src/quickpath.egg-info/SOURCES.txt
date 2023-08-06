@@ -1,0 +1,15 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+requirements_dev.txt
+setup.cfg
+src/conftest.py
+src/quickpath/__init__.py
+src/quickpath/_version.py
+src/quickpath/getpath.py
+src/quickpath.egg-info/PKG-INFO
+src/quickpath.egg-info/SOURCES.txt
+src/quickpath.egg-info/dependency_links.txt
+src/quickpath.egg-info/top_level.txt
+tests/test_getpath.py
