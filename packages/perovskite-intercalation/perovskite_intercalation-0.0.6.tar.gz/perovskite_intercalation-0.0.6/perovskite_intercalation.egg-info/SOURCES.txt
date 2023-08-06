@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+perovskite_intercalation.egg-info/PKG-INFO
+perovskite_intercalation.egg-info/SOURCES.txt
+perovskite_intercalation.egg-info/dependency_links.txt
+perovskite_intercalation.egg-info/requires.txt
+perovskite_intercalation.egg-info/top_level.txt
