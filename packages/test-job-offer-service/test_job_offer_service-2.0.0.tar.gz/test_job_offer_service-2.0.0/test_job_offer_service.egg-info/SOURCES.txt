@@ -1,0 +1,7 @@
+setup.py
+src/__init__.py
+src/main.py
+test_job_offer_service.egg-info/PKG-INFO
+test_job_offer_service.egg-info/SOURCES.txt
+test_job_offer_service.egg-info/dependency_links.txt
+test_job_offer_service.egg-info/top_level.txt
