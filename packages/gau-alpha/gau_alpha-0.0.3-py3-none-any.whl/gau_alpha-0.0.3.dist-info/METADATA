@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: gau-alpha
+Version: 0.0.3
+Summary: gau_alpha_pytorch
+Home-page: https://github.com/JunnYu/GAU-alpha-pytorch
+Author: Jun Yu
+Author-email: 573009727@qq.com
+License: Apache 2.0
+Keywords: gau_alpha,pytorch
+Platform: UNKNOWN
+Requires-Dist: transformers (>=4.13.0)
+
+UNKNOWN
+
+
