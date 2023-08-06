@@ -1,0 +1,2 @@
+dictdiffer==0.8.1
+drf-api-history==1.1.4
