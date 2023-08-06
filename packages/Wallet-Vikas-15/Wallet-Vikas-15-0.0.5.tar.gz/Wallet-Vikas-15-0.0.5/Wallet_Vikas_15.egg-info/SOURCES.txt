@@ -1,0 +1,8 @@
+README.md
+setup.py
+Wallet_Vikas_15.egg-info/PKG-INFO
+Wallet_Vikas_15.egg-info/SOURCES.txt
+Wallet_Vikas_15.egg-info/dependency_links.txt
+Wallet_Vikas_15.egg-info/entry_points.txt
+Wallet_Vikas_15.egg-info/requires.txt
+Wallet_Vikas_15.egg-info/top_level.txt
