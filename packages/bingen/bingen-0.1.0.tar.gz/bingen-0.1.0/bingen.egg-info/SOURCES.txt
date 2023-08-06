@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+bingen/__init__.py
+bingen/models.py
+bingen/translator.py
+bingen.egg-info/PKG-INFO
+bingen.egg-info/SOURCES.txt
+bingen.egg-info/dependency_links.txt
+bingen.egg-info/not-zip-safe
+bingen.egg-info/requires.txt
+bingen.egg-info/top_level.txt
