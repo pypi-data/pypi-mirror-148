@@ -1,0 +1,14 @@
+pycno/__init__.py,sha256=UmaDoPbfbpaS9w-nnePk9C80zq5qO-wzPegmoDGRtXs,15661
+pycno/data/MWDB_Coasts_Countries_3.cnob,sha256=bbnjOm6LY5Qj51IY4neZ5otHm2m-e7E9qSqHWxVtxBE,217536
+pycno/data/README.md,sha256=PUdWU9L-tjrA1oKVSS-cAkd1tFZFtFyBMvAsmEhWzv4,325
+pycno/data/test.cno,sha256=hxRq9l8I1xrHgrhIxmmk0PGp02eYh1qsi16RoxDjScY,96
+pycno/data/test.cnob,sha256=9AtevYdAjiaFDIoVB4Bt59psgvB9aoeC1RmuKoeUXV0,100
+pycno/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pycno/tests/test_cno.py,sha256=8mRujz6THjqVeVuNz-MaCni3RDyAl2VXx2ryQ1XRCyM,3812
+pycno/util/__init__.py,sha256=L69Jl4JmN4c2bmWN5pytaE0XzWiLKlPsLGliCiww8Ic,45
+pycno/util/shp2cno.py,sha256=IKo2t9w8vjNORg9LuK5hleiSfj5M9lDQRMZMt_Lw7Q8,3145
+pycno-0.2.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pycno-0.2.1.dist-info/METADATA,sha256=KoXgnKqM6pqiYcnUsxdBnxE3EYUv1jdublmAAo7MNwQ,3675
+pycno-0.2.1.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+pycno-0.2.1.dist-info/top_level.txt,sha256=VmsreNvA108a5uGsWcHkcG0xYIp5hpxUZ1BoUR0YAL0,6
+pycno-0.2.1.dist-info/RECORD,,
