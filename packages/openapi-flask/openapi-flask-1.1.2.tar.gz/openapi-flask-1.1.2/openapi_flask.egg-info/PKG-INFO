@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: openapi-flask
+Version: 1.1.2
+Summary: Generate REST API and OpenAPI documentation for your Flask project.
+Home-page: https://github.com/841339069/openapi_flask
+Author: gxw
+Author-email: 841339069@qq.com
+License: MIT
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Flask
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# openapi_flask
+集成fastapi和pydantic思想，在flask中自动构建简洁明了的接口文档平台
+
+
