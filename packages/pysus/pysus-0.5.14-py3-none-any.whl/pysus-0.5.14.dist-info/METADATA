@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: pysus
+Version: 0.5.14
+Summary: Tools for dealing with Brazil's Public health data
+Home-page: https://github.com/fccoelho/PySUS
+Author: Flavio Codeco Coelho
+Requires-Python: >=3.8,<3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: cffi (>=1.0.0)
+Requires-Dist: colorcet (==3.0.0)
+Requires-Dist: dask (==2022.4.0)
+Requires-Dist: datashader (==0.13.0)
+Requires-Dist: dbfread (==2.0.7)
+Requires-Dist: elasticsearch (==8.1.2)
+Requires-Dist: facets-overview (==1.0.0)
+Requires-Dist: fastparquet (==0.8.1)
+Requires-Dist: folium (==0.12.1)
+Requires-Dist: gdal (==3.4.1)
+Requires-Dist: geobr (==0.1.10)
+Requires-Dist: geocoder (==1.38.1)
+Requires-Dist: geopandas (==0.7.0)
+Requires-Dist: georasters
+Requires-Dist: pandas (==1.4.2)
+Requires-Dist: pandasql (==0.7.3)
+Requires-Dist: pyarrow (==7.0.0)
+Requires-Dist: requests (==2.27.1)
+Requires-Dist: scipy (==1.8.0)
+Requires-Dist: tqdm (==4.64.0)
+Requires-Dist: wget (==3.2)
+Requires-Dist: xarray (==2022.3.0)
