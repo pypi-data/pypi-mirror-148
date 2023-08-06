@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+newtonEQ/__init__.py
+newtonEQ.egg-info/PKG-INFO
+newtonEQ.egg-info/SOURCES.txt
+newtonEQ.egg-info/dependency_links.txt
+newtonEQ.egg-info/top_level.txt
