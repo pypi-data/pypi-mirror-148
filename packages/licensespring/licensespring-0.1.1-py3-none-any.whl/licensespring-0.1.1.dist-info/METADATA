@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: licensespring
+Version: 0.1.1
+Summary: LicenseSpring Python Library
+Home-page: https://licensespring.com/
+Author: Toni Sredanović
+Author-email: toni@licensespring.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: requests (>=2.27.1,<3.0.0)
+Description-Content-Type: text/markdown
+
+# LicenseSpring Python Library
+
+The LicenseSpring Python library provides convenient access to the LicenseSpring API from
+applications written in the Python language.
+
