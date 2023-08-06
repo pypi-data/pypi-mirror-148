@@ -1,0 +1,125 @@
+
+<testSuite>
+
+
+
+
+ <test name="Predicates on Path expression ('/' Step)">
+
+     <query>
+        data(doc("tests/files/xquery-gael-document.xml")/library/
+            book[@isbn = "2-84177-079-6"]/title)
+     </query>
+
+     <result>
+       JAVA Threads
+     </result>
+
+  </test>
+
+      <test name="Predicates on Path expression ('/' Step)">
+
+     <query>
+        data(doc("tests/files/xquery-gael-document.xml")/library/
+            book[@isbn = "2-84177-079-6"]/title)
+     </query>
+
+     <result>
+       JAVA Threads
+     </result>
+
+  </test>
+
+  <test name="Predicates on Path expression ('//' Step)">
+
+     <query>
+        data(doc("tests/files/xquery-gael-document.xml")//
+            book[@isbn = "2-84177-079-6"]/title)
+     </query>
+
+     <result>
+       JAVA Threads
+     </result>
+  </test>
+
+
+  <test name="Predicates on Path expression 2 ('/' Step)">
+
+     <query>
+        doc("tests/files/xquery-gael-document.xml")/library/
+            book/title[. = "JAVA Threads"]/..
+     </query>
+
+     <result>
+
+<![CDATA[<book isbn="2-84177-079-6">
+   <title>JAVA Threads</title>
+   <author>Scott Oaks</author>
+   <author>Henry Wong</author>
+   <editor>O'Reilly</editor>
+</book>
+]]>
+
+     </result>
+
+  </test>
+
+  <test name="Predicates on Path expression 2 ('//' Step)">
+
+     <query>
+        doc("tests/files/xquery-gael-document.xml")//
+            title[. = "JAVA Threads"]/..
+     </query>
+
+     <result>
+
+<![CDATA[<book isbn="2-84177-079-6">
+   <title>JAVA Threads</title>
+   <author>Scott Oaks</author>
+   <author>Henry Wong</author>
+   <editor>O'Reilly</editor>
+</book>
+]]>
+
+     </result>
+
+  </test>
+
+  <test name="Predicates on Path expression 3">
+
+     <query>
+        data(doc("tests/files/xquery-gael-document.xml")/library/book[2]/title)
+     </query>
+
+     <result>
+       JAVA Threads
+     </result>
+
+  </test>
+
+  <test name="Predicates on Path expression inside variables ('/' Step)">
+
+     <query>
+        declare variable $a :=doc("tests/files/xquery-gael-document.xml")/library/book;
+        $a[title="JAVA Threads"]/data(editor)
+     </query>
+
+     <result>
+        O'Reilly
+     </result>
+
+  </test>
+
+  <test name="Predicates on Path expression inside variables ('//' Step)">
+
+     <query>
+        declare variable $a :=doc("tests/files/xquery-gael-document.xml")//book;
+        data($a[title="JAVA Threads"]/editor)
+     </query>
+
+     <result>
+        O'Reilly
+     </result>
+
+  </test>
+</testSuite>

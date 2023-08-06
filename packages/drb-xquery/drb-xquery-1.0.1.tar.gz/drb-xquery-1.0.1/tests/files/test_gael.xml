@@ -1,0 +1,2220 @@
+<!--
+   The unitary test shall be decleared accordingly with the following structure:
+
+   <test name="Test example">
+
+      <description>Here comes the full description.</description>
+
+      <query dynamicError="false" staticError="false">
+         Here comes the query....
+      </query>
+
+      <result>Here comes the expected result</result>
+
+   </test>
+
+   - The "description" markup is optional but recommended.
+
+   - The "query" markup contains the query defining the test. This query will
+     systematically be statically evaluated. It will be dynamically evaluated
+     only if a "result" has been provide or/and if "dynamicError" is expected
+     (see description of the attributes below).
+
+   - the "dynamicError" attribute is optional and defaulted to "false". It
+     indicates whether the dynamic evaluation of provided query script shall
+     raise an error. The possible values are "false" or "true".
+
+   - the "staticError" attribute is optional and defaulted to "false". It
+     indicates whether the static evaluation of provided query script shall
+     raise an error (type or static error). The possible values are "false" or
+     "true". It is an incosistency to declare both a "staticError" and a
+     "dynamicError" because the dynamic evaluation can only be performed if
+     no error occurred during the static phase.
+
+   - the "result" markup is optional and if present, should contain exact result
+     string expect after re-encoding the dynamic evaluation output sequence
+     into a string. It is important to take care of the format of this output
+     that will be compare on a one by one character basis.
+
+   Considering that declaration, test will be declared successful if:
+
+   - If the static evaluation of the "query" raised or nor an error accordingly
+     with the "staticError" attribute, AND
+   - If a result has been provided, the dynamic evaluation of the "query"
+     matches one by one the "result" AND
+   - If the "dynamicError" attribute is set to true, the dynamic evaluation of
+     the "query" raised an error.
+
+-->
+
+<testSuite>
+
+   <!-- XQuery basics -->
+
+   <test name="Comments">
+      <description>Tests a comment declaration.</description>
+      <query>(: Houston, we have a problem :) "Appolo"</query>
+      <result>Appolo</result>
+   </test>
+
+<!--   <test name="Old style comments">-->
+<!--      <description>-->
+<!--         Test that comment declarations in the old XQuery style is still-->
+<!--         supported by the query engine.-->
+<!--      </description>-->
+<!--      <query>{&#45;&#45; Houston, we have a problem &#45;&#45;} "Appolo"</query>-->
+<!--      <result>Appolo</result>-->
+<!--   </test>-->
+
+   <test name="Nested comments">
+      <description>Test that comments may be nested.</description>
+      <query>
+         (: Houston (: Sir. Our satelite has broken loose! :) :) "NASA"
+      </query>
+      <result>NASA</result>
+   </test>
+
+<!--   <test name="Old style nested comments">-->
+<!--      <description>-->
+<!--         Test that nested comment declarations in the old XQuery style are still-->
+<!--         supported by the query engine.-->
+<!--      </description>-->
+<!--      <query>-->
+<!--         {&#45;&#45; Houston {&#45;&#45; Sir. Our satelite has broken loose! &#45;&#45;} &#45;&#45;} "NASA"-->
+<!--      </query>-->
+<!--      <result>NASA</result>-->
+<!--   </test>-->
+
+   <test name="Mixed New/Old style nested comments">
+      <description>
+         Test that nested comment declarations alternated in the new and old
+         XQuery style are supported by the query engine.
+      </description>
+      <query>
+         (: Houston {-- Sir. Our satelite has broken loose! --} :) "NASA"
+      </query>
+      <result>NASA</result>
+   </test>
+
+   <test name="Badly mixed New/Old style nested comments">
+      <description>
+         Test that it is not possible to close a new style comment declaration
+         with an old style.
+      </description>
+      <query staticError="true">
+         (: Sir. Our satelite has broken loose! --} "NASA"
+      </query>
+   </test>
+
+<!--   <test name="Xml comments">-->
+<!--      <description>-->
+<!--         Test that comments with xml style are supported-->
+<!--      </description>-->
+<!--      <query>-->
+<!--         <![CDATA[&lt;!&ndash; Sir. Our satelite has broken loose! &ndash;&gt; "NASA"]]>-->
+<!--      </query>-->
+<!--      <result>-->
+<!--          NASA-->
+<!--      </result>-->
+<!--   </test>-->
+
+<!--   <test name="Nested Xml comments">-->
+<!--      <description>-->
+<!--         Test that comments with xml style cant be nested-->
+<!--      </description>-->
+<!--      <query staticError="true">-->
+<!--         <![CDATA[&lt;!&ndash; Sir. &lt;!&ndash;Our satelite has broken loose!&ndash;&gt; &ndash;&gt; "NASA"]]>-->
+<!--      </query>-->
+<!--   </test>-->
+
+<!--   -->
+<!--   <test name="Mixed Xml comments">-->
+<!--      <description>-->
+<!--         Test that comments with xml style can be mixed with new style xml comments -->
+<!--      </description>-->
+<!--      <query>-->
+<!--         <![CDATA[-->
+<!--&lt;!&ndash; Sir. (:Our satelite has broken loose!:) &ndash;&gt; "NASA" (: &lt;!&ndash; comments again &ndash;&gt; :)-->
+<!--]]>-->
+<!--      </query>-->
+
+<!--       <result>-->
+<!--          NASA-->
+<!--      </result>-->
+<!--   </test>-->
+
+<!--    <test name="Xml comments with illegal value">-->
+<!--      <description>-->
+<!--         Not possible to have "&#45;&#45;" inside Xml Comments-->
+<!--      </description>-->
+<!--      <query staticError="true">-->
+<!--         <![CDATA[&lt;!&ndash; int i = 0; i&#45;&#45;; print (i);  &ndash;&gt; -1]]>-->
+<!--      </query>-->
+<!--   </test>-->
+
+   <test name="for in simple test">
+      <description>Tests the evaluation of fn:data()
+      when argument are several nodes.</description>
+      <query>
+         for $x in (100, 200, 300) return $x</query>
+      <result>100, 200, 300</result>
+   </test>
+
+   <!-- XQuery Primay Expressions -->
+
+   <test name="Integer literal">
+      <description>Tests that integer literals are supported.</description>
+      <query>123456</query>
+      <result>123456</result>
+   </test>
+
+   <test name="Decimal literal with no integer part">
+      <description>
+         Tests that decimal literals with no integer part are supported.
+      </description>
+      <query>.123456</query>
+      <result>0.123456</result>
+   </test>
+
+   <test name="Decimal literal with integer part">
+      <description>
+         Tests that decimal literals with integer part are supported.
+      </description>
+      <query>123.456</query>
+      <result>123.456</result>
+   </test>
+
+   <test name="Double literal with unsigned lowercase exponent part">
+      <description>
+         Tests that double literals with unsigned lowercase exponent part are
+         supported.
+      </description>
+      <query>123e12</query>
+      <result>1.23E14</result>
+   </test>
+
+   <test name="Double literal with positive lowercase exponent part">
+      <description>
+         Tests that double literals with positive lowercase exponent part are
+         supported.
+      </description>
+      <query>123e+12</query>
+      <result>1.23E14</result>
+   </test>
+
+   <test name="Double literal with negative lowercase exponent part">
+      <description>
+         Tests that double literals with negative lowercase exponent part are
+         supported.
+      </description>
+      <query>123e-12</query>
+      <result>1.23E-10</result>
+   </test>
+
+   <test name="Double literal with unsigned uppercase exponent part">
+      <description>
+         Tests that double literals with unsigned uppercase exponent part are
+         supported.
+      </description>
+      <query>123E12</query>
+      <result>1.23E14</result>
+   </test>
+
+   <test name="Double literal with positive uppercase exponent part">
+      <description>
+         Tests that double literals with positive uppercase exponent part are
+         supported.
+      </description>
+      <query>123E+12</query>
+      <result>1.23E14</result>
+   </test>
+
+   <test name="Double literal with negative uppercase exponent part">
+      <description>
+         Tests that double literals with negative uppercase exponent part are
+         supported.
+      </description>
+      <query>123E-12</query>
+      <result>1.23E-10</result>
+   </test>
+
+   <test name="Double literal with decimal and exponent part">
+      <description>
+         Tests that double literals can be declared with both a decimal and an
+         exponent part.
+      </description>
+      <query>123.354E+12</query>
+      <result>1.23354E14</result>
+   </test>
+
+   <test name="String literals">
+      <description>
+         Tests that string literals are supported.
+      </description>
+      <query>"Did you have suicide pills on board?"</query>
+      <result>Did you have suicide pills on board?</result>
+   </test>
+
+   <test name="String literals with predefined entities and character reference">
+      <description>
+         Tests that predefined entities and character reference are supported">
+      </description>
+      <query><![CDATA["B&#101;n and J&#x0065;rry&apos;s"]]></query>
+      <result>Ben and Jerry's</result>
+   </test>
+
+   <test name="String literals with adjacent apostrophes">
+      <description>
+         Tests that string literals with adjacent apostrophes are supported.
+      </description>
+      <query>"He said, ""I don't like it."""</query>
+      <result>He said, "I don't like it."</result>
+   </test>
+
+
+  <!-- Variables -->
+
+   <test name="Unprefixed variable references">
+      <description>
+         Tests that unprefixed variable references are allowed.
+         This test is connected to the variable declaration because it is
+         necessary to declare the variable before using it.
+      </description>
+      <query>declare variable $var := 1; $var</query>
+      <result>1</result>
+   </test>
+
+   <test name="Typed variable references">
+      <description>
+         Tests that typed typed variable references are allowed.
+      </description>
+      <query>declare variable $var as xs:decimal := 1.5; $var</query>
+      <result>1.5</result>
+   </test>
+
+   <test name="Typed variable conversion">
+      <description>
+         Tests that typed variables are converted.
+      </description>
+      <query>declare variable $var as xs:int := 1.5; $var</query>
+      <result>1</result>
+   </test>
+
+   <test name="Typed variable validation">
+      <description>
+         Tests that a dynamic error is reported when the typed variables
+         cannot be converted to the static type.
+      </description>
+      <query dynamicError="true">declare variable $var as xs:int := "Hello"; $var</query>
+      <result>Hello</result>
+   </test>
+
+   <test name="Undeclared and unprefixed variable references">
+      <description>
+         Tests that undeclared variable references are not allowed.
+      </description>
+      <query staticError="true">$badvar</query>
+   </test>
+
+   <test name="Prefixed variable references">
+      <description>
+         Tests that prefixed variable reference are allowed.
+         This test is connected to the variable declaration because it is
+         necessary to declare the variable before using it. The same connection
+         exists with the namespace declaration.
+      </description>
+      <query>
+         declare namespace ns = "dummyURI";
+         declare variable $ns:var := 1;
+         $ns:var
+      </query>
+      <result>1</result>
+   </test>
+
+   <test name="Badly prefixed variable references">
+      <description>
+         Tests that variable reference with a unbound prefix are not allowed.
+         This test is connected to the variable declaration because it is
+         necessary to declare the variable before using it. The same connection
+         exists with the namespace declaration.
+      </description>
+      <query staticError="true">
+         declare namespace ns = "dummyURI";
+         declare variable $ns:var := 1;
+         $badns:var
+      </query>
+   </test>
+
+   <test name="Undeclared prefixed variable references">
+      <description>
+         Tests that undeclared prefixed variable references are not allowed.
+      </description>
+      <query staticError="true">$bad:var</query>
+   </test>
+
+<!--   <test name="References to variables declared in a module">-->
+<!--      <description>-->
+<!--         Tests that reference to variable declared in a module are allowed.-->
+<!--         This test is connected to the module import behavior. The imported-->
+<!--         module declare the variable $mns:var with "mns" prefix bound to the-->
+<!--         target namespace of the imported module : "libraryModuleURI". The-->
+<!--         value of the imported variable is supposed to be 20.-->
+<!--      </description>-->
+<!--      <query>-->
+<!--         import module namespace mns = "libraryModuleURI"-->
+<!--            at "fr/gael/drb/query/xquery-gael-module.xql";-->
+<!--         $mns:var-->
+<!--      </query>-->
+<!--      <result>20</result>-->
+<!--   </test>-->
+
+   <test name="Reference to variable bound by a FLWOR expression.">
+      <description>
+         Tests the references to variables bound by the "let", "for" clauses
+         of a conditional expression as well as a positional variable.
+      </description>
+      <query>
+         let $x := 1
+         let $y := 2
+         for $z at $k in $x to $y
+         return
+            ($k, $z)
+      </query>
+      <result>1, 1, 2, 2</result>
+   </test>
+
+   <test name="Reference to variable with inner priority.">
+      <description>
+         Tests whether a variable reference matches two or more variable
+         bindings that are in scope, then the reference is taken as referring
+         to the inner binding, that is, the one whose scope is smaller. This
+         test is performed by declaring a global variable $var that is
+         redeclared and used within a FLWOR expression and re-used after this
+         latter expression.
+      </description>
+      <query>
+         declare variable $var := 23;
+
+         $var,
+
+         for $var in 1 to 2
+         return $var,
+
+         $var
+      </query>
+      <result>23, 1, 2, 23</result>
+   </test>
+
+
+   <test name="Declaration of variable with context item">
+      <description>
+          Tests that variables are evaluated only once, as soon as they are declared.
+      </description>
+      <query>
+         declare variable $var := name (.);
+
+         doc("tests/files/xquery-gael-document.xml")/library/*[name(.)=$var]
+      </query>
+      <result></result>
+   </test>
+
+   <test name="Declaration of binding variable with context item inside FLWOR">
+      <description>
+          Same test for binding variables.
+      </description>
+      <query>
+         let $var := name(.)
+         return doc("tests/files/xquery-gael-document.xml")/library/*[name(.)=$var]
+      </query>
+      <result></result>
+   </test>
+
+   <!-- Parenthesized Expressions -->
+
+   <test name="Parenthesized expressions">
+      <description>
+         Tests that parenthesized enforces a particular evaluation order. The
+         test also checks that the same un-parenthesized expression leads to
+         a different result.
+      </description>
+      <query>(2 + 4) * 5, 2 + 4 * 5</query>
+      <result>30, 22</result>
+   </test>
+
+   <test name="Empty sequence">
+      <description>
+         Tests that empty parenthesis matches the empty expression.
+      </description>
+      <query>(), 2</query>
+      <result>2</result>
+   </test>
+
+   <!-- Context item expression -->
+
+<!--   <test name="Context item">-->
+<!--      <description>-->
+<!--         Tests that the context item expression "." is supported.-->
+<!--      </description>-->
+<!--      <query>-->
+<!--         <![CDATA[-->
+<!--         let $var := <root> <a>1</a> <b>2</b> </root>-->
+<!--         return-->
+<!--            data($var/*[name(.) = "b"])-->
+<!--         ]]>-->
+<!--      </query>-->
+<!--      <result>2</result>-->
+<!--   </test>-->
+
+   <!-- Function calls -->
+
+   <test name="Calls to user-declared function">
+      <description>
+         Tests user-declared function call.
+      </description>
+      <query>
+         declare function func($var) { $var + 1};
+         func(1)
+      </query>
+      <result>2</result>
+   </test>
+
+   <test name="Calls to built-in function">
+      <description>
+         Tests built-in function call.
+      </description>
+      <query>
+         count(1 to 3)
+      </query>
+      <result>3</result>
+   </test>
+
+   <!-- Path expressions -->
+
+   <test name="Path expression abbreviated syntax and predicats">
+      <description>
+         Tests the abbreviated syntax of the path expression by selecting nodes
+         of an XML document.
+      </description>
+      <query>
+         data(doc("tests/files/xquery-gael-document.xml")/library/
+            book[@isbn = "2-84177-079-6"]/title)
+      </query>
+      <result>JAVA Threads</result>
+   </test>
+
+   <test name="Path expression abbreviated syntax on attribute axis ('/' Step)">
+      <description>
+         Tests the abbreviated syntax of the path expression by selecting attributes
+         of an XML document.
+      </description>
+      <query>
+         data(doc("tests/files/xquery-gael-document.xml")/library/
+            book[2]/@isbn)
+      </query>
+      <result>2-84177-079-6</result>
+   </test>
+
+
+<!--   <test name="Path expression abbreviated syntax on attribute axis ('//' Step)">-->
+<!--      <description>-->
+<!--         Tests the abbreviated syntax of the path expression by selecting attributes-->
+<!--         of an XML document.-->
+<!--      </description>-->
+<!--      <query>-->
+<!--         data(doc("tests/files/xquery-gael-document.xml")//@isbn)-->
+<!--      </query>-->
+<!--      <result>245-53926-3, 2-84177-079-6, 1-861006-95-0, 2711786897</result>-->
+<!--   </test>-->
+
+   <!-- Sequence expressions -->
+
+   <test name="Basic sequences">
+      <description>
+         Tests a simple sequence expression.
+      </description>
+      <query>
+         declare variable $var := 2;
+         1, "Andy", "Smith", $var
+      </query>
+      <result>1, Andy, Smith, 2</result>
+   </test>
+
+   <!-- Range expressions -->
+
+   <test name="Simple range">
+      <description>Test that range declaration is supported.</description>
+      <query> 1 to 10 </query>
+      <result>1, 2, 3, 4, 5, 6, 7, 8, 9, 10</result>
+   </test>
+
+   <test name="Negative range operand">
+      <description>
+         Tests that range declaration supports negative numbers.
+      </description>
+      <query>-5 to 5</query>
+      <result>-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5</result>
+   </test>
+
+   <test name="Range of single integer">
+      <description>
+         Tests that range declaration supports equal boundaries.
+      </description>
+      <query>5 to 5</query>
+      <result>5</result>
+   </test>
+
+   <test name="Reversed range">
+      <description>
+         Tests that a range declaration with a left value greater that the
+         right value results to an empty sequence.
+      </description>
+      <query>1000 to 1</query>
+      <result/>
+   </test>
+
+   <test name="Range mixed with comma separated sequence">
+      <description>
+         Tests that a range declaration mixed with a sequence expression (i.e
+         comma) a correctly handled.
+      </description>
+      <query>10, 1 to 3</query>
+      <result>10, 1, 2, 3</result>
+   </test>
+
+   <!-- Sequence combinations -->
+
+   <test name="Union expression">
+      <query>
+         <![CDATA[
+         let $library :=
+            doc("tests/files/xquery-gael-document.xml")/library
+
+         let $bookA := $library/book[1]
+         let $bookB := $library/book[2]
+
+         for $node in ($bookA, $bookB) union ($bookA, $bookB)
+
+         return
+            data($node/title)
+         ]]>
+      </query>
+      <result>HARRAP'S New Shorter Dictionnaire, JAVA Threads</result>
+   </test>
+
+   <test name="Union expression with a pipe">
+      <query>
+         <![CDATA[
+         (<a/>, <b/>) | (<a/>, <b/>)
+         ]]>
+      </query>
+      <result>
+<![CDATA[<a/>
+, <b/>
+]]>
+</result>
+   </test>
+
+   <test name="Union expression with duplicated nodes">
+      <query>
+         <![CDATA[
+         (<a/>, <a/>, <b/>) | (<a/>, <b/>)
+         ]]>
+      </query>
+<result>
+<![CDATA[<a/>
+, <b/>
+]]>
+</result>
+   </test>
+
+   <test name="Another union expression">
+      <query>
+         <![CDATA[
+         (<a/>, <b/>) union (<b/>, <c/>)
+         ]]>
+      </query>
+     <result>
+<![CDATA[<a/>
+, <b/>
+, <c/>
+]]>
+     </result>
+   </test>
+
+   <test name="Union expression with same nodes">
+      <query>
+         <![CDATA[
+let $a := <a>A</a>
+let $b := <b>B</b>
+let $c := <c>C</c>
+return ($a,$b) union ($b,$c)
+         ]]>
+      </query>
+
+        <result>
+<![CDATA[<a>A</a>
+, <b>B</b>
+, <c>C</c>
+]]>
+      </result>
+   </test>
+
+
+   <test name="Intersect expression with same nodes">
+      <query>
+         <![CDATA[
+let $a := <a>A</a>
+let $b := <b>B</b>
+let $c := <c>C</c>
+return ($a,$b) intersect ($b,$c)
+         ]]>
+      </query>
+
+        <result>
+<![CDATA[<b>B</b>
+]]>
+      </result>
+   </test>
+
+   <test name="Except expression 1">
+      <query>
+         <![CDATA[
+let $a := <a>A</a>
+let $b := <b>B</b>
+return
+         ($a, $b) except ($b, $a)
+         ]]>
+      </query>
+
+ <result>
+</result>
+   </test>
+
+   <test name="except expression 2">
+      <query>
+         <![CDATA[
+let $a := <a>A</a>
+let $b := <b>B</b>
+return
+         ($a, $b) except ($b, <c/>)
+         ]]>
+      </query>
+ <result>
+ <![CDATA[<a>A</a>
+]]>
+</result>
+   </test>
+
+   <test name="Except expression 3">
+      <query>
+         <![CDATA[
+let $a   := <a>A</a>
+let $b1  := <b>B</b>
+let $b2  := <b>B</b>
+return
+         ($a, $a, $b1) except ($a)
+         ]]>
+      </query>
+ <result>
+ <![CDATA[<b>B</b>
+]]>
+</result>
+   </test>
+
+   <test name="Except expression 4">
+      <query>
+         <![CDATA[
+let $a := <a>A</a>
+let $b := <b>B</b>
+let $c := <c>C</c>
+return ($a,$b, $c) except ($b)
+         ]]>
+      </query>
+
+        <result>
+<![CDATA[<a>A</a>
+, <c>C</c>
+]]>
+      </result>
+   </test>
+
+  <!-- Arithmetic expression -->
+  <test name="DIV operator">
+      <query>
+        3 div 2
+      </query>
+      <result>1.5</result>
+   </test>
+
+   <test name="General comparison 1">
+      <query>
+        (5,6) >= (6,7)
+      </query>
+      <result>true</result>
+   </test>
+
+   <test name="General comparison 2">
+      <query>
+        (5,6) >= (7,8)
+      </query>
+      <result>false</result>
+   </test>
+
+   <test name="Logical expression with error">
+      <description>
+         This query MUST raise a dynamic error, as each part of the whole expression must be evaluated.
+      </description>
+      <query dynamicError="true">
+        1 = 1 and 1 div 0
+      </query>
+
+   </test>
+
+  <test name="Logical expression with error">
+       <description>
+         This query MAY raise a dynamic error, as each part of the whole expression could be evaluated (but here as 1 = 1 is true and the operator is or, the second part has not to be evaluated). Here it raises a dynamic error as the second part is evaluated by the way.
+      </description>
+      <query>
+        1 = 1 or 1 div 0
+      </query>
+      <result>true</result>
+   </test>
+
+   <!-- Constructors -->
+    <test name="Direct element constructors">
+       <description>
+       Direct element constructors with computed content and attributes
+      </description>
+      <query>
+        <![CDATA[ <shoe size="{7 to 9}">{5 + 5}</shoe>]]>
+      </query>
+
+      <result>
+
+           <![CDATA[<shoe size="7 8 9">10</shoe>
+]]>
+      </result>
+   </test>
+
+<!--   <test name="Direct element constructors and namespace attribute">-->
+<!--       <description>-->
+<!--       Direct element constructors with namespace attributes-->
+<!--      </description>-->
+<!--      <query>-->
+<!--        <![CDATA[<box xmlns:metric="http://example.org/metric/units">-->
+<!--	<height>-->
+<!--		<metric:meters>3</metric:meters>-->
+<!--	</height>-->
+<!--</box>-->
+<!--]]>-->
+<!--      </query>-->
+
+<!--      <result>-->
+<!--<![CDATA[<box xmlns:metric="http://example.org/metric/units">-->
+<!--   <height>-->
+<!--      <metric:meters>3</metric:meters>-->
+<!--   </height>-->
+<!--</box>-->
+<!--]]>-->
+<!--      </result>-->
+<!--   </test>-->
+
+
+   <!-- FLWOR Expression -->
+
+    <test name="Unprefixed let binding">
+      <description>
+         Tests that unprefixed let binding are allowed.
+      </description>
+      <query>let $var := 1
+             return $var</query>
+      <result>1</result>
+   </test>
+
+   <test name="Typed let binding">
+      <description>
+         Tests that typed let binding are allowed.
+      </description>
+      <query>let $var as xs:decimal := 1.5
+             return $var</query>
+      <result>1.5</result>
+   </test>
+
+   <test name="Typed let binding with conversion">
+      <description>
+         Tests that typed let binding are converted during initialization.
+      </description>
+      <query>let $var as xs:int := 1.5
+             return $var</query>
+      <result>1</result>
+   </test>
+
+   <test name="Typed let binding validation">
+      <description>
+         Tests that a dynamic error is reported when the typed let binding
+         cannot be converted to the static type.
+      </description>
+      <query dynamicError="true">let $var as xs:int := "Hello"
+                                 return $var</query>
+      <result>Hello</result>
+   </test>
+
+
+   <test name="Prefixed let binding">
+      <description>
+         Tests that prefixed let bindings are allowed.
+      </description>
+      <query>
+         declare namespace ns = "dummyURI";
+         let $ns:var := 1
+         return $ns:var
+      </query>
+      <result>1</result>
+   </test>
+
+   <test name="Badly prefixed let binding">
+      <description>
+         Tests that let bindings with a unbound prefix are not allowed.
+      </description>
+      <query staticError="true">
+         declare namespace ns = "dummyURI";
+         let $ns:var := 1
+         return $badns:var
+      </query>
+   </test>
+
+
+
+   <test name="Complex FLWOR Expression">
+
+     <query>
+        declare variable $out := (22, 20, 50, 42, 100);
+        for $x at $i in $out
+        where $x mod 10 = 0
+        return ($x,$i)
+     </query>
+
+     <result>
+        20, 2, 50, 3, 100, 5
+     </result>
+
+  </test>
+
+
+   <!-- Conditionnal Expression -->
+   <test name="Classic conditionnal Expression">
+
+     <query>
+         if (2 > 5) then 2 else 5
+     </query>
+
+     <result>
+        5
+     </result>
+
+  </test>
+
+
+  <!-- Modules and prologs -->
+<!--   <test name="Version declaration">-->
+
+<!--     <query>-->
+<!--        xquery version "1.0";-->
+<!--        2-->
+<!--     </query>-->
+
+<!--     <result>-->
+<!--        2-->
+<!--     </result>-->
+
+<!--  </test>-->
+
+  <test name="Base URI declaration">
+
+     <query>
+        declare base-uri "http://example.org";
+        2
+     </query>
+
+     <result>
+        2
+     </result>
+
+  </test>
+
+  <test name="Namespace declaration">
+
+     <query>
+        declare namespace ns = "foobar";
+        <![CDATA[<ns:number>5</ns:number>]]>
+
+     </query>
+
+     <result><![CDATA[<ns:number xmlns:ns="foobar">5</ns:number>
+]]></result>
+
+  </test>
+
+  <test name="Variable declaration">
+
+     <query>
+       declare variable $a as xs:integer := 7;
+       $a
+
+     </query>
+
+     <result>
+        7
+     </result>
+
+  </test>
+
+<!--  <test name="Variable declaration with an external variable non initialized">-->
+
+<!--     <query staticError="true">-->
+<!--       declare variable $a as xs:integer := 7;-->
+<!--       declare variable $b external;-->
+<!--       $a-->
+
+<!--     </query>-->
+
+
+<!--  </test>-->
+
+
+  <!-- Tests on predicats and filter expressions-->
+
+  <test name="Predicates on sequences">
+
+     <query>
+       (10,20,30)[2]
+
+     </query>
+
+     <result>
+        20
+     </result>
+
+  </test>
+
+  <test name="Predicates on sequences 2">
+
+     <query>
+       (15,52,40)[. mod 10 = 0]
+
+     </query>
+
+     <result>
+        40
+     </result>
+
+  </test>
+
+  <test name="Predicates on sequences 3">
+
+     <query>
+       (15,20,40)[. mod 10 = 0][2]
+
+     </query>
+
+     <result>
+        40
+     </result>
+
+  </test>
+
+<!--  <test name="Predicates on range expressions">-->
+
+<!--     <query>-->
+<!--       (1 to 100)[. mod 10 = 0][20 to 60][. > 20]-->
+<!--     -->
+<!--     </query>-->
+
+<!--     <result>-->
+<!--        30, 40, 50, 60-->
+<!--     </result>-->
+
+<!--  </test>-->
+
+  <test name="Predicates on variables">
+
+     <query>
+       declare variable $d := (1 to 100)[. mod 10 = 0];
+       $d[. mod 3 = 0]
+     </query>
+
+     <result>
+        30, 60, 90
+     </result>
+
+  </test>
+
+  <test name="Predicates on FLWOR">
+
+     <query>
+       (for $x in (1 to 100) return $x * 2)[. mod 15 = 0 ]
+     </query>
+
+     <result>
+        30, 60, 90, 120, 150, 180
+     </result>
+
+  </test>
+
+  <test name="Predicates on Conditionnal expressions">
+
+     <query>
+       (if ((1 to 100)> 50) then ("foo","bar") else ("toto","tata"))[. = "foo" ]
+     </query>
+
+     <result>
+       foo
+     </result>
+
+  </test>
+
+  <test name="Predicates on Arithmetic expressions">
+
+     <query>
+       (2 + 2)[. mod 2 = 0]
+
+     </query>
+
+     <result>
+       4
+     </result>
+
+  </test>
+
+<!--  <test name="Predicates on Constructor expressions">-->
+
+<!--     <query>-->
+<!--       <![CDATA[(<a><b id="1">toto</b><b id="2">tata</b></a>)[b="tata"]-->
+<!--       ]]>-->
+
+<!--     </query>-->
+
+<!--     <result>-->
+<!--<![CDATA[<a>-->
+<!--   <b id="1">toto</b>-->
+<!--   <b id="2">tata</b>-->
+<!--</a>-->
+<!--]]>-->
+<!--     </result>-->
+
+<!--  </test>-->
+
+  <test name="Predicates on function call expression">
+
+     <query>
+
+        count(1 to 100)[. mod 10 = 0]
+     </query>
+
+     <result>
+       100
+     </result>
+
+  </test>
+
+
+  <!-- Complicates predicats with range and literals expressions -->
+
+
+  <test name="Predicates on sequences with range expressions and above limits">
+
+    <query>
+        (1 to 100)[position() >= 90 and position() lt 111]
+    </query>
+
+    <result>
+         90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100
+    </result>
+
+  </test>
+
+  <test name="Predicates on sequences with float limits">
+
+    <query>
+        (1 to 100)[2.2]
+    </query>
+
+    <result>
+
+    </result>
+
+  </test>
+
+
+  <test name="Predicates on sequences with float limits 2">
+
+    <query dynamicError="true">
+        (1 to 100)[2.2 to 5.5]
+    </query>
+
+    <result>
+    </result>
+
+  </test>
+
+
+
+  <test name="Predicates on sequences with range expressions and non constant limits">
+
+    <query>
+        let $a := 5
+        return (1 to 100)[$a]
+    </query>
+
+    <result>
+         5
+    </result>
+
+  </test>
+
+
+  <test name="Predicates on sequences with range expressions and non constant limits">
+
+    <query>
+        let $a := 5
+        return (1 to 100)[$a +10]
+    </query>
+
+    <result>
+        15
+    </result>
+
+  </test>
+
+
+  <test name="Predicates on sequences using sequences 1">
+
+    <query>
+        (1 to 100)[2,4,6]
+    </query>
+
+    <result>
+         2, 4, 6
+    </result>
+
+  </test>
+
+  <test name="Predicates on sequences using sequences 2">
+
+    <query>
+        (1 to 100)[()][. mod 10 = 0]
+    </query>
+
+    <result>
+
+    </result>
+
+  </test>
+
+<!--  <test name="Predicates on sequences using sequences 3">-->
+
+<!--    <query>-->
+<!--        <![CDATA[-->
+<!--          (1 to 100)[(<a/>, 2,3)][. mod 10 = 0]-->
+<!--        ]]>-->
+<!--    </query>-->
+
+<!--    <result>-->
+<!--         10, 20, 30, 40, 50, 60, 70, 80, 90, 100-->
+<!--    </result>-->
+
+<!--  </test>-->
+
+
+  <test name="Predicates on sequences using sequences 4">
+
+    <query dynamicError="true" >
+        <![CDATA[
+          (1 to 100)[(2,<a/>,3)][. mod 10 = 0]
+        ]]>
+    </query>
+
+
+  </test>
+
+  <test name="Predicates on sequences using sequences 4">
+
+    <query dynamicError="true" >
+        <![CDATA[
+          (1 to 100)[(2,"5",3)][. mod 10 = 0]
+        ]]>
+    </query>
+
+
+  </test>
+
+  <test name="Predicates on sequences using sequences 5">
+
+    <query>
+        (1 to 100)["2"][. mod 10 = 0]
+    </query>
+
+    <result>
+         10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+    </result>
+
+  </test>
+
+  <test name="Predicates on sequences using sequences 6">
+
+    <query>
+        (1 to 100)[""]
+    </query>
+
+    <result>
+
+    </result>
+
+  </test>
+
+   <test name="Predicates on sequences using sequencesExpression">
+
+    <query>
+        (1 to 100)[position() > 7 and position() lt 39][. mod 6 = 0]
+    </query>
+
+    <result>
+         12, 18, 24, 30, 36
+    </result>
+
+  </test>
+
+
+
+
+
+  <test name="Predicates on paths with literal and range expressions 8">
+
+    <query>
+        data(doc("tests/files/xquery-gael-document.xml")/library/book[position() > 1 and position() lt 4]/title)
+    </query>
+
+    <result>
+         JAVA Threads, XQuery
+    </result>
+
+  </test>
+
+  <test name="Predicates on paths with literal and range expressions 9">
+
+    <query>
+        data(doc("tests/files/xquery-gael-document.xml")/library/book[position() lt 4][2]/title)
+    </query>
+
+    <result>
+         JAVA Threads
+    </result>
+
+  </test>
+
+
+  <test name="Predicates on paths with literal and range expressions 10">
+
+    <query>
+        data(doc("tests/files/xquery-gael-document.xml")/library/book[position() lt 20]/title)
+    </query>
+
+    <result>
+         HARRAP'S New Shorter Dictionnaire, JAVA Threads, XQuery, Java And Internet
+    </result>
+
+  </test>
+
+  <test name="Predicates on paths with range expressions and non constant limit">
+
+    <query>
+        let $a := 1
+        let $b := 3
+        return data(doc("tests/files/xquery-gael-document.xml")/library/book[position() >= $a and position() le  $b]/title)
+    </query>
+
+    <result>
+         HARRAP'S New Shorter Dictionnaire, JAVA Threads, XQuery
+    </result>
+
+  </test>
+
+
+
+
+ <test name="Predicates on paths using sequences 1">
+
+    <query>
+        data(doc("tests/files/xquery-gael-document.xml")/library/book[1,3,4]/title)
+    </query>
+
+    <result>
+        HARRAP'S New Shorter Dictionnaire, XQuery, Java And Internet
+    </result>
+
+  </test>
+
+  <test name="Predicates on paths sequences using sequences 2">
+
+    <query>
+         data(doc("tests/files/xquery-gael-document.xml")/library/book[()]/title)
+
+    </query>
+
+    <result>
+
+    </result>
+
+  </test>
+
+<!--  <test name="Predicates on paths using sequences 3">-->
+
+<!--    <query>-->
+<!--        <![CDATA[-->
+<!--           data(doc("tests/files/xquery-gael-document.xml")/library/book[(<a/>, 2,3)]/title)-->
+
+<!--        ]]>-->
+<!--    </query>-->
+
+<!--    <result>-->
+<!--       HARRAP'S New Shorter Dictionnaire, JAVA Threads, XQuery, Java And Internet-->
+<!--    </result>-->
+
+<!--  </test>-->
+
+
+  <test name="Predicates on paths using sequences 4">
+
+    <query dynamicError="true" >
+        <![CDATA[
+           data(doc("tests/files/xquery-gael-document.xml")/library/book[(2,<a/>,3)]/title)
+
+        ]]>
+    </query>
+
+
+  </test>
+
+  <test name="Predicates on paths using sequences 4">
+
+    <query dynamicError="true" >
+        <![CDATA[
+           data(doc("tests/files/xquery-gael-document.xml")/library/book[(2,"5",3)]/title)
+
+        ]]>
+    </query>
+
+
+  </test>
+
+  <test name="Predicates on paths using sequences 5">
+
+    <query>
+         data(doc("tests/files/xquery-gael-document.xml")/library/book["5"]/title)
+    </query>
+
+    <result>
+         HARRAP'S New Shorter Dictionnaire, JAVA Threads, XQuery, Java And Internet
+    </result>
+
+  </test>
+
+  <test name="Predicates on paths using sequences 6">
+
+    <query>
+         data(doc("tests/files/xquery-gael-document.xml")/library/book[""]/title)
+    </query>
+
+    <result>
+
+    </result>
+
+  </test>
+
+   <test name="Predicates on paths using sequencesExpression">
+
+    <query>
+         data(doc("tests/files/xquery-gael-document.xml")/library/book[1 to 3, 4]/title)
+    </query>
+
+    <result>
+        HARRAP'S New Shorter Dictionnaire, JAVA Threads, XQuery, Java And Internet
+    </result>
+
+  </test>
+
+  <test name="Predicates on paths using float position">
+
+    <query>
+         data(doc("tests/files/xquery-gael-document.xml")/library/book[2.2]/title)
+    </query>
+
+    <result>
+
+    </result>
+
+  </test>
+
+  <test name="Predicates on paths with wild card">
+
+    <query>
+         data(doc("tests/files/xquery-gael-document.xml")/library/*[2,3]/title)
+    </query>
+
+    <result>
+       JAVA Threads, XQuery
+    </result>
+
+  </test>
+
+    <test name="Predicates on paths with wild card 2">
+
+    <query>
+         data(doc("tests/files/xquery-gael-document.xml")/library/*[1 to 2][3]/title)
+    </query>
+
+    <result>
+
+    </result>
+
+  </test>
+
+  <test name="Path with union as a name test">
+
+    <query>
+         data(doc("tests/files/xquery-gael-document.xml")/library/(book | book)/title)
+    </query>
+
+    <result>
+       HARRAP'S New Shorter Dictionnaire, JAVA Threads, XQuery, Java And Internet
+    </result>
+
+  </test>
+
+  <test name="Path with union as a name test 2">
+
+    <query>
+         data(doc("tests/files/xquery-gael-document.xml")/library/book[2]/(title | author))
+    </query>
+
+    <result>
+       JAVA Threads, Scott Oaks, Henry Wong
+    </result>
+
+  </test>
+
+
+  <!-- *** Tests on Predefined Entities and CharRef *** -->
+
+  <test name="Predefined Entities and CharRef on strings">
+
+    <query>
+        <![CDATA[
+        "H&#x65;llo! Did you know that 2 &gt; 3 ?"
+
+        ]]>
+    </query>
+
+    <result>
+         Hello! Did you know that 2 > 3 ?
+    </result>
+
+  </test>
+
+<!--  <test name="Predefined Entities and CharRef inside prolog">-->
+
+<!--    <query>-->
+<!--        <![CDATA[-->
+<!--         import module namespace mns = "libraryModul&#x65;URI"-->
+<!--            at "&#102;r/gael/drb/query/xquery-gael-module.xql";-->
+<!--         declare namespace mns2 = "li&#98;raryModuleURI";-->
+<!--         $mns2:var-->
+
+<!--        ]]>-->
+<!--    </query>-->
+
+<!--    <result>-->
+<!--        20-->
+<!--    </result>-->
+
+<!--  </test>-->
+
+
+<!--  <test name="Predefined Entities and CharRef on nodes and attributes">-->
+
+<!--    <query>-->
+<!--        <![CDATA[-->
+<!--         let $a := <root name="&#98;iti&gt;toto">This is &#97; &gt;test</root>-->
+<!--return (data ($a), data($a/@name))-->
+
+<!--        ]]>-->
+<!--    </query>-->
+
+<!--    <result>-->
+<!-- <![CDATA[This is a >test, biti>toto]]>-->
+<!--    </result>-->
+
+<!--  </test>-->
+
+
+<!--  <test name="All Predefined Entities">-->
+
+<!--    <query>-->
+<!--        <![CDATA[-->
+<!--        "&apos;&quot;&amp;&gt;&lt;"-->
+<!--         ]]>-->
+<!--    </query>-->
+
+<!--    <result>-->
+<!-- <![CDATA['"&><]]>-->
+<!--    </result>-->
+
+<!--  </test>-->
+
+  <!-- *** Tests on Computed Constructors *** -->
+
+  <test name="Computed Element with no content">
+
+    <query>
+       element root {}
+    </query>
+
+    <result>
+ <![CDATA[<root/>
+]]>
+    </result>
+
+  </test>
+
+  <test name="Computed Element with basic content">
+
+    <query>
+       element root {"value"}
+    </query>
+
+    <result>
+ <![CDATA[<root>value</root>
+]]>
+    </result>
+
+  </test>
+
+  <test name="Computed Element with basic content">
+
+    <query>
+       element root {"value"}
+    </query>
+
+    <result>
+ <![CDATA[<root>value</root>
+]]>
+    </result>
+
+  </test>
+
+  <test name="Computed Element with computed name and basic content">
+
+    <query>
+       element {fn:concat("ro","ot")} {"value"}
+    </query>
+
+    <result>
+ <![CDATA[<root>value</root>
+]]>
+    </result>
+
+  </test>
+
+  <test name="Computed Element with sub computed element">
+
+    <query>
+       element root {element foo {}}
+    </query>
+
+    <result>
+ <![CDATA[<root>
+   <foo/>
+</root>
+]]>
+    </result>
+
+  </test>
+
+  <test name="Computed Element with sub computed element 2">
+
+    <query>
+       element root {element foo {"content"}}
+    </query>
+
+    <result>
+ <![CDATA[<root>
+   <foo>content</foo>
+</root>
+]]>
+    </result>
+
+  </test>
+
+  <test name="Computed Element with sub computed element and value">
+
+    <query>
+       element root {element foo {"content"}, "value"}
+    </query>
+
+    <result>
+ <![CDATA[<root>
+   <foo>content</foo>value</root>]]>
+    </result>
+
+  </test>
+
+  <test name="Computed Element with sub computed element and attributes">
+
+    <query>
+       element root {attribute att1 {"vatt1"},element foo {"content"}, "value"}
+    </query>
+
+    <result>
+ <![CDATA[<root att1="vatt1">
+   <foo>content</foo>value</root>]]>
+    </result>
+
+  </test>
+
+  <test name="Computed Element with sub computed element and attributes with computed name">
+
+    <query>
+       element root {attribute {("att2","nothing")[1]} {fn:concat("vatt",xs:string(1+1))},element foo {"content"}, "value"}
+    </query>
+
+    <result>
+ <![CDATA[<root att2="vatt2"><foo>content</foo>value</root>]]>
+    </result>
+
+  </test>
+
+  <test name="Computed Element and namespace">
+
+    <query>
+       declare namespace n1="ns1";
+       declare namespace n2="ns1";
+       element n1:root {element {("nothing","n2:foo")[2]}{attribute att1 {"vatt1"}}}
+    </query>
+
+    <result>
+ <![CDATA[<n2:root xmlns:n2="ns1"><n2:foo att1="vatt1"/></n2:root>]]>
+    </result>
+
+  </test>
+
+  <test name="Computed Element and attribute with forbidden xmlns prefix">
+
+    <query staticError="true">
+       element root {attribute xmlns:ns1="n1"}
+    </query>
+
+  </test>
+
+  <test name="Computed Element and attribute with forbidden xmlns local name">
+
+    <query staticError="true">
+       element root {attribute xmlns="n1"}
+    </query>
+
+  </test>
+
+
+  <test name="Computed Element and two attributes with the same name">
+
+    <query staticError="true">
+       declare namespace n1="ns1";
+       declare namespace n2="ns1";
+       element root {attribute n1:id="2",attribute n2:id="3"}
+    </query>
+
+  </test>
+
+<!--  <test name="Computed Element inside direct element ; direct element with computed attributes">-->
+
+<!--    <query>-->
+<!--       declare namespace ns1="n1";-->
+<!--       <![CDATA[<root xmlns="n1">{element foo {"bar"}, attribute att1 {"5"}}</root>-->
+
+<!--]]>-->
+<!--    </query>-->
+
+<!--    <result>-->
+<!-- <![CDATA[<ns1:root att1="5" xmlns:ns1="n1">-->
+<!--   <ns1:foo>bar</ns1:foo>-->
+<!--</ns1:root>-->
+<!--]]>-->
+<!--    </result>-->
+
+<!--  </test>-->
+
+<!--  <test name="Computed Element inside direct element ; direct element with computed attributes;">-->
+
+<!--    <description>-->
+<!--      The same test as above but with the default namespace not declared in the prolog-->
+<!--    </description>-->
+
+<!--    <query>-->
+<!--       <![CDATA[<root xmlns="n1">{element foo {"bar"}, attribute att1 {"5"}}</root>-->
+
+<!--]]>-->
+<!--    </query>-->
+
+<!--    <result>-->
+<!-- <![CDATA[<root att1="5" xmlns="n1">-->
+<!--   <foo>bar</foo>-->
+<!--</root>-->
+<!--]]>-->
+<!--    </result>-->
+
+<!--  </test>-->
+
+<!--  <test name="Direct element with complex attribute value">-->
+
+<!--    <query>-->
+<!--       <![CDATA[<root att1="hello  foo{("bar",2+2)} and bye" att2="{3,4}56"/>-->
+
+<!--]]>-->
+<!--    </query>-->
+
+<!--    <result>-->
+<!-- <![CDATA[<root att1="hello  foobar 4 and bye" att2="3 456"/>-->
+<!--]]>-->
+<!--    </result>-->
+
+<!--  </test>-->
+
+<!--  <test name="Complex example of computed constructors">-->
+
+<!--    <query>-->
+<!--       declare namespace ns1bis = "n1";-->
+<!--       declare namespace ns1 = "n1";-->
+<!--       declare namespace ns2 = "n2";-->
+<!--       declare namespace ns2bis = "n2";-->
+<!--       <![CDATA[<root xmlns="n1">-->
+<!--{element toto {attribute ns1:id {"hum"},attribute ns2:id {2+2}, attribute {fn:concat("ns1:na","me")} {("nothing","foo","bar")[position() = (2,3)]}, ("val", "ue") ,-->
+<!--element {fn:concat("ti","ti")} {attribute id {2+2,"hello"}, attribute {fn:concat("na","me")} {("nothing","bar","foo")[position() = (2,3)]}, ("val", "ue2")}}}-->
+<!--</root>-->
+
+<!--]]>-->
+<!--    </query>-->
+
+<!--    <result>-->
+<!-- <![CDATA[<ns1:root xmlns:ns1="n1">-->
+<!--   <ns1:toto ns1:id="hum" ns2bis:id="4" ns1:name="foo bar" xmlns:ns2bis="n2">-->
+<!--      value-->
+<!--      <ns1:titi id="4 hello" name="bar foo">value2</ns1:titi>-->
+<!--   </ns1:toto>-->
+<!--</ns1:root>-->
+<!--]]>-->
+<!--    </result>-->
+
+<!--  </test>-->
+
+<!--  <test name="Tests on inScopeNamespaces of a node">-->
+
+<!--    <query> -->
+<!--       <![CDATA[declare namespace p="http://example.com/ns/p";-->
+<!--declare namespace q="http://example.com/ns/q";-->
+<!--declare namespace f="http://example.com/ns/f";-->
+
+<!--<p:a q:b="foo" xmlns:r="http://example.com/ns/r"/>-->
+
+<!--]]>-->
+<!--    </query>-->
+
+<!--    <result>-->
+<!-- <![CDATA[<p:a q:b="foo" xmlns:r="http://example.com/ns/r" xmlns:q="http://example.com/ns/q" xmlns:p="http://example.com/ns/p"/>-->
+<!--]]>-->
+<!--    </result>-->
+
+<!--  </test>-->
+
+<!--  <test name="Tests on inScopeNamespaces of a node 2">-->
+
+<!--    <query> -->
+<!--       <![CDATA[-->
+<!--declare namespace ns1="n2";-->
+<!--<toto xmlns="n1">-->
+<!--  <ns1:tata>-->
+<!--    <titi/>-->
+<!--  </ns1:tata>-->
+
+<!--  <yaya>-->
+<!--    <yiyi/>-->
+<!--  </yaya>-->
+<!--</toto>-->
+<!--]]>-->
+<!--    </query>-->
+
+<!--    <result>-->
+<!-- <![CDATA[<toto xmlns="n1">-->
+<!--   <ns1:tata xmlns:ns1="n2">-->
+<!--      <titi/>-->
+<!--   </ns1:tata>-->
+<!--   <yaya>-->
+<!--      <yiyi/>-->
+<!--   </yaya>-->
+<!--</toto>-->
+<!--]]>-->
+<!--    </result>-->
+
+<!--  </test>-->
+
+
+<!--  <test name="Tests on inScopeNamespaces of a node 2">-->
+
+<!--    <query> -->
+<!--       <![CDATA[-->
+<!--declare namespace ns1="n2";-->
+<!--<toto xmlns="n2" xmlns:ns3="n3">-->
+<!--  <ns1:tata>-->
+<!--    <titi/>-->
+<!--  </ns1:tata>-->
+
+<!--  <yaya>-->
+<!--    <yiyi/>-->
+<!--  </yaya>-->
+<!--</toto>-->
+<!--]]>-->
+<!--    </query>-->
+
+<!--    <result>-->
+<!-- <![CDATA[<ns1:toto xmlns:ns1="n2" xmlns:ns3="n3">-->
+<!--   <ns1:tata>-->
+<!--      <ns1:titi/>-->
+<!--   </ns1:tata>-->
+<!--   <ns1:yaya>-->
+<!--      <ns1:yiyi/>-->
+<!--   </ns1:yaya>-->
+<!--</ns1:toto>-->
+<!--]]>-->
+
+<!--    </result>-->
+
+<!--  </test>-->
+
+
+  <test name="Tests on complex content of a direct node 1">
+
+    <description>
+     These tests are used to test whitespace inside content, with the boundary whitespace property set to strip by default.
+    </description>
+
+    <query>
+       <![CDATA[<a>  {"abc"}  </a>
+]]>
+    </query>
+
+    <result>
+ <![CDATA[<a>abc</a>
+]]>
+    </result>
+
+  </test>
+
+<!--  <test name="Tests on complex content of a direct node 2">-->
+
+<!--    <description>-->
+<!--     These tests are used to test whitespace inside content, with the boundary whitespace property set to strip by default.-->
+<!--    </description>-->
+
+<!--    <query> -->
+<!--       <![CDATA[<a> z {"abc"}</a>-->
+<!--]]>-->
+<!--    </query>-->
+
+<!--    <result>-->
+<!-- <![CDATA[<a> z abc</a>-->
+<!--]]>-->
+<!--    </result>-->
+
+<!--  </test>-->
+
+<!--  <test name="Tests on complex content of a direct node 3">-->
+
+<!--    <description>-->
+<!--     These tests are used to test whitespace inside content, with the boundary whitespace property set to strip by default.-->
+<!--    </description>-->
+
+<!--    <query> -->
+<!--       <![CDATA[<a>&#x20;{"abc"}</a>-->
+<!--]]>-->
+<!--    </query>-->
+
+<!--    <result>-->
+<!-- <![CDATA[<a> abc</a>-->
+<!--]]>-->
+<!--    </result>-->
+
+<!--  </test>-->
+
+  <test name="Tests on complex content of a direct node 4">
+
+    <description>
+     These tests are used to test whitespace inside content, with the boundary whitespace property set to strip by default.
+    </description>
+
+    <query>
+       <![CDATA[<a>   </a>
+]]>
+    </query>
+
+    <result>
+ <![CDATA[<a/>
+]]>
+    </result>
+
+  </test>
+
+  <test name="Tests on complex content of a direct node 5">
+
+    <description>
+     These tests are used to test whitespace inside content, with the boundary whitespace property set to strip by default.
+    </description>
+
+    <query>
+       <![CDATA[<a>{1}{2}{3}</a>
+]]>
+    </query>
+
+    <result>
+ <![CDATA[<a>123</a>
+]]>
+    </result>
+
+  </test>
+<!-- -->
+<!--  <test name="Tests on complex content of a direct node 6">-->
+
+<!--    <description>-->
+<!--     These tests are used to test whitespace inside content, with the boundary whitespace property set to strip by default.-->
+<!--    </description>-->
+
+<!--    <query> -->
+<!--       <![CDATA[<a>{1, 2, 3}</a>-->
+<!--]]>-->
+<!--    </query>-->
+
+<!--    <result>-->
+<!-- <![CDATA[<a>1 2 3</a>-->
+<!--]]>-->
+<!--    </result>-->
+
+<!--  </test>-->
+
+
+<!--  &lt;!&ndash; Tests about content and value of a node &ndash;&gt;-->
+<!--  <test name="Value and content of a node">-->
+
+<!--    <query> -->
+<!--       <![CDATA[-->
+<!--declare variable $a:= <elt>It's <stmt>true</stmt> he sold <count>10</count> units.</elt>;-->
+<!--($a,data($a))-->
+<!--]]>-->
+<!--    </query>-->
+
+<!--    <result>-->
+<!-- <![CDATA[<elt>-->
+<!--   It's -->
+<!--   <stmt>true</stmt>-->
+
+<!--    he sold -->
+<!--   <count>10</count>-->
+
+<!--    units.-->
+<!--</elt>-->
+<!--, It's  he sold  units.]]>-->
+<!--    </result>-->
+
+<!--  </test>-->
+
+<!--  <test name="Value and content of a node 2">-->
+
+<!--    <query> -->
+<!--       <![CDATA[-->
+<!--declare variable $a:= <toto>there are {(1,2,3)} <howmany>8</howmany> cats</toto>;-->
+<!--($a,data($a))-->
+<!--]]>-->
+<!--    </query>-->
+
+<!--    <result>-->
+<!-- <![CDATA[<toto>-->
+<!--   there are 1 2 3-->
+<!--   <howmany>8</howmany>-->
+
+<!--    cats-->
+<!--</toto>-->
+<!--, there are 1 2 3 cats]]>-->
+<!--    </result>-->
+
+<!--  </test> -->
+
+<!--  <test name="Value and content of a node 3">-->
+
+<!--    <query> -->
+<!--       <![CDATA[-->
+<!--declare variable $a:= <root>{"toto"} {1,2,3}</root>;-->
+<!--($a,data($a))-->
+<!--]]>-->
+<!--    </query>-->
+
+<!--    <result>-->
+<!-- <![CDATA[<root>toto1 2 3</root>-->
+<!--, toto, 1, 2, 3]]>-->
+<!--    </result>-->
+
+<!--  </test>-->
+<!-- -->
+
+<!--  <test name="Value and content of a node 4">-->
+
+<!--    <query> -->
+<!--       <![CDATA[-->
+<!--declare variable $a:= <root>toto {1,2,3}</root>;-->
+<!--($a,data($a))-->
+<!--]]>-->
+<!--    </query>-->
+
+<!--    <result>-->
+<!-- <![CDATA[<root>toto 1 2 3</root>-->
+<!--, toto 1 2 3]]>-->
+<!--    </result>-->
+
+<!--  </test>-->
+
+<!--  <test name="Value and content of a node 5">-->
+
+<!--    <query> -->
+<!--       <![CDATA[-->
+<!--declare variable $a:= <toto> {(1, <howmany>16</howmany> ,3 )} foo<howmany>8</howmany> bar</toto>;-->
+<!--($a,data($a))-->
+<!--]]>-->
+<!--    </query>-->
+
+<!--    <result>-->
+<!-- <![CDATA[<toto>-->
+<!--   1-->
+<!--   <howmany>16</howmany>-->
+
+<!--    3 foo-->
+<!--   <howmany>8</howmany>-->
+
+<!--    bar-->
+<!--</toto>-->
+<!--, 1 3 foo bar]]>-->
+<!--    </result>-->
+
+<!--  </test>-->
+<!-- -->
+<!--  <test name="Value and content of a node 6">-->
+
+<!--    <query> -->
+<!--       <![CDATA[-->
+<!--declare variable $a:= <toto> {(1, <howmany>16</howmany> ,3 )} {"foo"}<howmany>8</howmany> {"bar"}</toto>;-->
+<!--($a,data($a))-->
+<!--]]>-->
+<!--    </query>-->
+
+<!--    <result>-->
+<!-- <![CDATA[<toto>-->
+<!--   1-->
+<!--   <howmany>16</howmany>-->
+
+<!--    3foo-->
+<!--   <howmany>8</howmany>-->
+
+<!--   bar-->
+<!--</toto>-->
+<!--, 1, 3, foo, bar]]>-->
+<!--    </result>-->
+
+<!--  </test>-->
+
+
+  <!-- ************  Tests on modules and functions -->
+
+  <!-- *** Tests main module *** -->
+  <test name="Calling of non prefixed variable inside main module">
+
+    <query>
+     declare variable $a := 5;
+     $a
+    </query>
+
+    <result>
+      5
+    </result>
+
+  </test>
+
+  <test name="Calling of prefixed variable inside main module">
+
+    <query>
+     declare namespace ns1 = "n1";
+     declare variable $ns1:a := 5;
+
+     $ns1:a
+    </query>
+
+    <result>
+      5
+    </result>
+
+  </test>
+<!--    -->
+<!--  &lt;!&ndash; *** Tests library module *** &ndash;&gt;-->
+<!--  <test name="Calling of function inside a library module">-->
+
+<!--    <query> -->
+<!--     import module namespace mns = "libraryModuleURI" at "fr/gael/drb/query/xquery-gael-module.xql";-->
+
+<!--     mns:func ("hello")-->
+<!--    </query>-->
+
+<!--    <result>-->
+<!--      hello-->
+<!--    </result>-->
+
+<!--  </test>-->
+<!-- <test name="Calling of function inside a library module with a function with the same local name">-->
+
+<!--    <query> -->
+<!--     import module namespace mns = "libraryModuleURI" at "fr/gael/drb/query/xquery-gael-module.xql";-->
+<!--     declare namespace ns1="ns1";-->
+
+<!--     declare function ns1:add ($a as xs:integer, $b as xs:integer )-->
+<!--     {-->
+<!--          $a + $b-->
+<!--     };-->
+
+<!--     mns:add (2,4)-->
+<!--    </query>-->
+
+<!--    <result>-->
+<!--      12-->
+<!--    </result>-->
+
+<!--  </test>-->
+
+<!--   <test name="Calling of variable inside a library module">-->
+
+<!--    <query> -->
+<!--     import module namespace mns = "libraryModuleURI" at "fr/gael/drb/query/xquery-gael-module.xql";-->
+
+<!--     $mns:var -->
+<!--    </query>-->
+
+<!--    <result>-->
+<!--      20-->
+<!--    </result>-->
+
+<!--  </test>-->
+
+
+
+</testSuite>

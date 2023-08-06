@@ -1,0 +1,403 @@
+<!--
+   The unitary test shall be declared accordingly with the following structure:
+
+   <test name="Test example">
+
+      <description>Here comes the full description.</description>
+
+      <query dynamicError="false" staticError="false">
+         Here comes the query....
+      </query>
+
+      <result>Here comes the expected result</result>
+
+   </test>
+
+   - The "description" markup is optional but recommended.
+
+   - The "query" markup contains the query defining the test. This query will
+     systematically be statically evaluated. It will be dynamically evaluated
+     only if a "result" has been provide or/and if "dynamicError" is expected
+     (see description of the attributes below).
+
+   - the "dynamicError" attribute is optional and defaulted to "false". It
+     indicates whether the dynamic evaluation of provided query script shall
+     raise an error. The possible values are "false" or "true".
+
+   - the "staticError" attribute is optional and defaulted to "false". It
+     indicates whether the static evaluation of provided query script shall
+     raise an error (type or static error). The possible values are "false" or
+     "true". It is an incosistency to declare both a "staticError" and a
+     "dynamicError" because the dynamic evaluation can only be performed if
+     no error occurred during the static phase.
+
+   - the "result" markup is optional and if present, should contain exact result
+     string expect after re-encoding the dynamic evaluation output sequence
+     into a string. It is important to take care of the format of this output
+     that will be compare on a one by one character basis.
+
+   Considering that declaration, test will be declared successful if:
+
+   - If the static evaluation of the "query" raised or nor an error accordingly
+     with the "staticError" attribute, AND
+   - If a result has been provided, the dynamic evaluation of the "query"
+     matches one by one the "result" AND
+   - If the "dynamicError" attribute is set to true, the dynamic evaluation of
+     the "query" raised an error.
+
+-->
+
+<testSuite>
+   <!-- General comparison -->
+   <test name=">= comparison on integers 1">
+      <query>
+        5 &gt;= 6
+      </query>
+      <result>false</result>
+  </test>
+  
+  <test name=">= comparison on integers 2">
+      <query>
+        6 &gt;= 5
+      </query>
+      <result>true</result>
+  </test>
+   
+  <test name=">= comparison on integers 3">
+      <query>
+        (5,6) &gt;= (6,7)
+      </query>
+      <result>true</result>
+   </test>
+   
+   <test name=">= comparison on integers 4">
+      <query>
+        (5,6) &gt;= (3,4)
+      </query>
+      <result>true</result>
+   </test>
+   
+   <test name=">= comparison on integers 5">
+      <query>
+        (3,4) &gt;= (5,6)
+      </query>
+      <result>false</result>
+   </test>
+   
+   <test name=">= comparison on integers 6">
+      <query>
+        5 &gt;= 5
+      </query>
+      <result>true</result>
+   </test>
+   
+   
+   <test name=">= comparison on strings 1">
+      <query>
+        "B" &gt;= "A"
+      </query>
+      <result>true</result>
+   </test>
+  
+  <test name=">= comparison on strings 2">
+      <query>
+        "A" &gt;= "B"
+      </query>
+      <result>false</result>
+  </test>
+   
+  <test name=">= comparison on strings 3">
+      <query>
+        ("A","B") &gt;= ("C","D")
+      </query>
+      <result>false</result>
+   </test>
+   
+   <test name=">= comparison on strings 4">
+      <query>
+        ("B","C") &gt;= ("C","D")
+      </query>
+      <result>true</result>
+   </test>
+   
+   <test name=">= comparison on strings 5">
+      <query>
+        ("C","D") &gt;= ("A","B")
+      </query>
+      <result>true</result>
+   </test>
+   
+   <test name=">= comparison on strings 6">
+      <query>
+        "A" &gt;= "A"
+      </query>
+      <result>true</result>
+   </test>
+   
+   <test name=">= comparison on empty sequences 1">
+      <query>
+        () &gt;= (6,7)
+      </query>
+      <result>false</result>
+   </test>
+   
+   <test name=">= comparison on empty sequence 2">
+      <query>
+        (5,6) &gt;= ()
+      </query>
+      <result>false</result>
+   </test>
+  
+  
+  
+  
+
+     <!-- logical expression -->
+   <test name="Simple logical expression">
+      <query>
+        1 = 1 and 2 = 2
+      </query>
+      <result>true</result>
+   </test>
+ 
+  
+
+   <!-- Sequence combinations -->
+
+<!--   <test name="Union expression">-->
+<!--      <query>-->
+<!--         <![CDATA[-->
+<!--         let $library :=-->
+<!--            doc("fr/gael/drb/query/xquery-gael-document.xml")/library-->
+
+<!--         let $bookA := $library/book[1]-->
+<!--         let $bookB := $library/book[2]-->
+
+<!--         for $node in ($bookA, $bookB) union ($bookA, $bookB)-->
+
+<!--         return-->
+<!--            data($node/title)-->
+<!--         ]]>-->
+<!--      </query>-->
+<!--      <result>HARRAP'S New Shorter Dictionnaire, JAVA Threads</result>-->
+<!--   </test>-->
+
+   <test name="Union expression with a pipe">
+      <query>
+         <![CDATA[
+         (<a/>, <b/>) | (<a/>, <b/>)
+         ]]>
+      </query>
+      <result>
+<![CDATA[<a/>
+, <b/>
+]]>
+</result>
+   </test>
+
+   <test name="Union expression with duplicated nodes">
+      <query>
+         <![CDATA[
+         (<a/>, <a/>, <b/>) | (<a/>, <b/>)
+         ]]>
+      </query>
+<result>
+<![CDATA[<a/>
+, <b/>
+]]>
+</result>
+   </test>
+
+   <test name="Another union expression">
+      <query>
+         <![CDATA[
+         (<a/>, <b/>) union (<b/>, <c/>)
+         ]]>
+      </query>
+     <result>
+<![CDATA[<a/>
+, <b/>
+, <c/>
+]]>
+     </result>
+   </test>
+
+   <test name="Union expression with same nodes">
+      <query>
+         <![CDATA[
+let $a := <a>A</a>
+let $b := <b>B</b>
+let $c := <c>C</c>
+return ($a,$b) union ($b,$c)
+         ]]>
+      </query>
+
+        <result>
+<![CDATA[<a>A</a>
+, <b>B</b>
+, <c>C</c>
+]]>
+      </result>
+   </test>
+
+
+
+   <test name="Intersect expression">
+      <query>
+         <![CDATA[
+         (<a/>, <b/>) intersect (<a/>, <b/>)
+         ]]>
+      </query>
+      <result>
+<![CDATA[<a/>
+, <b/>
+]]>
+      </result>
+   </test>
+
+   <test name="Another intersect expression">
+      <query>
+         <![CDATA[
+         (<a/>, <b/>) intersect (<b/>, <c/>)
+         ]]>
+      </query>
+
+       <result>
+<![CDATA[<b/>
+]]>
+      </result>
+   </test>
+
+   <test name="Intersect expression with duplicated nodes">
+      <query>
+         <![CDATA[
+         (<a/>, <b/>, <b/>) intersect (<b/>, <b/>, <c/>, <c/>)
+         ]]>
+      </query>
+
+      <result>
+          <![CDATA[<b/>]]>
+      </result>
+   </test>
+
+
+   <test name="Intersect expression with duplicated nodes in only one">
+      <query>
+         <![CDATA[
+         (<a/>, <b/>, <b/>) intersect (<b/>, <c/>, <c/>)
+         ]]>
+      </query>
+
+      <result>
+          <![CDATA[<b/>]]>
+      </result>
+   </test>
+
+
+   <test name="Intersect expression with same nodes">
+      <query>
+         <![CDATA[
+let $a := <a>A</a>
+let $b := <b>B</b>
+let $c := <c>C</c>
+return ($a,$b) intersect ($b,$c)
+         ]]>
+      </query>
+
+        <result>
+<![CDATA[<b>B</b>
+]]>
+      </result>
+   </test>
+
+   <test name="Except expression 1">
+      <query>
+         <![CDATA[
+let $a := <a>A</a>
+let $b := <b>B</b>
+return
+         ($a, $b) except ($b, $a)
+         ]]>
+      </query>
+
+ <result>
+</result>
+   </test>
+
+   <test name="except expression 2">
+      <query>
+         <![CDATA[
+let $a := <a>A</a>
+let $b := <b>B</b>
+return
+         ($a, $b) except ($b, <c/>)
+         ]]>
+      </query>
+ <result>
+ <![CDATA[<a>A</a>
+]]>
+</result>
+   </test>
+
+   <test name="Except expression 3">
+      <query>
+         <![CDATA[
+let $a   := <a>A</a>
+let $b1  := <b>B</b>
+let $b2  := <b>B</b>
+return
+         ($a, $a, $b1) except ($b1)
+         ]]>
+      </query>
+ <result>
+ <![CDATA[<a>A</a>]]>
+</result>
+   </test>
+
+   <test name="Except expression 4">
+      <query>
+         <![CDATA[
+let $a := <a>A</a>
+let $b := <b>B</b>
+let $c := <c>C</c>
+return ($a,$b, $c) except ($b)
+         ]]>
+      </query>
+
+        <result>
+<![CDATA[<a>A</a>
+, <c>C</c>
+]]>
+      </result>
+   </test>
+
+
+     <!-- logical expression -->
+   <test name="Simple logical expression">
+      <query>
+        1 = 1 and 2 = 2
+      </query>
+      <result>true</result>
+   </test>
+
+   <test name="Logical expression with error">
+      <description>
+         This query MUST raise a dynamic error, as each part of the whole expression must be evaluated.
+      </description>
+      <query dynamicError="true">
+        1 = 1 and 1 div 0
+      </query>
+      
+   </test>
+
+  <test name="Logical expression with error">
+       <description>
+         The following expression may return either true or raise  a dynamic error: .  We chose true...
+      </description>
+      <query>
+        1 = 1 or 1 div 0
+      </query>
+      <result>true</result>
+   </test>
+
+</testSuite>

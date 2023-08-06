@@ -1,0 +1,88 @@
+<testSuite>
+
+    <!-- *** Tests library module *** -->
+    <test name="Calling of function inside a library module">
+
+        <query>
+            import module namespace mns = "libraryModuleURI" at
+            "tests/files/xquery-gael-module.xql";
+
+            mns:func ("hello")
+        </query>
+
+        <result>
+            hello
+        </result>
+
+    </test>
+    <test name="Calling of function inside a library module with a function with the same local name">
+
+        <query>
+            import module namespace mns = "libraryModuleURI" at
+            "tests/files/xquery-gael-module.xql";
+            declare namespace ns1="ns1";
+
+            declare function ns1:add ($a as xs:integer, $b as xs:integer )
+            {
+            $a + $b
+            };
+
+            mns:add (2,4)
+        </query>
+
+        <result>
+            12
+        </result>
+
+    </test>
+
+    <test name="Calling of variable inside a library module">
+
+        <query>
+            import module namespace mns = "libraryModuleURI" at
+            "tests/files/xquery-gael-module.xql";
+
+            $mns:var
+        </query>
+
+        <result>
+            20
+        </result>
+
+    </test>
+
+    <test name="Predefined Entities and CharRef inside prolog">
+
+        <query>
+            <![CDATA[
+         import module namespace mns = "libraryModul&#x65;URI"
+            at "t&#x65;sts/files/xquery-gael-module.xql";
+         declare namespace mns2 = "li&#98;raryModuleURI";
+         $mns2:var
+
+        ]]>
+        </query>
+
+        <result>
+            20
+        </result>
+
+    </test>
+
+
+    <test name="References to variables declared in a module">
+        <description>
+            Tests that reference to variable declared in a module are allowed.
+            This test is connected to the module import behavior. The imported
+            module declare the variable $mns:var with "mns" prefix bound to the
+            target namespace of the imported module : "libraryModuleURI". The
+            value of the imported variable is supposed to be 20.
+        </description>
+        <query>
+            import module namespace mns = "libraryModuleURI"
+            at "tests/files/xquery-gael-module.xql";
+            $mns:var
+        </query>
+        <result>20</result>
+    </test>
+</testSuite>

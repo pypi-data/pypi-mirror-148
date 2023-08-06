@@ -1,0 +1,458 @@
+
+<testSuite>
+    <test name="Simple operation addition subtraction">
+        <query>
+            1 - 4  + 2 + 9
+        </query>
+        <result>8</result>
+    </test>
+    <!-- logical expression -->
+    <test name="Simple multiplication divi">
+        <query>
+            9 * 5 div 3
+        </query>
+        <result>15.0</result>
+    </test>
+    <test name="Decimal divided by zero">
+        <query  dynamicError="true">
+            9 * 5.2 div 0
+        </query>
+        <result></result>
+    </test>
+    <test name="float positive divided by zero">
+        <query>
+            9 * 23E+1 div 0
+        </query>
+        <result>inf</result>
+    </test>
+    <test name="float positive divided by zero">
+        <query>
+            -9 * 23E+1 div 0
+        </query>
+        <result>-inf</result>
+    </test>
+    <test name="Operation without parentheses ">
+        <query>
+            5 + 9 * 5
+        </query>
+        <result>50</result>
+    </test>
+     <test name="Operation with parentheses ">
+        <query>
+            (5 + 9) * 5
+        </query>
+        <result>70</result>
+    </test>
+     <test name="Operation with parentheses ">
+        <query>
+            5 + (5 * 9) div 3 + 1
+        </query>
+        <result>21.0</result>
+    </test>
+      <test name="Operation with parentheses ">
+        <query>
+            5 + 5 * (9 div 3 + 1)
+        </query>
+        <result>25.0</result>
+    </test>
+
+       <!-- General comparison -->
+   <test name=">= comparison on integers 1">
+      <query>
+        5 &gt;= 6
+      </query>
+      <result>false</result>
+  </test>
+
+  <test name=">= comparison on integers 2">
+      <query>
+        6 &gt;= 5
+      </query>
+      <result>true</result>
+  </test>
+
+  <test name=">= comparison on integers 3">
+      <query>
+        (5,6) &gt;= (6,7)
+      </query>
+      <result>true</result>
+   </test>
+
+   <test name=">= comparison on integers 4">
+      <query>
+        (5,6) &gt;= (3,4)
+      </query>
+      <result>true</result>
+   </test>
+
+   <test name=">= comparison on integers 5">
+      <query>
+        (3,4) &gt;= (5,6)
+      </query>
+      <result>false</result>
+   </test>
+
+   <test name=">= comparison on integers 6">
+      <query>
+        5 &gt;= 5
+      </query>
+      <result>true</result>
+   </test>
+
+
+   <test name=">= comparison on strings 1">
+      <query>
+        "B" &gt;= "A"
+      </query>
+      <result>true</result>
+   </test>
+
+  <test name=">= comparison on strings 2">
+      <query>
+        "A" &gt;= "B"
+      </query>
+      <result>false</result>
+  </test>
+
+  <test name=">= comparison on strings 3">
+      <query>
+        ("A","B") &gt;= ("C","D")
+      </query>
+      <result>false</result>
+   </test>
+
+   <test name=">= comparison on strings 4">
+      <query>
+        ("B","C") &gt;= ("C","D")
+      </query>
+      <result>true</result>
+   </test>
+
+   <test name=">= comparison on strings 5">
+      <query>
+        ("C","D") &gt;= ("A","B")
+      </query>
+      <result>true</result>
+   </test>
+
+   <test name=">= comparison on strings 6">
+      <query>
+        "A" &gt;= "A"
+      </query>
+      <result>true</result>
+   </test>
+
+   <test name=">= comparison on empty sequences 1">
+      <query>
+        () &gt;= (6,7)
+      </query>
+      <result>false</result>
+   </test>
+
+   <test name=">= comparison on empty sequence 2">
+      <query>
+        (5,6) &gt;= ()
+      </query>
+      <result>false</result>
+   </test>
+
+
+
+
+
+     <!-- logical expression -->
+   <test name="Simple logical expression">
+      <query>
+        1 = 1 and 2 = 2
+      </query>
+      <result>true</result>
+   </test>
+
+
+
+<!--   &lt;!&ndash; Sequence combinations &ndash;&gt;-->
+
+<!--   <test name="Union expression">-->
+<!--      <query>-->
+<!--         <![CDATA[-->
+<!--         let $library :=-->
+<!--            doc("fr/gael/drb/query/xquery-gael-document.xml")/library-->
+
+<!--         let $bookA := $library/book[1]-->
+<!--         let $bookB := $library/book[2]-->
+
+<!--         for $node in ($bookA, $bookB) union ($bookA, $bookB)-->
+
+<!--         return-->
+<!--            data($node/title)-->
+<!--         ]]>-->
+<!--      </query>-->
+<!--      <result>HARRAP'S New Shorter Dictionnaire, JAVA Threads</result>-->
+<!--   </test>-->
+
+   <test name="Union expression with a pipe">
+      <query>
+         <![CDATA[
+         (<a/>, <b/>) | (<a/>, <b/>)
+         ]]>
+      </query>
+      <result>
+<![CDATA[<a/>
+, <b/>
+, <a/>
+, <b/>
+]]>
+</result>
+   </test>
+
+   <test name="Union expression with duplicated nodes">
+      <query>
+         <![CDATA[
+         (<a/>, <a/>, <b/>) | (<a/>, <b/>)
+         ]]>
+      </query>
+<result>
+<![CDATA[<a/>
+, <a/>
+, <b/>
+, <a/>
+, <b/>
+]]>
+</result>
+   </test>
+
+   <test name="Another union expression">
+      <query>
+         <![CDATA[
+         (<a/>, <b/>) union (<b/>, <c/>)
+         ]]>
+      </query>
+     <result>
+<![CDATA[<a/>
+, <b/>
+, <b/>
+, <c/>
+]]>
+     </result>
+   </test>
+
+<!--   <test name="Union expression with same nodes">-->
+<!--      <query>-->
+<!--         <![CDATA[-->
+<!--let $a := <a>A</a>-->
+<!--let $b := <b>B</b>-->
+<!--let $c := <c>C</c>-->
+<!--return ($a,$b) union ($b,$c)-->
+<!--         ]]>-->
+<!--      </query>-->
+
+<!--        <result>-->
+<!--<![CDATA[<a>A</a>-->
+<!--, <b>B</b>-->
+<!--, <c>C</c>-->
+<!--]]>-->
+<!--      </result>-->
+<!--   </test>-->
+
+
+
+
+
+   <test name="Intersect expression">
+      <query>
+         <![CDATA[
+         (<a/>, <b/>) intersect (<a/>, <b/>)
+         ]]>
+      </query>
+      <result>
+<![CDATA[<a/>
+, <b/>
+]]>
+      </result>
+   </test>
+
+   <test name="Another intersect expression">
+      <query>
+         <![CDATA[
+         (<a/>, <b/>) intersect (<b/>, <c/>)
+         ]]>
+      </query>
+
+       <result>
+            <![CDATA[<b/>]]>
+      </result>
+   </test>
+
+
+   <test name="Intersect expression with duplicated nodes in one">
+      <query>
+         <![CDATA[
+         (<a/>, <b/>, <b/>) intersect (<b/>,  <c/>, <c/>)
+         ]]>
+      </query>
+      <result>
+          <![CDATA[<b/>]]>
+      </result>
+   </test>
+
+
+   <test name="Intersect expression with duplicated nodes in both">
+      <query>
+         <![CDATA[
+         (<a/>, <b/>, <b/>) intersect (<b/>, <b/>, <c/>, <c/>)
+         ]]>
+      </query>
+      <result>
+          <![CDATA[<b/>, <b/>]]>
+      </result>
+   </test>
+
+        <test name="Except expression">
+        <query>
+            <![CDATA[
+         (<a/>, <b/>, <c/> ) except (<a/>, <c/>)
+         ]]>
+        </query>
+        <result>
+            <![CDATA[<b/>]]>
+        </result>
+    </test>
+    <test name="Another except expression 1">
+        <query>
+            <![CDATA[
+         (<a/>, <b/>, <c/> ) except (<a/>, <c/>, <b/>)
+         ]]>
+        </query>
+        <result>
+        </result>
+    </test>
+       <test name="Another except expression 2 ">
+        <query>
+            <![CDATA[
+         (<a/>, <b/>, <c/> ) except (<b/>)
+         ]]>
+        </query>
+
+        <result>
+              <![CDATA[<a/>, <c/>]]>
+        </result>
+    </test>
+     <test name="Another except expression 3">
+          <query>
+            <![CDATA[
+         (<a/>, <b/> ) except (<b/>, <c/>)
+         ]]>
+        </query>
+        <result>
+             <![CDATA[<a/>]]>
+        </result>
+    </test>
+
+<!--   <test name="Intersect expression with same nodes">-->
+<!--      <query>-->
+<!--         <![CDATA[-->
+<!--let $a := <a>A</a>-->
+<!--let $b := <b>B</b>-->
+<!--let $c := <c>C</c>-->
+<!--return ($a,$b) intersect ($b,$c)-->
+<!--         ]]>-->
+<!--      </query>-->
+
+<!--        <result>-->
+<!--<![CDATA[<b>B</b>-->
+<!--]]>-->
+<!--      </result>-->
+<!--   </test>-->
+
+<!--   <test name="Except expression 1">-->
+<!--      <query>-->
+<!--         <![CDATA[-->
+<!--let $a := <a>A</a>-->
+<!--let $b := <b>B</b>-->
+<!--return-->
+<!--         ($a, $b) except ($b, $a)-->
+<!--         ]]>-->
+<!--      </query>-->
+
+<!-- <result>-->
+<!--</result>-->
+<!--   </test>-->
+
+<!--   <test name="except expression 2">-->
+<!--      <query>-->
+<!--         <![CDATA[-->
+<!--let $a := <a>A</a>-->
+<!--let $b := <b>B</b>-->
+<!--return-->
+<!--         ($a, $b) except ($b, <c/>)-->
+<!--         ]]>-->
+<!--      </query>-->
+<!-- <result>-->
+<!-- <![CDATA[<a>A</a>-->
+<!--]]>-->
+<!--</result>-->
+<!--   </test>-->
+
+<!--   <test name="Except expression 3">-->
+<!--      <query>-->
+<!--         <![CDATA[-->
+<!--let $a   := <a>A</a>-->
+<!--let $b1  := <b>B</b>-->
+<!--let $b2  := <b>B</b>-->
+<!--return-->
+<!--         ($a, $a, $b1) except ($a, $b2)-->
+<!--         ]]>-->
+<!--      </query>-->
+<!-- <result>-->
+<!-- <![CDATA[<b>B</b>-->
+<!--]]>-->
+<!--</result>-->
+<!--   </test>-->
+
+<!--   <test name="Except expression 4">-->
+<!--      <query>-->
+<!--         <![CDATA[-->
+<!--let $a := <a>A</a>-->
+<!--let $b := <b>B</b>-->
+<!--let $c := <c>C</c>-->
+<!--return ($a,$b, $c) except ($b)-->
+<!--         ]]>-->
+<!--      </query>-->
+
+<!--        <result>-->
+<!--<![CDATA[<a>A</a>-->
+<!--, <c>C</c>-->
+<!--]]>-->
+<!--      </result>-->
+<!--   </test>-->
+
+
+     <!-- logical expression -->
+   <test name="Simple logical expression">
+      <query>
+        1 = 1 and 2 = 2
+      </query>
+      <result>true</result>
+   </test>
+
+   <test name="Logical expression with error">
+      <description>
+         This query MUST raise a dynamic error, as each part of the whole expression must be evaluated.
+      </description>
+      <query dynamicError="true">
+        1 = 1 and 1 div 0
+      </query>
+
+   </test>
+
+<!--  <test name="Logical expression with error">-->
+<!--       <description>-->
+<!--         This query MAY raise a dynamic error, as each part of the whole expression could be evaluated (but here as 1 = 1 is true and the operator is or, the second part has not to be evaluated). Here it raises a dynamic error as the second part is evaluated by the way.-->
+<!--      </description>-->
+<!--      <query dynamicError="true">-->
+<!--        1 = 1 or 1 div 0-->
+<!--      </query>-->
+<!--      <result>true</result>-->
+
+<!--   </test>-->
+</testSuite>

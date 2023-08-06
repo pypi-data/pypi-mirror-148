@@ -1,0 +1,2364 @@
+<!--
+   The unitary test shall be decleared accordingly with the following structure:
+
+   <test name="Test example">
+
+      <description>Here comes the full description.</description>
+
+      <query dynamicError="false" staticError="false">
+         Here comes the query....
+      </query>
+
+      <result>Here comes the expected result</result>
+
+   </test>
+
+   - The "description" markup is optional but recommended.
+
+   - The "query" markup contains the query defining the test. This query will
+     systematically be statically evaluated. It will be dynamically evaluated
+     only if a "result" has been provide or/and if "dynamicError" is expected
+     (see description of the attributes below).
+
+   - the "dynamicError" attribute is optional and defaulted to "false". It
+     indicates whether the dynamic evaluation of provided query script shall
+     raise an error. The possible values are "false" or "true".
+
+   - the "staticError" attribute is optional and defaulted to "false". It
+     indicates whether the static evaluation of provided query script shall
+     raise an error (type or static error). The possible values are "false" or
+     "true". It is an incosistency to declare both a "staticError" and a
+     "dynamicError" because the dynamic evaluation can only be performed if
+     no error occurred during the static phase.
+
+   - the "result" markup is optional and if present, should contain exact result
+     string expect after re-encoding the dynamic evaluation output sequence
+     into a string. It is important to take care of the format of this output
+     that will be compare on a one by one character basis.
+
+   Considering that declaration, test will be declared successful if:
+
+   - If the static evaluation of the "query" raised or nor an error accordingly
+     with the "staticError" attribute, AND
+   - If a result has been provided, the dynamic evaluation of the "query"
+     matches one by one the "result" AND
+   - If the "dynamicError" attribute is set to true, the dynamic evaluation of
+     the "query" raised an error.
+
+-->
+
+<testSuite>
+  <!--  User-defined functions -->
+
+  <test name="Unprefixed function in fn namespace">
+    <query>
+      declare function add ($a, $b)
+      {
+         $a + $b
+      };
+      add (2 , 5)
+    </query>
+    <result>7</result>
+
+  </test>
+
+  <test name="Prefixed function in fn namespace">
+    <query staticError="true">
+      declare function fn:add ($a as xs:integer, $b as xs:integer )
+      {
+         $a + $b
+      };
+      add (2 , 5)
+    </query>
+  </test>
+
+  <test name="Prefixed function in xs namespace">
+    <query staticError="true">
+      declare function xs:add ($a, $b)
+      {
+         $a + $b
+      };
+      add (2 , 5)
+    </query>
+  </test>
+
+  <test name="Prefixed function in xsi namespace">
+    <query staticError="true">
+      declare function xsi:add ($a, $b)
+      {
+         $a + $b
+      };
+      add (2 , 5)
+    </query>
+  </test>
+
+
+
+  <test name="Function with existing local name">
+    <query>
+      declare function local:sum ($a)
+      {
+         $a
+      };
+      local:sum ("toto")
+    </query>
+    <result>toto</result>
+  </test>
+
+  <test name="Local function">
+    <query>
+      declare function local:add ($a, $b)
+      {
+         $a + $b
+      };
+      local:add (2 , 5)
+    </query>
+    <result>7</result>
+  </test>
+
+  <test name="Default function namespace declaration">
+    <query>
+      declare default function namespace "ns1";
+      declare function add ($a as xs:integer, $b as xs:integer )
+      {
+        $a + $b
+      };
+      add (2 , 5)
+    </query>
+    <result>7</result>
+  </test>
+
+  <test name="Prefixed function in declared namespace">
+    <query>
+      declare namespace ns1="n1";
+      declare function ns1:add ($a, $b)
+      {
+         $a + $b
+      };
+      ns1:add (2 , 5)
+    </query>
+    <result>7</result>
+  </test>
+
+  <test name="Untyped function with string for numeric">
+    <query>
+      declare function local:add ($a, $b)
+      {
+         $a + $b
+      };
+      local:add ("2" , "5")
+    </query>
+    <result>7</result>
+  </test>
+
+  <test name="Function with typed parameters 1">
+    <query>
+      declare function local:add ($a as xs:integer, $b as xs:integer)
+      {
+         $a + $b
+      };
+      local:add ("2" , "5")
+    </query>
+    <result>7</result>
+  </test>
+
+  <test name="Function with typed parameters 2">
+    <query>
+      declare function local:add ($a as xs:integer, $b)
+      {
+         $b
+      };
+      local:add ("2" , "winter")
+    </query>
+    <result>winter</result>
+  </test>
+
+  <test name="Function with typed parameters 3">
+    <query>
+      declare function local:add ($a, $b as xs:integer)
+      {
+         $a
+      };
+      local:add ("winter", "2")
+    </query>
+    <result>winter</result>
+  </test>
+
+  <test name="Function with typed parameters 4">
+    <query>
+      declare function local:add ($a as xs:integer, $b as xs:node)
+      {
+         $a + 5
+      };
+      local:add ("2" , "winter")
+    </query>
+    <result>7</result>
+  </test>
+
+  <test name="Function with typed parameters 5">
+    <query dynamicError="true">
+      declare function local:add ($a as xs:string, $b as xs:integer)
+      {
+         $a + 5
+      };
+      local:add ("2" , "winter")
+    </query>
+  </test>
+
+  <test name="Function with singleton parameters 1">
+    <query>
+      declare function local:foo ($a as xs:integer)
+      {
+         $a
+      };
+      local:foo (7)
+    </query>
+    <result>7</result>
+  </test>
+
+  <test name="Function with singleton parameters 2">
+    <query dynamicError="true">
+      declare function local:foo ($a as xs:integer)
+      {
+         $a
+      };
+      local:foo ("toto")
+    </query>
+  </test>
+
+  <test name="Function with optional parameters 1">
+    <query dynamicError="true">
+      declare function local:foo ($a as xs:integer?)
+      {
+         $a
+      };
+      local:add (("2" , "5"))
+    </query>
+  </test>
+
+  <test name="Function with optional parameters 2">
+    <query dynamicError="true">
+      declare function local:foo ($a as xs:integer?)
+      {
+         $a
+      };
+      local:add ("2")
+    </query>
+    <result>2</result>
+  </test>
+
+  <test name="Function with optional parameters 3">
+    <query dynamicError="true">
+      declare function local:foo ($a as xs:integer?)
+      {
+         $a
+      };
+      local:add (())
+    </query>
+    <result></result>
+  </test>
+
+  <test name="Function with list parameters">
+    <query>
+      declare function local:foo ($a as xs:integer*)
+      {
+         $a
+      };
+      local:foo (("2" , "5"))
+    </query>
+    <result>2, 5</result>
+  </test>
+
+  <test name="Function with untyped return type 1">
+    <query>
+      declare function local:foo ($a)
+      {
+         $a
+      };
+      local:foo ("2") + 5
+    </query>
+      <result>7</result>
+  </test>
+
+  <test name="Function with untyped return type 2">
+    <query>
+      declare function local:foo ($a)
+      {
+         $a, "winter"
+      };
+      local:foo ("cold")
+    </query>
+    <result>cold, winter</result>
+  </test>
+
+  <test name="Function with untyped return type 3">
+    <query>
+      declare function local:foo ($a, $b)
+      {
+         $a + $b
+      };
+      local:foo (25.36, 12.32)
+    </query>
+    <result>37.68</result>
+  </test>
+
+  <test name="Function with untyped return type 4">
+    <query>
+      declare function local:foo ($a as xs:string, $b)
+      {
+         element {$a}{$b}
+      };
+      local:foo ("toto", 12.32)
+    </query>
+    <result><![CDATA[<toto>12.32</toto>]]></result>
+  </test>
+
+  <test name="Function with untyped return type 5">
+    <query>
+      declare function local:foo ($a)
+      {
+         $a
+      };
+      local:foo (element toto {"12.32"})
+    </query>
+    <result><![CDATA[<toto>12.32</toto>]]></result>
+  </test>
+
+  <test name="Function with untyped return type - empty return value">
+    <query>
+      declare function local:foo ($a)
+      {
+         ()
+      };
+      local:foo ("7")
+    </query>
+    <result></result>
+  </test>
+
+  <test name="Function with integer return type 1">
+    <query>
+      declare function local:foo ($a) as xs:integer
+      {
+         $a
+      };
+      local:foo ("2") + 5
+    </query>
+    <result>7</result>
+  </test>
+
+  <test name="Function with integer return type 2">
+    <query>
+      declare function local:foo ($a, $b) as xs:integer
+      {
+         xs:decimal(concat($a, ".", $b))
+      };
+      local:foo ("2", "5")
+    </query>
+    <result>2</result>
+  </test>
+
+  <test name="Function with integer return type 3">
+    <query>
+      declare function local:foo ($a, $b) as xs:integer
+      {
+         $a + $b
+      };
+      local:foo (25.36, 12.32)
+    </query>
+    <result>37</result>
+  </test>
+
+  <test name="Function with integer return type 4">
+    <query>
+      declare function local:foo ($a as xs:string, $b) as xs:integer
+      {
+         element {$a}{$b}
+      };
+      local:foo ("toto", 12)
+    </query>
+    <result>12</result>
+  </test>
+
+  <test name="Function with integer return type 5">
+    <query>
+      declare function local:foo ($a as xs:decimal) as xs:integer
+      {
+         $a
+      };
+      local:foo (element toto {"12.345"})
+    </query>
+    <result>12</result>
+  </test>
+
+    <test name="Function with less number argument">
+    <query dynamicError="true">
+      declare function local:foo ($a as xs:decimal, $b as decimal) as xs:integer
+      {
+         $a
+      };
+      local:foo (element toto {"12.345"})
+    </query>
+  </test>
+
+
+    <test name="Function with more number argument">
+    <query dynamicError="true">
+      declare function local:foo ($a as xs:decimal?) as xs:integer
+      {
+         $a
+      };
+      local:foo (12, 13)
+    </query>
+  </test>
+
+   <test name="Function with more number argument instead list">
+    <query dynamicError="true">
+      declare function local:foo ($a as xs:decimal*) as xs:integer
+      {
+         $a
+      };
+      local:foo (12, 13)
+    </query>
+  </test>
+
+    <test name="Function with return  *">
+    <query>
+      declare function local:foo ($a as xs:integer, $b as xs:integer)
+        as xs:integer*
+      {
+        let $out := 20
+        for $x  in ($a , $b)
+        let $out := $out + $x
+        return $out
+      };
+      local:foo (12, 14)
+    </query>
+        <result>32, 34</result>
+  </test>
+
+  <test name="Function with decimal return type 1">
+    <query>
+      declare function local:foo ($a) as xs:decimal
+      {
+         concat($a, ".1")
+      };
+      local:foo ("7")
+    </query>
+    <result>7.1</result>
+  </test>
+
+  <test name="Function with decimal return type 2">
+    <query>
+      declare function local:foo ($a) as xs:decimal
+      {
+         $a
+      };
+      local:foo (7000E-3)
+    </query>
+    <result>7</result>
+  </test>
+
+  <test name="Function with decimal return type 3">
+    <query dynamicError="true">
+      declare function local:foo ($a) as xs:decimal
+      {
+         concat($a, "toto")
+      };
+      local:foo ("7")
+    </query>
+  </test>
+
+  <test name="Function with string return type 1">
+    <query>
+      declare function local:foo ($a) as xs:string
+      {
+         concat($a, "toto")
+      };
+      local:foo ("7")
+    </query>
+    <result>7toto</result>
+  </test>
+
+  <test name="Function with string return type 2">
+    <query>
+      declare function local:foo ($a) as xs:string
+      {
+         element a {concat($a, "toto")}
+      };
+      local:foo ("7")
+    </query>
+    <result>7toto</result>
+  </test>
+
+  <test name="Function with string return type 3 - bad occurrence">
+    <query dynamicError="true">
+      declare function local:foo ($a) as xs:string
+      {
+         element a {concat($a, "toto")},
+         element b {concat($a, "titi")}
+      };
+      local:foo ("7")
+    </query>
+    <result>7toto</result>
+  </test>
+
+  <test name="Function with integer return type 4">
+    <query>
+      declare function local:foo ($a as xs:decimal) as xs:integer
+      {
+         $a
+      };
+      local:foo (element toto {"12.345"})
+    </query>
+    <result>12</result>
+  </test>
+
+  <test name="Function with string* return type">
+    <query>
+      declare function local:foo ($a) as xs:string*
+      {
+         element a {concat($a, "toto")},
+         element b {concat($a, "titi")}
+      };
+      local:foo ("7")
+    </query>
+    <result>7toto, 7titi</result>
+  </test>
+
+  <test name="Function with string? return type">
+    <query>
+      declare function local:foo ($a) as xs:string?
+      {
+         ()
+      };
+      local:foo ("7")
+    </query>
+    <result></result>
+  </test>
+
+
+  <!-- Contextual functions -->
+    <test name="fn:name - context node">
+      <description>Tests the evaluation of fn:name()
+       with no parameter.</description>
+      <query>element toto {}/fn:name()</query>
+      <result>toto</result>
+   </test>
+
+   <test name="fn:name - element node">
+      <description>Tests the evaluation of fn:name()
+       with an element node.</description>
+      <query>fn:name(element toto {})</query>
+      <result>toto</result>
+   </test>
+
+   <test name="fn:name - attribute node">
+      <description>Tests the evaluation of fn:name()
+       with an attribute node.</description>
+      <query>fn:name(attribute toto {})</query>
+      <result>toto</result>
+   </test>
+
+   <test name="fn:name - atomic value">
+      <description>Tests the evaluation of fn:name()
+       with an atomic value.</description>
+      <query dynamicError="true">fn:name(1)</query>
+   </test>
+
+   <test name="fn:namespace-uri - context node 1">
+      <description>Tests the evaluation of fn:namespace-uri()
+       with no parameter.</description>
+      <query>element toto {}/fn:namespace-uri()</query>
+      <result></result>
+   </test>
+
+   <test name="fn:namespace-uri - context node 2">
+      <description>Tests the evaluation of fn:namespace-uri()
+       with no parameter.</description>
+      <query>
+         declare namespace foo = "http://foo.org";
+         element foo:toto {}/fn:namespace-uri()
+      </query>
+      <result>http://foo.org</result>
+   </test>
+
+   <test name="fn:namespace-uri - element node 1">
+      <description>Tests the evaluation of fn:namespace-uri()
+       with an element node.</description>
+      <query>
+        declare namespace foo = "http://foo.org";
+        fn:namespace-uri(element foo:toto {})</query>
+      <result>http://foo.org</result>
+   </test>
+
+   <test name="fn:namespace-uri - element node 2">
+      <description>Tests the evaluation of fn:namespace-uri()
+       with an element node.</description>
+      <query>fn:namespace-uri(element toto {})</query>
+      <result></result>
+   </test>
+
+   <test name="fn:namespace-uri - attribute node 1">
+      <description>Tests the evaluation of fn:namespace-uri()
+       with an attribute node.</description>
+      <query>
+         declare namespace foo = "http://foo.org";
+         fn:namespace-uri(attribute foo:toto {})</query>
+      <result>http://foo.org</result>
+   </test>
+
+   <test name="fn:namespace-uri - attribute node 2">
+      <description>Tests the evaluation of fn:namespace-uri()
+       with an attribute node.</description>
+      <query>
+         fn:namespace-uri(attribute toto {})</query>
+      <result></result>
+   </test>
+
+   <test name="fn:namespace-uri - atomic value">
+      <description>Tests the evaluation of fn:namespace-uri()
+       with an atomic value.</description>
+      <query dynamicError="true">fn:namespace-uri(1)</query>
+   </test>
+
+<!--   <test name="fn:position - Initial focus">-->
+<!--      <description>Tests the evaluation of fn:position()-->
+<!--       within then main context.</description>-->
+<!--      <query>fn:position()</query>-->
+<!--      <result>1</result>-->
+<!--   </test>-->
+<!--   -->
+<!--   <test name="fn:position - FLWR expression context">-->
+<!--      <description>Tests the evaluation of fn:position()-->
+<!--       within a FLWR expression.</description>-->
+<!--      <query>for $i at $j in 4 to 7-->
+<!--             return fn:position()</query>-->
+<!--      <result>1, 2, 3, 4</result>-->
+<!--   </test>-->
+ 
+   <test name="fn:position - Filter expression context">
+      <description>Tests the evaluation of fn:position()
+       within an filter expression.</description>
+      <query>(4 to 8)[fn:position() mod 2 = 0]</query>
+      <result>5, 7</result>
+   </test>
+   
+   
+   <test name="fn:last - Initial focus">
+      <description>Tests the evaluation of fn:last()
+       within then main context.</description>
+      <query>fn:last()</query>
+      <result>1</result>
+   </test>
+   
+<!--   <test name="fn:last - FLWR expression context">-->
+<!--      <description>Tests the evaluation of fn:last()-->
+<!--       within a FLWR expression.</description>-->
+<!--      <query>for $i at $j in 4 to 7-->
+<!--             return fn:last()</query>-->
+<!--      <result>4, 4, 4, 4</result>-->
+<!--   </test>-->
+ 
+   <test name="fn:last - Filter expression context">
+      <description>Tests the evaluation of fn:last()
+       within an filter expression.</description>
+      <query>(4 to 8)[fn:last()]</query>
+      <result>8</result>
+   </test>
+ 
+ 
+   <!-- Functions on sequence -->
+   
+   <test name="fn:data - empty sequence argument">
+      <description>Tests the evaluation of fn:data()
+      when argument is an empty sequence.</description>
+      <query>fn:data(())</query>
+      <result></result>
+   </test>
+   
+   <test name="fn:data - atomic argument">
+      <description>Tests the evaluation of fn:data()
+      when argument is an atomic value.</description>
+      <query>fn:data("Hello")</query>
+      <result>Hello</result>
+   </test>
+   
+   <test name="fn:data - node argument">
+      <description>Tests the evaluation of fn:data()
+      when argument is a node.</description>
+      <query>fn:data(element a {"Hello"})</query>
+      <result>Hello</result>
+   </test>
+   
+   <test name="fn:data - multiple values">
+      <description>Tests the evaluation of fn:data()
+      when argument are atomic values.</description>
+      <query>fn:data(1 to 5)</query>
+      <result>1, 2, 3, 4, 5</result>
+   </test>
+   
+   <test name="fn:data - multiple nodes">
+      <description>Tests the evaluation of fn:data()
+      when argument are several nodes.</description>
+      <query>
+         fn:data(for $a in 3 to 6
+                 return element a {$a})</query>
+      <result>3, 4, 5, 6</result>
+   </test>
+   
+   <test name="fn:data - multiple nodes with a filter">
+      <description>Tests the evaluation of fn:data()
+      when argument are several nodes with a filter.</description>
+      <query>
+         (fn:data(for $a in 3 to 6
+                 return element a {$a}))[3 to 3]</query>
+      <result>5</result>
+   </test>
+   
+   <test name="fn:true">
+      <description>Tests the evaluation of fn:true().</description>
+      <query>fn:true()</query>
+      <result>true</result>
+   </test>
+ 
+   <test name="fn:false">
+      <description>Tests the evaluation of fn:false().</description>
+      <query>fn:false()</query>
+      <result>false</result>
+   </test>
+   
+   <test name="fn:not - empty sequence">
+      <description>Tests the evaluation of fn:not() with an empty sequence.</description>
+      <query>fn:not(())</query>
+      <result>true</result>
+   </test>
+   
+  <test name="fn:not - more than one item">
+      <description>Tests the evaluation of fn:not() with more than one item.</description>
+      <query>fn:not(("a","b","c"))</query>
+      <result>false</result>
+   </test>
+   
+   <test name="fn:not - true boolean">
+      <description>Tests the evaluation of fn:not() with a true boolean.</description>
+      <query>fn:not(xs:boolean("true"))</query>
+      <result>false</result>
+   </test>
+   
+   <test name="fn:not - false boolean">
+      <description>Tests the evaluation of fn:not() with a false boolean.</description>
+      <query>fn:not(xs:boolean("false"))</query>
+      <result>true</result>
+   </test>
+   
+   <test name="fn:not - null integer">
+      <description>Tests the evaluation of fn:not() with a null integer.</description>
+      <query>fn:not(0)</query>
+      <result>true</result>
+   </test>
+   
+   <test name="fn:not - non null integer">
+      <description>Tests the evaluation of fn:not() with a non-null integer.</description>
+      <query>fn:not(1)</query>
+      <result>false</result>
+   </test>
+   
+   <test name="fn:not - zero-length string">
+      <description>Tests the evaluation of fn:not() with an empty string.</description>
+      <query>fn:not("")</query>
+      <result>true</result>
+   </test>
+   
+   <test name="fn:not - short string">
+      <description>Tests the evaluation of fn:not() with a short string.</description>
+      <query>fn:not("winter")</query>
+      <result>false</result>
+   </test>
+
+   <test name="fn:exists - empty sequence argument">
+      <description>Tests the evaluation of fn:exists()
+      when argument is an empty sequence.</description>
+      <query>fn:exists(())</query>
+      <result>false</result>
+   </test>
+   
+   <test name="fn:exists - empty string argument">
+      <description>Tests the evaluation of fn:exists()
+      when argument is an empty string.</description>
+      <query>fn:exists("")</query>
+      <result>true</result>
+   </test>
+   
+   <test name="fn:exists - empty node argument">
+      <description>Tests the evaluation of fn:exists()
+      when argument is an empty node.</description>
+      <query>fn:exists(element a {})</query>
+      <result>true</result>
+   </test>
+   
+   <test name="fn:exists - null value argument">
+      <description>Tests the evaluation of fn:exists()
+      when argument is an null value.</description>
+      <query>fn:exists(0)</query>
+      <result>true</result>
+   </test>
+   
+   
+   <test name="fn:empty - empty sequence argument">
+      <description>Tests the evaluation of fn:empty()
+      when argument is an empty sequence.</description>
+      <query>fn:empty(())</query>
+      <result>true</result>
+   </test>
+   
+   <test name="fn:empty - empty string argument">
+      <description>Tests the evaluation of fn:empty()
+      when argument is an empty string.</description>
+      <query>fn:empty("")</query>
+      <result>false</result>
+   </test>
+   
+   <test name="fn:empty - empty node argument">
+      <description>Tests the evaluation of fn:empty()
+      when argument is an empty node.</description>
+      <query>fn:empty(element a {})</query>
+      <result>false</result>
+   </test>
+   
+   <test name="fn:empty - null value argument">
+      <description>Tests the evaluation of fn:empty()
+      when argument is an null value.</description>
+      <query>fn:empty(0)</query>
+      <result>false</result>
+   </test>
+   
+   
+   <!-- Functions on Strings  -->
+
+   <test name="fn:string-length - empty sequence argument">
+      <description>Tests the evaluation of string-length
+      when argument is an empty sequence.</description>
+      <query>fn:string-length(())</query>
+      <result>0</result>
+   </test>
+
+
+   <test name="fn:string-length - empty string argument">
+      <description>Tests the evaluation of string-length
+      when argument is an empty string.</description>
+      <query>fn:string-length("")</query>
+      <result>0</result>
+   </test>
+
+
+   <test name="fn:string-length - single character argument">
+      <description>Tests the evaluation of string-length
+      when argument is a single character string.</description>
+      <query>fn:string-length("A")</query>
+      <result>1</result>
+   </test>
+ 
+
+   <test name="fn:string-length - short string argument">
+      <description>Tests the evaluation of string-length
+      when argument is a string of 3 characters.</description>
+      <query>fn:string-length("ABC")</query>
+      <result>3</result>
+   </test>
+
+
+   <test name="fn:string-length - long string argument">
+      <description>Tests the evaluation of string-length
+      when argument is a string of 45 characters.</description>
+      <query>fn:string-length("Harp not on that string, madam; that is past.")</query>
+      <result>45</result>
+   </test>
+
+
+   <test name="fn:string-length - empty argument">
+      <description>Tests the evaluation of string-length with the argument is absent.</description>
+      <query>fn:string-length()</query>
+      <result>0</result>
+   </test>
+
+   <test name="fn:string-length - short string context item">
+      <description>Tests the evaluation of string-length
+      when the context node have a short string value.</description>
+      <query>
+         element a {"ABC"}/fn:string-length()</query>
+      <result>3</result>
+   </test>
+ 
+   <test name="fn:string-length - zero-length context item">
+      <description>Tests the evaluation of string-length
+      when the context node have a zero-length string value.</description>
+      <query>
+         element a {}/fn:string-length()</query>
+      <result>0</result>
+   </test>
+
+   <test name="fn:string-length() - single character context item">
+      <description>Tests the evaluation of string-length
+      when the context item is a string of one character.</description>
+      <query>
+         element a {"A"}/fn:string-length()</query>
+      <result>1</result>
+   </test>
+
+
+   <test name="fn:string-join - empty sequence argument">
+      <description>Tests the evaluation of string-join()
+      when argument is an empty sequence.</description>
+      <query>fn:string-join((),"separator")</query>
+      <result></result>
+   </test>
+
+   <test name="fn:string-join - single string value">
+      <description>Tests the evaluation of string-join()
+      when argument is a single string value.</description>
+      <query>fn:string-join('Hello', 'separator')</query>
+      <result>Hello</result>
+   </test>
+
+   <test name="fn:string-join - single string value">
+      <description>Tests the evaluation of string-join()
+      when argument is a single string value.</description>
+      <query>fn:string-join('World', '')</query>
+      <result>World</result>
+   </test>
+
+   <test name="fn:string-join - single text node">
+      <description>Tests the evaluation of string-join()
+      when argument is a single text node.</description>
+      <query>fn:string-join(element a {'winter'}, 'separator')</query>
+      <result>winter</result>
+   </test>
+
+   <test name="fn:string-join - multiple string values">
+      <description>Tests the evaluation of string-join()
+      when argument are multiple string values.</description>
+      <query>fn:string-join(('Now', 'is', 'the', 'time', '...'),
+                              ' ')</query>
+      <result>Now is the time ...</result>
+   </test>
+
+   <test name="fn:string-join - multiple string values without separator">
+      <description>Tests the evaluation of string-join()
+      when argument are multiple string values without separator.</description>
+      <query>fn:string-join(('chap', 'ter'),'')</query>
+      <result>chapter</result>
+   </test>
+ 
+   <test name="fn:string-join - multiple text nodes">
+      <description>Tests the evaluation of string-join()
+      when argument is an empty sequence.</description>
+      <query>fn:string-join((element a {'Hello'}, element b {'World'}),
+                              ' ')</query>
+      <result>Hello World</result>
+   </test>
+
+    <test name="fn:substring - input is empty">
+      <description>Tests the evaluation of substring()
+      when the input is empty.</description>
+      <query>fn:substring((), 1, 3)</query>
+      <result></result>
+   </test>
+   
+   <test name="fn:substring - input is empty">
+      <description>Tests the evaluation of substring()
+      when the input is empty.</description>
+      <query>fn:substring(element t {}, 1, 3)</query>
+      <result></result>
+   </test>
+ 
+    <test name="fn:substring - first position is negative">
+      <description>Tests the evaluation of substring()
+      when the first position is negative.</description>
+      <query>fn:substring("12345", -3, 5)</query>
+      <result>1</result>
+   </test>
+
+    <test name="fn:substring - length is 56">
+      <description>Tests the evaluation of substring() with -42 56
+          .</description>
+      <query>fn:substring("12345", -42, 56)</query>
+      <result>12345</result>
+   </test>
+
+   
+    <test name="fn:substring - first position is negative infinite">
+      <description>Tests the evaluation of substring()
+      when the first position is negative.</description>
+      <query>fn:substring("12345", -1 div 0E0, 5)</query>
+      <result></result>
+   </test>
+   
+   <test name="fn:substring - position and length are positive integers">
+      <description>Tests the evaluation of substring()
+      when the position and length are positive integers.</description>
+      <query>fn:substring("metadata", 4, 3)</query>
+      <result>ada</result>
+   </test>
+   
+   <test name="fn:substring - position and length are positive decimals">
+      <description>Tests the evaluation of substring()
+      when the position and length are positive decimal.</description>
+      <query>fn:substring("12345", 1.5, 2.6)</query>
+      <result>234</result>
+   </test>
+   
+   <test name="fn:substring - position and length are positive integers">
+      <description>Tests the evaluation of substring()
+      when the position and length are positive integers.</description>
+      <query>fn:substring("12345", 0, 3)</query>
+      <result>12</result>
+   </test>
+ 
+   <test name="fn:substring - length is infinite">
+      <description>Tests the evaluation of substring()
+      when the length is infinite.</description>
+      <query>fn:substring("12345", 2, 1 div 0E0)</query>
+      <result>2345</result>
+   </test>
+   
+   <test name="fn:substring - length is NaN">
+      <description>Tests the evaluation of substring()
+      when the length is NaN.</description>
+      <query>fn:substring("12345", 1, 0 div 0E0)</query>
+      <result></result>     
+   </test>
+ 
+    <test name="fn:substring-before - empty sequence arguments">
+      <description>Tests the evaluation of substring-before()
+      when argument is an empty sequence.</description>
+      <query>fn:substring-before((),())</query>
+      <result></result>
+   </test>
+   
+    <test name="fn:substring-before - two string values">
+      <description>Tests the evaluation of substring-before()
+      when argument are two strings.</description>
+      <query>fn:substring-before("tattoo", "attoo")</query>
+      <result>t</result>
+    </test>
+    
+    <test name="fn:substring-before - two string values">
+      <description>Tests the evaluation of substring-before()
+      when argument are two strings.</description>
+      <query>fn:substring-before("tattoo", "too")</query>
+      <result>tat</result>
+    </test>
+    
+    <test name="fn:substring-before - two string values">
+      <description>Tests the evaluation of substring-before()
+      when argument are two strings.</description>
+      <query>fn:substring-before("tattoo", "o")</query>
+      <result>tatt</result>
+    </test>
+
+   <test name="fn:compare - empty sequence in first argument">
+      <description>Tests the evaluation of concat()
+      when first argument is an empty sequence.</description>
+      <query>fn:compare((),"winter")</query>
+      <result></result>
+   </test>
+   
+   <test name="fn:compare - empty sequence in second argument">
+      <description>Tests the evaluation of concat()
+      when second argument is an empty sequence.</description>
+      <query>fn:compare("winter",())</query>
+      <result></result>
+   </test>
+   
+   <test name="fn:compare - empty sequence in both arguments">
+      <description>Tests the evaluation of concat()
+      when both arguments are empty sequences.</description>
+      <query>fn:compare(element a {},())</query>
+      <result></result>
+   </test>
+   
+   <test name="fn:compare - first argument is empty string">
+      <description>Tests the evaluation of concat()
+      when second argument is an empty string.</description>
+      <query>fn:compare("","winter")</query>
+      <result>-1</result>
+   </test>
+   
+   <test name="fn:compare - second argument is an empty string">
+      <description>Tests the evaluation of concat()
+      when second argument is an empty string.</description>
+      <query>fn:compare("winter","")</query>
+      <result>1</result>
+   </test>
+   
+   <test name="fn:compare - empty string in both arguments">
+      <description>Tests the evaluation of concat()
+      when both arguments are empty strings.</description>
+      <query>fn:compare("","")</query>
+      <result>0</result>
+   </test>
+   
+   <test name="fn:compare - first string less than second string - no match">
+      <description>Tests the evaluation of concat()
+      when second argument is an empty sequence.</description>
+      <query>fn:compare("hello","winter")</query>
+      <result>-1</result>
+   </test>
+   
+   <test name="fn:compare - first string less than second string - partial match">
+      <description>Tests the evaluation of concat()
+      when first string is less than the second string with partial match.</description>
+      <query>fn:compare("willow","winter")</query>
+      <result>-1</result>
+   </test>
+   
+   <test name="fn:compare - first string greater than second string">
+      <description>Tests the evaluation of concat()
+      when second argument is an empty sequence.</description>
+      <query>fn:compare("winter","hello")</query>
+      <result>1</result>
+   </test>
+     
+  <test name="fn:compare - first string greater than second string - partial match">
+      <description>Tests the evaluation of concat()
+      when first string is less than the second string with partial match.</description>
+      <query>fn:compare("winter","willow")</query>
+      <result>1</result>
+   </test>
+   
+   <test name="fn:compare - first string equals to second string - 2 values">
+      <description>Tests the evaluation of concat()
+      when both argument are equal.</description>
+      <query>fn:compare("winter","winter")</query>
+      <result>0</result>
+   </test>
+   
+   <test name="fn:compare - first string equals to second string - 2 nodes">
+      <description>Tests the evaluation of concat()
+      when both argument are equal.</description>
+      <query>fn:compare(element a {"winter"}, element b {"winter"})</query>
+      <result>0</result>
+   </test>
+   
+   <test name="fn:compare - first string equals to second string - 1 node, 1 value">
+      <description>Tests the evaluation of concat()
+      when both argument are equal.</description>
+      <query>fn:compare(element a {"winter"}, "winter")</query>
+      <result>0</result>
+   </test>
+   
+   <test name="fn:compare - first argument is a node greater than second argument">
+      <description>Tests the evaluation of concat()
+      when both arguments are nodes.</description>
+      <query>fn:compare(element a {"winter"}, element b {"hello"})</query>
+      <result>1</result>
+   </test>
+   
+   <test name="fn:compare - first argument is a node less than second argument">
+      <description>Tests the evaluation of concat()
+      when second argument is an empty string.</description>
+      <query>fn:compare(element b {"hello"}, element a {"winter"})</query>
+      <result>-1</result>
+   </test>
+
+   <test name="fn:concat - empty sequence argument">
+      <description>Tests the evaluation of concat()
+      when argument is an empty sequence.</description>
+      <query>fn:concat((),"winter")</query>
+      <result>winter</result>
+   </test>
+
+   <test name="fn:concat - two string values">
+      <description>Tests the evaluation of concat()
+      when argument are two string values.</description>
+      <query>fn:concat('Hello', ' World')</query>
+      <result>Hello World</result>
+   </test>
+
+   <test name="fn:concat - multiple string values">
+      <description>Tests the evaluation of concat()
+      when argument are multiple string values.</description>
+      <query>fn:concat('Now', ' is', ' the', ' time', ' ...')</query>
+      <result>Now is the time ...</result>
+   </test>
+
+   <test name="fn:concat - two numeric values">
+      <description>Tests the evaluation of concat()
+      when argument are numeric values.</description>
+      <query>fn:concat(200, 7)</query>
+      <result>2007</result>
+   </test>
+
+
+   <test name="fn:concat - mixed value types">
+      <description>Tests the evaluation of concat()
+      when argument are mixed values.</description>
+      <query>fn:concat('XQuery', (), '200', 7)</query>
+      <result>XQuery2007</result>
+   </test>
+
+
+   <test name="fn:concat - single text node">
+      <description>Tests the evaluation of concat()
+      when argument is a single text node.</description>
+      <query>fn:concat(element a {'winter'}, ())</query>
+      <result>winter</result>
+   </test>
+
+
+   <test name="fn:concat - single numeric node">
+      <description>Tests the evaluation of concat()
+      when argument is a single numeric node.</description>
+      <query>fn:concat(element a {2007}, ())</query>
+      <result>2007</result>
+   </test>
+
+ 
+   <test name="fn:concat() - multiple text nodes">
+      <description>Tests the evaluation of concat()
+      when argument are multiple text nodes.</description>
+      <query>fn:concat(element a {'Hello'}, ' ', element b {'World'})</query>
+      <result>Hello World</result>
+   </test>
+
+   <test name="fn:matches - input is not a string">
+      <description>Tests the evaluation of matches()
+      when the input is invalid.</description>
+      <query>fn:matches(5, ".*bra.*")</query>
+      <result>false</result>
+   </test>
+   
+   <test name="fn:matches - input is an array">
+      <description>Tests the evaluation of matches()
+      when the input is invalid.</description>
+      <query>fn:matches(("a","b"), ".*bra.*")</query>
+      <result>false</result>
+   </test>
+
+   <test name="fn:matches - input matches the pattern">
+      <description>Tests the evaluation of matches()
+      when the input matches the pattern.</description>
+      <query>fn:matches("abracadabra", ".*bra.*")</query>
+      <result>true</result>
+   </test>
+   
+   <test name="fn:matches - input matches the pattern">
+      <description>Tests the evaluation of matches()
+      when the input matches the pattern.</description>
+      <query>fn:matches(element t {"abracadabra"}, ".*bra.*")</query>
+      <result>true</result>
+   </test>
+   
+   <test name="fn:matches - input matches the pattern">
+      <description>Tests the evaluation of matches()
+      when the input matches the pattern.</description>
+      <query>fn:matches("abracadabra", "^a.*a$")</query>
+      <result>true</result>
+   </test>
+   
+   <test name="fn:matches - input matches the pattern">
+      <description>Tests the evaluation of matches()
+      when the input matches the pattern.</description>
+      <query>fn:matches("", "")</query>
+      <result>true</result>
+   </test>
+   
+   <test name="fn:matches - input matches the pattern">
+      <description>Tests the evaluation of matches()
+      when the input matches the pattern.</description>
+      <query>fn:matches(element t {}, "")</query>
+      <result>true</result>
+   </test>
+   
+   <test name="fn:matches - input does not match the pattern">
+      <description>Tests the evaluation of matches()
+      when the input does not matches the pattern.</description>
+      <query>fn:matches("abracadabra", "^bra")</query>
+      <result>false</result>
+   </test>
+
+   <test name="fn:matches - input does not match the pattern">
+      <description>Tests the evaluation of matches()
+      when the input does not matches the pattern.</description>
+      <query>fn:matches(element t {"abracadabra"}, "^bra")</query>
+      <result>false</result>
+   </test>
+   
+   <test name="fn:matches - input does not match the pattern">
+      <description>Tests the evaluation of matches()
+      when the input does not matches the pattern.</description>
+      <query>fn:matches("", "^bra")</query>
+      <result>false</result>
+   </test>
+   
+   <test name="fn:matches - input does not match the pattern">
+      <description>Tests the evaluation of matches()
+      when the input does not matches the pattern.</description>
+      <query>fn:matches(element a {}, "^bra")</query>
+      <result>false</result>
+   </test>
+   
+   <test name="fn:replace - input is an empty sequence">
+      <description>Tests the evaluation of replace()
+      when the input is an empty sequence.</description>
+      <query>fn:replace((), "bra", "*")</query>
+      <result></result>
+   </test>
+   
+   <test name="fn:replace - input is an empty node">
+      <description>Tests the evaluation of replace()
+      when the input is an empty sequence.</description>
+      <query>fn:replace(element t {}, "bra", "*")</query>
+      <result></result>
+   </test>
+   
+   <test name="fn:replace - input contains the replacement string">
+      <description>Tests the evaluation of replace()
+      when the input contains the replacement string.</description>
+      <query>fn:replace("abracadabra", "bra", "*")</query>
+      <result>a*cada*</result>
+   </test>
+   
+   <test name="fn:replace - input contains the replacement string">
+      <description>Tests the evaluation of replace()
+      when the input contains the replacement string.</description>
+      <query>fn:replace("abracadabra", "a.*a", "*")</query>
+      <result>*</result>
+   </test>
+   
+   <test name="fn:replace - input contains the replacement string">
+      <description>Tests the evaluation of replace()
+      when the input contains the replacement string.</description>
+      <query>fn:replace("abracadabra", "a.*?a", "*")</query>
+      <result>*c*bra</result>
+   </test>
+   
+   <test name="fn:replace - replacement string contains a variable">
+      <description>Tests the evaluation of replace()
+      when the replacement string contains a variable.</description>
+      <query>fn:replace("abracadabra", "a(.)", "a$1$1")</query>
+      <result>abbraccaddabbra</result>
+   </test>
+   
+   <test name="fn:replace - replacement string contains a variable">
+      <description>Tests the evaluation of replace()
+      when the replacement string contains a variable.</description>
+      <query>fn:replace("abracadabra", "a(.)", "a$1$1")</query>
+      <result>abbraccaddabbra</result>
+   </test>
+   
+   <test name="fn:replace - replacement string contains two variables">
+      <description>Tests the evaluation of replace()
+      when the replacement string contains two variables.</description>
+      <query>fn:replace("darted", "^(.*?)d(.*)$", "$1c$2")</query>
+      <result>carted</result>
+   </test>
+   
+   <test name="fn:replace - replacement string is empty">
+      <description>Tests the evaluation of replace()
+      when the replacement string is empty.</description>
+      <query>fn:replace("abracadabra", "a", "")</query>
+      <result>brcdbr</result>
+   </test>
+   
+   <test name="fn:replace - pattern string is empty">
+      <description>Tests the evaluation of replace()
+      when the pattern string is empty.</description>
+      <query dynamicError="true">fn:replace("abracadabra", "", "*")</query>
+   </test>
+   
+<!--   <test name="fn:replace - pattern matches the zero-length string">-->
+<!--      <description>Tests the evaluation of replace()-->
+<!--      when the pattern string is empty.</description>-->
+<!--      <query dynamicError="true">fn:replace("abracadabra", ".*?", "*")</query>-->
+<!--   </test>-->
+
+--
+   <test name="fn:tokenize - input is an empty sequence">
+      <description>Tests the evaluation of tokenize()
+      when the input is an empty sequence.</description>
+      <query>fn:tokenize((), "bra")</query>
+      <result></result>
+   </test>
+   
+   <test name="fn:tokenize - input is an empty node">
+      <description>Tests the evaluation of tokenize()
+      when the input is an empty sequence.</description>
+      <query>fn:tokenize(element t {}, "bra")</query>
+      <result></result>
+   </test>
+   
+   <test name="fn:tokenize - input is a string">
+      <description>Tests the evaluation of tokenize()
+      when the input is a string.</description>
+      <query>fn:tokenize("1/15/24/50", "/")</query>
+      <result>1, 15, 24, 50</result>
+   </test>
+   
+   <test name="fn:tokenize - input is a node">
+      <description>Tests the evaluation of tokenize()
+      when the input is a node.</description>
+      <query>fn:tokenize(element t {"1/15/24/50"}, "/")</query>
+      <result>1, 15, 24, 50</result>
+   </test>
+
+   <!-- XML-Schema constructors -->
+
+   <test name="xs:byte - empty sequence">
+      <description>
+         Tests that xs:byte constructor is supported.
+      </description>
+      <query>xs:byte(())</query>
+      <result></result>
+   </test>
+ 
+   <test name="xs:byte - lower range">
+      <description>
+         Tests that xs:byte constructor is supported.
+      </description>
+      <query>xs:byte("-128")</query>
+      <result>-128</result>
+   </test>
+
+   <test name="xs:byte - upper range">
+      <description>
+         Tests that xs:byte constructor is supported.
+      </description>
+      <query>xs:byte("127")</query>
+      <result>127</result>
+   </test>
+
+   <test name="xs:byte - middle range">
+      <description>
+         Tests that xs:byte constructor is supported.
+      </description>
+      <query>xs:byte("0")</query>
+      <result>0</result>
+   </test>
+
+   <test name="xs:byte - positive middle range">
+      <description>
+         Tests that xs:byte constructor is supported.
+      </description>
+      <query>xs:byte("15")</query>
+      <result>15</result>
+   </test>
+
+   <test name="xs:byte - negative middle range">
+      <description>
+         Tests that xs:byte constructor is supported.
+      </description>
+      <query>xs:byte("-15")</query>
+      <result>-15</result>
+   </test>
+
+   <test name="xs:unsignedByte - empty sequence">
+      <description>
+         Tests that xs:byte constructor is supported.
+      </description>
+      <query>xs:unsignedByte(())</query>
+      <result></result>
+   </test>
+
+   <test name="xs:unsignedByte - lower range">
+      <description>
+         Tests that xs:unsignedByte constructor is supported.
+      </description>
+      <query>xs:unsignedByte("0")</query>
+      <result>0</result>
+   </test>
+
+   <test name="xs:unsignedByte - upper range">
+      <description>
+         Tests that xs:unsignedByte constructor is supported.
+      </description>
+      <query>xs:unsignedByte("255")</query>
+      <result>255</result>
+   </test>
+
+
+   <test name="xs:unsignedByte - middle range">
+      <description>
+         Tests that xs:unsignedByte constructor is supported.
+      </description>
+      <query>xs:unsignedByte("15")</query>
+      <result>15</result>
+   </test>
+
+   <test name="xs:short - lower range">
+      <description>
+         Tests that xs:short constructor is supported.
+      </description>
+      <query>xs:short("-32768")</query>
+      <result>-32768</result>
+   </test>
+
+   <test name="xs:short - upper range">
+      <description>
+         Tests that xs:short constructor is supported.
+      </description>
+      <query>xs:short("32767")</query>
+      <result>32767</result>
+   </test>
+
+   <test name="xs:unsignedShort - lower range">
+      <description>
+         Tests that xs:unsignedShort constructor is supported.
+      </description>
+      <query>xs:unsignedShort("0")</query>
+      <result>0</result>
+   </test>
+
+   <test name="xs:unsignedShort - upper range">
+      <description>
+         Tests that xs:unsignedShort constructor is supported.
+      </description>
+      <query>xs:unsignedShort("65535")</query>
+      <result>65535</result>
+   </test>
+
+   <test name="xs:int - lower range">
+      <description>
+         Tests that xs:int constructor is supported.
+      </description>
+      <query>xs:int("-2147483648")</query>
+      <result>-2147483648</result>
+   </test>
+
+   <test name="xs:int - upper range">
+      <description>
+         Tests that xs:int constructor is supported.
+      </description>
+      <query>xs:int("2147483647")</query>
+      <result>2147483647</result>
+   </test>
+
+   <test name="xs:unsignedInt - lower range">
+      <description>
+         Tests that xs:unsignedInt constructor is supported.
+      </description>
+      <query>xs:unsignedInt("0")</query>
+      <result>0</result>
+   </test>
+
+   <test name="xs:unsignedInt - upper range">
+      <description>
+         Tests that xs:unsignedInt constructor is supported.
+      </description>
+      <query>xs:unsignedInt("4294967295")</query>
+      <result>4294967295</result>
+   </test>
+
+   <test name="xs:long - lower range">
+      <description>
+         Tests that xs:long constructor is supported.
+      </description>
+      <query>xs:long("-9223372036854775808")</query>
+      <result>-9223372036854775808</result>
+   </test>
+
+   <test name="xs:long - upper range">
+      <description>
+         Tests that xs:long constructor is supported.
+      </description>
+      <query>xs:long("9223372036854775807")</query>
+      <result>9223372036854775807</result>
+   </test>
+
+   <test name="xs:unsignedLong - lower range">
+      <description>
+         Tests that xs:unsignedLong constructor is supported.
+      </description>
+      <query>xs:unsignedLong("0")</query>
+      <result>0</result>
+   </test>
+
+   <test name="xs:unsignedLong - upper range">
+      <description>
+         Tests that xs:unsignedLong constructor is supported.
+      </description>
+      <query>xs:unsignedLong("18446744073709551615")</query>
+      <result>18446744073709551615</result>
+   </test>
+
+   <test name="xs:integer constructor">
+      <description>
+         Tests that xs:integer constructor is supported.
+      </description>
+      <query>xs:integer("1234567890123456789012345678901234567890")</query>
+      <result>1234567890123456789012345678901234567890</result>
+   </test>
+   
+   <test name="xs:positiveInteger constructor">
+      <description>
+         Tests that xs:positiveInteger constructor is supported.
+      </description>
+      <query>xs:positiveInteger("+1234567890123456789012345678901234567890")</query>
+      <result>1234567890123456789012345678901234567890</result>
+   </test>
+
+   <test name="xs:decimal constructor">
+      <description>
+         Tests that xs:decimal constructor is supported.
+      </description>
+      <query>xs:decimal("3.141592653589793238462643383279502884197169399375105820974944592")</query>
+      <result>3.141592653589793238462643383279502884197169399375105820974944592</result>
+   </test>
+
+   <test name="xs:float constructor">
+      <description>
+         Tests that xs:float constructor is supported.
+      </description>
+      <query>xs:float("-1.5e-15")</query>
+      <result>-1.5E-15</result>
+   </test>
+
+   <test name="xs:double constructor">
+      <description>
+         Tests that xs:double constructor is supported.
+      </description>
+      <query>xs:double("-1.5e-150")</query>
+      <result>-1.5E-150</result>
+   </test>
+
+   <test name="xs:dateTime - ESA/PDS format">
+      <description>
+         Tests that xs:dateTime constructor is supported.
+      </description>
+      <query>xs:dateTime("29-MAR-1999 16:47:18.625468")</query>
+      <result>29-MAR-1999 16:47:18.625468</result>
+   </test>
+
+   <test name="xs:dateTime - ISO format">
+      <description>
+         Tests that xs:dateTime constructor is supported.
+      </description>
+      <query>xs:dateTime("1999-03-29T16:47:18.625468")</query>
+      <result>29-MAR-1999 16:47:18.625468</result>
+   </test>
+
+    <test name="xs:dateTime - to float">
+      <description>
+         Tests that xs:dateTime constructor is supported.
+      </description>
+      <query>xs:float(xs:dateTime("1970-01-01T00:00:18.625468"))</query>
+      <result>18.0</result>
+   </test>
+
+    <test name="xs:dateTime - to int">
+      <description>
+         Tests that xs:dateTime constructor is supported.
+      </description>
+      <query>xs:int(xs:dateTime("1999-03-29T16:47:18.625468"))</query>
+      <result>922726038</result>
+   </test>
+
+    <test name="xs:dateTime - to decimal">
+      <description>
+         Tests that xs:dateTime constructor is supported.
+      </description>
+      <query>xs:decimal(xs:dateTime("1970-01-01T00:00:18.925468"))</query>
+      <result>18</result>
+   </test>
+
+    <test name="xs:dateTime - ESA/PDS format  only second">
+      <description>
+         Tests that xs:dateTime constructor is supported.
+      </description>
+      <query>xs:dateTime("29-MAR-1999 16:47:18")</query>
+      <result>29-MAR-1999 16:47:18.000000</result>
+   </test>
+
+   <test name="xs:dateTime - ISO format only second">
+      <description>
+         Tests that xs:dateTime constructor is supported.
+      </description>
+      <query>xs:dateTime("1999-03-29T16:47:18")</query>
+      <result>29-MAR-1999 16:47:18.000000</result>
+   </test>
+
+
+     <test name="xs:dateTime - bar format">
+      <description>
+         Tests that xs:dateTime constructor is supported.
+      </description>
+      <query dynamicError="true">xs:dateTime("1999-31-29T16:47:18")</query>
+   </test>
+
+   <!-- Math Built-in functions  -->
+
+   <test name="fn:abs function - empty sequence">
+      <description>
+         Tests that fn:abs function support empty sequence argument.
+      </description>
+      <query>fn:abs(())</query>
+      <result></result>
+   </test>
+   
+   <test name="fn:abs function - positive decimal">
+      <description>
+         Tests that fn:sum function supports positive decimals.
+      </description>
+      <query>fn:abs(10.5)</query>
+      <result>10.5</result>
+   </test>
+   
+   <test name="fn:abs function - negative decimal">
+      <description>
+         Tests that fn:sum function supports negative decimals.
+      </description>
+      <query>fn:abs(-10.5)</query>
+      <result>10.5</result>
+   </test>
+   
+   <test name="fn:abs function - multiple values">
+      <description>
+         Tests that fn:abs function raises an error in case of multiple values.
+      </description>
+      <query dynamicError="true">fn:abs((-10.5, 3.4))</query>      
+   </test>
+
+   <test name="fn:ceiling function - empty sequence">
+      <description>
+         Tests that fn:ceiling function support empty sequence argument.
+      </description>
+      <query>fn:ceiling(())</query>
+      <result></result>
+   </test>
+   
+   <test name="fn:ceiling function - positive decimal">
+      <description>
+         Tests that fn:ceiling function supports positive decimals.
+      </description>
+      <query>fn:ceiling(10.5)</query>
+      <result>11</result>
+   </test>
+   
+   <test name="fn:ceiling function - negative decimal">
+      <description>
+         Tests that fn:ceiling function supports negative decimals.
+      </description>
+      <query>fn:ceiling(-10.5)</query>
+      <result>-10</result>
+   </test>
+   
+   <test name="fn:ceiling function - positive double">
+      <description>
+         Tests that fn:ceiling function supports positive double.
+      </description>
+      <query>fn:ceiling(xs:double("10.5"))</query>
+      <result>11.0</result>
+   </test>
+   
+   <test name="fn:ceiling function - negative double">
+      <description>
+         Tests that fn:ceiling function supports negative double.
+      </description>
+      <query>fn:ceiling(xs:double("-10.5"))</query>
+      <result>-10.0</result>
+   </test>
+   
+   <test name="fn:ceiling function - positive float">
+      <description>
+         Tests that fn:ceiling function supports positive float.
+      </description>
+      <query>fn:ceiling(xs:float("10.5"))</query>
+      <result>11.0</result>
+   </test>
+   
+   <test name="fn:ceiling function - negative float">
+      <description>
+         Tests that fn:ceiling function supports negative float.
+      </description>
+      <query>fn:ceiling(xs:float("-10.5"))</query>
+      <result>-10.0</result>
+   </test>
+   
+   <test name="fn:ceiling function - positive integer">
+      <description>
+         Tests that fn:ceiling function supports positive integer.
+      </description>
+      <query>fn:ceiling(xs:integer("10"))</query>
+      <result>10</result>
+   </test>
+   
+   <test name="fn:ceiling function - negative integer">
+      <description>
+         Tests that fn:ceiling function supports negative integer.
+      </description>
+      <query>fn:ceiling(xs:integer("-10"))</query>
+      <result>-10</result>
+   </test>
+   
+   <test name="fn:ceiling function - positive short integer ">
+      <description>
+         Tests that fn:ceiling function supports positive short integer.
+      </description>
+      <query>fn:ceiling(xs:short("10"))</query>
+      <result>10</result>
+   </test>
+   
+   <test name="fn:ceiling function - negative short integer">
+      <description>
+         Tests that fn:ceiling function supports negative short integer.
+      </description>
+      <query>fn:ceiling(xs:short("-10"))</query>
+      <result>-10</result>
+   </test>
+   
+   <test name="fn:ceiling function - multiple values">
+      <description>
+         Tests that fn:celing function raises an error in case of multiple values.
+      </description>
+      <query dynamicError="true">fn:ceiling((-10.5, 3.4))</query>      
+   </test>
+
+  <test name="fn:floor function - empty sequence">
+      <description>
+         Tests that fn:floor function support empty sequence argument.
+      </description>
+      <query>fn:floor(())</query>
+      <result></result>
+   </test>
+   
+   <test name="fn:floor function - positive decimal">
+      <description>
+         Tests that fn:floor function supports positive decimals.
+      </description>
+      <query>fn:floor(10.5)</query>
+      <result>10</result>
+   </test>
+   
+   <test name="fn:floor function - negative decimal">
+      <description>
+         Tests that fn:floor function supports negative decimals.
+      </description>
+      <query>fn:floor(-10.5)</query>
+      <result>-11</result>
+   </test>
+   
+   <test name="fn:floor function - positive double">
+      <description>
+         Tests that fn:floor function supports positive double.
+      </description>
+      <query>fn:floor(xs:double("10.5"))</query>
+      <result>10.0</result>
+   </test>
+   
+   <test name="fn:floor function - negative double">
+      <description>
+         Tests that fn:floor function supports negative double.
+      </description>
+      <query>fn:floor(xs:double("-10.5"))</query>
+      <result>-11.0</result>
+   </test>
+   
+   <test name="fn:floor function - positive float">
+      <description>
+         Tests that fn:floor function supports positive float.
+      </description>
+      <query>fn:floor(xs:float("10.5"))</query>
+      <result>10.0</result>
+   </test>
+   
+   <test name="fn:floor function - negative float">
+      <description>
+         Tests that fn:floor function supports negative float.
+      </description>
+      <query>fn:floor(xs:float("-10.5"))</query>
+      <result>-11.0</result>
+   </test>
+   
+   <test name="fn:floor function - positive integer">
+      <description>
+         Tests that fn:floor function supports positive integer.
+      </description>
+      <query>fn:floor(xs:integer("10"))</query>
+      <result>10</result>
+   </test>
+   
+   <test name="fn:floor function - negative integer">
+      <description>
+         Tests that fn:floor function supports negative integer.
+      </description>
+      <query>fn:floor(xs:integer("-10"))</query>
+      <result>-10</result>
+   </test>
+   
+   <test name="fn:floor function - positive short integer ">
+      <description>
+         Tests that fn:floor function supports positive short integer.
+      </description>
+      <query>fn:floor(xs:short("10"))</query>
+      <result>10</result>
+   </test>
+   
+   <test name="fn:floor function - negative short integer">
+      <description>
+         Tests that fn:floor function supports negative short integer.
+      </description>
+      <query>fn:floor(xs:short("-10"))</query>
+      <result>-10</result>
+   </test>
+   
+   <test name="fn:floor function - multiple values">
+      <description>
+         Tests that fn:floor function raises an error in case of multiple values.
+      </description>
+      <query dynamicError="true">fn:floor((-10.5, 3.4))</query>      
+   </test>
+
+  <test name="fn:round function - empty sequence">
+      <description>
+         Tests that fn:round function support empty sequence argument.
+      </description>
+      <query>fn:round(())</query>
+      <result></result>
+   </test>
+   
+   <test name="fn:round function - positive decimal 1">
+      <description>
+         Tests that fn:round function supports positive decimals.
+      </description>
+      <query>fn:round(10.5)</query>
+      <result>11</result>
+   </test>
+   
+   <test name="fn:round function - positive decimal 2">
+      <description>
+         Tests that fn:round function supports positive decimals.
+      </description>
+      <query>fn:round(2.4999)</query>
+      <result>2</result>
+   </test>
+   
+   <test name="fn:round function - positive decimal 3">
+      <description>
+         Tests that fn:round function supports positive decimals.
+      </description>
+      <query>fn:round(10.7)</query>
+      <result>11</result>
+   </test>
+   
+   <test name="fn:round function - negative decimal 1">
+      <description>
+         Tests that fn:round function supports negative decimals.
+      </description>
+      <query>fn:round(-10.5)</query>
+      <result>-10</result>
+   </test>
+   
+   <test name="fn:round function - negative decimal 2">
+      <description>
+         Tests that fn:round function supports negative decimals.
+      </description>
+      <query>fn:round(-10.2)</query>
+      <result>-10</result>
+   </test>
+   
+   <test name="fn:round function - negative decimal 3">
+      <description>
+         Tests that fn:round function supports negative decimals.
+      </description>
+      <query>fn:round(-10.7)</query>
+      <result>-11</result>
+   </test>
+
+   <test name="fn:round function - positive double 1">
+      <description>
+         Tests that fn:round function supports positive double.
+      </description>
+      <query>fn:round(xs:double("10.5"))</query>
+      <result>11.0</result>
+   </test>
+
+   <test name="fn:round function - positive double 2">
+      <description>
+         Tests that fn:round function supports positive double.
+      </description>
+      <query>fn:round(xs:double("10.2"))</query>
+      <result>10.0</result>
+   </test>
+
+   <test name="fn:round function - positive double 3">
+      <description>
+         Tests that fn:round function supports positive double.
+      </description>
+      <query>fn:round(xs:double("10.6"))</query>
+      <result>11.0</result>
+   </test>
+
+   <test name="fn:round function - negative double 1">
+      <description>
+         Tests that fn:round function supports negative double.
+      </description>
+      <query>fn:round(xs:double("-10.5"))</query>
+      <result>-10.0</result>
+   </test>
+ 
+   <test name="fn:round function - negative double 2">
+      <description>
+         Tests that fn:round function supports negative double.
+      </description>
+      <query>fn:round(xs:double("-10.2"))</query>
+      <result>-10.0</result>
+   </test>
+   
+   <test name="fn:round function - negative double 3">
+      <description>
+         Tests that fn:round function supports negative double.
+      </description>
+      <query>fn:round(xs:double("-10.7"))</query>
+      <result>-11.0</result>
+   </test>
+   
+   <test name="fn:round function - positive float">
+      <description>
+         Tests that fn:round function supports positive float.
+      </description>
+      <query>fn:round(xs:float("10.6"))</query>
+      <result>11.0</result>
+   </test>
+   
+   <test name="fn:round function - negative float">
+      <description>
+         Tests that fn:round function supports negative float.
+      </description>
+      <query>fn:round(xs:float("-10.2"))</query>
+      <result>-10.0</result>
+   </test>
+   
+   <test name="fn:round function - positive integer">
+      <description>
+         Tests that fn:round function supports positive integer.
+      </description>
+      <query>fn:round(xs:integer("10"))</query>
+      <result>10</result>
+   </test>
+   
+   <test name="fn:round function - negative integer">
+      <description>
+         Tests that fn:round function supports negative integer.
+      </description>
+      <query>fn:round(xs:integer("-10"))</query>
+      <result>-10</result>
+   </test>
+   
+   <test name="fn:round function - positive short integer ">
+      <description>
+         Tests that fn:round function supports positive short integer.
+      </description>
+      <query>fn:round(xs:short("10"))</query>
+      <result>10</result>
+   </test>
+   
+   <test name="fn:round function - negative short integer">
+      <description>
+         Tests that fn:round function supports negative short integer.
+      </description>
+      <query>fn:round(xs:short("-10"))</query>
+      <result>-10</result>
+   </test>
+
+   <test name="fn:round function - multiple values">
+      <description>
+         Tests that fn:round function raises an error in case of multiple values.
+      </description>
+      <query dynamicError="true">fn:round((-10.5, 3.4))</query>      
+   </test>
+
+   <test name="fn:sum function - empty sequence">
+      <description>
+         Tests that fn:sum function support empty sequence argument.
+      </description>
+      <query>fn:sum(())</query>
+      <result>0</result>
+   </test>
+
+   <test name="fn:sum function - singleton">
+      <description>
+         Tests that fn:sum function supports singleton argument.
+      </description>
+      <query>fn:sum(125.1234567890123456789)</query>
+      <result>125.1234567890123456789</result>
+   </test>
+ 
+   <test name="fn:sum function - integer values">
+      <description>
+         Tests that fn:sum function is supported.
+      </description>
+      <query>fn:sum((xs:byte("125"), xs:byte("123")))</query>
+      <result>248</result>
+   </test>
+   
+   <test name="fn:sum function - decimal values">
+      <description>
+         Tests that fn:sum function is supported.
+      </description>
+      <query>fn:sum((125.3, 123.4))</query>
+      <result>248.7</result>
+   </test>
+   
+   <test name="fn:avg function - empty sequence">
+      <description>
+         Tests that fn:avg function support empty sequence argument.
+      </description>
+      <query>fn:avg(())</query>
+      <result></result>
+   </test>
+
+   <test name="fn:avg function - singleton">
+      <description>
+         Tests that fn:avg function support singleton argument.
+      </description>
+      <query>fn:avg(125.1234567890123456789)</query>
+      <result>125.1234567890123456789</result>
+   </test>
+ 
+   <test name="fn:avg function - integer values">
+      <description>
+         Tests that fn:avg function is supported.
+      </description>
+      <query>fn:avg((xs:byte("125"), xs:byte("124")))</query>
+      <result>124.5</result>
+   </test>
+  
+   <test name="fn:avg function - decimal values">
+      <description>
+         Tests that fn:avg function is supported.
+      </description>
+      <query>fn:avg((125.3, 124.5))</query>
+      <result>124.9</result>
+   </test>
+
+   <test name="fn:min function - empty sequence">
+      <description>
+         Tests that fn:min function support empty sequence argument.
+      </description>
+      <query>fn:min(())</query>
+      <result></result>
+   </test>
+
+   <test name="fn:min function - singleton">
+      <description>
+         Tests that fn:min function support singleton argument.
+      </description>
+      <query>fn:min(125.1234567890123456789)</query>
+      <result>125.1234567890123456789</result>
+   </test>
+ 
+   <test name="fn:min function - integer values">
+      <description>
+         Tests that fn:min function supports integer values.
+      </description>
+      <query>fn:min((125, 124))</query>
+      <result>124</result>
+   </test>
+  
+   <test name="fn:min function - decimal values">
+      <description>
+         Tests that fn:min function supports decimal values.
+      </description>
+      <query>fn:min((125.3, 124.5))</query>
+      <result>124.5</result>
+   </test>
+   
+   <test name="fn:min function - string values">
+      <description>
+         Tests that fn:min function supports string values.
+      </description>
+      <query>fn:min(("b", "a", "c"))</query>
+      <result>a</result>
+   </test>
+
+   <test name="fn:max function - empty sequence">
+      <description>
+         Tests that fn:max function support empty sequence argument.
+      </description>
+      <query>fn:max(())</query>
+      <result></result>
+   </test>
+
+   <test name="fn:max function - singleton">
+      <description>
+         Tests that fn:max function support singleton argument.
+      </description>
+      <query>fn:max(125.1234567890123456789)</query>
+      <result>125.1234567890123456789</result>
+   </test>
+ 
+   <test name="fn:max function - integer values">
+      <description>
+         Tests that fn:max function supports integer values.
+      </description>
+      <query>fn:max((125, 124))</query>
+      <result>125</result>
+   </test>
+  
+   <test name="fn:max function - decimal values">
+      <description>
+         Tests that fn:max function supports decimal values.
+      </description>
+      <query>fn:max((125.3, 124.5))</query>
+      <result>125.3</result>
+   </test>
+   
+   <test name="fn:max function - string values">
+      <description>
+         Tests that fn:max function supports string values.
+      </description>
+      <query>fn:max(("b", "a", "c"))</query>
+      <result>c</result>
+   </test>
+
+   <test name="math:cos function">
+      <description>
+         Tests that math:cos function is supported.
+      </description>
+      <query>math:cos(element t {0})</query>
+      <result>1.0</result>
+   </test>
+   
+   <test name="math:sin function">
+      <description>
+         Tests that math:sin function is supported.
+      </description>
+      <query>math:sin(0)</query>
+      <result>0.0</result>
+   </test>
+   
+   <test name="math:log function">
+      <description>
+         Tests that math:log function is supported.
+      </description>
+      <query>math:log(1)</query>
+      <result>0.0</result>
+   </test>
+   
+   <test name="math:exp function">
+      <description>
+         Tests that math:exp function is supported.
+      </description>
+      <query>math:exp(0.0)</query>
+      <result>1.0</result>
+   </test>
+   
+   <!-- DRB Built-in functions  -->
+
+<!--   <test name="drb:evaluate-string function">-->
+<!--      <description>-->
+<!--         Tests the drb:evaluate-string function is supported.-->
+<!--      </description>-->
+<!--      <query>-->
+<!--         let $v := element a {"Hello"}-->
+<!--         return drb:evaluate-string("concat($v, ' World')")-->
+<!--      </query>-->
+<!--      <result>Hello World</result>-->
+<!--   </test>-->
+<!--   -->
+<!--  &lt;!&ndash;  Java functions &ndash;&gt;-->
+<!--  <test name="java.lang.Long.parseLong - String">-->
+<!--    <query>-->
+<!--      declare namespace long = "java:java.lang.Long";-->
+<!--      long:parseLong("52")-->
+<!--    </query>-->
+<!--    <result>52</result>-->
+<!--  </test>-->
+<!--  -->
+<!--  <test name="java.lang.Long.toString - long">-->
+<!--    <query>-->
+<!--      declare namespace long = "java:java.lang.Long";-->
+<!--      long:toString(xs:long("52"))-->
+<!--    </query>-->
+<!--    <result>52</result>-->
+<!--  </test>-->
+<!--  -->
+<!--  <test name="java.lang.Integer.parseInt - String">-->
+<!--    <query>-->
+<!--      declare namespace integer = "java:java.lang.Integer";-->
+<!--      integer:parseInt("43")-->
+<!--    </query>-->
+<!--    <result>43</result>-->
+<!--  </test>-->
+<!--  -->
+<!--  <test name="java.lang.Integer.toString - int">-->
+<!--    <query>-->
+<!--      declare namespace integer = "java:java.lang.Integer";-->
+<!--      integer:toString(xs:int("43"))-->
+<!--    </query>-->
+<!--    <result>43</result>-->
+<!--  </test>-->
+<!--  -->
+<!--  <test name="java.lang.Float.parseFloat - String">-->
+<!--    <query>-->
+<!--      declare namespace float = "java:java.lang.Float";-->
+<!--      float:parseFloat("43.5")-->
+<!--    </query>-->
+<!--    <result>43.5</result>-->
+<!--  </test>-->
+<!--  -->
+<!--  <test name="java.lang.Float.toString - float">-->
+<!--    <query>-->
+<!--      declare namespace float = "java:java.lang.Float";-->
+<!--      float:toString(xs:float("43.5"))-->
+<!--    </query>-->
+<!--    <result>43.5</result>-->
+<!--  </test>-->
+<!--  -->
+<!--  <test name="java.lang.Double.parseDouble - String">-->
+<!--    <query>-->
+<!--      declare namespace double = "java:java.lang.Double";-->
+<!--      double:parseDouble("53.5")-->
+<!--    </query>-->
+<!--    <result>53.5</result>-->
+<!--  </test>-->
+<!--  -->
+<!--  <test name="java.lang.Double.toString - double">-->
+<!--    <query>-->
+<!--      declare namespace double = "java:java.lang.Double";-->
+<!--      double:toString(xs:double("53.5"))-->
+<!--    </query>-->
+<!--    <result>53.5</result>-->
+<!--  </test>-->
+<!--  -->
+<!--  <test name="java.lang.Short.parseShort - String">-->
+<!--    <query>-->
+<!--      declare namespace short = "java:java.lang.Short";-->
+<!--      short:parseShort("53")-->
+<!--    </query>-->
+<!--    <result>53</result>-->
+<!--  </test>-->
+<!--  -->
+<!--  <test name="java.lang.Short.toString - short">-->
+<!--    <query>-->
+<!--      declare namespace short = "java:java.lang.Short";-->
+<!--      short:toString(xs:short("53"))-->
+<!--    </query>-->
+<!--    <result>53</result>-->
+<!--  </test>-->
+<!--  -->
+<!--  <test name="java.lang.Byte.parseByte - String">-->
+<!--    <query>-->
+<!--      declare namespace byte = "java:java.lang.Byte";-->
+<!--      byte:parseByte("53")-->
+<!--    </query>-->
+<!--    <result>53</result>-->
+<!--  </test>-->
+<!--  -->
+<!--  <test name="java.lang.Byte.toString - byte">-->
+<!--    <query>-->
+<!--      declare namespace byte = "java:java.lang.Byte";-->
+<!--      byte:toString(xs:byte("53"))-->
+<!--    </query>-->
+<!--    <result>53</result>-->
+<!--  </test>-->
+<!--  -->
+<!--    -->
+<!--  <test name="java.math.BigInteger.valueOf - long">-->
+<!--    <query>-->
+<!--      declare namespace biginteger = "java:java.math.BigInteger";-->
+<!--      biginteger:valueOf(xs:long("53"))-->
+<!--    </query>-->
+<!--    <result>53</result>-->
+<!--  </test>-->
+</testSuite>

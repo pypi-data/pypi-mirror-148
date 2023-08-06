@@ -1,0 +1,25 @@
+<!DOCTYPE library SYSTEM "library.dtd"> 
+<library>
+   <book isbn="245-53926-3">
+      <title>HARRAP'S New Shorter Dictionnaire</title>
+      <editor>Harrap's</editor>
+   </book>
+   <book isbn="2-84177-079-6">
+      <title>JAVA Threads</title>
+      <author>Scott Oaks</author>
+      <author>Henry Wong</author>
+      <editor>O'Reilly</editor>
+   </book>
+   <book isbn="1-861006-95-0">
+      <title>XQuery</title>
+      <author>Kurt Cagle</author>
+      <author>Mark Fussell</author>
+      <editor>Wrox</editor>
+   </book>
+   <book isbn="2711786897">
+      <title>Java And Internet</title>
+      <author>Remi Forax</author>
+      <author>Ethienne Duris</author>
+      <editor>Vuibert</editor>
+   </book>
+</library>
