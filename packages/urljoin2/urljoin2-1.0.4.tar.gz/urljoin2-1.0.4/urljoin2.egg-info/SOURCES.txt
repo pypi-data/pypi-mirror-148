@@ -1,0 +1,7 @@
+setup.py
+src/__init__.py
+src/urljoin2.py
+urljoin2.egg-info/PKG-INFO
+urljoin2.egg-info/SOURCES.txt
+urljoin2.egg-info/dependency_links.txt
+urljoin2.egg-info/top_level.txt
