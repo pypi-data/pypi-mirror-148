@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+skip-string-normalization = true
+target-version = ['py39']
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+namespace_packages = true
+
+[tool.pylint.messages_control]
+disable = [
+    'attribute-defined-outside-init',
+    'fixme',
+    'missing-class-docstring',
+    'missing-function-docstring',
+    'missing-module-docstring',
+    'redefined-outer-name',
+    'too-few-public-methods',
+    'unused-argument'
+]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = """
+    --black
+    --isort
+    --pylint
+    --mypy
+    --cov=src
+    --cov=tests
+    --cov-branch
+    --cov-report=term-missing
+    --cov-fail-under=100
+    --no-cov-on-fail
+"""
