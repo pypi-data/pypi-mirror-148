@@ -1,0 +1,3 @@
+python-dateutil
+six
+stix2-patterns>=1.0.0
