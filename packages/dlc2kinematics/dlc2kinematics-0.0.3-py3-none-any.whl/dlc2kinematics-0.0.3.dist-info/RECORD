@@ -1,0 +1,16 @@
+dlc2kinematics/__init__.py,sha256=A9sInaAAxANhIchREZt4H-Rcj5gfKQqQQtkf5feGW1Y,1452
+dlc2kinematics/joint_analysis.py,sha256=eTuqo_RoIJWhVDa00ScqHzVhgQUb2riPK5-sxyPCyZE,12917
+dlc2kinematics/mainfxns.py,sha256=J-GaNOC1joUobbnfedIlbc2RBaSBEoTo7J17V6H0lLA,13125
+dlc2kinematics/plotting.py,sha256=TLhqCFCMyjW-KEx00iylxC4KTM92hPW_qYPPkOid5tU,8426
+dlc2kinematics/preprocess.py,sha256=CyzrLJoi4wN7ZnaJa0M5y9Dm8ToAkpxoFg_wHKs5BC8,3948
+dlc2kinematics/quaternions.py,sha256=VOfXXFElCh7LTFn2r7rNtvdQwsuT72a-vM4LjZrrb7c,16826
+dlc2kinematics/version.py,sha256=O18LiKSBXjMmg-G5dqcI0XEyV93u8L-k7KNMdQeVf74,144
+dlc2kinematics/visualization.py,sha256=i5c2H-ICHH2hTCXIvfrP4irh16GBPWbNyIg6GhTNrUg,15645
+dlc2kinematics/utils/__init__.py,sha256=Be2KJveiuD9SQSALhnf9bTgTTIwX69kRqr6-CFhW-Us,54
+dlc2kinematics/utils/auxiliaryfunctions.py,sha256=fwvV0770o74CMIw6gmHvWT_h_GNBmjsgbmyzSq-WEZo,10372
+dlc2kinematics-0.0.3.dist-info/LICENSE,sha256=NfLMo6vjGTax7IVngvHkyJJGS1x5ttrVqx7NquTMtcQ,1299
+dlc2kinematics-0.0.3.dist-info/METADATA,sha256=h9RQyEJuVb99aE2ip7tDXlTMy0KpwMRS4oGcw1LC0Dg,5700
+dlc2kinematics-0.0.3.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+dlc2kinematics-0.0.3.dist-info/entry_points.txt,sha256=bm_KKIXi9_WaH1E6hmWFK11A91VyIXloIK7-msHIPpI,42
+dlc2kinematics-0.0.3.dist-info/top_level.txt,sha256=P80r4XxTmsz2ytSa96OkeD2VvBk9RGlAA_Ss3w1iRPw,15
+dlc2kinematics-0.0.3.dist-info/RECORD,,
