@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: python-pyster
+Version: 0.1.13
+Summary: Python unit testing made easy with pyster!
+Home-page: https://github.com/Wrench56/pyster
+Author: Wrench56
+Author-email: dmarkreg@gmail.com
+License: MIT
+Platform: UNKNOWN
+License-File: LICENSE.txt
+Requires-Dist: rich
+
+Please find more information on my Github page!
+
