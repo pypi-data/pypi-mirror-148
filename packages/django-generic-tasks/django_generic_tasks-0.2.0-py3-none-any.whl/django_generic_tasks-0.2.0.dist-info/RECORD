@@ -1,0 +1,10 @@
+django_generic_tasks/__init__.py,sha256=YFH9EfNF1tsui74ke2vUCirQYf-c5SleJt2AvdCOUCU,23
+django_generic_tasks/api.py,sha256=VHyTtYCWgJior4Y6MTLIJ33ZSx_cV-VCFl4MrM-kHec,44
+django_generic_tasks/apps.py,sha256=QSLFWUuwHme9HwIZmhzwDL-QQPvt5czu_3KE7zwmgDg,142
+django_generic_tasks/backends.py,sha256=vmLVnv5_VscIXl4dR2IyBjBAV0lOqqME6wWFoMK96q0,1252
+django_generic_tasks/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_generic_tasks/security.py,sha256=B3r2o4W-JSdIu-CycvmYsLDjhgGsw3yD7dnCjyzOozk,459
+django_generic_tasks/task.py,sha256=Bwv48IDWC5j5EJXoSqFYHWCLoysqq8Z0coJ7MjeniOo,1408
+django_generic_tasks-0.2.0.dist-info/WHEEL,sha256=y3eDiaFVSNTPbgzfNn0nYn5tEn1cX6WrdetDlQM4xWw,83
+django_generic_tasks-0.2.0.dist-info/METADATA,sha256=g-Hu1lEDOKwa_R6tdJG65OGxnw7EOnfOC46L846ORUg,522
+django_generic_tasks-0.2.0.dist-info/RECORD,,
