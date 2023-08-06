@@ -1,0 +1,13 @@
+LICENCE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+versioneer.py
+oktagon_python.egg-info/PKG-INFO
+oktagon_python.egg-info/SOURCES.txt
+oktagon_python.egg-info/dependency_links.txt
+oktagon_python.egg-info/requires.txt
+oktagon_python.egg-info/top_level.txt
+src/oktagon_python/_version.py
