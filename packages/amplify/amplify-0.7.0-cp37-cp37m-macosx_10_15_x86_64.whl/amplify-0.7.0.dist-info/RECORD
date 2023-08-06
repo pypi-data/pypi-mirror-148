@@ -1,0 +1,11 @@
+amplify/__init__.py,sha256=idTmlMn8e9VyR0He2rSupyQppxYHHZuy-ym3Pf7a0u4,56
+amplify/amplify.cpython-37m-darwin.so,sha256=8y9YPATI27Ear0d4owkqCvHY4Hywo-2i4WuVXBb4ye4,29552792
+amplify/constraint.py,sha256=_4_XUV2oAWQ0VXrq9TTYrez-H5-auqZd5XlwTSHzLEQ,34
+amplify/client/__init__.py,sha256=ApNTWxkRRIkWE3ZLcJpnBDcQNOD_mukSCmqvTes5s8s,31
+amplify/client/ocean.py,sha256=lgVqb6x-MPvQp9h4MN--3mlTtFY3kSFyF5gren9fktI,37
+amplify-0.7.0.dist-info/LICENSE.txt,sha256=ygTQ1g9l4OhGP5bK1uZxijsZmYoASAfKZW1WWv8k8vg,14781
+amplify-0.7.0.dist-info/METADATA,sha256=g6_bYBk2UywcJOeqEynOchcUENN4EaxdLhJ7FcnFZe4,5344
+amplify-0.7.0.dist-info/WHEEL,sha256=d1FXElTc2O1aD-DA111TtqEjjjICRp-GfmLEJcA56oY,111
+amplify-0.7.0.dist-info/open_source_license.txt,sha256=ocGROY4oYtk-4a4cQEnPZBW7aUxRRciaMzH_fCc4cPU,10550
+amplify-0.7.0.dist-info/top_level.txt,sha256=toPgIVr6inTQGVAczLtxdxsWyjiYz7kW5MRki43tq4o,9
+amplify-0.7.0.dist-info/RECORD,,
