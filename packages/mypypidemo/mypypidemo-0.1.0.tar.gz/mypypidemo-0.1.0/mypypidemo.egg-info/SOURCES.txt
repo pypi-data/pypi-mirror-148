@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+setup.py
+mypypidemo/__init__.py
+mypypidemo/math_utils.py
+mypypidemo.egg-info/PKG-INFO
+mypypidemo.egg-info/SOURCES.txt
+mypypidemo.egg-info/dependency_links.txt
+mypypidemo.egg-info/top_level.txt

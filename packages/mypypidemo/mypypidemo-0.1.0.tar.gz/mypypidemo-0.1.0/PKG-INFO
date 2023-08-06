@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: mypypidemo
+Version: 0.1.0
+Summary: A python math package
+Home-page: https://github.com/aagarwalnextroll/mypypidemo
+Author: Ashok Agarwal
+Author-email: aagarwal.jobs@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+Python Package Jfrog Artifactory Demo
+
