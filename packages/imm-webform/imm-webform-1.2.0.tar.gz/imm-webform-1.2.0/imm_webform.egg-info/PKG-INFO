@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: imm-webform
+Version: 1.2.0
+Summary: A python client library used to describe program model and get validated data.
+Home-page: UNKNOWN
+Author: Jacky Zhang
+Author-email: jackyzhang1969@gmail.com
+License: UNKNOWN
+Keywords: Canada,Immigration,Case,Programs,APIs,web,form,programtically filling
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+### V1.2.0
+- Added bcpnp 
+### V1.1.0
+- published on April 26, 2020. Based on new page model
+### V1.0.1 
+- create .prportalenv including rcics' account and password info in user's home directory
+
+
