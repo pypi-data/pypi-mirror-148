@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+siege_engine/__init__.py
+siege_engine/__main__.py
+siege_engine/operate.py
+siege_engine.egg-info/PKG-INFO
+siege_engine.egg-info/SOURCES.txt
+siege_engine.egg-info/dependency_links.txt
+siege_engine.egg-info/top_level.txt
