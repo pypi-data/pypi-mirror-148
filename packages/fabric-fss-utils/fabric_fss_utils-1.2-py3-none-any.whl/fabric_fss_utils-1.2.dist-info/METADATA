@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: fabric-fss-utils
+Version: 1.2
+Summary: FABRIC System Services Utilities library
+Home-page: https://github.com/fabric-testbed/system-service-utils
+Author: Ilya Baldin
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/plain
+License-File: LICENSE
+License-File: AUTHORS
+Requires-Dist: attrs (==20.3.0)
+Requires-Dist: Authlib (==0.15.2)
+Requires-Dist: bleach (==3.3.0)
+Requires-Dist: certifi (==2020.12.5)
+Requires-Dist: cffi (==1.14.4)
+Requires-Dist: chardet (==4.0.0)
+Requires-Dist: click (==7.1.2)
+Requires-Dist: colorama (==0.4.4)
+Requires-Dist: cryptography (==3.3.2)
+Requires-Dist: docutils (==0.17.1)
+Requires-Dist: Flask (==1.1.2)
+Requires-Dist: idna (==2.10)
+Requires-Dist: importlib-metadata (==3.7.3)
+Requires-Dist: iniconfig (==1.1.1)
+Requires-Dist: itsdangerous (==1.1.0)
+Requires-Dist: Jinja2 (==2.11.3)
+Requires-Dist: keyring (==21.5.0)
+Requires-Dist: MarkupSafe (==1.1.1)
+Requires-Dist: packaging (==20.8)
+Requires-Dist: pkginfo (==1.6.1)
+Requires-Dist: pluggy (==0.13.1)
+Requires-Dist: pycodestyle (==2.6.0)
+Requires-Dist: pycparser (==2.20)
+Requires-Dist: Pygments (==2.9.0)
+Requires-Dist: PyJWT (==1.7.1)
+Requires-Dist: pyparsing (==2.4.7)
+Requires-Dist: readme-renderer (==29.0)
+Requires-Dist: requests (==2.27.1)
+Requires-Dist: requests-toolbelt (==0.9.1)
+Requires-Dist: rfc3986 (==1.4.0)
+Requires-Dist: six (==1.15.0)
+Requires-Dist: toml (==0.10.2)
+Requires-Dist: tqdm (==4.54.1)
+Requires-Dist: twine (==3.4.1)
+Requires-Dist: urllib3 (==1.26.5)
+Requires-Dist: webencodings (==0.5.1)
+Requires-Dist: Werkzeug (==1.0.1)
+Requires-Dist: zipp (==3.4.0)
+
+FABRIC System Services Utilities library
+
