@@ -1,0 +1,15 @@
+ipython
+h5py
+lmfit
+matplotlib
+mock
+numpy
+qpimage
+qpformat
+qpsphere
+scipy
+scikit-image
+sphinx==4.3.0
+sphinxcontrib.bibtex>=2.0
+sphinx_rtd_theme==1.0
+
