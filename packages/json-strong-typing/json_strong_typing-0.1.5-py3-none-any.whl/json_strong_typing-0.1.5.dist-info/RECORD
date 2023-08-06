@@ -1,0 +1,14 @@
+strong_typing/__init__.py,sha256=MFykDxDXO5LbNq1a-hqPSjd8pFnXGOmfVq_HIbRGYw8,220
+strong_typing/auxiliary.py,sha256=RUoHXNHGGXZkfcm9-qeUIjgeOtJeBnWqIU1CwWv8SFo,3435
+strong_typing/core.py,sha256=3bq2H7lLuw4sVbNzgs4zUi-gVOKrtCVP2Fo3RLAmpJw,659
+strong_typing/docstring.py,sha256=3dyFRGubiSz_dCNvmmtXzy2pJ1cYgoMn-WtQH6liCeU,4872
+strong_typing/inspection.py,sha256=ztd1UXvv8_HiBQwH40KKaljgghqRmBvLl_az_l2jHck,6359
+strong_typing/name.py,sha256=bLN44EhwaIFcR8QdulXQLKYdzUTt4kUOUq1bie78hn0,3471
+strong_typing/schema.py,sha256=0WNSRoUgKfKELh5fylZceoiWUqEfBImbykV-sF3c2SA,22326
+strong_typing/serialization.py,sha256=jiMeHGECA4RvxoIyYmuj_8MpyWWFkVzv1EhWqs0ZFzI,7928
+strong_typing/topological.py,sha256=h4wfq4BZ3lnIP6KE4d-CAlzSt7fSYFtZpyFVvjxlORA,2602
+json_strong_typing-0.1.5.dist-info/LICENSE,sha256=I482k4ffFFe_0qgUw7wSpvv4k31iYT6cyv-fz-B4mRI,1120
+json_strong_typing-0.1.5.dist-info/METADATA,sha256=6hWRSr8izsbxNg4Mi-wgIWVi5vvOgM0QZ4NxLBMe1uc,9686
+json_strong_typing-0.1.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+json_strong_typing-0.1.5.dist-info/top_level.txt,sha256=T5xpDANx0ZbfsNInNvOYFRE11MLc7pIPfzhYnmCGncc,14
+json_strong_typing-0.1.5.dist-info/RECORD,,
