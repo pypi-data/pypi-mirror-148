@@ -1,0 +1,4 @@
+galpy
+seaborn
+numba
+llvmlite
