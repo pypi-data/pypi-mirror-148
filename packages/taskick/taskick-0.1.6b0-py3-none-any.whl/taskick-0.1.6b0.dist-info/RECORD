@@ -1,0 +1,9 @@
+taskick/__init__.py,sha256=qeXOWILz4od9r4wLQPoGM7yM5HVgOwIYuwJw6X2GF2k,196
+taskick/__main__.py,sha256=P0CzIMCS5YxKqN-56FS9i2gn41QX2FsGFi8VNDdSBbM,93
+taskick/details.py,sha256=NjjxqH7FoPIM5cU-Sq0dwamIL0E8Aj0EZk1TR71g2ls,4414
+taskick/runner.py,sha256=rQzpLW_-yTajIHr2zH1_lX6OmlR0PYKG9zUBCVbAkEs,12245
+taskick/utils.py,sha256=xDCONSxxw1tDWacP2XfgwDJW2pLu03kynbdOJGCLD98,4999
+taskick-0.1.6b0.dist-info/LICENSE,sha256=IOGCnkddhYSxo3XvrPIr6ZLG1npP7LogEZbTkqabc7s,1067
+taskick-0.1.6b0.dist-info/WHEEL,sha256=DA86_h4QwwzGeRoz62o1svYt5kGEXpoUTuTtwzoTb30,83
+taskick-0.1.6b0.dist-info/METADATA,sha256=th_ySkTg-h13aQyH_aIbq6X3FeoXzvrQP4_Y8bHt4xc,4458
+taskick-0.1.6b0.dist-info/RECORD,,
