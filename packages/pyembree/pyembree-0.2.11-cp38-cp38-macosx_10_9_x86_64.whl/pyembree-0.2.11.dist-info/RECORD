@@ -1,0 +1,15 @@
+pyembree/triangles.cpython-38-darwin.so,sha256=kWnmS4wHUoIJQPg4LM0oL10BIeqIyRDA-xjchWVV1WU,62576
+pyembree/rtcore.cpython-38-darwin.so,sha256=_z9KPeXYqPqQaL7uVxNn_Wk5IO--S42z-vYcnL3W_7I,91584
+pyembree/_version.py,sha256=UHwbsHtL9dhUpAWyciZa0O4hHOfS2d8ESU5a6cjkZwg,109
+pyembree/rtcore_scene.cpython-38-darwin.so,sha256=FmgeJgVDlfi0KanH7ZNdavhDi_KV_RDpUb-yvBYLgwY,139120
+pyembree/__init__.py,sha256=H8aajqtFSsG0lFTcMwT_KLo2LuR8PQjipcoe2jehMtg,75
+pyembree/mesh_construction.cpython-38-darwin.so,sha256=AYV3MEbmCWe9IVJfOdR6wpV7QwUTf33aGUFKmeKyHpk,92464
+pyembree/.dylibs/libembree.2.dylib,sha256=F0m4BoxLQsUIbpaqPaj_7rPnhRhlWKzyIJlPJaA4eRU,24751312
+pyembree/.dylibs/libtbbmalloc.dylib,sha256=6jLYDd7j8GO7tAA14LQOxxCItWmCIcf4UiRE59OfNSE,461264
+pyembree/.dylibs/libtbb.dylib,sha256=RVIYzoXZrIttHqRPmtKtEsm6NqJxGpK6UyXRQnRSB4g,938400
+pyembree-0.2.11.dist-info/RECORD,,
+pyembree-0.2.11.dist-info/LICENSE,sha256=_xuYAn05ET9sP82cOw68xgsUW5orgvVnD0RL4wKKkA4,1299
+pyembree-0.2.11.dist-info/AUTHORS,sha256=FuKSWm4UT7ibboERkfp6XNRyLmME43GvjmLqqRXj7uE,226
+pyembree-0.2.11.dist-info/WHEEL,sha256=pXLpj1wTvqlD6RVUEKOuGQGeFX0NOPyDrsC-9xVDmYU,109
+pyembree-0.2.11.dist-info/top_level.txt,sha256=p-Cczvc4sP1B6gKiIOFTxZADigbzEZO9wz0X2nMvYP8,9
+pyembree-0.2.11.dist-info/METADATA,sha256=dHQ4P4FWs5wnzenM9SQozJcv9tnJpwpskIT5mqk3v1g,1499
