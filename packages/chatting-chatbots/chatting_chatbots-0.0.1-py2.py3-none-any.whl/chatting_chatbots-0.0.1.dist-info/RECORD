@@ -1,0 +1,10 @@
+chatting_chatbots/__init__.py,sha256=jCyHP2dcR2H-RSiLb89MgBRq7y9MzvsqSje4fcMZXvE,40
+chatting_chatbots/about.py,sha256=dHHxOxOTpEzySoWO8ORiNzTE_pxNgwWn_Jn2RFo6F1U,180
+chatting_chatbots/chatbots.py,sha256=So-S81rmzPIycnHi_Anxo2B-iGjp6pDCDpkNlevBUiM,13817
+chatting_chatbots/generation.py,sha256=Tt-YO0OLI2mR3KTK1r8vyOGwda9yMso3Rhf3rM3iTpY,10436
+chatting_chatbots/utils.py,sha256=SZcR2s1sO652PPO-cakxzxY29kQ0A_s5siMtC5HIvL4,864
+chatting_chatbots-0.0.1.dist-info/LICENSE,sha256=Yiu84SuJuaTlWBLXNhCHbw7cXo-pLjZxjWbc2VLUDTI,1074
+chatting_chatbots-0.0.1.dist-info/METADATA,sha256=L6wfcfMADMeGx93TnnZjEC1jdT9rDLMzFds3APH4Cwk,10482
+chatting_chatbots-0.0.1.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+chatting_chatbots-0.0.1.dist-info/top_level.txt,sha256=DAFGadHh5SN4eWX5jxrc2UggFCyrD-quT0JvCd5a2Ck,18
+chatting_chatbots-0.0.1.dist-info/RECORD,,
