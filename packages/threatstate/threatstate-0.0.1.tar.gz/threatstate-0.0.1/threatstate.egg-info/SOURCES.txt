@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+threatstate/__init__.py
+threatstate.egg-info/PKG-INFO
+threatstate.egg-info/SOURCES.txt
+threatstate.egg-info/dependency_links.txt
+threatstate.egg-info/top_level.txt
