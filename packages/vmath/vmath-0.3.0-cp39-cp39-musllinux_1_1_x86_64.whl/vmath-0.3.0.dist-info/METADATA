@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: vmath
+Version: 0.3.0
+Summary: Compact Python OpenGL rendering library
+Home-page: https://github.com/szabolcsdombi/vmath/
+Author: Szabolcs Dombi
+Author-email: cprogrammer1994@gmail.com
+License: MIT
+Project-URL: Documentation, https://vmath.readthedocs.io/
+Project-URL: Source, https://github.com/szabolcsdombi/vmath/
+Project-URL: Bug Tracker, https://github.com/szabolcsdombi/vmath/issues/
+Keywords: vector,matrix,quaternion
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Games/Entertainment
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Topic :: Multimedia :: Graphics :: 3D Rendering
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# vmath
+
+
