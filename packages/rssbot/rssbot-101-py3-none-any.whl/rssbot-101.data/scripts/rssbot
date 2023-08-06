@@ -1,0 +1,189 @@
+#!python
+# This file is placed in the Public Domain.
+
+
+"rss to irc feed fetcher"
+
+
+import os
+import readline
+import sys
+import termios
+import time
+import threading
+import traceback
+
+
+from evt import Command
+from obj import Object, get, keys, update
+from obj import Class, Config, Db, find, fntime, last, save
+from obj import edit, format, register
+from hdl import Bus, Callbacks, Commands, Handler, dispatch
+from thr import getname
+
+
+from rssbot.rss import Fetcher
+from rssbot.irc import IRC
+
+
+Config.name = "rssbot"
+Config.workdir = "/var/lib/rssbot"
+
+
+starttime = time.time()
+
+
+class CLI(Handler):
+
+    def cmd(self, txt):
+        e = Command()
+        e.orig = repr(self)
+        e.txt = txt
+        e.cmd = txt.split()[0]
+        self.handle(e)
+
+    def raw(self, txt):
+        cprint(txt)
+
+
+class Console(CLI):
+
+    def announce(self, txt):
+        pass
+
+    def handle(self, e):
+        Handler.handle(self, e)
+        e.wait()
+
+    def poll(self):
+        e = Command()
+        e.txt = input("> ")
+        e.orig = repr(self)
+        e.cmd = e.txt.split()[0]
+        return e
+
+
+def cmd(event):
+    event.reply(",".join((sorted(keys(Commands.cmd)))))
+
+
+Commands.add(cmd)
+
+
+def fnd(event):
+    if not event.args:
+        db = Db()
+        res = ",".join(
+            sorted({x.split(".")[-1].lower() for x in db.types()}))
+        if res:
+            event.reply(res)
+        else:
+            event.reply("no types yet.")
+        return
+    otype = event.args[0]
+    nr = -1
+    got = False
+    for fn, o in find(otype):
+        nr += 1
+        txt = "%s %s" % (str(nr), format(o))
+        got = True
+        event.reply(txt)
+    if not got:
+        event.reply("no result")
+
+
+Commands.add(fnd)
+
+
+def cprint(*args):
+    print(*args)
+    sys.stdout.flush()
+
+
+def daemon():
+    pid = os.fork()
+    if pid != 0:
+        os._exit(0)
+    os.setsid()
+    os.umask(0)
+    si = open("/dev/null", 'r')
+    so = open("/dev/null", 'a+')
+    se = open("/dev/null", 'a+')
+    os.dup2(si.fileno(), sys.stdin.fileno())
+    os.dup2(so.fileno(), sys.stdout.fileno())
+    os.dup2(se.fileno(), sys.stderr.fileno())
+
+
+def from_exception(ex, txt="", sep=" "):
+    result = []
+    for fr in traceback.extract_tb(ex.__traceback__):
+        fnc = str(fr).split()[-1][:-1]
+        nme = os.sep.join(fr.filename.split(os.sep)[-2:])
+        result.append("%s %s.%s" % (nme, fnc, fr.lineno))
+    return "%s -> %s -> %s" % (getname(ex), " -> ".join(result), ex)
+
+
+def getname(o):
+    t = type(o)
+    if isinstance(t, types.ModuleType):
+        return o.__name__
+    if "__self__" in dir(o):
+        return "%s.%s" % (o.__self__.__class__.__name__, o.__name__)
+    if "__class__" in dir(o) and "__name__" in dir(o):
+        return "%s.%s" % (o.__class__.__name__, o.__name__)
+    if "__class__" in dir(o):
+        return o.__class__.__name__
+    if "__name__" in dir(o):
+        return o.__name__
+    return None
+
+
+def wait():
+    while 1:
+        time.sleep(1.0)
+
+
+def wrap(func):
+    fd = sys.stdin.fileno()
+    old = termios.tcgetattr(fd)
+    try:
+        func()
+    except (EOFError, KeyboardInterrupt):
+        cprint("")
+    finally:
+        termios.tcsetattr(fd, termios.TCSADRAIN, old)
+
+
+def docmd(clt, txt):
+    if not txt:
+        return False
+    Bus.add(clt)
+    e = Command()
+    e.channel = ""
+    e.orig = repr(clt)
+    e.txt = txt
+    e.cmd = txt.split()[0]
+    if e.cmd:
+       e.args = txt.split()[1:]
+    clt.handle(e)
+    print(e)
+    e.wait()
+    return e.result
+
+
+def main():
+    if len(sys.argv) > 1:
+        import rssbot.cmds
+        Callbacks.add("command", dispatch)
+        c = CLI()
+        return docmd(c, " ".join(sys.argv[1:]))
+    if "-d" in sys.argv:
+        daemon()
+    i = IRC()
+    i.start()
+    f = Fetcher()
+    f.start()
+    wait()
+
+
+main()

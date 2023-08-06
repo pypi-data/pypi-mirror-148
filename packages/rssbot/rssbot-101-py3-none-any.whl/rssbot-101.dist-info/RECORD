@@ -1,0 +1,12 @@
+rssbot/cmds.py,sha256=Op9yOUPwse0Brqu6AGqd5SfvsZjHCYA12S7yt_OLRdQ,2752
+rssbot/irc.py,sha256=y1MKXG_ntekSY8tYKLcy2vnwNx97ZAP80VNwGhFkA74,13238
+rssbot/rpt.py,sha256=lQVYAfV7Z13pwdzceHt3HVPd-xkrsLErbAL_Qser1e0,288
+rssbot/rss.py,sha256=6orNXzgMdAbiCU5g_CcvVbd4JFziMq5H5u6zzUVUwJw,4694
+rssbot/tmr.py,sha256=KBGQfw3h0yK5HcN6VSynL-0tZwMbQzcVajwxM3OCpW8,1099
+rssbot-101.data/data/share/rssbot/rssbot.service,sha256=2yyDW5l_EC-O8c7yqsRdqwo2UpyRMMi94l31Y4CM-cc,264
+rssbot-101.data/scripts/rssbot,sha256=l_uLoemNfpa4D_euiyXZwnifd2gesOKKPNCasIuE9SA,3758
+rssbot-101.data/scripts/rssctl,sha256=Pe7rYo_xtqWZLU1KnzpqSzPpNZc01FGwf-W_EHZFbds,194
+rssbot-101.dist-info/METADATA,sha256=O89Da8Wkj4lzHTHpSlYH_vm8svb7-oN1eTuNfY0z5NY,1349
+rssbot-101.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+rssbot-101.dist-info/top_level.txt,sha256=fef6INTlb6iJB69gO2nX5PRQihiiXN3UYrCqvCZpa_U,7
+rssbot-101.dist-info/RECORD,,
