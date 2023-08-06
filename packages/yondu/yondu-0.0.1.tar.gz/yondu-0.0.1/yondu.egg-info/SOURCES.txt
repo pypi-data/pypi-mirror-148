@@ -1,0 +1,5 @@
+setup.py
+yondu.egg-info/PKG-INFO
+yondu.egg-info/SOURCES.txt
+yondu.egg-info/dependency_links.txt
+yondu.egg-info/top_level.txt
