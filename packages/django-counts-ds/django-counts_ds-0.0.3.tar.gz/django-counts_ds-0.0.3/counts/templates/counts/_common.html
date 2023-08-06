@@ -1,0 +1,10 @@
+{% load static %}
+
+<link href="{% static 'css/counts/'|add:theme|add:'.css' %}" rel="stylesheet">
+
+
+<script src="{% static 'vendor/purecounter/purecounter.js' %}"></script>
+
+{% block counts %}
+  <!-- Counts block -->
+{% endblock %}
