@@ -1,0 +1,10 @@
+README.md
+setup.py
+document_insighter/__init__.py
+document_insighter/api_client.py
+document_insighter/model.py
+document_insighter.egg-info/PKG-INFO
+document_insighter.egg-info/SOURCES.txt
+document_insighter.egg-info/dependency_links.txt
+document_insighter.egg-info/requires.txt
+document_insighter.egg-info/top_level.txt
