@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: aspeak
+Version: 0.1
+Summary: A simple text-to-speech client using azure TTS API(trial).
+Home-page: https://github.com/kxxt/aspeak
+Author: Levi Zim
+Author-email: rsworktech@outlook.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/kxxt/aspeak/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Topic :: Multimedia :: Sound/Audio :: Speech
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# aspeak
+
+A simple text-to-speech client using azure TTS API(trial).
+
+**TL;DR**: This program uses trial auth token of Azure Congnitive Services to do speech synthesis for you.
+
+## Installation
+
+```sh
+$ pip install aspeak
+```
+
+## Usage
+
+```
+usage: aspeak [-h] [-v] [-t TEXT] [-s SSML] [-o OUTPUT_PATH]
+
+A simple text-to-speech client using azure TTS API(trial).
+
+options:
+  -h, --help            show this help message and exit
+  -v, --version         show program's version number and exit
+  -t TEXT, --text TEXT  Text to speak.
+  -s SSML, --ssml SSML  SSML to speak.
+  -o OUTPUT_PATH, --output OUTPUT_PATH
+                        Output wav file path
+```
+
+e.g.
+
+```sh
+$ aspeak -t "Hello, world!" -o output.wav
+```
+
+- If you don't specify `-o`, we will use your default speaker.
+- If you don't specify `-t` or `-s`, we will read from stdin until `EOF`.
+
+
