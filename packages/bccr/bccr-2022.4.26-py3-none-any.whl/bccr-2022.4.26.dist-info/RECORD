@@ -1,0 +1,16 @@
+bccr/__init__.py,sha256=krkg4J8TMReBlhR0OgNeVzL0k0QLoROib_l9iKtK6go,174
+bccr/download.py,sha256=tkbhmbicurTzkGp8RxDZCaQwSOywsRSqECS5r6su1Wg,5412
+bccr/fetch.py,sha256=gnfJvbHHgUZvkl8W5tJIu9Ji-uPyCRu3zHApnPH0ZZE,9220
+bccr/gee.py,sha256=UcJVfiTTSqbHTLzFKQ_QIX8UP9yfqnQN9dUFaTSdTcI,33164
+bccr/gui.py,sha256=cdtOu4t8cu7WQVdcav9TOFMqgVWz_Yj8KJ2rzM345vk,23683
+bccr/pagina.py,sha256=y5hHTZHmvt9_hxKRfwRoTG1LsEFoLXwiCxE1sMWow0w,21634
+bccr/scrape.py,sha256=CWhmxz8XvREhGZCfj0WPC-p2SYqX_0MpYPN3suv0i6o,6209
+bccr/utils.py,sha256=eI83__gvdPSZ4EdFuurDHvsWtxRVJV3mZz6k_LTY_VE,6967
+bccr/data/cuadros.pkl,sha256=5zm1_0tlr3ozmB28PAd5IqxDRlHEMD8d_Rc2bQBbTRw,63259
+bccr/data/indicadores.pkl,sha256=OAoSc1z8oTtPTRA2EdeshRHeZhrnDrZQcyVIEV5fA7A,2077602
+bccr/data/indicators.pkl,sha256=sY8v2GcSYgZf_Fww0JcpBAnKgmqB-pQhQOyrkWFDbKM,60251
+bccr-2022.4.26.dist-info/LICENSE.txt,sha256=DqNm8qmbzMdEzDwPL7vqMBafsR59sSUJiME__BnO8jM,1076
+bccr-2022.4.26.dist-info/METADATA,sha256=0uedMkOGxgsyBPfKv6IzReh2u7UIQ59Rm2YIAy7ddV8,4723
+bccr-2022.4.26.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+bccr-2022.4.26.dist-info/top_level.txt,sha256=g3bQ5Ho8-87kJ5PAhCimX59zK-dFE22u0VXcAqxi3BU,11
+bccr-2022.4.26.dist-info/RECORD,,
