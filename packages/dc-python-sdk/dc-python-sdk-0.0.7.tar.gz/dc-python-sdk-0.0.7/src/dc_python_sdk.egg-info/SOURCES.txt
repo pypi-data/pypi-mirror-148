@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/dc_python_sdk.egg-info/PKG-INFO
+src/dc_python_sdk.egg-info/SOURCES.txt
+src/dc_python_sdk.egg-info/dependency_links.txt
+src/dc_python_sdk.egg-info/top_level.txt
+src/dc_sdk/__init__.py
+src/dc_sdk/errors.py
+src/dc_sdk/tests/__init__.py
+src/dc_sdk/tests/test_test.py
