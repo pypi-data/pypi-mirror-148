@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: costack-sdk
+Version: 0.1.7
+Summary: the sdk to support lambda workflows and seamless integrations
+Author: perseus.yang
+Author-email: perseus.yang@getcostack.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: config (>=0.5.1,<0.6.0)
+Requires-Dist: slack-sdk (>=3.15.2,<4.0.0)
