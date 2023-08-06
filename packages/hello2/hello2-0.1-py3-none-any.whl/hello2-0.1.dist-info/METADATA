@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: hello2
+Version: 0.1
+Summary: Hello Package!
+Author-email: Hejian <flystarhe@qq.com>
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Project-URL: Home, https://github.com/flystarhe/hello
+
+# Hello
+A Package!
