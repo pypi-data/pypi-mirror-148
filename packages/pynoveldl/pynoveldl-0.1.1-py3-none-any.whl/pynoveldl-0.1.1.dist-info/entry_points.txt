@@ -1,0 +1,3 @@
+[console_scripts]
+noveldl = noveldl.noveldl:noveldlcmd
+
