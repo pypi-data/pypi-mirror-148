@@ -1,0 +1,7 @@
+README.md
+setup.py
+src/qsemailer.egg-info/PKG-INFO
+src/qsemailer.egg-info/SOURCES.txt
+src/qsemailer.egg-info/dependency_links.txt
+src/qsemailer.egg-info/requires.txt
+src/qsemailer.egg-info/top_level.txt
