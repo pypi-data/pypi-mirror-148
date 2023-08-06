@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+src/loaders/__init__.py
+src/loaders/sql_load.py
+src/psycopmlutils.egg-info/PKG-INFO
+src/psycopmlutils.egg-info/SOURCES.txt
+src/psycopmlutils.egg-info/dependency_links.txt
+src/psycopmlutils.egg-info/not-zip-safe
+src/psycopmlutils.egg-info/requires.txt
+src/psycopmlutils.egg-info/top_level.txt
+src/timeseriesflattener/__init__.py
+src/timeseriesflattener/create_feature_combinations.py
+src/timeseriesflattener/flattened_dataset.py
+src/timeseriesflattener/resolve_multiple_functions.py
