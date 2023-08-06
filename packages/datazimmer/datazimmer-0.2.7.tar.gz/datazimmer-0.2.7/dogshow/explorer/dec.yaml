@@ -1,0 +1,36 @@
+registry: {{test_registry}}
+remote: {{explore_remote}}
+tables:
+  - name: Dog One
+    project: dogshowbase
+    namespace: core
+    tables: 
+      - dog
+      - person
+    env: top_comps
+  - name: Dog Two
+    project: dogracebase
+    namespace: core
+    env: complete
+    tables: 
+      - dog
+  - name: Matching Dogs
+    project: dogsuccess
+    namespace: sex_matches
+    env: prime
+    tables: 
+      - sex_match
+  - name: Spots One
+    project: dogshowbase
+    namespace: core
+    env: complete
+    tables: 
+      - spot
+    version: v0.0
+  - name: Spots Two
+    project: dogshowbase
+    namespace: core
+    env: complete
+    tables: 
+      - spot
+    version: v0.1
