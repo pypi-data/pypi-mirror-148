@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: qt-material-stubs
+Version: 0.1.0
+Summary: Stubs for qt-material.
+Author: 忘忧北萱草
+Author-email: wybxc@qq.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+
+# qt_material-stubs
+
+## Installation
+
+```
+pip install qt_material-stubs
+```
+
+## Style Guidelines
+
+Follow the same style guidelines as [typeshed](https://github.com/python/typeshed/blob/master/CONTRIBUTING.md).
+
