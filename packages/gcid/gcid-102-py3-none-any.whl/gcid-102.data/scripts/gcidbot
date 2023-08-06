@@ -1,0 +1,54 @@
+#!python
+# This file is placed in the Public Domain.
+
+
+"Prosecutor. Reconsider. OTP-CR-117/19."
+
+
+import os
+import readline
+import sys
+import time
+
+
+sys.path.insert(0, os.getcwd())
+
+
+from gcid.obj import Object, get, keys, update
+from gcid.obj import Class, Config, Db, find, fntime, last, save
+from gcid.obj import edit, format, register
+from gcid.cbs import Callbacks
+from gcid.cmd import Commands, dispatch
+from gcid.shl import Shell
+from gcid.exc import cprint, wait, wrap
+from gcid.scn import init, introspect, scan
+
+
+Config.name = "gcid"
+Config.workdir = "/var/lib/gcid/"
+
+
+class Console(Shell):
+
+    def raw(self, txt):
+        cprint(txt)
+
+
+def cmd(event):
+    event.reply(",".join(sorted(Commands.cmd)))
+
+
+Commands.add(cmd)
+
+
+def main():
+    Callbacks.add("command", dispatch)
+    print("GCID started at %s" % time.ctime(time.time()).replace("  ", " "))
+    print(format(Config))
+    scan("gcid")
+    c = Console()
+    c.start()
+    wait()
+
+
+wrap(main)
