@@ -1,0 +1,10 @@
+LICENCE
+README.md
+setup.py
+fnw/__init__.py
+fnw/fiddling_with_minfin.py
+fnw.egg-info/PKG-INFO
+fnw.egg-info/SOURCES.txt
+fnw.egg-info/dependency_links.txt
+fnw.egg-info/requires.txt
+fnw.egg-info/top_level.txt
