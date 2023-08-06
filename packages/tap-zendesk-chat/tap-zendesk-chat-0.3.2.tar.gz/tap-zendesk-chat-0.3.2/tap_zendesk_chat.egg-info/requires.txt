@@ -1,0 +1,9 @@
+python-dateutil==2.6.0
+pendulum==1.2.0
+singer-python==5.12.1
+requests==2.20.0
+
+[dev]
+pylint==2.7.4
+ipdb
+nose

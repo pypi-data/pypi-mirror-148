@@ -1,0 +1,2 @@
+[console_scripts]
+tap-zendesk-chat = tap_zendesk_chat:main
