@@ -1,0 +1,16 @@
+hackerforms/__init__.py,sha256=jMAytgkOhVM5FZAv8dRfPcDFbas9OOSum0lWAYGflFs,86
+hackerforms/apis.py,sha256=QZ7iW1Hl1xY9FHsG76QHDACDUeBxJS_wjqW8vg83E1E,416
+hackerforms/exit_hook.py,sha256=F7prATeqIECedrsAL5UjgezDgFFirkqD7p78fwEz5fY,561
+hackerforms/form.py,sha256=E7Uk0k3mXAkHJVh2-ynFE9oewxFKqh4Dw8MPjXnHvXM,8212
+hackerforms/input_types.py,sha256=uCVHjdQRCqDlsYyPxDbjR42V5v1y6ETt9JQ02D3leXQ,3585
+hackerforms/inputs.py,sha256=ehlUrzLvjexRd10C8SASWb6CMMHE2j9v1_UvwuFwp3s,4185
+hackerforms/output_types.py,sha256=XFpkV-wJ914E_TklPKuZWxvAJOfNitydeOaRLgf9Fnk,2202
+hackerforms/outputs.py,sha256=ALpsdYrxKJPr7whVM5aCFcbWXdMuIXR4gK_px736dF4,2618
+hackerforms/socket.py,sha256=7CQ7FoRiDzUZ1kYv4mVL73NiLWpxLLmCBq_gUWSuLrM,1214
+hackerforms/stdio.py,sha256=bURmfTFz04_UVm10wJA4GLpKdleoXERZUGdmzFrMZtY,364
+hackerforms/type_classes.py,sha256=dpEK9psB0oALdZ0F7LEebSUiiwu8XIIgMG315gBSyp8,769
+hackerforms/utils.py,sha256=3MyorwRiLshnUdftEcfWg3JzHrlXhCPih1EFR1PpVLY,186
+hackerforms-0.1.0.dist-info/METADATA,sha256=Gjj4Xs7EE1K6s30AAAb9l-Wk8tCbqrNcf5DT6vgBegs,346
+hackerforms-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+hackerforms-0.1.0.dist-info/top_level.txt,sha256=WKqbMk971b2vW5eROckBw3vfelAG14-_SlgCPWsK2Fs,12
+hackerforms-0.1.0.dist-info/RECORD,,
