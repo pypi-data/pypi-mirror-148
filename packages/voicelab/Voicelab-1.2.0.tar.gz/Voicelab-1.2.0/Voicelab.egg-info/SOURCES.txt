@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+Voicelab/__init__.py
+Voicelab/__main__.py
+Voicelab/default_settings.py
+Voicelab.egg-info/PKG-INFO
+Voicelab.egg-info/SOURCES.txt
+Voicelab.egg-info/dependency_links.txt
+Voicelab.egg-info/requires.txt
+Voicelab.egg-info/top_level.txt
