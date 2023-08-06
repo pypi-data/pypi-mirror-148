@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+normatrix/normatrix/__init__.py
+normatrix/normatrix/__main__.py
+normatrix/normatrix/welcome.py
+normatrix/normatrix.egg-info/PKG-INFO
+normatrix/normatrix.egg-info/SOURCES.txt
+normatrix/normatrix.egg-info/dependency_links.txt
+normatrix/normatrix.egg-info/entry_points.txt
+normatrix/normatrix.egg-info/requires.txt
+normatrix/normatrix.egg-info/top_level.txt
