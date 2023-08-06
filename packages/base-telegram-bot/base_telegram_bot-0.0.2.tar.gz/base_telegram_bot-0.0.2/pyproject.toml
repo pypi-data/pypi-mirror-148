@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "base_telegram_bot"
+version = "0"
+description = "Base Telegram bot based on Pydantic models"
+authors = ["Lev Vereshchagin <mail@vrslev.com>"]
+readme = "README.md"
+repository = "https://github.com/vrslev/base-telegram-bot"
+license = "MIT"
+include = ["src/base_telegram_bot/py.typed"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "*"
+pydantic = "^1.8.2"
+
+[tool.poetry.dev-dependencies]
+black = "^22.1"
+pre-commit = "^2.15.0"
+pytest = "7.1.2"
+pytest-cov = "3.0.0"
+pytest-randomly = "3.11.0"
+responses = "0.20.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry-version-plugin]
+source = "git-tag"
+
+[tool.black]
+target-version = ["py39", "py310"]
+
+[tool.isort]
+profile = "black"
+
+[tool.pyright]
+typeCheckingMode = "strict"
+pythonVersion = "3.9"
+reportPrivateUsage = false
