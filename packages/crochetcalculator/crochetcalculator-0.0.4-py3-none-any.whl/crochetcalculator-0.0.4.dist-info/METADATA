@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: crochetcalculator
+Version: 0.0.4
+Summary: Calculate crochet patterns
+License: MIT
+Author: alicew
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+
+# Crochet Calculator
+The crochet calculator is a handy tool that can be used to calculate crochet gauge and generate simple crochet patterns.
+
+## Installation
+You can install the Crochet Calculator from PyPI:
+
+    pip install crochetcalculator
+
+<!-- 
+## Example usage
+
+## Contributing
+
+### Setting up the development environment
+
+## Change log
+
+## License and author info 
+-->
