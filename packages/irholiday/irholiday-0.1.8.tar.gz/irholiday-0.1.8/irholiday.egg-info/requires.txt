@@ -1,0 +1,7 @@
+beautifulsoup4
+convert_numbers
+convertdate
+jdatetime
+pandas
+requests
+umalqurra
