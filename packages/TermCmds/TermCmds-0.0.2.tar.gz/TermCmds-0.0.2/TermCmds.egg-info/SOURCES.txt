@@ -1,0 +1,9 @@
+README.md
+setup.py
+TermCmds/__init__.py
+TermCmds/compile.py
+TermCmds.egg-info/PKG-INFO
+TermCmds.egg-info/SOURCES.txt
+TermCmds.egg-info/dependency_links.txt
+TermCmds.egg-info/entry_points.txt
+TermCmds.egg-info/top_level.txt

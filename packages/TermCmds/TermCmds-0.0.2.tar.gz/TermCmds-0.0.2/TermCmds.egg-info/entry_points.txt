@@ -1,0 +1,3 @@
+[console_scripts]
+PyTermCmds-compile = TermCmds.compile:r
+
