@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+licorice.egg-info/PKG-INFO
+licorice.egg-info/SOURCES.txt
+licorice.egg-info/dependency_links.txt
+licorice.egg-info/top_level.txt
