@@ -1,0 +1,3 @@
+[console_scripts]
+meneco = meneco.__main__:main_meneco
+
