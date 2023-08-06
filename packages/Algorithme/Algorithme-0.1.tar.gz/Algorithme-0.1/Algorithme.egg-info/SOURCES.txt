@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+setup.py
+Algorithme/__init__.py
+Algorithme/algo.py
+Algorithme.egg-info/PKG-INFO
+Algorithme.egg-info/SOURCES.txt
+Algorithme.egg-info/dependency_links.txt
+Algorithme.egg-info/not-zip-safe
+Algorithme.egg-info/top_level.txt
