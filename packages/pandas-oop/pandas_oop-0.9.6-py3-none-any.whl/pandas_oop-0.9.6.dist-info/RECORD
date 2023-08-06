@@ -1,0 +1,10 @@
+pandas_oop/__init__.py,sha256=92Jn99ifKTJW7psidRs0fpa-Js9GwmTUjM4LFywggDU,82
+pandas_oop/_decorators.py,sha256=mrie8Qq4paWcn0AzeqBkFV4jLQwIU9KzimfP1Lv_eJk,2033
+pandas_oop/custom_exceptions.py,sha256=u1fc1k4jQJ0acMemfTosRSEL_ihLkpg-SH6UddmdZnY,734
+pandas_oop/fields.py,sha256=pwjv71B1HKDR9V1swgjWf-8v1EKyFPuHNX-nWy98y94,2147
+pandas_oop/models.py,sha256=eYtxHuFYR-JJ8U6bz0rHnrgdbAlReIcrNc2ewPJqfDA,11315
+pandas_oop-0.9.6.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+pandas_oop-0.9.6.dist-info/METADATA,sha256=Vr_aG74Spx53r8p36lJbS_R62WprUu5Mlr23C5nUkDU,4112
+pandas_oop-0.9.6.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+pandas_oop-0.9.6.dist-info/top_level.txt,sha256=Dl7SdMsrMFqVCZOQUAo3hCxaZhQTMHb3ezYfAmSBI3I,11
+pandas_oop-0.9.6.dist-info/RECORD,,
