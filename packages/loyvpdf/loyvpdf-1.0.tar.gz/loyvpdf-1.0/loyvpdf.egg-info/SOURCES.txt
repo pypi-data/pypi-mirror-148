@@ -1,0 +1,10 @@
+LICENCE
+README.md
+setup.py
+loyvpdf/__init__.py
+loyvpdf/pdf2image.py
+loyvpdf/pdf2text.py
+loyvpdf.egg-info/PKG-INFO
+loyvpdf.egg-info/SOURCES.txt
+loyvpdf.egg-info/dependency_links.txt
+loyvpdf.egg-info/top_level.txt
