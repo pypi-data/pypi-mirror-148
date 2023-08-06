@@ -1,0 +1,11 @@
+.chord {
+  font-weight: bold;
+
+  &:before {
+    content: "(";
+  }
+
+  &:after {
+    content: ")";
+  }
+}

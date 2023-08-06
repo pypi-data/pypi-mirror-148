@@ -1,0 +1,9 @@
+.notes 
+  font-style: normal
+  font-weight: bold
+
+  &:before 
+    content: "["
+
+  &:after 
+    content: "]"
