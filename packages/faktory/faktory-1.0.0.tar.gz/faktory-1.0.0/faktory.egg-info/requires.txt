@@ -1,0 +1,11 @@
+
+[all_extras]
+black
+pytest<6.0,>=5.0
+
+[dev]
+black
+pytest<6.0,>=5.0
+
+[test]
+pytest<6.0,>=5.0
