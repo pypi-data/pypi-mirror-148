@@ -1,0 +1,1 @@
+This is a library to convert time string with format 'PT04H15M' to Hours and Minutes string.

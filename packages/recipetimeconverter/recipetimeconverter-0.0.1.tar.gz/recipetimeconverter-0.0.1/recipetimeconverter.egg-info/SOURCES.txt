@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+recipetimeconverter/__init__.py
+recipetimeconverter.egg-info/PKG-INFO
+recipetimeconverter.egg-info/SOURCES.txt
+recipetimeconverter.egg-info/dependency_links.txt
+recipetimeconverter.egg-info/top_level.txt

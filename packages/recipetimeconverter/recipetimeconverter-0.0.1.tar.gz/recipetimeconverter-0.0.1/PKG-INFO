@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: recipetimeconverter
+Version: 0.0.1
+Summary: Time converter package
+Home-page: UNKNOWN
+Author: Basanti Pun
+Author-email: bazzpun@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENCE.txt
+
+This is a library to convert time string with format 'PT04H15M' to Hours and Minutes string.
+
