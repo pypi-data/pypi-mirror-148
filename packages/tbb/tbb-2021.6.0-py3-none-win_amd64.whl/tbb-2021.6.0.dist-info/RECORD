@@ -1,0 +1,12 @@
+tbb-2021.6.0.data/data/Library/bin/tbb12.dll,sha256=U05Kvft6pET0EdmKmqcYYeZIY62KgYX8v6uvKDh5TlM,286928
+tbb-2021.6.0.data/data/Library/bin/tbbbind.dll,sha256=aVWbbU01x_RlgHjw5phHf1SqOBKlRlq8AkJ-VCpoys4,45776
+tbb-2021.6.0.data/data/Library/bin/tbbbind_2_0.dll,sha256=f-d7YI8bF785QfvEIpcrrxOcP1XhNysJCgNiXwfOo4Q,45776
+tbb-2021.6.0.data/data/Library/bin/tbbbind_2_5.dll,sha256=f-C9RG9-jEy9y-g7Fr6_vH1rqqTCn_RaK80BsjfQSTY,46288
+tbb-2021.6.0.data/data/Library/bin/tbbmalloc.dll,sha256=XT4i8J_AZV8DSETm4ufTTQI4H7acUE2DiFFd-SoCU1w,127696
+tbb-2021.6.0.data/data/Library/bin/tbbmalloc_proxy.dll,sha256=sByf5jR3Ho65UgPHeu9Prokei8vfNW2RqxoAa9KTmWo,83152
+tbb-2021.6.0.data/data/Library/share/doc/tbb/third-party-programs.txt,sha256=w79VeS7qv39fA7ugEOZrJdSq9MlYnaZ-QAOAYgyGRag,51028
+tbb-2021.6.0.dist-info/LICENSE.txt,sha256=0FHWqv3r5V_hjP6ydXbWRhi10tZNphthT1rPPkZAgA4,4227
+tbb-2021.6.0.dist-info/METADATA,sha256=NoiIJJMTRT0i92WmT046y4OvdqDbJiLhc9AaqCVzfIc,1082
+tbb-2021.6.0.dist-info/WHEEL,sha256=0fLXBYOHpbowylH7oYvwh5ioYbCn9KEKxbTAHL5RBj8,98
+tbb-2021.6.0.dist-info/top_level.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+tbb-2021.6.0.dist-info/RECORD,,
