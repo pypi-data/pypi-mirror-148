@@ -1,0 +1,3 @@
+[console_scripts]
+suprenam = src.suprenam:main
+
