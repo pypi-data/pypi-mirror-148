@@ -1,0 +1,17 @@
+CONTRIBUTING.md
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+df_generics/__init__.py
+df_generics/response.py
+df_generics.egg-info/PKG-INFO
+df_generics.egg-info/SOURCES.txt
+df_generics.egg-info/dependency_links.txt
+df_generics.egg-info/requires.txt
+df_generics.egg-info/top_level.txt
+examples/basics.py
+examples/example_utils.py
+tests/conftest.py
+tests/test_df_generic_response.py
