@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+src/thoughtful/__init__.py
+src/thoughtful.egg-info/PKG-INFO
+src/thoughtful.egg-info/SOURCES.txt
+src/thoughtful.egg-info/dependency_links.txt
+src/thoughtful.egg-info/top_level.txt
