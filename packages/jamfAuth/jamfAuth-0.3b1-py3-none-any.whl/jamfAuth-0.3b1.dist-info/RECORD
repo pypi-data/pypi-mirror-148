@@ -1,0 +1,10 @@
+jamfAuth/__init__.py,sha256=8QRxi_jGs5ypiRYhjilg8QOzWr5whF0cLThsXCw1_2w,2857
+support/.jamfauth.json,sha256=TcVn5LPbUG-zxPH9EoPm9vQwwPOd4Zh8mCrHuF8LwPg,57
+support/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+support/configCheck.py,sha256=ofwcz6fbC-lIMjY_RAoxxAIdO4Z_IZdbHZzqypNnmsk,2348
+support/getToken.py,sha256=VBd8kG0vJqPhefTkjNH7B97AZsQJ-RMCStdt9c7QUUY,2967
+jamfAuth-0.3b1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+jamfAuth-0.3b1.dist-info/METADATA,sha256=hRxeA7x4POc3ID7cBNP1mFy0UlRyPEZ-H4ml76Qbc4Y,9512
+jamfAuth-0.3b1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+jamfAuth-0.3b1.dist-info/top_level.txt,sha256=NFJ3WWmVn2LQWGRTH7vbsOA8LmMQ-bICA5FsdQIhLSQ,17
+jamfAuth-0.3b1.dist-info/RECORD,,
