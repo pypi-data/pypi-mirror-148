@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+JsonBoard.egg-info/PKG-INFO
+JsonBoard.egg-info/SOURCES.txt
+JsonBoard.egg-info/dependency_links.txt
+JsonBoard.egg-info/requires.txt
+JsonBoard.egg-info/top_level.txt
+bin/jsonboard
+jsonboard/__init__.py
+jsonboard/main.py
+jsonboard/server/__init__.py
+jsonboard/server/handler.py
+jsonboard/server/server.py
