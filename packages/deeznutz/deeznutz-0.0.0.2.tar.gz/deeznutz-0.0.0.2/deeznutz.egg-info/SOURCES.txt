@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+deeznutz/__init__.py
+deeznutz/nutsclass.py
+deeznutz/nutsfunctions.py
+deeznutz.egg-info/PKG-INFO
+deeznutz.egg-info/SOURCES.txt
+deeznutz.egg-info/dependency_links.txt
+deeznutz.egg-info/top_level.txt
+tests/__init__.py
+tests/test_nutsfunctions.py

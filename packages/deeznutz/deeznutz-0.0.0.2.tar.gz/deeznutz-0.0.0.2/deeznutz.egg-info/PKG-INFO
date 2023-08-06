@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: deeznutz
+Version: 0.0.0.2
+Summary: Python package with wide array of functions to manipulate the complex environment of deez nuts
+Author: Lawrence Long
+Author-email: lawrence.long@gmail.com
+License: UNKNOWN
+Keywords: python,utility
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+License-File: LICENSE
+
+I'll explain all the functionalities of this extremely wide-range utility module after setting everything up ;) Preferred usage is import deeznutz as dn
+
