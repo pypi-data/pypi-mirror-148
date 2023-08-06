@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: dmPython
+Version: 2.4.4
+Summary: Python interface to Dameng
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: Python Software Foundation License
+Description: Python interface to Dameng conforming to the Python DB API 2.0 specification.
+        See http://www.python.org/topics/database/DatabaseAPI-2.0.html.
+Keywords: Dameng
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Database
