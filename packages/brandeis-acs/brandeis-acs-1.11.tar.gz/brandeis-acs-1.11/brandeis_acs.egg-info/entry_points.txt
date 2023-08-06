@@ -1,0 +1,2 @@
+[console_scripts]
+bacs = bacs.run:main
