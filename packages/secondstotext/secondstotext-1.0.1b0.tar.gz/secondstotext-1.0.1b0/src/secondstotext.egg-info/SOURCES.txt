@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+src/seccondstotext/__init__.py
+src/seccondstotext/main.py
+src/secondstotext.egg-info/PKG-INFO
+src/secondstotext.egg-info/SOURCES.txt
+src/secondstotext.egg-info/dependency_links.txt
+src/secondstotext.egg-info/top_level.txt
