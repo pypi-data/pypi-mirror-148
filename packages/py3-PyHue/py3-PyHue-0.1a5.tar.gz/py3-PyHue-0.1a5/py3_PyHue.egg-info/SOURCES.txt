@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+PyHue/Hue.py
+PyHue/__init__.py
+py3_PyHue.egg-info/PKG-INFO
+py3_PyHue.egg-info/SOURCES.txt
+py3_PyHue.egg-info/dependency_links.txt
+py3_PyHue.egg-info/requires.txt
+py3_PyHue.egg-info/top_level.txt
+pyhue/Hue.py
+pyhue/__init__.py
