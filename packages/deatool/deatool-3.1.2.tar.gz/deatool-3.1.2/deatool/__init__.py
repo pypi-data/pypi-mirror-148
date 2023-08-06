@@ -1,0 +1,1 @@
+from deatool.scripts.run import run
