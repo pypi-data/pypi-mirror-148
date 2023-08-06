@@ -1,0 +1,3 @@
+[console_scripts]
+mockend = mockend.__main__:rawFEED
+
