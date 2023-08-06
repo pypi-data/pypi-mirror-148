@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: aiogram-metrics
+Version: 0.0.10
+Summary: Message metrics exporter for aiogram framework
+Home-page: https://github.com/benyaming/aiogram-metrics
+Author: Benyamin Ginzburg
+Author-email: benyomin.94@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/benyaming/aiogram-metrics/issues
+Description: # aiogram-metrics
+        Message metrics exporter for aiogram framework
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
