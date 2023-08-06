@@ -1,0 +1,8 @@
+bdbag
+datalad>=0.16.0
+datalad_next>=0.2
+
+[devel]
+coverage
+nose
+snakemake
