@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/DLToolsF/__init__.py
+src/DLToolsF/log_utils.py
+src/DLToolsF.egg-info/PKG-INFO
+src/DLToolsF.egg-info/SOURCES.txt
+src/DLToolsF.egg-info/dependency_links.txt
+src/DLToolsF.egg-info/top_level.txt
