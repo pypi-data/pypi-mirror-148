@@ -1,0 +1,24 @@
+[tool.poetry]
+authors = ["no92 <no92.mail@gmail.com>", "German Lashevich <german.lashevich@gmail.com>"]
+description = "Library to interact with the CGA4233DE router, distributed by Vodafone Germany"
+documentation = "https://github.com/zebradil/cga4233de/README.md"
+name = "cga4233de"
+readme = "README.md"
+repository = "https://github.com/zebradil/cga4233de"
+version = "0.3.0"
+
+[tool.poetry.scripts]
+cga4233de_disable_firewall = 'cga4233de:disable_firewall'
+cga4233de_recent_calls = 'cga4233de:recent_calls'
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.27.1"
+
+[tool.poetry.dev-dependencies]
+isort = "^5.10.1"
+black = "^22.3.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
