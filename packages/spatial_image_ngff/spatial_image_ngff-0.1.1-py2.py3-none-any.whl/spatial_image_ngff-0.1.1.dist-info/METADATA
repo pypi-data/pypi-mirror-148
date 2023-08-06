@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: spatial_image_ngff
+Version: 0.1.1
+Summary: spatial-image-ngff
+Home-page: https://github.com/spatial-image/spatial-image-ngff
+Author: Matt McCormick
+Author-email: matt.mccormick@kitware.com
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Dist: spatial_image_multiscale
+Requires-Dist: zarr
+Requires-Dist: pytest ; extra == "test"
+Requires-Dist: fsspec ; extra == "test"
+Requires-Dist: ipfsspec ; extra == "test"
+Provides-Extra: test
+
+**⚠️ Please use [MultiscaleSpatialImage.to_zarr](https://github.com/spatial-image/spatial-image-multiscale) instead**
+
+# spatial-image-ngff
+
+Serialize and deserialize a [multiscale spatial image](https://github.com/spatial-image/spatial-image-multiscale) to the
+18
+[OME-Zarr Next Generation File Format (NGFF)](https://ngff.openmicroscopy.org/).
+
+## Development
+
+Contributions are welcome and appreciated.
+
+To run the test suite:
+
+```
+git clone https://github.com/spatial-image/spatial-image-ngff
+cd spatial-image-ngff
+pip install -r requirements.txt -r requirements-dev.txt
+pytest
+```
+
