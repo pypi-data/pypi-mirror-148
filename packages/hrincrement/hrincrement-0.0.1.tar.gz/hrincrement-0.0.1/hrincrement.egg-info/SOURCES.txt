@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+hrincrement/__init__.py
+hrincrement.egg-info/PKG-INFO
+hrincrement.egg-info/SOURCES.txt
+hrincrement.egg-info/dependency_links.txt
+hrincrement.egg-info/top_level.txt

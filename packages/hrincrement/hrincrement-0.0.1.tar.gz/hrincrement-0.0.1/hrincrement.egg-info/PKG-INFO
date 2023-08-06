@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: hrincrement
+Version: 0.0.1
+Summary: Increment calculator
+Home-page: UNKNOWN
+Author: Shahnawaz Shekh
+Author-email: x21132551@student.ncirl.ie
+License: MIT
+Keywords: calculator
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENCE.txt
+
+This is a very simple calculator that takes Salary and increment
+
+
+Change Log
+==========
+
+0.0.1 (29/04/2022)
+-------------------
+- First Release
+
