@@ -1,0 +1,5 @@
+[console_scripts]
+executable-name = my_package.module:function
+
+[pytest11]
+pytest_opentelemetry = pytest_opentelemetry.plugin
