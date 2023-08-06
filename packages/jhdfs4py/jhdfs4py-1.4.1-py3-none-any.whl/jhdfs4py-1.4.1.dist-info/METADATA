@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: jhdfs4py
+Version: 1.4.1
+Summary: Convenient HDFS access using the Java HDFS client
+Home-page: https://gitlab.com/stiftung-zentrale-stelle-verpackungsregister/jhdfs4py
+Author-email: opensource@verpackungsregister.org
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyspark (<3.3,>=2.4)
+Requires-Dist: dataclasses (>=0.7) ; python_version < "3.7"
+
+# JHDFS4PY
+Convenient HDFS access using the Java HDFS client in python.
+
+## Installation
+```sh
+pip install jhdfs4py
+```
+
+## Usage
+Please also see the provided demo notebook at `./docs/demo.ipynb`.
+
+Create a file `file.txt` with the text content "Hello World".
+```python
+from pyspark.sql import SparkSession
+from jhdfs4py import HdfsFs
+
+spark = SparkSession.builder.appName("my-app").getOrCreate()
+hdfs = HdfsFs.from_spark_session(spark)
+
+hdfs.write_string(
+    path="/my/path/file.txt",
+    data="Hello World",
+)
+```
+
+Create a file `other_file.blop` with the byte content "some data".
+```python
+from pyspark.sql import SparkSession
+from jhdfs4py import HdfsFs
+
+spark = SparkSession.builder.appName("my-app").getOrCreate()
+hdfs = HdfsFs.from_spark_session(spark)
+
+hdfs.write_bytes(
+    path="/my/path/other_file.blop",
+    data=b"some data",
+)
+```
+
+## Contribute
+Report [issues](https://gitlab.com/stiftung-zentrale-stelle-verpackungsregister/jhdfs4py/-/issues), submit [Pull Requests](https://gitlab.com/stiftung-zentrale-stelle-verpackungsregister/jhdfs4py/-/merge_requests), or contact us via mail (opensource@verpackungsregister.org).
+
+## Test Suite
+### Hadoop Windows Setup
+On Windows, a few extra steps are required, before running the tests:
+1. Clone https://github.com/steveloughran/winutils into a directory of your choice
+2. Define the environment variable `HADOOP_HOME` and set it to `X:\path\to\winutils\hadoop-3.0.0`
+3. Append `%HADOOP_HOME%\bin` to the `PATH` environment variable
+
+### General Setup
+The library comes with an extensive [pytest](https://docs.pytest.org/en/stable/) test suite, that depends on a [PY4J](https://www.py4j.org/) gateway
+running locally providing the actual HDFS implementation. The testing gateway is located in the `tests/py4j-test-server` folder and implemented by
+the `org.zsvr.py4j.test.TestGatewayServer` class. The test suite will try to start the gateway automatically on posix systems unless the `USE_EXTERNAL_GATEWAY_SERVER`
+environment variable is set. Use the `SBT_SCRIPT` environment variable, to tell the test suite where your [SBT](https://www.scala-sbt.org/) startup
+script is located.
+
+To start the gateway manually (don't forget to set `USE_EXTERNAL_GATEWAY_SERVER=1` in this case), you can either use your favourite IDE, after
+importing `py4j-test-server` as [SBT](https://www.scala-sbt.org/) project, or you can use [SBT](https://www.scala-sbt.org/) directly from the command
+line by entering `sbt run` after having changed to the `tests/py4j-test-server` directory.
+
+To finally run the tests, change into the `jhdf4py` base directory (the one containing  this README). Make sure all dependencies are met by typing
+`pip install -r requirements.txt`, and finally launch the test suite by entering `pytest` into the console. All tests are expected to pass.
+
+
