@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: spdividecalc
+Version: 0.0.1
+Summary: a very basic divide function
+Home-page: UNKNOWN
+Author: Saurabh Pratap Singh
+Author-email: singhsaurabhpratap514@gmail.com
+License: MIT
+Platform: UNKNOWN
+License-File: LICENCE.txt
+
+this is for divide two numbers.
+
+Change Log
+===========
+
+0.0.1 (26/04/2022)
+------------------
+
+- First Release
+
+
