@@ -1,0 +1,2 @@
+class RustLikeException(Exception):
+    pass

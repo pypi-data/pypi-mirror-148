@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "rustlike"
+version = "0.2.1"
+description = "Rust-like API in Python"
+authors = ["Josh Wycuff <Joshua.Wycuff@turner.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = ">=3.6,<4"
+
+[tool.poetry.dev-dependencies]
+coverage = "^6.3.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
