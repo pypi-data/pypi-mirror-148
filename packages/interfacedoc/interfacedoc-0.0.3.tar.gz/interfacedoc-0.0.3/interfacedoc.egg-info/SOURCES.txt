@@ -1,0 +1,11 @@
+README.md
+setup.py
+interfacedoc/__init__.py
+interfacedoc/installer.py
+interfacedoc/run.py
+interfacedoc.egg-info/PKG-INFO
+interfacedoc.egg-info/SOURCES.txt
+interfacedoc.egg-info/dependency_links.txt
+interfacedoc.egg-info/entry_points.txt
+interfacedoc.egg-info/requires.txt
+interfacedoc.egg-info/top_level.txt
