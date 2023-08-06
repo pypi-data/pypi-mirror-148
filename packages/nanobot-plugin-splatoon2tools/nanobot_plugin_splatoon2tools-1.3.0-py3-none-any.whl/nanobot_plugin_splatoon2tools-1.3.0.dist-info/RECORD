@@ -1,0 +1,10 @@
+splatoon2_tools/__init__.py,sha256=B17IY96j-LD-uB3nqkFIU4ykRjrPxQqXpidWhEGydAA,5259
+splatoon2_tools/config.py,sha256=XLuuPaTj9LsyGi4uglG5wLwD3e1izU4UFg0rv4gxJSw,943
+splatoon2_tools/core.py,sha256=Bh_fM-uLWfJxZ9fcqOXPU4r-7O-kYIYA5KKyAtbkEHc,11066
+splatoon2_tools/tests.py,sha256=9xzuT1j1WGh53AJMZDUSEnJxRMY4gVik4jv2aUcX-Ck,70
+splatoon2_tools/utils.py,sha256=2YzPjp_Nr2fIPMW7Oz7scQ3AKN42SYo8LekMh6k1nzk,5640
+nanobot_plugin_splatoon2tools-1.3.0.dist-info/LICENSE,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+nanobot_plugin_splatoon2tools-1.3.0.dist-info/METADATA,sha256=DHoB4YT3uTEycDjgSRFnu9M-7HSf4vs3Rabj_OjbQNA,595
+nanobot_plugin_splatoon2tools-1.3.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+nanobot_plugin_splatoon2tools-1.3.0.dist-info/top_level.txt,sha256=JKTAhc7lJcFflNiPEll_sH1hH9igxtx0Wo3_6NGrbAI,16
+nanobot_plugin_splatoon2tools-1.3.0.dist-info/RECORD,,
