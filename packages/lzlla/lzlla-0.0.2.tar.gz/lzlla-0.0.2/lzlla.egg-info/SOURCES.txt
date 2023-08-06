@@ -1,0 +1,9 @@
+setup.py
+lzlla/__init__.py
+lzlla/author.py
+lzlla/guide.py
+lzlla/name.py
+lzlla.egg-info/PKG-INFO
+lzlla.egg-info/SOURCES.txt
+lzlla.egg-info/dependency_links.txt
+lzlla.egg-info/top_level.txt
