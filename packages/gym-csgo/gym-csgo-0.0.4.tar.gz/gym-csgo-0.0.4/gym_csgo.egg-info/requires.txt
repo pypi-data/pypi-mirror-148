@@ -1,0 +1,7 @@
+gym
+mss
+numpy
+opencv-python
+flask
+pynput
+pygame
