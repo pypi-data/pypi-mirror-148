@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+Deepfry/__init__.py
+Deepfry/deepfry.py
+Deepfry.egg-info/PKG-INFO
+Deepfry.egg-info/SOURCES.txt
+Deepfry.egg-info/dependency_links.txt
+Deepfry.egg-info/requires.txt
+Deepfry.egg-info/top_level.txt
