@@ -1,0 +1,50 @@
+<project type="egg" packagedata="included">
+  <namespaces>
+    <package name="reahl"/>
+    <package name="reahl.messages"/>
+  </namespaces>
+
+  <extras name="pillow">
+    <thirdpartyegg name="Pillow" minversion="2.5" maxversion="7.1.999"/>
+  </extras>
+
+  <deps purpose="test">
+    <thirdpartyegg name="pytest" minversion="3.0"/>
+    <thirdpartyegg name="Sphinx"/>
+    <thirdpartyegg name="sphinxcontrib-plantuml"/>
+    <thirdpartyegg name="flaky" minversion="3.7.0"/>
+    <egg name="reahl-tofu"/>
+    <egg name="reahl-stubble"/>
+    <egg name="reahl-dev"/>
+    <egg name="reahl-webdev"/>
+    <egg name="reahl-browsertools"/>
+    <egg name="reahl-postgresqlsupport"/>
+    <egg name="reahl-sqlitesupport"/>
+    <egg name="reahl-mysqlsupport"/>
+  </deps>
+
+  <version number="6.0">
+    <deps purpose="run">
+      <egg name="reahl-web" versionlocked="True"/>
+      <egg name="reahl-component" versionlocked="True"/>
+      <egg name="reahl-sqlalchemysupport" versionlocked="True"/>
+      <egg name="reahl-web-declarative" versionlocked="True"/>
+      <egg name="reahl-domain" versionlocked="True"/>
+      <egg name="reahl-domainui" versionlocked="True"/>
+      <egg name="reahl-commands" versionlocked="True"/>
+      <egg name="reahl-dev" versionlocked="True"/>
+      <egg name="reahl-paypalsupport" versionlocked="True"/>
+      <thirdpartyegg name="pytest" minversion="3.0"/>
+      <thirdpartyegg name="setuptools" minversion="51.0.0"/>
+      <thirdpartyegg name="plotly" minversion="5.1.0" maxversion="5.6.99999"/>
+    </deps>
+  </version>
+
+  <distpackage type="wheel">
+    <packageindex repository="pypi"/>
+  </distpackage>
+  <distpackage type="sdist">
+    <packageindex repository="pypi"/>
+  </distpackage>
+
+</project>
