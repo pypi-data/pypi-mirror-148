@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+anonfiles/__init__.py
+anonfiles/main.py
+anonfiles.egg-info/PKG-INFO
+anonfiles.egg-info/SOURCES.txt
+anonfiles.egg-info/dependency_links.txt
+anonfiles.egg-info/entry_points.txt
+anonfiles.egg-info/requires.txt
+anonfiles.egg-info/top_level.txt
