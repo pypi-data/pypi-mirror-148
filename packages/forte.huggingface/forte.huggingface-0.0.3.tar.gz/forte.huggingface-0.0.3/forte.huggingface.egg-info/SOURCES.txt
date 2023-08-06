@@ -1,0 +1,15 @@
+README.md
+setup.py
+forte.huggingface.egg-info/PKG-INFO
+forte.huggingface.egg-info/SOURCES.txt
+forte.huggingface.egg-info/dependency_links.txt
+forte.huggingface.egg-info/namespace_packages.txt
+forte.huggingface.egg-info/requires.txt
+forte.huggingface.egg-info/top_level.txt
+fortex/huggingface/__init__.py
+fortex/huggingface/bio_ner_predictor.py
+fortex/huggingface/question_and_answering_multi.py
+fortex/huggingface/question_and_answering_single.py
+fortex/huggingface/token_classification.py
+fortex/huggingface/transformers_processor.py
+fortex/huggingface/zero_shot_classifier.py
