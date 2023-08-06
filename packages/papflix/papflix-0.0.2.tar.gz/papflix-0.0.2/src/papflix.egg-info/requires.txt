@@ -1,0 +1,7 @@
+IMDbPY
+pyjarowinkler
+PySide2
+python_Levenshtein
+requests
+setuptools
+tmdbv3api
