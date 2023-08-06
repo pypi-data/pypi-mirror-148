@@ -1,0 +1,2 @@
+[console_scripts]
+is-pypi-package = ask_pypi.__main__:main
