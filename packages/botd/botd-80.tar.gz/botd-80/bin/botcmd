@@ -1,0 +1,50 @@
+#!/usr/bin/env python3
+# This file is placed in the Public Domain.
+
+
+"bot command"
+
+
+import sys
+
+
+from bot.evt import Command
+from bot.hdl import Bus, Callbacks, Commands, Handler, dispatch
+from bot.irc import Config as IRCConfig
+from bot.obj import Config
+
+
+Config.name = "BOTD"
+Config.workdir = "/var/lib/botd/"
+
+
+IRCConfig.channel = "#botd"
+IRCConfig.nick = "botd"
+IRCConfig.realname = "24/7 channel daemon"
+IRCConfig.username = "botd"
+
+
+import bot.cmds
+
+
+class CLI(Handler):
+
+    def cmd(self, txt):
+        Bus.add(self)
+        e = Command()
+        e.orig = repr(self)
+        e.txt = txt
+        self.handle(e)
+        e.wait()
+
+    def raw(self, txt):
+        print(txt)
+
+
+def main():
+    Callbacks.add("command", dispatch)
+    c = CLI()
+    return c.cmd(" ".join(sys.argv[1:]))
+
+
+main()

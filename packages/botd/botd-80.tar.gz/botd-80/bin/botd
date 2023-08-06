@@ -1,0 +1,46 @@
+#!/usr/bin/env python3
+# This file is placed in the Public Domain.
+
+
+"bot daemon"
+
+
+import time
+
+
+from bot.hdl import Callbacks, dispatch
+from bot.irc import IRC
+from bot.irc import Config as IRCConfig
+from bot.obj import Config
+from bot.rss import Fetcher
+from bot.thr import launch
+
+
+Config.name = "botd"
+Config.workdir = "/var/lib/botd/"
+
+
+IRCConfig.channel = "#botd"
+IRCConfig.nick = "botd"
+IRCConfig.realname = "24/7 channel daemon"
+IRCConfig.username = "botd"
+
+
+import bot.cmds
+
+
+def wait():
+    while 1:
+        time.sleep(1.0)
+
+
+def main():
+    Callbacks.add("command", dispatch)
+    i = IRC()
+    launch(i.start)
+    f = Fetcher()
+    f.start()
+    wait()
+
+
+main()
