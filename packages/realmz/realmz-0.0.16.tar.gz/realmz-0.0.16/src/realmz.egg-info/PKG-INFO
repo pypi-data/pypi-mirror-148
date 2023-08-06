@@ -1,0 +1,70 @@
+Metadata-Version: 1.2
+Name: realmz
+Version: 0.0.16
+Summary: To send birthday wishes to employees
+Home-page: https://github.com/Billykat7/wishes
+Author: Billy Katalayi
+Author-email: billysbn7@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/Billykat7/wishes/issues
+Description: 
+        
+        
+            Realmz
+        
+        
+            
+            This is a very small module built for a private project. Should you want to do more than the basis functionalities
+         
+            supported by this package, then you are looking on the wrong place. A service component that will send birthday
+         
+            wishes to employees. The service extracts a list of employees whose birthdays occur today using the Realm Digital
+         
+            Employee API and create a generic message E.g. “Happy Birthday {name 1}, {name 2}” and send the message to an 
+        
+            email address configured for the component. https://interview-assessment-1.realmdigital.co.za/
+        
+        
+        
+            
+            Example:
+        
+                from realmz import main as realmz_main
+        
+        
+                
+                def test():
+        
+                    realmz.start_wish()
+        
+        
+                    
+                test()
+        
+        
+                                
+            You'd input the database full path in case you'd like to save data to a database instead of a json file.
+        
+            Please note that we currently only support sqlite.
+        
+        
+            
+            When prompted with options:
+                1. Birthday
+                2. Anniversary
+        
+        
+                
+            This package uses 'https://pypi.org/project/python-dotenv/' to handle .env variable for this project.
+        
+        
+            
+            This package uses 'https://pypi.org/project/schedule/' to schedule the app, when and how it would run.
+        
+            
+Keywords: employees birthday,anniversary automated wishes
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
