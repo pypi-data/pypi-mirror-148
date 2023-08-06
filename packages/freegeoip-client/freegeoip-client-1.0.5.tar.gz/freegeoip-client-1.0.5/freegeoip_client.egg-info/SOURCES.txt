@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+freegeoip_client/__init__.py
+freegeoip_client/client.py
+freegeoip_client.egg-info/PKG-INFO
+freegeoip_client.egg-info/SOURCES.txt
+freegeoip_client.egg-info/dependency_links.txt
+freegeoip_client.egg-info/requires.txt
+freegeoip_client.egg-info/top_level.txt
+freegeoip_client/data/client.cfg
