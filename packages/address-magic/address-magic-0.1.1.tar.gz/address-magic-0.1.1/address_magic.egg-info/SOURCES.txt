@@ -1,0 +1,9 @@
+LICENSE
+README.md
+address_magic.py
+setup.py
+address_magic.egg-info/PKG-INFO
+address_magic.egg-info/SOURCES.txt
+address_magic.egg-info/dependency_links.txt
+address_magic.egg-info/requires.txt
+address_magic.egg-info/top_level.txt
