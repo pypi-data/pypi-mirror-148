@@ -1,0 +1,2 @@
+zarr
+spatial_image_multiscale
