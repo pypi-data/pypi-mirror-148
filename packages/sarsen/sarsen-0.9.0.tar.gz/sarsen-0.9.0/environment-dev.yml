@@ -1,0 +1,18 @@
+channels:
+  - conda-forge
+dependencies:
+  - adlfs
+  - build
+  - gcsfs
+  - gdal
+  - matplotlib
+  - mamba
+  - notebook
+  - pip
+  - planetary-computer
+  - proj-data
+  - scipy
+  - sentinelsat
+  - stackstac
+  - pip:
+      - elevation
