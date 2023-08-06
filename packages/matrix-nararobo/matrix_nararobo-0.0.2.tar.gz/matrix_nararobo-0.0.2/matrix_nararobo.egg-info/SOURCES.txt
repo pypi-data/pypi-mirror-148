@@ -1,0 +1,7 @@
+setup.py
+matrix_calculation_lib/__init__.py
+matrix_calculation_lib/main.py
+matrix_nararobo.egg-info/PKG-INFO
+matrix_nararobo.egg-info/SOURCES.txt
+matrix_nararobo.egg-info/dependency_links.txt
+matrix_nararobo.egg-info/top_level.txt
