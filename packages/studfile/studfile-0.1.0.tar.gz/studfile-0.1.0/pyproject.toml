@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "studfile"
+version = "0.1.0"
+description = "A simplified tool for making easy-to-use build scripts"
+authors = ["John Carter <jfcarter2358@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/jfcarter2358/stud"
+keywords = ["build", "studfile"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+calligraphy-scripting = "^1.0.0"
+PyYAML = "^6.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+stud = "studfile.main:main"

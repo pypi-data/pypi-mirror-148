@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: studfile
+Version: 0.1.0
+Summary: A simplified tool for making easy-to-use build scripts
+Home-page: https://github.com/jfcarter2358/stud
+License: MIT
+Keywords: build,studfile
+Author: John Carter
+Author-email: jfcarter2358@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: PyYAML (>=6.0,<7.0)
+Requires-Dist: calligraphy-scripting (>=1.0.0,<2.0.0)
+Project-URL: Repository, https://github.com/jfcarter2358/stud
+Description-Content-Type: text/markdown
+
+# Stud
+
+## Example Studfile.yaml
+
+```yaml
+test: 
+  help: "Run test commands"
+  options:
+    - name: -m,--message
+      default: Hello world
+      nargs: '?'
+      required: true
+    - name: foobar
+  cmd: |
+    echo "{foobar}"
+    
+    for foo in ["bar", "baz"]:
+      print(f"{message}: {foo}")
+```
+
