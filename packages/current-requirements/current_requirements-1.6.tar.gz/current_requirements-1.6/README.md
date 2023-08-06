@@ -1,0 +1,1 @@
+This package was built in order to get current folder require packages' infomation, and get downloading text.
