@@ -1,0 +1,8 @@
+[build-system]
+requires = [
+    "pandas",
+    "psycopg2",
+    "setuptools>=42",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
