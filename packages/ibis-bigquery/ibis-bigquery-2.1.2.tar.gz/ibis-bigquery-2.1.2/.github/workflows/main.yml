@@ -1,0 +1,92 @@
+name: Main
+
+on:
+  push:
+    branches: main
+  pull_request:
+    branches: main
+  schedule:
+    - cron: 0 3 * * *
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: checkout
+      uses: actions/checkout@v3
+
+    - name: setup python
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+
+    - name: install dependencies
+      run: |
+        python -m pip install -r requirements.txt
+        python -m pip install -e .
+    - name: lint
+      run: flake8 .
+
+    - name: mypy
+      run: mypy --ignore-missing-imports .
+      if: always()
+
+    - name: black
+      run: black --check .
+      if: always()
+
+    # TODO: don't ignore pydocstyle
+    # https://github.com/ibis-project/ibis-bigquery/issues/13
+    # - name: pydocstyle
+    #   run: pydocstyle --match-dir='^(?!tests|.*udf).*' .
+    #   if: always()
+
+    - name: isort
+      run: isort --profile black --check-only .
+      if: always()
+
+  unit-tests:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - python_version: "3.7"
+            "ibis_version": "2.0.0"
+          - python_version: "3.8"
+            "ibis_version": "2.1.1"
+          - python_version: "3.9"
+            "ibis_version": "3.0.0"
+          - python_version: "3.10"
+            "ibis_version": "3.0.0"
+          - python_version: "3.10"
+            "ibis_version": "github"
+
+    steps:
+
+    - name: checkout
+      uses: actions/checkout@v3
+      with:
+        path: ibis_bigquery
+
+    - name: checkout ibis
+      uses: actions/checkout@v3
+      with:
+        repository: ibis-project/ibis
+        path: ibis
+
+    - name: set up python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: install dependencies (ibis ${{ matrix.ibis_version }})
+      env:
+        IBIS_VERSION: ${{ matrix.ibis_version }}
+      run: ./ibis_bigquery/ci/install_deps.sh
+
+    - name: run tests
+      run: python -m pytest ./ibis_bigquery/tests/unit
