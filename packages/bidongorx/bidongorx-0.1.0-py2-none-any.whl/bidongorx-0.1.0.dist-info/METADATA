@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: bidongorx
+Version: 0.1.0
+Summary: Un paquet bidon, qu'est-ce qu'on s'amuse !
+Home-page: UNKNOWN
+Author: astrop__pat
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.1
+Requires-Dist: tqdm (>3)
+
+UNKNOWN
+
+
