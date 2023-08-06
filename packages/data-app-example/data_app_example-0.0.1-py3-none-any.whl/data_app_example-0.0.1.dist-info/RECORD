@@ -1,0 +1,6 @@
+data_app_example/__init__.py,sha256=S3oUpha5YtEHOK4dggMb1W_ZPnW7ZG36l-DWIMHRmAQ,22
+data_app_example/hello_world.py,sha256=x1USM9piwIK6KUWXrfhTX43l8b7Cb7TIuPkKjeYgWus,8604
+data_app_example-0.0.1.dist-info/METADATA,sha256=NH2nsRJ8lmg1qGVloE_yr_9cn_VZq1J_Wh98Y2iua8g,197
+data_app_example-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+data_app_example-0.0.1.dist-info/top_level.txt,sha256=t8vZJ0fPC-mg8GjXGaGkLb0ls6RPMUPbCNDgzG9jcmA,17
+data_app_example-0.0.1.dist-info/RECORD,,
