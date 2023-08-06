@@ -1,0 +1,17 @@
+jsz/rapidbuild/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jsz/rapidbuild/base.py,sha256=iYpFv3m76xoTa642BlB1drKA2u19i0kciOyFjBVpsSo,2428
+jsz/rapidbuild/conan.py,sha256=2cq48MgmCYVVFFpeVXq1lx8U8uhSxigEneM0rj9ax9w,11181
+jsz/rapidbuild/fastbuild.py,sha256=oeSFkzE84BOy6K8mANYfyFhbLO99GE6h6uTW5vbUYTk,41209
+jsz/rapidbuild/toolchain.py,sha256=Ig18aNzRhGq5z8EXm-agjUqr3Q4avfOwlBbgP38-Mek,7199
+jsz/rapidbuild/workspace.py,sha256=rMliUhSmrMONUT0gG0Xer_hdE35igJ6EDyCucJe3qRw,18039
+jsz/rapidbuild/conan_generator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jsz/rapidbuild/conan_generator/conanfile.py,sha256=8_uQ3Wpokm5qc9-ZVpfYqe8wls8ihbFA4fgetirHujA,1857
+jsz/rapidbuild/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jsz/rapidbuild/data/conan_profiles/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jsz/rapidbuild/data/conan_profiles/windows-x86_64-llvm13.txt,sha256=F8tg9CfI5UAUhFA6qfU_apeTmTjOtkqMoU7u52DkyI8,256
+jsz/rapidbuild/data/conan_profiles/windows-x86_64-msvc16.txt,sha256=fsU1lS17QRt18EUaWf4qzV2sgENMkAIEgClWTaH4ZxI,144
+jsz.rapidbuild-0.2.1.dist-info/LICENSE.txt,sha256=uqPiqNvzT8G2HaukbuNn8xE-wxkUdnIJlHWCSNx5AXQ,1070
+jsz.rapidbuild-0.2.1.dist-info/METADATA,sha256=N9G_NU1Ob2_1PSkBtiUikydFzQmUFIKhBuKPyKbgy9w,975
+jsz.rapidbuild-0.2.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+jsz.rapidbuild-0.2.1.dist-info/top_level.txt,sha256=WOkGJ-IeCSGkMFzWOTPfcOFylfmK-8u1YnY7MvUg1KU,4
+jsz.rapidbuild-0.2.1.dist-info/RECORD,,
