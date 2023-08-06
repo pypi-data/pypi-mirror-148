@@ -1,0 +1,2 @@
+recursive-include userAgentRandomizer/assets *.txt
+recursive-include userAgentRandomizer *.py
