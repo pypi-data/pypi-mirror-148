@@ -1,0 +1,12 @@
+cellml.recipe.api-0.8-py2.7-nspkg.pth,sha256=0DBIwyGzhUmA-qDEepi58J8b2xJHfZmEDo7kIS-JweI,1704
+cellml/recipe/api/README.rst,sha256=4buDXqdKNj9DItMNtyofgxmdCTE4AA0BOD0OkXXx-ik,2533
+cellml/recipe/api/__init__.py,sha256=4hurtUdwtInoAZ7nznDMqklQMqWwlEcml2j9xoa3Zs4,4563
+cellml/recipe/api/tests/__init__.py,sha256=UnxmjVrk-eNORsitiM48W0pB6yfsaErOak8RYh_ELt8,10
+cellml/recipe/api/tests/test_docs.py,sha256=tBNPJCksD8aJmSbUJmOAdFZn9ovywLThT_FLvyaWY-o,2166
+cellml.recipe.api-0.8.dist-info/COPYING.txt,sha256=FQPhG0oLEoq4pd-de3jKDxq4QLWmbZ_dsoKUceEr9-o,1003
+cellml.recipe.api-0.8.dist-info/METADATA,sha256=CzxIJvOoTxGM5_8yu96YUYsYOX3k0KG9fXNM5YsUTCY,7260
+cellml.recipe.api-0.8.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+cellml.recipe.api-0.8.dist-info/entry_points.txt,sha256=ho9u17lPPdkVCOAji5ZgC78XrAnusjucTzDCs6bfjjQ,50
+cellml.recipe.api-0.8.dist-info/namespace_packages.txt,sha256=dSINSTFYwHfzzZXeIYd2X--SJxX7A9m-e4cA_Oip6YE,21
+cellml.recipe.api-0.8.dist-info/top_level.txt,sha256=tGQK4CXl7LwU6a1SnOkAgnz3GLDU4NFHpq9Y-eQLWe0,7
+cellml.recipe.api-0.8.dist-info/RECORD,,
