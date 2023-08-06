@@ -1,0 +1,14 @@
+LICENSE.txt
+setup.cfg
+setup.py
+pyster/__init__.py
+pyster/endreport.py
+pyster/options.py
+pyster/pyster.py
+pyster/pysterminal.py
+python_pyster.egg-info/PKG-INFO
+python_pyster.egg-info/SOURCES.txt
+python_pyster.egg-info/dependency_links.txt
+python_pyster.egg-info/entry_points.txt
+python_pyster.egg-info/requires.txt
+python_pyster.egg-info/top_level.txt
