@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: ecc-messaging-scheme-package
+Version: 1.0.1
+Summary: ECCDH AES encryption/decryption Package
+Home-page: https://github.com/ECC-Messaging/ECC-Messaging-Scheme-Package
+Author: Joe, Vibi
+Author-email: jmc529@vt.edu, vpeiris@vt.edu
+License: UNKNOWN
+Description: # ECC-Messaging-Scheme-Package
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
