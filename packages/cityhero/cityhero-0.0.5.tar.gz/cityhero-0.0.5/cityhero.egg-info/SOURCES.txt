@@ -1,0 +1,8 @@
+README.md
+setup.py
+cityhero/__init__.py
+cityhero.egg-info/PKG-INFO
+cityhero.egg-info/SOURCES.txt
+cityhero.egg-info/dependency_links.txt
+cityhero.egg-info/requires.txt
+cityhero.egg-info/top_level.txt
