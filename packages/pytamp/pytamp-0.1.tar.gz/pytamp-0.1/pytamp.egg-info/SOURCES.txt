@@ -1,0 +1,8 @@
+README.md
+setup.py
+pytamp.egg-info/PKG-INFO
+pytamp.egg-info/SOURCES.txt
+pytamp.egg-info/dependency_links.txt
+pytamp.egg-info/eager_resources.txt
+pytamp.egg-info/requires.txt
+pytamp.egg-info/top_level.txt
