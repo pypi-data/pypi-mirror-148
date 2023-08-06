@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: mina-build
+Version: 0.1.7
+Summary: build backend for Mina Package Structure
+License: MIT
+Author-email: GreyElaina <GreyElaina@outlook.com>
+Requires-Python: >=3.9
+Requires-Dist: pdm-pep517>=0.12.3
+Description-Content-Type: text/markdown
