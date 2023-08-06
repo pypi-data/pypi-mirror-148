@@ -1,0 +1,7 @@
+LICENCE
+README.md
+setup.py
+sagarpdf.egg-info/PKG-INFO
+sagarpdf.egg-info/SOURCES.txt
+sagarpdf.egg-info/dependency_links.txt
+sagarpdf.egg-info/top_level.txt
