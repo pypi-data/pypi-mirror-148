@@ -1,0 +1,11 @@
+cronomaxrf/__init__.py,sha256=ZOmhZR1Tks0ycTztbGErULa5CeoydoHvR352E1EyGHM,95
+cronomaxrf/_nbdev.py,sha256=-WW7OyDIX0TygvfN8E_qrvPHVHdMzDSmhzGN3SUFcJE,1160
+cronomaxrf/crono.py,sha256=88wZstIVX4L5td1P6Lwfn69BRy2nWUUeQWcbCbLYlTQ,5364
+cronomaxrf/data.py,sha256=6NJcS2-G0imLYQem66eW5X0hdOESsdUblJjr2pUMxno,2133
+cronomaxrf/interpolation.py,sha256=9EMRgNHBBQHn7jtEnp5pmbqeuq05KSX6CjHKMrl9bRc,4972
+cronomaxrf-0.0.8.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+cronomaxrf-0.0.8.dist-info/METADATA,sha256=YG1P_fsI3ED6HfNcTVSJ9cc06z-VP8fewgdC5hc6mPo,2100
+cronomaxrf-0.0.8.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+cronomaxrf-0.0.8.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+cronomaxrf-0.0.8.dist-info/top_level.txt,sha256=HBPdtgfx_qOTz0QwvIVnVYVykx4Gjn1rhDoRPBZ09Uc,11
+cronomaxrf-0.0.8.dist-info/RECORD,,
