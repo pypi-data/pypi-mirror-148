@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/lytorch/__init__.py
+src/lytorch/test.py
+src/lytorch.egg-info/PKG-INFO
+src/lytorch.egg-info/SOURCES.txt
+src/lytorch.egg-info/dependency_links.txt
+src/lytorch.egg-info/top_level.txt
