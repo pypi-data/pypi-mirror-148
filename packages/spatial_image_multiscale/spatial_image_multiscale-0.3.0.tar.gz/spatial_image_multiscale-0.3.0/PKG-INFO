@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: spatial_image_multiscale
+Version: 0.3.0
+Summary: spatial-image-multiscale
+Home-page: https://github.com/spatial-image/spatial-image-multiscale
+Author: Matt McCormick
+Author-email: matt.mccormick@kitware.com
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Dist: numpy
+Requires-Dist: dask
+Requires-Dist: xarray
+Requires-Dist: xarray-datatree
+Requires-Dist: spatial_image>=0.1.0
+Requires-Dist: itk-filtering ; extra == "test"
+Requires-Dist: pytest ; extra == "test"
+Requires-Dist: pytest-mypy ; extra == "test"
+Requires-Dist: fsspec ; extra == "test"
+Requires-Dist: ipfsspec ; extra == "test"
+Requires-Dist: zarr ; extra == "test"
+Provides-Extra: test
+
+# spatial-image-multiscale
+
+[![Test](https://github.com/spatial-image/spatial-image-multiscale/actions/workflows/test.yml/badge.svg)](https://github.com/spatial-image/spatial-image-multiscale/actions/workflows/test.yml)
+[![image](https://img.shields.io/pypi/v/spatial_image_multiscale.svg)](https://pypi.python.org/pypi/spatial_image_multiscale/)
+[![image](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/python/black)
+
+Generate a multiscale [spatial-image].
+
+## Development
+
+Contributions are welcome and appreciated.
+
+To run the test suite:
+
+```
+git clone https://github.com/spatial-image/spatial-image-multiscale
+cd spatial-image-multiscale
+pip install -e '.[test]'
+cid=$(grep 'IPFS_CID =' test/test_spatial_image_multiscale.py | cut -d ' ' -f 3 | tr -d '"')
+# Needs ipfs, e.g. https://docs.ipfs.io/install/ipfs-desktop/
+ipfs get -o ./test/data -- $cid
+pytest
+```
+
+[spatial-image]: https://github.com/spatial-image/spatial-image
+[Xarray]: https://xarray.pydata.org/en/stable/
+
