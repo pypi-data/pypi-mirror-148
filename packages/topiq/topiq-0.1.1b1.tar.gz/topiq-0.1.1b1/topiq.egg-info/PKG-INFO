@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: topiq
+Version: 0.1.1b1
+Summary: Lightweigt embedded topiqs (based on kafka ideas)
+Home-page: https://github.com/usalko/topiq
+Author: Vanya Usalko
+Author-email: iusalko@eu.spb.ru
+License: Apache 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development
+License-File: LICENSE
+
+Lightweigt embedded topics (based on kafka ideas)
+=================================================
+
+The sample:
+
+.. code:: python
+
+    from topiq import Message, Subscriber, Topic
+
+
+    class Worker:
+
+        def __init__(self, message: Message):
+            self.message = message
+
+        async def run(self):
+            id = self.message.as_int()
+            ...
+
+
+    # Test subscriber
+    async def test_subscriber(self):
+        subscriber = Subscriber(Topic('name'), Worker)
+        await subscriber.send_int_message(1)
+
+
