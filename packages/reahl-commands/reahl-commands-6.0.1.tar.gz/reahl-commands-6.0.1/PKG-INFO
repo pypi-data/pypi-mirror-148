@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: reahl-commands
+Version: 6.0.1
+Summary: The component framework of Reahl.
+Home-page: http://www.reahl.org
+Maintainer: Iwan Vosloo
+Maintainer-email: iwan@reahl.org
+License: UNKNOWN
+Platform: UNKNOWN
+
+Reahl is a web application framework that allows a Python programmer to work in terms of useful abstractions - using a single programming language.
+
+Reahl-commands contains useful command line commands for reahl components. 
+
