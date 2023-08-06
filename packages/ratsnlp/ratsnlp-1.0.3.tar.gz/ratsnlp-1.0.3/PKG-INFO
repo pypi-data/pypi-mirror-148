@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: ratsnlp
+Version: 1.0.3
+Summary: tools for Natural Language Processing
+Home-page: https://github.com/ratsgo/ratsnlp
+Author: ratsgo
+Author-email: ratsgo@naver.com
+License: MIT
+Description: # ratsnlp
+        
+        자연어 처리 실습을 위한 패키지입니다. 구글 코랩(colab) 환경에서 동작할 수 있도록 작성하였습니다.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
