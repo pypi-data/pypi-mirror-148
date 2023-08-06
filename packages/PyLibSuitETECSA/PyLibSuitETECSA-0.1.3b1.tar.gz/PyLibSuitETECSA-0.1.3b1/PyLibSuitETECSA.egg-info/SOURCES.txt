@@ -1,0 +1,16 @@
+README.md
+setup.py
+PyLibSuitETECSA.egg-info/PKG-INFO
+PyLibSuitETECSA.egg-info/SOURCES.txt
+PyLibSuitETECSA.egg-info/dependency_links.txt
+PyLibSuitETECSA.egg-info/requires.txt
+PyLibSuitETECSA.egg-info/top_level.txt
+libsuitetecsa/__about__.py
+libsuitetecsa/__init__.py
+libsuitetecsa/api.py
+libsuitetecsa/core/__init__.py
+libsuitetecsa/core/exception.py
+libsuitetecsa/core/models.py
+libsuitetecsa/core/protocol.py
+libsuitetecsa/core/session.py
+libsuitetecsa/core/utils.py
