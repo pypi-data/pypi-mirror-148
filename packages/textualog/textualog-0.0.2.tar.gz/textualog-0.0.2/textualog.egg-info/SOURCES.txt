@@ -1,0 +1,14 @@
+README.md
+setup.py
+textualog/__init__.py
+textualog/__main__.py
+textualog/__version__.py
+textualog/emojis.py
+textualog/styles.py
+textualog/unicodes.py
+textualog.egg-info/PKG-INFO
+textualog.egg-info/SOURCES.txt
+textualog.egg-info/dependency_links.txt
+textualog.egg-info/entry_points.txt
+textualog.egg-info/requires.txt
+textualog.egg-info/top_level.txt
