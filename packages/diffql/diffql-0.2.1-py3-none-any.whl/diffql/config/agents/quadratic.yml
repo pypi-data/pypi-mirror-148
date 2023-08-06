@@ -1,0 +1,6 @@
+name: "quadratic"
+trainable: True
+train:
+    method: "pcql"
+    grad_max_norm: null
+    lr: 1.0e-1
