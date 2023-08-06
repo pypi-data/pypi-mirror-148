@@ -1,0 +1,103 @@
+<tal:main-macro metal:define-macro="links">
+
+  <div class="formControls" class="form-group">
+      <h3>Exports</h3>
+      <ul>
+         <li><a class=""
+            tal:attributes="href python: portal_url + '/@@export_content'">Export content
+         </a></li>
+
+         <li><a class=""
+            tal:attributes="href python: portal_url + '/@@export_relations'">Export relations
+         </a></li>
+
+         <li><a class=""
+            tal:attributes="href python: portal_url + '/@@export_translations'">Export translations
+         </a></li>
+
+         <li><a class=""
+            tal:attributes="href python: portal_url + '/@@export_members'">Export members
+         </a></li>
+
+         <li><a class=""
+            tal:attributes="href python: portal_url + '/@@export_localroles'">Export local roles
+         </a></li>
+
+         <li><a class=""
+            tal:attributes="href python: portal_url + '/@@export_defaultpages'">Export default pages
+         </a></li>
+
+         <li><a class=""
+            tal:attributes="href python: portal_url + '/@@export_ordering'">Export object positions in parent
+         </a></li>
+
+         <li><a class=""
+            tal:attributes="href python: portal_url + '/@@export_discussion'">Export comments
+         </a></li>
+
+         <li><a class=""
+            tal:attributes="href python: portal_url + '/@@export_portlets'">Export portlets
+         </a></li>
+
+         <li><a class=""
+            tal:attributes="href python: portal_url + '/@@export_redirects'">Export redirects
+         </a></li>
+      </ul>
+
+      <h3>Imports</h3>
+      <ul>
+      <li><a class=""
+         tal:attributes="href python: portal_url + '/@@import_content'">Import content
+      </a></li>
+
+      <li><a class=""
+         tal:attributes="href python: portal_url + '/@@import_relations'">Import relations
+      </a></li>
+
+      <li><a class=""
+         tal:attributes="href python: portal_url + '/@@import_translations'">Import translations
+      </a></li>
+
+      <li><a class=""
+         tal:attributes="href python: portal_url + '/@@import_members'">Import members
+      </a></li>
+
+      <li><a class=""
+         tal:attributes="href python: portal_url + '/@@import_localroles'">Import local roles
+      </a></li>
+
+      <li><a class=""
+         tal:attributes="href python: portal_url + '/@@import_defaultpages'">Import default pages
+      </a></li>
+
+      <li><a class=""
+         tal:attributes="href python: portal_url + '/@@import_ordering'">Import object positions in parent
+      </a></li>
+
+      <li><a class=""
+         tal:attributes="href python: portal_url + '/@@import_discussion'">Import comments
+      </a></li>
+
+      <li><a class=""
+         tal:attributes="href python: portal_url + '/@@import_portlets'">Import portlets
+      </a></li>
+
+      <li><a class=""
+         tal:attributes="href python: portal_url + '/@@import_redirects'">Import redirects
+      </a></li>
+
+      <li><a class=""
+         tal:attributes="href python: portal_url + '/@@reset_dates'">Reset created and modified dates
+      </a></li>
+
+      <li><a class=""
+         tal:attributes="href python: portal_url + '/@@fix_collection_queries'">Fix collection queries
+      </a></li>
+
+      <li><a class=""
+         tal:attributes="href python: portal_url + '/@@fix_html'">Fix links to content and images in richtext
+      </a></li>
+   </ul>
+   </div>
+
+</tal:main-macro>
