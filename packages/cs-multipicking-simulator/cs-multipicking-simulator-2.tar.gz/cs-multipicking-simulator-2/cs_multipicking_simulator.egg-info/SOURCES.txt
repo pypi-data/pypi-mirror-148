@@ -1,0 +1,7 @@
+README.md
+setup.py
+cs_multipicking_simulator.egg-info/PKG-INFO
+cs_multipicking_simulator.egg-info/SOURCES.txt
+cs_multipicking_simulator.egg-info/dependency_links.txt
+cs_multipicking_simulator.egg-info/requires.txt
+cs_multipicking_simulator.egg-info/top_level.txt
