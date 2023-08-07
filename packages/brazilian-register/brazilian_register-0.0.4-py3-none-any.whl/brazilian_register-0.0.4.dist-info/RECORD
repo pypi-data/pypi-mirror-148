@@ -1,0 +1,9 @@
+brazilian_register/__init__.py,sha256=IUw__8kElsTCVLUqGjpRV_qSuSZiLqRVsJVhNU_Agu0,65
+brazilian_register/cnpj/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+brazilian_register/cnpj/cnpj_tools.py,sha256=SEMTntAYVWBS4kiHRGmPfFQgQNt6iyYxeXPNvSs1OEc,1513
+brazilian_register/cpf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+brazilian_register/cpf/cpf_tools.py,sha256=N940KbOGK-IOeRs4WV1ynkIMKdvWiZzyjrEugmY_n9k,1320
+brazilian_register-0.0.4.dist-info/METADATA,sha256=1v09QKAGXP5K4CjNpORDO4yO69K8jaW6SpwFjLuZRTY,1972
+brazilian_register-0.0.4.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+brazilian_register-0.0.4.dist-info/top_level.txt,sha256=Qiu_c_SYoZLDtendxoR18AqCUzCJAa2ZsKG4djV8ZG8,19
+brazilian_register-0.0.4.dist-info/RECORD,,
