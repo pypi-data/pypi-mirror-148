@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+arcadeutils/README.md
+arcadeutils/__init__.py
+arcadeutils/binary.py
+arcadeutils/filebytes.py
+arcadeutils/py.typed
+arcadeutils.egg-info/PKG-INFO
+arcadeutils.egg-info/SOURCES.txt
+arcadeutils.egg-info/dependency_links.txt
+arcadeutils.egg-info/requires.txt
+arcadeutils.egg-info/top_level.txt
